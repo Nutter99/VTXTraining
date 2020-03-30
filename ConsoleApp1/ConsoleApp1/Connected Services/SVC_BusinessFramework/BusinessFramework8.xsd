@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Olissipo.OperationsInterfaces.DataStructures" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Olissipo.OperationsInterfaces.DataStructures" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="InvoiceEntityRuleKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CredOperIntervType" />
+      <xs:enumeration value="InvoiceRule" />
+      <xs:enumeration value="Entity" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="InvoiceEntityRuleKind" nillable="true" type="tns:InvoiceEntityRuleKind" />
+  <xs:simpleType name="InvoiceDateMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="EqualValueDate" />
+      <xs:enumeration value="PreviousPeriod" />
+      <xs:enumeration value="NextInvoiceDate" />
+      <xs:enumeration value="EqualInitialDate" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="InvoiceDateMode" nillable="true" type="tns:InvoiceDateMode" />
+</xs:schema>

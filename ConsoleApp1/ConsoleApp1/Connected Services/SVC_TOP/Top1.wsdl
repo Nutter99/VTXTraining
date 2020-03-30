@@ -1,0 +1,925 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://accipiens.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://accipiens.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://accipiens.com/Imports">
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd0" namespace="http://accipiens.com" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd2" namespace="http://accipiens.com/Common" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Olissipo.Utils" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd4" namespace="http://accipiens.com/Top" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Olissipo.Top.DataStructures" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd6" namespace="http://accipiens.com/VirtualData" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd7" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd8" namespace="http://accipiens.com/Automatons" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd9" namespace="http://accipiens.com/AcpDocuments" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/Olissipo.RptCommon" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd12" namespace="http://accipiens.com/AcpFramework" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/Olissipo.AcpFramework.DataStructures" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd14" namespace="http://accipiens.com/Entities" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="Top_Ping_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ping" />
+  </wsdl:message>
+  <wsdl:message name="Top_Ping_InputMessage_Headers">
+    <wsdl:part xmlns:q1="http://accipiens.com/Common" name="SessionToken" element="q1:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_Ping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PingResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_Ping_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q2="http://accipiens.com/Common" name="detail" element="q2:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_ConvertToEnumAnonyObjectKind_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumAnonyObjectKind" />
+  </wsdl:message>
+  <wsdl:message name="Top_ConvertToEnumAnonyObjectKind_InputMessage_Headers">
+    <wsdl:part xmlns:q3="http://accipiens.com/Common" name="SessionToken" element="q3:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_ConvertToEnumAnonyObjectKind_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumAnonyObjectKindResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_ConvertToEnumAnonyObjectKind_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q4="http://accipiens.com/Common" name="detail" element="q4:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyObjectKindEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonyObjectKindEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyObjectKindEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q5="http://accipiens.com/Common" name="SessionToken" element="q5:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyObjectKindEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonyObjectKindEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyObjectKindEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q6="http://accipiens.com/Common" name="detail" element="q6:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_ConvertToEnumAnonyTypeKind_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumAnonyTypeKind" />
+  </wsdl:message>
+  <wsdl:message name="Top_ConvertToEnumAnonyTypeKind_InputMessage_Headers">
+    <wsdl:part xmlns:q7="http://accipiens.com/Common" name="SessionToken" element="q7:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_ConvertToEnumAnonyTypeKind_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumAnonyTypeKindResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_ConvertToEnumAnonyTypeKind_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q8="http://accipiens.com/Common" name="detail" element="q8:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyTypeKindEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonyTypeKindEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyTypeKindEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q9="http://accipiens.com/Common" name="SessionToken" element="q9:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyTypeKindEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonyTypeKindEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyTypeKindEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q10="http://accipiens.com/Common" name="detail" element="q10:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_ConvertToEnumAnonyActionKind_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumAnonyActionKind" />
+  </wsdl:message>
+  <wsdl:message name="Top_ConvertToEnumAnonyActionKind_InputMessage_Headers">
+    <wsdl:part xmlns:q11="http://accipiens.com/Common" name="SessionToken" element="q11:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_ConvertToEnumAnonyActionKind_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumAnonyActionKindResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_ConvertToEnumAnonyActionKind_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q12="http://accipiens.com/Common" name="detail" element="q12:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyActionKindEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonyActionKindEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyActionKindEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q13="http://accipiens.com/Common" name="SessionToken" element="q13:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyActionKindEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonyActionKindEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyActionKindEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q14="http://accipiens.com/Common" name="detail" element="q14:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_ConvertToEnumAnonyUniverseConditionKind_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumAnonyUniverseConditionKind" />
+  </wsdl:message>
+  <wsdl:message name="Top_ConvertToEnumAnonyUniverseConditionKind_InputMessage_Headers">
+    <wsdl:part xmlns:q15="http://accipiens.com/Common" name="SessionToken" element="q15:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_ConvertToEnumAnonyUniverseConditionKind_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumAnonyUniverseConditionKindResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_ConvertToEnumAnonyUniverseConditionKind_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q16="http://accipiens.com/Common" name="detail" element="q16:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyUniverseConditionKindEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonyUniverseConditionKindEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyUniverseConditionKindEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q17="http://accipiens.com/Common" name="SessionToken" element="q17:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyUniverseConditionKindEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonyUniverseConditionKindEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyUniverseConditionKindEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q18="http://accipiens.com/Common" name="detail" element="q18:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_ConvertToEnumAccountSituationRequestServiceType_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumAccountSituationRequestServiceType" />
+  </wsdl:message>
+  <wsdl:message name="Top_ConvertToEnumAccountSituationRequestServiceType_InputMessage_Headers">
+    <wsdl:part xmlns:q19="http://accipiens.com/Common" name="SessionToken" element="q19:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_ConvertToEnumAccountSituationRequestServiceType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumAccountSituationRequestServiceTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_ConvertToEnumAccountSituationRequestServiceType_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q20="http://accipiens.com/Common" name="detail" element="q20:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAccountSituationRequestServiceTypeEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountSituationRequestServiceTypeEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAccountSituationRequestServiceTypeEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q21="http://accipiens.com/Common" name="SessionToken" element="q21:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAccountSituationRequestServiceTypeEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountSituationRequestServiceTypeEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAccountSituationRequestServiceTypeEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q22="http://accipiens.com/Common" name="detail" element="q22:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetTopClassContext_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTopClassContext" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetTopClassContext_InputMessage_Headers">
+    <wsdl:part xmlns:q23="http://accipiens.com/Common" name="SessionToken" element="q23:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetTopClassContext_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTopClassContextResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetTopClassContext_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q24="http://accipiens.com/Common" name="detail" element="q24:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_SearchTop_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTop" />
+  </wsdl:message>
+  <wsdl:message name="Top_SearchTop_InputMessage_Headers">
+    <wsdl:part xmlns:q25="http://accipiens.com/Common" name="SessionToken" element="q25:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_SearchTop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTopResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_SearchTop_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q26="http://accipiens.com/Common" name="detail" element="q26:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonymizedByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q27="http://accipiens.com/Common" name="SessionToken" element="q27:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonymizedByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q28="http://accipiens.com/Common" name="detail" element="q28:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedElementByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonymizedElementByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedElementByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q29="http://accipiens.com/Common" name="SessionToken" element="q29:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedElementByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonymizedElementByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedElementByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q30="http://accipiens.com/Common" name="detail" element="q30:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedRecordByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonymizedRecordByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedRecordByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q31="http://accipiens.com/Common" name="SessionToken" element="q31:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedRecordByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonymizedRecordByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedRecordByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q32="http://accipiens.com/Common" name="detail" element="q32:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedReplaceEntityByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonymizedReplaceEntityByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedReplaceEntityByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q33="http://accipiens.com/Common" name="SessionToken" element="q33:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedReplaceEntityByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonymizedReplaceEntityByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedReplaceEntityByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q34="http://accipiens.com/Common" name="detail" element="q34:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedZoneByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonymizedZoneByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedZoneByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q35="http://accipiens.com/Common" name="SessionToken" element="q35:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedZoneByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonymizedZoneByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedZoneByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q36="http://accipiens.com/Common" name="detail" element="q36:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizeHeaderByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonymizeHeaderByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizeHeaderByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q37="http://accipiens.com/Common" name="SessionToken" element="q37:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizeHeaderByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonymizeHeaderByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizeHeaderByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q38="http://accipiens.com/Common" name="detail" element="q38:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyTypeByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonyTypeByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyTypeByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q39="http://accipiens.com/Common" name="SessionToken" element="q39:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyTypeByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonyTypeByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyTypeByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q40="http://accipiens.com/Common" name="detail" element="q40:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyTypeCredOperIntervTypeByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonyTypeCredOperIntervTypeByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyTypeCredOperIntervTypeByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q41="http://accipiens.com/Common" name="SessionToken" element="q41:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyTypeCredOperIntervTypeByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonyTypeCredOperIntervTypeByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyTypeCredOperIntervTypeByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q42="http://accipiens.com/Common" name="detail" element="q42:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyTypePhysicalDocByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonyTypePhysicalDocByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyTypePhysicalDocByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q43="http://accipiens.com/Common" name="SessionToken" element="q43:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyTypePhysicalDocByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonyTypePhysicalDocByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyTypePhysicalDocByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q44="http://accipiens.com/Common" name="detail" element="q44:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyTypeReplaceEntityByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonyTypeReplaceEntityByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyTypeReplaceEntityByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q45="http://accipiens.com/Common" name="SessionToken" element="q45:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyTypeReplaceEntityByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonyTypeReplaceEntityByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyTypeReplaceEntityByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q46="http://accipiens.com/Common" name="detail" element="q46:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyTypeZoneByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonyTypeZoneByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyTypeZoneByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q47="http://accipiens.com/Common" name="SessionToken" element="q47:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyTypeZoneByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonyTypeZoneByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyTypeZoneByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q48="http://accipiens.com/Common" name="detail" element="q48:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyUniverseTypeByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonyUniverseTypeByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyUniverseTypeByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q49="http://accipiens.com/Common" name="SessionToken" element="q49:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyUniverseTypeByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonyUniverseTypeByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyUniverseTypeByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q50="http://accipiens.com/Common" name="detail" element="q50:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyUniverseTypeConditionByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonyUniverseTypeConditionByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyUniverseTypeConditionByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q51="http://accipiens.com/Common" name="SessionToken" element="q51:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyUniverseTypeConditionByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonyUniverseTypeConditionByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonyUniverseTypeConditionByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q52="http://accipiens.com/Common" name="detail" element="q52:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetEmployingEntityValidityByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployingEntityValidityByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetEmployingEntityValidityByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q53="http://accipiens.com/Common" name="SessionToken" element="q53:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetEmployingEntityValidityByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployingEntityValidityByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetEmployingEntityValidityByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q54="http://accipiens.com/Common" name="detail" element="q54:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetOpenAccountSituationRequestByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpenAccountSituationRequestByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetOpenAccountSituationRequestByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q55="http://accipiens.com/Common" name="SessionToken" element="q55:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetOpenAccountSituationRequestByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpenAccountSituationRequestByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetOpenAccountSituationRequestByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q56="http://accipiens.com/Common" name="detail" element="q56:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetOpenAccountSituationResponseByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpenAccountSituationResponseByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetOpenAccountSituationResponseByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q57="http://accipiens.com/Common" name="SessionToken" element="q57:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetOpenAccountSituationResponseByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpenAccountSituationResponseByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetOpenAccountSituationResponseByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q58="http://accipiens.com/Common" name="detail" element="q58:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_SaveTop_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTop" />
+  </wsdl:message>
+  <wsdl:message name="Top_SaveTop_InputMessage_Headers">
+    <wsdl:part xmlns:q59="http://accipiens.com/Common" name="SessionToken" element="q59:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_SaveTop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTopResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_SaveTop_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q60="http://accipiens.com/Common" name="detail" element="q60:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_SaveTopV2_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTopV2" />
+  </wsdl:message>
+  <wsdl:message name="Top_SaveTopV2_InputMessage_Headers">
+    <wsdl:part xmlns:q61="http://accipiens.com/Common" name="SessionToken" element="q61:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_SaveTopV2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTopV2Response" />
+  </wsdl:message>
+  <wsdl:message name="Top_SaveTopV2_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q62="http://accipiens.com/Common" name="detail" element="q62:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetTopClassTableId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTopClassTableId" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetTopClassTableId_InputMessage_Headers">
+    <wsdl:part xmlns:q63="http://accipiens.com/Common" name="SessionToken" element="q63:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetTopClassTableId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTopClassTableIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetTopClassTableId_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q64="http://accipiens.com/Common" name="detail" element="q64:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetTopTableId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTopTableId" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetTopTableId_InputMessage_Headers">
+    <wsdl:part xmlns:q65="http://accipiens.com/Common" name="SessionToken" element="q65:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetTopTableId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTopTableIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetTopTableId_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q66="http://accipiens.com/Common" name="detail" element="q66:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_SearchTopConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTopConfig" />
+  </wsdl:message>
+  <wsdl:message name="Top_SearchTopConfig_InputMessage_Headers">
+    <wsdl:part xmlns:q67="http://accipiens.com/Common" name="SessionToken" element="q67:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_SearchTopConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTopConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_SearchTopConfig_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q68="http://accipiens.com/Common" name="detail" element="q68:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_ExposeTopTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExposeTopTypes" />
+  </wsdl:message>
+  <wsdl:message name="Top_ExposeTopTypes_InputMessage_Headers">
+    <wsdl:part xmlns:q69="http://accipiens.com/Common" name="SessionToken" element="q69:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_ExposeTopTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExposeTopTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_ExposeTopTypes_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q70="http://accipiens.com/Common" name="detail" element="q70:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedTransitionList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonymizedTransitionList" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedTransitionList_InputMessage_Headers">
+    <wsdl:part xmlns:q71="http://accipiens.com/Common" name="SessionToken" element="q71:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedTransitionList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonymizedTransitionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedTransitionList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q72="http://accipiens.com/Common" name="detail" element="q72:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_DoAnonymizedTransition_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoAnonymizedTransition" />
+  </wsdl:message>
+  <wsdl:message name="Top_DoAnonymizedTransition_InputMessage_Headers">
+    <wsdl:part xmlns:q73="http://accipiens.com/Common" name="SessionToken" element="q73:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_DoAnonymizedTransition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoAnonymizedTransitionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_DoAnonymizedTransition_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q74="http://accipiens.com/Common" name="detail" element="q74:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedInitialState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonymizedInitialState" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedInitialState_InputMessage_Headers">
+    <wsdl:part xmlns:q75="http://accipiens.com/Common" name="SessionToken" element="q75:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedInitialState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonymizedInitialStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedInitialState_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q76="http://accipiens.com/Common" name="detail" element="q76:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedInternalState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonymizedInternalState" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedInternalState_InputMessage_Headers">
+    <wsdl:part xmlns:q77="http://accipiens.com/Common" name="SessionToken" element="q77:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedInternalState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonymizedInternalStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedInternalState_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q78="http://accipiens.com/Common" name="detail" element="q78:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizeHeaderTransitionList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonymizeHeaderTransitionList" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizeHeaderTransitionList_InputMessage_Headers">
+    <wsdl:part xmlns:q79="http://accipiens.com/Common" name="SessionToken" element="q79:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizeHeaderTransitionList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonymizeHeaderTransitionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizeHeaderTransitionList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q80="http://accipiens.com/Common" name="detail" element="q80:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_DoAnonymizeHeaderTransition_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoAnonymizeHeaderTransition" />
+  </wsdl:message>
+  <wsdl:message name="Top_DoAnonymizeHeaderTransition_InputMessage_Headers">
+    <wsdl:part xmlns:q81="http://accipiens.com/Common" name="SessionToken" element="q81:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_DoAnonymizeHeaderTransition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoAnonymizeHeaderTransitionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_DoAnonymizeHeaderTransition_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q82="http://accipiens.com/Common" name="detail" element="q82:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizeHeaderInternalState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonymizeHeaderInternalState" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizeHeaderInternalState_InputMessage_Headers">
+    <wsdl:part xmlns:q83="http://accipiens.com/Common" name="SessionToken" element="q83:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizeHeaderInternalState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonymizeHeaderInternalStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizeHeaderInternalState_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q84="http://accipiens.com/Common" name="detail" element="q84:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedRecordTransitionList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonymizedRecordTransitionList" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedRecordTransitionList_InputMessage_Headers">
+    <wsdl:part xmlns:q85="http://accipiens.com/Common" name="SessionToken" element="q85:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedRecordTransitionList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonymizedRecordTransitionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedRecordTransitionList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q86="http://accipiens.com/Common" name="detail" element="q86:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_DoAnonymizedRecordTransition_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoAnonymizedRecordTransition" />
+  </wsdl:message>
+  <wsdl:message name="Top_DoAnonymizedRecordTransition_InputMessage_Headers">
+    <wsdl:part xmlns:q87="http://accipiens.com/Common" name="SessionToken" element="q87:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_DoAnonymizedRecordTransition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoAnonymizedRecordTransitionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_DoAnonymizedRecordTransition_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q88="http://accipiens.com/Common" name="detail" element="q88:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedRecordInitialState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonymizedRecordInitialState" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedRecordInitialState_InputMessage_Headers">
+    <wsdl:part xmlns:q89="http://accipiens.com/Common" name="SessionToken" element="q89:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedRecordInitialState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonymizedRecordInitialStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedRecordInitialState_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q90="http://accipiens.com/Common" name="detail" element="q90:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedRecordInternalState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonymizedRecordInternalState" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedRecordInternalState_InputMessage_Headers">
+    <wsdl:part xmlns:q91="http://accipiens.com/Common" name="SessionToken" element="q91:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedRecordInternalState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonymizedRecordInternalStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizedRecordInternalState_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q92="http://accipiens.com/Common" name="detail" element="q92:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_SaveNewAnonymizeHeader_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveNewAnonymizeHeader" />
+  </wsdl:message>
+  <wsdl:message name="Top_SaveNewAnonymizeHeader_InputMessage_Headers">
+    <wsdl:part xmlns:q93="http://accipiens.com/Common" name="SessionToken" element="q93:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_SaveNewAnonymizeHeader_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveNewAnonymizeHeaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_SaveNewAnonymizeHeader_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q94="http://accipiens.com/Common" name="detail" element="q94:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizeHeaderTotals_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonymizeHeaderTotals" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizeHeaderTotals_InputMessage_Headers">
+    <wsdl:part xmlns:q95="http://accipiens.com/Common" name="SessionToken" element="q95:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizeHeaderTotals_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnonymizeHeaderTotalsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAnonymizeHeaderTotals_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q96="http://accipiens.com/Common" name="detail" element="q96:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_AnonymizedCheckValidations_InputMessage">
+    <wsdl:part name="parameters" element="tns:AnonymizedCheckValidations" />
+  </wsdl:message>
+  <wsdl:message name="Top_AnonymizedCheckValidations_InputMessage_Headers">
+    <wsdl:part xmlns:q97="http://accipiens.com/Common" name="SessionToken" element="q97:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_AnonymizedCheckValidations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AnonymizedCheckValidationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_AnonymizedCheckValidations_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q98="http://accipiens.com/Common" name="detail" element="q98:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetRPDocumentBaseAmounts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRPDocumentBaseAmounts" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetRPDocumentBaseAmounts_InputMessage_Headers">
+    <wsdl:part xmlns:q99="http://accipiens.com/Common" name="SessionToken" element="q99:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetRPDocumentBaseAmounts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRPDocumentBaseAmountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetRPDocumentBaseAmounts_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q100="http://accipiens.com/Common" name="detail" element="q100:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAplWorkItemWithCustomBySearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAplWorkItemWithCustomBySearch" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAplWorkItemWithCustomBySearch_InputMessage_Headers">
+    <wsdl:part xmlns:q101="http://accipiens.com/Common" name="SessionToken" element="q101:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAplWorkItemWithCustomBySearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAplWorkItemWithCustomBySearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_GetAplWorkItemWithCustomBySearch_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q102="http://accipiens.com/Common" name="detail" element="q102:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_ExecuteAplCompanyReplicator_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteAplCompanyReplicator" />
+  </wsdl:message>
+  <wsdl:message name="Top_ExecuteAplCompanyReplicator_InputMessage_Headers">
+    <wsdl:part xmlns:q103="http://accipiens.com/Common" name="SessionToken" element="q103:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_ExecuteAplCompanyReplicator_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteAplCompanyReplicatorResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_ExecuteAplCompanyReplicator_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q104="http://accipiens.com/Common" name="detail" element="q104:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Top_RequestOpenAccountSituation_InputMessage">
+    <wsdl:part name="parameters" element="tns:RequestOpenAccountSituation" />
+  </wsdl:message>
+  <wsdl:message name="Top_RequestOpenAccountSituation_InputMessage_Headers">
+    <wsdl:part xmlns:q105="http://accipiens.com/Common" name="SessionToken" element="q105:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Top_RequestOpenAccountSituation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RequestOpenAccountSituationResponse" />
+  </wsdl:message>
+  <wsdl:message name="Top_RequestOpenAccountSituation_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q106="http://accipiens.com/Common" name="detail" element="q106:AcpDetail" />
+  </wsdl:message>
+  <wsdl:portType name="Top">
+    <wsdl:operation name="Ping">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/Ping" message="tns:Top_Ping_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/PingResponse" message="tns:Top_Ping_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_Ping_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumAnonyObjectKind">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/ConvertToEnumAnonyObjectKind" message="tns:Top_ConvertToEnumAnonyObjectKind_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/ConvertToEnumAnonyObjectKindResponse" message="tns:Top_ConvertToEnumAnonyObjectKind_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_ConvertToEnumAnonyObjectKind_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonyObjectKindEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetAnonyObjectKindEnumValue" message="tns:Top_GetAnonyObjectKindEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetAnonyObjectKindEnumValueResponse" message="tns:Top_GetAnonyObjectKindEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetAnonyObjectKindEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumAnonyTypeKind">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/ConvertToEnumAnonyTypeKind" message="tns:Top_ConvertToEnumAnonyTypeKind_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/ConvertToEnumAnonyTypeKindResponse" message="tns:Top_ConvertToEnumAnonyTypeKind_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_ConvertToEnumAnonyTypeKind_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonyTypeKindEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetAnonyTypeKindEnumValue" message="tns:Top_GetAnonyTypeKindEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetAnonyTypeKindEnumValueResponse" message="tns:Top_GetAnonyTypeKindEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetAnonyTypeKindEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumAnonyActionKind">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/ConvertToEnumAnonyActionKind" message="tns:Top_ConvertToEnumAnonyActionKind_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/ConvertToEnumAnonyActionKindResponse" message="tns:Top_ConvertToEnumAnonyActionKind_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_ConvertToEnumAnonyActionKind_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonyActionKindEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetAnonyActionKindEnumValue" message="tns:Top_GetAnonyActionKindEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetAnonyActionKindEnumValueResponse" message="tns:Top_GetAnonyActionKindEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetAnonyActionKindEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumAnonyUniverseConditionKind">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/ConvertToEnumAnonyUniverseConditionKind" message="tns:Top_ConvertToEnumAnonyUniverseConditionKind_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/ConvertToEnumAnonyUniverseConditionKindResponse" message="tns:Top_ConvertToEnumAnonyUniverseConditionKind_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_ConvertToEnumAnonyUniverseConditionKind_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonyUniverseConditionKindEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetAnonyUniverseConditionKindEnumValue" message="tns:Top_GetAnonyUniverseConditionKindEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetAnonyUniverseConditionKindEnumValueResponse" message="tns:Top_GetAnonyUniverseConditionKindEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetAnonyUniverseConditionKindEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumAccountSituationRequestServiceType">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/ConvertToEnumAccountSituationRequestServiceType" message="tns:Top_ConvertToEnumAccountSituationRequestServiceType_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/ConvertToEnumAccountSituationRequestServiceTypeResponse" message="tns:Top_ConvertToEnumAccountSituationRequestServiceType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_ConvertToEnumAccountSituationRequestServiceType_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountSituationRequestServiceTypeEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetAccountSituationRequestServiceTypeEnumValue" message="tns:Top_GetAccountSituationRequestServiceTypeEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetAccountSituationRequestServiceTypeEnumValueResponse" message="tns:Top_GetAccountSituationRequestServiceTypeEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetAccountSituationRequestServiceTypeEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTopClassContext">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetTopClassContext" message="tns:Top_GetTopClassContext_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetTopClassContextResponse" message="tns:Top_GetTopClassContext_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetTopClassContext_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchTop">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/SearchTop" message="tns:Top_SearchTop_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/SearchTopResponse" message="tns:Top_SearchTop_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_SearchTop_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonymizedByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetAnonymizedByKeys" message="tns:Top_GetAnonymizedByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetAnonymizedByKeysResponse" message="tns:Top_GetAnonymizedByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetAnonymizedByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonymizedElementByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetAnonymizedElementByKeys" message="tns:Top_GetAnonymizedElementByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetAnonymizedElementByKeysResponse" message="tns:Top_GetAnonymizedElementByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetAnonymizedElementByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonymizedRecordByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetAnonymizedRecordByKeys" message="tns:Top_GetAnonymizedRecordByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetAnonymizedRecordByKeysResponse" message="tns:Top_GetAnonymizedRecordByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetAnonymizedRecordByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonymizedReplaceEntityByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetAnonymizedReplaceEntityByKeys" message="tns:Top_GetAnonymizedReplaceEntityByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetAnonymizedReplaceEntityByKeysResponse" message="tns:Top_GetAnonymizedReplaceEntityByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetAnonymizedReplaceEntityByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonymizedZoneByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetAnonymizedZoneByKeys" message="tns:Top_GetAnonymizedZoneByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetAnonymizedZoneByKeysResponse" message="tns:Top_GetAnonymizedZoneByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetAnonymizedZoneByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonymizeHeaderByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetAnonymizeHeaderByKeys" message="tns:Top_GetAnonymizeHeaderByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetAnonymizeHeaderByKeysResponse" message="tns:Top_GetAnonymizeHeaderByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetAnonymizeHeaderByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonyTypeByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetAnonyTypeByKeys" message="tns:Top_GetAnonyTypeByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetAnonyTypeByKeysResponse" message="tns:Top_GetAnonyTypeByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetAnonyTypeByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonyTypeCredOperIntervTypeByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetAnonyTypeCredOperIntervTypeByKeys" message="tns:Top_GetAnonyTypeCredOperIntervTypeByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetAnonyTypeCredOperIntervTypeByKeysResponse" message="tns:Top_GetAnonyTypeCredOperIntervTypeByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetAnonyTypeCredOperIntervTypeByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonyTypePhysicalDocByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetAnonyTypePhysicalDocByKeys" message="tns:Top_GetAnonyTypePhysicalDocByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetAnonyTypePhysicalDocByKeysResponse" message="tns:Top_GetAnonyTypePhysicalDocByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetAnonyTypePhysicalDocByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonyTypeReplaceEntityByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetAnonyTypeReplaceEntityByKeys" message="tns:Top_GetAnonyTypeReplaceEntityByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetAnonyTypeReplaceEntityByKeysResponse" message="tns:Top_GetAnonyTypeReplaceEntityByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetAnonyTypeReplaceEntityByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonyTypeZoneByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetAnonyTypeZoneByKeys" message="tns:Top_GetAnonyTypeZoneByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetAnonyTypeZoneByKeysResponse" message="tns:Top_GetAnonyTypeZoneByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetAnonyTypeZoneByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonyUniverseTypeByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetAnonyUniverseTypeByKeys" message="tns:Top_GetAnonyUniverseTypeByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetAnonyUniverseTypeByKeysResponse" message="tns:Top_GetAnonyUniverseTypeByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetAnonyUniverseTypeByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonyUniverseTypeConditionByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetAnonyUniverseTypeConditionByKeys" message="tns:Top_GetAnonyUniverseTypeConditionByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetAnonyUniverseTypeConditionByKeysResponse" message="tns:Top_GetAnonyUniverseTypeConditionByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetAnonyUniverseTypeConditionByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployingEntityValidityByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetEmployingEntityValidityByKeys" message="tns:Top_GetEmployingEntityValidityByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetEmployingEntityValidityByKeysResponse" message="tns:Top_GetEmployingEntityValidityByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetEmployingEntityValidityByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOpenAccountSituationRequestByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetOpenAccountSituationRequestByKeys" message="tns:Top_GetOpenAccountSituationRequestByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetOpenAccountSituationRequestByKeysResponse" message="tns:Top_GetOpenAccountSituationRequestByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetOpenAccountSituationRequestByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOpenAccountSituationResponseByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetOpenAccountSituationResponseByKeys" message="tns:Top_GetOpenAccountSituationResponseByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetOpenAccountSituationResponseByKeysResponse" message="tns:Top_GetOpenAccountSituationResponseByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetOpenAccountSituationResponseByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTop">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/SaveTop" message="tns:Top_SaveTop_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/SaveTopResponse" message="tns:Top_SaveTop_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_SaveTop_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTopV2">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/SaveTopV2" message="tns:Top_SaveTopV2_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/SaveTopV2Response" message="tns:Top_SaveTopV2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_SaveTopV2_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTopClassTableId">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetTopClassTableId" message="tns:Top_GetTopClassTableId_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetTopClassTableIdResponse" message="tns:Top_GetTopClassTableId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetTopClassTableId_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTopTableId">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetTopTableId" message="tns:Top_GetTopTableId_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetTopTableIdResponse" message="tns:Top_GetTopTableId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetTopTableId_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchTopConfig">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/SearchTopConfig" message="tns:Top_SearchTopConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/SearchTopConfigResponse" message="tns:Top_SearchTopConfig_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_SearchTopConfig_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExposeTopTypes">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/ExposeTopTypes" message="tns:Top_ExposeTopTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/ExposeTopTypesResponse" message="tns:Top_ExposeTopTypes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_ExposeTopTypes_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonymizedTransitionList">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetAnonymizedTransitionList" message="tns:Top_GetAnonymizedTransitionList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetAnonymizedTransitionListResponse" message="tns:Top_GetAnonymizedTransitionList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetAnonymizedTransitionList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoAnonymizedTransition">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/DoAnonymizedTransition" message="tns:Top_DoAnonymizedTransition_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/DoAnonymizedTransitionResponse" message="tns:Top_DoAnonymizedTransition_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_DoAnonymizedTransition_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonymizedInitialState">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetAnonymizedInitialState" message="tns:Top_GetAnonymizedInitialState_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetAnonymizedInitialStateResponse" message="tns:Top_GetAnonymizedInitialState_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetAnonymizedInitialState_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonymizedInternalState">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetAnonymizedInternalState" message="tns:Top_GetAnonymizedInternalState_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetAnonymizedInternalStateResponse" message="tns:Top_GetAnonymizedInternalState_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetAnonymizedInternalState_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonymizeHeaderTransitionList">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetAnonymizeHeaderTransitionList" message="tns:Top_GetAnonymizeHeaderTransitionList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetAnonymizeHeaderTransitionListResponse" message="tns:Top_GetAnonymizeHeaderTransitionList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetAnonymizeHeaderTransitionList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoAnonymizeHeaderTransition">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/DoAnonymizeHeaderTransition" message="tns:Top_DoAnonymizeHeaderTransition_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/DoAnonymizeHeaderTransitionResponse" message="tns:Top_DoAnonymizeHeaderTransition_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_DoAnonymizeHeaderTransition_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonymizeHeaderInternalState">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetAnonymizeHeaderInternalState" message="tns:Top_GetAnonymizeHeaderInternalState_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetAnonymizeHeaderInternalStateResponse" message="tns:Top_GetAnonymizeHeaderInternalState_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetAnonymizeHeaderInternalState_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonymizedRecordTransitionList">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetAnonymizedRecordTransitionList" message="tns:Top_GetAnonymizedRecordTransitionList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetAnonymizedRecordTransitionListResponse" message="tns:Top_GetAnonymizedRecordTransitionList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetAnonymizedRecordTransitionList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoAnonymizedRecordTransition">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/DoAnonymizedRecordTransition" message="tns:Top_DoAnonymizedRecordTransition_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/DoAnonymizedRecordTransitionResponse" message="tns:Top_DoAnonymizedRecordTransition_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_DoAnonymizedRecordTransition_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonymizedRecordInitialState">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetAnonymizedRecordInitialState" message="tns:Top_GetAnonymizedRecordInitialState_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetAnonymizedRecordInitialStateResponse" message="tns:Top_GetAnonymizedRecordInitialState_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetAnonymizedRecordInitialState_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonymizedRecordInternalState">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetAnonymizedRecordInternalState" message="tns:Top_GetAnonymizedRecordInternalState_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetAnonymizedRecordInternalStateResponse" message="tns:Top_GetAnonymizedRecordInternalState_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetAnonymizedRecordInternalState_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveNewAnonymizeHeader">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/SaveNewAnonymizeHeader" message="tns:Top_SaveNewAnonymizeHeader_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/SaveNewAnonymizeHeaderResponse" message="tns:Top_SaveNewAnonymizeHeader_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_SaveNewAnonymizeHeader_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonymizeHeaderTotals">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetAnonymizeHeaderTotals" message="tns:Top_GetAnonymizeHeaderTotals_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetAnonymizeHeaderTotalsResponse" message="tns:Top_GetAnonymizeHeaderTotals_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetAnonymizeHeaderTotals_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AnonymizedCheckValidations">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/AnonymizedCheckValidations" message="tns:Top_AnonymizedCheckValidations_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/AnonymizedCheckValidationsResponse" message="tns:Top_AnonymizedCheckValidations_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_AnonymizedCheckValidations_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRPDocumentBaseAmounts">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetRPDocumentBaseAmounts" message="tns:Top_GetRPDocumentBaseAmounts_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetRPDocumentBaseAmountsResponse" message="tns:Top_GetRPDocumentBaseAmounts_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetRPDocumentBaseAmounts_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAplWorkItemWithCustomBySearch">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/GetAplWorkItemWithCustomBySearch" message="tns:Top_GetAplWorkItemWithCustomBySearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/GetAplWorkItemWithCustomBySearchResponse" message="tns:Top_GetAplWorkItemWithCustomBySearch_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_GetAplWorkItemWithCustomBySearch_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteAplCompanyReplicator">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/ExecuteAplCompanyReplicator" message="tns:Top_ExecuteAplCompanyReplicator_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/ExecuteAplCompanyReplicatorResponse" message="tns:Top_ExecuteAplCompanyReplicator_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_ExecuteAplCompanyReplicator_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestOpenAccountSituation">
+      <wsdl:input wsaw:Action="http://accipiens.com/Top/RequestOpenAccountSituation" message="tns:Top_RequestOpenAccountSituation_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Top/RequestOpenAccountSituationResponse" message="tns:Top_RequestOpenAccountSituation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Top_RequestOpenAccountSituation_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

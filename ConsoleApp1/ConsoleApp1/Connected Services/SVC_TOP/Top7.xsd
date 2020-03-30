@@ -1,0 +1,779 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://accipiens.com/Automatons" elementFormDefault="qualified" targetNamespace="http://accipiens.com/Automatons" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd2" namespace="http://accipiens.com/Common" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd9" namespace="http://accipiens.com/AcpDocuments" />
+  <xs:complexType name="ArrayOfAutTransition">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AutTransition" nillable="true" type="tns:AutTransition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAutTransition" nillable="true" type="tns:ArrayOfAutTransition" />
+  <xs:complexType name="AutTransition">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://accipiens.com/Common" base="q1:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AplTaskId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AutConditionId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AutOperationId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Automaton" nillable="true" type="tns:Automaton" />
+          <xs:element minOccurs="0" name="AutomatonId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="CheckUserInBatchTasks" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckUserInPastTransitions" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Condition" nillable="true" type="tns:AutCondition" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FinalAutStateAbrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FinalAutStateId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="FinalState" nillable="true" type="tns:AutState" />
+          <xs:element minOccurs="0" name="HasPermission" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="InitialAutStateAbrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InitialAutStateId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="InitialState" nillable="true" type="tns:AutState" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AutTransitionKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AutTransitionDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AutTransitionField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAutTransitionField" />
+          <xs:element minOccurs="0" name="Operation" nillable="true" type="tns:AutOperation" />
+          <xs:element minOccurs="0" name="PostTransAfterTransition" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PostTransitionAplStatementId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PostTransitions" nillable="true" type="tns:ArrayOfAutPostTransition" />
+          <xs:element minOccurs="0" name="ReasonValidationTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="RowVersion" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="UserTransition" nillable="true" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AutTransition" nillable="true" type="tns:AutTransition" />
+  <xs:complexType name="Automaton">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://accipiens.com/Common" base="q2:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AplTaskId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AutContextId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="InitialAutConditionId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="InitialAutOperationId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="InitialCondition" nillable="true" type="tns:AutCondition" />
+          <xs:element minOccurs="0" name="InitialState" nillable="true" type="tns:AutState" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AutomatonKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AutomatonDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AutomatonField" />
+          <xs:element minOccurs="0" name="LogStartUp" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LogTransitions" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAutomatonField" />
+          <xs:element minOccurs="0" name="Reasons" nillable="true" type="tns:ArrayOfAutomatonReason" />
+          <xs:element minOccurs="0" name="RowVersion" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="States" nillable="true" type="tns:ArrayOfAutState" />
+          <xs:element minOccurs="0" name="Transitions" nillable="true" type="tns:ArrayOfAutTransition" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Automaton" nillable="true" type="tns:Automaton" />
+  <xs:complexType name="AutCondition">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://accipiens.com/Common" base="q3:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AutConditionTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AutContextId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ConditionAplStatementId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AutConditionKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AutConditionDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AutConditionField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAutConditionField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AutCondition" nillable="true" type="tns:AutCondition" />
+  <xs:complexType name="AutConditionKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://accipiens.com/Common" base="q4:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AutContextId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AutConditionKey" nillable="true" type="tns:AutConditionKey" />
+  <xs:simpleType name="AutConditionDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AutConditionDetail" nillable="true" type="tns:AutConditionDetail" />
+  <xs:simpleType name="AutConditionField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AutContextId" />
+      <xs:enumeration value="Abrev" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="AutConditionTypeId" />
+      <xs:enumeration value="ConditionAplStatementId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AutConditionField" nillable="true" type="tns:AutConditionField" />
+  <xs:complexType name="ArrayOfAutConditionField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AutConditionField" type="tns:AutConditionField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAutConditionField" nillable="true" type="tns:ArrayOfAutConditionField" />
+  <xs:complexType name="AutState">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://accipiens.com/Common" base="q5:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AutUserState" nillable="true" type="tns:AutUserState" />
+          <xs:element minOccurs="0" name="AutUserStateId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AutomatonId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EnterAutOperationId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="HasChildTask" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="IsInitialState" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AutStateKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AutStateDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AutStateField" />
+          <xs:element minOccurs="0" name="LeaveAutOperationId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAutStateField" />
+          <xs:element minOccurs="0" name="Transitions" nillable="true" type="tns:ArrayOfAutTransition" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AutState" nillable="true" type="tns:AutState" />
+  <xs:complexType name="AutUserState">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://accipiens.com/Common" base="q6:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AplTaskId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AutInternalStateId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HasPermission" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AutUserStateKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AutUserStateDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AutUserStateField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAutUserStateField" />
+          <xs:element minOccurs="0" name="RowVersion" nillable="true" type="xs:base64Binary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AutUserState" nillable="true" type="tns:AutUserState" />
+  <xs:complexType name="AutUserStateKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://accipiens.com/Common" base="q7:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AutInternalStateId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AutUserStateKey" nillable="true" type="tns:AutUserStateKey" />
+  <xs:simpleType name="AutUserStateDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AutUserStateDetail" nillable="true" type="tns:AutUserStateDetail" />
+  <xs:simpleType name="AutUserStateField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AutInternalStateId" />
+      <xs:enumeration value="Abrev" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="HasPermission" />
+      <xs:enumeration value="AplTaskId" />
+      <xs:enumeration value="RowVersion" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AutUserStateField" nillable="true" type="tns:AutUserStateField" />
+  <xs:complexType name="ArrayOfAutUserStateField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AutUserStateField" type="tns:AutUserStateField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAutUserStateField" nillable="true" type="tns:ArrayOfAutUserStateField" />
+  <xs:complexType name="AutStateKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://accipiens.com/Common" base="q8:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AutomatonId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AutStateKey" nillable="true" type="tns:AutStateKey" />
+  <xs:simpleType name="AutStateDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AutUserState" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AutStateDetail" nillable="true" type="tns:AutStateDetail" />
+  <xs:simpleType name="AutStateField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AutomatonId" />
+      <xs:enumeration value="Abrev" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="AutUserStateId" />
+      <xs:enumeration value="EnterAutOperationId" />
+      <xs:enumeration value="LeaveAutOperationId" />
+      <xs:enumeration value="IsInitialState" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AutStateField" nillable="true" type="tns:AutStateField" />
+  <xs:complexType name="ArrayOfAutStateField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AutStateField" type="tns:AutStateField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAutStateField" nillable="true" type="tns:ArrayOfAutStateField" />
+  <xs:complexType name="AutomatonKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://accipiens.com/Common" base="q9:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AutContextId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AutomatonKey" nillable="true" type="tns:AutomatonKey" />
+  <xs:simpleType name="AutomatonDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="InitialState" />
+      <xs:enumeration value="InitialCondition" />
+      <xs:enumeration value="Reason" />
+      <xs:enumeration value="Transition" />
+      <xs:enumeration value="State" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AutomatonDetail" nillable="true" type="tns:AutomatonDetail" />
+  <xs:simpleType name="AutomatonField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AutContextId" />
+      <xs:enumeration value="Abrev" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="InitialAutOperationId" />
+      <xs:enumeration value="LogTransitions" />
+      <xs:enumeration value="LogStartUp" />
+      <xs:enumeration value="InitialAutConditionId" />
+      <xs:enumeration value="AplTaskId" />
+      <xs:enumeration value="RowVersion" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AutomatonField" nillable="true" type="tns:AutomatonField" />
+  <xs:complexType name="ArrayOfAutomatonField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AutomatonField" type="tns:AutomatonField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAutomatonField" nillable="true" type="tns:ArrayOfAutomatonField" />
+  <xs:complexType name="ArrayOfAutomatonReason">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AutomatonReason" nillable="true" type="tns:AutomatonReason" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAutomatonReason" nillable="true" type="tns:ArrayOfAutomatonReason" />
+  <xs:complexType name="AutomatonReason">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://accipiens.com/Common" base="q10:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AutReasonId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AutomatonId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AutomatonReasonKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AutomatonReasonDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AutomatonReasonField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAutomatonReasonField" />
+          <xs:element minOccurs="0" name="States" nillable="true" type="tns:ArrayOfAutomatonReasonState" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AutomatonReason" nillable="true" type="tns:AutomatonReason" />
+  <xs:complexType name="AutomatonReasonKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://accipiens.com/Common" base="q11:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AutReasonId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AutomatonId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AutomatonReasonKey" nillable="true" type="tns:AutomatonReasonKey" />
+  <xs:simpleType name="AutomatonReasonDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="State" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AutomatonReasonDetail" nillable="true" type="tns:AutomatonReasonDetail" />
+  <xs:simpleType name="AutomatonReasonField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AutomatonId" />
+      <xs:enumeration value="AutReasonId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AutomatonReasonField" nillable="true" type="tns:AutomatonReasonField" />
+  <xs:complexType name="ArrayOfAutomatonReasonField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AutomatonReasonField" type="tns:AutomatonReasonField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAutomatonReasonField" nillable="true" type="tns:ArrayOfAutomatonReasonField" />
+  <xs:complexType name="ArrayOfAutomatonReasonState">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AutomatonReasonState" nillable="true" type="tns:AutomatonReasonState" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAutomatonReasonState" nillable="true" type="tns:ArrayOfAutomatonReasonState" />
+  <xs:complexType name="AutomatonReasonState">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://accipiens.com/Common" base="q12:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AutUserStateId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AutomatonReasonId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AutomatonReasonStateKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AutomatonReasonStateDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AutomatonReasonStateField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAutomatonReasonStateField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AutomatonReasonState" nillable="true" type="tns:AutomatonReasonState" />
+  <xs:complexType name="AutomatonReasonStateKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://accipiens.com/Common" base="q13:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AutUserStateId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AutomatonReasonId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AutomatonReasonStateKey" nillable="true" type="tns:AutomatonReasonStateKey" />
+  <xs:simpleType name="AutomatonReasonStateDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AutomatonReasonStateDetail" nillable="true" type="tns:AutomatonReasonStateDetail" />
+  <xs:simpleType name="AutomatonReasonStateField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AutomatonReasonId" />
+      <xs:enumeration value="AutUserStateId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AutomatonReasonStateField" nillable="true" type="tns:AutomatonReasonStateField" />
+  <xs:complexType name="ArrayOfAutomatonReasonStateField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AutomatonReasonStateField" type="tns:AutomatonReasonStateField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAutomatonReasonStateField" nillable="true" type="tns:ArrayOfAutomatonReasonStateField" />
+  <xs:complexType name="ArrayOfAutState">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AutState" nillable="true" type="tns:AutState" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAutState" nillable="true" type="tns:ArrayOfAutState" />
+  <xs:complexType name="AutTransitionKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://accipiens.com/Common" base="q14:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AutomatonId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="InitialAutStateId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AutTransitionKey" nillable="true" type="tns:AutTransitionKey" />
+  <xs:simpleType name="AutTransitionDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Automaton" />
+      <xs:enumeration value="InitialState" />
+      <xs:enumeration value="FinalState" />
+      <xs:enumeration value="Condition" />
+      <xs:enumeration value="Operation" />
+      <xs:enumeration value="PostTransition" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AutTransitionDetail" nillable="true" type="tns:AutTransitionDetail" />
+  <xs:simpleType name="AutTransitionField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AutomatonId" />
+      <xs:enumeration value="InitialAutStateId" />
+      <xs:enumeration value="Abrev" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="FinalAutStateId" />
+      <xs:enumeration value="AutConditionId" />
+      <xs:enumeration value="AutOperationId" />
+      <xs:enumeration value="UserTransition" />
+      <xs:enumeration value="HasPermission" />
+      <xs:enumeration value="ReasonValidationTypeId" />
+      <xs:enumeration value="CheckUserInPastTransitions" />
+      <xs:enumeration value="CheckUserInBatchTasks" />
+      <xs:enumeration value="AplTaskId" />
+      <xs:enumeration value="RowVersion" />
+      <xs:enumeration value="PostTransitionAplStatementId" />
+      <xs:enumeration value="PostTransAfterTransition" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AutTransitionField" nillable="true" type="tns:AutTransitionField" />
+  <xs:complexType name="ArrayOfAutTransitionField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AutTransitionField" type="tns:AutTransitionField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAutTransitionField" nillable="true" type="tns:ArrayOfAutTransitionField" />
+  <xs:complexType name="AutOperation">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://accipiens.com/Common" base="q15:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AutContextId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="InternalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AutOperationKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AutOperationDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AutOperationField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAutOperationField" />
+          <xs:element minOccurs="0" name="OperationActions" nillable="true" type="tns:ArrayOfAutOperationAction" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AutOperation" nillable="true" type="tns:AutOperation" />
+  <xs:complexType name="AutOperationKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://accipiens.com/Common" base="q16:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AutContextId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AutOperationKey" nillable="true" type="tns:AutOperationKey" />
+  <xs:simpleType name="AutOperationDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OperationAction" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AutOperationDetail" nillable="true" type="tns:AutOperationDetail" />
+  <xs:simpleType name="AutOperationField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AutContextId" />
+      <xs:enumeration value="Abrev" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="InternalCode" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AutOperationField" nillable="true" type="tns:AutOperationField" />
+  <xs:complexType name="ArrayOfAutOperationField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AutOperationField" type="tns:AutOperationField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAutOperationField" nillable="true" type="tns:ArrayOfAutOperationField" />
+  <xs:complexType name="ArrayOfAutOperationAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AutOperationAction" nillable="true" type="tns:AutOperationAction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAutOperationAction" nillable="true" type="tns:ArrayOfAutOperationAction" />
+  <xs:complexType name="AutOperationAction">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://accipiens.com/Common" base="q17:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Action" nillable="true" type="tns:AutAction" />
+          <xs:element minOccurs="0" name="ActionParameters" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AfterTransition" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AutActionId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AutConditionId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AutOperationId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Condition" nillable="true" type="tns:AutCondition" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AutOperationActionKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AutOperationActionDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AutOperationActionField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAutOperationActionField" />
+          <xs:element minOccurs="0" name="SequenceNumber" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AutOperationAction" nillable="true" type="tns:AutOperationAction" />
+  <xs:complexType name="AutAction">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://accipiens.com/Common" base="q18:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AutContextId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="InternalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AutActionKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AutActionDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AutActionField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAutActionField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AutAction" nillable="true" type="tns:AutAction" />
+  <xs:complexType name="AutActionKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://accipiens.com/Common" base="q19:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AutContextId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AutActionKey" nillable="true" type="tns:AutActionKey" />
+  <xs:simpleType name="AutActionDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AutActionDetail" nillable="true" type="tns:AutActionDetail" />
+  <xs:simpleType name="AutActionField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AutContextId" />
+      <xs:enumeration value="Abrev" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="InternalCode" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AutActionField" nillable="true" type="tns:AutActionField" />
+  <xs:complexType name="ArrayOfAutActionField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AutActionField" type="tns:AutActionField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAutActionField" nillable="true" type="tns:ArrayOfAutActionField" />
+  <xs:complexType name="AutOperationActionKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q20="http://accipiens.com/Common" base="q20:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AutOperationId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="SequenceNumber" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AutOperationActionKey" nillable="true" type="tns:AutOperationActionKey" />
+  <xs:simpleType name="AutOperationActionDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Action" />
+      <xs:enumeration value="Condition" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AutOperationActionDetail" nillable="true" type="tns:AutOperationActionDetail" />
+  <xs:simpleType name="AutOperationActionField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AutOperationId" />
+      <xs:enumeration value="SequenceNumber" />
+      <xs:enumeration value="AutActionId" />
+      <xs:enumeration value="ActionParameters" />
+      <xs:enumeration value="AfterTransition" />
+      <xs:enumeration value="AutConditionId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AutOperationActionField" nillable="true" type="tns:AutOperationActionField" />
+  <xs:complexType name="ArrayOfAutOperationActionField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AutOperationActionField" type="tns:AutOperationActionField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAutOperationActionField" nillable="true" type="tns:ArrayOfAutOperationActionField" />
+  <xs:complexType name="ArrayOfAutPostTransition">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AutPostTransition" nillable="true" type="tns:AutPostTransition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAutPostTransition" nillable="true" type="tns:ArrayOfAutPostTransition" />
+  <xs:complexType name="AutPostTransition">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q21="http://accipiens.com/Common" base="q21:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AutPostTransitionTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AutTransitionId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ConditionValue" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AutPostTransitionKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AutPostTransitionDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AutPostTransitionField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAutPostTransitionField" />
+          <xs:element minOccurs="0" name="PostAutContextId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PostAutTransitionId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PostAutomatonId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PostInitialAutStateId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PostOrder" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AutPostTransition" nillable="true" type="tns:AutPostTransition" />
+  <xs:complexType name="AutPostTransitionKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q22="http://accipiens.com/Common" base="q22:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AutPostTransitionKey" nillable="true" type="tns:AutPostTransitionKey" />
+  <xs:simpleType name="AutPostTransitionDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AutPostTransitionDetail" nillable="true" type="tns:AutPostTransitionDetail" />
+  <xs:simpleType name="AutPostTransitionField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AutTransitionId" />
+      <xs:enumeration value="AutPostTransitionTypeId" />
+      <xs:enumeration value="ConditionValue" />
+      <xs:enumeration value="PostAutContextId" />
+      <xs:enumeration value="PostAutomatonId" />
+      <xs:enumeration value="PostInitialAutStateId" />
+      <xs:enumeration value="PostAutTransitionId" />
+      <xs:enumeration value="PostOrder" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AutPostTransitionField" nillable="true" type="tns:AutPostTransitionField" />
+  <xs:complexType name="ArrayOfAutPostTransitionField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AutPostTransitionField" type="tns:AutPostTransitionField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAutPostTransitionField" nillable="true" type="tns:ArrayOfAutPostTransitionField" />
+  <xs:complexType name="TransitionParam">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AutAccountDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="AutReasons" nillable="true" type="tns:ArrayOfAutLogReason" />
+      <xs:element minOccurs="0" name="AutValueDate" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransitionParam" nillable="true" type="tns:TransitionParam" />
+  <xs:complexType name="ArrayOfAutLogReason">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AutLogReason" nillable="true" type="tns:AutLogReason" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAutLogReason" nillable="true" type="tns:ArrayOfAutLogReason" />
+  <xs:complexType name="AutLogReason">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q23="http://accipiens.com/Common" base="q23:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AutLogId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AutReasonId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AutLogReasonKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AutLogReasonDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AutLogReasonField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAutLogReasonField" />
+          <xs:element minOccurs="0" name="StructNodeId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AutLogReason" nillable="true" type="tns:AutLogReason" />
+  <xs:complexType name="AutLogReasonKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q24="http://accipiens.com/Common" base="q24:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AutLogReasonKey" nillable="true" type="tns:AutLogReasonKey" />
+  <xs:simpleType name="AutLogReasonDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AutLogReasonDetail" nillable="true" type="tns:AutLogReasonDetail" />
+  <xs:simpleType name="AutLogReasonField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AutLogId" />
+      <xs:enumeration value="StructNodeId" />
+      <xs:enumeration value="AutReasonId" />
+      <xs:enumeration value="Comment" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AutLogReasonField" nillable="true" type="tns:AutLogReasonField" />
+  <xs:complexType name="ArrayOfAutLogReasonField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AutLogReasonField" type="tns:AutLogReasonField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAutLogReasonField" nillable="true" type="tns:ArrayOfAutLogReasonField" />
+  <xs:complexType name="TransitionResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BatchId" nillable="true" type="xs:long" />
+      <xs:element xmlns:q25="http://accipiens.com/AcpDocuments" minOccurs="0" name="IssueResults" nillable="true" type="q25:ArrayOfIssueResult" />
+      <xs:element xmlns:q26="http://accipiens.com/Common" minOccurs="0" name="Validations" nillable="true" type="q26:ArrayOfValidationResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransitionResult" nillable="true" type="tns:TransitionResult" />
+</xs:schema>

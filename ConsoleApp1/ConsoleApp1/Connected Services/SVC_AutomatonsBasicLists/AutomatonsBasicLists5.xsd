@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://accipiens.com" elementFormDefault="qualified" targetNamespace="http://accipiens.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/BasicLists/AutomatonsBasicLists.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Olissipo.Automatons.Facade" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/BasicLists/AutomatonsBasicLists.svc?xsd=xsd3" namespace="http://accipiens.com/Common" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/BasicLists/AutomatonsBasicLists.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Olissipo.Automatons.Decoder" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/BasicLists/AutomatonsBasicLists.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="GetDataWithForeign">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Olissipo.Automatons.Facade" minOccurs="0" name="listType" type="q1:AutomatonsForeignDataListId" />
+        <xs:element minOccurs="0" name="foreignReference" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataWithForeignResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://accipiens.com/Common" minOccurs="0" name="GetDataWithForeignResult" nillable="true" type="q2:CodeAbbreviation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Olissipo.Automatons.Facade" minOccurs="0" name="listType" type="q3:AutomatonsDataListId" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://accipiens.com/Common" minOccurs="0" name="GetDataListResult" nillable="true" type="q4:BasicList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetForeignDataList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Olissipo.Automatons.Facade" minOccurs="0" name="listType" type="q5:AutomatonsForeignDataListId" />
+        <xs:element minOccurs="0" name="foreignReference" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetForeignDataListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://accipiens.com/Common" minOccurs="0" name="GetForeignDataListResult" nillable="true" type="q6:BasicList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutomatonInternalCodeDataList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="contextInternalCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contextAplPackageId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Olissipo.Automatons.Decoder" minOccurs="0" name="internalCodeKind" type="q7:AutomatonInternalCodeKind" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutomatonInternalCodeDataListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://accipiens.com/Common" minOccurs="0" name="GetAutomatonInternalCodeDataListResult" nillable="true" type="q8:BasicList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutomatonReasonDataList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="autTransitionId" type="xs:long" />
+        <xs:element minOccurs="0" name="autUserStateId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutomatonReasonDataListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://accipiens.com/Common" minOccurs="0" name="GetAutomatonReasonDataListResult" nillable="true" type="q9:BasicList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutUserStateDataList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="autContextCode" nillable="true" type="xs:string" />
+        <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="internalStateIdList" nillable="true" type="q10:ArrayOflong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutUserStateDataListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://accipiens.com/Common" minOccurs="0" name="GetAutUserStateDataListResult" nillable="true" type="q11:BasicList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutomatonsAutUserStateDataList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="automatonIdList" nillable="true" type="q12:ArrayOflong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutomatonsAutUserStateDataListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://accipiens.com/Common" minOccurs="0" name="GetAutomatonsAutUserStateDataListResult" nillable="true" type="q13:BasicList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

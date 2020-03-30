@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://accipiens.com/Common" elementFormDefault="qualified" targetNamespace="http://accipiens.com/Common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Olissipo.Utils" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd12" namespace="http://accipiens.com/VirtualData" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="SessionTokenWcfHeader">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CallerApplicationId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CallerMethodInfo" nillable="true" type="tns:MethodSoapHeaderInfo" />
+      <xs:element minOccurs="0" name="Culture" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DelegateUserId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="HostAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HostName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsTraceOn" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LoginName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Token" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Olissipo.Utils" minOccurs="0" name="TraceLogLevel" nillable="true" type="q1:LogLevel" />
+      <xs:element minOccurs="0" name="UiCulture" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SessionTokenWcfHeader" nillable="true" type="tns:SessionTokenWcfHeader" />
+  <xs:complexType name="MethodSoapHeaderInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CallerAplScreenId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CallerUrl" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MethodSoapHeaderInfo" nillable="true" type="tns:MethodSoapHeaderInfo" />
+  <xs:element name="SessionToken" nillable="true" type="tns:SessionTokenWcfHeader" />
+  <xs:complexType name="BasicList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CleanInvalidElement" type="xs:boolean" />
+      <xs:element minOccurs="0" name="List" nillable="true" type="tns:ArrayOfCodeAbbreviation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BasicList" nillable="true" type="tns:BasicList" />
+  <xs:complexType name="ArrayOfCodeAbbreviation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CodeAbbreviation" nillable="true" type="tns:CodeAbbreviation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCodeAbbreviation" nillable="true" type="tns:ArrayOfCodeAbbreviation" />
+  <xs:complexType name="CodeAbbreviation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Abbreviation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FetchLevel" type="xs:int" />
+      <xs:element minOccurs="0" name="InvalidDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsDefault" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsInvalid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PermissionFlags" type="tns:PermissionFlags" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CodeAbbreviation" nillable="true" type="tns:CodeAbbreviation" />
+  <xs:simpleType name="PermissionFlags">
+    <xs:list>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="None">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="CanRead">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="CanCreate">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="CanModify">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="CanDelete">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="CanExecute">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">16</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="CanModifyTableData">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">32</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:list>
+  </xs:simpleType>
+  <xs:element name="PermissionFlags" nillable="true" type="tns:PermissionFlags" />
+  <xs:complexType name="AcpDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorList" nillable="true" type="tns:ArrayOfBusinessError" />
+      <xs:element minOccurs="0" name="Kind" type="tns:ExceptionKind" />
+      <xs:element minOccurs="0" name="Machine" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MessageAll" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MessageAllWithTech" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OperationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServerFolder" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServerVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServiceName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ToStringDetails" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcpDetail" nillable="true" type="tns:AcpDetail" />
+  <xs:complexType name="ArrayOfBusinessError">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BusinessError" nillable="true" type="tns:BusinessError" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBusinessError" nillable="true" type="tns:ArrayOfBusinessError" />
+  <xs:complexType name="BusinessError">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Context" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExtraInfo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Field" type="xs:int" />
+      <xs:element minOccurs="0" name="FieldName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HideResultCode" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecordIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="RelatedAplTableId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="RelatedId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="RelatedUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Result" type="tns:ValidationResultCode" />
+      <xs:element minOccurs="0" name="RscCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RscEnumTypeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TechMsg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Translated" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusinessError" nillable="true" type="tns:BusinessError" />
+  <xs:simpleType name="ValidationResultCode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Warning" />
+      <xs:enumeration value="Error" />
+      <xs:enumeration value="Info" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ValidationResultCode" nillable="true" type="tns:ValidationResultCode" />
+  <xs:simpleType name="ExceptionKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Business" />
+      <xs:enumeration value="Technical" />
+      <xs:enumeration value="System" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExceptionKind" nillable="true" type="tns:ExceptionKind" />
+  <xs:complexType name="BusinessEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContainerId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContainerIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="FieldStates" nillable="true" type="tns:ArrayOfRecordFieldState" />
+      <xs:element xmlns:q2="http://accipiens.com/VirtualData" minOccurs="0" name="ModifiedValues" nillable="true" type="q2:ArrayOfAplTableAuditValue" />
+      <xs:element minOccurs="0" name="Permissions" nillable="true" type="tns:PermissionInfo" />
+      <xs:element minOccurs="0" name="Status" type="tns:InstanceStatus" />
+      <xs:element xmlns:q3="http://accipiens.com/VirtualData" minOccurs="0" name="TableData" nillable="true" type="q3:ArrayOfAplTableData" />
+      <xs:element minOccurs="0" name="Warnings" nillable="true" type="tns:ArrayOfValidationResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusinessEntity" nillable="true" type="tns:BusinessEntity" />
+  <xs:complexType name="ArrayOfRecordFieldState">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RecordFieldState" nillable="true" type="tns:RecordFieldState" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRecordFieldState" nillable="true" type="tns:ArrayOfRecordFieldState" />
+  <xs:complexType name="RecordFieldState">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AplApplicationId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="AplScreenId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="AplTableId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="FieldId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="IsObligatory" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsReadOnly" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RecordId" nillable="true" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RecordFieldState" nillable="true" type="tns:RecordFieldState" />
+  <xs:complexType name="BusinessEntityKey">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="BusinessEntityKey" nillable="true" type="tns:BusinessEntityKey" />
+  <xs:complexType name="PermissionInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Permissions" type="tns:PermissionFlags" />
+      <xs:element minOccurs="0" name="Reason" nillable="true" type="xs:string" />
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Reasons" nillable="true" type="q4:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PermissionInfo" nillable="true" type="tns:PermissionInfo" />
+  <xs:simpleType name="InstanceStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unchanged">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Insert">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Delete">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Update">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="InstanceStatus" nillable="true" type="tns:InstanceStatus" />
+  <xs:complexType name="ArrayOfValidationResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ValidationResult" nillable="true" type="tns:ValidationResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfValidationResult" nillable="true" type="tns:ArrayOfValidationResult" />
+  <xs:complexType name="ValidationResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BusinessError">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Index" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ValidationResult" nillable="true" type="tns:ValidationResult" />
+  <xs:simpleType name="GenderKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Male" />
+      <xs:enumeration value="Female" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="GenderKind" nillable="true" type="tns:GenderKind" />
+</xs:schema>

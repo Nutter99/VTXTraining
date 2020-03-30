@@ -1,0 +1,2041 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://accipiens.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://accipiens.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://accipiens.com/Imports">
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Services/CreditOperationsConfig.svc?xsd=xsd0" namespace="http://accipiens.com" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Services/CreditOperationsConfig.svc?xsd=xsd3" namespace="http://accipiens.com/Common" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Services/CreditOperationsConfig.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Services/CreditOperationsConfig.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Services/CreditOperationsConfig.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Olissipo.Utils" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Services/CreditOperationsConfig.svc?xsd=xsd5" namespace="http://accipiens.com/CreditOperationsConfig" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Services/CreditOperationsConfig.svc?xsd=xsd6" namespace="http://accipiens.com/VirtualData" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Services/CreditOperationsConfig.svc?xsd=xsd7" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Services/CreditOperationsConfig.svc?xsd=xsd8" namespace="http://accipiens.com/AcpFramework" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="CreditOperationsConfig_GetInstallmentRevenueModeEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInstallmentRevenueModeEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetInstallmentRevenueModeEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q1="http://accipiens.com/Common" name="SessionToken" element="q1:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetInstallmentRevenueModeEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInstallmentRevenueModeEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetInstallmentRevenueModeEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q2="http://accipiens.com/Common" name="detail" element="q2:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumInstallmentRevenueMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumInstallmentRevenueMode" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumInstallmentRevenueMode_InputMessage_Headers">
+    <wsdl:part xmlns:q3="http://accipiens.com/Common" name="SessionToken" element="q3:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumInstallmentRevenueMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumInstallmentRevenueModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumInstallmentRevenueMode_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q4="http://accipiens.com/Common" name="detail" element="q4:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetInitialEntryPeriodificationModeEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInitialEntryPeriodificationModeEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetInitialEntryPeriodificationModeEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q5="http://accipiens.com/Common" name="SessionToken" element="q5:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetInitialEntryPeriodificationModeEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInitialEntryPeriodificationModeEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetInitialEntryPeriodificationModeEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q6="http://accipiens.com/Common" name="detail" element="q6:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumInitialEntryPeriodificationMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumInitialEntryPeriodificationMode" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumInitialEntryPeriodificationMode_InputMessage_Headers">
+    <wsdl:part xmlns:q7="http://accipiens.com/Common" name="SessionToken" element="q7:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumInitialEntryPeriodificationMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumInitialEntryPeriodificationModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumInitialEntryPeriodificationMode_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q8="http://accipiens.com/Common" name="detail" element="q8:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCreditOperationStepEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditOperationStepEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCreditOperationStepEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q9="http://accipiens.com/Common" name="SessionToken" element="q9:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCreditOperationStepEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditOperationStepEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCreditOperationStepEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q10="http://accipiens.com/Common" name="detail" element="q10:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCreditOperationStep_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumCreditOperationStep" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCreditOperationStep_InputMessage_Headers">
+    <wsdl:part xmlns:q11="http://accipiens.com/Common" name="SessionToken" element="q11:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCreditOperationStep_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumCreditOperationStepResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCreditOperationStep_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q12="http://accipiens.com/Common" name="detail" element="q12:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetDefaultPaymentModeId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDefaultPaymentModeId" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetDefaultPaymentModeId_InputMessage_Headers">
+    <wsdl:part xmlns:q13="http://accipiens.com/Common" name="SessionToken" element="q13:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetDefaultPaymentModeId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDefaultPaymentModeIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetDefaultPaymentModeId_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q14="http://accipiens.com/Common" name="detail" element="q14:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_SetAssetOperation_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetAssetOperation" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_SetAssetOperation_InputMessage_Headers">
+    <wsdl:part xmlns:q15="http://accipiens.com/Common" name="SessionToken" element="q15:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_SetAssetOperation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetAssetOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_SetAssetOperation_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q16="http://accipiens.com/Common" name="detail" element="q16:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetOperation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetOperation" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetOperation_InputMessage_Headers">
+    <wsdl:part xmlns:q17="http://accipiens.com/Common" name="SessionToken" element="q17:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetOperation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetOperation_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q18="http://accipiens.com/Common" name="detail" element="q18:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_Ping_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ping" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_Ping_InputMessage_Headers">
+    <wsdl:part xmlns:q19="http://accipiens.com/Common" name="SessionToken" element="q19:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_Ping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PingResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_Ping_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q20="http://accipiens.com/Common" name="detail" element="q20:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumDisposableAssetOperationTypeKind_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumDisposableAssetOperationTypeKind" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumDisposableAssetOperationTypeKind_InputMessage_Headers">
+    <wsdl:part xmlns:q21="http://accipiens.com/Common" name="SessionToken" element="q21:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumDisposableAssetOperationTypeKind_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumDisposableAssetOperationTypeKindResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumDisposableAssetOperationTypeKind_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q22="http://accipiens.com/Common" name="detail" element="q22:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetDisposableAssetOperationTypeKindEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDisposableAssetOperationTypeKindEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetDisposableAssetOperationTypeKindEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q23="http://accipiens.com/Common" name="SessionToken" element="q23:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetDisposableAssetOperationTypeKindEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDisposableAssetOperationTypeKindEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetDisposableAssetOperationTypeKindEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q24="http://accipiens.com/Common" name="detail" element="q24:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumAssetExpenseType_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumAssetExpenseType" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumAssetExpenseType_InputMessage_Headers">
+    <wsdl:part xmlns:q25="http://accipiens.com/Common" name="SessionToken" element="q25:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumAssetExpenseType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumAssetExpenseTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumAssetExpenseType_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q26="http://accipiens.com/Common" name="detail" element="q26:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetExpenseTypeEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetExpenseTypeEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetExpenseTypeEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q27="http://accipiens.com/Common" name="SessionToken" element="q27:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetExpenseTypeEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetExpenseTypeEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetExpenseTypeEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q28="http://accipiens.com/Common" name="detail" element="q28:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCessionSuperTypeKind_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumCessionSuperTypeKind" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCessionSuperTypeKind_InputMessage_Headers">
+    <wsdl:part xmlns:q29="http://accipiens.com/Common" name="SessionToken" element="q29:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCessionSuperTypeKind_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumCessionSuperTypeKindResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCessionSuperTypeKind_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q30="http://accipiens.com/Common" name="detail" element="q30:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCessionSuperTypeKindEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCessionSuperTypeKindEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCessionSuperTypeKindEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q31="http://accipiens.com/Common" name="SessionToken" element="q31:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCessionSuperTypeKindEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCessionSuperTypeKindEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCessionSuperTypeKindEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q32="http://accipiens.com/Common" name="detail" element="q32:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumTerminateCredOperGuarantMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumTerminateCredOperGuarantMode" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumTerminateCredOperGuarantMode_InputMessage_Headers">
+    <wsdl:part xmlns:q33="http://accipiens.com/Common" name="SessionToken" element="q33:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumTerminateCredOperGuarantMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumTerminateCredOperGuarantModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumTerminateCredOperGuarantMode_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q34="http://accipiens.com/Common" name="detail" element="q34:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetTerminateCredOperGuarantModeEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTerminateCredOperGuarantModeEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetTerminateCredOperGuarantModeEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q35="http://accipiens.com/Common" name="SessionToken" element="q35:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetTerminateCredOperGuarantModeEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTerminateCredOperGuarantModeEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetTerminateCredOperGuarantModeEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q36="http://accipiens.com/Common" name="detail" element="q36:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCessionFinChangeMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumCessionFinChangeMode" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCessionFinChangeMode_InputMessage_Headers">
+    <wsdl:part xmlns:q37="http://accipiens.com/Common" name="SessionToken" element="q37:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCessionFinChangeMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumCessionFinChangeModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCessionFinChangeMode_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q38="http://accipiens.com/Common" name="detail" element="q38:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCessionFinChangeModeEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCessionFinChangeModeEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCessionFinChangeModeEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q39="http://accipiens.com/Common" name="SessionToken" element="q39:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCessionFinChangeModeEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCessionFinChangeModeEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCessionFinChangeModeEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q40="http://accipiens.com/Common" name="detail" element="q40:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumUsePlafondKind_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumUsePlafondKind" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumUsePlafondKind_InputMessage_Headers">
+    <wsdl:part xmlns:q41="http://accipiens.com/Common" name="SessionToken" element="q41:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumUsePlafondKind_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumUsePlafondKindResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumUsePlafondKind_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q42="http://accipiens.com/Common" name="detail" element="q42:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetUsePlafondKindEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsePlafondKindEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetUsePlafondKindEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q43="http://accipiens.com/Common" name="SessionToken" element="q43:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetUsePlafondKindEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsePlafondKindEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetUsePlafondKindEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q44="http://accipiens.com/Common" name="detail" element="q44:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumConditionsMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumConditionsMode" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumConditionsMode_InputMessage_Headers">
+    <wsdl:part xmlns:q45="http://accipiens.com/Common" name="SessionToken" element="q45:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumConditionsMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumConditionsModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumConditionsMode_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q46="http://accipiens.com/Common" name="detail" element="q46:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetConditionsModeEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConditionsModeEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetConditionsModeEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q47="http://accipiens.com/Common" name="SessionToken" element="q47:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetConditionsModeEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConditionsModeEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetConditionsModeEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q48="http://accipiens.com/Common" name="detail" element="q48:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumMinTermMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumMinTermMode" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumMinTermMode_InputMessage_Headers">
+    <wsdl:part xmlns:q49="http://accipiens.com/Common" name="SessionToken" element="q49:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumMinTermMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumMinTermModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumMinTermMode_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q50="http://accipiens.com/Common" name="detail" element="q50:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetMinTermModeEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMinTermModeEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetMinTermModeEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q51="http://accipiens.com/Common" name="SessionToken" element="q51:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetMinTermModeEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMinTermModeEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetMinTermModeEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q52="http://accipiens.com/Common" name="detail" element="q52:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumUseEntityPlafondKind_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumUseEntityPlafondKind" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumUseEntityPlafondKind_InputMessage_Headers">
+    <wsdl:part xmlns:q53="http://accipiens.com/Common" name="SessionToken" element="q53:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumUseEntityPlafondKind_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumUseEntityPlafondKindResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumUseEntityPlafondKind_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q54="http://accipiens.com/Common" name="detail" element="q54:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetUseEntityPlafondKindEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUseEntityPlafondKindEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetUseEntityPlafondKindEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q55="http://accipiens.com/Common" name="SessionToken" element="q55:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetUseEntityPlafondKindEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUseEntityPlafondKindEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetUseEntityPlafondKindEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q56="http://accipiens.com/Common" name="detail" element="q56:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumEquipmentDiscountMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumEquipmentDiscountMode" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumEquipmentDiscountMode_InputMessage_Headers">
+    <wsdl:part xmlns:q57="http://accipiens.com/Common" name="SessionToken" element="q57:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumEquipmentDiscountMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumEquipmentDiscountModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumEquipmentDiscountMode_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q58="http://accipiens.com/Common" name="detail" element="q58:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetEquipmentDiscountModeEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipmentDiscountModeEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetEquipmentDiscountModeEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q59="http://accipiens.com/Common" name="SessionToken" element="q59:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetEquipmentDiscountModeEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipmentDiscountModeEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetEquipmentDiscountModeEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q60="http://accipiens.com/Common" name="detail" element="q60:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumAssetAmountInputMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumAssetAmountInputMode" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumAssetAmountInputMode_InputMessage_Headers">
+    <wsdl:part xmlns:q61="http://accipiens.com/Common" name="SessionToken" element="q61:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumAssetAmountInputMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumAssetAmountInputModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumAssetAmountInputMode_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q62="http://accipiens.com/Common" name="detail" element="q62:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetAmountInputModeEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetAmountInputModeEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetAmountInputModeEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q63="http://accipiens.com/Common" name="SessionToken" element="q63:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetAmountInputModeEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetAmountInputModeEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetAmountInputModeEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q64="http://accipiens.com/Common" name="detail" element="q64:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumDownPaymentValidationKind_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumDownPaymentValidationKind" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumDownPaymentValidationKind_InputMessage_Headers">
+    <wsdl:part xmlns:q65="http://accipiens.com/Common" name="SessionToken" element="q65:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumDownPaymentValidationKind_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumDownPaymentValidationKindResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumDownPaymentValidationKind_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q66="http://accipiens.com/Common" name="detail" element="q66:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetDownPaymentValidationKindEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDownPaymentValidationKindEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetDownPaymentValidationKindEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q67="http://accipiens.com/Common" name="SessionToken" element="q67:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetDownPaymentValidationKindEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDownPaymentValidationKindEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetDownPaymentValidationKindEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q68="http://accipiens.com/Common" name="detail" element="q68:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCautionInputMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumCautionInputMode" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCautionInputMode_InputMessage_Headers">
+    <wsdl:part xmlns:q69="http://accipiens.com/Common" name="SessionToken" element="q69:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCautionInputMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumCautionInputModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCautionInputMode_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q70="http://accipiens.com/Common" name="detail" element="q70:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCautionInputModeEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCautionInputModeEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCautionInputModeEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q71="http://accipiens.com/Common" name="SessionToken" element="q71:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCautionInputModeEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCautionInputModeEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCautionInputModeEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q72="http://accipiens.com/Common" name="detail" element="q72:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumUsageReservationManagementMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumUsageReservationManagementMode" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumUsageReservationManagementMode_InputMessage_Headers">
+    <wsdl:part xmlns:q73="http://accipiens.com/Common" name="SessionToken" element="q73:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumUsageReservationManagementMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumUsageReservationManagementModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumUsageReservationManagementMode_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q74="http://accipiens.com/Common" name="detail" element="q74:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetUsageReservationManagementModeEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsageReservationManagementModeEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetUsageReservationManagementModeEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q75="http://accipiens.com/Common" name="SessionToken" element="q75:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetUsageReservationManagementModeEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsageReservationManagementModeEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetUsageReservationManagementModeEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q76="http://accipiens.com/Common" name="detail" element="q76:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumResidualValueBase_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumResidualValueBase" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumResidualValueBase_InputMessage_Headers">
+    <wsdl:part xmlns:q77="http://accipiens.com/Common" name="SessionToken" element="q77:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumResidualValueBase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumResidualValueBaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumResidualValueBase_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q78="http://accipiens.com/Common" name="detail" element="q78:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetResidualValueBaseEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResidualValueBaseEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetResidualValueBaseEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q79="http://accipiens.com/Common" name="SessionToken" element="q79:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetResidualValueBaseEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResidualValueBaseEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetResidualValueBaseEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q80="http://accipiens.com/Common" name="detail" element="q80:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumFinMatrixTypeSelectionMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumFinMatrixTypeSelectionMode" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumFinMatrixTypeSelectionMode_InputMessage_Headers">
+    <wsdl:part xmlns:q81="http://accipiens.com/Common" name="SessionToken" element="q81:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumFinMatrixTypeSelectionMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumFinMatrixTypeSelectionModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumFinMatrixTypeSelectionMode_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q82="http://accipiens.com/Common" name="detail" element="q82:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFinMatrixTypeSelectionModeEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinMatrixTypeSelectionModeEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFinMatrixTypeSelectionModeEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q83="http://accipiens.com/Common" name="SessionToken" element="q83:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFinMatrixTypeSelectionModeEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinMatrixTypeSelectionModeEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFinMatrixTypeSelectionModeEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q84="http://accipiens.com/Common" name="detail" element="q84:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumDurationInputMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumDurationInputMode" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumDurationInputMode_InputMessage_Headers">
+    <wsdl:part xmlns:q85="http://accipiens.com/Common" name="SessionToken" element="q85:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumDurationInputMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumDurationInputModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumDurationInputMode_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q86="http://accipiens.com/Common" name="detail" element="q86:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetDurationInputModeEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDurationInputModeEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetDurationInputModeEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q87="http://accipiens.com/Common" name="SessionToken" element="q87:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetDurationInputModeEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDurationInputModeEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetDurationInputModeEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q88="http://accipiens.com/Common" name="detail" element="q88:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumAssetBaseAmountCalcMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumAssetBaseAmountCalcMode" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumAssetBaseAmountCalcMode_InputMessage_Headers">
+    <wsdl:part xmlns:q89="http://accipiens.com/Common" name="SessionToken" element="q89:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumAssetBaseAmountCalcMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumAssetBaseAmountCalcModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumAssetBaseAmountCalcMode_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q90="http://accipiens.com/Common" name="detail" element="q90:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetBaseAmountCalcModeEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetBaseAmountCalcModeEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetBaseAmountCalcModeEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q91="http://accipiens.com/Common" name="SessionToken" element="q91:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetBaseAmountCalcModeEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetBaseAmountCalcModeEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetBaseAmountCalcModeEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q92="http://accipiens.com/Common" name="detail" element="q92:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumAssetRetakeBaseAmountMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumAssetRetakeBaseAmountMode" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumAssetRetakeBaseAmountMode_InputMessage_Headers">
+    <wsdl:part xmlns:q93="http://accipiens.com/Common" name="SessionToken" element="q93:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumAssetRetakeBaseAmountMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumAssetRetakeBaseAmountModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumAssetRetakeBaseAmountMode_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q94="http://accipiens.com/Common" name="detail" element="q94:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetRetakeBaseAmountModeEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetRetakeBaseAmountModeEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetRetakeBaseAmountModeEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q95="http://accipiens.com/Common" name="SessionToken" element="q95:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetRetakeBaseAmountModeEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetRetakeBaseAmountModeEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetRetakeBaseAmountModeEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q96="http://accipiens.com/Common" name="detail" element="q96:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCredOperTaxAggregationMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumCredOperTaxAggregationMode" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCredOperTaxAggregationMode_InputMessage_Headers">
+    <wsdl:part xmlns:q97="http://accipiens.com/Common" name="SessionToken" element="q97:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCredOperTaxAggregationMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumCredOperTaxAggregationModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCredOperTaxAggregationMode_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q98="http://accipiens.com/Common" name="detail" element="q98:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTaxAggregationModeEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTaxAggregationModeEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTaxAggregationModeEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q99="http://accipiens.com/Common" name="SessionToken" element="q99:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTaxAggregationModeEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTaxAggregationModeEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTaxAggregationModeEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q100="http://accipiens.com/Common" name="detail" element="q100:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumRelocationAssetBaseAmountCalcMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumRelocationAssetBaseAmountCalcMode" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumRelocationAssetBaseAmountCalcMode_InputMessage_Headers">
+    <wsdl:part xmlns:q101="http://accipiens.com/Common" name="SessionToken" element="q101:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumRelocationAssetBaseAmountCalcMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumRelocationAssetBaseAmountCalcModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumRelocationAssetBaseAmountCalcMode_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q102="http://accipiens.com/Common" name="detail" element="q102:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetRelocationAssetBaseAmountCalcModeEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRelocationAssetBaseAmountCalcModeEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetRelocationAssetBaseAmountCalcModeEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q103="http://accipiens.com/Common" name="SessionToken" element="q103:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetRelocationAssetBaseAmountCalcModeEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRelocationAssetBaseAmountCalcModeEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetRelocationAssetBaseAmountCalcModeEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q104="http://accipiens.com/Common" name="detail" element="q104:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCapitalSourceMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumCapitalSourceMode" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCapitalSourceMode_InputMessage_Headers">
+    <wsdl:part xmlns:q105="http://accipiens.com/Common" name="SessionToken" element="q105:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCapitalSourceMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumCapitalSourceModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCapitalSourceMode_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q106="http://accipiens.com/Common" name="detail" element="q106:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCapitalSourceModeEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCapitalSourceModeEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCapitalSourceModeEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q107="http://accipiens.com/Common" name="SessionToken" element="q107:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCapitalSourceModeEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCapitalSourceModeEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCapitalSourceModeEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q108="http://accipiens.com/Common" name="detail" element="q108:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCredOperEventTypeKind_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumCredOperEventTypeKind" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCredOperEventTypeKind_InputMessage_Headers">
+    <wsdl:part xmlns:q109="http://accipiens.com/Common" name="SessionToken" element="q109:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCredOperEventTypeKind_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumCredOperEventTypeKindResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCredOperEventTypeKind_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q110="http://accipiens.com/Common" name="detail" element="q110:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperEventTypeKindEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperEventTypeKindEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperEventTypeKindEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q111="http://accipiens.com/Common" name="SessionToken" element="q111:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperEventTypeKindEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperEventTypeKindEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperEventTypeKindEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q112="http://accipiens.com/Common" name="detail" element="q112:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumInterestRatesReferenceDateKind_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumInterestRatesReferenceDateKind" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumInterestRatesReferenceDateKind_InputMessage_Headers">
+    <wsdl:part xmlns:q113="http://accipiens.com/Common" name="SessionToken" element="q113:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumInterestRatesReferenceDateKind_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumInterestRatesReferenceDateKindResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumInterestRatesReferenceDateKind_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q114="http://accipiens.com/Common" name="detail" element="q114:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetInterestRatesReferenceDateKindEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInterestRatesReferenceDateKindEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetInterestRatesReferenceDateKindEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q115="http://accipiens.com/Common" name="SessionToken" element="q115:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetInterestRatesReferenceDateKindEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInterestRatesReferenceDateKindEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetInterestRatesReferenceDateKindEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q116="http://accipiens.com/Common" name="detail" element="q116:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumFctInterestMovementsUniverse_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumFctInterestMovementsUniverse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumFctInterestMovementsUniverse_InputMessage_Headers">
+    <wsdl:part xmlns:q117="http://accipiens.com/Common" name="SessionToken" element="q117:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumFctInterestMovementsUniverse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumFctInterestMovementsUniverseResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumFctInterestMovementsUniverse_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q118="http://accipiens.com/Common" name="detail" element="q118:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFctInterestMovementsUniverseEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFctInterestMovementsUniverseEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFctInterestMovementsUniverseEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q119="http://accipiens.com/Common" name="SessionToken" element="q119:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFctInterestMovementsUniverseEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFctInterestMovementsUniverseEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFctInterestMovementsUniverseEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q120="http://accipiens.com/Common" name="detail" element="q120:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumPlafondNextPhaseValidation_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumPlafondNextPhaseValidation" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumPlafondNextPhaseValidation_InputMessage_Headers">
+    <wsdl:part xmlns:q121="http://accipiens.com/Common" name="SessionToken" element="q121:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumPlafondNextPhaseValidation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumPlafondNextPhaseValidationResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumPlafondNextPhaseValidation_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q122="http://accipiens.com/Common" name="detail" element="q122:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetPlafondNextPhaseValidationEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlafondNextPhaseValidationEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetPlafondNextPhaseValidationEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q123="http://accipiens.com/Common" name="SessionToken" element="q123:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetPlafondNextPhaseValidationEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlafondNextPhaseValidationEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetPlafondNextPhaseValidationEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q124="http://accipiens.com/Common" name="detail" element="q124:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumFinMatrixAssetUsageCalcMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumFinMatrixAssetUsageCalcMode" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumFinMatrixAssetUsageCalcMode_InputMessage_Headers">
+    <wsdl:part xmlns:q125="http://accipiens.com/Common" name="SessionToken" element="q125:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumFinMatrixAssetUsageCalcMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumFinMatrixAssetUsageCalcModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumFinMatrixAssetUsageCalcMode_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q126="http://accipiens.com/Common" name="detail" element="q126:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFinMatrixAssetUsageCalcModeEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinMatrixAssetUsageCalcModeEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFinMatrixAssetUsageCalcModeEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q127="http://accipiens.com/Common" name="SessionToken" element="q127:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFinMatrixAssetUsageCalcModeEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinMatrixAssetUsageCalcModeEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFinMatrixAssetUsageCalcModeEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q128="http://accipiens.com/Common" name="detail" element="q128:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumFinMatrixTermCalcMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumFinMatrixTermCalcMode" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumFinMatrixTermCalcMode_InputMessage_Headers">
+    <wsdl:part xmlns:q129="http://accipiens.com/Common" name="SessionToken" element="q129:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumFinMatrixTermCalcMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumFinMatrixTermCalcModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumFinMatrixTermCalcMode_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q130="http://accipiens.com/Common" name="detail" element="q130:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFinMatrixTermCalcModeEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinMatrixTermCalcModeEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFinMatrixTermCalcModeEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q131="http://accipiens.com/Common" name="SessionToken" element="q131:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFinMatrixTermCalcModeEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinMatrixTermCalcModeEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFinMatrixTermCalcModeEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q132="http://accipiens.com/Common" name="detail" element="q132:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumFinMatrixGenerationType_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumFinMatrixGenerationType" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumFinMatrixGenerationType_InputMessage_Headers">
+    <wsdl:part xmlns:q133="http://accipiens.com/Common" name="SessionToken" element="q133:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumFinMatrixGenerationType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumFinMatrixGenerationTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumFinMatrixGenerationType_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q134="http://accipiens.com/Common" name="detail" element="q134:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFinMatrixGenerationTypeEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinMatrixGenerationTypeEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFinMatrixGenerationTypeEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q135="http://accipiens.com/Common" name="SessionToken" element="q135:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFinMatrixGenerationTypeEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinMatrixGenerationTypeEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFinMatrixGenerationTypeEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q136="http://accipiens.com/Common" name="detail" element="q136:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumFinMatrixSelectionMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumFinMatrixSelectionMode" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumFinMatrixSelectionMode_InputMessage_Headers">
+    <wsdl:part xmlns:q137="http://accipiens.com/Common" name="SessionToken" element="q137:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumFinMatrixSelectionMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumFinMatrixSelectionModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumFinMatrixSelectionMode_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q138="http://accipiens.com/Common" name="detail" element="q138:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFinMatrixSelectionModeEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinMatrixSelectionModeEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFinMatrixSelectionModeEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q139="http://accipiens.com/Common" name="SessionToken" element="q139:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFinMatrixSelectionModeEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinMatrixSelectionModeEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFinMatrixSelectionModeEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q140="http://accipiens.com/Common" name="detail" element="q140:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCreditTaxModeKind_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumCreditTaxModeKind" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCreditTaxModeKind_InputMessage_Headers">
+    <wsdl:part xmlns:q141="http://accipiens.com/Common" name="SessionToken" element="q141:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCreditTaxModeKind_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumCreditTaxModeKindResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCreditTaxModeKind_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q142="http://accipiens.com/Common" name="detail" element="q142:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCreditTaxModeKindEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditTaxModeKindEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCreditTaxModeKindEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q143="http://accipiens.com/Common" name="SessionToken" element="q143:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCreditTaxModeKindEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditTaxModeKindEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCreditTaxModeKindEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q144="http://accipiens.com/Common" name="detail" element="q144:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumTotalInstallmentItemType_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumTotalInstallmentItemType" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumTotalInstallmentItemType_InputMessage_Headers">
+    <wsdl:part xmlns:q145="http://accipiens.com/Common" name="SessionToken" element="q145:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumTotalInstallmentItemType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumTotalInstallmentItemTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumTotalInstallmentItemType_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q146="http://accipiens.com/Common" name="detail" element="q146:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetTotalInstallmentItemTypeEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTotalInstallmentItemTypeEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetTotalInstallmentItemTypeEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q147="http://accipiens.com/Common" name="SessionToken" element="q147:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetTotalInstallmentItemTypeEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTotalInstallmentItemTypeEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetTotalInstallmentItemTypeEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q148="http://accipiens.com/Common" name="detail" element="q148:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumIntervenientSuperType_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumIntervenientSuperType" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumIntervenientSuperType_InputMessage_Headers">
+    <wsdl:part xmlns:q149="http://accipiens.com/Common" name="SessionToken" element="q149:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumIntervenientSuperType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumIntervenientSuperTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumIntervenientSuperType_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q150="http://accipiens.com/Common" name="detail" element="q150:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetIntervenientSuperTypeEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntervenientSuperTypeEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetIntervenientSuperTypeEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q151="http://accipiens.com/Common" name="SessionToken" element="q151:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetIntervenientSuperTypeEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntervenientSuperTypeEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetIntervenientSuperTypeEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q152="http://accipiens.com/Common" name="detail" element="q152:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCreateEntityRelationType_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumCreateEntityRelationType" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCreateEntityRelationType_InputMessage_Headers">
+    <wsdl:part xmlns:q153="http://accipiens.com/Common" name="SessionToken" element="q153:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCreateEntityRelationType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumCreateEntityRelationTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumCreateEntityRelationType_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q154="http://accipiens.com/Common" name="detail" element="q154:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCreateEntityRelationTypeEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreateEntityRelationTypeEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCreateEntityRelationTypeEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q155="http://accipiens.com/Common" name="SessionToken" element="q155:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCreateEntityRelationTypeEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreateEntityRelationTypeEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCreateEntityRelationTypeEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q156="http://accipiens.com/Common" name="detail" element="q156:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumFinMatrixChangeType_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumFinMatrixChangeType" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumFinMatrixChangeType_InputMessage_Headers">
+    <wsdl:part xmlns:q157="http://accipiens.com/Common" name="SessionToken" element="q157:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumFinMatrixChangeType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumFinMatrixChangeTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_ConvertToEnumFinMatrixChangeType_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q158="http://accipiens.com/Common" name="detail" element="q158:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFinMatrixChangeTypeEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinMatrixChangeTypeEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFinMatrixChangeTypeEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q159="http://accipiens.com/Common" name="SessionToken" element="q159:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFinMatrixChangeTypeEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinMatrixChangeTypeEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFinMatrixChangeTypeEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q160="http://accipiens.com/Common" name="detail" element="q160:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCreditOperationsConfigClassContext_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditOperationsConfigClassContext" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCreditOperationsConfigClassContext_InputMessage_Headers">
+    <wsdl:part xmlns:q161="http://accipiens.com/Common" name="SessionToken" element="q161:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCreditOperationsConfigClassContext_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditOperationsConfigClassContextResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCreditOperationsConfigClassContext_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q162="http://accipiens.com/Common" name="detail" element="q162:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_SearchCreditOperationsConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchCreditOperationsConfig" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_SearchCreditOperationsConfig_InputMessage_Headers">
+    <wsdl:part xmlns:q163="http://accipiens.com/Common" name="SessionToken" element="q163:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_SearchCreditOperationsConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchCreditOperationsConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_SearchCreditOperationsConfig_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q164="http://accipiens.com/Common" name="detail" element="q164:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetOperationByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetOperationByKeys" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetOperationByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q165="http://accipiens.com/Common" name="SessionToken" element="q165:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetOperationByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetOperationByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetOperationByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q166="http://accipiens.com/Common" name="detail" element="q166:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetTypeByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetTypeByKeys" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetTypeByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q167="http://accipiens.com/Common" name="SessionToken" element="q167:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetTypeByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetTypeByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetTypeByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q168="http://accipiens.com/Common" name="detail" element="q168:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetTypeAutomatonByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetTypeAutomatonByKeys" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetTypeAutomatonByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q169="http://accipiens.com/Common" name="SessionToken" element="q169:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetTypeAutomatonByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetTypeAutomatonByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetTypeAutomatonByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q170="http://accipiens.com/Common" name="detail" element="q170:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetTypeExpenseByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetTypeExpenseByKeys" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetTypeExpenseByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q171="http://accipiens.com/Common" name="SessionToken" element="q171:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetTypeExpenseByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetTypeExpenseByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetTypeExpenseByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q172="http://accipiens.com/Common" name="detail" element="q172:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperCessionTypeByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperCessionTypeByKeys" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperCessionTypeByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q173="http://accipiens.com/Common" name="SessionToken" element="q173:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperCessionTypeByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperCessionTypeByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperCessionTypeByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q174="http://accipiens.com/Common" name="detail" element="q174:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperFinalityByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperFinalityByKeys" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperFinalityByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q175="http://accipiens.com/Common" name="SessionToken" element="q175:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperFinalityByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperFinalityByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperFinalityByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q176="http://accipiens.com/Common" name="detail" element="q176:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperIntervTypeEntityPercentageContextByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperIntervTypeEntityPercentageContextByKeys" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperIntervTypeEntityPercentageContextByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q177="http://accipiens.com/Common" name="SessionToken" element="q177:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperIntervTypeEntityPercentageContextByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperIntervTypeEntityPercentageContextByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperIntervTypeEntityPercentageContextByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q178="http://accipiens.com/Common" name="detail" element="q178:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperIntervTypePayModeByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperIntervTypePayModeByKeys" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperIntervTypePayModeByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q179="http://accipiens.com/Common" name="SessionToken" element="q179:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperIntervTypePayModeByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperIntervTypePayModeByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperIntervTypePayModeByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q180="http://accipiens.com/Common" name="detail" element="q180:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeByKeys" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q181="http://accipiens.com/Common" name="SessionToken" element="q181:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q182="http://accipiens.com/Common" name="detail" element="q182:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeBankGuaranteeByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeBankGuaranteeByKeys" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeBankGuaranteeByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q183="http://accipiens.com/Common" name="SessionToken" element="q183:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeBankGuaranteeByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeBankGuaranteeByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeBankGuaranteeByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q184="http://accipiens.com/Common" name="detail" element="q184:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeCreditRevolvingByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeCreditRevolvingByKeys" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeCreditRevolvingByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q185="http://accipiens.com/Common" name="SessionToken" element="q185:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeCreditRevolvingByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeCreditRevolvingByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeCreditRevolvingByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q186="http://accipiens.com/Common" name="detail" element="q186:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeDelayInterestByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeDelayInterestByKeys" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeDelayInterestByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q187="http://accipiens.com/Common" name="SessionToken" element="q187:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeDelayInterestByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeDelayInterestByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeDelayInterestByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q188="http://accipiens.com/Common" name="detail" element="q188:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeEventTypeByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeEventTypeByKeys" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeEventTypeByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q189="http://accipiens.com/Common" name="SessionToken" element="q189:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeEventTypeByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeEventTypeByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeEventTypeByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q190="http://accipiens.com/Common" name="detail" element="q190:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeFactoringByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeFactoringByKeys" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeFactoringByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q191="http://accipiens.com/Common" name="SessionToken" element="q191:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeFactoringByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeFactoringByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeFactoringByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q192="http://accipiens.com/Common" name="detail" element="q192:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeInsuranceByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeInsuranceByKeys" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeInsuranceByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q193="http://accipiens.com/Common" name="SessionToken" element="q193:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeInsuranceByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeInsuranceByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeInsuranceByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q194="http://accipiens.com/Common" name="detail" element="q194:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeLoanByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeLoanByKeys" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeLoanByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q195="http://accipiens.com/Common" name="SessionToken" element="q195:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeLoanByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeLoanByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeLoanByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q196="http://accipiens.com/Common" name="detail" element="q196:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeNextAvailableTypeByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeNextAvailableTypeByKeys" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeNextAvailableTypeByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q197="http://accipiens.com/Common" name="SessionToken" element="q197:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeNextAvailableTypeByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeNextAvailableTypeByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeNextAvailableTypeByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q198="http://accipiens.com/Common" name="detail" element="q198:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeOtherRateByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeOtherRateByKeys" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeOtherRateByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q199="http://accipiens.com/Common" name="SessionToken" element="q199:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeOtherRateByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeOtherRateByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeOtherRateByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q200="http://accipiens.com/Common" name="detail" element="q200:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypePlafondTypeByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypePlafondTypeByKeys" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypePlafondTypeByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q201="http://accipiens.com/Common" name="SessionToken" element="q201:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypePlafondTypeByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypePlafondTypeByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypePlafondTypeByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q202="http://accipiens.com/Common" name="detail" element="q202:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypePurposeTypeByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypePurposeTypeByKeys" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypePurposeTypeByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q203="http://accipiens.com/Common" name="SessionToken" element="q203:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypePurposeTypeByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypePurposeTypeByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypePurposeTypeByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q204="http://accipiens.com/Common" name="detail" element="q204:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeServiceByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeServiceByKeys" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeServiceByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q205="http://accipiens.com/Common" name="SessionToken" element="q205:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeServiceByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeServiceByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperTypeServiceByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q206="http://accipiens.com/Common" name="detail" element="q206:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFinMatrixTypeByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinMatrixTypeByKeys" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFinMatrixTypeByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q207="http://accipiens.com/Common" name="SessionToken" element="q207:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFinMatrixTypeByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinMatrixTypeByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFinMatrixTypeByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q208="http://accipiens.com/Common" name="detail" element="q208:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFinMatrixTypeCustomItemGroupByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinMatrixTypeCustomItemGroupByKeys" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFinMatrixTypeCustomItemGroupByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q209="http://accipiens.com/Common" name="SessionToken" element="q209:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFinMatrixTypeCustomItemGroupByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinMatrixTypeCustomItemGroupByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetFinMatrixTypeCustomItemGroupByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q210="http://accipiens.com/Common" name="detail" element="q210:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetRemarketingChannelByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRemarketingChannelByKeys" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetRemarketingChannelByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q211="http://accipiens.com/Common" name="SessionToken" element="q211:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetRemarketingChannelByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRemarketingChannelByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetRemarketingChannelByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q212="http://accipiens.com/Common" name="detail" element="q212:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetTaxCapitalTypeByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTaxCapitalTypeByKeys" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetTaxCapitalTypeByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q213="http://accipiens.com/Common" name="SessionToken" element="q213:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetTaxCapitalTypeByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTaxCapitalTypeByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetTaxCapitalTypeByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q214="http://accipiens.com/Common" name="detail" element="q214:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetTotalInstallmentCalcTypeByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTotalInstallmentCalcTypeByKeys" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetTotalInstallmentCalcTypeByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q215="http://accipiens.com/Common" name="SessionToken" element="q215:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetTotalInstallmentCalcTypeByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTotalInstallmentCalcTypeByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetTotalInstallmentCalcTypeByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q216="http://accipiens.com/Common" name="detail" element="q216:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetTotalInstallmentCalcTypeItemByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTotalInstallmentCalcTypeItemByKeys" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetTotalInstallmentCalcTypeItemByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q217="http://accipiens.com/Common" name="SessionToken" element="q217:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetTotalInstallmentCalcTypeItemByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTotalInstallmentCalcTypeItemByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetTotalInstallmentCalcTypeItemByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q218="http://accipiens.com/Common" name="detail" element="q218:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetOperationExpenseTypeByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetOperationExpenseTypeByKeys" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetOperationExpenseTypeByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q219="http://accipiens.com/Common" name="SessionToken" element="q219:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetOperationExpenseTypeByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetOperationExpenseTypeByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetAssetOperationExpenseTypeByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q220="http://accipiens.com/Common" name="detail" element="q220:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperExpenseTypeByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperExpenseTypeByKeys" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperExpenseTypeByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q221="http://accipiens.com/Common" name="SessionToken" element="q221:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperExpenseTypeByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperExpenseTypeByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperExpenseTypeByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q222="http://accipiens.com/Common" name="detail" element="q222:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperIntervExpenseTypeByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperIntervExpenseTypeByKeys" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperIntervExpenseTypeByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q223="http://accipiens.com/Common" name="SessionToken" element="q223:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperIntervExpenseTypeByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperIntervExpenseTypeByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperIntervExpenseTypeByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q224="http://accipiens.com/Common" name="detail" element="q224:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperLoanExpenseTypeByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperLoanExpenseTypeByKeys" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperLoanExpenseTypeByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q225="http://accipiens.com/Common" name="SessionToken" element="q225:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperLoanExpenseTypeByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperLoanExpenseTypeByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperLoanExpenseTypeByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q226="http://accipiens.com/Common" name="detail" element="q226:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperIntervTypeByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperIntervTypeByKeys" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperIntervTypeByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q227="http://accipiens.com/Common" name="SessionToken" element="q227:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperIntervTypeByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperIntervTypeByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCredOperIntervTypeByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q228="http://accipiens.com/Common" name="detail" element="q228:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_SaveCreditOperationsConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCreditOperationsConfig" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_SaveCreditOperationsConfig_InputMessage_Headers">
+    <wsdl:part xmlns:q229="http://accipiens.com/Common" name="SessionToken" element="q229:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_SaveCreditOperationsConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCreditOperationsConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_SaveCreditOperationsConfig_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q230="http://accipiens.com/Common" name="detail" element="q230:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_SaveCreditOperationsConfigV2_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCreditOperationsConfigV2" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_SaveCreditOperationsConfigV2_InputMessage_Headers">
+    <wsdl:part xmlns:q231="http://accipiens.com/Common" name="SessionToken" element="q231:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_SaveCreditOperationsConfigV2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCreditOperationsConfigV2Response" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_SaveCreditOperationsConfigV2_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q232="http://accipiens.com/Common" name="detail" element="q232:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCreditOperationsConfigClassTableId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditOperationsConfigClassTableId" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCreditOperationsConfigClassTableId_InputMessage_Headers">
+    <wsdl:part xmlns:q233="http://accipiens.com/Common" name="SessionToken" element="q233:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCreditOperationsConfigClassTableId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditOperationsConfigClassTableIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCreditOperationsConfigClassTableId_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q234="http://accipiens.com/Common" name="detail" element="q234:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCreditOperationsConfigTableId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditOperationsConfigTableId" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCreditOperationsConfigTableId_InputMessage_Headers">
+    <wsdl:part xmlns:q235="http://accipiens.com/Common" name="SessionToken" element="q235:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCreditOperationsConfigTableId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditOperationsConfigTableIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_GetCreditOperationsConfigTableId_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q236="http://accipiens.com/Common" name="detail" element="q236:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_SearchCreditOperationsConfigConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchCreditOperationsConfigConfig" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_SearchCreditOperationsConfigConfig_InputMessage_Headers">
+    <wsdl:part xmlns:q237="http://accipiens.com/Common" name="SessionToken" element="q237:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_SearchCreditOperationsConfigConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchCreditOperationsConfigConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsConfig_SearchCreditOperationsConfigConfig_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q238="http://accipiens.com/Common" name="detail" element="q238:AcpDetail" />
+  </wsdl:message>
+  <wsdl:portType name="CreditOperationsConfig">
+    <wsdl:operation name="GetInstallmentRevenueModeEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetInstallmentRevenueModeEnumValue" message="tns:CreditOperationsConfig_GetInstallmentRevenueModeEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetInstallmentRevenueModeEnumValueResponse" message="tns:CreditOperationsConfig_GetInstallmentRevenueModeEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetInstallmentRevenueModeEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumInstallmentRevenueMode">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumInstallmentRevenueMode" message="tns:CreditOperationsConfig_ConvertToEnumInstallmentRevenueMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumInstallmentRevenueModeResponse" message="tns:CreditOperationsConfig_ConvertToEnumInstallmentRevenueMode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumInstallmentRevenueMode_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInitialEntryPeriodificationModeEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetInitialEntryPeriodificationModeEnumValue" message="tns:CreditOperationsConfig_GetInitialEntryPeriodificationModeEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetInitialEntryPeriodificationModeEnumValueResponse" message="tns:CreditOperationsConfig_GetInitialEntryPeriodificationModeEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetInitialEntryPeriodificationModeEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumInitialEntryPeriodificationMode">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumInitialEntryPeriodificationMode" message="tns:CreditOperationsConfig_ConvertToEnumInitialEntryPeriodificationMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumInitialEntryPeriodificationModeResponse" message="tns:CreditOperationsConfig_ConvertToEnumInitialEntryPeriodificationMode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumInitialEntryPeriodificationMode_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditOperationStepEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCreditOperationStepEnumValue" message="tns:CreditOperationsConfig_GetCreditOperationStepEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCreditOperationStepEnumValueResponse" message="tns:CreditOperationsConfig_GetCreditOperationStepEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetCreditOperationStepEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumCreditOperationStep">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumCreditOperationStep" message="tns:CreditOperationsConfig_ConvertToEnumCreditOperationStep_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumCreditOperationStepResponse" message="tns:CreditOperationsConfig_ConvertToEnumCreditOperationStep_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumCreditOperationStep_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDefaultPaymentModeId">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetDefaultPaymentModeId" message="tns:CreditOperationsConfig_GetDefaultPaymentModeId_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetDefaultPaymentModeIdResponse" message="tns:CreditOperationsConfig_GetDefaultPaymentModeId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetDefaultPaymentModeId_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAssetOperation">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/SetAssetOperation" message="tns:CreditOperationsConfig_SetAssetOperation_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/SetAssetOperationResponse" message="tns:CreditOperationsConfig_SetAssetOperation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_SetAssetOperation_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetOperation">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetAssetOperation" message="tns:CreditOperationsConfig_GetAssetOperation_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetAssetOperationResponse" message="tns:CreditOperationsConfig_GetAssetOperation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetAssetOperation_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/Ping" message="tns:CreditOperationsConfig_Ping_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/PingResponse" message="tns:CreditOperationsConfig_Ping_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_Ping_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumDisposableAssetOperationTypeKind">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumDisposableAssetOperationTypeKind" message="tns:CreditOperationsConfig_ConvertToEnumDisposableAssetOperationTypeKind_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumDisposableAssetOperationTypeKindResponse" message="tns:CreditOperationsConfig_ConvertToEnumDisposableAssetOperationTypeKind_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumDisposableAssetOperationTypeKind_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDisposableAssetOperationTypeKindEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetDisposableAssetOperationTypeKindEnumValue" message="tns:CreditOperationsConfig_GetDisposableAssetOperationTypeKindEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetDisposableAssetOperationTypeKindEnumValueResponse" message="tns:CreditOperationsConfig_GetDisposableAssetOperationTypeKindEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetDisposableAssetOperationTypeKindEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumAssetExpenseType">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumAssetExpenseType" message="tns:CreditOperationsConfig_ConvertToEnumAssetExpenseType_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumAssetExpenseTypeResponse" message="tns:CreditOperationsConfig_ConvertToEnumAssetExpenseType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumAssetExpenseType_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetExpenseTypeEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetAssetExpenseTypeEnumValue" message="tns:CreditOperationsConfig_GetAssetExpenseTypeEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetAssetExpenseTypeEnumValueResponse" message="tns:CreditOperationsConfig_GetAssetExpenseTypeEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetAssetExpenseTypeEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumCessionSuperTypeKind">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumCessionSuperTypeKind" message="tns:CreditOperationsConfig_ConvertToEnumCessionSuperTypeKind_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumCessionSuperTypeKindResponse" message="tns:CreditOperationsConfig_ConvertToEnumCessionSuperTypeKind_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumCessionSuperTypeKind_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCessionSuperTypeKindEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCessionSuperTypeKindEnumValue" message="tns:CreditOperationsConfig_GetCessionSuperTypeKindEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCessionSuperTypeKindEnumValueResponse" message="tns:CreditOperationsConfig_GetCessionSuperTypeKindEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetCessionSuperTypeKindEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumTerminateCredOperGuarantMode">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumTerminateCredOperGuarantMode" message="tns:CreditOperationsConfig_ConvertToEnumTerminateCredOperGuarantMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumTerminateCredOperGuarantModeResponse" message="tns:CreditOperationsConfig_ConvertToEnumTerminateCredOperGuarantMode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumTerminateCredOperGuarantMode_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTerminateCredOperGuarantModeEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetTerminateCredOperGuarantModeEnumValue" message="tns:CreditOperationsConfig_GetTerminateCredOperGuarantModeEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetTerminateCredOperGuarantModeEnumValueResponse" message="tns:CreditOperationsConfig_GetTerminateCredOperGuarantModeEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetTerminateCredOperGuarantModeEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumCessionFinChangeMode">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumCessionFinChangeMode" message="tns:CreditOperationsConfig_ConvertToEnumCessionFinChangeMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumCessionFinChangeModeResponse" message="tns:CreditOperationsConfig_ConvertToEnumCessionFinChangeMode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumCessionFinChangeMode_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCessionFinChangeModeEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCessionFinChangeModeEnumValue" message="tns:CreditOperationsConfig_GetCessionFinChangeModeEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCessionFinChangeModeEnumValueResponse" message="tns:CreditOperationsConfig_GetCessionFinChangeModeEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetCessionFinChangeModeEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumUsePlafondKind">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumUsePlafondKind" message="tns:CreditOperationsConfig_ConvertToEnumUsePlafondKind_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumUsePlafondKindResponse" message="tns:CreditOperationsConfig_ConvertToEnumUsePlafondKind_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumUsePlafondKind_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsePlafondKindEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetUsePlafondKindEnumValue" message="tns:CreditOperationsConfig_GetUsePlafondKindEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetUsePlafondKindEnumValueResponse" message="tns:CreditOperationsConfig_GetUsePlafondKindEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetUsePlafondKindEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumConditionsMode">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumConditionsMode" message="tns:CreditOperationsConfig_ConvertToEnumConditionsMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumConditionsModeResponse" message="tns:CreditOperationsConfig_ConvertToEnumConditionsMode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumConditionsMode_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConditionsModeEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetConditionsModeEnumValue" message="tns:CreditOperationsConfig_GetConditionsModeEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetConditionsModeEnumValueResponse" message="tns:CreditOperationsConfig_GetConditionsModeEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetConditionsModeEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumMinTermMode">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumMinTermMode" message="tns:CreditOperationsConfig_ConvertToEnumMinTermMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumMinTermModeResponse" message="tns:CreditOperationsConfig_ConvertToEnumMinTermMode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumMinTermMode_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMinTermModeEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetMinTermModeEnumValue" message="tns:CreditOperationsConfig_GetMinTermModeEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetMinTermModeEnumValueResponse" message="tns:CreditOperationsConfig_GetMinTermModeEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetMinTermModeEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumUseEntityPlafondKind">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumUseEntityPlafondKind" message="tns:CreditOperationsConfig_ConvertToEnumUseEntityPlafondKind_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumUseEntityPlafondKindResponse" message="tns:CreditOperationsConfig_ConvertToEnumUseEntityPlafondKind_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumUseEntityPlafondKind_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUseEntityPlafondKindEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetUseEntityPlafondKindEnumValue" message="tns:CreditOperationsConfig_GetUseEntityPlafondKindEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetUseEntityPlafondKindEnumValueResponse" message="tns:CreditOperationsConfig_GetUseEntityPlafondKindEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetUseEntityPlafondKindEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumEquipmentDiscountMode">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumEquipmentDiscountMode" message="tns:CreditOperationsConfig_ConvertToEnumEquipmentDiscountMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumEquipmentDiscountModeResponse" message="tns:CreditOperationsConfig_ConvertToEnumEquipmentDiscountMode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumEquipmentDiscountMode_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipmentDiscountModeEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetEquipmentDiscountModeEnumValue" message="tns:CreditOperationsConfig_GetEquipmentDiscountModeEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetEquipmentDiscountModeEnumValueResponse" message="tns:CreditOperationsConfig_GetEquipmentDiscountModeEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetEquipmentDiscountModeEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumAssetAmountInputMode">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumAssetAmountInputMode" message="tns:CreditOperationsConfig_ConvertToEnumAssetAmountInputMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumAssetAmountInputModeResponse" message="tns:CreditOperationsConfig_ConvertToEnumAssetAmountInputMode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumAssetAmountInputMode_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetAmountInputModeEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetAssetAmountInputModeEnumValue" message="tns:CreditOperationsConfig_GetAssetAmountInputModeEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetAssetAmountInputModeEnumValueResponse" message="tns:CreditOperationsConfig_GetAssetAmountInputModeEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetAssetAmountInputModeEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumDownPaymentValidationKind">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumDownPaymentValidationKind" message="tns:CreditOperationsConfig_ConvertToEnumDownPaymentValidationKind_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumDownPaymentValidationKindResponse" message="tns:CreditOperationsConfig_ConvertToEnumDownPaymentValidationKind_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumDownPaymentValidationKind_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDownPaymentValidationKindEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetDownPaymentValidationKindEnumValue" message="tns:CreditOperationsConfig_GetDownPaymentValidationKindEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetDownPaymentValidationKindEnumValueResponse" message="tns:CreditOperationsConfig_GetDownPaymentValidationKindEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetDownPaymentValidationKindEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumCautionInputMode">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumCautionInputMode" message="tns:CreditOperationsConfig_ConvertToEnumCautionInputMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumCautionInputModeResponse" message="tns:CreditOperationsConfig_ConvertToEnumCautionInputMode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumCautionInputMode_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCautionInputModeEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCautionInputModeEnumValue" message="tns:CreditOperationsConfig_GetCautionInputModeEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCautionInputModeEnumValueResponse" message="tns:CreditOperationsConfig_GetCautionInputModeEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetCautionInputModeEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumUsageReservationManagementMode">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumUsageReservationManagementMode" message="tns:CreditOperationsConfig_ConvertToEnumUsageReservationManagementMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumUsageReservationManagementModeResponse" message="tns:CreditOperationsConfig_ConvertToEnumUsageReservationManagementMode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumUsageReservationManagementMode_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsageReservationManagementModeEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetUsageReservationManagementModeEnumValue" message="tns:CreditOperationsConfig_GetUsageReservationManagementModeEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetUsageReservationManagementModeEnumValueResponse" message="tns:CreditOperationsConfig_GetUsageReservationManagementModeEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetUsageReservationManagementModeEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumResidualValueBase">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumResidualValueBase" message="tns:CreditOperationsConfig_ConvertToEnumResidualValueBase_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumResidualValueBaseResponse" message="tns:CreditOperationsConfig_ConvertToEnumResidualValueBase_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumResidualValueBase_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResidualValueBaseEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetResidualValueBaseEnumValue" message="tns:CreditOperationsConfig_GetResidualValueBaseEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetResidualValueBaseEnumValueResponse" message="tns:CreditOperationsConfig_GetResidualValueBaseEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetResidualValueBaseEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumFinMatrixTypeSelectionMode">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumFinMatrixTypeSelectionMode" message="tns:CreditOperationsConfig_ConvertToEnumFinMatrixTypeSelectionMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumFinMatrixTypeSelectionModeResponse" message="tns:CreditOperationsConfig_ConvertToEnumFinMatrixTypeSelectionMode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumFinMatrixTypeSelectionMode_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinMatrixTypeSelectionModeEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetFinMatrixTypeSelectionModeEnumValue" message="tns:CreditOperationsConfig_GetFinMatrixTypeSelectionModeEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetFinMatrixTypeSelectionModeEnumValueResponse" message="tns:CreditOperationsConfig_GetFinMatrixTypeSelectionModeEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetFinMatrixTypeSelectionModeEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumDurationInputMode">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumDurationInputMode" message="tns:CreditOperationsConfig_ConvertToEnumDurationInputMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumDurationInputModeResponse" message="tns:CreditOperationsConfig_ConvertToEnumDurationInputMode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumDurationInputMode_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDurationInputModeEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetDurationInputModeEnumValue" message="tns:CreditOperationsConfig_GetDurationInputModeEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetDurationInputModeEnumValueResponse" message="tns:CreditOperationsConfig_GetDurationInputModeEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetDurationInputModeEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumAssetBaseAmountCalcMode">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumAssetBaseAmountCalcMode" message="tns:CreditOperationsConfig_ConvertToEnumAssetBaseAmountCalcMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumAssetBaseAmountCalcModeResponse" message="tns:CreditOperationsConfig_ConvertToEnumAssetBaseAmountCalcMode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumAssetBaseAmountCalcMode_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetBaseAmountCalcModeEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetAssetBaseAmountCalcModeEnumValue" message="tns:CreditOperationsConfig_GetAssetBaseAmountCalcModeEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetAssetBaseAmountCalcModeEnumValueResponse" message="tns:CreditOperationsConfig_GetAssetBaseAmountCalcModeEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetAssetBaseAmountCalcModeEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumAssetRetakeBaseAmountMode">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumAssetRetakeBaseAmountMode" message="tns:CreditOperationsConfig_ConvertToEnumAssetRetakeBaseAmountMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumAssetRetakeBaseAmountModeResponse" message="tns:CreditOperationsConfig_ConvertToEnumAssetRetakeBaseAmountMode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumAssetRetakeBaseAmountMode_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetRetakeBaseAmountModeEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetAssetRetakeBaseAmountModeEnumValue" message="tns:CreditOperationsConfig_GetAssetRetakeBaseAmountModeEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetAssetRetakeBaseAmountModeEnumValueResponse" message="tns:CreditOperationsConfig_GetAssetRetakeBaseAmountModeEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetAssetRetakeBaseAmountModeEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumCredOperTaxAggregationMode">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumCredOperTaxAggregationMode" message="tns:CreditOperationsConfig_ConvertToEnumCredOperTaxAggregationMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumCredOperTaxAggregationModeResponse" message="tns:CreditOperationsConfig_ConvertToEnumCredOperTaxAggregationMode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumCredOperTaxAggregationMode_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTaxAggregationModeEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperTaxAggregationModeEnumValue" message="tns:CreditOperationsConfig_GetCredOperTaxAggregationModeEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperTaxAggregationModeEnumValueResponse" message="tns:CreditOperationsConfig_GetCredOperTaxAggregationModeEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetCredOperTaxAggregationModeEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumRelocationAssetBaseAmountCalcMode">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumRelocationAssetBaseAmountCalcMode" message="tns:CreditOperationsConfig_ConvertToEnumRelocationAssetBaseAmountCalcMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumRelocationAssetBaseAmountCalcModeResponse" message="tns:CreditOperationsConfig_ConvertToEnumRelocationAssetBaseAmountCalcMode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumRelocationAssetBaseAmountCalcMode_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRelocationAssetBaseAmountCalcModeEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetRelocationAssetBaseAmountCalcModeEnumValue" message="tns:CreditOperationsConfig_GetRelocationAssetBaseAmountCalcModeEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetRelocationAssetBaseAmountCalcModeEnumValueResponse" message="tns:CreditOperationsConfig_GetRelocationAssetBaseAmountCalcModeEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetRelocationAssetBaseAmountCalcModeEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumCapitalSourceMode">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumCapitalSourceMode" message="tns:CreditOperationsConfig_ConvertToEnumCapitalSourceMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumCapitalSourceModeResponse" message="tns:CreditOperationsConfig_ConvertToEnumCapitalSourceMode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumCapitalSourceMode_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCapitalSourceModeEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCapitalSourceModeEnumValue" message="tns:CreditOperationsConfig_GetCapitalSourceModeEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCapitalSourceModeEnumValueResponse" message="tns:CreditOperationsConfig_GetCapitalSourceModeEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetCapitalSourceModeEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumCredOperEventTypeKind">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumCredOperEventTypeKind" message="tns:CreditOperationsConfig_ConvertToEnumCredOperEventTypeKind_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumCredOperEventTypeKindResponse" message="tns:CreditOperationsConfig_ConvertToEnumCredOperEventTypeKind_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumCredOperEventTypeKind_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperEventTypeKindEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperEventTypeKindEnumValue" message="tns:CreditOperationsConfig_GetCredOperEventTypeKindEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperEventTypeKindEnumValueResponse" message="tns:CreditOperationsConfig_GetCredOperEventTypeKindEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetCredOperEventTypeKindEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumInterestRatesReferenceDateKind">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumInterestRatesReferenceDateKind" message="tns:CreditOperationsConfig_ConvertToEnumInterestRatesReferenceDateKind_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumInterestRatesReferenceDateKindResponse" message="tns:CreditOperationsConfig_ConvertToEnumInterestRatesReferenceDateKind_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumInterestRatesReferenceDateKind_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInterestRatesReferenceDateKindEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetInterestRatesReferenceDateKindEnumValue" message="tns:CreditOperationsConfig_GetInterestRatesReferenceDateKindEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetInterestRatesReferenceDateKindEnumValueResponse" message="tns:CreditOperationsConfig_GetInterestRatesReferenceDateKindEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetInterestRatesReferenceDateKindEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumFctInterestMovementsUniverse">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumFctInterestMovementsUniverse" message="tns:CreditOperationsConfig_ConvertToEnumFctInterestMovementsUniverse_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumFctInterestMovementsUniverseResponse" message="tns:CreditOperationsConfig_ConvertToEnumFctInterestMovementsUniverse_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumFctInterestMovementsUniverse_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFctInterestMovementsUniverseEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetFctInterestMovementsUniverseEnumValue" message="tns:CreditOperationsConfig_GetFctInterestMovementsUniverseEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetFctInterestMovementsUniverseEnumValueResponse" message="tns:CreditOperationsConfig_GetFctInterestMovementsUniverseEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetFctInterestMovementsUniverseEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumPlafondNextPhaseValidation">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumPlafondNextPhaseValidation" message="tns:CreditOperationsConfig_ConvertToEnumPlafondNextPhaseValidation_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumPlafondNextPhaseValidationResponse" message="tns:CreditOperationsConfig_ConvertToEnumPlafondNextPhaseValidation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumPlafondNextPhaseValidation_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlafondNextPhaseValidationEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetPlafondNextPhaseValidationEnumValue" message="tns:CreditOperationsConfig_GetPlafondNextPhaseValidationEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetPlafondNextPhaseValidationEnumValueResponse" message="tns:CreditOperationsConfig_GetPlafondNextPhaseValidationEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetPlafondNextPhaseValidationEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumFinMatrixAssetUsageCalcMode">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumFinMatrixAssetUsageCalcMode" message="tns:CreditOperationsConfig_ConvertToEnumFinMatrixAssetUsageCalcMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumFinMatrixAssetUsageCalcModeResponse" message="tns:CreditOperationsConfig_ConvertToEnumFinMatrixAssetUsageCalcMode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumFinMatrixAssetUsageCalcMode_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinMatrixAssetUsageCalcModeEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetFinMatrixAssetUsageCalcModeEnumValue" message="tns:CreditOperationsConfig_GetFinMatrixAssetUsageCalcModeEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetFinMatrixAssetUsageCalcModeEnumValueResponse" message="tns:CreditOperationsConfig_GetFinMatrixAssetUsageCalcModeEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetFinMatrixAssetUsageCalcModeEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumFinMatrixTermCalcMode">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumFinMatrixTermCalcMode" message="tns:CreditOperationsConfig_ConvertToEnumFinMatrixTermCalcMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumFinMatrixTermCalcModeResponse" message="tns:CreditOperationsConfig_ConvertToEnumFinMatrixTermCalcMode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumFinMatrixTermCalcMode_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinMatrixTermCalcModeEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetFinMatrixTermCalcModeEnumValue" message="tns:CreditOperationsConfig_GetFinMatrixTermCalcModeEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetFinMatrixTermCalcModeEnumValueResponse" message="tns:CreditOperationsConfig_GetFinMatrixTermCalcModeEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetFinMatrixTermCalcModeEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumFinMatrixGenerationType">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumFinMatrixGenerationType" message="tns:CreditOperationsConfig_ConvertToEnumFinMatrixGenerationType_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumFinMatrixGenerationTypeResponse" message="tns:CreditOperationsConfig_ConvertToEnumFinMatrixGenerationType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumFinMatrixGenerationType_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinMatrixGenerationTypeEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetFinMatrixGenerationTypeEnumValue" message="tns:CreditOperationsConfig_GetFinMatrixGenerationTypeEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetFinMatrixGenerationTypeEnumValueResponse" message="tns:CreditOperationsConfig_GetFinMatrixGenerationTypeEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetFinMatrixGenerationTypeEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumFinMatrixSelectionMode">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumFinMatrixSelectionMode" message="tns:CreditOperationsConfig_ConvertToEnumFinMatrixSelectionMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumFinMatrixSelectionModeResponse" message="tns:CreditOperationsConfig_ConvertToEnumFinMatrixSelectionMode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumFinMatrixSelectionMode_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinMatrixSelectionModeEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetFinMatrixSelectionModeEnumValue" message="tns:CreditOperationsConfig_GetFinMatrixSelectionModeEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetFinMatrixSelectionModeEnumValueResponse" message="tns:CreditOperationsConfig_GetFinMatrixSelectionModeEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetFinMatrixSelectionModeEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumCreditTaxModeKind">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumCreditTaxModeKind" message="tns:CreditOperationsConfig_ConvertToEnumCreditTaxModeKind_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumCreditTaxModeKindResponse" message="tns:CreditOperationsConfig_ConvertToEnumCreditTaxModeKind_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumCreditTaxModeKind_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditTaxModeKindEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCreditTaxModeKindEnumValue" message="tns:CreditOperationsConfig_GetCreditTaxModeKindEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCreditTaxModeKindEnumValueResponse" message="tns:CreditOperationsConfig_GetCreditTaxModeKindEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetCreditTaxModeKindEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumTotalInstallmentItemType">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumTotalInstallmentItemType" message="tns:CreditOperationsConfig_ConvertToEnumTotalInstallmentItemType_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumTotalInstallmentItemTypeResponse" message="tns:CreditOperationsConfig_ConvertToEnumTotalInstallmentItemType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumTotalInstallmentItemType_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalInstallmentItemTypeEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetTotalInstallmentItemTypeEnumValue" message="tns:CreditOperationsConfig_GetTotalInstallmentItemTypeEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetTotalInstallmentItemTypeEnumValueResponse" message="tns:CreditOperationsConfig_GetTotalInstallmentItemTypeEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetTotalInstallmentItemTypeEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumIntervenientSuperType">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumIntervenientSuperType" message="tns:CreditOperationsConfig_ConvertToEnumIntervenientSuperType_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumIntervenientSuperTypeResponse" message="tns:CreditOperationsConfig_ConvertToEnumIntervenientSuperType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumIntervenientSuperType_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIntervenientSuperTypeEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetIntervenientSuperTypeEnumValue" message="tns:CreditOperationsConfig_GetIntervenientSuperTypeEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetIntervenientSuperTypeEnumValueResponse" message="tns:CreditOperationsConfig_GetIntervenientSuperTypeEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetIntervenientSuperTypeEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumCreateEntityRelationType">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumCreateEntityRelationType" message="tns:CreditOperationsConfig_ConvertToEnumCreateEntityRelationType_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumCreateEntityRelationTypeResponse" message="tns:CreditOperationsConfig_ConvertToEnumCreateEntityRelationType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumCreateEntityRelationType_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreateEntityRelationTypeEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCreateEntityRelationTypeEnumValue" message="tns:CreditOperationsConfig_GetCreateEntityRelationTypeEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCreateEntityRelationTypeEnumValueResponse" message="tns:CreditOperationsConfig_GetCreateEntityRelationTypeEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetCreateEntityRelationTypeEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumFinMatrixChangeType">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumFinMatrixChangeType" message="tns:CreditOperationsConfig_ConvertToEnumFinMatrixChangeType_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/ConvertToEnumFinMatrixChangeTypeResponse" message="tns:CreditOperationsConfig_ConvertToEnumFinMatrixChangeType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_ConvertToEnumFinMatrixChangeType_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinMatrixChangeTypeEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetFinMatrixChangeTypeEnumValue" message="tns:CreditOperationsConfig_GetFinMatrixChangeTypeEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetFinMatrixChangeTypeEnumValueResponse" message="tns:CreditOperationsConfig_GetFinMatrixChangeTypeEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetFinMatrixChangeTypeEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditOperationsConfigClassContext">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCreditOperationsConfigClassContext" message="tns:CreditOperationsConfig_GetCreditOperationsConfigClassContext_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCreditOperationsConfigClassContextResponse" message="tns:CreditOperationsConfig_GetCreditOperationsConfigClassContext_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetCreditOperationsConfigClassContext_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchCreditOperationsConfig">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/SearchCreditOperationsConfig" message="tns:CreditOperationsConfig_SearchCreditOperationsConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/SearchCreditOperationsConfigResponse" message="tns:CreditOperationsConfig_SearchCreditOperationsConfig_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_SearchCreditOperationsConfig_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetOperationByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetAssetOperationByKeys" message="tns:CreditOperationsConfig_GetAssetOperationByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetAssetOperationByKeysResponse" message="tns:CreditOperationsConfig_GetAssetOperationByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetAssetOperationByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetTypeByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetAssetTypeByKeys" message="tns:CreditOperationsConfig_GetAssetTypeByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetAssetTypeByKeysResponse" message="tns:CreditOperationsConfig_GetAssetTypeByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetAssetTypeByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetTypeAutomatonByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetAssetTypeAutomatonByKeys" message="tns:CreditOperationsConfig_GetAssetTypeAutomatonByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetAssetTypeAutomatonByKeysResponse" message="tns:CreditOperationsConfig_GetAssetTypeAutomatonByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetAssetTypeAutomatonByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetTypeExpenseByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetAssetTypeExpenseByKeys" message="tns:CreditOperationsConfig_GetAssetTypeExpenseByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetAssetTypeExpenseByKeysResponse" message="tns:CreditOperationsConfig_GetAssetTypeExpenseByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetAssetTypeExpenseByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperCessionTypeByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperCessionTypeByKeys" message="tns:CreditOperationsConfig_GetCredOperCessionTypeByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperCessionTypeByKeysResponse" message="tns:CreditOperationsConfig_GetCredOperCessionTypeByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetCredOperCessionTypeByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperFinalityByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperFinalityByKeys" message="tns:CreditOperationsConfig_GetCredOperFinalityByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperFinalityByKeysResponse" message="tns:CreditOperationsConfig_GetCredOperFinalityByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetCredOperFinalityByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperIntervTypeEntityPercentageContextByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperIntervTypeEntityPercentageContextByKeys" message="tns:CreditOperationsConfig_GetCredOperIntervTypeEntityPercentageContextByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperIntervTypeEntityPercentageContextByKeysResponse" message="tns:CreditOperationsConfig_GetCredOperIntervTypeEntityPercentageContextByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetCredOperIntervTypeEntityPercentageContextByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperIntervTypePayModeByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperIntervTypePayModeByKeys" message="tns:CreditOperationsConfig_GetCredOperIntervTypePayModeByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperIntervTypePayModeByKeysResponse" message="tns:CreditOperationsConfig_GetCredOperIntervTypePayModeByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetCredOperIntervTypePayModeByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypeByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperTypeByKeys" message="tns:CreditOperationsConfig_GetCredOperTypeByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperTypeByKeysResponse" message="tns:CreditOperationsConfig_GetCredOperTypeByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetCredOperTypeByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypeBankGuaranteeByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperTypeBankGuaranteeByKeys" message="tns:CreditOperationsConfig_GetCredOperTypeBankGuaranteeByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperTypeBankGuaranteeByKeysResponse" message="tns:CreditOperationsConfig_GetCredOperTypeBankGuaranteeByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetCredOperTypeBankGuaranteeByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypeCreditRevolvingByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperTypeCreditRevolvingByKeys" message="tns:CreditOperationsConfig_GetCredOperTypeCreditRevolvingByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperTypeCreditRevolvingByKeysResponse" message="tns:CreditOperationsConfig_GetCredOperTypeCreditRevolvingByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetCredOperTypeCreditRevolvingByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypeDelayInterestByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperTypeDelayInterestByKeys" message="tns:CreditOperationsConfig_GetCredOperTypeDelayInterestByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperTypeDelayInterestByKeysResponse" message="tns:CreditOperationsConfig_GetCredOperTypeDelayInterestByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetCredOperTypeDelayInterestByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypeEventTypeByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperTypeEventTypeByKeys" message="tns:CreditOperationsConfig_GetCredOperTypeEventTypeByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperTypeEventTypeByKeysResponse" message="tns:CreditOperationsConfig_GetCredOperTypeEventTypeByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetCredOperTypeEventTypeByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypeFactoringByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperTypeFactoringByKeys" message="tns:CreditOperationsConfig_GetCredOperTypeFactoringByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperTypeFactoringByKeysResponse" message="tns:CreditOperationsConfig_GetCredOperTypeFactoringByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetCredOperTypeFactoringByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypeInsuranceByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperTypeInsuranceByKeys" message="tns:CreditOperationsConfig_GetCredOperTypeInsuranceByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperTypeInsuranceByKeysResponse" message="tns:CreditOperationsConfig_GetCredOperTypeInsuranceByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetCredOperTypeInsuranceByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypeLoanByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperTypeLoanByKeys" message="tns:CreditOperationsConfig_GetCredOperTypeLoanByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperTypeLoanByKeysResponse" message="tns:CreditOperationsConfig_GetCredOperTypeLoanByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetCredOperTypeLoanByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypeNextAvailableTypeByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperTypeNextAvailableTypeByKeys" message="tns:CreditOperationsConfig_GetCredOperTypeNextAvailableTypeByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperTypeNextAvailableTypeByKeysResponse" message="tns:CreditOperationsConfig_GetCredOperTypeNextAvailableTypeByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetCredOperTypeNextAvailableTypeByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypeOtherRateByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperTypeOtherRateByKeys" message="tns:CreditOperationsConfig_GetCredOperTypeOtherRateByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperTypeOtherRateByKeysResponse" message="tns:CreditOperationsConfig_GetCredOperTypeOtherRateByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetCredOperTypeOtherRateByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypePlafondTypeByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperTypePlafondTypeByKeys" message="tns:CreditOperationsConfig_GetCredOperTypePlafondTypeByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperTypePlafondTypeByKeysResponse" message="tns:CreditOperationsConfig_GetCredOperTypePlafondTypeByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetCredOperTypePlafondTypeByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypePurposeTypeByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperTypePurposeTypeByKeys" message="tns:CreditOperationsConfig_GetCredOperTypePurposeTypeByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperTypePurposeTypeByKeysResponse" message="tns:CreditOperationsConfig_GetCredOperTypePurposeTypeByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetCredOperTypePurposeTypeByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypeServiceByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperTypeServiceByKeys" message="tns:CreditOperationsConfig_GetCredOperTypeServiceByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperTypeServiceByKeysResponse" message="tns:CreditOperationsConfig_GetCredOperTypeServiceByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetCredOperTypeServiceByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinMatrixTypeByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetFinMatrixTypeByKeys" message="tns:CreditOperationsConfig_GetFinMatrixTypeByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetFinMatrixTypeByKeysResponse" message="tns:CreditOperationsConfig_GetFinMatrixTypeByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetFinMatrixTypeByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinMatrixTypeCustomItemGroupByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetFinMatrixTypeCustomItemGroupByKeys" message="tns:CreditOperationsConfig_GetFinMatrixTypeCustomItemGroupByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetFinMatrixTypeCustomItemGroupByKeysResponse" message="tns:CreditOperationsConfig_GetFinMatrixTypeCustomItemGroupByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetFinMatrixTypeCustomItemGroupByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRemarketingChannelByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetRemarketingChannelByKeys" message="tns:CreditOperationsConfig_GetRemarketingChannelByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetRemarketingChannelByKeysResponse" message="tns:CreditOperationsConfig_GetRemarketingChannelByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetRemarketingChannelByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaxCapitalTypeByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetTaxCapitalTypeByKeys" message="tns:CreditOperationsConfig_GetTaxCapitalTypeByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetTaxCapitalTypeByKeysResponse" message="tns:CreditOperationsConfig_GetTaxCapitalTypeByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetTaxCapitalTypeByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalInstallmentCalcTypeByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetTotalInstallmentCalcTypeByKeys" message="tns:CreditOperationsConfig_GetTotalInstallmentCalcTypeByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetTotalInstallmentCalcTypeByKeysResponse" message="tns:CreditOperationsConfig_GetTotalInstallmentCalcTypeByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetTotalInstallmentCalcTypeByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalInstallmentCalcTypeItemByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetTotalInstallmentCalcTypeItemByKeys" message="tns:CreditOperationsConfig_GetTotalInstallmentCalcTypeItemByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetTotalInstallmentCalcTypeItemByKeysResponse" message="tns:CreditOperationsConfig_GetTotalInstallmentCalcTypeItemByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetTotalInstallmentCalcTypeItemByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetOperationExpenseTypeByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetAssetOperationExpenseTypeByKeys" message="tns:CreditOperationsConfig_GetAssetOperationExpenseTypeByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetAssetOperationExpenseTypeByKeysResponse" message="tns:CreditOperationsConfig_GetAssetOperationExpenseTypeByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetAssetOperationExpenseTypeByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperExpenseTypeByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperExpenseTypeByKeys" message="tns:CreditOperationsConfig_GetCredOperExpenseTypeByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperExpenseTypeByKeysResponse" message="tns:CreditOperationsConfig_GetCredOperExpenseTypeByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetCredOperExpenseTypeByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperIntervExpenseTypeByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperIntervExpenseTypeByKeys" message="tns:CreditOperationsConfig_GetCredOperIntervExpenseTypeByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperIntervExpenseTypeByKeysResponse" message="tns:CreditOperationsConfig_GetCredOperIntervExpenseTypeByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetCredOperIntervExpenseTypeByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperLoanExpenseTypeByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperLoanExpenseTypeByKeys" message="tns:CreditOperationsConfig_GetCredOperLoanExpenseTypeByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperLoanExpenseTypeByKeysResponse" message="tns:CreditOperationsConfig_GetCredOperLoanExpenseTypeByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetCredOperLoanExpenseTypeByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperIntervTypeByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperIntervTypeByKeys" message="tns:CreditOperationsConfig_GetCredOperIntervTypeByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCredOperIntervTypeByKeysResponse" message="tns:CreditOperationsConfig_GetCredOperIntervTypeByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetCredOperIntervTypeByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCreditOperationsConfig">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/SaveCreditOperationsConfig" message="tns:CreditOperationsConfig_SaveCreditOperationsConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/SaveCreditOperationsConfigResponse" message="tns:CreditOperationsConfig_SaveCreditOperationsConfig_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_SaveCreditOperationsConfig_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCreditOperationsConfigV2">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/SaveCreditOperationsConfigV2" message="tns:CreditOperationsConfig_SaveCreditOperationsConfigV2_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/SaveCreditOperationsConfigV2Response" message="tns:CreditOperationsConfig_SaveCreditOperationsConfigV2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_SaveCreditOperationsConfigV2_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditOperationsConfigClassTableId">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCreditOperationsConfigClassTableId" message="tns:CreditOperationsConfig_GetCreditOperationsConfigClassTableId_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCreditOperationsConfigClassTableIdResponse" message="tns:CreditOperationsConfig_GetCreditOperationsConfigClassTableId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetCreditOperationsConfigClassTableId_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditOperationsConfigTableId">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCreditOperationsConfigTableId" message="tns:CreditOperationsConfig_GetCreditOperationsConfigTableId_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/GetCreditOperationsConfigTableIdResponse" message="tns:CreditOperationsConfig_GetCreditOperationsConfigTableId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_GetCreditOperationsConfigTableId_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchCreditOperationsConfigConfig">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsConfig/SearchCreditOperationsConfigConfig" message="tns:CreditOperationsConfig_SearchCreditOperationsConfigConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsConfig/SearchCreditOperationsConfigConfigResponse" message="tns:CreditOperationsConfig_SearchCreditOperationsConfigConfig_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsConfig_SearchCreditOperationsConfigConfig_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

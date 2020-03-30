@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0ffd1603-d5c7-45c7-b004-466f5fe2d418" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CreditOperationsBasicLists.xsd" MetadataType="Schema" ID="5c0c325c-4b5a-42c2-9b51-c7f67b31bc92" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd3" />
+    <MetadataFile FileName="CreditOperationsBasicLists1.xsd" MetadataType="Schema" ID="dd83a35d-b45c-4fbc-a7ea-96126fc00731" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd17" />
+    <MetadataFile FileName="CreditOperationsBasicLists2.xsd" MetadataType="Schema" ID="06dda9d9-17e8-4f93-bf95-91ff7f2a81a3" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd16" />
+    <MetadataFile FileName="CreditOperationsBasicLists3.xsd" MetadataType="Schema" ID="14bcc6a5-4aed-4a51-a77f-7de557f357bf" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd20" />
+    <MetadataFile FileName="CreditOperationsBasicLists4.xsd" MetadataType="Schema" ID="94de6d8b-0429-4ab3-a526-0d7c4950df16" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd15" />
+    <MetadataFile FileName="CreditOperationsBasicLists5.xsd" MetadataType="Schema" ID="40398087-43ac-4f11-aa88-db74c81cd362" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd10" />
+    <MetadataFile FileName="CreditOperationsBasicLists6.xsd" MetadataType="Schema" ID="162cd211-efad-487c-a2fe-b5b61e13eedf" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd0" />
+    <MetadataFile FileName="CreditOperationsBasicLists7.xsd" MetadataType="Schema" ID="3ae21cdf-8939-4bb6-8898-978614235f6d" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd8" />
+    <MetadataFile FileName="CreditOperationsBasicLists8.xsd" MetadataType="Schema" ID="85891cc9-10a4-4c8d-8ef8-5da3b5d653ba" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd6" />
+    <MetadataFile FileName="CreditOperationsBasicLists9.xsd" MetadataType="Schema" ID="ab8b5a22-dd2e-49ee-8b2e-90c77f80d76f" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd1" />
+    <MetadataFile FileName="CreditOperationsBasicLists10.xsd" MetadataType="Schema" ID="b6a35b57-dec8-41a4-8459-d26d126f67fa" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd18" />
+    <MetadataFile FileName="CreditOperationsBasicLists11.xsd" MetadataType="Schema" ID="b6e5d51c-a3e2-40a9-a02f-83624edffa20" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd4" />
+    <MetadataFile FileName="CreditOperationsBasicLists.wsdl" MetadataType="Wsdl" ID="344a0239-9b4b-4e51-999b-c7e50dec3386" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?wsdl" />
+    <MetadataFile FileName="CreditOperationsBasicLists12.xsd" MetadataType="Schema" ID="dc93ddd7-f89a-45c9-914f-47c6267ea8b7" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd2" />
+    <MetadataFile FileName="CreditOperationsBasicLists13.xsd" MetadataType="Schema" ID="a1b1988d-e9fd-44dc-9375-b3077e8c1961" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd13" />
+    <MetadataFile FileName="CreditOperationsBasicLists14.xsd" MetadataType="Schema" ID="00c44979-8ff1-4ee0-bd7e-ab5a2dc94be8" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd12" />
+    <MetadataFile FileName="CreditOperationsBasicLists15.xsd" MetadataType="Schema" ID="d4ca6779-a264-45ce-a7d6-75c8d3872f7b" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd11" />
+    <MetadataFile FileName="CreditOperationsBasicLists1.wsdl" MetadataType="Wsdl" ID="c16e4038-278e-46ca-a819-7b8cd73c2ae9" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="CreditOperationsBasicLists16.xsd" MetadataType="Schema" ID="17fc7427-1810-4831-a10a-a9487269ec4f" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd7" />
+    <MetadataFile FileName="CreditOperationsBasicLists17.xsd" MetadataType="Schema" ID="31faad5e-14e5-4a04-9cbe-6261f9ae29df" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd9" />
+    <MetadataFile FileName="CreditOperationsBasicLists18.xsd" MetadataType="Schema" ID="f36d1bf1-edb1-4f42-bbae-e2fa6881170f" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd19" />
+    <MetadataFile FileName="CreditOperationsBasicLists19.xsd" MetadataType="Schema" ID="04a154ab-e097-435e-b952-eeb605a6af14" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd14" />
+    <MetadataFile FileName="CreditOperationsBasicLists20.xsd" MetadataType="Schema" ID="397a6c60-0268-47da-9859-ff64c9606221" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd5" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

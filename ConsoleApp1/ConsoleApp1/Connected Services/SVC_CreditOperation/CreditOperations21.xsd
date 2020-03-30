@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://accipiens.com/Common" elementFormDefault="qualified" targetNamespace="http://accipiens.com/Common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/CreditOperations.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Olissipo.Utils" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/CreditOperations.svc?xsd=xsd5" namespace="http://accipiens.com/VirtualData" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/CreditOperations.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/CreditOperations.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="BusinessEntityKey">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="BusinessEntityKey" nillable="true" type="tns:BusinessEntityKey" />
+  <xs:complexType name="ArrayOfBusinessEntityKey">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BusinessEntityKey" nillable="true" type="tns:BusinessEntityKey" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBusinessEntityKey" nillable="true" type="tns:ArrayOfBusinessEntityKey" />
+  <xs:complexType name="ArrayOfBusinessDetailFetchInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BusinessDetailFetchInfo" nillable="true" type="tns:BusinessDetailFetchInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBusinessDetailFetchInfo" nillable="true" type="tns:ArrayOfBusinessDetailFetchInfo" />
+  <xs:complexType name="BusinessDetailFetchInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Constraints" nillable="true" type="tns:ArrayOfBusinessConstraint" />
+      <xs:element minOccurs="0" name="Detail" type="xs:int" />
+      <xs:element minOccurs="0" name="DetailsInfo" nillable="true" type="tns:ArrayOfBusinessDetailFetchInfo" />
+      <xs:element minOccurs="0" name="OrdersInfo" nillable="true" type="tns:ArrayOfBusinessDetailOrderInfo" />
+      <xs:element minOccurs="0" name="Type" type="tns:SelectType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusinessDetailFetchInfo" nillable="true" type="tns:BusinessDetailFetchInfo" />
+  <xs:complexType name="ArrayOfBusinessConstraint">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BusinessConstraint" nillable="true" type="tns:BusinessConstraint" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBusinessConstraint" nillable="true" type="tns:ArrayOfBusinessConstraint" />
+  <xs:complexType name="BusinessConstraint">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConstraintValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Field" type="xs:int" />
+      <xs:element minOccurs="0" name="FullContext" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusinessConstraint" nillable="true" type="tns:BusinessConstraint" />
+  <xs:complexType name="ArrayOfBusinessDetailOrderInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BusinessDetailOrderInfo" nillable="true" type="tns:BusinessDetailOrderInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBusinessDetailOrderInfo" nillable="true" type="tns:ArrayOfBusinessDetailOrderInfo" />
+  <xs:complexType name="BusinessDetailOrderInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:StatementOrderInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Field" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BusinessDetailOrderInfo" nillable="true" type="tns:BusinessDetailOrderInfo" />
+  <xs:complexType name="StatementOrderInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OnOrderByClauseOnly" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Order" type="tns:OrderType" />
+      <xs:element minOccurs="0" name="Sequence" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StatementOrderInfo" nillable="true" type="tns:StatementOrderInfo" />
+  <xs:simpleType name="OrderType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Ascendant" />
+      <xs:enumeration value="Descendant" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="OrderType" nillable="true" type="tns:OrderType" />
+  <xs:simpleType name="SelectType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Specific" />
+      <xs:enumeration value="Deep" />
+      <xs:enumeration value="Shallow" />
+      <xs:enumeration value="Keys" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SelectType" nillable="true" type="tns:SelectType" />
+  <xs:complexType name="SessionTokenWcfHeader">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CallerApplicationId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CallerMethodInfo" nillable="true" type="tns:MethodSoapHeaderInfo" />
+      <xs:element minOccurs="0" name="Culture" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DelegateUserId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="HostAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HostName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsTraceOn" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LoginName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Token" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Olissipo.Utils" minOccurs="0" name="TraceLogLevel" nillable="true" type="q1:LogLevel" />
+      <xs:element minOccurs="0" name="UiCulture" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SessionTokenWcfHeader" nillable="true" type="tns:SessionTokenWcfHeader" />
+  <xs:complexType name="MethodSoapHeaderInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CallerAplScreenId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CallerUrl" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MethodSoapHeaderInfo" nillable="true" type="tns:MethodSoapHeaderInfo" />
+  <xs:element name="SessionToken" nillable="true" type="tns:SessionTokenWcfHeader" />
+  <xs:complexType name="BusinessEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContainerId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContainerIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="FieldStates" nillable="true" type="tns:ArrayOfRecordFieldState" />
+      <xs:element xmlns:q2="http://accipiens.com/VirtualData" minOccurs="0" name="ModifiedValues" nillable="true" type="q2:ArrayOfAplTableAuditValue" />
+      <xs:element minOccurs="0" name="Permissions" nillable="true" type="tns:PermissionInfo" />
+      <xs:element minOccurs="0" name="Status" type="tns:InstanceStatus" />
+      <xs:element xmlns:q3="http://accipiens.com/VirtualData" minOccurs="0" name="TableData" nillable="true" type="q3:ArrayOfAplTableData" />
+      <xs:element minOccurs="0" name="Warnings" nillable="true" type="tns:ArrayOfValidationResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusinessEntity" nillable="true" type="tns:BusinessEntity" />
+  <xs:complexType name="ArrayOfRecordFieldState">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RecordFieldState" nillable="true" type="tns:RecordFieldState" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRecordFieldState" nillable="true" type="tns:ArrayOfRecordFieldState" />
+  <xs:complexType name="RecordFieldState">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AplApplicationId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="AplScreenId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="AplTableId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="FieldId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="IsObligatory" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsReadOnly" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RecordId" nillable="true" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RecordFieldState" nillable="true" type="tns:RecordFieldState" />
+  <xs:complexType name="PermissionInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Permissions" type="tns:PermissionFlags" />
+      <xs:element minOccurs="0" name="Reason" nillable="true" type="xs:string" />
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Reasons" nillable="true" type="q4:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PermissionInfo" nillable="true" type="tns:PermissionInfo" />
+  <xs:simpleType name="PermissionFlags">
+    <xs:list>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="None">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="CanRead">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="CanCreate">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="CanModify">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="CanDelete">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="CanExecute">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">16</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="CanModifyTableData">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">32</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:list>
+  </xs:simpleType>
+  <xs:element name="PermissionFlags" nillable="true" type="tns:PermissionFlags" />
+  <xs:simpleType name="InstanceStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unchanged">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Insert">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Delete">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Update">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="InstanceStatus" nillable="true" type="tns:InstanceStatus" />
+  <xs:complexType name="ArrayOfValidationResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ValidationResult" nillable="true" type="tns:ValidationResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfValidationResult" nillable="true" type="tns:ArrayOfValidationResult" />
+  <xs:complexType name="ValidationResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BusinessError">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Index" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ValidationResult" nillable="true" type="tns:ValidationResult" />
+  <xs:complexType name="BusinessError">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Context" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExtraInfo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Field" type="xs:int" />
+      <xs:element minOccurs="0" name="FieldName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HideResultCode" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecordIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="RelatedAplTableId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="RelatedId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="RelatedUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Result" type="tns:ValidationResultCode" />
+      <xs:element minOccurs="0" name="RscCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RscEnumTypeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TechMsg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Translated" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusinessError" nillable="true" type="tns:BusinessError" />
+  <xs:simpleType name="ValidationResultCode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Warning" />
+      <xs:enumeration value="Error" />
+      <xs:enumeration value="Info" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ValidationResultCode" nillable="true" type="tns:ValidationResultCode" />
+  <xs:complexType name="AcpDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorList" nillable="true" type="tns:ArrayOfBusinessError" />
+      <xs:element minOccurs="0" name="Kind" type="tns:ExceptionKind" />
+      <xs:element minOccurs="0" name="Machine" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MessageAll" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MessageAllWithTech" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OperationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServerFolder" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServerVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServiceName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ToStringDetails" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcpDetail" nillable="true" type="tns:AcpDetail" />
+  <xs:complexType name="ArrayOfBusinessError">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BusinessError" nillable="true" type="tns:BusinessError" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBusinessError" nillable="true" type="tns:ArrayOfBusinessError" />
+  <xs:simpleType name="ExceptionKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Business" />
+      <xs:enumeration value="Technical" />
+      <xs:enumeration value="System" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExceptionKind" nillable="true" type="tns:ExceptionKind" />
+  <xs:simpleType name="GenderKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Male" />
+      <xs:enumeration value="Female" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="GenderKind" nillable="true" type="tns:GenderKind" />
+  <xs:complexType name="SaveResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="tns:SaveResultAdditionalInfo" />
+      <xs:element minOccurs="0" name="Count" type="xs:int" />
+      <xs:element minOccurs="0" name="Key" nillable="true" type="tns:BusinessEntityKey" />
+      <xs:element minOccurs="0" name="Validations" nillable="true" type="tns:ArrayOfValidationResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SaveResult" nillable="true" type="tns:SaveResult" />
+  <xs:complexType name="SaveResultAdditionalInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BatchProcessId" nillable="true" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SaveResultAdditionalInfo" nillable="true" type="tns:SaveResultAdditionalInfo" />
+  <xs:complexType name="SaveParams">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ExternalCollectMode" nillable="true" type="tns:ExtCollectMode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SaveParams" nillable="true" type="tns:SaveParams" />
+  <xs:simpleType name="ExtCollectMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Special" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExtCollectMode" nillable="true" type="tns:ExtCollectMode" />
+  <xs:complexType name="SearchCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Constraints" nillable="true" type="tns:ArrayOfBusinessConstraint" />
+      <xs:element minOccurs="0" name="Orders" nillable="true" type="tns:ArrayOfBusinessOrderInfo" />
+      <xs:element minOccurs="0" name="TopRows" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchCriteria" nillable="true" type="tns:SearchCriteria" />
+  <xs:complexType name="ArrayOfBusinessOrderInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BusinessOrderInfo" nillable="true" type="tns:BusinessOrderInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBusinessOrderInfo" nillable="true" type="tns:ArrayOfBusinessOrderInfo" />
+  <xs:complexType name="BusinessOrderInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BusinessDetailOrderInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FullContext" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BusinessOrderInfo" nillable="true" type="tns:BusinessOrderInfo" />
+  <xs:complexType name="ArrayOfBusinessEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BusinessEntity" nillable="true" type="tns:BusinessEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBusinessEntity" nillable="true" type="tns:ArrayOfBusinessEntity" />
+  <xs:complexType name="SearchResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Keys" nillable="true" type="tns:ArrayOfBusinessEntityKey" />
+      <xs:element minOccurs="0" name="Messages" nillable="true" type="tns:ArrayOfSearchResultMessage" />
+      <xs:element minOccurs="0" name="SearchCount" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchResult" nillable="true" type="tns:SearchResult" />
+  <xs:complexType name="ArrayOfSearchResultMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SearchResultMessage" nillable="true" type="tns:SearchResultMessage" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSearchResultMessage" nillable="true" type="tns:ArrayOfSearchResultMessage" />
+  <xs:complexType name="SearchResultMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Result" type="tns:SearchResultCode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchResultMessage" nillable="true" type="tns:SearchResultMessage" />
+  <xs:simpleType name="SearchResultCode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="LimitExceededWarning" />
+      <xs:enumeration value="CompositeKeyOrderNotAppliedWarning" />
+      <xs:enumeration value="FieldOrderNotAppliedWarning" />
+      <xs:enumeration value="FieldConstraintNotAppliedWarning" />
+      <xs:enumeration value="ConstraintSyntaxError" />
+      <xs:enumeration value="OrderNotOverAllDatabase" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SearchResultCode" nillable="true" type="tns:SearchResultCode" />
+  <xs:complexType name="ScriptValidationResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GenericValidationResult">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ScriptValidationResult" nillable="true" type="tns:ScriptValidationResult" />
+  <xs:complexType name="GenericValidationResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Validations" nillable="true" type="tns:ArrayOfValidationResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GenericValidationResult" nillable="true" type="tns:GenericValidationResult" />
+  <xs:complexType name="BasicList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CleanInvalidElement" type="xs:boolean" />
+      <xs:element minOccurs="0" name="List" nillable="true" type="tns:ArrayOfCodeAbbreviation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BasicList" nillable="true" type="tns:BasicList" />
+  <xs:complexType name="ArrayOfCodeAbbreviation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CodeAbbreviation" nillable="true" type="tns:CodeAbbreviation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCodeAbbreviation" nillable="true" type="tns:ArrayOfCodeAbbreviation" />
+  <xs:complexType name="CodeAbbreviation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Abbreviation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FetchLevel" type="xs:int" />
+      <xs:element minOccurs="0" name="InvalidDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsDefault" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsInvalid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PermissionFlags" type="tns:PermissionFlags" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CodeAbbreviation" nillable="true" type="tns:CodeAbbreviation" />
+  <xs:complexType name="DictionaryProxyOfintKeyValuePairSequentialOfstringstringIci_SC_S8N">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="DictionaryProxyOf{0}{1}{#}" Namespace="http://accipiens.com/Common" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="int" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="KeyValuePairSequentialOf{0}{1}{#}" Namespace="http://accipiens.com/Common">
+            <GenericParameter Name="string" Namespace="http://www.w3.org/2001/XMLSchema" />
+            <GenericParameter Name="string" Namespace="http://www.w3.org/2001/XMLSchema" />
+          </GenericParameter>
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="KeysAndValues" nillable="true" type="tns:ArrayOfDictionaryProxy.KeyAndValueOfintKeyValuePairSequentialOfstringstringnD52zXZQ" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DictionaryProxyOfintKeyValuePairSequentialOfstringstringIci_SC_S8N" nillable="true" type="tns:DictionaryProxyOfintKeyValuePairSequentialOfstringstringIci_SC_S8N" />
+  <xs:complexType name="ArrayOfDictionaryProxy.KeyAndValueOfintKeyValuePairSequentialOfstringstringnD52zXZQ">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DictionaryProxy.KeyAndValueOfintKeyValuePairSequentialOfstringstringnD52zXZQ" nillable="true" type="tns:DictionaryProxy.KeyAndValueOfintKeyValuePairSequentialOfstringstringnD52zXZQ" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDictionaryProxy.KeyAndValueOfintKeyValuePairSequentialOfstringstringnD52zXZQ" nillable="true" type="tns:ArrayOfDictionaryProxy.KeyAndValueOfintKeyValuePairSequentialOfstringstringnD52zXZQ" />
+  <xs:complexType name="DictionaryProxy.KeyAndValueOfintKeyValuePairSequentialOfstringstringnD52zXZQ">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="DictionaryProxy.KeyAndValueOf{0}{1}{#}" Namespace="http://accipiens.com/Common" NestedLevel="2" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="int" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="KeyValuePairSequentialOf{0}{1}{#}" Namespace="http://accipiens.com/Common">
+            <GenericParameter Name="string" Namespace="http://www.w3.org/2001/XMLSchema" />
+            <GenericParameter Name="string" Namespace="http://www.w3.org/2001/XMLSchema" />
+          </GenericParameter>
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" type="xs:int" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="tns:KeyValuePairSequentialOfstringstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DictionaryProxy.KeyAndValueOfintKeyValuePairSequentialOfstringstringnD52zXZQ" nillable="true" type="tns:DictionaryProxy.KeyAndValueOfintKeyValuePairSequentialOfstringstringnD52zXZQ" />
+  <xs:complexType name="KeyValuePairSequentialOfstringstring">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="KeyValuePairSequentialOf{0}{1}{#}" Namespace="http://accipiens.com/Common" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="string" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="string" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="KeyValuePairSequentialOfstringstring" nillable="true" type="tns:KeyValuePairSequentialOfstringstring" />
+  <xs:complexType name="ArrayOfSaveResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SaveResult" nillable="true" type="tns:SaveResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSaveResult" nillable="true" type="tns:ArrayOfSaveResult" />
+  <xs:complexType name="DateAndFinCFEvent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AssetTypeGroupId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="BeginDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BeginFinCFEvent" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EndFinCFEvent" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DateAndFinCFEvent" nillable="true" type="tns:DateAndFinCFEvent" />
+</xs:schema>

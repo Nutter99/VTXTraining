@@ -1,0 +1,818 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://accipiens.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://accipiens.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://accipiens.com/Imports">
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/Automatons.svc?xsd=xsd0" namespace="http://accipiens.com" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/Automatons.svc?xsd=xsd2" namespace="http://accipiens.com/Common" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/Automatons.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/Automatons.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Olissipo.Utils" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/Automatons.svc?xsd=xsd4" namespace="http://accipiens.com/AplSecurity" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/Automatons.svc?xsd=xsd5" namespace="http://accipiens.com/VirtualData" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/Automatons.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/Automatons.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Olissipo.AplSecurity.DataStructures" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/Automatons.svc?xsd=xsd8" namespace="http://accipiens.com/Automatons" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/Automatons.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Olissipo.Automatons.DataStructures" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="Automatons_UpdatePermissions_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePermissions" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_UpdatePermissions_InputMessage_Headers">
+    <wsdl:part xmlns:q1="http://accipiens.com/Common" name="SessionToken" element="q1:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_UpdatePermissions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePermissionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_UpdatePermissions_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q2="http://accipiens.com/Common" name="detail" element="q2:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_CreateAutomatonAplTask_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAutomatonAplTask" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_CreateAutomatonAplTask_InputMessage_Headers">
+    <wsdl:part xmlns:q3="http://accipiens.com/Common" name="SessionToken" element="q3:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_CreateAutomatonAplTask_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAutomatonAplTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_CreateAutomatonAplTask_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q4="http://accipiens.com/Common" name="detail" element="q4:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_CreateAutTransitionAplTask_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAutTransitionAplTask" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_CreateAutTransitionAplTask_InputMessage_Headers">
+    <wsdl:part xmlns:q5="http://accipiens.com/Common" name="SessionToken" element="q5:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_CreateAutTransitionAplTask_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAutTransitionAplTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_CreateAutTransitionAplTask_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q6="http://accipiens.com/Common" name="detail" element="q6:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_CreateAutUserStateAplTask_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAutUserStateAplTask" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_CreateAutUserStateAplTask_InputMessage_Headers">
+    <wsdl:part xmlns:q7="http://accipiens.com/Common" name="SessionToken" element="q7:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_CreateAutUserStateAplTask_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAutUserStateAplTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_CreateAutUserStateAplTask_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q8="http://accipiens.com/Common" name="detail" element="q8:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_DeleteAutomatonAplTaskAndPermissions_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAutomatonAplTaskAndPermissions" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_DeleteAutomatonAplTaskAndPermissions_InputMessage_Headers">
+    <wsdl:part xmlns:q9="http://accipiens.com/Common" name="SessionToken" element="q9:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_DeleteAutomatonAplTaskAndPermissions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAutomatonAplTaskAndPermissionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_DeleteAutomatonAplTaskAndPermissions_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q10="http://accipiens.com/Common" name="detail" element="q10:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_DeleteAutTransitionAplTaskAndPermissions_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAutTransitionAplTaskAndPermissions" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_DeleteAutTransitionAplTaskAndPermissions_InputMessage_Headers">
+    <wsdl:part xmlns:q11="http://accipiens.com/Common" name="SessionToken" element="q11:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_DeleteAutTransitionAplTaskAndPermissions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAutTransitionAplTaskAndPermissionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_DeleteAutTransitionAplTaskAndPermissions_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q12="http://accipiens.com/Common" name="detail" element="q12:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_DeleteAutUserStateAplTaskAndPermissions_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAutUserStateAplTaskAndPermissions" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_DeleteAutUserStateAplTaskAndPermissions_InputMessage_Headers">
+    <wsdl:part xmlns:q13="http://accipiens.com/Common" name="SessionToken" element="q13:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_DeleteAutUserStateAplTaskAndPermissions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAutUserStateAplTaskAndPermissionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_DeleteAutUserStateAplTaskAndPermissions_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q14="http://accipiens.com/Common" name="detail" element="q14:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_ExportAutomatonsPermissions_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExportAutomatonsPermissions" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_ExportAutomatonsPermissions_InputMessage_Headers">
+    <wsdl:part xmlns:q15="http://accipiens.com/Common" name="SessionToken" element="q15:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_ExportAutomatonsPermissions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExportAutomatonsPermissionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_ExportAutomatonsPermissions_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q16="http://accipiens.com/Common" name="detail" element="q16:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_ExportAutContextsPermissions_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExportAutContextsPermissions" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_ExportAutContextsPermissions_InputMessage_Headers">
+    <wsdl:part xmlns:q17="http://accipiens.com/Common" name="SessionToken" element="q17:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_ExportAutContextsPermissions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExportAutContextsPermissionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_ExportAutContextsPermissions_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q18="http://accipiens.com/Common" name="detail" element="q18:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_ImportAutomatonsPermissions_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportAutomatonsPermissions" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_ImportAutomatonsPermissions_InputMessage_Headers">
+    <wsdl:part xmlns:q19="http://accipiens.com/Common" name="SessionToken" element="q19:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_ImportAutomatonsPermissions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportAutomatonsPermissionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_ImportAutomatonsPermissions_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q20="http://accipiens.com/Common" name="detail" element="q20:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutContextId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutContextId" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutContextId_InputMessage_Headers">
+    <wsdl:part xmlns:q21="http://accipiens.com/Common" name="SessionToken" element="q21:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutContextId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutContextIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutContextId_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q22="http://accipiens.com/Common" name="detail" element="q22:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_HasAutTransitionActionInternalCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:HasAutTransitionActionInternalCode" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_HasAutTransitionActionInternalCode_InputMessage_Headers">
+    <wsdl:part xmlns:q23="http://accipiens.com/Common" name="SessionToken" element="q23:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_HasAutTransitionActionInternalCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HasAutTransitionActionInternalCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_HasAutTransitionActionInternalCode_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q24="http://accipiens.com/Common" name="detail" element="q24:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonTransitionsGroupedByState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutomatonTransitionsGroupedByState" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonTransitionsGroupedByState_InputMessage_Headers">
+    <wsdl:part xmlns:q25="http://accipiens.com/Common" name="SessionToken" element="q25:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonTransitionsGroupedByState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutomatonTransitionsGroupedByStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonTransitionsGroupedByState_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q26="http://accipiens.com/Common" name="detail" element="q26:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutUserStatesGroupedByState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutUserStatesGroupedByState" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutUserStatesGroupedByState_InputMessage_Headers">
+    <wsdl:part xmlns:q27="http://accipiens.com/Common" name="SessionToken" element="q27:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutUserStatesGroupedByState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutUserStatesGroupedByStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutUserStatesGroupedByState_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q28="http://accipiens.com/Common" name="detail" element="q28:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutUserStateList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutUserStateList" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutUserStateList_InputMessage_Headers">
+    <wsdl:part xmlns:q29="http://accipiens.com/Common" name="SessionToken" element="q29:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutUserStateList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutUserStateListResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutUserStateList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q30="http://accipiens.com/Common" name="detail" element="q30:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetLastLogReasons_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastLogReasons" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetLastLogReasons_InputMessage_Headers">
+    <wsdl:part xmlns:q31="http://accipiens.com/Common" name="SessionToken" element="q31:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetLastLogReasons_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastLogReasonsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetLastLogReasons_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q32="http://accipiens.com/Common" name="detail" element="q32:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_Ping_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ping" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_Ping_InputMessage_Headers">
+    <wsdl:part xmlns:q33="http://accipiens.com/Common" name="SessionToken" element="q33:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_Ping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PingResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_Ping_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q34="http://accipiens.com/Common" name="detail" element="q34:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_ConvertToEnumAutPostTransitionType_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumAutPostTransitionType" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_ConvertToEnumAutPostTransitionType_InputMessage_Headers">
+    <wsdl:part xmlns:q35="http://accipiens.com/Common" name="SessionToken" element="q35:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_ConvertToEnumAutPostTransitionType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumAutPostTransitionTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_ConvertToEnumAutPostTransitionType_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q36="http://accipiens.com/Common" name="detail" element="q36:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutPostTransitionTypeEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutPostTransitionTypeEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutPostTransitionTypeEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q37="http://accipiens.com/Common" name="SessionToken" element="q37:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutPostTransitionTypeEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutPostTransitionTypeEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutPostTransitionTypeEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q38="http://accipiens.com/Common" name="detail" element="q38:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_ConvertToEnumReasonValidationType_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumReasonValidationType" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_ConvertToEnumReasonValidationType_InputMessage_Headers">
+    <wsdl:part xmlns:q39="http://accipiens.com/Common" name="SessionToken" element="q39:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_ConvertToEnumReasonValidationType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumReasonValidationTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_ConvertToEnumReasonValidationType_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q40="http://accipiens.com/Common" name="detail" element="q40:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetReasonValidationTypeEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReasonValidationTypeEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetReasonValidationTypeEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q41="http://accipiens.com/Common" name="SessionToken" element="q41:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetReasonValidationTypeEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReasonValidationTypeEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetReasonValidationTypeEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q42="http://accipiens.com/Common" name="detail" element="q42:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_ConvertToEnumAutomatonOperationsInternalCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumAutomatonOperationsInternalCode" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_ConvertToEnumAutomatonOperationsInternalCode_InputMessage_Headers">
+    <wsdl:part xmlns:q43="http://accipiens.com/Common" name="SessionToken" element="q43:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_ConvertToEnumAutomatonOperationsInternalCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumAutomatonOperationsInternalCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_ConvertToEnumAutomatonOperationsInternalCode_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q44="http://accipiens.com/Common" name="detail" element="q44:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonOperationsInternalCodeEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutomatonOperationsInternalCodeEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonOperationsInternalCodeEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q45="http://accipiens.com/Common" name="SessionToken" element="q45:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonOperationsInternalCodeEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutomatonOperationsInternalCodeEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonOperationsInternalCodeEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q46="http://accipiens.com/Common" name="detail" element="q46:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonsClassContext_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutomatonsClassContext" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonsClassContext_InputMessage_Headers">
+    <wsdl:part xmlns:q47="http://accipiens.com/Common" name="SessionToken" element="q47:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonsClassContext_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutomatonsClassContextResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonsClassContext_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q48="http://accipiens.com/Common" name="detail" element="q48:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_SearchAutomatons_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchAutomatons" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_SearchAutomatons_InputMessage_Headers">
+    <wsdl:part xmlns:q49="http://accipiens.com/Common" name="SessionToken" element="q49:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_SearchAutomatons_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchAutomatonsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_SearchAutomatons_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q50="http://accipiens.com/Common" name="detail" element="q50:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonReasonStateByKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutomatonReasonStateByKey" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonReasonStateByKey_InputMessage_Headers">
+    <wsdl:part xmlns:q51="http://accipiens.com/Common" name="SessionToken" element="q51:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonReasonStateByKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutomatonReasonStateByKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonReasonStateByKey_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q52="http://accipiens.com/Common" name="detail" element="q52:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutLogByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutLogByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutLogByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q53="http://accipiens.com/Common" name="SessionToken" element="q53:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutLogByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutLogByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutLogByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q54="http://accipiens.com/Common" name="detail" element="q54:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutLogReasonByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutLogReasonByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutLogReasonByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q55="http://accipiens.com/Common" name="SessionToken" element="q55:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutLogReasonByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutLogReasonByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutLogReasonByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q56="http://accipiens.com/Common" name="detail" element="q56:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutomatonByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q57="http://accipiens.com/Common" name="SessionToken" element="q57:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutomatonByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q58="http://accipiens.com/Common" name="detail" element="q58:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonReasonByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutomatonReasonByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonReasonByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q59="http://accipiens.com/Common" name="SessionToken" element="q59:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonReasonByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutomatonReasonByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonReasonByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q60="http://accipiens.com/Common" name="detail" element="q60:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonReasonStateByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutomatonReasonStateByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonReasonStateByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q61="http://accipiens.com/Common" name="SessionToken" element="q61:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonReasonStateByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutomatonReasonStateByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonReasonStateByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q62="http://accipiens.com/Common" name="detail" element="q62:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutPostTransitionByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutPostTransitionByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutPostTransitionByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q63="http://accipiens.com/Common" name="SessionToken" element="q63:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutPostTransitionByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutPostTransitionByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutPostTransitionByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q64="http://accipiens.com/Common" name="detail" element="q64:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutStateByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutStateByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutStateByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q65="http://accipiens.com/Common" name="SessionToken" element="q65:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutStateByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutStateByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutStateByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q66="http://accipiens.com/Common" name="detail" element="q66:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutTransitionByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutTransitionByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutTransitionByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q67="http://accipiens.com/Common" name="SessionToken" element="q67:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutTransitionByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutTransitionByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutTransitionByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q68="http://accipiens.com/Common" name="detail" element="q68:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutActionByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutActionByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutActionByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q69="http://accipiens.com/Common" name="SessionToken" element="q69:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutActionByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutActionByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutActionByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q70="http://accipiens.com/Common" name="detail" element="q70:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutConditionByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutConditionByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutConditionByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q71="http://accipiens.com/Common" name="SessionToken" element="q71:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutConditionByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutConditionByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutConditionByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q72="http://accipiens.com/Common" name="detail" element="q72:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutContextByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutContextByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutContextByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q73="http://accipiens.com/Common" name="SessionToken" element="q73:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutContextByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutContextByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutContextByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q74="http://accipiens.com/Common" name="detail" element="q74:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutInternalStateByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutInternalStateByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutInternalStateByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q75="http://accipiens.com/Common" name="SessionToken" element="q75:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutInternalStateByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutInternalStateByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutInternalStateByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q76="http://accipiens.com/Common" name="detail" element="q76:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutOperationByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutOperationByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutOperationByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q77="http://accipiens.com/Common" name="SessionToken" element="q77:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutOperationByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutOperationByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutOperationByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q78="http://accipiens.com/Common" name="detail" element="q78:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutOperationActionByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutOperationActionByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutOperationActionByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q79="http://accipiens.com/Common" name="SessionToken" element="q79:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutOperationActionByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutOperationActionByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutOperationActionByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q80="http://accipiens.com/Common" name="detail" element="q80:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutReasonByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutReasonByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutReasonByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q81="http://accipiens.com/Common" name="SessionToken" element="q81:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutReasonByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutReasonByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutReasonByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q82="http://accipiens.com/Common" name="detail" element="q82:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutUserStateByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutUserStateByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutUserStateByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q83="http://accipiens.com/Common" name="SessionToken" element="q83:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutUserStateByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutUserStateByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutUserStateByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q84="http://accipiens.com/Common" name="detail" element="q84:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_SaveAutomatons_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAutomatons" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_SaveAutomatons_InputMessage_Headers">
+    <wsdl:part xmlns:q85="http://accipiens.com/Common" name="SessionToken" element="q85:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_SaveAutomatons_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAutomatonsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_SaveAutomatons_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q86="http://accipiens.com/Common" name="detail" element="q86:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_SaveAutomatonsV2_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAutomatonsV2" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_SaveAutomatonsV2_InputMessage_Headers">
+    <wsdl:part xmlns:q87="http://accipiens.com/Common" name="SessionToken" element="q87:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_SaveAutomatonsV2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAutomatonsV2Response" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_SaveAutomatonsV2_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q88="http://accipiens.com/Common" name="detail" element="q88:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonsClassTableId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutomatonsClassTableId" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonsClassTableId_InputMessage_Headers">
+    <wsdl:part xmlns:q89="http://accipiens.com/Common" name="SessionToken" element="q89:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonsClassTableId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutomatonsClassTableIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonsClassTableId_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q90="http://accipiens.com/Common" name="detail" element="q90:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonsTableId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutomatonsTableId" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonsTableId_InputMessage_Headers">
+    <wsdl:part xmlns:q91="http://accipiens.com/Common" name="SessionToken" element="q91:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonsTableId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutomatonsTableIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_GetAutomatonsTableId_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q92="http://accipiens.com/Common" name="detail" element="q92:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_SearchAutomatonsConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchAutomatonsConfig" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_SearchAutomatonsConfig_InputMessage_Headers">
+    <wsdl:part xmlns:q93="http://accipiens.com/Common" name="SessionToken" element="q93:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_SearchAutomatonsConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchAutomatonsConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="Automatons_SearchAutomatonsConfig_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q94="http://accipiens.com/Common" name="detail" element="q94:AcpDetail" />
+  </wsdl:message>
+  <wsdl:portType name="Automatons">
+    <wsdl:operation name="UpdatePermissions">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/UpdatePermissions" message="tns:Automatons_UpdatePermissions_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/UpdatePermissionsResponse" message="tns:Automatons_UpdatePermissions_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_UpdatePermissions_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAutomatonAplTask">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/CreateAutomatonAplTask" message="tns:Automatons_CreateAutomatonAplTask_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/CreateAutomatonAplTaskResponse" message="tns:Automatons_CreateAutomatonAplTask_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_CreateAutomatonAplTask_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAutTransitionAplTask">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/CreateAutTransitionAplTask" message="tns:Automatons_CreateAutTransitionAplTask_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/CreateAutTransitionAplTaskResponse" message="tns:Automatons_CreateAutTransitionAplTask_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_CreateAutTransitionAplTask_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAutUserStateAplTask">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/CreateAutUserStateAplTask" message="tns:Automatons_CreateAutUserStateAplTask_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/CreateAutUserStateAplTaskResponse" message="tns:Automatons_CreateAutUserStateAplTask_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_CreateAutUserStateAplTask_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAutomatonAplTaskAndPermissions">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/DeleteAutomatonAplTaskAndPermissions" message="tns:Automatons_DeleteAutomatonAplTaskAndPermissions_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/DeleteAutomatonAplTaskAndPermissionsResponse" message="tns:Automatons_DeleteAutomatonAplTaskAndPermissions_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_DeleteAutomatonAplTaskAndPermissions_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAutTransitionAplTaskAndPermissions">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/DeleteAutTransitionAplTaskAndPermissions" message="tns:Automatons_DeleteAutTransitionAplTaskAndPermissions_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/DeleteAutTransitionAplTaskAndPermissionsResponse" message="tns:Automatons_DeleteAutTransitionAplTaskAndPermissions_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_DeleteAutTransitionAplTaskAndPermissions_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAutUserStateAplTaskAndPermissions">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/DeleteAutUserStateAplTaskAndPermissions" message="tns:Automatons_DeleteAutUserStateAplTaskAndPermissions_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/DeleteAutUserStateAplTaskAndPermissionsResponse" message="tns:Automatons_DeleteAutUserStateAplTaskAndPermissions_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_DeleteAutUserStateAplTaskAndPermissions_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExportAutomatonsPermissions">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/ExportAutomatonsPermissions" message="tns:Automatons_ExportAutomatonsPermissions_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/ExportAutomatonsPermissionsResponse" message="tns:Automatons_ExportAutomatonsPermissions_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_ExportAutomatonsPermissions_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExportAutContextsPermissions">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/ExportAutContextsPermissions" message="tns:Automatons_ExportAutContextsPermissions_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/ExportAutContextsPermissionsResponse" message="tns:Automatons_ExportAutContextsPermissions_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_ExportAutContextsPermissions_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportAutomatonsPermissions">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/ImportAutomatonsPermissions" message="tns:Automatons_ImportAutomatonsPermissions_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/ImportAutomatonsPermissionsResponse" message="tns:Automatons_ImportAutomatonsPermissions_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_ImportAutomatonsPermissions_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutContextId">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/GetAutContextId" message="tns:Automatons_GetAutContextId_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/GetAutContextIdResponse" message="tns:Automatons_GetAutContextId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_GetAutContextId_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HasAutTransitionActionInternalCode">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/HasAutTransitionActionInternalCode" message="tns:Automatons_HasAutTransitionActionInternalCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/HasAutTransitionActionInternalCodeResponse" message="tns:Automatons_HasAutTransitionActionInternalCode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_HasAutTransitionActionInternalCode_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutomatonTransitionsGroupedByState">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/GetAutomatonTransitionsGroupedByState" message="tns:Automatons_GetAutomatonTransitionsGroupedByState_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/GetAutomatonTransitionsGroupedByStateResponse" message="tns:Automatons_GetAutomatonTransitionsGroupedByState_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_GetAutomatonTransitionsGroupedByState_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutUserStatesGroupedByState">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/GetAutUserStatesGroupedByState" message="tns:Automatons_GetAutUserStatesGroupedByState_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/GetAutUserStatesGroupedByStateResponse" message="tns:Automatons_GetAutUserStatesGroupedByState_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_GetAutUserStatesGroupedByState_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutUserStateList">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/GetAutUserStateList" message="tns:Automatons_GetAutUserStateList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/GetAutUserStateListResponse" message="tns:Automatons_GetAutUserStateList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_GetAutUserStateList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastLogReasons">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/GetLastLogReasons" message="tns:Automatons_GetLastLogReasons_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/GetLastLogReasonsResponse" message="tns:Automatons_GetLastLogReasons_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_GetLastLogReasons_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/Ping" message="tns:Automatons_Ping_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/PingResponse" message="tns:Automatons_Ping_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_Ping_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumAutPostTransitionType">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/ConvertToEnumAutPostTransitionType" message="tns:Automatons_ConvertToEnumAutPostTransitionType_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/ConvertToEnumAutPostTransitionTypeResponse" message="tns:Automatons_ConvertToEnumAutPostTransitionType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_ConvertToEnumAutPostTransitionType_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutPostTransitionTypeEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/GetAutPostTransitionTypeEnumValue" message="tns:Automatons_GetAutPostTransitionTypeEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/GetAutPostTransitionTypeEnumValueResponse" message="tns:Automatons_GetAutPostTransitionTypeEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_GetAutPostTransitionTypeEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumReasonValidationType">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/ConvertToEnumReasonValidationType" message="tns:Automatons_ConvertToEnumReasonValidationType_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/ConvertToEnumReasonValidationTypeResponse" message="tns:Automatons_ConvertToEnumReasonValidationType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_ConvertToEnumReasonValidationType_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReasonValidationTypeEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/GetReasonValidationTypeEnumValue" message="tns:Automatons_GetReasonValidationTypeEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/GetReasonValidationTypeEnumValueResponse" message="tns:Automatons_GetReasonValidationTypeEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_GetReasonValidationTypeEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumAutomatonOperationsInternalCode">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/ConvertToEnumAutomatonOperationsInternalCode" message="tns:Automatons_ConvertToEnumAutomatonOperationsInternalCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/ConvertToEnumAutomatonOperationsInternalCodeResponse" message="tns:Automatons_ConvertToEnumAutomatonOperationsInternalCode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_ConvertToEnumAutomatonOperationsInternalCode_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutomatonOperationsInternalCodeEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/GetAutomatonOperationsInternalCodeEnumValue" message="tns:Automatons_GetAutomatonOperationsInternalCodeEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/GetAutomatonOperationsInternalCodeEnumValueResponse" message="tns:Automatons_GetAutomatonOperationsInternalCodeEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_GetAutomatonOperationsInternalCodeEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutomatonsClassContext">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/GetAutomatonsClassContext" message="tns:Automatons_GetAutomatonsClassContext_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/GetAutomatonsClassContextResponse" message="tns:Automatons_GetAutomatonsClassContext_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_GetAutomatonsClassContext_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchAutomatons">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/SearchAutomatons" message="tns:Automatons_SearchAutomatons_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/SearchAutomatonsResponse" message="tns:Automatons_SearchAutomatons_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_SearchAutomatons_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutomatonReasonStateByKey">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/GetAutomatonReasonStateByKey" message="tns:Automatons_GetAutomatonReasonStateByKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/GetAutomatonReasonStateByKeyResponse" message="tns:Automatons_GetAutomatonReasonStateByKey_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_GetAutomatonReasonStateByKey_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutLogByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/GetAutLogByKeys" message="tns:Automatons_GetAutLogByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/GetAutLogByKeysResponse" message="tns:Automatons_GetAutLogByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_GetAutLogByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutLogReasonByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/GetAutLogReasonByKeys" message="tns:Automatons_GetAutLogReasonByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/GetAutLogReasonByKeysResponse" message="tns:Automatons_GetAutLogReasonByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_GetAutLogReasonByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutomatonByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/GetAutomatonByKeys" message="tns:Automatons_GetAutomatonByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/GetAutomatonByKeysResponse" message="tns:Automatons_GetAutomatonByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_GetAutomatonByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutomatonReasonByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/GetAutomatonReasonByKeys" message="tns:Automatons_GetAutomatonReasonByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/GetAutomatonReasonByKeysResponse" message="tns:Automatons_GetAutomatonReasonByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_GetAutomatonReasonByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutomatonReasonStateByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/GetAutomatonReasonStateByKeys" message="tns:Automatons_GetAutomatonReasonStateByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/GetAutomatonReasonStateByKeysResponse" message="tns:Automatons_GetAutomatonReasonStateByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_GetAutomatonReasonStateByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutPostTransitionByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/GetAutPostTransitionByKeys" message="tns:Automatons_GetAutPostTransitionByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/GetAutPostTransitionByKeysResponse" message="tns:Automatons_GetAutPostTransitionByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_GetAutPostTransitionByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutStateByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/GetAutStateByKeys" message="tns:Automatons_GetAutStateByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/GetAutStateByKeysResponse" message="tns:Automatons_GetAutStateByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_GetAutStateByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutTransitionByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/GetAutTransitionByKeys" message="tns:Automatons_GetAutTransitionByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/GetAutTransitionByKeysResponse" message="tns:Automatons_GetAutTransitionByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_GetAutTransitionByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutActionByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/GetAutActionByKeys" message="tns:Automatons_GetAutActionByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/GetAutActionByKeysResponse" message="tns:Automatons_GetAutActionByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_GetAutActionByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutConditionByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/GetAutConditionByKeys" message="tns:Automatons_GetAutConditionByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/GetAutConditionByKeysResponse" message="tns:Automatons_GetAutConditionByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_GetAutConditionByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutContextByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/GetAutContextByKeys" message="tns:Automatons_GetAutContextByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/GetAutContextByKeysResponse" message="tns:Automatons_GetAutContextByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_GetAutContextByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutInternalStateByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/GetAutInternalStateByKeys" message="tns:Automatons_GetAutInternalStateByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/GetAutInternalStateByKeysResponse" message="tns:Automatons_GetAutInternalStateByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_GetAutInternalStateByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutOperationByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/GetAutOperationByKeys" message="tns:Automatons_GetAutOperationByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/GetAutOperationByKeysResponse" message="tns:Automatons_GetAutOperationByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_GetAutOperationByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutOperationActionByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/GetAutOperationActionByKeys" message="tns:Automatons_GetAutOperationActionByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/GetAutOperationActionByKeysResponse" message="tns:Automatons_GetAutOperationActionByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_GetAutOperationActionByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutReasonByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/GetAutReasonByKeys" message="tns:Automatons_GetAutReasonByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/GetAutReasonByKeysResponse" message="tns:Automatons_GetAutReasonByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_GetAutReasonByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutUserStateByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/GetAutUserStateByKeys" message="tns:Automatons_GetAutUserStateByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/GetAutUserStateByKeysResponse" message="tns:Automatons_GetAutUserStateByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_GetAutUserStateByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAutomatons">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/SaveAutomatons" message="tns:Automatons_SaveAutomatons_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/SaveAutomatonsResponse" message="tns:Automatons_SaveAutomatons_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_SaveAutomatons_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAutomatonsV2">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/SaveAutomatonsV2" message="tns:Automatons_SaveAutomatonsV2_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/SaveAutomatonsV2Response" message="tns:Automatons_SaveAutomatonsV2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_SaveAutomatonsV2_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutomatonsClassTableId">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/GetAutomatonsClassTableId" message="tns:Automatons_GetAutomatonsClassTableId_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/GetAutomatonsClassTableIdResponse" message="tns:Automatons_GetAutomatonsClassTableId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_GetAutomatonsClassTableId_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutomatonsTableId">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/GetAutomatonsTableId" message="tns:Automatons_GetAutomatonsTableId_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/GetAutomatonsTableIdResponse" message="tns:Automatons_GetAutomatonsTableId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_GetAutomatonsTableId_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchAutomatonsConfig">
+      <wsdl:input wsaw:Action="http://accipiens.com/Automatons/SearchAutomatonsConfig" message="tns:Automatons_SearchAutomatonsConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Automatons/SearchAutomatonsConfigResponse" message="tns:Automatons_SearchAutomatonsConfig_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Automatons_SearchAutomatonsConfig_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

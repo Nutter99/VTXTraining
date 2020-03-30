@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Olissipo.RptCommon" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Olissipo.RptCommon" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/CreditOperations.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="RptParameter3">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RptParameterBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RptParameter3" nillable="true" type="tns:RptParameter3" />
+  <xs:complexType name="RptParameterBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AllowBlank" type="xs:boolean" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="DefaultValues" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Dependencies" nillable="true" type="q2:ArrayOfstring" />
+      <xs:element minOccurs="0" name="Hidden" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNullable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MultiValue" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ParamName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParamType" type="tns:ParameterType" />
+      <xs:element minOccurs="0" name="Prompt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ValidValues" nillable="true" type="tns:ArrayOfRptValidValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RptParameterBase" nillable="true" type="tns:RptParameterBase" />
+  <xs:simpleType name="ParameterType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="String" />
+      <xs:enumeration value="Int" />
+      <xs:enumeration value="Double" />
+      <xs:enumeration value="Date" />
+      <xs:enumeration value="Bool" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ParameterType" nillable="true" type="tns:ParameterType" />
+  <xs:complexType name="ArrayOfRptValidValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RptValidValue" nillable="true" type="tns:RptValidValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRptValidValue" nillable="true" type="tns:ArrayOfRptValidValue" />
+  <xs:complexType name="RptValidValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Label" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RptValidValue" nillable="true" type="tns:RptValidValue" />
+  <xs:simpleType name="OutputFormat">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotDefined" />
+      <xs:enumeration value="PDF" />
+      <xs:enumeration value="Excel" />
+      <xs:enumeration value="CSV" />
+      <xs:enumeration value="MHTML" />
+      <xs:enumeration value="XMLData" />
+      <xs:enumeration value="Image" />
+      <xs:enumeration value="XmlWord" />
+      <xs:enumeration value="DocWord" />
+      <xs:enumeration value="PdfWord" />
+      <xs:enumeration value="Text" />
+      <xs:enumeration value="WordXml" />
+      <xs:enumeration value="ExcelXml" />
+      <xs:enumeration value="Html" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="OutputFormat" nillable="true" type="tns:OutputFormat" />
+</xs:schema>

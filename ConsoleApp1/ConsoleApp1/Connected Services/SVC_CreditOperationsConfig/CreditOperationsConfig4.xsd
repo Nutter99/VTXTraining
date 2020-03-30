@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Services/CreditOperationsConfig.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:simpleType name="InstallmentRevenueMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BeginOfPeriodInterest" />
+      <xs:enumeration value="NominalValue" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="InstallmentRevenueMode" nillable="true" type="tns:InstallmentRevenueMode" />
+  <xs:simpleType name="InitialEntryPeriodificationMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NextFlow" />
+      <xs:enumeration value="EndContract" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="InitialEntryPeriodificationMode" nillable="true" type="tns:InitialEntryPeriodificationMode" />
+  <xs:simpleType name="CreditOperationStep">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Quotation">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Proposal">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Contract">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Cession">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Loan">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Projection">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Agreement">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MLAProposal">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">12</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MLAContract">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">13</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CreditOperationStep" nillable="true" type="tns:CreditOperationStep" />
+  <xs:simpleType name="AssetExpenseType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Additional" />
+      <xs:enumeration value="Supported" />
+      <xs:enumeration value="DevolutionUsageCredit" />
+      <xs:enumeration value="DevolutionUsageDebit" />
+      <xs:enumeration value="DevolutionDamageDebit" />
+      <xs:enumeration value="DevolutionDebit" />
+      <xs:enumeration value="DevolutionCredit" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AssetExpenseType" nillable="true" type="tns:AssetExpenseType" />
+  <xs:simpleType name="CessionSuperTypeKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Customer" />
+      <xs:enumeration value="Guarantor" />
+      <xs:enumeration value="Other" />
+      <xs:enumeration value="Asset" />
+      <xs:enumeration value="ContractClassification" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CessionSuperTypeKind" nillable="true" type="tns:CessionSuperTypeKind" />
+  <xs:simpleType name="TerminateCredOperGuarantMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DontFinish" />
+      <xs:enumeration value="FinishAll" />
+      <xs:enumeration value="FinishWithSameClass" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TerminateCredOperGuarantMode" nillable="true" type="tns:TerminateCredOperGuarantMode" />
+  <xs:simpleType name="CessionFinChangeMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DoesntHave" />
+      <xs:enumeration value="HasFixedType" />
+      <xs:enumeration value="Optional" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CessionFinChangeMode" nillable="true" type="tns:CessionFinChangeMode" />
+  <xs:simpleType name="UsePlafondKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DoesNotHave" />
+      <xs:enumeration value="Mandatory" />
+      <xs:enumeration value="Optional" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="UsePlafondKind" nillable="true" type="tns:UsePlafondKind" />
+  <xs:simpleType name="ConditionsMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ByContract">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ByInvoice">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ByFinancing">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ConditionsMode" nillable="true" type="tns:ConditionsMode" />
+  <xs:simpleType name="MinTermMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Months" />
+      <xs:enumeration value="DepreciationPercentage" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MinTermMode" nillable="true" type="tns:MinTermMode" />
+  <xs:simpleType name="UseEntityPlafondKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DoesNotHave" />
+      <xs:enumeration value="Mandatory" />
+      <xs:enumeration value="Optional" />
+      <xs:enumeration value="AutomaticMandatory" />
+      <xs:enumeration value="AutomaticOptional" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="UseEntityPlafondKind" nillable="true" type="tns:UseEntityPlafondKind" />
+  <xs:simpleType name="EquipmentDiscountMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MarketValue" />
+      <xs:enumeration value="BaseNetAmountAndOptions" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EquipmentDiscountMode" nillable="true" type="tns:EquipmentDiscountMode" />
+  <xs:simpleType name="AssetAmountInputMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NetAmount" />
+      <xs:enumeration value="BaseNetAmountAndVehicleTaxAmount" />
+      <xs:enumeration value="NetAmountWithoutVehicleTaxAmount" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AssetAmountInputMode" nillable="true" type="tns:AssetAmountInputMode" />
+  <xs:simpleType name="DownPaymentValidationKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BySerialNumber" />
+      <xs:enumeration value="ByContract" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DownPaymentValidationKind" nillable="true" type="tns:DownPaymentValidationKind" />
+  <xs:simpleType name="CautionInputMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Percentage" />
+      <xs:enumeration value="Amount" />
+      <xs:enumeration value="TotalInstallmentFactor" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CautionInputMode" nillable="true" type="tns:CautionInputMode" />
+  <xs:simpleType name="UsageReservationManagementMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="UsageOnly" />
+      <xs:enumeration value="UsageAndReservation" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="UsageReservationManagementMode" nillable="true" type="tns:UsageReservationManagementMode" />
+  <xs:simpleType name="ResidualValueBase">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="FinancialValue" />
+      <xs:enumeration value="BaseNetAmount" />
+      <xs:enumeration value="BaseNetAmountOfEqpPlusOptionsContext" />
+      <xs:enumeration value="BaseMarketValueOfEqpPlusOptionsContext" />
+      <xs:enumeration value="EquipmentPricingTable" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ResidualValueBase" nillable="true" type="tns:ResidualValueBase" />
+  <xs:simpleType name="FinMatrixTypeSelectionMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DoesntHave" />
+      <xs:enumeration value="HasMatrix" />
+      <xs:enumeration value="MatrixMandatory" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinMatrixTypeSelectionMode" nillable="true" type="tns:FinMatrixTypeSelectionMode" />
+  <xs:simpleType name="DurationInputMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Term">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NumOfFlows">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DurationInputMode" nillable="true" type="tns:DurationInputMode" />
+  <xs:simpleType name="AssetBaseAmountCalcMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PurchaseWithoutRetake">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PurchaseWithoutRetakeDivRentTax">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AssetBaseAmountCalcMode" nillable="true" type="tns:AssetBaseAmountCalcMode" />
+  <xs:simpleType name="AssetRetakeBaseAmountMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PurchaseAmount">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PurchaseWithAllExtras">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AssetRetakeBaseAmountMode" nillable="true" type="tns:AssetRetakeBaseAmountMode" />
+  <xs:simpleType name="CredOperTaxAggregationMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="WithoutAggregation" />
+      <xs:enumeration value="FlowsSum" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperTaxAggregationMode" nillable="true" type="tns:CredOperTaxAggregationMode" />
+  <xs:simpleType name="RelocationAssetBaseAmountCalcMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DisposableAssetCapital" />
+      <xs:enumeration value="FixedAssetAmount" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="RelocationAssetBaseAmountCalcMode" nillable="true" type="tns:RelocationAssetBaseAmountCalcMode" />
+  <xs:simpleType name="CapitalSourceMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PlafondDefinition" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CapitalSourceMode" nillable="true" type="tns:CapitalSourceMode" />
+  <xs:simpleType name="CredOperEventTypeKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PhaseFactoring">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PhaseLineCredit">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ChangeRateContext">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DownPayment">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PhaseArreares">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ChangeResponsabilityDate">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="StockPayment">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperEventTypeKind" nillable="true" type="tns:CredOperEventTypeKind" />
+  <xs:simpleType name="InterestRatesReferenceDateKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DueDate" />
+      <xs:enumeration value="ResponsibilityDate" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="InterestRatesReferenceDateKind" nillable="true" type="tns:InterestRatesReferenceDateKind" />
+  <xs:simpleType name="FctInterestMovementsUniverse">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ValueDate">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AccountDate">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FctInterestMovementsUniverse" nillable="true" type="tns:FctInterestMovementsUniverse" />
+  <xs:simpleType name="PlafondNextPhaseValidation">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DoesNotAllow" />
+      <xs:enumeration value="CopyAmount" />
+      <xs:enumeration value="DoesNotAllowAndTerminate" />
+      <xs:enumeration value="Terminate" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondNextPhaseValidation" nillable="true" type="tns:PlafondNextPhaseValidation" />
+  <xs:simpleType name="FinMatrixAssetUsageCalcMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Top" />
+      <xs:enumeration value="Fixed" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinMatrixAssetUsageCalcMode" nillable="true" type="tns:FinMatrixAssetUsageCalcMode" />
+  <xs:simpleType name="FinMatrixTermCalcMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Top" />
+      <xs:enumeration value="Fixed" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinMatrixTermCalcMode" nillable="true" type="tns:FinMatrixTermCalcMode" />
+  <xs:simpleType name="FinMatrixGenerationType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Midpoint" />
+      <xs:enumeration value="Linear" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinMatrixGenerationType" nillable="true" type="tns:FinMatrixGenerationType" />
+  <xs:simpleType name="FinMatrixSelectionMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MatrixCell">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Interpolation">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinMatrixSelectionMode" nillable="true" type="tns:FinMatrixSelectionMode" />
+  <xs:simpleType name="CreditTaxModeKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DoesNotHave" />
+      <xs:enumeration value="Activation" />
+      <xs:enumeration value="MonthlyIsolated" />
+      <xs:enumeration value="MonthlyWithRent" />
+      <xs:enumeration value="MonthlySupported" />
+      <xs:enumeration value="Capitalize" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CreditTaxModeKind" nillable="true" type="tns:CreditTaxModeKind" />
+  <xs:simpleType name="TotalInstallmentItemType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Installment" />
+      <xs:enumeration value="AssetService" />
+      <xs:enumeration value="ClientService" />
+      <xs:enumeration value="Insurance" />
+      <xs:enumeration value="Commission" />
+      <xs:enumeration value="Subvention" />
+      <xs:enumeration value="OtherExpense" />
+      <xs:enumeration value="TaxExpense" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TotalInstallmentItemType" nillable="true" type="tns:TotalInstallmentItemType" />
+  <xs:simpleType name="IntervenientSuperType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CustomerType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SupplierType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VendorType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GuarantorType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BrokerType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DebtorType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CongenerType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="FinancialInstitutionType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DebtorSupplierType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="InsurerType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="OthersType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">99</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="IntervenientSuperType" nillable="true" type="tns:IntervenientSuperType" />
+  <xs:simpleType name="CreateEntityRelationType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DontCreate">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Unidirectional">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Bidirectional">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CreateEntityRelationType" nillable="true" type="tns:CreateEntityRelationType" />
+  <xs:simpleType name="FinMatrixChangeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Calculated" />
+      <xs:enumeration value="Manual" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinMatrixChangeType" nillable="true" type="tns:FinMatrixChangeType" />
+</xs:schema>

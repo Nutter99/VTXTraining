@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Olissipo.Entities.DataStructures" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Olissipo.Entities.DataStructures" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/Entities.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:simpleType name="DueDateCalcMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="FixedDate" />
+      <xs:enumeration value="NumOfDaysAfter" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DueDateCalcMode" nillable="true" type="tns:DueDateCalcMode" />
+  <xs:simpleType name="InvoiceModeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Customer">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Contract">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Default">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityCostCenter">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="InvoiceModeType" nillable="true" type="tns:InvoiceModeType" />
+  <xs:simpleType name="CommunicationMediaOwner">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Supplier">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Customer">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CommunicationMediaOwner" nillable="true" type="tns:CommunicationMediaOwner" />
+  <xs:simpleType name="ExclusionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Invoice">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CityHallTaxes">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NewFinancing">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DelayInterestFinalInvoice">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExclusionType" nillable="true" type="tns:ExclusionType" />
+  <xs:simpleType name="ExclusionClass">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Expenses">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Services">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Insurances">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AssetTaxes">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NewFinancings">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DelayInterestFinalInvoice">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExclusionClass" nillable="true" type="tns:ExclusionClass" />
+  <xs:simpleType name="ValidationType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Warning" />
+      <xs:enumeration value="Error" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ValidationType" nillable="true" type="tns:ValidationType" />
+  <xs:simpleType name="LegalDocChangeKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Change" />
+      <xs:enumeration value="Mistake" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="LegalDocChangeKind" nillable="true" type="tns:LegalDocChangeKind" />
+  <xs:simpleType name="EntityMarginShareCalculationMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Total" />
+      <xs:enumeration value="WithThreshold" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EntityMarginShareCalculationMode" nillable="true" type="tns:EntityMarginShareCalculationMode" />
+  <xs:simpleType name="PercentageContextKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Operation">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Intervention">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PercentageContextKind" nillable="true" type="tns:PercentageContextKind" />
+  <xs:simpleType name="EntityRegistrationScopeKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Civilian">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Land">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Commercial">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Automobile">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EntityRegistrationScopeKind" nillable="true" type="tns:EntityRegistrationScopeKind" />
+  <xs:simpleType name="LegalDocMandatoryMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotMandatory" />
+      <xs:enumeration value="Mandatory" />
+      <xs:enumeration value="MandatoryIfNotProspect" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="LegalDocMandatoryMode" nillable="true" type="tns:LegalDocMandatoryMode" />
+  <xs:simpleType name="AgendaTypeKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Agenda" />
+      <xs:enumeration value="Visit" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AgendaTypeKind" nillable="true" type="tns:AgendaTypeKind" />
+  <xs:simpleType name="DecisionContextLevelUserMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Normal" />
+      <xs:enumeration value="PowerDelegation" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DecisionContextLevelUserMode" nillable="true" type="tns:DecisionContextLevelUserMode" />
+  <xs:simpleType name="StructNodeManageType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NodeToNode">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Tree">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="StructNodeManageType" nillable="true" type="tns:StructNodeManageType" />
+  <xs:simpleType name="TreeOrientationType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="TopToBottom">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="LeftToRight">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BottomToTop">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="RightToLeft">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TreeOrientationType" nillable="true" type="tns:TreeOrientationType" />
+  <xs:simpleType name="ActivityTypeInternalContext">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="EconomicActivityCode" />
+      <xs:enumeration value="PersonalIncomeTaxCode" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ActivityTypeInternalContext" nillable="true" type="tns:ActivityTypeInternalContext" />
+  <xs:simpleType name="BankAccountSuperType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Liquidation">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Information">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="BankAccountSuperType" nillable="true" type="tns:BankAccountSuperType" />
+  <xs:simpleType name="EntitiesSuperRole">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ClientRole">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SupplierRole">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BrokerRole">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="InsuranceCompanyRole">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Appraiser">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Auctioneer">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Recoverer">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Collector">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="JuridicalEntity">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Congener">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="FinancialInstitution">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Procurator">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">12</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ServiceProvider">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">13</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="RegistrationProvider">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">14</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="OtherRoles">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">99</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="OurCompany">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">100</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EntitiesSuperRole" nillable="true" type="tns:EntitiesSuperRole" />
+  <xs:simpleType name="EntitiesSuperType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PersonType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CompanyType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PublicServicesType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="OthersType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">99</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EntitiesSuperType" nillable="true" type="tns:EntitiesSuperType" />
+  <xs:simpleType name="EntityNameSplitMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="FirstAndLast" />
+      <xs:enumeration value="FirstsAndLast" />
+      <xs:enumeration value="FirstAndLasts" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EntityNameSplitMode" nillable="true" type="tns:EntityNameSplitMode" />
+  <xs:simpleType name="EntityDetailEditableKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Main" />
+      <xs:enumeration value="LegalDoc" />
+      <xs:enumeration value="ContactAddress" />
+      <xs:enumeration value="ContactPhone" />
+      <xs:enumeration value="ContactEmail" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EntityDetailEditableKind" nillable="true" type="tns:EntityDetailEditableKind" />
+  <xs:simpleType name="EditabilityStateKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Never" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EditabilityStateKind" nillable="true" type="tns:EditabilityStateKind" />
+  <xs:simpleType name="MapDate">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MapDate" />
+      <xs:enumeration value="MapDateAndMapDateFrom" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MapDate" nillable="true" type="tns:MapDate" />
+  <xs:simpleType name="EntitiesAutContext">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AddressChange" />
+      <xs:enumeration value="BankAccount" />
+      <xs:enumeration value="Garnishment" />
+      <xs:enumeration value="AgendaManagement" />
+      <xs:enumeration value="StructNode" />
+      <xs:enumeration value="Entity" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EntitiesAutContext" nillable="true" type="tns:EntitiesAutContext" />
+  <xs:simpleType name="StructNodeContextKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Internal">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="External">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Commercial">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Staff">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="All">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Workshop">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="StructNodeContextKind" nillable="true" type="tns:StructNodeContextKind" />
+  <xs:simpleType name="EntityIndicatorContext">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Global" />
+      <xs:enumeration value="AddressTypes" />
+      <xs:enumeration value="BankAccountTypes" />
+      <xs:enumeration value="CustomerTypes" />
+      <xs:enumeration value="DocumentTypes" />
+      <xs:enumeration value="EntityRelationTypes" />
+      <xs:enumeration value="EntityRoles" />
+      <xs:enumeration value="EntityTypes" />
+      <xs:enumeration value="JuridicalTypes" />
+      <xs:enumeration value="PhoneTypes" />
+      <xs:enumeration value="StructNodeContexts" />
+      <xs:enumeration value="StructNodeTypes" />
+      <xs:enumeration value="StructNodeRelationTypes" />
+      <xs:enumeration value="EntityDetails" />
+      <xs:enumeration value="SocialSecurityPayment" />
+      <xs:enumeration value="EntIntegration" />
+      <xs:enumeration value="EntityPercentage" />
+      <xs:enumeration value="EntityMap" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EntityIndicatorContext" nillable="true" type="tns:EntityIndicatorContext" />
+  <xs:simpleType name="EntIntegrationIndicator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="GetEntFromExternalStmtId" />
+      <xs:enumeration value="EntIntegrationStmtId" />
+      <xs:enumeration value="SearchUrl" />
+      <xs:enumeration value="GetInfoUrl" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EntIntegrationIndicator" nillable="true" type="tns:EntIntegrationIndicator" />
+  <xs:simpleType name="BankAccountInternalOperation">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Activate" />
+      <xs:enumeration value="Invalidate" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="BankAccountInternalOperation" nillable="true" type="tns:BankAccountInternalOperation" />
+  <xs:simpleType name="StructNodeInternalState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Initial">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Validated">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Approved">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">12</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Finished">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">13</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="StructNodeInternalState" nillable="true" type="tns:StructNodeInternalState" />
+  <xs:simpleType name="EntityInternalState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Active">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Invalid">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">12</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EntityInternalState" nillable="true" type="tns:EntityInternalState" />
+  <xs:simpleType name="EntityPercentageContextKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="LeasingPlateRatio">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EntityPercentageContextKind" nillable="true" type="tns:EntityPercentageContextKind" />
+</xs:schema>

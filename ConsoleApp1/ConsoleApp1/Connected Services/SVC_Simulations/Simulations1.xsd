@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Olissipo.Simulations.DataStructures" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Olissipo.Simulations.DataStructures" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:simpleType name="SimulationsAutContext">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="FinMatrix" />
+      <xs:enumeration value="FinancialProduct" />
+      <xs:enumeration value="FinSymbolProd" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SimulationsAutContext" nillable="true" type="tns:SimulationsAutContext" />
+  <xs:simpleType name="FinancialProductInternalOperation">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Activate" />
+      <xs:enumeration value="Finish" />
+      <xs:enumeration value="Cancel" />
+      <xs:enumeration value="UpdateMinVersion" />
+      <xs:enumeration value="ChangeProductIdentifier" />
+      <xs:enumeration value="Reactivate" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinancialProductInternalOperation" nillable="true" type="tns:FinancialProductInternalOperation" />
+  <xs:simpleType name="UserInputField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Factor" />
+      <xs:enumeration value="PercentageAmount" />
+      <xs:enumeration value="Amount" />
+      <xs:enumeration value="RentalAmount">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="RentalAmountWithTax">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="None">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="UserInputField" nillable="true" type="tns:UserInputField" />
+  <xs:simpleType name="EventKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ValueDate" />
+      <xs:enumeration value="FirstDayNextMonth" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EventKind" nillable="true" type="tns:EventKind" />
+  <xs:simpleType name="FinSymbolProdInternalState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Initial">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Active">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Finished">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">12</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Canceled">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">13</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinSymbolProdInternalState" nillable="true" type="tns:FinSymbolProdInternalState" />
+  <xs:simpleType name="FinancialProductInternalState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Initial">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Active">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Finished">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">12</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Canceled">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">13</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinancialProductInternalState" nillable="true" type="tns:FinancialProductInternalState" />
+  <xs:simpleType name="ProductSymbolType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="Value" />
+      <xs:enumeration value="String" />
+      <xs:enumeration value="Date" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ProductSymbolType" nillable="true" type="tns:ProductSymbolType" />
+  <xs:simpleType name="FinProductVersionCalcMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ProductLastVersion" />
+      <xs:enumeration value="OperationCurrentVersion" />
+      <xs:enumeration value="TestMode" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinProductVersionCalcMode" nillable="true" type="tns:FinProductVersionCalcMode" />
+  <xs:simpleType name="AddToMaxValueType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PercentageContext" />
+      <xs:enumeration value="BaseContextPercentage" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AddToMaxValueType" nillable="true" type="tns:AddToMaxValueType" />
+  <xs:simpleType name="PaymentBehaviourKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CustomerLiquidation" />
+      <xs:enumeration value="DebitLetter" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PaymentBehaviourKind" nillable="true" type="tns:PaymentBehaviourKind" />
+</xs:schema>

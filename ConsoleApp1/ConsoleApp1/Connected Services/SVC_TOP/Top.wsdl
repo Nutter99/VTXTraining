@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://accipiens.com" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Top" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="CustomBinding_Top_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <http:NtlmAuthentication xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://accipiens.com" location="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="CustomBinding_Top" type="i0:Top">
+    <wsp:PolicyReference URI="#CustomBinding_Top_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Ping">
+      <soap12:operation soapAction="http://accipiens.com/Top/Ping" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_Ping_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumAnonyObjectKind">
+      <soap12:operation soapAction="http://accipiens.com/Top/ConvertToEnumAnonyObjectKind" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_ConvertToEnumAnonyObjectKind_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonyObjectKindEnumValue">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetAnonyObjectKindEnumValue" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetAnonyObjectKindEnumValue_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumAnonyTypeKind">
+      <soap12:operation soapAction="http://accipiens.com/Top/ConvertToEnumAnonyTypeKind" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_ConvertToEnumAnonyTypeKind_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonyTypeKindEnumValue">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetAnonyTypeKindEnumValue" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetAnonyTypeKindEnumValue_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumAnonyActionKind">
+      <soap12:operation soapAction="http://accipiens.com/Top/ConvertToEnumAnonyActionKind" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_ConvertToEnumAnonyActionKind_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonyActionKindEnumValue">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetAnonyActionKindEnumValue" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetAnonyActionKindEnumValue_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumAnonyUniverseConditionKind">
+      <soap12:operation soapAction="http://accipiens.com/Top/ConvertToEnumAnonyUniverseConditionKind" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_ConvertToEnumAnonyUniverseConditionKind_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonyUniverseConditionKindEnumValue">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetAnonyUniverseConditionKindEnumValue" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetAnonyUniverseConditionKindEnumValue_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumAccountSituationRequestServiceType">
+      <soap12:operation soapAction="http://accipiens.com/Top/ConvertToEnumAccountSituationRequestServiceType" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_ConvertToEnumAccountSituationRequestServiceType_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountSituationRequestServiceTypeEnumValue">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetAccountSituationRequestServiceTypeEnumValue" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetAccountSituationRequestServiceTypeEnumValue_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTopClassContext">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetTopClassContext" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetTopClassContext_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SearchTop">
+      <soap12:operation soapAction="http://accipiens.com/Top/SearchTop" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_SearchTop_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonymizedByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetAnonymizedByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetAnonymizedByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonymizedElementByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetAnonymizedElementByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetAnonymizedElementByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonymizedRecordByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetAnonymizedRecordByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetAnonymizedRecordByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonymizedReplaceEntityByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetAnonymizedReplaceEntityByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetAnonymizedReplaceEntityByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonymizedZoneByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetAnonymizedZoneByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetAnonymizedZoneByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonymizeHeaderByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetAnonymizeHeaderByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetAnonymizeHeaderByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonyTypeByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetAnonyTypeByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetAnonyTypeByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonyTypeCredOperIntervTypeByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetAnonyTypeCredOperIntervTypeByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetAnonyTypeCredOperIntervTypeByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonyTypePhysicalDocByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetAnonyTypePhysicalDocByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetAnonyTypePhysicalDocByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonyTypeReplaceEntityByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetAnonyTypeReplaceEntityByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetAnonyTypeReplaceEntityByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonyTypeZoneByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetAnonyTypeZoneByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetAnonyTypeZoneByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonyUniverseTypeByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetAnonyUniverseTypeByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetAnonyUniverseTypeByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonyUniverseTypeConditionByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetAnonyUniverseTypeConditionByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetAnonyUniverseTypeConditionByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployingEntityValidityByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetEmployingEntityValidityByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetEmployingEntityValidityByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOpenAccountSituationRequestByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetOpenAccountSituationRequestByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetOpenAccountSituationRequestByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOpenAccountSituationResponseByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetOpenAccountSituationResponseByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetOpenAccountSituationResponseByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTop">
+      <soap12:operation soapAction="http://accipiens.com/Top/SaveTop" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_SaveTop_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTopV2">
+      <soap12:operation soapAction="http://accipiens.com/Top/SaveTopV2" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_SaveTopV2_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTopClassTableId">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetTopClassTableId" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetTopClassTableId_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTopTableId">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetTopTableId" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetTopTableId_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SearchTopConfig">
+      <soap12:operation soapAction="http://accipiens.com/Top/SearchTopConfig" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_SearchTopConfig_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ExposeTopTypes">
+      <soap12:operation soapAction="http://accipiens.com/Top/ExposeTopTypes" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_ExposeTopTypes_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonymizedTransitionList">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetAnonymizedTransitionList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetAnonymizedTransitionList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DoAnonymizedTransition">
+      <soap12:operation soapAction="http://accipiens.com/Top/DoAnonymizedTransition" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_DoAnonymizedTransition_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonymizedInitialState">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetAnonymizedInitialState" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetAnonymizedInitialState_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonymizedInternalState">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetAnonymizedInternalState" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetAnonymizedInternalState_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonymizeHeaderTransitionList">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetAnonymizeHeaderTransitionList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetAnonymizeHeaderTransitionList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DoAnonymizeHeaderTransition">
+      <soap12:operation soapAction="http://accipiens.com/Top/DoAnonymizeHeaderTransition" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_DoAnonymizeHeaderTransition_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonymizeHeaderInternalState">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetAnonymizeHeaderInternalState" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetAnonymizeHeaderInternalState_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonymizedRecordTransitionList">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetAnonymizedRecordTransitionList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetAnonymizedRecordTransitionList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DoAnonymizedRecordTransition">
+      <soap12:operation soapAction="http://accipiens.com/Top/DoAnonymizedRecordTransition" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_DoAnonymizedRecordTransition_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonymizedRecordInitialState">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetAnonymizedRecordInitialState" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetAnonymizedRecordInitialState_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonymizedRecordInternalState">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetAnonymizedRecordInternalState" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetAnonymizedRecordInternalState_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveNewAnonymizeHeader">
+      <soap12:operation soapAction="http://accipiens.com/Top/SaveNewAnonymizeHeader" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_SaveNewAnonymizeHeader_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnonymizeHeaderTotals">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetAnonymizeHeaderTotals" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetAnonymizeHeaderTotals_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AnonymizedCheckValidations">
+      <soap12:operation soapAction="http://accipiens.com/Top/AnonymizedCheckValidations" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_AnonymizedCheckValidations_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRPDocumentBaseAmounts">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetRPDocumentBaseAmounts" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetRPDocumentBaseAmounts_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAplWorkItemWithCustomBySearch">
+      <soap12:operation soapAction="http://accipiens.com/Top/GetAplWorkItemWithCustomBySearch" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_GetAplWorkItemWithCustomBySearch_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteAplCompanyReplicator">
+      <soap12:operation soapAction="http://accipiens.com/Top/ExecuteAplCompanyReplicator" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_ExecuteAplCompanyReplicator_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RequestOpenAccountSituation">
+      <soap12:operation soapAction="http://accipiens.com/Top/RequestOpenAccountSituation" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Top_RequestOpenAccountSituation_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Top">
+    <wsdl:port name="CustomBinding_Top" binding="tns:CustomBinding_Top">
+      <soap12:address location="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>eb@vantyx.lan</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

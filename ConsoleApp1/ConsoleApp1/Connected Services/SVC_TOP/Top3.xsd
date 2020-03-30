@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://accipiens.com/Entities" elementFormDefault="qualified" targetNamespace="http://accipiens.com/Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd2" namespace="http://accipiens.com/Common" />
+  <xs:complexType name="AplCompanyReplicatorElementKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://accipiens.com/Common" base="q1:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplCompanyReplicatorId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="SourceAplTableId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="SourceId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplCompanyReplicatorElementKey" nillable="true" type="tns:AplCompanyReplicatorElementKey" />
+  <xs:complexType name="AplCompanyReplicator">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://accipiens.com/Common" base="q2:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplUserId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="CreationMoment" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AplCompanyReplicatorKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AplCompanyReplicatorDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AplCompanyReplicatorField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAplCompanyReplicatorField" />
+          <xs:element minOccurs="0" name="NextReplicatorPhaseId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="SourceAplBusinessId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="SourceAplCompanyId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TargetAplCompanyId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplCompanyReplicator" nillable="true" type="tns:AplCompanyReplicator" />
+  <xs:complexType name="AplCompanyReplicatorKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://accipiens.com/Common" base="q3:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="SourceAplBusinessId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="SourceAplCompanyId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TargetAplCompanyId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplCompanyReplicatorKey" nillable="true" type="tns:AplCompanyReplicatorKey" />
+  <xs:simpleType name="AplCompanyReplicatorDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplCompanyReplicatorDetail" nillable="true" type="tns:AplCompanyReplicatorDetail" />
+  <xs:simpleType name="AplCompanyReplicatorField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="SourceAplCompanyId" />
+      <xs:enumeration value="SourceAplBusinessId" />
+      <xs:enumeration value="TargetAplCompanyId" />
+      <xs:enumeration value="NextReplicatorPhaseId" />
+      <xs:enumeration value="CreationMoment" />
+      <xs:enumeration value="AplUserId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplCompanyReplicatorField" nillable="true" type="tns:AplCompanyReplicatorField" />
+  <xs:complexType name="ArrayOfAplCompanyReplicatorField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplCompanyReplicatorField" type="tns:AplCompanyReplicatorField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplCompanyReplicatorField" nillable="true" type="tns:ArrayOfAplCompanyReplicatorField" />
+</xs:schema>

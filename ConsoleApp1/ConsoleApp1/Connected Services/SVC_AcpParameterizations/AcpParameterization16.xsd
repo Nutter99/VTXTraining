@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Olissipo.OperationsManagementInterfaces.DataStructures" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Olissipo.OperationsManagementInterfaces.DataStructures" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="OperationsManagementIndicatorContext">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Global" />
+      <xs:enumeration value="AutomaticExtension" />
+      <xs:enumeration value="FinancialMovements" />
+      <xs:enumeration value="Stocks" />
+      <xs:enumeration value="DueDebits" />
+      <xs:enumeration value="FctJustifyPay" />
+      <xs:enumeration value="InvoiceAffect" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="OperationsManagementIndicatorContext" nillable="true" type="tns:OperationsManagementIndicatorContext" />
+  <xs:simpleType name="GlobalOperationsManagementIndicator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CheckClosingContractTypeStmtId" />
+      <xs:enumeration value="ResidualValueInvoiceStmtId" />
+      <xs:enumeration value="CheckClosingSubCredOperTypeStmtId" />
+      <xs:enumeration value="OnDueToClosingSubCredOperStmtId" />
+      <xs:enumeration value="IndexingInsuranceStmtId" />
+      <xs:enumeration value="SuspendPeriodifGainsLossesOnLitigation" />
+      <xs:enumeration value="AssetPayCalendarLiquidationRPDocumentTypeId" />
+      <xs:enumeration value="SupplierPaymentRetentionCreditScope" />
+      <xs:enumeration value="GetServiceAndInsuranceFlowsWithoutRents" />
+      <xs:enumeration value="CheckAccountingDateEditabilityOnInvoice" />
+      <xs:enumeration value="AccountDeferredTaxExpensesOnActivation" />
+      <xs:enumeration value="ExpenseTaxTypeBySignInsteadOfScope" />
+      <xs:enumeration value="PersiToolTipMode" />
+      <xs:enumeration value="HasStateInvoicePrinter" />
+      <xs:enumeration value="DeliveryDateThresholdDay" />
+      <xs:enumeration value="FrameContract_EquipmentAplCompanyRpScope" />
+      <xs:enumeration value="FrameContract_ContractAplCompanyRpScope" />
+      <xs:enumeration value="CredOperFinishRescissionType" />
+      <xs:enumeration value="UseManagedClosingContracts" />
+      <xs:enumeration value="FinChangeServiceChangeType" />
+      <xs:enumeration value="ShowDebitsOnUmbrellaStockFinChange" />
+      <xs:enumeration value="DefaultCredOperInvoiceTypeId" />
+      <xs:enumeration value="InsuranceLoadTypeInsuranceRenewProcess" />
+      <xs:enumeration value="InterimCarRescissionTypeId" />
+      <xs:enumeration value="RescissionUndoAccountDateDefaultMode" />
+      <xs:enumeration value="AllowExtendedFinancialChanges" />
+      <xs:enumeration value="FinChangeInsurancePolicyChangeType" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="GlobalOperationsManagementIndicator" nillable="true" type="tns:GlobalOperationsManagementIndicator" />
+</xs:schema>

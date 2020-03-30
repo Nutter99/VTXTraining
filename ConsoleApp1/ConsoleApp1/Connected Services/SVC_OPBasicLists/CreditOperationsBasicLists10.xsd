@@ -1,0 +1,1252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://accipiens.com/Plafonds" elementFormDefault="qualified" targetNamespace="http://accipiens.com/Plafonds" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd3" namespace="http://accipiens.com/Common" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd14" namespace="http://accipiens.com/Entities" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd19" namespace="http://accipiens.com/AcpDocuments" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd16" namespace="http://accipiens.com/BusinessFramework" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd10" namespace="http://accipiens.com/Simulations" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd13" namespace="http://accipiens.com/AcpFramework" />
+  <xs:complexType name="ArrayOfPlafond">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Plafond" nillable="true" type="tns:Plafond" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafond" nillable="true" type="tns:ArrayOfPlafond" />
+  <xs:complexType name="Plafond">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://accipiens.com/Common" base="q1:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActiveExceedAuthorizations" nillable="true" type="tns:ArrayOfPlafondExceedAuthorizationActive" />
+          <xs:element minOccurs="0" name="Aggregates" nillable="true" type="tns:ArrayOfPlafond" />
+          <xs:element minOccurs="0" name="AggregatorPlafondId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AllowCaptiveOverLimit" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AllowUncheckedMovements" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AplCompanyId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AutUserStateId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AvailableAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="AvailableAmountForCaptive" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="AvailableAmountForUse" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="BeginDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CaptiveAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CredOperChannelId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CredOperConsumptions" nillable="true" type="tns:ArrayOfPlafondConsumption" />
+          <xs:element minOccurs="0" name="CredOperConsumptionsInUse" nillable="true" type="tns:ArrayOfPlafondConsumptionInUse" />
+          <xs:element minOccurs="0" name="CredOperId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="CredOperIntervId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="CurrencyId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Definitions" nillable="true" type="tns:ArrayOfPlafondDefinitionInUse" />
+          <xs:element minOccurs="0" name="Descendants" nillable="true" type="tns:ArrayOfPlafond" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Distributions" nillable="true" type="tns:ArrayOfPlafondDistribution" />
+          <xs:element minOccurs="0" name="EntityId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ExceedAuthorizations" nillable="true" type="tns:ArrayOfPlafondExceedAuthorization" />
+          <xs:element minOccurs="0" name="ExpectedTerminateDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ForexRateId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ForexValueDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FreeNotAvailableAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="IsFinanced" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsNonRevolving" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsSourceTransferInProgress" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:PlafondKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:PlafondDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:PlafondField" />
+          <xs:element minOccurs="0" name="LocalStructNodeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="MaxDueTerm" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfPlafondField" />
+          <xs:element minOccurs="0" name="OperTypes" nillable="true" type="tns:ArrayOfPlafondOperType" />
+          <xs:element minOccurs="0" name="OwnerId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ParentPlafondId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PersonStructNodeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PlafondConsumptionModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PlafondTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PlafondUsageContextId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Products" nillable="true" type="tns:ArrayOfPlafondProduct" />
+          <xs:element minOccurs="0" name="RowVersion" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="StateDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TerminateDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TransferDefinitionId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Type" nillable="true" type="tns:PlafondType" />
+          <xs:element minOccurs="0" name="UnsecureAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="UnsecurePercentage" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="UnsecureTradedAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="UsedAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ValidDefinition" nillable="true" type="tns:PlafondDefinition" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Plafond" nillable="true" type="tns:Plafond" />
+  <xs:complexType name="ArrayOfPlafondExceedAuthorizationActive">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondExceedAuthorizationActive" nillable="true" type="tns:PlafondExceedAuthorizationActive" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondExceedAuthorizationActive" nillable="true" type="tns:ArrayOfPlafondExceedAuthorizationActive" />
+  <xs:complexType name="PlafondExceedAuthorizationActive">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PlafondExceedAuthorization">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondExceedAuthorizationActive" nillable="true" type="tns:PlafondExceedAuthorizationActive" />
+  <xs:complexType name="PlafondExceedAuthorization">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://accipiens.com/Common" base="q2:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ExceedAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="IssueDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:PlafondExceedAuthorizationKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:PlafondExceedAuthorizationDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:PlafondExceedAuthorizationField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfPlafondExceedAuthorizationField" />
+          <xs:element minOccurs="0" name="PlafondAuthorizationStateId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PlafondId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Reference" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TotalAmount" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondExceedAuthorization" nillable="true" type="tns:PlafondExceedAuthorization" />
+  <xs:complexType name="PlafondExceedAuthorizationKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://accipiens.com/Common" base="q3:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PlafondId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Reference" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondExceedAuthorizationKey" nillable="true" type="tns:PlafondExceedAuthorizationKey" />
+  <xs:simpleType name="PlafondExceedAuthorizationDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondExceedAuthorizationDetail" nillable="true" type="tns:PlafondExceedAuthorizationDetail" />
+  <xs:simpleType name="PlafondExceedAuthorizationField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="PlafondId" />
+      <xs:enumeration value="Reference" />
+      <xs:enumeration value="IssueDate" />
+      <xs:enumeration value="EndDate" />
+      <xs:enumeration value="ExceedAmount" />
+      <xs:enumeration value="TotalAmount" />
+      <xs:enumeration value="PlafondAuthorizationStateId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondExceedAuthorizationField" nillable="true" type="tns:PlafondExceedAuthorizationField" />
+  <xs:complexType name="ArrayOfPlafondExceedAuthorizationField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondExceedAuthorizationField" type="tns:PlafondExceedAuthorizationField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondExceedAuthorizationField" nillable="true" type="tns:ArrayOfPlafondExceedAuthorizationField" />
+  <xs:complexType name="ArrayOfPlafondConsumption">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondConsumption" nillable="true" type="tns:PlafondConsumption" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondConsumption" nillable="true" type="tns:ArrayOfPlafondConsumption" />
+  <xs:complexType name="PlafondConsumption">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://accipiens.com/Common" base="q4:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplBusinessId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AplCompanyId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="BeginDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CaptiveAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CredOperId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="CredOperIntervId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="CustomerEntityId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EntityPlafond" nillable="true" type="tns:Plafond" />
+          <xs:element minOccurs="0" name="EntityPlafondAbrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EntityPlafondId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="EventPlafondDefinitionId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="HierarchicalEntityPlafondAbrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="InitialCaptivePlafondMovementId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:PlafondConsumptionKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:PlafondConsumptionDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:PlafondConsumptionField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfPlafondConsumptionField" />
+          <xs:element minOccurs="0" name="Percentage" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PlafondConsumptionModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PlafondConsumptionModeToUse" type="tns:PlafondConsumptionMode" />
+          <xs:element minOccurs="0" name="PlafondConsumptionStateId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PlafondDefinitionId" nillable="true" type="xs:long" />
+          <xs:element xmlns:q5="http://accipiens.com/Entities" minOccurs="0" name="PlafondEntity" nillable="true" type="q5:Entity" />
+          <xs:element minOccurs="0" name="PlafondEntityId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PlafondEntityName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RowVersion" nillable="true" type="xs:base64Binary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondConsumption" nillable="true" type="tns:PlafondConsumption" />
+  <xs:complexType name="PlafondConsumptionKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://accipiens.com/Common" base="q6:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondConsumptionKey" nillable="true" type="tns:PlafondConsumptionKey" />
+  <xs:simpleType name="PlafondConsumptionDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="EntityPlafond" />
+      <xs:enumeration value="PlafondEntity" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondConsumptionDetail" nillable="true" type="tns:PlafondConsumptionDetail" />
+  <xs:simpleType name="PlafondConsumptionField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="CredOperId" />
+      <xs:enumeration value="EntityPlafondId" />
+      <xs:enumeration value="BeginDate" />
+      <xs:enumeration value="PlafondEntityId" />
+      <xs:enumeration value="PlafondConsumptionStateId" />
+      <xs:enumeration value="CustomerEntityId" />
+      <xs:enumeration value="AplCompanyId" />
+      <xs:enumeration value="AplBusinessId" />
+      <xs:enumeration value="CredOperIntervId" />
+      <xs:enumeration value="EndDate" />
+      <xs:enumeration value="PlafondConsumptionModeId" />
+      <xs:enumeration value="RowVersion" />
+      <xs:enumeration value="EventPlafondDefinitionId" />
+      <xs:enumeration value="PlafondDefinitionId" />
+      <xs:enumeration value="CaptiveAmount" />
+      <xs:enumeration value="Percentage" />
+      <xs:enumeration value="InitialCaptivePlafondMovementId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondConsumptionField" nillable="true" type="tns:PlafondConsumptionField" />
+  <xs:complexType name="ArrayOfPlafondConsumptionField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondConsumptionField" type="tns:PlafondConsumptionField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondConsumptionField" nillable="true" type="tns:ArrayOfPlafondConsumptionField" />
+  <xs:simpleType name="PlafondConsumptionMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="FinancialValue" />
+      <xs:enumeration value="ResidualValue" />
+      <xs:enumeration value="TotalRentalAmountWithTax" />
+      <xs:enumeration value="PurchaseAmountWithoutInitialEntry" />
+      <xs:enumeration value="FinancialValueWithNotReceivedDebts" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondConsumptionMode" nillable="true" type="tns:PlafondConsumptionMode" />
+  <xs:complexType name="ArrayOfPlafondConsumptionInUse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondConsumptionInUse" nillable="true" type="tns:PlafondConsumptionInUse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondConsumptionInUse" nillable="true" type="tns:ArrayOfPlafondConsumptionInUse" />
+  <xs:complexType name="PlafondConsumptionInUse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PlafondConsumption">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondConsumptionInUse" nillable="true" type="tns:PlafondConsumptionInUse" />
+  <xs:complexType name="ArrayOfPlafondDefinitionInUse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondDefinitionInUse" nillable="true" type="tns:PlafondDefinitionInUse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondDefinitionInUse" nillable="true" type="tns:ArrayOfPlafondDefinitionInUse" />
+  <xs:complexType name="PlafondDefinitionInUse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PlafondDefinition">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondDefinitionInUse" nillable="true" type="tns:PlafondDefinitionInUse" />
+  <xs:complexType name="PlafondDefinition">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://accipiens.com/Common" base="q7:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AccountingDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Amount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="AutUserStateId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="CaptiveOverDelta" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Conditions" nillable="true" type="tns:ArrayOfPlafondDefinitionCondition" />
+          <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:dateTime" />
+          <xs:element xmlns:q8="http://accipiens.com/AcpDocuments" minOccurs="0" name="Events" nillable="true" type="q8:ArrayOfEventManagement" />
+          <xs:element minOccurs="0" name="ExternalId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="HasRenew" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="IsNonRevolving" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:PlafondDefinitionKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:PlafondDefinitionDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:PlafondDefinitionField" />
+          <xs:element minOccurs="0" name="LockUpCapitalRate" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="MinUseAllowed" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfPlafondDefinitionField" />
+          <xs:element minOccurs="0" name="NewDefinition" nillable="true" type="tns:PlafondDefinitionInUse" />
+          <xs:element xmlns:q9="http://accipiens.com/BusinessFramework" minOccurs="0" name="OtherExpenses" nillable="true" type="q9:ArrayOfOtherExpense" />
+          <xs:element minOccurs="0" name="PlafondId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="RenewTerm" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="RowVersion" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="SourceDefinition" nillable="true" type="tns:PlafondDefinition" />
+          <xs:element minOccurs="0" name="SourcePlafondDefinitionId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="StateDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TradedAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ValueDate" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondDefinition" nillable="true" type="tns:PlafondDefinition" />
+  <xs:complexType name="ArrayOfPlafondDefinitionCondition">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondDefinitionCondition" nillable="true" type="tns:PlafondDefinitionCondition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondDefinitionCondition" nillable="true" type="tns:ArrayOfPlafondDefinitionCondition" />
+  <xs:complexType name="PlafondDefinitionCondition">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://accipiens.com/Common" base="q10:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplBusinessId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:PlafondDefinitionConditionKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:PlafondDefinitionConditionDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:PlafondDefinitionConditionField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfPlafondDefinitionConditionField" />
+          <xs:element minOccurs="0" name="PlafondDefinitionId" nillable="true" type="xs:long" />
+          <xs:element xmlns:q11="http://accipiens.com/Simulations" minOccurs="0" name="SymbolProdConditions" nillable="true" type="q11:ArrayOfArrayOfFinSymbolProdValueCondition" />
+          <xs:element xmlns:q12="http://accipiens.com/Simulations" minOccurs="0" name="SymbolProdValues" nillable="true" type="q12:ArrayOfFinSymbolProdValue" />
+          <xs:element minOccurs="0" name="Symbols" nillable="true" type="tns:ArrayOfPlafondDefinitionConditionSymbol" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondDefinitionCondition" nillable="true" type="tns:PlafondDefinitionCondition" />
+  <xs:complexType name="PlafondDefinitionConditionKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://accipiens.com/Common" base="q13:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondDefinitionConditionKey" nillable="true" type="tns:PlafondDefinitionConditionKey" />
+  <xs:simpleType name="PlafondDefinitionConditionDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Symbol" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondDefinitionConditionDetail" nillable="true" type="tns:PlafondDefinitionConditionDetail" />
+  <xs:simpleType name="PlafondDefinitionConditionField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="PlafondDefinitionId" />
+      <xs:enumeration value="AplBusinessId" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondDefinitionConditionField" nillable="true" type="tns:PlafondDefinitionConditionField" />
+  <xs:complexType name="ArrayOfPlafondDefinitionConditionField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondDefinitionConditionField" type="tns:PlafondDefinitionConditionField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondDefinitionConditionField" nillable="true" type="tns:ArrayOfPlafondDefinitionConditionField" />
+  <xs:complexType name="ArrayOfPlafondDefinitionConditionSymbol">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondDefinitionConditionSymbol" nillable="true" type="tns:PlafondDefinitionConditionSymbol" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondDefinitionConditionSymbol" nillable="true" type="tns:ArrayOfPlafondDefinitionConditionSymbol" />
+  <xs:complexType name="PlafondDefinitionConditionSymbol">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://accipiens.com/Common" base="q14:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FinSymbolProdId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:PlafondDefinitionConditionSymbolKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:PlafondDefinitionConditionSymbolDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:PlafondDefinitionConditionSymbolField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfPlafondDefinitionConditionSymbolField" />
+          <xs:element minOccurs="0" name="PlafondDefinitionConditionId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondDefinitionConditionSymbol" nillable="true" type="tns:PlafondDefinitionConditionSymbol" />
+  <xs:complexType name="PlafondDefinitionConditionSymbolKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://accipiens.com/Common" base="q15:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FinSymbolProdId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PlafondDefinitionConditionId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondDefinitionConditionSymbolKey" nillable="true" type="tns:PlafondDefinitionConditionSymbolKey" />
+  <xs:simpleType name="PlafondDefinitionConditionSymbolDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondDefinitionConditionSymbolDetail" nillable="true" type="tns:PlafondDefinitionConditionSymbolDetail" />
+  <xs:simpleType name="PlafondDefinitionConditionSymbolField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="PlafondDefinitionConditionId" />
+      <xs:enumeration value="FinSymbolProdId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondDefinitionConditionSymbolField" nillable="true" type="tns:PlafondDefinitionConditionSymbolField" />
+  <xs:complexType name="ArrayOfPlafondDefinitionConditionSymbolField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondDefinitionConditionSymbolField" type="tns:PlafondDefinitionConditionSymbolField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondDefinitionConditionSymbolField" nillable="true" type="tns:ArrayOfPlafondDefinitionConditionSymbolField" />
+  <xs:complexType name="PlafondDefinitionKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://accipiens.com/Common" base="q16:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondDefinitionKey" nillable="true" type="tns:PlafondDefinitionKey" />
+  <xs:simpleType name="PlafondDefinitionDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OtherExpense" />
+      <xs:enumeration value="Event" />
+      <xs:enumeration value="SourceDefinition" />
+      <xs:enumeration value="Condition" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondDefinitionDetail" nillable="true" type="tns:PlafondDefinitionDetail" />
+  <xs:simpleType name="PlafondDefinitionField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="PlafondId" />
+      <xs:enumeration value="ValueDate" />
+      <xs:enumeration value="EndDate" />
+      <xs:enumeration value="Amount" />
+      <xs:enumeration value="LockUpCapitalRate" />
+      <xs:enumeration value="MinUseAllowed" />
+      <xs:enumeration value="HasRenew" />
+      <xs:enumeration value="RenewTerm" />
+      <xs:enumeration value="AutUserStateId" />
+      <xs:enumeration value="StateDate" />
+      <xs:enumeration value="TradedAmount" />
+      <xs:enumeration value="SourcePlafondDefinitionId" />
+      <xs:enumeration value="AccountingDate" />
+      <xs:enumeration value="CaptiveOverDelta" />
+      <xs:enumeration value="RowVersion" />
+      <xs:enumeration value="ExternalId" />
+      <xs:enumeration value="IsNonRevolving" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondDefinitionField" nillable="true" type="tns:PlafondDefinitionField" />
+  <xs:complexType name="ArrayOfPlafondDefinitionField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondDefinitionField" type="tns:PlafondDefinitionField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondDefinitionField" nillable="true" type="tns:ArrayOfPlafondDefinitionField" />
+  <xs:complexType name="ArrayOfPlafondDistribution">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondDistribution" nillable="true" type="tns:PlafondDistribution" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondDistribution" nillable="true" type="tns:ArrayOfPlafondDistribution" />
+  <xs:complexType name="PlafondDistribution">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://accipiens.com/Common" base="q17:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BusinessDistributions" nillable="true" type="tns:ArrayOfPlafondBusinessDistribution" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:PlafondDistributionKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:PlafondDistributionDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:PlafondDistributionField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfPlafondDistributionField" />
+          <xs:element minOccurs="0" name="PlafondId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ValueDate" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondDistribution" nillable="true" type="tns:PlafondDistribution" />
+  <xs:complexType name="ArrayOfPlafondBusinessDistribution">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondBusinessDistribution" nillable="true" type="tns:PlafondBusinessDistribution" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondBusinessDistribution" nillable="true" type="tns:ArrayOfPlafondBusinessDistribution" />
+  <xs:complexType name="PlafondBusinessDistribution">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://accipiens.com/Common" base="q18:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Amount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="AplCompanyBusinessId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:PlafondBusinessDistributionKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:PlafondBusinessDistributionDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:PlafondBusinessDistributionField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfPlafondBusinessDistributionField" />
+          <xs:element minOccurs="0" name="PlafondDistributionId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondBusinessDistribution" nillable="true" type="tns:PlafondBusinessDistribution" />
+  <xs:complexType name="PlafondBusinessDistributionKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://accipiens.com/Common" base="q19:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondBusinessDistributionKey" nillable="true" type="tns:PlafondBusinessDistributionKey" />
+  <xs:simpleType name="PlafondBusinessDistributionDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondBusinessDistributionDetail" nillable="true" type="tns:PlafondBusinessDistributionDetail" />
+  <xs:simpleType name="PlafondBusinessDistributionField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="PlafondDistributionId" />
+      <xs:enumeration value="AplCompanyBusinessId" />
+      <xs:enumeration value="Amount" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondBusinessDistributionField" nillable="true" type="tns:PlafondBusinessDistributionField" />
+  <xs:complexType name="ArrayOfPlafondBusinessDistributionField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondBusinessDistributionField" type="tns:PlafondBusinessDistributionField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondBusinessDistributionField" nillable="true" type="tns:ArrayOfPlafondBusinessDistributionField" />
+  <xs:complexType name="PlafondDistributionKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q20="http://accipiens.com/Common" base="q20:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondDistributionKey" nillable="true" type="tns:PlafondDistributionKey" />
+  <xs:simpleType name="PlafondDistributionDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BusinessDistribution" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondDistributionDetail" nillable="true" type="tns:PlafondDistributionDetail" />
+  <xs:simpleType name="PlafondDistributionField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="PlafondId" />
+      <xs:enumeration value="ValueDate" />
+      <xs:enumeration value="EndDate" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondDistributionField" nillable="true" type="tns:PlafondDistributionField" />
+  <xs:complexType name="ArrayOfPlafondDistributionField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondDistributionField" type="tns:PlafondDistributionField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondDistributionField" nillable="true" type="tns:ArrayOfPlafondDistributionField" />
+  <xs:complexType name="ArrayOfPlafondExceedAuthorization">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondExceedAuthorization" nillable="true" type="tns:PlafondExceedAuthorization" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondExceedAuthorization" nillable="true" type="tns:ArrayOfPlafondExceedAuthorization" />
+  <xs:complexType name="PlafondKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q21="http://accipiens.com/Common" base="q21:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondKey" nillable="true" type="tns:PlafondKey" />
+  <xs:simpleType name="PlafondDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CredOperConsumptionInUse" />
+      <xs:enumeration value="ActiveExceedAuthorization" />
+      <xs:enumeration value="Definition" />
+      <xs:enumeration value="Type" />
+      <xs:enumeration value="ExceedAuthorization" />
+      <xs:enumeration value="Distribution" />
+      <xs:enumeration value="Product" />
+      <xs:enumeration value="CredOperConsumption" />
+      <xs:enumeration value="OperType" />
+      <xs:enumeration value="Aggregate" />
+      <xs:enumeration value="Descendant" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondDetail" nillable="true" type="tns:PlafondDetail" />
+  <xs:simpleType name="PlafondField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="PlafondTypeId" />
+      <xs:enumeration value="AplCompanyId" />
+      <xs:enumeration value="OwnerId" />
+      <xs:enumeration value="BeginDate" />
+      <xs:enumeration value="CurrencyId" />
+      <xs:enumeration value="AutUserStateId" />
+      <xs:enumeration value="StateDate" />
+      <xs:enumeration value="EntityId" />
+      <xs:enumeration value="CredOperId" />
+      <xs:enumeration value="CredOperIntervId" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="ForexRateId" />
+      <xs:enumeration value="MaxDueTerm" />
+      <xs:enumeration value="ForexValueDate" />
+      <xs:enumeration value="UnsecurePercentage" />
+      <xs:enumeration value="AggregatorPlafondId" />
+      <xs:enumeration value="AllowUncheckedMovements" />
+      <xs:enumeration value="IsSourceTransferInProgress" />
+      <xs:enumeration value="TerminateDate" />
+      <xs:enumeration value="IsFinanced" />
+      <xs:enumeration value="PlafondUsageContextId" />
+      <xs:enumeration value="LocalStructNodeId" />
+      <xs:enumeration value="PersonStructNodeId" />
+      <xs:enumeration value="CredOperChannelId" />
+      <xs:enumeration value="AllowCaptiveOverLimit" />
+      <xs:enumeration value="PlafondConsumptionModeId" />
+      <xs:enumeration value="ParentPlafondId" />
+      <xs:enumeration value="RowVersion" />
+      <xs:enumeration value="IsNonRevolving" />
+      <xs:enumeration value="ExpectedTerminateDate" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondField" nillable="true" type="tns:PlafondField" />
+  <xs:complexType name="ArrayOfPlafondField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondField" type="tns:PlafondField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondField" nillable="true" type="tns:ArrayOfPlafondField" />
+  <xs:complexType name="ArrayOfPlafondOperType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondOperType" nillable="true" type="tns:PlafondOperType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondOperType" nillable="true" type="tns:ArrayOfPlafondOperType" />
+  <xs:complexType name="PlafondOperType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q22="http://accipiens.com/Common" base="q22:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:PlafondOperTypeKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:PlafondOperTypeDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:PlafondOperTypeField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfPlafondOperTypeField" />
+          <xs:element minOccurs="0" name="OperTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PlafondId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondOperType" nillable="true" type="tns:PlafondOperType" />
+  <xs:complexType name="PlafondOperTypeKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q23="http://accipiens.com/Common" base="q23:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondOperTypeKey" nillable="true" type="tns:PlafondOperTypeKey" />
+  <xs:simpleType name="PlafondOperTypeDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondOperTypeDetail" nillable="true" type="tns:PlafondOperTypeDetail" />
+  <xs:simpleType name="PlafondOperTypeField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="PlafondId" />
+      <xs:enumeration value="OperTypeId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondOperTypeField" nillable="true" type="tns:PlafondOperTypeField" />
+  <xs:complexType name="ArrayOfPlafondOperTypeField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondOperTypeField" type="tns:PlafondOperTypeField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondOperTypeField" nillable="true" type="tns:ArrayOfPlafondOperTypeField" />
+  <xs:complexType name="ArrayOfPlafondProduct">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondProduct" nillable="true" type="tns:PlafondProduct" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondProduct" nillable="true" type="tns:ArrayOfPlafondProduct" />
+  <xs:complexType name="PlafondProduct">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q24="http://accipiens.com/Common" base="q24:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplCompanyBusinessId" nillable="true" type="xs:long" />
+          <xs:element xmlns:q25="http://accipiens.com/Simulations" minOccurs="0" name="FinancialProduct" nillable="true" type="q25:FinancialProduct" />
+          <xs:element minOccurs="0" name="FinancialProductId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:PlafondProductKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:PlafondProductDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:PlafondProductField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfPlafondProductField" />
+          <xs:element minOccurs="0" name="PlafondId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondProduct" nillable="true" type="tns:PlafondProduct" />
+  <xs:complexType name="PlafondProductKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q26="http://accipiens.com/Common" base="q26:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplCompanyBusinessId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PlafondId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondProductKey" nillable="true" type="tns:PlafondProductKey" />
+  <xs:simpleType name="PlafondProductDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="FinancialProduct" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondProductDetail" nillable="true" type="tns:PlafondProductDetail" />
+  <xs:simpleType name="PlafondProductField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="PlafondId" />
+      <xs:enumeration value="AplCompanyBusinessId" />
+      <xs:enumeration value="FinancialProductId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondProductField" nillable="true" type="tns:PlafondProductField" />
+  <xs:complexType name="ArrayOfPlafondProductField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondProductField" type="tns:PlafondProductField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondProductField" nillable="true" type="tns:ArrayOfPlafondProductField" />
+  <xs:complexType name="PlafondType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q27="http://accipiens.com/Common" base="q27:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AllowCaptiveOverLimit" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AllowEntityFromGroup" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AllowMultipleAplCompany" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AllowUncheckedMovements" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AplCompanyId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ApplicabilityTypes" nillable="true" type="tns:ArrayOfPlafondTypeApplicabilityType" />
+          <xs:element minOccurs="0" name="AuthorizationAplStatementId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AutomatonId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AvailableAplStatementId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Businesses" nillable="true" type="tns:ArrayOfPlafondTypeBusiness" />
+          <xs:element minOccurs="0" name="Companies" nillable="true" type="tns:ArrayOfPlafondTypeCompany" />
+          <xs:element minOccurs="0" name="ConditionTypes" nillable="true" type="tns:ArrayOfPlafondTypeConditionType" />
+          <xs:element minOccurs="0" name="DefinitionAutomatonId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DontAllowTransferDefinition" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ExceedAplStatementId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ExpenseTypes" nillable="true" type="tns:ArrayOfPlafondExpenseType" />
+          <xs:element minOccurs="0" name="FetchLevel" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="GroupEntityRelationTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="GroupMovements" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="InvalidDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IsNonRevolving" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:PlafondTypeKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:PlafondTypeDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:PlafondTypeField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfPlafondTypeField" />
+          <xs:element minOccurs="0" name="OnlyDueCapital" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ParentPlafondTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PlafondAggregationModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PlafondAggregatorCalcModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PlafondAvailableCalcModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PlafondConsumptionModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PlafondForexTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Products" nillable="true" type="tns:ArrayOfPlafondTypeProduct" />
+          <xs:element minOccurs="0" name="SuperPlafondTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="UnsecurePercentage" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="WithMovements" nillable="true" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondType" nillable="true" type="tns:PlafondType" />
+  <xs:complexType name="ArrayOfPlafondTypeApplicabilityType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondTypeApplicabilityType" nillable="true" type="tns:PlafondTypeApplicabilityType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondTypeApplicabilityType" nillable="true" type="tns:ArrayOfPlafondTypeApplicabilityType" />
+  <xs:complexType name="PlafondTypeApplicabilityType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q28="http://accipiens.com/Common" base="q28:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FinSymbolId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="IsDefaultApplicability" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsMandatoryApplicability" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:PlafondTypeApplicabilityTypeKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:PlafondTypeApplicabilityTypeDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:PlafondTypeApplicabilityTypeField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfPlafondTypeApplicabilityTypeField" />
+          <xs:element minOccurs="0" name="OrderItem" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PlafondTypeId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondTypeApplicabilityType" nillable="true" type="tns:PlafondTypeApplicabilityType" />
+  <xs:complexType name="PlafondTypeApplicabilityTypeKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q29="http://accipiens.com/Common" base="q29:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FinSymbolId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PlafondTypeId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondTypeApplicabilityTypeKey" nillable="true" type="tns:PlafondTypeApplicabilityTypeKey" />
+  <xs:simpleType name="PlafondTypeApplicabilityTypeDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondTypeApplicabilityTypeDetail" nillable="true" type="tns:PlafondTypeApplicabilityTypeDetail" />
+  <xs:simpleType name="PlafondTypeApplicabilityTypeField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="PlafondTypeId" />
+      <xs:enumeration value="FinSymbolId" />
+      <xs:enumeration value="IsMandatoryApplicability" />
+      <xs:enumeration value="OrderItem" />
+      <xs:enumeration value="IsDefaultApplicability" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondTypeApplicabilityTypeField" nillable="true" type="tns:PlafondTypeApplicabilityTypeField" />
+  <xs:complexType name="ArrayOfPlafondTypeApplicabilityTypeField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondTypeApplicabilityTypeField" type="tns:PlafondTypeApplicabilityTypeField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondTypeApplicabilityTypeField" nillable="true" type="tns:ArrayOfPlafondTypeApplicabilityTypeField" />
+  <xs:complexType name="ArrayOfPlafondTypeBusiness">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondTypeBusiness" nillable="true" type="tns:PlafondTypeBusiness" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondTypeBusiness" nillable="true" type="tns:ArrayOfPlafondTypeBusiness" />
+  <xs:complexType name="PlafondTypeBusiness">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q30="http://accipiens.com/Common" base="q30:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplBusinessId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CredOperNature" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:PlafondTypeBusinessKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:PlafondTypeBusinessDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:PlafondTypeBusinessField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfPlafondTypeBusinessField" />
+          <xs:element minOccurs="0" name="OperTypes" nillable="true" type="tns:ArrayOfPlafondTypeBusinessOperType" />
+          <xs:element minOccurs="0" name="PlafondTypeId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondTypeBusiness" nillable="true" type="tns:PlafondTypeBusiness" />
+  <xs:complexType name="PlafondTypeBusinessKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q31="http://accipiens.com/Common" base="q31:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplBusinessId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CredOperNature" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PlafondTypeId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondTypeBusinessKey" nillable="true" type="tns:PlafondTypeBusinessKey" />
+  <xs:simpleType name="PlafondTypeBusinessDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OperType" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondTypeBusinessDetail" nillable="true" type="tns:PlafondTypeBusinessDetail" />
+  <xs:simpleType name="PlafondTypeBusinessField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="PlafondTypeId" />
+      <xs:enumeration value="AplBusinessId" />
+      <xs:enumeration value="CredOperNature" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondTypeBusinessField" nillable="true" type="tns:PlafondTypeBusinessField" />
+  <xs:complexType name="ArrayOfPlafondTypeBusinessField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondTypeBusinessField" type="tns:PlafondTypeBusinessField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondTypeBusinessField" nillable="true" type="tns:ArrayOfPlafondTypeBusinessField" />
+  <xs:complexType name="ArrayOfPlafondTypeBusinessOperType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondTypeBusinessOperType" nillable="true" type="tns:PlafondTypeBusinessOperType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondTypeBusinessOperType" nillable="true" type="tns:ArrayOfPlafondTypeBusinessOperType" />
+  <xs:complexType name="PlafondTypeBusinessOperType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q32="http://accipiens.com/Common" base="q32:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:PlafondTypeBusinessOperTypeKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:PlafondTypeBusinessOperTypeDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:PlafondTypeBusinessOperTypeField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfPlafondTypeBusinessOperTypeField" />
+          <xs:element minOccurs="0" name="OperTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PlafondTypeBusinessId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondTypeBusinessOperType" nillable="true" type="tns:PlafondTypeBusinessOperType" />
+  <xs:complexType name="PlafondTypeBusinessOperTypeKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q33="http://accipiens.com/Common" base="q33:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="OperTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PlafondTypeBusinessId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondTypeBusinessOperTypeKey" nillable="true" type="tns:PlafondTypeBusinessOperTypeKey" />
+  <xs:simpleType name="PlafondTypeBusinessOperTypeDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondTypeBusinessOperTypeDetail" nillable="true" type="tns:PlafondTypeBusinessOperTypeDetail" />
+  <xs:simpleType name="PlafondTypeBusinessOperTypeField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="PlafondTypeBusinessId" />
+      <xs:enumeration value="OperTypeId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondTypeBusinessOperTypeField" nillable="true" type="tns:PlafondTypeBusinessOperTypeField" />
+  <xs:complexType name="ArrayOfPlafondTypeBusinessOperTypeField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondTypeBusinessOperTypeField" type="tns:PlafondTypeBusinessOperTypeField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondTypeBusinessOperTypeField" nillable="true" type="tns:ArrayOfPlafondTypeBusinessOperTypeField" />
+  <xs:complexType name="ArrayOfPlafondTypeCompany">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondTypeCompany" nillable="true" type="tns:PlafondTypeCompany" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondTypeCompany" nillable="true" type="tns:ArrayOfPlafondTypeCompany" />
+  <xs:complexType name="PlafondTypeCompany">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q34="http://accipiens.com/Common" base="q34:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplCompanyId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:PlafondTypeCompanyKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:PlafondTypeCompanyDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:PlafondTypeCompanyField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfPlafondTypeCompanyField" />
+          <xs:element minOccurs="0" name="PlafondTypeId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondTypeCompany" nillable="true" type="tns:PlafondTypeCompany" />
+  <xs:complexType name="PlafondTypeCompanyKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q35="http://accipiens.com/Common" base="q35:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondTypeCompanyKey" nillable="true" type="tns:PlafondTypeCompanyKey" />
+  <xs:simpleType name="PlafondTypeCompanyDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondTypeCompanyDetail" nillable="true" type="tns:PlafondTypeCompanyDetail" />
+  <xs:simpleType name="PlafondTypeCompanyField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="PlafondTypeId" />
+      <xs:enumeration value="AplCompanyId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondTypeCompanyField" nillable="true" type="tns:PlafondTypeCompanyField" />
+  <xs:complexType name="ArrayOfPlafondTypeCompanyField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondTypeCompanyField" type="tns:PlafondTypeCompanyField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondTypeCompanyField" nillable="true" type="tns:ArrayOfPlafondTypeCompanyField" />
+  <xs:complexType name="ArrayOfPlafondTypeConditionType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondTypeConditionType" nillable="true" type="tns:PlafondTypeConditionType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondTypeConditionType" nillable="true" type="tns:ArrayOfPlafondTypeConditionType" />
+  <xs:complexType name="PlafondTypeConditionType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q36="http://accipiens.com/Common" base="q36:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FinSymbolId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="IsDefaultCondition" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsMandatoryCondition" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:PlafondTypeConditionTypeKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:PlafondTypeConditionTypeDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:PlafondTypeConditionTypeField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfPlafondTypeConditionTypeField" />
+          <xs:element minOccurs="0" name="PlafondTypeId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondTypeConditionType" nillable="true" type="tns:PlafondTypeConditionType" />
+  <xs:complexType name="PlafondTypeConditionTypeKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q37="http://accipiens.com/Common" base="q37:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FinSymbolId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PlafondTypeId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondTypeConditionTypeKey" nillable="true" type="tns:PlafondTypeConditionTypeKey" />
+  <xs:simpleType name="PlafondTypeConditionTypeDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondTypeConditionTypeDetail" nillable="true" type="tns:PlafondTypeConditionTypeDetail" />
+  <xs:simpleType name="PlafondTypeConditionTypeField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="PlafondTypeId" />
+      <xs:enumeration value="FinSymbolId" />
+      <xs:enumeration value="IsDefaultCondition" />
+      <xs:enumeration value="IsMandatoryCondition" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondTypeConditionTypeField" nillable="true" type="tns:PlafondTypeConditionTypeField" />
+  <xs:complexType name="ArrayOfPlafondTypeConditionTypeField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondTypeConditionTypeField" type="tns:PlafondTypeConditionTypeField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondTypeConditionTypeField" nillable="true" type="tns:ArrayOfPlafondTypeConditionTypeField" />
+  <xs:complexType name="ArrayOfPlafondExpenseType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondExpenseType" nillable="true" type="tns:PlafondExpenseType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondExpenseType" nillable="true" type="tns:ArrayOfPlafondExpenseType" />
+  <xs:complexType name="PlafondExpenseType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q38="http://accipiens.com/AcpFramework" base="q38:ExpenseTypeByTable">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondExpenseType" nillable="true" type="tns:PlafondExpenseType" />
+  <xs:complexType name="PlafondTypeKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q39="http://accipiens.com/Common" base="q39:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondTypeKey" nillable="true" type="tns:PlafondTypeKey" />
+  <xs:simpleType name="PlafondTypeDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ExpenseType" />
+      <xs:enumeration value="Business" />
+      <xs:enumeration value="Company" />
+      <xs:enumeration value="ConditionType" />
+      <xs:enumeration value="ApplicabilityType" />
+      <xs:enumeration value="Product" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondTypeDetail" nillable="true" type="tns:PlafondTypeDetail" />
+  <xs:simpleType name="PlafondTypeField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="Abrev" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="AutomatonId" />
+      <xs:enumeration value="AvailableAplStatementId" />
+      <xs:enumeration value="WithMovements" />
+      <xs:enumeration value="SuperPlafondTypeId" />
+      <xs:enumeration value="GroupMovements" />
+      <xs:enumeration value="OnlyDueCapital" />
+      <xs:enumeration value="AuthorizationAplStatementId" />
+      <xs:enumeration value="ExceedAplStatementId" />
+      <xs:enumeration value="PlafondForexTypeId" />
+      <xs:enumeration value="PlafondAvailableCalcModeId" />
+      <xs:enumeration value="DefinitionAutomatonId" />
+      <xs:enumeration value="UnsecurePercentage" />
+      <xs:enumeration value="PlafondAggregationModeId" />
+      <xs:enumeration value="PlafondAggregatorCalcModeId" />
+      <xs:enumeration value="AllowUncheckedMovements" />
+      <xs:enumeration value="AplCompanyId" />
+      <xs:enumeration value="DontAllowTransferDefinition" />
+      <xs:enumeration value="AllowEntityFromGroup" />
+      <xs:enumeration value="FetchLevel" />
+      <xs:enumeration value="InvalidDate" />
+      <xs:enumeration value="AllowCaptiveOverLimit" />
+      <xs:enumeration value="AllowMultipleAplCompany" />
+      <xs:enumeration value="PlafondConsumptionModeId" />
+      <xs:enumeration value="GroupEntityRelationTypeId" />
+      <xs:enumeration value="IsNonRevolving" />
+      <xs:enumeration value="ParentPlafondTypeId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondTypeField" nillable="true" type="tns:PlafondTypeField" />
+  <xs:complexType name="ArrayOfPlafondTypeField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondTypeField" type="tns:PlafondTypeField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondTypeField" nillable="true" type="tns:ArrayOfPlafondTypeField" />
+  <xs:complexType name="ArrayOfPlafondTypeProduct">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondTypeProduct" nillable="true" type="tns:PlafondTypeProduct" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondTypeProduct" nillable="true" type="tns:ArrayOfPlafondTypeProduct" />
+  <xs:complexType name="PlafondTypeProduct">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q40="http://accipiens.com/Common" base="q40:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FinancialProductId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:PlafondTypeProductKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:PlafondTypeProductDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:PlafondTypeProductField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfPlafondTypeProductField" />
+          <xs:element minOccurs="0" name="PlafondTypeId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondTypeProduct" nillable="true" type="tns:PlafondTypeProduct" />
+  <xs:complexType name="PlafondTypeProductKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q41="http://accipiens.com/Common" base="q41:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlafondTypeProductKey" nillable="true" type="tns:PlafondTypeProductKey" />
+  <xs:simpleType name="PlafondTypeProductDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondTypeProductDetail" nillable="true" type="tns:PlafondTypeProductDetail" />
+  <xs:simpleType name="PlafondTypeProductField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="PlafondTypeId" />
+      <xs:enumeration value="FinancialProductId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlafondTypeProductField" nillable="true" type="tns:PlafondTypeProductField" />
+  <xs:complexType name="ArrayOfPlafondTypeProductField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlafondTypeProductField" type="tns:PlafondTypeProductField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlafondTypeProductField" nillable="true" type="tns:ArrayOfPlafondTypeProductField" />
+</xs:schema>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="63c9f837-294b-4952-ac85-966a935411b5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AcpParameterization.xsd" MetadataType="Schema" ID="c149282f-d39e-4de4-a223-dc0696bc71b8" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd15" />
+    <MetadataFile FileName="AcpParameterization1.xsd" MetadataType="Schema" ID="fd20d3b5-4a32-40a8-ad87-9aeebd570242" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd5" />
+    <MetadataFile FileName="AcpParameterization2.xsd" MetadataType="Schema" ID="c07ed590-3292-484a-b3b4-20a89089d904" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd1" />
+    <MetadataFile FileName="AcpParameterization.wsdl" MetadataType="Wsdl" ID="8d9ac427-d7c9-4f12-88af-4b419adbee47" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?wsdl" />
+    <MetadataFile FileName="AcpParameterization3.xsd" MetadataType="Schema" ID="eb64f075-47bc-472e-9e79-06319373d031" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd9" />
+    <MetadataFile FileName="AcpParameterization4.xsd" MetadataType="Schema" ID="f486e947-c96d-46c0-9450-df71dd2a5551" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd4" />
+    <MetadataFile FileName="AcpParameterization1.wsdl" MetadataType="Wsdl" ID="c77e484f-3029-4ab2-8a5e-122469d9c1df" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="AcpParameterization5.xsd" MetadataType="Schema" ID="ae5b1bfb-c50e-4c02-83d2-1f7efb2a6b15" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd12" />
+    <MetadataFile FileName="AcpParameterization6.xsd" MetadataType="Schema" ID="84fd54f1-bc77-4e83-a758-bbc95dba5c74" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd0" />
+    <MetadataFile FileName="AcpParameterization7.xsd" MetadataType="Schema" ID="9069afce-3474-4d7e-bcc4-780e0879f793" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd8" />
+    <MetadataFile FileName="AcpParameterization8.xsd" MetadataType="Schema" ID="3e9eeb1e-c78b-4ea8-9249-c785d0f98e45" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd10" />
+    <MetadataFile FileName="AcpParameterization9.xsd" MetadataType="Schema" ID="4edb717b-b1f4-446a-a72a-ad6eb2a47377" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd13" />
+    <MetadataFile FileName="AcpParameterization10.xsd" MetadataType="Schema" ID="342922e3-7f53-4790-ae27-cee88b11bef1" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd14" />
+    <MetadataFile FileName="AcpParameterization11.xsd" MetadataType="Schema" ID="1260e9ec-8901-4f55-9fc2-be80bbd4d4fa" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd7" />
+    <MetadataFile FileName="AcpParameterization12.xsd" MetadataType="Schema" ID="e982681f-13ca-4ad1-8a74-6f448cab5313" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd3" />
+    <MetadataFile FileName="AcpParameterization13.xsd" MetadataType="Schema" ID="c66478bf-885c-4bc5-919b-38f9f52487d0" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd16" />
+    <MetadataFile FileName="AcpParameterization14.xsd" MetadataType="Schema" ID="d4a89729-f42a-43c8-a5b2-78465e1eac56" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd11" />
+    <MetadataFile FileName="AcpParameterization15.xsd" MetadataType="Schema" ID="87a1039a-4259-4e0b-8511-2f6469e8d744" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd6" />
+    <MetadataFile FileName="AcpParameterization16.xsd" MetadataType="Schema" ID="9a34b3aa-e240-444f-b860-4e95c2b56304" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

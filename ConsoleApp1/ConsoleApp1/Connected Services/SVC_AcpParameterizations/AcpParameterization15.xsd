@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Olissipo.CreditAnalysis.DataStructures" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Olissipo.CreditAnalysis.DataStructures" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="CreditAnalysisIndicatorContext">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Global" />
+      <xs:enumeration value="Decision" />
+      <xs:enumeration value="IncidentOrigins" />
+      <xs:enumeration value="SearchConfig" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CreditAnalysisIndicatorContext" nillable="true" type="tns:CreditAnalysisIndicatorContext" />
+  <xs:simpleType name="GlobalCreditAnalysisIndicator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AutomatonId" />
+      <xs:enumeration value="AllowsDecisionChanges" />
+      <xs:enumeration value="CredAnalysisIssueByCredOperId" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="GlobalCreditAnalysisIndicator" nillable="true" type="tns:GlobalCreditAnalysisIndicator" />
+</xs:schema>

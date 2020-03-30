@@ -1,0 +1,2522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://accipiens.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="EntitiesBasicLists" targetNamespace="http://accipiens.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="CustomBinding_EntitiesBasicLists_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <http:NtlmAuthentication xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://accipiens.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/Olissipo.Entities.Facade" />
+      <xs:import namespace="http://accipiens.com/Common" />
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/Olissipo.Entities.DataStructures" />
+      <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xs:element name="GetDataList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Olissipo.Entities.Facade" minOccurs="0" name="listType" type="q1:EntitiesDataListId" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetDataListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q2="http://accipiens.com/Common" minOccurs="0" name="GetDataListResult" nillable="true" type="q2:BasicList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetForeignDataList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Olissipo.Entities.Facade" minOccurs="0" name="listType" type="q3:EntitiesForeignDataListId" />
+            <xs:element minOccurs="0" name="foreignReference" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetForeignDataListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q4="http://accipiens.com/Common" minOccurs="0" name="GetForeignDataListResult" nillable="true" type="q4:BasicList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetLegalDocEntityDataList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="legalDocTypeId" type="xs:int" />
+            <xs:element minOccurs="0" name="legalDocNumber" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetLegalDocEntityDataListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q5="http://accipiens.com/Common" minOccurs="0" name="GetLegalDocEntityDataListResult" nillable="true" type="q5:BasicList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetEntitiesWithSuperRoleDataList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Olissipo.Entities.DataStructures" minOccurs="0" name="entitySuperRole" type="q6:EntitiesSuperRole" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetEntitiesWithSuperRoleDataListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q7="http://accipiens.com/Common" minOccurs="0" name="GetEntitiesWithSuperRoleDataListResult" nillable="true" type="q7:BasicList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAplBusinessIdDataList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="aplCompanyId" type="xs:int" />
+            <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="wantedAplBusinessId" nillable="true" type="q8:ArrayOfint" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAplBusinessIdDataListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q9="http://accipiens.com/Common" minOccurs="0" name="GetAplBusinessIdDataListResult" nillable="true" type="q9:BasicList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAplCompanyByBusinessIdDataList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="wantedAplBusinessId" nillable="true" type="q10:ArrayOfint" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAplCompanyByBusinessIdDataListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q11="http://accipiens.com/Common" minOccurs="0" name="GetAplCompanyByBusinessIdDataListResult" nillable="true" type="q11:BasicList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRegistrationOfficeDataList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Olissipo.Entities.DataStructures" minOccurs="0" name="registrationScopes" nillable="true" type="q12:ArrayOfEntityRegistrationScopeKind" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRegistrationOfficeDataListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q13="http://accipiens.com/Common" minOccurs="0" name="GetRegistrationOfficeDataListResult" nillable="true" type="q13:BasicList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetEntityRelationsDataList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="entityId" type="xs:long" />
+            <xs:element minOccurs="0" name="entityRelationTypeId" type="xs:int" />
+            <xs:element minOccurs="0" name="directRelation" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetEntityRelationsDataListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q14="http://accipiens.com/Common" minOccurs="0" name="GetEntityRelationsDataListResult" nillable="true" type="q14:BasicList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAplCompanyCreditorIdDataList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="aplCompanyId" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAplCompanyCreditorIdDataListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q15="http://accipiens.com/Common" minOccurs="0" name="GetAplCompanyCreditorIdDataListResult" nillable="true" type="q15:BasicList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetMapLineTotalByMapTypeAbrev">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="mapLineId" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetMapLineTotalByMapTypeAbrevResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q16="http://accipiens.com/Common" minOccurs="0" name="GetMapLineTotalByMapTypeAbrevResult" nillable="true" type="q16:CodeAbbreviation" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetMapLineTotalByMapTypeList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="mapTypeId" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetMapLineTotalByMapTypeListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q17="http://accipiens.com/Common" minOccurs="0" name="GetMapLineTotalByMapTypeListResult" nillable="true" type="q17:BasicList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetMapLineAggregatorByMapType">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="mapTypeId" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetMapLineAggregatorByMapTypeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q18="http://accipiens.com/Common" minOccurs="0" name="GetMapLineAggregatorByMapTypeResult" nillable="true" type="q18:BasicList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetEntityTypeBySuperTypeDataList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Olissipo.Entities.DataStructures" minOccurs="0" name="superTypes" nillable="true" type="q19:ArrayOfEntitiesSuperType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetEntityTypeBySuperTypeDataListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q20="http://accipiens.com/Common" minOccurs="0" name="GetEntityTypeBySuperTypeDataListResult" nillable="true" type="q20:BasicList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetEntityDataListByEntityTypeCouncilCodeAndDistrictCode">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="entityTypeId" type="xs:int" />
+            <xs:element minOccurs="0" name="councilCode" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="districtCode" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetEntityDataListByEntityTypeCouncilCodeAndDistrictCodeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q21="http://accipiens.com/Common" minOccurs="0" name="GetEntityDataListByEntityTypeCouncilCodeAndDistrictCodeResult" nillable="true" type="q21:BasicList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="EntityRoleTypeByEntityDataList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="entityId" nillable="true" type="xs:long" />
+            <xs:element minOccurs="0" name="entityTypeId" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="EntityRoleTypeByEntityDataListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q22="http://accipiens.com/Common" minOccurs="0" name="EntityRoleTypeByEntityDataListResult" nillable="true" type="q22:BasicList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetLegalDocTypeBasicList">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetLegalDocTypeBasicListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q23="http://accipiens.com/Common" minOccurs="0" name="GetLegalDocTypeBasicListResult" nillable="true" type="q23:BasicList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetLegalDocTypeByEntityTypeBasicList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="entityTypeId" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetLegalDocTypeByEntityTypeBasicListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q24="http://accipiens.com/Common" minOccurs="0" name="GetLegalDocTypeByEntityTypeBasicListResult" nillable="true" type="q24:BasicList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAgendaSubjectTypeByAgendaReferenceTypeAgendaTypeDataList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="agendaReferenceTypeId" type="xs:int" />
+            <xs:element minOccurs="0" name="agendaTypeId" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAgendaSubjectTypeByAgendaReferenceTypeAgendaTypeDataListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q25="http://accipiens.com/Common" minOccurs="0" name="GetAgendaSubjectTypeByAgendaReferenceTypeAgendaTypeDataListResult" nillable="true" type="q25:BasicList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetStructNodeTypeByAssignedLevelAndContextDataList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q26="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="assignedLevels" nillable="true" type="q26:ArrayOfint" />
+            <xs:element xmlns:q27="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="structNodeContextIds" nillable="true" type="q27:ArrayOfint" />
+            <xs:element minOccurs="0" name="considerNullLevels" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetStructNodeTypeByAssignedLevelAndContextDataListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q28="http://accipiens.com/Common" minOccurs="0" name="GetStructNodeTypeByAssignedLevelAndContextDataListResult" nillable="true" type="q28:BasicList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetDecisionContextsForDelegatorList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="delegatorAplUserId" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetDecisionContextsForDelegatorListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q29="http://accipiens.com/Common" minOccurs="0" name="GetDecisionContextsForDelegatorListResult" nillable="true" type="q29:BasicList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetDecisionContextLevelsForDelegatorList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="delegatorAplUserId" type="xs:long" />
+            <xs:element minOccurs="0" name="delegatorDecisionContextId" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetDecisionContextLevelsForDelegatorListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q30="http://accipiens.com/Common" minOccurs="0" name="GetDecisionContextLevelsForDelegatorListResult" nillable="true" type="q30:BasicList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetDecisionContextLevelsBelowDelegatorDecisionContextLevelList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="delegatorDecisionContextLevelId" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetDecisionContextLevelsBelowDelegatorDecisionContextLevelListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q31="http://accipiens.com/Common" minOccurs="0" name="GetDecisionContextLevelsBelowDelegatorDecisionContextLevelListResult" nillable="true" type="q31:BasicList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetUsersUnderDelegatedDecisionContextLevelList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="delegatorAplUserId" type="xs:long" />
+            <xs:element minOccurs="0" name="delegatedDecisionContextLevelId" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetUsersUnderDelegatedDecisionContextLevelListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q32="http://accipiens.com/Common" minOccurs="0" name="GetUsersUnderDelegatedDecisionContextLevelListResult" nillable="true" type="q32:BasicList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetEntityGroupContextByDefaultBasicList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="entityId" nillable="true" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetEntityGroupContextByDefaultBasicListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q33="http://accipiens.com/Common" minOccurs="0" name="GetEntityGroupContextByDefaultBasicListResult" nillable="true" type="q33:BasicList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetEntityRoleTypeByEntityWithBusinessRuleBasicList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="entityId" nillable="true" type="xs:long" />
+            <xs:element minOccurs="0" name="entityTypeId" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetEntityRoleTypeByEntityWithBusinessRuleBasicListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q34="http://accipiens.com/Common" minOccurs="0" name="GetEntityRoleTypeByEntityWithBusinessRuleBasicListResult" nillable="true" type="q34:BasicList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetEntityRatingTypeWithoutSupplierAndCustomerRole">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q35="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="entitiesRoleIdsFromEntity" nillable="true" type="q35:ArrayOfint" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetEntityRatingTypeWithoutSupplierAndCustomerRoleResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q36="http://accipiens.com/Common" minOccurs="0" name="GetEntityRatingTypeWithoutSupplierAndCustomerRoleResult" nillable="true" type="q36:BasicList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetFolderStructNodeForRelatedDataList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="structNodeTypeId" type="xs:int" />
+            <xs:element minOccurs="0" name="relatedTableId" type="xs:long" />
+            <xs:element minOccurs="0" name="relatedId" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetFolderStructNodeForRelatedDataListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q37="http://accipiens.com/Common" minOccurs="0" name="GetFolderStructNodeForRelatedDataListResult" nillable="true" type="q37:BasicList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="anyType" nillable="true" type="xs:anyType" />
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI" />
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary" />
+      <xs:element name="boolean" nillable="true" type="xs:boolean" />
+      <xs:element name="byte" nillable="true" type="xs:byte" />
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="decimal" nillable="true" type="xs:decimal" />
+      <xs:element name="double" nillable="true" type="xs:double" />
+      <xs:element name="float" nillable="true" type="xs:float" />
+      <xs:element name="int" nillable="true" type="xs:int" />
+      <xs:element name="long" nillable="true" type="xs:long" />
+      <xs:element name="QName" nillable="true" type="xs:QName" />
+      <xs:element name="short" nillable="true" type="xs:short" />
+      <xs:element name="string" nillable="true" type="xs:string" />
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte" />
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt" />
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong" />
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort" />
+      <xs:element name="char" nillable="true" type="tns:char" />
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int" />
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration" />
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?" />
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S" />
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid" />
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName" />
+      <xs:attribute name="Id" type="xs:ID" />
+      <xs:attribute name="Ref" type="xs:IDREF" />
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Olissipo.Entities.Facade" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Olissipo.Entities.Facade" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xs:simpleType name="EntitiesDataListId">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="EntityType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="EntityRoleType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="EntitySuperType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="EntitySuperRole">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="EntityRelationType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="EntityEmailType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="EntityCreditType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="PhoneType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Title">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Profession">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="QualificationType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="LabourAgreementType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">12</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="ResidenceType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">13</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="HabitationType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">14</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Gender">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">15</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="GenderKind">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">16</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="LegalDocType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">17</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="EntityPosition">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">18</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="MaritalStatus">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">19</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="MaritalAgreement">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">20</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="BankAccountType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">21</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="EntityRatingType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">22</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="ActivityTypeGroup">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">23</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="StructNodeType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">24</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="StructNodeContext">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">25</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="StructNodeRelType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">26</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="ActivityTypeContext">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">27</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="AplCompany">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">28</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="InvoiceMode">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">29</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="FinancesServices">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">30</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="RegistrationServices">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">31</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="NotaryServices">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">32</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="EntityTypeProcurator">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">33</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="BankAccountSuperType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">34</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="ValidationType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">35</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="EntityBankAccount">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">36</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="AplCompanyBankAccount">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">37</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="CommunicationMedia">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">38</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="SupplierCommunicationType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">39</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="MarketSegment">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">40</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="AgendaReferenceType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">41</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="AgendaReferenceTypeWithMngt">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">42</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="AgendaContactType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">43</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="SupplierType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">44</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="EntityRegistrationScopeKind">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">45</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="AgendaSubjectType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">46</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="EntityTypeDefinitive">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">47</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="DecisionContext">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">48</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="DecisionLevel">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">49</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="AddressType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">50</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="AddressChangeType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">51</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="StreetType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">52</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="PublicPlacement">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">53</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="DynamicMapType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">54</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="CustomerType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">55</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="PaymentExclusionType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">56</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="ExclusionType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">57</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="ExclusionClass">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">58</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="EntityTypeWithPlafond">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">59</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="IncomeType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">60</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="EntityDetailEditableKind">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">61</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="EditabilityStateKind">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">62</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="PaymentRetentionReason">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">63</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="ActivityTypeInternalContext">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">64</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="ActivityTypeSelectionMode">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">65</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="BurdenType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">66</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="AplCompanyNewsType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">67</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="PercentageContext">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">68</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="EntityClassificationType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">69</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="EntityMarginShareCalculationMode">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">70</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="GarnishmentSuperType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">71</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="GarnishmentType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">72</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="EntityClassificationContextType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">73</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="SaftStatusKind">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">74</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="EntityCollectionStateType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">75</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="GroupContext">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">76</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="EntityPercentageContext">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">77</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="VehicleFineResponsibleRule">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">78</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="AgendaTypeKind">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">79</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="LegalDocMandatoryMode">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">80</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="LegalDocChangeKind">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">81</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="StructNodeManageType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">82</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="StructNodeContextForTreeManagement">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">83</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="TreeOrientationType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">84</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="LegalDocStateKind">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">85</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="LegalDocState">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">86</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="PublicSector">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">87</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="PublicSectorClass">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">88</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="EntityRatingTypeWithoutEntityRoleType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">89</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="EntityNameSplitMode">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">90</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="IncidentTypeInternalCode">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">91</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="MapDate">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">92</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="ConsentCreationMode">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">93</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="EntityRegistrationProviderRole">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">94</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="PercentageContextKind">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">95</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="EntityPercentageValueType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">96</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="ReplicatorPhase">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">97</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="StructNodeLocation">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">98</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="StructNodeTypeWithHasArchive">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">99</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="EntitiesDataListId" nillable="true" type="tns:EntitiesDataListId" />
+      <xs:simpleType name="EntitiesForeignDataListId">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="JuridicalType" />
+          <xs:enumeration value="JuridicalTypeByEntityType" />
+          <xs:enumeration value="EntityRoleType" />
+          <xs:enumeration value="EntityRoleTypeByEntitityType" />
+          <xs:enumeration value="ActivityTypeGroupElement" />
+          <xs:enumeration value="Banks" />
+          <xs:enumeration value="Agencies" />
+          <xs:enumeration value="EntityRisk" />
+          <xs:enumeration value="LocalNodes" />
+          <xs:enumeration value="PersonNodes" />
+          <xs:enumeration value="BusinessByAplCompany" />
+          <xs:enumeration value="EntityRatingTypeBySuperRole" />
+          <xs:enumeration value="EntityByEntityRoleType" />
+          <xs:enumeration value="EntityTypeBySuperType" />
+          <xs:enumeration value="AplCompanyBusinessByAplCompany" />
+          <xs:enumeration value="RelatedTypeByExclusionClass" />
+          <xs:enumeration value="GeographicalZoneByCountryId" />
+          <xs:enumeration value="AgendaSubjectTypeByAplTable" />
+          <xs:enumeration value="AgendaSubjectTypeByAgendaReferenceType" />
+          <xs:enumeration value="ActivityTypeContextByInternalContext" />
+          <xs:enumeration value="ActivityTypeContextByEntityId" />
+          <xs:enumeration value="ExternalNumbersByEntity" />
+          <xs:enumeration value="ExclusionClassByExclusionType" />
+          <xs:enumeration value="EntityCostCenterByEntity" />
+          <xs:enumeration value="EntityClassificationTypeByGroupContext" />
+          <xs:enumeration value="AplCompaniesByStructNodeId" />
+          <xs:enumeration value="EntityRoleTypeByEntity" />
+          <xs:enumeration value="AgendaSubjectTypeByAgendaType" />
+          <xs:enumeration value="CredOperAplBusinessByAplCompany" />
+          <xs:enumeration value="EntityRatingTypeByEntity" />
+          <xs:enumeration value="EntityClassificationTypeByMandatoryGroupContext" />
+          <xs:enumeration value="EntityPercentageContextByPercentageContextKind" />
+          <xs:enumeration value="AplCompanyReplicatorBySourceAplCompany" />
+          <xs:enumeration value="StructNodeContextIsTraceableByAplTable" />
+          <xs:enumeration value="StructNodeLocationByContext" />
+          <xs:enumeration value="EntityNumberNameByEntityRoleType" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="EntitiesForeignDataListId" nillable="true" type="tns:EntitiesForeignDataListId" />
+    </xs:schema>
+    <xs:schema xmlns:tns="http://accipiens.com/Common" elementFormDefault="qualified" targetNamespace="http://accipiens.com/Common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/Olissipo.Utils" />
+      <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xs:complexType name="SessionTokenWcfHeader">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CallerApplicationId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CallerMethodInfo" nillable="true" type="tns:MethodSoapHeaderInfo" />
+          <xs:element minOccurs="0" name="Culture" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DelegateUserId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="HostAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HostName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsTraceOn" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LoginName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Token" nillable="true" type="xs:string" />
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Olissipo.Utils" minOccurs="0" name="TraceLogLevel" nillable="true" type="q1:LogLevel" />
+          <xs:element minOccurs="0" name="UiCulture" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="SessionTokenWcfHeader" nillable="true" type="tns:SessionTokenWcfHeader" />
+      <xs:complexType name="MethodSoapHeaderInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CallerAplScreenId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CallerUrl" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="MethodSoapHeaderInfo" nillable="true" type="tns:MethodSoapHeaderInfo" />
+      <xs:element name="SessionToken" nillable="true" type="tns:SessionTokenWcfHeader" />
+      <xs:complexType name="BasicList">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CleanInvalidElement" type="xs:boolean" />
+          <xs:element minOccurs="0" name="List" nillable="true" type="tns:ArrayOfCodeAbbreviation" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="BasicList" nillable="true" type="tns:BasicList" />
+      <xs:complexType name="ArrayOfCodeAbbreviation">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="CodeAbbreviation" nillable="true" type="tns:CodeAbbreviation" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfCodeAbbreviation" nillable="true" type="tns:ArrayOfCodeAbbreviation" />
+      <xs:complexType name="CodeAbbreviation">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abbreviation" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FetchLevel" type="xs:int" />
+          <xs:element minOccurs="0" name="InvalidDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IsDefault" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsInvalid" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PermissionFlags" type="tns:PermissionFlags" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="CodeAbbreviation" nillable="true" type="tns:CodeAbbreviation" />
+      <xs:simpleType name="PermissionFlags">
+        <xs:list>
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="None">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:enumeration>
+              <xs:enumeration value="CanRead">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:enumeration>
+              <xs:enumeration value="CanCreate">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:enumeration>
+              <xs:enumeration value="CanModify">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:enumeration>
+              <xs:enumeration value="CanDelete">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:enumeration>
+              <xs:enumeration value="CanExecute">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">16</EnumerationValue>
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:enumeration>
+              <xs:enumeration value="CanModifyTableData">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">32</EnumerationValue>
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:list>
+      </xs:simpleType>
+      <xs:element name="PermissionFlags" nillable="true" type="tns:PermissionFlags" />
+      <xs:complexType name="AcpDetail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ErrorCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ErrorList" nillable="true" type="tns:ArrayOfBusinessError" />
+          <xs:element minOccurs="0" name="Kind" type="tns:ExceptionKind" />
+          <xs:element minOccurs="0" name="Machine" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MessageAll" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MessageAllWithTech" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OperationName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServerFolder" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServerVersion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServiceName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ToStringDetails" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="AcpDetail" nillable="true" type="tns:AcpDetail" />
+      <xs:complexType name="ArrayOfBusinessError">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="BusinessError" nillable="true" type="tns:BusinessError" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfBusinessError" nillable="true" type="tns:ArrayOfBusinessError" />
+      <xs:complexType name="BusinessError">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Context" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExtraInfo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Field" type="xs:int" />
+          <xs:element minOccurs="0" name="FieldName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HideResultCode" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RecordIndex" type="xs:int" />
+          <xs:element minOccurs="0" name="RelatedAplTableId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="RelatedId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="RelatedUrl" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Result" type="tns:ValidationResultCode" />
+          <xs:element minOccurs="0" name="RscCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RscEnumTypeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TechMsg" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Translated" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="BusinessError" nillable="true" type="tns:BusinessError" />
+      <xs:simpleType name="ValidationResultCode">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Warning" />
+          <xs:enumeration value="Error" />
+          <xs:enumeration value="Info" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="ValidationResultCode" nillable="true" type="tns:ValidationResultCode" />
+      <xs:simpleType name="ExceptionKind">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Business" />
+          <xs:enumeration value="Technical" />
+          <xs:enumeration value="System" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="ExceptionKind" nillable="true" type="tns:ExceptionKind" />
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Olissipo.Utils" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Olissipo.Utils" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xs:simpleType name="LogLevel">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="NoLevel">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="EMERGENCY">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">120000</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="FATAL">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">110000</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="ALERT">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">100000</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="CRITICAL">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">90000</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="SEVERE">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">80000</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="ERROR">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">70000</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="WARN">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">60000</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="NOTICE">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">50000</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="INFO">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">40000</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="FINE">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">30000</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="DEBUG">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">30000</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="FINER">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">20000</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="TRACE">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">20000</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="FINEST">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10000</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="VERBOSE">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10000</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="LogLevel" nillable="true" type="tns:LogLevel" />
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Olissipo.Entities.DataStructures" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Olissipo.Entities.DataStructures" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xs:simpleType name="EntitiesSuperRole">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="ClientRole">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="SupplierRole">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="BrokerRole">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="InsuranceCompanyRole">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Appraiser">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Auctioneer">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Recoverer">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Collector">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="JuridicalEntity">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Congener">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="FinancialInstitution">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Procurator">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">12</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="ServiceProvider">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">13</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="RegistrationProvider">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">14</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="OtherRoles">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">99</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="OurCompany">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">100</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="EntitiesSuperRole" nillable="true" type="tns:EntitiesSuperRole" />
+      <xs:complexType name="ArrayOfEntityRegistrationScopeKind">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="EntityRegistrationScopeKind" type="tns:EntityRegistrationScopeKind" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfEntityRegistrationScopeKind" nillable="true" type="tns:ArrayOfEntityRegistrationScopeKind" />
+      <xs:simpleType name="EntityRegistrationScopeKind">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Civilian">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Land">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Commercial">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Automobile">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="EntityRegistrationScopeKind" nillable="true" type="tns:EntityRegistrationScopeKind" />
+      <xs:complexType name="ArrayOfEntitiesSuperType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="EntitiesSuperType" type="tns:EntitiesSuperType" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfEntitiesSuperType" nillable="true" type="tns:ArrayOfEntitiesSuperType" />
+      <xs:simpleType name="EntitiesSuperType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="PersonType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="CompanyType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="PublicServicesType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="OthersType">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">99</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="EntitiesSuperType" nillable="true" type="tns:EntitiesSuperType" />
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="ArrayOfint">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="int" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfint" nillable="true" type="tns:ArrayOfint" />
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="EntitiesBasicLists_GetDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataList" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q1="http://accipiens.com/Common" name="SessionToken" element="q1:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q2="http://accipiens.com/Common" name="detail" element="q2:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetForeignDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetForeignDataList" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetForeignDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q3="http://accipiens.com/Common" name="SessionToken" element="q3:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetForeignDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetForeignDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetForeignDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q4="http://accipiens.com/Common" name="detail" element="q4:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetLegalDocEntityDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLegalDocEntityDataList" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetLegalDocEntityDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q5="http://accipiens.com/Common" name="SessionToken" element="q5:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetLegalDocEntityDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLegalDocEntityDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetLegalDocEntityDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q6="http://accipiens.com/Common" name="detail" element="q6:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetEntitiesWithSuperRoleDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntitiesWithSuperRoleDataList" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetEntitiesWithSuperRoleDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q7="http://accipiens.com/Common" name="SessionToken" element="q7:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetEntitiesWithSuperRoleDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntitiesWithSuperRoleDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetEntitiesWithSuperRoleDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q8="http://accipiens.com/Common" name="detail" element="q8:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetAplBusinessIdDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAplBusinessIdDataList" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetAplBusinessIdDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q9="http://accipiens.com/Common" name="SessionToken" element="q9:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetAplBusinessIdDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAplBusinessIdDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetAplBusinessIdDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q10="http://accipiens.com/Common" name="detail" element="q10:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetAplCompanyByBusinessIdDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAplCompanyByBusinessIdDataList" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetAplCompanyByBusinessIdDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q11="http://accipiens.com/Common" name="SessionToken" element="q11:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetAplCompanyByBusinessIdDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAplCompanyByBusinessIdDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetAplCompanyByBusinessIdDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q12="http://accipiens.com/Common" name="detail" element="q12:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetRegistrationOfficeDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegistrationOfficeDataList" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetRegistrationOfficeDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q13="http://accipiens.com/Common" name="SessionToken" element="q13:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetRegistrationOfficeDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegistrationOfficeDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetRegistrationOfficeDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q14="http://accipiens.com/Common" name="detail" element="q14:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetEntityRelationsDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityRelationsDataList" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetEntityRelationsDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q15="http://accipiens.com/Common" name="SessionToken" element="q15:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetEntityRelationsDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityRelationsDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetEntityRelationsDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q16="http://accipiens.com/Common" name="detail" element="q16:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetAplCompanyCreditorIdDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAplCompanyCreditorIdDataList" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetAplCompanyCreditorIdDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q17="http://accipiens.com/Common" name="SessionToken" element="q17:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetAplCompanyCreditorIdDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAplCompanyCreditorIdDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetAplCompanyCreditorIdDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q18="http://accipiens.com/Common" name="detail" element="q18:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetMapLineTotalByMapTypeAbrev_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMapLineTotalByMapTypeAbrev" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetMapLineTotalByMapTypeAbrev_InputMessage_Headers">
+    <wsdl:part xmlns:q19="http://accipiens.com/Common" name="SessionToken" element="q19:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetMapLineTotalByMapTypeAbrev_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMapLineTotalByMapTypeAbrevResponse" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetMapLineTotalByMapTypeAbrev_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q20="http://accipiens.com/Common" name="detail" element="q20:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetMapLineTotalByMapTypeList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMapLineTotalByMapTypeList" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetMapLineTotalByMapTypeList_InputMessage_Headers">
+    <wsdl:part xmlns:q21="http://accipiens.com/Common" name="SessionToken" element="q21:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetMapLineTotalByMapTypeList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMapLineTotalByMapTypeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetMapLineTotalByMapTypeList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q22="http://accipiens.com/Common" name="detail" element="q22:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetMapLineAggregatorByMapType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMapLineAggregatorByMapType" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetMapLineAggregatorByMapType_InputMessage_Headers">
+    <wsdl:part xmlns:q23="http://accipiens.com/Common" name="SessionToken" element="q23:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetMapLineAggregatorByMapType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMapLineAggregatorByMapTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetMapLineAggregatorByMapType_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q24="http://accipiens.com/Common" name="detail" element="q24:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetEntityTypeBySuperTypeDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityTypeBySuperTypeDataList" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetEntityTypeBySuperTypeDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q25="http://accipiens.com/Common" name="SessionToken" element="q25:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetEntityTypeBySuperTypeDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityTypeBySuperTypeDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetEntityTypeBySuperTypeDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q26="http://accipiens.com/Common" name="detail" element="q26:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetEntityDataListByEntityTypeCouncilCodeAndDistrictCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityDataListByEntityTypeCouncilCodeAndDistrictCode" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetEntityDataListByEntityTypeCouncilCodeAndDistrictCode_InputMessage_Headers">
+    <wsdl:part xmlns:q27="http://accipiens.com/Common" name="SessionToken" element="q27:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetEntityDataListByEntityTypeCouncilCodeAndDistrictCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityDataListByEntityTypeCouncilCodeAndDistrictCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetEntityDataListByEntityTypeCouncilCodeAndDistrictCode_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q28="http://accipiens.com/Common" name="detail" element="q28:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_EntityRoleTypeByEntityDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:EntityRoleTypeByEntityDataList" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_EntityRoleTypeByEntityDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q29="http://accipiens.com/Common" name="SessionToken" element="q29:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_EntityRoleTypeByEntityDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EntityRoleTypeByEntityDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_EntityRoleTypeByEntityDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q30="http://accipiens.com/Common" name="detail" element="q30:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetLegalDocTypeBasicList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLegalDocTypeBasicList" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetLegalDocTypeBasicList_InputMessage_Headers">
+    <wsdl:part xmlns:q31="http://accipiens.com/Common" name="SessionToken" element="q31:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetLegalDocTypeBasicList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLegalDocTypeBasicListResponse" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetLegalDocTypeBasicList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q32="http://accipiens.com/Common" name="detail" element="q32:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetLegalDocTypeByEntityTypeBasicList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLegalDocTypeByEntityTypeBasicList" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetLegalDocTypeByEntityTypeBasicList_InputMessage_Headers">
+    <wsdl:part xmlns:q33="http://accipiens.com/Common" name="SessionToken" element="q33:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetLegalDocTypeByEntityTypeBasicList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLegalDocTypeByEntityTypeBasicListResponse" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetLegalDocTypeByEntityTypeBasicList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q34="http://accipiens.com/Common" name="detail" element="q34:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetAgendaSubjectTypeByAgendaReferenceTypeAgendaTypeDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgendaSubjectTypeByAgendaReferenceTypeAgendaTypeDataList" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetAgendaSubjectTypeByAgendaReferenceTypeAgendaTypeDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q35="http://accipiens.com/Common" name="SessionToken" element="q35:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetAgendaSubjectTypeByAgendaReferenceTypeAgendaTypeDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgendaSubjectTypeByAgendaReferenceTypeAgendaTypeDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetAgendaSubjectTypeByAgendaReferenceTypeAgendaTypeDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q36="http://accipiens.com/Common" name="detail" element="q36:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetStructNodeTypeByAssignedLevelAndContextDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStructNodeTypeByAssignedLevelAndContextDataList" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetStructNodeTypeByAssignedLevelAndContextDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q37="http://accipiens.com/Common" name="SessionToken" element="q37:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetStructNodeTypeByAssignedLevelAndContextDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStructNodeTypeByAssignedLevelAndContextDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetStructNodeTypeByAssignedLevelAndContextDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q38="http://accipiens.com/Common" name="detail" element="q38:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetDecisionContextsForDelegatorList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDecisionContextsForDelegatorList" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetDecisionContextsForDelegatorList_InputMessage_Headers">
+    <wsdl:part xmlns:q39="http://accipiens.com/Common" name="SessionToken" element="q39:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetDecisionContextsForDelegatorList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDecisionContextsForDelegatorListResponse" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetDecisionContextsForDelegatorList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q40="http://accipiens.com/Common" name="detail" element="q40:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetDecisionContextLevelsForDelegatorList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDecisionContextLevelsForDelegatorList" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetDecisionContextLevelsForDelegatorList_InputMessage_Headers">
+    <wsdl:part xmlns:q41="http://accipiens.com/Common" name="SessionToken" element="q41:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetDecisionContextLevelsForDelegatorList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDecisionContextLevelsForDelegatorListResponse" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetDecisionContextLevelsForDelegatorList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q42="http://accipiens.com/Common" name="detail" element="q42:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetDecisionContextLevelsBelowDelegatorDecisionContextLevelList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDecisionContextLevelsBelowDelegatorDecisionContextLevelList" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetDecisionContextLevelsBelowDelegatorDecisionContextLevelList_InputMessage_Headers">
+    <wsdl:part xmlns:q43="http://accipiens.com/Common" name="SessionToken" element="q43:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetDecisionContextLevelsBelowDelegatorDecisionContextLevelList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDecisionContextLevelsBelowDelegatorDecisionContextLevelListResponse" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetDecisionContextLevelsBelowDelegatorDecisionContextLevelList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q44="http://accipiens.com/Common" name="detail" element="q44:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetUsersUnderDelegatedDecisionContextLevelList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersUnderDelegatedDecisionContextLevelList" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetUsersUnderDelegatedDecisionContextLevelList_InputMessage_Headers">
+    <wsdl:part xmlns:q45="http://accipiens.com/Common" name="SessionToken" element="q45:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetUsersUnderDelegatedDecisionContextLevelList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersUnderDelegatedDecisionContextLevelListResponse" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetUsersUnderDelegatedDecisionContextLevelList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q46="http://accipiens.com/Common" name="detail" element="q46:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetEntityGroupContextByDefaultBasicList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityGroupContextByDefaultBasicList" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetEntityGroupContextByDefaultBasicList_InputMessage_Headers">
+    <wsdl:part xmlns:q47="http://accipiens.com/Common" name="SessionToken" element="q47:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetEntityGroupContextByDefaultBasicList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityGroupContextByDefaultBasicListResponse" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetEntityGroupContextByDefaultBasicList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q48="http://accipiens.com/Common" name="detail" element="q48:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetEntityRoleTypeByEntityWithBusinessRuleBasicList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityRoleTypeByEntityWithBusinessRuleBasicList" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetEntityRoleTypeByEntityWithBusinessRuleBasicList_InputMessage_Headers">
+    <wsdl:part xmlns:q49="http://accipiens.com/Common" name="SessionToken" element="q49:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetEntityRoleTypeByEntityWithBusinessRuleBasicList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityRoleTypeByEntityWithBusinessRuleBasicListResponse" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetEntityRoleTypeByEntityWithBusinessRuleBasicList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q50="http://accipiens.com/Common" name="detail" element="q50:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetEntityRatingTypeWithoutSupplierAndCustomerRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityRatingTypeWithoutSupplierAndCustomerRole" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetEntityRatingTypeWithoutSupplierAndCustomerRole_InputMessage_Headers">
+    <wsdl:part xmlns:q51="http://accipiens.com/Common" name="SessionToken" element="q51:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetEntityRatingTypeWithoutSupplierAndCustomerRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityRatingTypeWithoutSupplierAndCustomerRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetEntityRatingTypeWithoutSupplierAndCustomerRole_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q52="http://accipiens.com/Common" name="detail" element="q52:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetFolderStructNodeForRelatedDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFolderStructNodeForRelatedDataList" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetFolderStructNodeForRelatedDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q53="http://accipiens.com/Common" name="SessionToken" element="q53:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetFolderStructNodeForRelatedDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFolderStructNodeForRelatedDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="EntitiesBasicLists_GetFolderStructNodeForRelatedDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q54="http://accipiens.com/Common" name="detail" element="q54:AcpDetail" />
+  </wsdl:message>
+  <wsdl:portType name="EntitiesBasicLists">
+    <wsdl:operation name="GetDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetDataList" message="tns:EntitiesBasicLists_GetDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetDataListResponse" message="tns:EntitiesBasicLists_GetDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:EntitiesBasicLists_GetDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetForeignDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetForeignDataList" message="tns:EntitiesBasicLists_GetForeignDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetForeignDataListResponse" message="tns:EntitiesBasicLists_GetForeignDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:EntitiesBasicLists_GetForeignDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegalDocEntityDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetLegalDocEntityDataList" message="tns:EntitiesBasicLists_GetLegalDocEntityDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetLegalDocEntityDataListResponse" message="tns:EntitiesBasicLists_GetLegalDocEntityDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:EntitiesBasicLists_GetLegalDocEntityDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntitiesWithSuperRoleDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetEntitiesWithSuperRoleDataList" message="tns:EntitiesBasicLists_GetEntitiesWithSuperRoleDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetEntitiesWithSuperRoleDataListResponse" message="tns:EntitiesBasicLists_GetEntitiesWithSuperRoleDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:EntitiesBasicLists_GetEntitiesWithSuperRoleDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAplBusinessIdDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetAplBusinessIdDataList" message="tns:EntitiesBasicLists_GetAplBusinessIdDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetAplBusinessIdDataListResponse" message="tns:EntitiesBasicLists_GetAplBusinessIdDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:EntitiesBasicLists_GetAplBusinessIdDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAplCompanyByBusinessIdDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetAplCompanyByBusinessIdDataList" message="tns:EntitiesBasicLists_GetAplCompanyByBusinessIdDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetAplCompanyByBusinessIdDataListResponse" message="tns:EntitiesBasicLists_GetAplCompanyByBusinessIdDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:EntitiesBasicLists_GetAplCompanyByBusinessIdDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegistrationOfficeDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetRegistrationOfficeDataList" message="tns:EntitiesBasicLists_GetRegistrationOfficeDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetRegistrationOfficeDataListResponse" message="tns:EntitiesBasicLists_GetRegistrationOfficeDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:EntitiesBasicLists_GetRegistrationOfficeDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityRelationsDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetEntityRelationsDataList" message="tns:EntitiesBasicLists_GetEntityRelationsDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetEntityRelationsDataListResponse" message="tns:EntitiesBasicLists_GetEntityRelationsDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:EntitiesBasicLists_GetEntityRelationsDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAplCompanyCreditorIdDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetAplCompanyCreditorIdDataList" message="tns:EntitiesBasicLists_GetAplCompanyCreditorIdDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetAplCompanyCreditorIdDataListResponse" message="tns:EntitiesBasicLists_GetAplCompanyCreditorIdDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:EntitiesBasicLists_GetAplCompanyCreditorIdDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMapLineTotalByMapTypeAbrev">
+      <wsdl:input wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetMapLineTotalByMapTypeAbrev" message="tns:EntitiesBasicLists_GetMapLineTotalByMapTypeAbrev_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetMapLineTotalByMapTypeAbrevResponse" message="tns:EntitiesBasicLists_GetMapLineTotalByMapTypeAbrev_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:EntitiesBasicLists_GetMapLineTotalByMapTypeAbrev_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMapLineTotalByMapTypeList">
+      <wsdl:input wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetMapLineTotalByMapTypeList" message="tns:EntitiesBasicLists_GetMapLineTotalByMapTypeList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetMapLineTotalByMapTypeListResponse" message="tns:EntitiesBasicLists_GetMapLineTotalByMapTypeList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:EntitiesBasicLists_GetMapLineTotalByMapTypeList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMapLineAggregatorByMapType">
+      <wsdl:input wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetMapLineAggregatorByMapType" message="tns:EntitiesBasicLists_GetMapLineAggregatorByMapType_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetMapLineAggregatorByMapTypeResponse" message="tns:EntitiesBasicLists_GetMapLineAggregatorByMapType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:EntitiesBasicLists_GetMapLineAggregatorByMapType_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityTypeBySuperTypeDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetEntityTypeBySuperTypeDataList" message="tns:EntitiesBasicLists_GetEntityTypeBySuperTypeDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetEntityTypeBySuperTypeDataListResponse" message="tns:EntitiesBasicLists_GetEntityTypeBySuperTypeDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:EntitiesBasicLists_GetEntityTypeBySuperTypeDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityDataListByEntityTypeCouncilCodeAndDistrictCode">
+      <wsdl:input wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetEntityDataListByEntityTypeCouncilCodeAndDistrictCode" message="tns:EntitiesBasicLists_GetEntityDataListByEntityTypeCouncilCodeAndDistrictCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetEntityDataListByEntityTypeCouncilCodeAndDistrictCodeResponse" message="tns:EntitiesBasicLists_GetEntityDataListByEntityTypeCouncilCodeAndDistrictCode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:EntitiesBasicLists_GetEntityDataListByEntityTypeCouncilCodeAndDistrictCode_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EntityRoleTypeByEntityDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/EntitiesBasicLists/EntityRoleTypeByEntityDataList" message="tns:EntitiesBasicLists_EntityRoleTypeByEntityDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/EntitiesBasicLists/EntityRoleTypeByEntityDataListResponse" message="tns:EntitiesBasicLists_EntityRoleTypeByEntityDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:EntitiesBasicLists_EntityRoleTypeByEntityDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegalDocTypeBasicList">
+      <wsdl:input wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetLegalDocTypeBasicList" message="tns:EntitiesBasicLists_GetLegalDocTypeBasicList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetLegalDocTypeBasicListResponse" message="tns:EntitiesBasicLists_GetLegalDocTypeBasicList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:EntitiesBasicLists_GetLegalDocTypeBasicList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegalDocTypeByEntityTypeBasicList">
+      <wsdl:input wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetLegalDocTypeByEntityTypeBasicList" message="tns:EntitiesBasicLists_GetLegalDocTypeByEntityTypeBasicList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetLegalDocTypeByEntityTypeBasicListResponse" message="tns:EntitiesBasicLists_GetLegalDocTypeByEntityTypeBasicList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:EntitiesBasicLists_GetLegalDocTypeByEntityTypeBasicList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgendaSubjectTypeByAgendaReferenceTypeAgendaTypeDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetAgendaSubjectTypeByAgendaReferenceTypeAgendaTypeDataList" message="tns:EntitiesBasicLists_GetAgendaSubjectTypeByAgendaReferenceTypeAgendaTypeDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetAgendaSubjectTypeByAgendaReferenceTypeAgendaTypeDataListResponse" message="tns:EntitiesBasicLists_GetAgendaSubjectTypeByAgendaReferenceTypeAgendaTypeDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:EntitiesBasicLists_GetAgendaSubjectTypeByAgendaReferenceTypeAgendaTypeDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStructNodeTypeByAssignedLevelAndContextDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetStructNodeTypeByAssignedLevelAndContextDataList" message="tns:EntitiesBasicLists_GetStructNodeTypeByAssignedLevelAndContextDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetStructNodeTypeByAssignedLevelAndContextDataListResponse" message="tns:EntitiesBasicLists_GetStructNodeTypeByAssignedLevelAndContextDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:EntitiesBasicLists_GetStructNodeTypeByAssignedLevelAndContextDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDecisionContextsForDelegatorList">
+      <wsdl:input wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetDecisionContextsForDelegatorList" message="tns:EntitiesBasicLists_GetDecisionContextsForDelegatorList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetDecisionContextsForDelegatorListResponse" message="tns:EntitiesBasicLists_GetDecisionContextsForDelegatorList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:EntitiesBasicLists_GetDecisionContextsForDelegatorList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDecisionContextLevelsForDelegatorList">
+      <wsdl:input wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetDecisionContextLevelsForDelegatorList" message="tns:EntitiesBasicLists_GetDecisionContextLevelsForDelegatorList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetDecisionContextLevelsForDelegatorListResponse" message="tns:EntitiesBasicLists_GetDecisionContextLevelsForDelegatorList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:EntitiesBasicLists_GetDecisionContextLevelsForDelegatorList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDecisionContextLevelsBelowDelegatorDecisionContextLevelList">
+      <wsdl:input wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetDecisionContextLevelsBelowDelegatorDecisionContextLevelList" message="tns:EntitiesBasicLists_GetDecisionContextLevelsBelowDelegatorDecisionContextLevelList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetDecisionContextLevelsBelowDelegatorDecisionContextLevelListResponse" message="tns:EntitiesBasicLists_GetDecisionContextLevelsBelowDelegatorDecisionContextLevelList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:EntitiesBasicLists_GetDecisionContextLevelsBelowDelegatorDecisionContextLevelList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersUnderDelegatedDecisionContextLevelList">
+      <wsdl:input wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetUsersUnderDelegatedDecisionContextLevelList" message="tns:EntitiesBasicLists_GetUsersUnderDelegatedDecisionContextLevelList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetUsersUnderDelegatedDecisionContextLevelListResponse" message="tns:EntitiesBasicLists_GetUsersUnderDelegatedDecisionContextLevelList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:EntitiesBasicLists_GetUsersUnderDelegatedDecisionContextLevelList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityGroupContextByDefaultBasicList">
+      <wsdl:input wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetEntityGroupContextByDefaultBasicList" message="tns:EntitiesBasicLists_GetEntityGroupContextByDefaultBasicList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetEntityGroupContextByDefaultBasicListResponse" message="tns:EntitiesBasicLists_GetEntityGroupContextByDefaultBasicList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:EntitiesBasicLists_GetEntityGroupContextByDefaultBasicList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityRoleTypeByEntityWithBusinessRuleBasicList">
+      <wsdl:input wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetEntityRoleTypeByEntityWithBusinessRuleBasicList" message="tns:EntitiesBasicLists_GetEntityRoleTypeByEntityWithBusinessRuleBasicList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetEntityRoleTypeByEntityWithBusinessRuleBasicListResponse" message="tns:EntitiesBasicLists_GetEntityRoleTypeByEntityWithBusinessRuleBasicList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:EntitiesBasicLists_GetEntityRoleTypeByEntityWithBusinessRuleBasicList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityRatingTypeWithoutSupplierAndCustomerRole">
+      <wsdl:input wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetEntityRatingTypeWithoutSupplierAndCustomerRole" message="tns:EntitiesBasicLists_GetEntityRatingTypeWithoutSupplierAndCustomerRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetEntityRatingTypeWithoutSupplierAndCustomerRoleResponse" message="tns:EntitiesBasicLists_GetEntityRatingTypeWithoutSupplierAndCustomerRole_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:EntitiesBasicLists_GetEntityRatingTypeWithoutSupplierAndCustomerRole_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderStructNodeForRelatedDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetFolderStructNodeForRelatedDataList" message="tns:EntitiesBasicLists_GetFolderStructNodeForRelatedDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/EntitiesBasicLists/GetFolderStructNodeForRelatedDataListResponse" message="tns:EntitiesBasicLists_GetFolderStructNodeForRelatedDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:EntitiesBasicLists_GetFolderStructNodeForRelatedDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CustomBinding_EntitiesBasicLists" type="tns:EntitiesBasicLists">
+    <wsp:PolicyReference URI="#CustomBinding_EntitiesBasicLists_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDataList">
+      <soap12:operation soapAction="http://accipiens.com/EntitiesBasicLists/GetDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:EntitiesBasicLists_GetDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetForeignDataList">
+      <soap12:operation soapAction="http://accipiens.com/EntitiesBasicLists/GetForeignDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:EntitiesBasicLists_GetForeignDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegalDocEntityDataList">
+      <soap12:operation soapAction="http://accipiens.com/EntitiesBasicLists/GetLegalDocEntityDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:EntitiesBasicLists_GetLegalDocEntityDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntitiesWithSuperRoleDataList">
+      <soap12:operation soapAction="http://accipiens.com/EntitiesBasicLists/GetEntitiesWithSuperRoleDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:EntitiesBasicLists_GetEntitiesWithSuperRoleDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAplBusinessIdDataList">
+      <soap12:operation soapAction="http://accipiens.com/EntitiesBasicLists/GetAplBusinessIdDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:EntitiesBasicLists_GetAplBusinessIdDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAplCompanyByBusinessIdDataList">
+      <soap12:operation soapAction="http://accipiens.com/EntitiesBasicLists/GetAplCompanyByBusinessIdDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:EntitiesBasicLists_GetAplCompanyByBusinessIdDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegistrationOfficeDataList">
+      <soap12:operation soapAction="http://accipiens.com/EntitiesBasicLists/GetRegistrationOfficeDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:EntitiesBasicLists_GetRegistrationOfficeDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityRelationsDataList">
+      <soap12:operation soapAction="http://accipiens.com/EntitiesBasicLists/GetEntityRelationsDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:EntitiesBasicLists_GetEntityRelationsDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAplCompanyCreditorIdDataList">
+      <soap12:operation soapAction="http://accipiens.com/EntitiesBasicLists/GetAplCompanyCreditorIdDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:EntitiesBasicLists_GetAplCompanyCreditorIdDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMapLineTotalByMapTypeAbrev">
+      <soap12:operation soapAction="http://accipiens.com/EntitiesBasicLists/GetMapLineTotalByMapTypeAbrev" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:EntitiesBasicLists_GetMapLineTotalByMapTypeAbrev_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMapLineTotalByMapTypeList">
+      <soap12:operation soapAction="http://accipiens.com/EntitiesBasicLists/GetMapLineTotalByMapTypeList" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:EntitiesBasicLists_GetMapLineTotalByMapTypeList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMapLineAggregatorByMapType">
+      <soap12:operation soapAction="http://accipiens.com/EntitiesBasicLists/GetMapLineAggregatorByMapType" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:EntitiesBasicLists_GetMapLineAggregatorByMapType_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityTypeBySuperTypeDataList">
+      <soap12:operation soapAction="http://accipiens.com/EntitiesBasicLists/GetEntityTypeBySuperTypeDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:EntitiesBasicLists_GetEntityTypeBySuperTypeDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityDataListByEntityTypeCouncilCodeAndDistrictCode">
+      <soap12:operation soapAction="http://accipiens.com/EntitiesBasicLists/GetEntityDataListByEntityTypeCouncilCodeAndDistrictCode" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:EntitiesBasicLists_GetEntityDataListByEntityTypeCouncilCodeAndDistrictCode_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="EntityRoleTypeByEntityDataList">
+      <soap12:operation soapAction="http://accipiens.com/EntitiesBasicLists/EntityRoleTypeByEntityDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:EntitiesBasicLists_EntityRoleTypeByEntityDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegalDocTypeBasicList">
+      <soap12:operation soapAction="http://accipiens.com/EntitiesBasicLists/GetLegalDocTypeBasicList" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:EntitiesBasicLists_GetLegalDocTypeBasicList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegalDocTypeByEntityTypeBasicList">
+      <soap12:operation soapAction="http://accipiens.com/EntitiesBasicLists/GetLegalDocTypeByEntityTypeBasicList" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:EntitiesBasicLists_GetLegalDocTypeByEntityTypeBasicList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgendaSubjectTypeByAgendaReferenceTypeAgendaTypeDataList">
+      <soap12:operation soapAction="http://accipiens.com/EntitiesBasicLists/GetAgendaSubjectTypeByAgendaReferenceTypeAgendaTypeDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:EntitiesBasicLists_GetAgendaSubjectTypeByAgendaReferenceTypeAgendaTypeDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetStructNodeTypeByAssignedLevelAndContextDataList">
+      <soap12:operation soapAction="http://accipiens.com/EntitiesBasicLists/GetStructNodeTypeByAssignedLevelAndContextDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:EntitiesBasicLists_GetStructNodeTypeByAssignedLevelAndContextDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDecisionContextsForDelegatorList">
+      <soap12:operation soapAction="http://accipiens.com/EntitiesBasicLists/GetDecisionContextsForDelegatorList" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:EntitiesBasicLists_GetDecisionContextsForDelegatorList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDecisionContextLevelsForDelegatorList">
+      <soap12:operation soapAction="http://accipiens.com/EntitiesBasicLists/GetDecisionContextLevelsForDelegatorList" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:EntitiesBasicLists_GetDecisionContextLevelsForDelegatorList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDecisionContextLevelsBelowDelegatorDecisionContextLevelList">
+      <soap12:operation soapAction="http://accipiens.com/EntitiesBasicLists/GetDecisionContextLevelsBelowDelegatorDecisionContextLevelList" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:EntitiesBasicLists_GetDecisionContextLevelsBelowDelegatorDecisionContextLevelList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersUnderDelegatedDecisionContextLevelList">
+      <soap12:operation soapAction="http://accipiens.com/EntitiesBasicLists/GetUsersUnderDelegatedDecisionContextLevelList" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:EntitiesBasicLists_GetUsersUnderDelegatedDecisionContextLevelList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityGroupContextByDefaultBasicList">
+      <soap12:operation soapAction="http://accipiens.com/EntitiesBasicLists/GetEntityGroupContextByDefaultBasicList" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:EntitiesBasicLists_GetEntityGroupContextByDefaultBasicList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityRoleTypeByEntityWithBusinessRuleBasicList">
+      <soap12:operation soapAction="http://accipiens.com/EntitiesBasicLists/GetEntityRoleTypeByEntityWithBusinessRuleBasicList" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:EntitiesBasicLists_GetEntityRoleTypeByEntityWithBusinessRuleBasicList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityRatingTypeWithoutSupplierAndCustomerRole">
+      <soap12:operation soapAction="http://accipiens.com/EntitiesBasicLists/GetEntityRatingTypeWithoutSupplierAndCustomerRole" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:EntitiesBasicLists_GetEntityRatingTypeWithoutSupplierAndCustomerRole_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderStructNodeForRelatedDataList">
+      <soap12:operation soapAction="http://accipiens.com/EntitiesBasicLists/GetFolderStructNodeForRelatedDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:EntitiesBasicLists_GetFolderStructNodeForRelatedDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EntitiesBasicLists">
+    <wsdl:port name="CustomBinding_EntitiesBasicLists" binding="tns:CustomBinding_EntitiesBasicLists">
+      <soap12:address location="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/BasicLists/EntitiesBasicLists.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/BasicLists/EntitiesBasicLists.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>eb@vantyx.lan</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

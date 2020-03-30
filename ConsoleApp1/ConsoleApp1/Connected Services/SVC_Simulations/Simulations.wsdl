@@ -1,0 +1,1329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://accipiens.com" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Simulations" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="CustomBinding_Simulations_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <http:NtlmAuthentication xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://accipiens.com" location="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="CustomBinding_Simulations" type="i0:Simulations">
+    <wsp:PolicyReference URI="#CustomBinding_Simulations_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ExposeSimulationsTypes">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/ExposeSimulationsTypes" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_ExposeSimulationsTypes_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertIntToEnumFinInitialEntryTypeKind">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/ConvertIntToEnumFinInitialEntryTypeKind" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_ConvertIntToEnumFinInitialEntryTypeKind_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumFinInitialEntryTypeKind">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/ConvertToEnumFinInitialEntryTypeKind" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_ConvertToEnumFinInitialEntryTypeKind_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinInitialEntryTypeKindEnumValue">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinInitialEntryTypeKindEnumValue" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinInitialEntryTypeKindEnumValue_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertIntToEnumUserInputField">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/ConvertIntToEnumUserInputField" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_ConvertIntToEnumUserInputField_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumUserInputField">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/ConvertToEnumUserInputField" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_ConvertToEnumUserInputField_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInputFieldEnumValue">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetUserInputFieldEnumValue" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetUserInputFieldEnumValue_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertIntToEnumEventKind">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/ConvertIntToEnumEventKind" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_ConvertIntToEnumEventKind_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumEventKind">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/ConvertToEnumEventKind" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_ConvertToEnumEventKind_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventKindEnumValue">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetEventKindEnumValue" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetEventKindEnumValue_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumFinSymbolProdInternalState">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/ConvertToEnumFinSymbolProdInternalState" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_ConvertToEnumFinSymbolProdInternalState_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinSymbolProdInternalStateEnumValue">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinSymbolProdInternalStateEnumValue" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinSymbolProdInternalStateEnumValue_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinMatrixInitialState">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinMatrixInitialState" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinMatrixInitialState_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinMatrixTransitionList">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinMatrixTransitionList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinMatrixTransitionList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinMatrixAutomatonHistory">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinMatrixAutomatonHistory" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinMatrixAutomatonHistory_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DoFinMatrixTransition">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/DoFinMatrixTransition" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_DoFinMatrixTransition_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancialProductInitialState">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinancialProductInitialState" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinancialProductInitialState_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancialProductTransitionList">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinancialProductTransitionList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinancialProductTransitionList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancialProductAutomatonHistory">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinancialProductAutomatonHistory" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinancialProductAutomatonHistory_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DoFinancialProductTransition">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/DoFinancialProductTransition" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_DoFinancialProductTransition_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FinancialProductIsInState">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/FinancialProductIsInState" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_FinancialProductIsInState_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinSymbolProdInitialState">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinSymbolProdInitialState" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinSymbolProdInitialState_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinSymbolProdTransitionList">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinSymbolProdTransitionList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinSymbolProdTransitionList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinSymbolProdAutomatonHistory">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinSymbolProdAutomatonHistory" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinSymbolProdAutomatonHistory_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DoFinSymbolProdTransition">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/DoFinSymbolProdTransition" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_DoFinSymbolProdTransition_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FinSymbolProdIsActive">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/FinSymbolProdIsActive" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_FinSymbolProdIsActive_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateRentsCalendar">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/CalculateRentsCalendar" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_CalculateRentsCalendar_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="QtdOfFlowsMissingToEnd">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/QtdOfFlowsMissingToEnd" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_QtdOfFlowsMissingToEnd_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransferDate">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetTransferDate" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetTransferDate_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateDefaultRateValue">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/CalculateDefaultRateValue" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_CalculateDefaultRateValue_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDefaultSpread">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetDefaultSpread" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetDefaultSpread_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancialProductImporterByImporterAndFinancialProduct">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinancialProductImporterByImporterAndFinancialProduct" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinancialProductImporterByImporterAndFinancialProduct_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDefaultFinProductImporterByFinancialProductId">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetDefaultFinProductImporterByFinancialProductId" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetDefaultFinProductImporterByFinancialProductId_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEnumOfFinSymbol">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetEnumOfFinSymbol" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetEnumOfFinSymbol_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="OptimizeFinancialProducts">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/OptimizeFinancialProducts" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_OptimizeFinancialProducts_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="IsSymbolBranchEntity">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/IsSymbolBranchEntity" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_IsSymbolBranchEntity_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateFinancialProduct">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/ValidateFinancialProduct" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_ValidateFinancialProduct_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="IsFinSymbolSpecialType">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/IsFinSymbolSpecialType" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_IsFinSymbolSpecialType_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductSymbolsUserBehaviour">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetProductSymbolsUserBehaviour" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetProductSymbolsUserBehaviour_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductInputSymbolList">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetProductInputSymbolList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetProductInputSymbolList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductSymbolValueConditionsLimits">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetProductSymbolValueConditionsLimits" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetProductSymbolValueConditionsLimits_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductRestrictionLimits">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetProductRestrictionLimits" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetProductRestrictionLimits_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductSymbolsDependencies">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetProductSymbolsDependencies" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetProductSymbolsDependencies_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNextExternalFinSymbolId">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetNextExternalFinSymbolId" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetNextExternalFinSymbolId_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsuranceTypeDefault">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetInsuranceTypeDefault" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetInsuranceTypeDefault_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsuranceTypeDefaultOnCredOper">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetInsuranceTypeDefaultOnCredOper" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetInsuranceTypeDefaultOnCredOper_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateFinMatrixCells">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/CalculateFinMatrixCells" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_CalculateFinMatrixCells_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinMatrixCells">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinMatrixCells" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinMatrixCells_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveFinMatrixByOwnerId">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetActiveFinMatrixByOwnerId" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetActiveFinMatrixByOwnerId_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/Ping" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_Ping_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumFinProductVersionCalcMode">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/ConvertToEnumFinProductVersionCalcMode" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_ConvertToEnumFinProductVersionCalcMode_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinProductVersionCalcModeEnumValue">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinProductVersionCalcModeEnumValue" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinProductVersionCalcModeEnumValue_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumValueCalcState">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/ConvertToEnumValueCalcState" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_ConvertToEnumValueCalcState_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetValueCalcStateEnumValue">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetValueCalcStateEnumValue" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetValueCalcStateEnumValue_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumAddToMaxValueType">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/ConvertToEnumAddToMaxValueType" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_ConvertToEnumAddToMaxValueType_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAddToMaxValueTypeEnumValue">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetAddToMaxValueTypeEnumValue" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetAddToMaxValueTypeEnumValue_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumPaymentBehaviourKind">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/ConvertToEnumPaymentBehaviourKind" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_ConvertToEnumPaymentBehaviourKind_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentBehaviourKindEnumValue">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetPaymentBehaviourKindEnumValue" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetPaymentBehaviourKindEnumValue_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSimulationsClassContext">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetSimulationsClassContext" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetSimulationsClassContext_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SearchSimulations">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/SearchSimulations" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_SearchSimulations_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAcceleratorPeriodTypeByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetAcceleratorPeriodTypeByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetAcceleratorPeriodTypeByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAcceleratorTypeByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetAcceleratorTypeByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetAcceleratorTypeByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancialProductByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinancialProductByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinancialProductByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancialProductCategoryByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinancialProductCategoryByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinancialProductCategoryByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancialProductChannelByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinancialProductChannelByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinancialProductChannelByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancialProductCredOperTypeByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinancialProductCredOperTypeByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinancialProductCredOperTypeByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancialProductIdentifierByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinancialProductIdentifierByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinancialProductIdentifierByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancialProductImporterByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinancialProductImporterByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinancialProductImporterByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancialProductPurposeTypeByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinancialProductPurposeTypeByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinancialProductPurposeTypeByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinBaseByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinBaseByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinBaseByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinBaseSymbolByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinBaseSymbolByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinBaseSymbolByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinConditionsByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinConditionsByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinConditionsByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinConditionsFlowsByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinConditionsFlowsByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinConditionsFlowsByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinConditionsLogByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinConditionsLogByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinConditionsLogByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinConditionsRateByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinConditionsRateByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinConditionsRateByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinInitialEntryTypeByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinInitialEntryTypeByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinInitialEntryTypeByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinInitialExpenseByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinInitialExpenseByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinInitialExpenseByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinMatrixByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinMatrixByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinMatrixByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinMatrixItemByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinMatrixItemByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinMatrixItemByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinMatrixItemGroupByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinMatrixItemGroupByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinMatrixItemGroupByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinProdConditionsFlowByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinProdConditionsFlowByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinProdConditionsFlowByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinProdIdentifierListByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinProdIdentifierListByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinProdIdentifierListByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinProdRestrictionByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinProdRestrictionByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinProdRestrictionByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinProdRestrictionListByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinProdRestrictionListByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinProdRestrictionListByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinProdSymbolListByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinProdSymbolListByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinProdSymbolListByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinSymbolByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinSymbolByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinSymbolByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinSymbolProdByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinSymbolProdByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinSymbolProdByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinSymbolProdConditionByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinSymbolProdConditionByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinSymbolProdConditionByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinSymbolProdValueByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinSymbolProdValueByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinSymbolProdValueByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinSymbolProdValueConditionByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinSymbolProdValueConditionByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinSymbolProdValueConditionByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinSymbolRestrictionByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinSymbolRestrictionByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinSymbolRestrictionByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinSymbolValueByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetFinSymbolValueByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetFinSymbolValueByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentBehaviourTypeByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetPaymentBehaviourTypeByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetPaymentBehaviourTypeByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuotationIrregularityByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetQuotationIrregularityByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetQuotationIrregularityByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuotationIrregularityTypeByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetQuotationIrregularityTypeByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetQuotationIrregularityTypeByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSimulations">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/SaveSimulations" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_SaveSimulations_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSimulationsV2">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/SaveSimulationsV2" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_SaveSimulationsV2_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSimulationsClassTableId">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetSimulationsClassTableId" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetSimulationsClassTableId_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSimulationsTableId">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/GetSimulationsTableId" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_GetSimulationsTableId_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SearchSimulationsConfig">
+      <soap12:operation soapAction="http://accipiens.com/Simulations/SearchSimulationsConfig" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Simulations_SearchSimulationsConfig_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Simulations">
+    <wsdl:port name="CustomBinding_Simulations" binding="tns:CustomBinding_Simulations">
+      <soap12:address location="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>eb@vantyx.lan</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

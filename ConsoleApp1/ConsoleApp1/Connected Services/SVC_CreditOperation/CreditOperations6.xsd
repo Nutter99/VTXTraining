@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://accipiens.com/OperationsManagement" elementFormDefault="qualified" targetNamespace="http://accipiens.com/OperationsManagement" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/CreditOperations.svc?xsd=xsd8" namespace="http://accipiens.com/AcpFramework" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/CreditOperations.svc?xsd=xsd26" namespace="http://schemas.datacontract.org/2004/07/Olissipo.OperationsManagement.DataStructures" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/CreditOperations.svc?xsd=xsd2" namespace="http://accipiens.com/Common" />
+  <xs:complexType name="ArrayOfInvoicedElement">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InvoicedElement" nillable="true" type="tns:InvoicedElement" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInvoicedElement" nillable="true" type="tns:ArrayOfInvoicedElement" />
+  <xs:complexType name="InvoicedElement">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AmountInvoiced" nillable="true" type="xs:decimal" />
+      <xs:element xmlns:q1="http://accipiens.com/AcpFramework" minOccurs="0" name="AplFlowClassType" type="q1:AplFlowClassKind" />
+      <xs:element minOccurs="0" name="ElementId" type="xs:long" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Olissipo.OperationsManagement.DataStructures" minOccurs="0" name="FlowClassKind" type="q2:InvoiceFlowClassKind" />
+      <xs:element minOccurs="0" name="FlowNumber" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="InvoiceCurrencyId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RentTaxNotInvoiced" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TaxAmountInvoiced" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InvoicedElement" nillable="true" type="tns:InvoicedElement" />
+  <xs:complexType name="VehicleFineKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://accipiens.com/Common" base="q3:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VehicleFineKey" nillable="true" type="tns:VehicleFineKey" />
+</xs:schema>

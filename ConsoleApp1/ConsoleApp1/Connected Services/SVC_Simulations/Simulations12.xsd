@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://accipiens.com/AcpFramework" elementFormDefault="qualified" targetNamespace="http://accipiens.com/AcpFramework" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?xsd=xsd3" namespace="http://accipiens.com/Common" />
+  <xs:complexType name="PaymentDataInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Account" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AgencyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AplBankAccountId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="BankName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Bban" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataFormat" nillable="true" type="tns:BankAccountDataFormat" />
+      <xs:element minOccurs="0" name="Iban" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsRecurring" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Reference" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Reference2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Reference3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Swift" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PaymentDataInfo" nillable="true" type="tns:PaymentDataInfo" />
+  <xs:simpleType name="BankAccountDataFormat">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Bban" />
+      <xs:enumeration value="Iban" />
+      <xs:enumeration value="SwiftIban" />
+      <xs:enumeration value="SwiftBankNameAccount" />
+      <xs:enumeration value="BbanReference" />
+      <xs:enumeration value="Reference" />
+      <xs:enumeration value="SwiftIbanReferenceIsRecurring" />
+      <xs:enumeration value="SwiftBankNameAccountAgencyName" />
+      <xs:enumeration value="AccountReferenceRef2Ref3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="BankAccountDataFormat" nillable="true" type="tns:BankAccountDataFormat" />
+  <xs:complexType name="ArrayOfWorkPeriodOwnerItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WorkPeriodOwnerItem" nillable="true" type="tns:WorkPeriodOwnerItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWorkPeriodOwnerItem" nillable="true" type="tns:ArrayOfWorkPeriodOwnerItem" />
+  <xs:complexType name="WorkPeriodOwnerItem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WorkPeriodTypeItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WorkPeriodOwnerItem" nillable="true" type="tns:WorkPeriodOwnerItem" />
+  <xs:complexType name="WorkPeriodTypeItem">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://accipiens.com/Common" base="q1:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BeginHour" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="BeginMinute" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EndHour" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="EndMinute" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:WorkPeriodTypeItemKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:WorkPeriodTypeItemDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:WorkPeriodTypeItemField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfWorkPeriodTypeItemField" />
+          <xs:element minOccurs="0" name="OnFriday" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OnHoliday" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OnMonday" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OnSaturday" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OnSunday" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OnThursday" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OnTuesday" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OnWednesday" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OwnerId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="WorkPeriodTypeId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WorkPeriodTypeItem" nillable="true" type="tns:WorkPeriodTypeItem" />
+  <xs:complexType name="WorkPeriodTypeItemKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://accipiens.com/Common" base="q2:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WorkPeriodTypeItemKey" nillable="true" type="tns:WorkPeriodTypeItemKey" />
+  <xs:simpleType name="WorkPeriodTypeItemDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WorkPeriodTypeItemDetail" nillable="true" type="tns:WorkPeriodTypeItemDetail" />
+  <xs:simpleType name="WorkPeriodTypeItemField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="WorkPeriodTypeId" />
+      <xs:enumeration value="OnMonday" />
+      <xs:enumeration value="OnTuesday" />
+      <xs:enumeration value="OnWednesday" />
+      <xs:enumeration value="OnThursday" />
+      <xs:enumeration value="OnFriday" />
+      <xs:enumeration value="OnSaturday" />
+      <xs:enumeration value="OnSunday" />
+      <xs:enumeration value="OnHoliday" />
+      <xs:enumeration value="BeginHour" />
+      <xs:enumeration value="BeginMinute" />
+      <xs:enumeration value="EndHour" />
+      <xs:enumeration value="EndMinute" />
+      <xs:enumeration value="OwnerId" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WorkPeriodTypeItemField" nillable="true" type="tns:WorkPeriodTypeItemField" />
+  <xs:complexType name="ArrayOfWorkPeriodTypeItemField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WorkPeriodTypeItemField" type="tns:WorkPeriodTypeItemField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWorkPeriodTypeItemField" nillable="true" type="tns:ArrayOfWorkPeriodTypeItemField" />
+</xs:schema>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Olissipo.AplSecurity.DataStructures" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Olissipo.AplSecurity.DataStructures" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="AplTaskPermissionKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ByApplication" />
+      <xs:enumeration value="ByGroupAplUser" />
+      <xs:enumeration value="ByApplicationOrGroupAplUser" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplTaskPermissionKind" nillable="true" type="tns:AplTaskPermissionKind" />
+</xs:schema>

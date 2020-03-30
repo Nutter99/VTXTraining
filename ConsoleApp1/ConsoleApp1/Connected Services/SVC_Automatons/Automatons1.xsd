@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://accipiens.com/AplSecurity" elementFormDefault="qualified" targetNamespace="http://accipiens.com/AplSecurity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/Automatons.svc?xsd=xsd2" namespace="http://accipiens.com/Common" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/Automatons.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Olissipo.AplSecurity.DataStructures" />
+  <xs:complexType name="AplTask">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://accipiens.com/Common" base="q1:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AllowedPermissionFlags" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AllowedPermissions" nillable="true" type="q1:PermissionFlags" />
+          <xs:element minOccurs="0" name="AplApplicationId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AplTaskKindId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AzCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Groups" nillable="true" type="tns:ArrayOfAplTaskGroup" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Inherits" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="InternalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsUnderLimit" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AplTaskKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AplTaskDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AplTaskField" />
+          <xs:element minOccurs="0" name="Members" nillable="true" type="tns:ArrayOfAplTaskGroup" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAplTaskField" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ParentAplTaskId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ParentTask" nillable="true" type="tns:AplTask" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Olissipo.AplSecurity.DataStructures" minOccurs="0" name="PermissionKind" nillable="true" type="q2:AplTaskPermissionKind" />
+          <xs:element minOccurs="0" name="RelatedContext" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SubClassName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TableName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplTask" nillable="true" type="tns:AplTask" />
+  <xs:complexType name="ArrayOfAplTaskGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplTaskGroup" nillable="true" type="tns:AplTaskGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplTaskGroup" nillable="true" type="tns:ArrayOfAplTaskGroup" />
+  <xs:complexType name="AplTaskGroup">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://accipiens.com/Common" base="q3:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Group" nillable="true" type="tns:AplTask" />
+          <xs:element minOccurs="0" name="GroupAplTaskId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AplTaskGroupKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AplTaskGroupDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AplTaskGroupField" />
+          <xs:element minOccurs="0" name="Member" nillable="true" type="tns:AplTask" />
+          <xs:element minOccurs="0" name="MemberAplTaskId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAplTaskGroupField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplTaskGroup" nillable="true" type="tns:AplTaskGroup" />
+  <xs:complexType name="AplTaskGroupKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://accipiens.com/Common" base="q4:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="GroupAplTaskId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="MemberAplTaskId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplTaskGroupKey" nillable="true" type="tns:AplTaskGroupKey" />
+  <xs:simpleType name="AplTaskGroupDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Group" />
+      <xs:enumeration value="Member" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplTaskGroupDetail" nillable="true" type="tns:AplTaskGroupDetail" />
+  <xs:simpleType name="AplTaskGroupField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="GroupAplTaskId" />
+      <xs:enumeration value="MemberAplTaskId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplTaskGroupField" nillable="true" type="tns:AplTaskGroupField" />
+  <xs:complexType name="ArrayOfAplTaskGroupField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplTaskGroupField" type="tns:AplTaskGroupField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplTaskGroupField" nillable="true" type="tns:ArrayOfAplTaskGroupField" />
+  <xs:complexType name="AplTaskKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://accipiens.com/Common" base="q5:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplTaskKindId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="InternalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RelatedContext" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplTaskKey" nillable="true" type="tns:AplTaskKey" />
+  <xs:simpleType name="AplTaskDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ParentTask" />
+      <xs:enumeration value="Member" />
+      <xs:enumeration value="Group" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplTaskDetail" nillable="true" type="tns:AplTaskDetail" />
+  <xs:simpleType name="AplTaskField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AplTaskKindId" />
+      <xs:enumeration value="Name" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="InternalCode" />
+      <xs:enumeration value="ParentAplTaskId" />
+      <xs:enumeration value="AplApplicationId" />
+      <xs:enumeration value="TableName" />
+      <xs:enumeration value="Inherits" />
+      <xs:enumeration value="AllowedPermissionFlags" />
+      <xs:enumeration value="SubClassName" />
+      <xs:enumeration value="AzCode" />
+      <xs:enumeration value="RelatedContext" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplTaskField" nillable="true" type="tns:AplTaskField" />
+  <xs:complexType name="ArrayOfAplTaskField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplTaskField" type="tns:AplTaskField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplTaskField" nillable="true" type="tns:ArrayOfAplTaskField" />
+</xs:schema>

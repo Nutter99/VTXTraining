@@ -1,0 +1,1082 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://accipiens.com" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AcpParameterization" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="CustomBinding_AcpParameterization_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <http:NtlmAuthentication xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://accipiens.com" location="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="CustomBinding_AcpParameterization" type="i0:AcpParameterization">
+    <wsp:PolicyReference URI="#CustomBinding_AcpParameterization_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetOperationsManagementIndicatorContextEnumValue">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetOperationsManagementIndicatorContextEnumValue" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetOperationsManagementIndicatorContextEnumValue_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumOperationsManagementIndicatorContext">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/ConvertToEnumOperationsManagementIndicatorContext" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_ConvertToEnumOperationsManagementIndicatorContext_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetGlobalOperationsManagementIndicatorEnumValue">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetGlobalOperationsManagementIndicatorEnumValue" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetGlobalOperationsManagementIndicatorEnumValue_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumGlobalOperationsManagementIndicator">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/ConvertToEnumGlobalOperationsManagementIndicator" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_ConvertToEnumGlobalOperationsManagementIndicator_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditOperationsIndicatorContextEnumValue">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetCreditOperationsIndicatorContextEnumValue" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetCreditOperationsIndicatorContextEnumValue_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumCreditOperationsIndicatorContext">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/ConvertToEnumCreditOperationsIndicatorContext" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_ConvertToEnumCreditOperationsIndicatorContext_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetGlobalCreditOperationsIndicatorEnumValue">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetGlobalCreditOperationsIndicatorEnumValue" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetGlobalCreditOperationsIndicatorEnumValue_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumGlobalCreditOperationsIndicator">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/ConvertToEnumGlobalCreditOperationsIndicator" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_ConvertToEnumGlobalCreditOperationsIndicator_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ExposeCredAnalysisIndicatorEnums">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/ExposeCredAnalysisIndicatorEnums" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_ExposeCredAnalysisIndicatorEnums_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UseMultiCurrencyMode">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/UseMultiCurrencyMode" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_UseMultiCurrencyMode_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ForexRateDecimalPrecision">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/ForexRateDecimalPrecision" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_ForexRateDecimalPrecision_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetInstallationName">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetInstallationName" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetInstallationName_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetInstallationType">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetInstallationType" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetInstallationType_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRunMode">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetRunMode" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetRunMode_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileSecurityConfig">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetFileSecurityConfig" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetFileSecurityConfig_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="IssueDocsWarnIssueCount">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/IssueDocsWarnIssueCount" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_IssueDocsWarnIssueCount_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetThumbnailsInArchive">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetThumbnailsInArchive" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetThumbnailsInArchive_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetArchiveUseRecycleBin">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetArchiveUseRecycleBin" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetArchiveUseRecycleBin_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityTypeCid">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetEntityTypeCid" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetEntityTypeCid_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityRoleTypeCid">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetEntityRoleTypeCid" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetEntityRoleTypeCid_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentTypeCid">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetDocumentTypeCid" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetDocumentTypeCid_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhoneTypeCid">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetPhoneTypeCid" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetPhoneTypeCid_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhoneTypeCidOptional">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetPhoneTypeCidOptional" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetPhoneTypeCidOptional_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetStructNodeTypeIds">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetStructNodeTypeIds" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetStructNodeTypeIds_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetStructNodeContextCid">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetStructNodeContextCid" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetStructNodeContextCid_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankAccountTypeCid">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetBankAccountTypeCid" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetBankAccountTypeCid_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityRelationTypeCid">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetEntityRelationTypeCid" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetEntityRelationTypeCid_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAddressTypeCid">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetAddressTypeCid" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetAddressTypeCid_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJuridicalTypeCid">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetJuridicalTypeCid" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetJuridicalTypeCid_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerTypeCid">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetCustomerTypeCid" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetCustomerTypeCid_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditOperationsFinRateDefinitionId">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetCreditOperationsFinRateDefinitionId" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetCreditOperationsFinRateDefinitionId_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditOperationsIntervenientsTypeCid">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetCreditOperationsIntervenientsTypeCid" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetCreditOperationsIntervenientsTypeCid_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditOperationsOptionalIntervenientsTypeCid">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetCreditOperationsOptionalIntervenientsTypeCid" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetCreditOperationsOptionalIntervenientsTypeCid_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditOperationsTablesDefaults">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetCreditOperationsTablesDefaults" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetCreditOperationsTablesDefaults_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AllowsRegistrationsDataChanges">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/AllowsRegistrationsDataChanges" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_AllowsRegistrationsDataChanges_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperReadonlyStates">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetCredOperReadonlyStates" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetCredOperReadonlyStates_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancialProductParameters">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetFinancialProductParameters" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetFinancialProductParameters_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhysicalDocumentId">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetPhysicalDocumentId" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetPhysicalDocumentId_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentMaxTerm">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetDocumentMaxTerm" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetDocumentMaxTerm_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFctDueAdvanceInhibitionDeltaDays">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetFctDueAdvanceInhibitionDeltaDays" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetFctDueAdvanceInhibitionDeltaDays_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetGuarantorPlafondConsumptionPercentage">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetGuarantorPlafondConsumptionPercentage" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetGuarantorPlafondConsumptionPercentage_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFirstEquipmentRegistrationTypeId">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetFirstEquipmentRegistrationTypeId" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetFirstEquipmentRegistrationTypeId_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewEquipmentRegistrationTypeId">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetNewEquipmentRegistrationTypeId" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetNewEquipmentRegistrationTypeId_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipmentBrandsToValidateLicencePlate">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetEquipmentBrandsToValidateLicencePlate" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetEquipmentBrandsToValidateLicencePlate_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDefaultsTables">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetDefaultsTables" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetDefaultsTables_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyForexRateParam">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetCompanyForexRateParam" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetCompanyForexRateParam_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetChargeNowEqualToInvoiced">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetChargeNowEqualToInvoiced" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetChargeNowEqualToInvoiced_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyRPDocumentTypeId">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetCompanyRPDocumentTypeId" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetCompanyRPDocumentTypeId_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyRPFctJustifyPayDocumentTypeId">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetCompanyRPFctJustifyPayDocumentTypeId" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetCompanyRPFctJustifyPayDocumentTypeId_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDateDefinition">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetDateDefinition" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetDateDefinition_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardsDefaultTerm">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetCreditCardsDefaultTerm" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetCreditCardsDefaultTerm_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCheckAccountingDateEditabilityOnInvoice">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetCheckAccountingDateEditabilityOnInvoice" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetCheckAccountingDateEditabilityOnInvoice_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PermissionsHasTasksForOpers">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/PermissionsHasTasksForOpers" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_PermissionsHasTasksForOpers_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PermissionsHasTasksForGroups">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/PermissionsHasTasksForGroups" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_PermissionsHasTasksForGroups_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PermissionsHasTasksForSubjects">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/PermissionsHasTasksForSubjects" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_PermissionsHasTasksForSubjects_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancialFlowTypeId">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetFinancialFlowTypeId" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetFinancialFlowTypeId_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AllowEntityPlafondAvailableInfoByCredOper">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/AllowEntityPlafondAvailableInfoByCredOper" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_AllowEntityPlafondAvailableInfoByCredOper_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserFavoriteGroups">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetUserFavoriteGroups" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetUserFavoriteGroups_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFavoriteGroupItems">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetFavoriteGroupItems" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetFavoriteGroupItems_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetIndicatorAttributes">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetIndicatorAttributes" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetIndicatorAttributes_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetIndicatorStringValue">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetIndicatorStringValue" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetIndicatorStringValue_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CorrectIndicatorsDecodedValue">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/CorrectIndicatorsDecodedValue" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_CorrectIndicatorsDecodedValue_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/Ping" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_Ping_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAcpParameterizationClassContext">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetAcpParameterizationClassContext" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetAcpParameterizationClassContext_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SearchAcpParameterization">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/SearchAcpParameterization" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_SearchAcpParameterization_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyParamByKey">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetCompanyParamByKey" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetCompanyParamByKey_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAplUserCommonFavoriteByKeys">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetAplUserCommonFavoriteByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetAplUserCommonFavoriteByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyParamByKeys">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetCompanyParamByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetCompanyParamByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanySectionByKeys">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetCompanySectionByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetCompanySectionByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFavoriteGroupByKeys">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetFavoriteGroupByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetFavoriteGroupByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFavoriteItemByKeys">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetFavoriteItemByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetFavoriteItemByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetGlobalParamByKeys">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetGlobalParamByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetGlobalParamByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetIndicatorByKeys">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetIndicatorByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetIndicatorByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetIndicatorContextByKeys">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetIndicatorContextByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetIndicatorContextByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetParamSchemaByKeys">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetParamSchemaByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetParamSchemaByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetScreenCustomizationByKeys">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetScreenCustomizationByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetScreenCustomizationByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAcpParameterization">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/SaveAcpParameterization" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_SaveAcpParameterization_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAcpParameterizationV2">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/SaveAcpParameterizationV2" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_SaveAcpParameterizationV2_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAcpParameterizationClassTableId">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetAcpParameterizationClassTableId" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetAcpParameterizationClassTableId_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAcpParameterizationTableId">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/GetAcpParameterizationTableId" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_GetAcpParameterizationTableId_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SearchAcpParameterizationConfig">
+      <soap12:operation soapAction="http://accipiens.com/AcpParameterization/SearchAcpParameterizationConfig" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:AcpParameterization_SearchAcpParameterizationConfig_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AcpParameterization">
+    <wsdl:port name="CustomBinding_AcpParameterization" binding="tns:CustomBinding_AcpParameterization">
+      <soap12:address location="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>eb@vantyx.lan</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

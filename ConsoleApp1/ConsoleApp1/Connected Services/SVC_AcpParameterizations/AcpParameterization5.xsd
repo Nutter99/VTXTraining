@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://accipiens.com/CreditOperations" elementFormDefault="qualified" targetNamespace="http://accipiens.com/CreditOperations" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="CredOperIntervTypeIndicator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Customer" />
+      <xs:enumeration value="Supplier" />
+      <xs:enumeration value="Vendor" />
+      <xs:enumeration value="Broker" />
+      <xs:enumeration value="Guarantor" />
+      <xs:enumeration value="Others" />
+      <xs:enumeration value="ResidualValueCustomer" />
+      <xs:enumeration value="RealConsortiumCustomer" />
+      <xs:enumeration value="OtherProponent" />
+      <xs:enumeration value="Importer" />
+      <xs:enumeration value="Spouse" />
+      <xs:enumeration value="GuarantorSpouse" />
+      <xs:enumeration value="SecondHolder" />
+      <xs:enumeration value="Debtor" />
+      <xs:enumeration value="Congener" />
+      <xs:enumeration value="FinancialInstitution" />
+      <xs:enumeration value="DebtorSupplier" />
+      <xs:enumeration value="InvoiceEntity" />
+      <xs:enumeration value="FactoringCustomer" />
+      <xs:enumeration value="Insurer" />
+      <xs:enumeration value="Beneficiary" />
+      <xs:enumeration value="EquipmentAplCompanyInterv" />
+      <xs:enumeration value="MLAAplCompany" />
+      <xs:enumeration value="DebitPaymentOther" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperIntervTypeIndicator" nillable="true" type="tns:CredOperIntervTypeIndicator" />
+  <xs:simpleType name="CredOperDefaultsIndicator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ConsortiumType" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperDefaultsIndicator" nillable="true" type="tns:CredOperDefaultsIndicator" />
+  <xs:simpleType name="FinancialProductIndicator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SuperUserAuthorizationLevel" />
+      <xs:enumeration value="SpecialUserAuthorizationLevel" />
+      <xs:enumeration value="WarningsAuthorizationLevel" />
+      <xs:enumeration value="UseAuthorizationLevel" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinancialProductIndicator" nillable="true" type="tns:FinancialProductIndicator" />
+</xs:schema>

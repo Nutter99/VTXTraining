@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://accipiens.com" elementFormDefault="qualified" targetNamespace="http://accipiens.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/Automatons.svc?xsd=xsd4" namespace="http://accipiens.com/AplSecurity" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/Automatons.svc?xsd=xsd2" namespace="http://accipiens.com/Common" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/Automatons.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/Automatons.svc?xsd=xsd8" namespace="http://accipiens.com/Automatons" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/Automatons.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Olissipo.Automatons.DataStructures" />
+  <xs:element name="UpdatePermissions">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePermissionsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAutomatonAplTask">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="automatonId" type="xs:long" />
+        <xs:element minOccurs="0" name="propagateToTransitions" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAutomatonAplTaskResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://accipiens.com/AplSecurity" minOccurs="0" name="CreateAutomatonAplTaskResult" nillable="true" type="q1:AplTask" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAutTransitionAplTask">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="autTransitionId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAutTransitionAplTaskResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://accipiens.com/AplSecurity" minOccurs="0" name="CreateAutTransitionAplTaskResult" nillable="true" type="q2:AplTask" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAutUserStateAplTask">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="autUserStateId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAutUserStateAplTaskResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://accipiens.com/AplSecurity" minOccurs="0" name="CreateAutUserStateAplTaskResult" nillable="true" type="q3:AplTask" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAutomatonAplTaskAndPermissions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="automatonId" type="xs:long" />
+        <xs:element minOccurs="0" name="promoteTransitions" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAutomatonAplTaskAndPermissionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://accipiens.com/Common" minOccurs="0" name="DeleteAutomatonAplTaskAndPermissionsResult" nillable="true" type="q4:SaveResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAutTransitionAplTaskAndPermissions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="autTransitionId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAutTransitionAplTaskAndPermissionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://accipiens.com/Common" minOccurs="0" name="DeleteAutTransitionAplTaskAndPermissionsResult" nillable="true" type="q5:SaveResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAutUserStateAplTaskAndPermissions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="autUserStateId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAutUserStateAplTaskAndPermissionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://accipiens.com/Common" minOccurs="0" name="DeleteAutUserStateAplTaskAndPermissionsResult" nillable="true" type="q6:SaveResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExportAutomatonsPermissions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="automatonIds" nillable="true" type="q7:ArrayOflong" />
+        <xs:element minOccurs="0" name="isToZip" type="xs:boolean" />
+        <xs:element minOccurs="0" name="fileName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExportAutomatonsPermissionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ExportAutomatonsPermissionsResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExportAutContextsPermissions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="autContextIds" nillable="true" type="q8:ArrayOflong" />
+        <xs:element xmlns:q9="http://accipiens.com/Automatons" minOccurs="0" name="exportKind" type="q9:AutomatonExportImportKind" />
+        <xs:element minOccurs="0" name="isToZip" type="xs:boolean" />
+        <xs:element minOccurs="0" name="fileName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExportAutContextsPermissionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ExportAutContextsPermissionsResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImportAutomatonsPermissions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="content" nillable="true" type="xs:base64Binary" />
+        <xs:element xmlns:q10="http://accipiens.com/Automatons" minOccurs="0" name="contentKind" type="q10:AutomatonExportImportKind" />
+        <xs:element minOccurs="0" name="isZipped" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImportAutomatonsPermissionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ImportAutomatonsPermissionsResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutContextId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="internalCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutContextIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAutContextIdResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HasAutTransitionActionInternalCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="autTransitionId" type="xs:long" />
+        <xs:element minOccurs="0" name="actionInternalCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HasAutTransitionActionInternalCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HasAutTransitionActionInternalCodeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutomatonTransitionsGroupedByState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="automatonId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutomatonTransitionsGroupedByStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://accipiens.com/Automatons" minOccurs="0" name="GetAutomatonTransitionsGroupedByStateResult" nillable="true" type="q11:ArrayOfAutState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutUserStatesGroupedByState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="autContextId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutUserStatesGroupedByStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://accipiens.com/Automatons" minOccurs="0" name="GetAutUserStatesGroupedByStateResult" nillable="true" type="q12:ArrayOfAutInternalState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutUserStateList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="contextInternalCode" nillable="true" type="xs:string" />
+        <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="internalStateIdList" nillable="true" type="q13:ArrayOflong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutUserStateListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetAutUserStateListResult" nillable="true" type="q14:ArrayOflong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastLogReasons">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aplTableId" type="xs:long" />
+        <xs:element minOccurs="0" name="ownerId" type="xs:long" />
+        <xs:element minOccurs="0" name="autContextId" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="autUserStateId" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="stateDate" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastLogReasonsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetLastLogReasonsResult" nillable="true" type="q15:ArrayOfArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ping">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="text" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PingResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumAutPostTransitionType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="autPostTransitionType" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumAutPostTransitionTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Olissipo.Automatons.DataStructures" minOccurs="0" name="ConvertToEnumAutPostTransitionTypeResult" type="q16:AutPostTransitionType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutPostTransitionTypeEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Olissipo.Automatons.DataStructures" minOccurs="0" name="autPostTransitionType" type="q17:AutPostTransitionType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutPostTransitionTypeEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAutPostTransitionTypeEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumReasonValidationType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="reasonValidationType" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumReasonValidationTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Olissipo.Automatons.DataStructures" minOccurs="0" name="ConvertToEnumReasonValidationTypeResult" type="q18:ReasonValidationType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReasonValidationTypeEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Olissipo.Automatons.DataStructures" minOccurs="0" name="reasonValidationType" type="q19:ReasonValidationType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReasonValidationTypeEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetReasonValidationTypeEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumAutomatonOperationsInternalCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="automatonOperationsInternalCode" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumAutomatonOperationsInternalCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Olissipo.Automatons.DataStructures" minOccurs="0" name="ConvertToEnumAutomatonOperationsInternalCodeResult" type="q20:AutomatonOperationsInternalCode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutomatonOperationsInternalCodeEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Olissipo.Automatons.DataStructures" minOccurs="0" name="automatonOperationsInternalCode" type="q21:AutomatonOperationsInternalCode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutomatonOperationsInternalCodeEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAutomatonOperationsInternalCodeEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutomatonsClassContext">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://accipiens.com/Automatons" minOccurs="0" name="searchClass" type="q22:AutomatonsSearchClass" />
+        <xs:element minOccurs="0" name="parentFullContext" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="detail" type="xs:int" />
+        <xs:element minOccurs="0" name="isFull" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutomatonsClassContextResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAutomatonsClassContextResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchAutomatons">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://accipiens.com/Automatons" minOccurs="0" name="searchClass" type="q23:AutomatonsSearchClass" />
+        <xs:element xmlns:q24="http://accipiens.com/Common" minOccurs="0" name="criteria" nillable="true" type="q24:SearchCriteria" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchAutomatonsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://accipiens.com/Common" minOccurs="0" name="SearchAutomatonsResult" nillable="true" type="q25:SearchResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutomatonReasonStateByKey">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="automatonReasonIdValue" type="xs:long" />
+        <xs:element minOccurs="0" name="autUserStateIdValue" type="xs:long" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q26="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q26:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutomatonReasonStateByKeyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://accipiens.com/Automatons" minOccurs="0" name="GetAutomatonReasonStateByKeyResult" nillable="true" type="q27:AutomatonReasonState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutLogByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q28:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q29="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q29:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutLogByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://accipiens.com/Automatons" minOccurs="0" name="GetAutLogByKeysResult" nillable="true" type="q30:ArrayOfAutLog" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutLogReasonByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q31:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q32="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q32:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutLogReasonByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://accipiens.com/Automatons" minOccurs="0" name="GetAutLogReasonByKeysResult" nillable="true" type="q33:ArrayOfAutLogReason" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutomatonByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q34:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q35="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q35:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutomatonByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://accipiens.com/Automatons" minOccurs="0" name="GetAutomatonByKeysResult" nillable="true" type="q36:ArrayOfAutomaton" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutomatonReasonByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q37:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q38="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q38:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutomatonReasonByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://accipiens.com/Automatons" minOccurs="0" name="GetAutomatonReasonByKeysResult" nillable="true" type="q39:ArrayOfAutomatonReason" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutomatonReasonStateByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q40:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q41="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q41:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutomatonReasonStateByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://accipiens.com/Automatons" minOccurs="0" name="GetAutomatonReasonStateByKeysResult" nillable="true" type="q42:ArrayOfAutomatonReasonState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutPostTransitionByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q43:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q44="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q44:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutPostTransitionByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://accipiens.com/Automatons" minOccurs="0" name="GetAutPostTransitionByKeysResult" nillable="true" type="q45:ArrayOfAutPostTransition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutStateByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q46:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q47="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q47:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutStateByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://accipiens.com/Automatons" minOccurs="0" name="GetAutStateByKeysResult" nillable="true" type="q48:ArrayOfAutState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutTransitionByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q49:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q50="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q50:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutTransitionByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://accipiens.com/Automatons" minOccurs="0" name="GetAutTransitionByKeysResult" nillable="true" type="q51:ArrayOfAutTransition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutActionByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q52:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q53="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q53:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutActionByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://accipiens.com/Automatons" minOccurs="0" name="GetAutActionByKeysResult" nillable="true" type="q54:ArrayOfAutAction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutConditionByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q55:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q56="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q56:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutConditionByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://accipiens.com/Automatons" minOccurs="0" name="GetAutConditionByKeysResult" nillable="true" type="q57:ArrayOfAutCondition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutContextByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q58:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q59="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q59:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutContextByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://accipiens.com/Automatons" minOccurs="0" name="GetAutContextByKeysResult" nillable="true" type="q60:ArrayOfAutContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutInternalStateByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q61:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q62="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q62:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutInternalStateByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://accipiens.com/Automatons" minOccurs="0" name="GetAutInternalStateByKeysResult" nillable="true" type="q63:ArrayOfAutInternalState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutOperationByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q64:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q65="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q65:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutOperationByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://accipiens.com/Automatons" minOccurs="0" name="GetAutOperationByKeysResult" nillable="true" type="q66:ArrayOfAutOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutOperationActionByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q67:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q68="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q68:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutOperationActionByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://accipiens.com/Automatons" minOccurs="0" name="GetAutOperationActionByKeysResult" nillable="true" type="q69:ArrayOfAutOperationAction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutReasonByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q70:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q71="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q71:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutReasonByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://accipiens.com/Automatons" minOccurs="0" name="GetAutReasonByKeysResult" nillable="true" type="q72:ArrayOfAutReason" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutUserStateByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q73:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q74="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q74:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutUserStateByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://accipiens.com/Automatons" minOccurs="0" name="GetAutUserStateByKeysResult" nillable="true" type="q75:ArrayOfAutUserState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAutomatons">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://accipiens.com/Automatons" minOccurs="0" name="saveClass" type="q76:AutomatonsSaveClass" />
+        <xs:element xmlns:q77="http://accipiens.com/Common" minOccurs="0" name="businessSlim" nillable="true" type="q77:BusinessEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAutomatonsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://accipiens.com/Common" minOccurs="0" name="SaveAutomatonsResult" nillable="true" type="q78:SaveResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAutomatonsV2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://accipiens.com/Automatons" minOccurs="0" name="saveClass" type="q79:AutomatonsSaveClass" />
+        <xs:element xmlns:q80="http://accipiens.com/Common" minOccurs="0" name="businessSlim" nillable="true" type="q80:BusinessEntity" />
+        <xs:element xmlns:q81="http://accipiens.com/Common" minOccurs="0" name="saveParams" nillable="true" type="q81:SaveParams" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAutomatonsV2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://accipiens.com/Common" minOccurs="0" name="SaveAutomatonsV2Result" nillable="true" type="q82:SaveResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutomatonsClassTableId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q83="http://accipiens.com/Automatons" minOccurs="0" name="rootClass" type="q83:AutomatonsClass" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutomatonsClassTableIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAutomatonsClassTableIdResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutomatonsTableId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fullContext" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutomatonsTableIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAutomatonsTableIdResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchAutomatonsConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://accipiens.com/Automatons" minOccurs="0" name="searchClass" type="q84:AutomatonsSearchClass" />
+        <xs:element xmlns:q85="http://accipiens.com/Common" minOccurs="0" name="criteria" nillable="true" type="q85:SearchCriteria" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchAutomatonsConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q86="http://accipiens.com/Common" minOccurs="0" name="SearchAutomatonsConfigResult" nillable="true" type="q86:ArrayOfBusinessEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

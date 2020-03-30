@@ -1,0 +1,1752 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://accipiens.com" elementFormDefault="qualified" targetNamespace="http://accipiens.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Services/CreditOperationsConfig.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Services/CreditOperationsConfig.svc?xsd=xsd5" namespace="http://accipiens.com/CreditOperationsConfig" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Services/CreditOperationsConfig.svc?xsd=xsd3" namespace="http://accipiens.com/Common" />
+  <xs:element name="GetInstallmentRevenueModeEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="installmentRevenueMode" type="q1:InstallmentRevenueMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInstallmentRevenueModeEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetInstallmentRevenueModeEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumInstallmentRevenueMode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="installmentRevenueMode" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumInstallmentRevenueModeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumInstallmentRevenueModeResult" type="q2:InstallmentRevenueMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInitialEntryPeriodificationModeEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="InitialEntryPeriodificationMode" type="q3:InitialEntryPeriodificationMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInitialEntryPeriodificationModeEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetInitialEntryPeriodificationModeEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumInitialEntryPeriodificationMode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="initialEntryPeriodificationMode" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumInitialEntryPeriodificationModeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumInitialEntryPeriodificationModeResult" type="q4:InitialEntryPeriodificationMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCreditOperationStepEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="enumValue" type="q5:CreditOperationStep" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCreditOperationStepEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCreditOperationStepEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumCreditOperationStep">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intValue" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumCreditOperationStepResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumCreditOperationStepResult" type="q6:CreditOperationStep" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDefaultPaymentModeId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aplBusinessId" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="credOperIntervTypeId" type="xs:int" />
+        <xs:element minOccurs="0" name="entityId" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDefaultPaymentModeIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDefaultPaymentModeIdResult" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetAssetOperation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="assetOperationType" type="q7:DisposableAssetOperationTypeKind" />
+        <xs:element minOccurs="0" name="aplCompanyId" type="xs:int" />
+        <xs:element minOccurs="0" name="aplBusinessId" type="xs:int" />
+        <xs:element minOccurs="0" name="credOperTypeId" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetAssetOperationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="SetAssetOperationResult" nillable="true" type="q8:AssetOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssetOperation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="assetOperationType" type="q9:DisposableAssetOperationTypeKind" />
+        <xs:element minOccurs="0" name="aplCompanyId" type="xs:int" />
+        <xs:element minOccurs="0" name="aplBusinessId" type="xs:int" />
+        <xs:element minOccurs="0" name="credOperTypeId" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssetOperationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="GetAssetOperationResult" nillable="true" type="q10:AssetOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ping">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="text" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PingResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumDisposableAssetOperationTypeKind">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="disposableAssetOperationTypeKind" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumDisposableAssetOperationTypeKindResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="ConvertToEnumDisposableAssetOperationTypeKindResult" type="q11:DisposableAssetOperationTypeKind" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDisposableAssetOperationTypeKindEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="disposableAssetOperationTypeKind" type="q12:DisposableAssetOperationTypeKind" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDisposableAssetOperationTypeKindEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDisposableAssetOperationTypeKindEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumAssetExpenseType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="assetExpenseType" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumAssetExpenseTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumAssetExpenseTypeResult" type="q13:AssetExpenseType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssetExpenseTypeEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="assetExpenseType" type="q14:AssetExpenseType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssetExpenseTypeEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAssetExpenseTypeEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumCessionSuperTypeKind">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cessionSuperTypeKind" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumCessionSuperTypeKindResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumCessionSuperTypeKindResult" type="q15:CessionSuperTypeKind" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCessionSuperTypeKindEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="cessionSuperTypeKind" type="q16:CessionSuperTypeKind" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCessionSuperTypeKindEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCessionSuperTypeKindEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumTerminateCredOperGuarantMode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="terminateCredOperGuarantMode" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumTerminateCredOperGuarantModeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumTerminateCredOperGuarantModeResult" type="q17:TerminateCredOperGuarantMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTerminateCredOperGuarantModeEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="terminateCredOperGuarantMode" type="q18:TerminateCredOperGuarantMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTerminateCredOperGuarantModeEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTerminateCredOperGuarantModeEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumCessionFinChangeMode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cessionFinChangeMode" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumCessionFinChangeModeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumCessionFinChangeModeResult" type="q19:CessionFinChangeMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCessionFinChangeModeEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="cessionFinChangeMode" type="q20:CessionFinChangeMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCessionFinChangeModeEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCessionFinChangeModeEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumUsePlafondKind">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="usePlafondKind" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumUsePlafondKindResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumUsePlafondKindResult" type="q21:UsePlafondKind" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsePlafondKindEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="usePlafondKind" type="q22:UsePlafondKind" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsePlafondKindEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUsePlafondKindEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumConditionsMode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="conditionsMode" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumConditionsModeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumConditionsModeResult" type="q23:ConditionsMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConditionsModeEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="conditionsMode" type="q24:ConditionsMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConditionsModeEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetConditionsModeEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumMinTermMode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="minTermMode" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumMinTermModeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumMinTermModeResult" type="q25:MinTermMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMinTermModeEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="minTermMode" type="q26:MinTermMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMinTermModeEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMinTermModeEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumUseEntityPlafondKind">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="useEntityPlafondKind" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumUseEntityPlafondKindResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumUseEntityPlafondKindResult" type="q27:UseEntityPlafondKind" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUseEntityPlafondKindEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="useEntityPlafondKind" type="q28:UseEntityPlafondKind" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUseEntityPlafondKindEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUseEntityPlafondKindEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumEquipmentDiscountMode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="equipmentDiscountMode" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumEquipmentDiscountModeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumEquipmentDiscountModeResult" type="q29:EquipmentDiscountMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEquipmentDiscountModeEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="equipmentDiscountMode" type="q30:EquipmentDiscountMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEquipmentDiscountModeEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetEquipmentDiscountModeEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumAssetAmountInputMode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="assetAmountInputMode" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumAssetAmountInputModeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumAssetAmountInputModeResult" type="q31:AssetAmountInputMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssetAmountInputModeEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="assetAmountInputMode" type="q32:AssetAmountInputMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssetAmountInputModeEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAssetAmountInputModeEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumDownPaymentValidationKind">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="downPaymentValidationKind" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumDownPaymentValidationKindResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumDownPaymentValidationKindResult" type="q33:DownPaymentValidationKind" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDownPaymentValidationKindEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="downPaymentValidationKind" type="q34:DownPaymentValidationKind" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDownPaymentValidationKindEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDownPaymentValidationKindEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumCautionInputMode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cautionInputMode" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumCautionInputModeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumCautionInputModeResult" type="q35:CautionInputMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCautionInputModeEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="cautionInputMode" type="q36:CautionInputMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCautionInputModeEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCautionInputModeEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumUsageReservationManagementMode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="usageReservationManagementMode" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumUsageReservationManagementModeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumUsageReservationManagementModeResult" type="q37:UsageReservationManagementMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsageReservationManagementModeEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="usageReservationManagementMode" type="q38:UsageReservationManagementMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsageReservationManagementModeEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUsageReservationManagementModeEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumResidualValueBase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="residualValueBase" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumResidualValueBaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumResidualValueBaseResult" type="q39:ResidualValueBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResidualValueBaseEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="residualValueBase" type="q40:ResidualValueBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResidualValueBaseEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetResidualValueBaseEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumFinMatrixTypeSelectionMode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="finMatrixTypeSelectionMode" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumFinMatrixTypeSelectionModeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumFinMatrixTypeSelectionModeResult" type="q41:FinMatrixTypeSelectionMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFinMatrixTypeSelectionModeEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="finMatrixTypeSelectionMode" type="q42:FinMatrixTypeSelectionMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFinMatrixTypeSelectionModeEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFinMatrixTypeSelectionModeEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumDurationInputMode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="durationInputMode" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumDurationInputModeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumDurationInputModeResult" type="q43:DurationInputMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDurationInputModeEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="durationInputMode" type="q44:DurationInputMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDurationInputModeEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDurationInputModeEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumAssetBaseAmountCalcMode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="assetBaseAmountCalcMode" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumAssetBaseAmountCalcModeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumAssetBaseAmountCalcModeResult" type="q45:AssetBaseAmountCalcMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssetBaseAmountCalcModeEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="assetBaseAmountCalcMode" type="q46:AssetBaseAmountCalcMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssetBaseAmountCalcModeEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAssetBaseAmountCalcModeEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumAssetRetakeBaseAmountMode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="assetRetakeBaseAmountMode" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumAssetRetakeBaseAmountModeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumAssetRetakeBaseAmountModeResult" type="q47:AssetRetakeBaseAmountMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssetRetakeBaseAmountModeEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="assetRetakeBaseAmountMode" type="q48:AssetRetakeBaseAmountMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssetRetakeBaseAmountModeEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAssetRetakeBaseAmountModeEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumCredOperTaxAggregationMode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="credOperTaxAggregationMode" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumCredOperTaxAggregationModeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumCredOperTaxAggregationModeResult" type="q49:CredOperTaxAggregationMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperTaxAggregationModeEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="credOperTaxAggregationMode" type="q50:CredOperTaxAggregationMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperTaxAggregationModeEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCredOperTaxAggregationModeEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumRelocationAssetBaseAmountCalcMode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="relocationAssetBaseAmountCalcMode" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumRelocationAssetBaseAmountCalcModeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumRelocationAssetBaseAmountCalcModeResult" type="q51:RelocationAssetBaseAmountCalcMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRelocationAssetBaseAmountCalcModeEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="relocationAssetBaseAmountCalcMode" type="q52:RelocationAssetBaseAmountCalcMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRelocationAssetBaseAmountCalcModeEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRelocationAssetBaseAmountCalcModeEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumCapitalSourceMode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="capitalSourceMode" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumCapitalSourceModeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumCapitalSourceModeResult" type="q53:CapitalSourceMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCapitalSourceModeEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="capitalSourceMode" type="q54:CapitalSourceMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCapitalSourceModeEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCapitalSourceModeEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumCredOperEventTypeKind">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="credOperEventTypeKind" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumCredOperEventTypeKindResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumCredOperEventTypeKindResult" type="q55:CredOperEventTypeKind" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperEventTypeKindEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="credOperEventTypeKind" type="q56:CredOperEventTypeKind" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperEventTypeKindEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCredOperEventTypeKindEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumInterestRatesReferenceDateKind">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="interestRatesReferenceDateKind" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumInterestRatesReferenceDateKindResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumInterestRatesReferenceDateKindResult" type="q57:InterestRatesReferenceDateKind" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInterestRatesReferenceDateKindEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="interestRatesReferenceDateKind" type="q58:InterestRatesReferenceDateKind" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInterestRatesReferenceDateKindEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetInterestRatesReferenceDateKindEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumFctInterestMovementsUniverse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fctInterestMovementsUniverse" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumFctInterestMovementsUniverseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumFctInterestMovementsUniverseResult" type="q59:FctInterestMovementsUniverse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFctInterestMovementsUniverseEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="fctInterestMovementsUniverse" type="q60:FctInterestMovementsUniverse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFctInterestMovementsUniverseEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFctInterestMovementsUniverseEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumPlafondNextPhaseValidation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plafondNextPhaseValidation" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumPlafondNextPhaseValidationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumPlafondNextPhaseValidationResult" type="q61:PlafondNextPhaseValidation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlafondNextPhaseValidationEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="plafondNextPhaseValidation" type="q62:PlafondNextPhaseValidation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlafondNextPhaseValidationEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPlafondNextPhaseValidationEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumFinMatrixAssetUsageCalcMode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="finMatrixAssetUsageCalcMode" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumFinMatrixAssetUsageCalcModeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumFinMatrixAssetUsageCalcModeResult" type="q63:FinMatrixAssetUsageCalcMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFinMatrixAssetUsageCalcModeEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="finMatrixAssetUsageCalcMode" type="q64:FinMatrixAssetUsageCalcMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFinMatrixAssetUsageCalcModeEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFinMatrixAssetUsageCalcModeEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumFinMatrixTermCalcMode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="finMatrixTermCalcMode" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumFinMatrixTermCalcModeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumFinMatrixTermCalcModeResult" type="q65:FinMatrixTermCalcMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFinMatrixTermCalcModeEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="finMatrixTermCalcMode" type="q66:FinMatrixTermCalcMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFinMatrixTermCalcModeEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFinMatrixTermCalcModeEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumFinMatrixGenerationType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="finMatrixGenerationType" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumFinMatrixGenerationTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumFinMatrixGenerationTypeResult" type="q67:FinMatrixGenerationType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFinMatrixGenerationTypeEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="finMatrixGenerationType" type="q68:FinMatrixGenerationType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFinMatrixGenerationTypeEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFinMatrixGenerationTypeEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumFinMatrixSelectionMode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="finMatrixSelectionMode" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumFinMatrixSelectionModeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumFinMatrixSelectionModeResult" type="q69:FinMatrixSelectionMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFinMatrixSelectionModeEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="finMatrixSelectionMode" type="q70:FinMatrixSelectionMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFinMatrixSelectionModeEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFinMatrixSelectionModeEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumCreditTaxModeKind">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="creditTaxModeKind" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumCreditTaxModeKindResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumCreditTaxModeKindResult" type="q71:CreditTaxModeKind" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCreditTaxModeKindEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="creditTaxModeKind" type="q72:CreditTaxModeKind" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCreditTaxModeKindEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCreditTaxModeKindEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumTotalInstallmentItemType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="totalInstallmentItemType" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumTotalInstallmentItemTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumTotalInstallmentItemTypeResult" type="q73:TotalInstallmentItemType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTotalInstallmentItemTypeEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="totalInstallmentItemType" type="q74:TotalInstallmentItemType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTotalInstallmentItemTypeEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTotalInstallmentItemTypeEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumIntervenientSuperType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intervenientSuperType" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumIntervenientSuperTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumIntervenientSuperTypeResult" type="q75:IntervenientSuperType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIntervenientSuperTypeEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="intervenientSuperType" type="q76:IntervenientSuperType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIntervenientSuperTypeEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetIntervenientSuperTypeEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumCreateEntityRelationType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="createEntityRelationType" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumCreateEntityRelationTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumCreateEntityRelationTypeResult" type="q77:CreateEntityRelationType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCreateEntityRelationTypeEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="createEntityRelationType" type="q78:CreateEntityRelationType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCreateEntityRelationTypeEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCreateEntityRelationTypeEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumFinMatrixChangeType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="finMatrixChangeType" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumFinMatrixChangeTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="ConvertToEnumFinMatrixChangeTypeResult" type="q79:FinMatrixChangeType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFinMatrixChangeTypeEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" minOccurs="0" name="finMatrixChangeType" type="q80:FinMatrixChangeType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFinMatrixChangeTypeEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFinMatrixChangeTypeEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCreditOperationsConfigClassContext">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="searchClass" type="q81:CreditOperationsConfigSearchClass" />
+        <xs:element minOccurs="0" name="parentFullContext" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="detail" type="xs:int" />
+        <xs:element minOccurs="0" name="isFull" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCreditOperationsConfigClassContextResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCreditOperationsConfigClassContextResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchCreditOperationsConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="searchClass" type="q82:CreditOperationsConfigSearchClass" />
+        <xs:element xmlns:q83="http://accipiens.com/Common" minOccurs="0" name="criteria" nillable="true" type="q83:SearchCriteria" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchCreditOperationsConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://accipiens.com/Common" minOccurs="0" name="SearchCreditOperationsConfigResult" nillable="true" type="q84:SearchResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssetOperationByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q85:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q86="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q86:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssetOperationByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q87="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="GetAssetOperationByKeysResult" nillable="true" type="q87:ArrayOfAssetOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssetTypeByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q88="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q88:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q89="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q89:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssetTypeByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q90="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="GetAssetTypeByKeysResult" nillable="true" type="q90:ArrayOfAssetType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssetTypeAutomatonByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q91:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q92="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q92:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssetTypeAutomatonByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q93="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="GetAssetTypeAutomatonByKeysResult" nillable="true" type="q93:ArrayOfAssetTypeAutomaton" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssetTypeExpenseByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q94:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q95="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q95:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssetTypeExpenseByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q96="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="GetAssetTypeExpenseByKeysResult" nillable="true" type="q96:ArrayOfAssetTypeExpense" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperCessionTypeByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q97="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q97:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q98="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q98:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperCessionTypeByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q99="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="GetCredOperCessionTypeByKeysResult" nillable="true" type="q99:ArrayOfCredOperCessionType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperFinalityByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q100="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q100:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q101="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q101:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperFinalityByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q102="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="GetCredOperFinalityByKeysResult" nillable="true" type="q102:ArrayOfCredOperFinality" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperIntervTypeEntityPercentageContextByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q103="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q103:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q104="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q104:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperIntervTypeEntityPercentageContextByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q105="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="GetCredOperIntervTypeEntityPercentageContextByKeysResult" nillable="true" type="q105:ArrayOfCredOperIntervTypeEntityPercentageContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperIntervTypePayModeByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q106="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q106:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q107="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q107:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperIntervTypePayModeByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q108="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="GetCredOperIntervTypePayModeByKeysResult" nillable="true" type="q108:ArrayOfCredOperIntervTypePayMode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperTypeByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q109="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q109:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q110="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q110:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperTypeByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q111="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="GetCredOperTypeByKeysResult" nillable="true" type="q111:ArrayOfCredOperType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperTypeBankGuaranteeByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q112="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q112:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q113="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q113:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperTypeBankGuaranteeByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q114="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="GetCredOperTypeBankGuaranteeByKeysResult" nillable="true" type="q114:ArrayOfCredOperTypeBankGuarantee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperTypeCreditRevolvingByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q115="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q115:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q116="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q116:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperTypeCreditRevolvingByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q117="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="GetCredOperTypeCreditRevolvingByKeysResult" nillable="true" type="q117:ArrayOfCredOperTypeCreditRevolving" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperTypeDelayInterestByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q118="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q118:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q119="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q119:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperTypeDelayInterestByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q120="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="GetCredOperTypeDelayInterestByKeysResult" nillable="true" type="q120:ArrayOfCredOperTypeDelayInterest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperTypeEventTypeByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q121="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q121:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q122="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q122:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperTypeEventTypeByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q123="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="GetCredOperTypeEventTypeByKeysResult" nillable="true" type="q123:ArrayOfCredOperTypeEventType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperTypeFactoringByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q124="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q124:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q125="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q125:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperTypeFactoringByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q126="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="GetCredOperTypeFactoringByKeysResult" nillable="true" type="q126:ArrayOfCredOperTypeFactoring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperTypeInsuranceByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q127="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q127:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q128="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q128:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperTypeInsuranceByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q129="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="GetCredOperTypeInsuranceByKeysResult" nillable="true" type="q129:ArrayOfCredOperTypeInsurance" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperTypeLoanByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q130="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q130:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q131="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q131:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperTypeLoanByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q132="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="GetCredOperTypeLoanByKeysResult" nillable="true" type="q132:ArrayOfCredOperTypeLoan" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperTypeNextAvailableTypeByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q133="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q133:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q134="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q134:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperTypeNextAvailableTypeByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q135="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="GetCredOperTypeNextAvailableTypeByKeysResult" nillable="true" type="q135:ArrayOfCredOperTypeNextAvailableType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperTypeOtherRateByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q136="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q136:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q137="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q137:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperTypeOtherRateByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q138="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="GetCredOperTypeOtherRateByKeysResult" nillable="true" type="q138:ArrayOfCredOperTypeOtherRate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperTypePlafondTypeByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q139="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q139:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q140="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q140:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperTypePlafondTypeByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q141="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="GetCredOperTypePlafondTypeByKeysResult" nillable="true" type="q141:ArrayOfCredOperTypePlafondType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperTypePurposeTypeByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q142="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q142:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q143="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q143:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperTypePurposeTypeByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q144="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="GetCredOperTypePurposeTypeByKeysResult" nillable="true" type="q144:ArrayOfCredOperTypePurposeType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperTypeServiceByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q145="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q145:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q146="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q146:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperTypeServiceByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q147="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="GetCredOperTypeServiceByKeysResult" nillable="true" type="q147:ArrayOfCredOperTypeService" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFinMatrixTypeByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q148="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q148:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q149="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q149:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFinMatrixTypeByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q150="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="GetFinMatrixTypeByKeysResult" nillable="true" type="q150:ArrayOfFinMatrixType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFinMatrixTypeCustomItemGroupByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q151="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q151:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q152="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q152:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFinMatrixTypeCustomItemGroupByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q153="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="GetFinMatrixTypeCustomItemGroupByKeysResult" nillable="true" type="q153:ArrayOfFinMatrixTypeCustomItemGroup" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRemarketingChannelByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q154="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q154:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q155="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q155:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRemarketingChannelByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q156="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="GetRemarketingChannelByKeysResult" nillable="true" type="q156:ArrayOfRemarketingChannel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTaxCapitalTypeByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q157="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q157:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q158="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q158:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTaxCapitalTypeByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q159="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="GetTaxCapitalTypeByKeysResult" nillable="true" type="q159:ArrayOfTaxCapitalType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTotalInstallmentCalcTypeByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q160="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q160:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q161="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q161:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTotalInstallmentCalcTypeByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q162="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="GetTotalInstallmentCalcTypeByKeysResult" nillable="true" type="q162:ArrayOfTotalInstallmentCalcType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTotalInstallmentCalcTypeItemByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q163="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q163:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q164="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q164:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTotalInstallmentCalcTypeItemByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q165="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="GetTotalInstallmentCalcTypeItemByKeysResult" nillable="true" type="q165:ArrayOfTotalInstallmentCalcTypeItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssetOperationExpenseTypeByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q166="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q166:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q167="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q167:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssetOperationExpenseTypeByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q168="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="GetAssetOperationExpenseTypeByKeysResult" nillable="true" type="q168:ArrayOfAssetOperationExpenseType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperExpenseTypeByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q169="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q169:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q170="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q170:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperExpenseTypeByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q171="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="GetCredOperExpenseTypeByKeysResult" nillable="true" type="q171:ArrayOfCredOperExpenseType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperIntervExpenseTypeByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q172="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q172:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q173="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q173:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperIntervExpenseTypeByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q174="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="GetCredOperIntervExpenseTypeByKeysResult" nillable="true" type="q174:ArrayOfCredOperIntervExpenseType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperLoanExpenseTypeByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q175="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q175:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q176="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q176:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperLoanExpenseTypeByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q177="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="GetCredOperLoanExpenseTypeByKeysResult" nillable="true" type="q177:ArrayOfCredOperLoanExpenseType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperIntervTypeByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q178="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q178:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q179="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q179:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredOperIntervTypeByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q180="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="GetCredOperIntervTypeByKeysResult" nillable="true" type="q180:ArrayOfCredOperIntervType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCreditOperationsConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q181="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="saveClass" type="q181:CreditOperationsConfigSaveClass" />
+        <xs:element xmlns:q182="http://accipiens.com/Common" minOccurs="0" name="businessSlim" nillable="true" type="q182:BusinessEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCreditOperationsConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q183="http://accipiens.com/Common" minOccurs="0" name="SaveCreditOperationsConfigResult" nillable="true" type="q183:SaveResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCreditOperationsConfigV2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q184="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="saveClass" type="q184:CreditOperationsConfigSaveClass" />
+        <xs:element xmlns:q185="http://accipiens.com/Common" minOccurs="0" name="businessSlim" nillable="true" type="q185:BusinessEntity" />
+        <xs:element xmlns:q186="http://accipiens.com/Common" minOccurs="0" name="saveParams" nillable="true" type="q186:SaveParams" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCreditOperationsConfigV2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q187="http://accipiens.com/Common" minOccurs="0" name="SaveCreditOperationsConfigV2Result" nillable="true" type="q187:SaveResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCreditOperationsConfigClassTableId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q188="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="rootClass" type="q188:CreditOperationsConfigClass" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCreditOperationsConfigClassTableIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCreditOperationsConfigClassTableIdResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCreditOperationsConfigTableId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fullContext" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCreditOperationsConfigTableIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCreditOperationsConfigTableIdResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchCreditOperationsConfigConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q189="http://accipiens.com/CreditOperationsConfig" minOccurs="0" name="searchClass" type="q189:CreditOperationsConfigSearchClass" />
+        <xs:element xmlns:q190="http://accipiens.com/Common" minOccurs="0" name="criteria" nillable="true" type="q190:SearchCriteria" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchCreditOperationsConfigConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q191="http://accipiens.com/Common" minOccurs="0" name="SearchCreditOperationsConfigConfigResult" nillable="true" type="q191:ArrayOfBusinessEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

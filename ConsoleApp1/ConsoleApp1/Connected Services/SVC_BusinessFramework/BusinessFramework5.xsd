@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Olissipo.BusinessFramework.Facade" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Olissipo.BusinessFramework.Facade" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="BusinessFrameworkSvcAuthorizations">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ActivateService_Svc" />
+      <xs:enumeration value="TerminateService_Svc" />
+      <xs:enumeration value="ActivateInsurancePolicy_Svc" />
+      <xs:enumeration value="TerminateInsurancePolicy_Svc" />
+      <xs:enumeration value="CalculateResidualValue_Svc" />
+      <xs:enumeration value="CalculateFinRewardValue_Svc" />
+      <xs:enumeration value="CalculateBeginDate_Svc" />
+      <xs:enumeration value="CalculateEndDate_Svc" />
+      <xs:enumeration value="ChangeInsurancePolicy_Svc" />
+      <xs:enumeration value="LoadInsuranceFile_Svc" />
+      <xs:enumeration value="CalculateServiceInvoiceAmountOnTermination_Svc" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="BusinessFrameworkSvcAuthorizations" nillable="true" type="tns:BusinessFrameworkSvcAuthorizations" />
+</xs:schema>

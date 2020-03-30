@@ -1,0 +1,1509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://accipiens.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://accipiens.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://accipiens.com/Imports">
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd0" namespace="http://accipiens.com" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd3" namespace="http://accipiens.com/Common" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsInterfaces.Facade" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Olissipo.Utils" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperations.DataStructures" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd7" namespace="http://accipiens.com/CreditOperations" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Olissipo.EqpPricingInterfaces.DataStructures" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd10" namespace="http://accipiens.com/Simulations" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsInterfaces.AuxiliaryClasses" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd12" namespace="http://accipiens.com/VirtualData" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd13" namespace="http://accipiens.com/AcpFramework" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd14" namespace="http://accipiens.com/Entities" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd15" namespace="http://schemas.datacontract.org/2004/07/Olissipo.CommonGeneric.Framework.Validations" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd16" namespace="http://accipiens.com/BusinessFramework" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd17" namespace="http://accipiens.com/CreditOperationsConfig" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd18" namespace="http://accipiens.com/Plafonds" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd19" namespace="http://accipiens.com/AcpDocuments" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd20" namespace="http://schemas.datacontract.org/2004/07/Olissipo.BusinessFramework.DataStructures" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="CreditOperationsBasicLists_GetDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q1="http://accipiens.com/Common" name="SessionToken" element="q1:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q2="http://accipiens.com/Common" name="detail" element="q2:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetForeignDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetForeignDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetForeignDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q3="http://accipiens.com/Common" name="SessionToken" element="q3:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetForeignDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetForeignDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetForeignDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q4="http://accipiens.com/Common" name="detail" element="q4:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetMultiForeignDataListKeyCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMultiForeignDataListKeyCount" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetMultiForeignDataListKeyCount_InputMessage_Headers">
+    <wsdl:part xmlns:q5="http://accipiens.com/Common" name="SessionToken" element="q5:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetMultiForeignDataListKeyCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMultiForeignDataListKeyCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetMultiForeignDataListKeyCount_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q6="http://accipiens.com/Common" name="detail" element="q6:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperAutUserStateList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperAutUserStateList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperAutUserStateList_InputMessage_Headers">
+    <wsdl:part xmlns:q7="http://accipiens.com/Common" name="SessionToken" element="q7:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperAutUserStateList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperAutUserStateListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperAutUserStateList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q8="http://accipiens.com/Common" name="detail" element="q8:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperAutUserStateDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperAutUserStateDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperAutUserStateDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q9="http://accipiens.com/Common" name="SessionToken" element="q9:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperAutUserStateDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperAutUserStateDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperAutUserStateDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q10="http://accipiens.com/Common" name="detail" element="q10:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeData" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeData_InputMessage_Headers">
+    <wsdl:part xmlns:q11="http://accipiens.com/Common" name="SessionToken" element="q11:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeData_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q12="http://accipiens.com/Common" name="detail" element="q12:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q13="http://accipiens.com/Common" name="SessionToken" element="q13:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q14="http://accipiens.com/Common" name="detail" element="q14:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeDataListOnlyInterest_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeDataListOnlyInterest" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeDataListOnlyInterest_InputMessage_Headers">
+    <wsdl:part xmlns:q15="http://accipiens.com/Common" name="SessionToken" element="q15:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeDataListOnlyInterest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeDataListOnlyInterestResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeDataListOnlyInterest_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q16="http://accipiens.com/Common" name="detail" element="q16:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeByNatureDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeByNatureDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeByNatureDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q17="http://accipiens.com/Common" name="SessionToken" element="q17:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeByNatureDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeByNatureDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeByNatureDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q18="http://accipiens.com/Common" name="detail" element="q18:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeByNaturesDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeByNaturesDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeByNaturesDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q19="http://accipiens.com/Common" name="SessionToken" element="q19:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeByNaturesDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeByNaturesDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeByNaturesDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q20="http://accipiens.com/Common" name="detail" element="q20:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeIdsDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeIdsDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeIdsDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q21="http://accipiens.com/Common" name="SessionToken" element="q21:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeIdsDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeIdsDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeIdsDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q22="http://accipiens.com/Common" name="detail" element="q22:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeIdsByStepDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeIdsByStepDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeIdsByStepDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q23="http://accipiens.com/Common" name="SessionToken" element="q23:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeIdsByStepDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeIdsByStepDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeIdsByStepDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q24="http://accipiens.com/Common" name="detail" element="q24:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeIdsByInternalStateDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeIdsByInternalStateDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeIdsByInternalStateDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q25="http://accipiens.com/Common" name="SessionToken" element="q25:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeIdsByInternalStateDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeIdsByInternalStateDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeIdsByInternalStateDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q26="http://accipiens.com/Common" name="detail" element="q26:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCessionCredOperTypeByOriginAndSuperTypeDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCessionCredOperTypeByOriginAndSuperTypeDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCessionCredOperTypeByOriginAndSuperTypeDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q27="http://accipiens.com/Common" name="SessionToken" element="q27:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCessionCredOperTypeByOriginAndSuperTypeDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCessionCredOperTypeByOriginAndSuperTypeDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCessionCredOperTypeByOriginAndSuperTypeDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q28="http://accipiens.com/Common" name="detail" element="q28:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeIdsByStepBasicList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeIdsByStepBasicList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeIdsByStepBasicList_InputMessage_Headers">
+    <wsdl:part xmlns:q29="http://accipiens.com/Common" name="SessionToken" element="q29:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeIdsByStepBasicList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeIdsByStepBasicListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeIdsByStepBasicList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q30="http://accipiens.com/Common" name="detail" element="q30:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperRelationTypesWithSuperTypeReplacementBasicList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperRelationTypesWithSuperTypeReplacementBasicList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperRelationTypesWithSuperTypeReplacementBasicList_InputMessage_Headers">
+    <wsdl:part xmlns:q31="http://accipiens.com/Common" name="SessionToken" element="q31:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperRelationTypesWithSuperTypeReplacementBasicList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperRelationTypesWithSuperTypeReplacementBasicListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperRelationTypesWithSuperTypeReplacementBasicList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q32="http://accipiens.com/Common" name="detail" element="q32:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeByEntityDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeByEntityDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeByEntityDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q33="http://accipiens.com/Common" name="SessionToken" element="q33:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeByEntityDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeByEntityDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeByEntityDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q34="http://accipiens.com/Common" name="detail" element="q34:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeExpenseTypeDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeExpenseTypeDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeExpenseTypeDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q35="http://accipiens.com/Common" name="SessionToken" element="q35:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeExpenseTypeDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperTypeExpenseTypeDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperTypeExpenseTypeDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q36="http://accipiens.com/Common" name="detail" element="q36:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetExpenseTypeForSubCredOperType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExpenseTypeForSubCredOperType" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetExpenseTypeForSubCredOperType_InputMessage_Headers">
+    <wsdl:part xmlns:q37="http://accipiens.com/Common" name="SessionToken" element="q37:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetExpenseTypeForSubCredOperType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExpenseTypeForSubCredOperTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetExpenseTypeForSubCredOperType_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q38="http://accipiens.com/Common" name="detail" element="q38:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetExpenseTypeForCredOperAndSubCredOperType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExpenseTypeForCredOperAndSubCredOperType" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetExpenseTypeForCredOperAndSubCredOperType_InputMessage_Headers">
+    <wsdl:part xmlns:q39="http://accipiens.com/Common" name="SessionToken" element="q39:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetExpenseTypeForCredOperAndSubCredOperType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExpenseTypeForCredOperAndSubCredOperTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetExpenseTypeForCredOperAndSubCredOperType_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q40="http://accipiens.com/Common" name="detail" element="q40:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetLoanInterestExpenseTypeDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLoanInterestExpenseTypeDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetLoanInterestExpenseTypeDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q41="http://accipiens.com/Common" name="SessionToken" element="q41:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetLoanInterestExpenseTypeDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLoanInterestExpenseTypeDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetLoanInterestExpenseTypeDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q42="http://accipiens.com/Common" name="detail" element="q42:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetProductEquipmentTypeDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductEquipmentTypeDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetProductEquipmentTypeDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q43="http://accipiens.com/Common" name="SessionToken" element="q43:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetProductEquipmentTypeDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductEquipmentTypeDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetProductEquipmentTypeDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q44="http://accipiens.com/Common" name="detail" element="q44:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentBrandDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipmentBrandDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentBrandDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q45="http://accipiens.com/Common" name="SessionToken" element="q45:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentBrandDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipmentBrandDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentBrandDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q46="http://accipiens.com/Common" name="detail" element="q46:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentModelDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipmentModelDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentModelDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q47="http://accipiens.com/Common" name="SessionToken" element="q47:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentModelDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipmentModelDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentModelDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q48="http://accipiens.com/Common" name="detail" element="q48:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentVersionDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipmentVersionDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentVersionDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q49="http://accipiens.com/Common" name="SessionToken" element="q49:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentVersionDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipmentVersionDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentVersionDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q50="http://accipiens.com/Common" name="detail" element="q50:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentCategoryDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipmentCategoryDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentCategoryDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q51="http://accipiens.com/Common" name="SessionToken" element="q51:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentCategoryDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipmentCategoryDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentCategoryDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q52="http://accipiens.com/Common" name="detail" element="q52:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentTypeByCategoriesDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipmentTypeByCategoriesDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentTypeByCategoriesDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q53="http://accipiens.com/Common" name="SessionToken" element="q53:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentTypeByCategoriesDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipmentTypeByCategoriesDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentTypeByCategoriesDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q54="http://accipiens.com/Common" name="detail" element="q54:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentCategoryByEquipmentTypeDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipmentCategoryByEquipmentTypeDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentCategoryByEquipmentTypeDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q55="http://accipiens.com/Common" name="SessionToken" element="q55:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentCategoryByEquipmentTypeDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipmentCategoryByEquipmentTypeDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentCategoryByEquipmentTypeDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q56="http://accipiens.com/Common" name="detail" element="q56:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentRegistrationList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipmentRegistrationList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentRegistrationList_InputMessage_Headers">
+    <wsdl:part xmlns:q57="http://accipiens.com/Common" name="SessionToken" element="q57:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentRegistrationList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipmentRegistrationListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentRegistrationList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q58="http://accipiens.com/Common" name="detail" element="q58:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAssetTaxTypeDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetTaxTypeDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAssetTaxTypeDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q59="http://accipiens.com/Common" name="SessionToken" element="q59:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAssetTaxTypeDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetTaxTypeDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAssetTaxTypeDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q60="http://accipiens.com/Common" name="detail" element="q60:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAssetTaxTypeByVendorOrSupplierInvoiceClassDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetTaxTypeByVendorOrSupplierInvoiceClassDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAssetTaxTypeByVendorOrSupplierInvoiceClassDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q61="http://accipiens.com/Common" name="SessionToken" element="q61:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAssetTaxTypeByVendorOrSupplierInvoiceClassDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetTaxTypeByVendorOrSupplierInvoiceClassDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAssetTaxTypeByVendorOrSupplierInvoiceClassDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q62="http://accipiens.com/Common" name="detail" element="q62:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAssetTaxTypeWithValueByDateDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetTaxTypeWithValueByDateDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAssetTaxTypeWithValueByDateDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q63="http://accipiens.com/Common" name="SessionToken" element="q63:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAssetTaxTypeWithValueByDateDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetTaxTypeWithValueByDateDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAssetTaxTypeWithValueByDateDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q64="http://accipiens.com/Common" name="detail" element="q64:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAssetTaxTypeDList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetTaxTypeDList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAssetTaxTypeDList_InputMessage_Headers">
+    <wsdl:part xmlns:q65="http://accipiens.com/Common" name="SessionToken" element="q65:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAssetTaxTypeDList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetTaxTypeDListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAssetTaxTypeDList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q66="http://accipiens.com/Common" name="detail" element="q66:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetExpenseTypeForAssetTaxType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExpenseTypeForAssetTaxType" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetExpenseTypeForAssetTaxType_InputMessage_Headers">
+    <wsdl:part xmlns:q67="http://accipiens.com/Common" name="SessionToken" element="q67:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetExpenseTypeForAssetTaxType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExpenseTypeForAssetTaxTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetExpenseTypeForAssetTaxType_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q68="http://accipiens.com/Common" name="detail" element="q68:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperAssetStateToRescissionLitigation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperAssetStateToRescissionLitigation" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperAssetStateToRescissionLitigation_InputMessage_Headers">
+    <wsdl:part xmlns:q69="http://accipiens.com/Common" name="SessionToken" element="q69:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperAssetStateToRescissionLitigation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperAssetStateToRescissionLitigationResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperAssetStateToRescissionLitigation_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q70="http://accipiens.com/Common" name="detail" element="q70:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperAssetStateToRescissionSale_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperAssetStateToRescissionSale" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperAssetStateToRescissionSale_InputMessage_Headers">
+    <wsdl:part xmlns:q71="http://accipiens.com/Common" name="SessionToken" element="q71:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperAssetStateToRescissionSale_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperAssetStateToRescissionSaleResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperAssetStateToRescissionSale_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q72="http://accipiens.com/Common" name="detail" element="q72:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperAssetStateToRescissionLost_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperAssetStateToRescissionLost" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperAssetStateToRescissionLost_InputMessage_Headers">
+    <wsdl:part xmlns:q73="http://accipiens.com/Common" name="SessionToken" element="q73:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperAssetStateToRescissionLost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperAssetStateToRescissionLostResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperAssetStateToRescissionLost_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q74="http://accipiens.com/Common" name="detail" element="q74:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperAssetList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperAssetList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperAssetList_InputMessage_Headers">
+    <wsdl:part xmlns:q75="http://accipiens.com/Common" name="SessionToken" element="q75:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperAssetList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperAssetListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperAssetList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q76="http://accipiens.com/Common" name="detail" element="q76:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperAssetListByCOAssetId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperAssetListByCOAssetId" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperAssetListByCOAssetId_InputMessage_Headers">
+    <wsdl:part xmlns:q77="http://accipiens.com/Common" name="SessionToken" element="q77:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperAssetListByCOAssetId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperAssetListByCOAssetIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperAssetListByCOAssetId_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q78="http://accipiens.com/Common" name="detail" element="q78:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperAssetMeasureTypeRestrictionDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperAssetMeasureTypeRestrictionDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperAssetMeasureTypeRestrictionDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q79="http://accipiens.com/Common" name="SessionToken" element="q79:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperAssetMeasureTypeRestrictionDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperAssetMeasureTypeRestrictionDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperAssetMeasureTypeRestrictionDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q80="http://accipiens.com/Common" name="detail" element="q80:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAssetFinTypeDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetFinTypeDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAssetFinTypeDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q81="http://accipiens.com/Common" name="SessionToken" element="q81:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAssetFinTypeDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetFinTypeDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAssetFinTypeDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q82="http://accipiens.com/Common" name="detail" element="q82:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAssetPaymentCalendarCurrenciesDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetPaymentCalendarCurrenciesDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAssetPaymentCalendarCurrenciesDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q83="http://accipiens.com/Common" name="SessionToken" element="q83:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAssetPaymentCalendarCurrenciesDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetPaymentCalendarCurrenciesDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAssetPaymentCalendarCurrenciesDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q84="http://accipiens.com/Common" name="detail" element="q84:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetBuildingMatrixFractionListByBuildingMatrix_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBuildingMatrixFractionListByBuildingMatrix" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetBuildingMatrixFractionListByBuildingMatrix_InputMessage_Headers">
+    <wsdl:part xmlns:q85="http://accipiens.com/Common" name="SessionToken" element="q85:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetBuildingMatrixFractionListByBuildingMatrix_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBuildingMatrixFractionListByBuildingMatrixResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetBuildingMatrixFractionListByBuildingMatrix_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q86="http://accipiens.com/Common" name="detail" element="q86:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetBuildingInfoFractionList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBuildingInfoFractionList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetBuildingInfoFractionList_InputMessage_Headers">
+    <wsdl:part xmlns:q87="http://accipiens.com/Common" name="SessionToken" element="q87:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetBuildingInfoFractionList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBuildingInfoFractionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetBuildingInfoFractionList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q88="http://accipiens.com/Common" name="detail" element="q88:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetBuildingInfoFractionWithPartialList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBuildingInfoFractionWithPartialList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetBuildingInfoFractionWithPartialList_InputMessage_Headers">
+    <wsdl:part xmlns:q89="http://accipiens.com/Common" name="SessionToken" element="q89:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetBuildingInfoFractionWithPartialList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBuildingInfoFractionWithPartialListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetBuildingInfoFractionWithPartialList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q90="http://accipiens.com/Common" name="detail" element="q90:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetBuildingInfoMatricesCodeAbbreviation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBuildingInfoMatricesCodeAbbreviation" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetBuildingInfoMatricesCodeAbbreviation_InputMessage_Headers">
+    <wsdl:part xmlns:q91="http://accipiens.com/Common" name="SessionToken" element="q91:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetBuildingInfoMatricesCodeAbbreviation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBuildingInfoMatricesCodeAbbreviationResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetBuildingInfoMatricesCodeAbbreviation_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q92="http://accipiens.com/Common" name="detail" element="q92:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetBuildingInfoMatricesList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBuildingInfoMatricesList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetBuildingInfoMatricesList_InputMessage_Headers">
+    <wsdl:part xmlns:q93="http://accipiens.com/Common" name="SessionToken" element="q93:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetBuildingInfoMatricesList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBuildingInfoMatricesListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetBuildingInfoMatricesList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q94="http://accipiens.com/Common" name="detail" element="q94:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetBuildingMatricesList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBuildingMatricesList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetBuildingMatricesList_InputMessage_Headers">
+    <wsdl:part xmlns:q95="http://accipiens.com/Common" name="SessionToken" element="q95:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetBuildingMatricesList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBuildingMatricesListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetBuildingMatricesList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q96="http://accipiens.com/Common" name="detail" element="q96:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetBuildingMatricesListByBuildingInfoFraction_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBuildingMatricesListByBuildingInfoFraction" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetBuildingMatricesListByBuildingInfoFraction_InputMessage_Headers">
+    <wsdl:part xmlns:q97="http://accipiens.com/Common" name="SessionToken" element="q97:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetBuildingMatricesListByBuildingInfoFraction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBuildingMatricesListByBuildingInfoFractionResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetBuildingMatricesListByBuildingInfoFraction_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q98="http://accipiens.com/Common" name="detail" element="q98:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperGuarantCrossDefaultList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperGuarantCrossDefaultList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperGuarantCrossDefaultList_InputMessage_Headers">
+    <wsdl:part xmlns:q99="http://accipiens.com/Common" name="SessionToken" element="q99:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperGuarantCrossDefaultList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperGuarantCrossDefaultListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperGuarantCrossDefaultList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q100="http://accipiens.com/Common" name="detail" element="q100:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetDisposableAssetDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDisposableAssetDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetDisposableAssetDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q101="http://accipiens.com/Common" name="SessionToken" element="q101:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetDisposableAssetDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDisposableAssetDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetDisposableAssetDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q102="http://accipiens.com/Common" name="detail" element="q102:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAplBusinessIdsDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAplBusinessIdsDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAplBusinessIdsDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q103="http://accipiens.com/Common" name="SessionToken" element="q103:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAplBusinessIdsDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAplBusinessIdsDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAplBusinessIdsDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q104="http://accipiens.com/Common" name="detail" element="q104:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAplBusinessIdsForInvoiceUniverseDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAplBusinessIdsForInvoiceUniverseDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAplBusinessIdsForInvoiceUniverseDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q105="http://accipiens.com/Common" name="SessionToken" element="q105:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAplBusinessIdsForInvoiceUniverseDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAplBusinessIdsForInvoiceUniverseDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAplBusinessIdsForInvoiceUniverseDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q106="http://accipiens.com/Common" name="detail" element="q106:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetSimulationTypeDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSimulationTypeDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetSimulationTypeDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q107="http://accipiens.com/Common" name="SessionToken" element="q107:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetSimulationTypeDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSimulationTypeDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetSimulationTypeDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q108="http://accipiens.com/Common" name="detail" element="q108:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetImporterForCredOper_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetImporterForCredOper" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetImporterForCredOper_InputMessage_Headers">
+    <wsdl:part xmlns:q109="http://accipiens.com/Common" name="SessionToken" element="q109:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetImporterForCredOper_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetImporterForCredOperResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetImporterForCredOper_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q110="http://accipiens.com/Common" name="detail" element="q110:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEntitysToSubCredOperActiveAtDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntitysToSubCredOperActiveAtDate" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEntitysToSubCredOperActiveAtDate_InputMessage_Headers">
+    <wsdl:part xmlns:q111="http://accipiens.com/Common" name="SessionToken" element="q111:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEntitysToSubCredOperActiveAtDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntitysToSubCredOperActiveAtDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEntitysToSubCredOperActiveAtDate_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q112="http://accipiens.com/Common" name="detail" element="q112:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetSubCredOperTypeByBusiness_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubCredOperTypeByBusiness" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetSubCredOperTypeByBusiness_InputMessage_Headers">
+    <wsdl:part xmlns:q113="http://accipiens.com/Common" name="SessionToken" element="q113:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetSubCredOperTypeByBusiness_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubCredOperTypeByBusinessResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetSubCredOperTypeByBusiness_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q114="http://accipiens.com/Common" name="detail" element="q114:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetSubCredOperInitialCodeDynamicList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubCredOperInitialCodeDynamicList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetSubCredOperInitialCodeDynamicList_InputMessage_Headers">
+    <wsdl:part xmlns:q115="http://accipiens.com/Common" name="SessionToken" element="q115:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetSubCredOperInitialCodeDynamicList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubCredOperInitialCodeDynamicListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetSubCredOperInitialCodeDynamicList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q116="http://accipiens.com/Common" name="detail" element="q116:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetActiveSubCredOperItemOrderByBeginDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActiveSubCredOperItemOrderByBeginDate" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetActiveSubCredOperItemOrderByBeginDate_InputMessage_Headers">
+    <wsdl:part xmlns:q117="http://accipiens.com/Common" name="SessionToken" element="q117:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetActiveSubCredOperItemOrderByBeginDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActiveSubCredOperItemOrderByBeginDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetActiveSubCredOperItemOrderByBeginDate_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q118="http://accipiens.com/Common" name="detail" element="q118:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetStockPaymentSubCredOperEndReasonsList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStockPaymentSubCredOperEndReasonsList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetStockPaymentSubCredOperEndReasonsList_InputMessage_Headers">
+    <wsdl:part xmlns:q119="http://accipiens.com/Common" name="SessionToken" element="q119:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetStockPaymentSubCredOperEndReasonsList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStockPaymentSubCredOperEndReasonsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetStockPaymentSubCredOperEndReasonsList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q120="http://accipiens.com/Common" name="detail" element="q120:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetIntervIdsWithPaymentModeForCredOperBasicList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntervIdsWithPaymentModeForCredOperBasicList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetIntervIdsWithPaymentModeForCredOperBasicList_InputMessage_Headers">
+    <wsdl:part xmlns:q121="http://accipiens.com/Common" name="SessionToken" element="q121:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetIntervIdsWithPaymentModeForCredOperBasicList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntervIdsWithPaymentModeForCredOperBasicListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetIntervIdsWithPaymentModeForCredOperBasicList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q122="http://accipiens.com/Common" name="detail" element="q122:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperIntervTypeBySuperTypeDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperIntervTypeBySuperTypeDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperIntervTypeBySuperTypeDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q123="http://accipiens.com/Common" name="SessionToken" element="q123:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperIntervTypeBySuperTypeDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperIntervTypeBySuperTypeDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperIntervTypeBySuperTypeDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q124="http://accipiens.com/Common" name="detail" element="q124:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCashFlowEntityList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCashFlowEntityList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCashFlowEntityList_InputMessage_Headers">
+    <wsdl:part xmlns:q125="http://accipiens.com/Common" name="SessionToken" element="q125:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCashFlowEntityList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCashFlowEntityListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCashFlowEntityList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q126="http://accipiens.com/Common" name="detail" element="q126:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperClaimEntityDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperClaimEntityDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperClaimEntityDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q127="http://accipiens.com/Common" name="SessionToken" element="q127:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperClaimEntityDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperClaimEntityDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperClaimEntityDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q128="http://accipiens.com/Common" name="detail" element="q128:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetMarketCampaignDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMarketCampaignDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetMarketCampaignDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q129="http://accipiens.com/Common" name="SessionToken" element="q129:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetMarketCampaignDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMarketCampaignDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetMarketCampaignDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q130="http://accipiens.com/Common" name="detail" element="q130:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetFinancialProductBasicList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinancialProductBasicList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetFinancialProductBasicList_InputMessage_Headers">
+    <wsdl:part xmlns:q131="http://accipiens.com/Common" name="SessionToken" element="q131:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetFinancialProductBasicList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinancialProductBasicListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetFinancialProductBasicList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q132="http://accipiens.com/Common" name="detail" element="q132:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetFinancialProductWithRestrictionsBasicList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinancialProductWithRestrictionsBasicList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetFinancialProductWithRestrictionsBasicList_InputMessage_Headers">
+    <wsdl:part xmlns:q133="http://accipiens.com/Common" name="SessionToken" element="q133:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetFinancialProductWithRestrictionsBasicList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinancialProductWithRestrictionsBasicListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetFinancialProductWithRestrictionsBasicList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q134="http://accipiens.com/Common" name="detail" element="q134:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperChannelDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperChannelDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperChannelDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q135="http://accipiens.com/Common" name="SessionToken" element="q135:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperChannelDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperChannelDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperChannelDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q136="http://accipiens.com/Common" name="detail" element="q136:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetFinSymbolRelatedDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinSymbolRelatedDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetFinSymbolRelatedDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q137="http://accipiens.com/Common" name="SessionToken" element="q137:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetFinSymbolRelatedDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinSymbolRelatedDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetFinSymbolRelatedDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q138="http://accipiens.com/Common" name="detail" element="q138:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetDefaultSymbolIdDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDefaultSymbolIdDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetDefaultSymbolIdDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q139="http://accipiens.com/Common" name="SessionToken" element="q139:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetDefaultSymbolIdDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDefaultSymbolIdDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetDefaultSymbolIdDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q140="http://accipiens.com/Common" name="detail" element="q140:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperClauseDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperClauseDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperClauseDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q141="http://accipiens.com/Common" name="SessionToken" element="q141:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperClauseDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperClauseDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCredOperClauseDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q142="http://accipiens.com/Common" name="detail" element="q142:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAlertGroupTypeBasicList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlertGroupTypeBasicList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAlertGroupTypeBasicList_InputMessage_Headers">
+    <wsdl:part xmlns:q143="http://accipiens.com/Common" name="SessionToken" element="q143:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAlertGroupTypeBasicList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlertGroupTypeBasicListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAlertGroupTypeBasicList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q144="http://accipiens.com/Common" name="detail" element="q144:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAlertTypeDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlertTypeDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAlertTypeDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q145="http://accipiens.com/Common" name="SessionToken" element="q145:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAlertTypeDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlertTypeDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAlertTypeDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q146="http://accipiens.com/Common" name="detail" element="q146:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAlertOutputsDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlertOutputsDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAlertOutputsDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q147="http://accipiens.com/Common" name="SessionToken" element="q147:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAlertOutputsDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlertOutputsDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAlertOutputsDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q148="http://accipiens.com/Common" name="detail" element="q148:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetContractActiveAutUserStateDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContractActiveAutUserStateDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetContractActiveAutUserStateDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q149="http://accipiens.com/Common" name="SessionToken" element="q149:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetContractActiveAutUserStateDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContractActiveAutUserStateDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetContractActiveAutUserStateDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q150="http://accipiens.com/Common" name="detail" element="q150:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAutUserStateByStepAndBusinessDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutUserStateByStepAndBusinessDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAutUserStateByStepAndBusinessDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q151="http://accipiens.com/Common" name="SessionToken" element="q151:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAutUserStateByStepAndBusinessDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutUserStateByStepAndBusinessDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAutUserStateByStepAndBusinessDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q152="http://accipiens.com/Common" name="detail" element="q152:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAssetInternalOperationNone_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetInternalOperationNone" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAssetInternalOperationNone_InputMessage_Headers">
+    <wsdl:part xmlns:q153="http://accipiens.com/Common" name="SessionToken" element="q153:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAssetInternalOperationNone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetInternalOperationNoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetAssetInternalOperationNone_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q154="http://accipiens.com/Common" name="detail" element="q154:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetSubCredOperItemWithEntityBasicList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubCredOperItemWithEntityBasicList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetSubCredOperItemWithEntityBasicList_InputMessage_Headers">
+    <wsdl:part xmlns:q155="http://accipiens.com/Common" name="SessionToken" element="q155:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetSubCredOperItemWithEntityBasicList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubCredOperItemWithEntityBasicListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetSubCredOperItemWithEntityBasicList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q156="http://accipiens.com/Common" name="detail" element="q156:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCashFlowInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCashFlowInfo" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCashFlowInfo_InputMessage_Headers">
+    <wsdl:part xmlns:q157="http://accipiens.com/Common" name="SessionToken" element="q157:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCashFlowInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCashFlowInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetCashFlowInfo_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q158="http://accipiens.com/Common" name="detail" element="q158:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetRateIdBasicList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRateIdBasicList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetRateIdBasicList_InputMessage_Headers">
+    <wsdl:part xmlns:q159="http://accipiens.com/Common" name="SessionToken" element="q159:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetRateIdBasicList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRateIdBasicListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetRateIdBasicList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q160="http://accipiens.com/Common" name="detail" element="q160:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetInsuranceGrpPriceVersionBasicList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsuranceGrpPriceVersionBasicList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetInsuranceGrpPriceVersionBasicList_InputMessage_Headers">
+    <wsdl:part xmlns:q161="http://accipiens.com/Common" name="SessionToken" element="q161:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetInsuranceGrpPriceVersionBasicList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsuranceGrpPriceVersionBasicListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetInsuranceGrpPriceVersionBasicList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q162="http://accipiens.com/Common" name="detail" element="q162:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetInsuranceRiskTypeAllowed_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsuranceRiskTypeAllowed" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetInsuranceRiskTypeAllowed_InputMessage_Headers">
+    <wsdl:part xmlns:q163="http://accipiens.com/Common" name="SessionToken" element="q163:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetInsuranceRiskTypeAllowed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsuranceRiskTypeAllowedResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetInsuranceRiskTypeAllowed_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q164="http://accipiens.com/Common" name="detail" element="q164:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentUsageActionTypeByContextBasicList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipmentUsageActionTypeByContextBasicList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentUsageActionTypeByContextBasicList_InputMessage_Headers">
+    <wsdl:part xmlns:q165="http://accipiens.com/Common" name="SessionToken" element="q165:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentUsageActionTypeByContextBasicList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipmentUsageActionTypeByContextBasicListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentUsageActionTypeByContextBasicList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q166="http://accipiens.com/Common" name="detail" element="q166:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentUsageTypeByContextBasicList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipmentUsageTypeByContextBasicList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentUsageTypeByContextBasicList_InputMessage_Headers">
+    <wsdl:part xmlns:q167="http://accipiens.com/Common" name="SessionToken" element="q167:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentUsageTypeByContextBasicList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipmentUsageTypeByContextBasicListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentUsageTypeByContextBasicList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q168="http://accipiens.com/Common" name="detail" element="q168:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetMLATemplateCredOperBasicList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMLATemplateCredOperBasicList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetMLATemplateCredOperBasicList_InputMessage_Headers">
+    <wsdl:part xmlns:q169="http://accipiens.com/Common" name="SessionToken" element="q169:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetMLATemplateCredOperBasicList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMLATemplateCredOperBasicListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetMLATemplateCredOperBasicList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q170="http://accipiens.com/Common" name="detail" element="q170:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetDepreciationBindingModeDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepreciationBindingModeDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetDepreciationBindingModeDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q171="http://accipiens.com/Common" name="SessionToken" element="q171:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetDepreciationBindingModeDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepreciationBindingModeDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetDepreciationBindingModeDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q172="http://accipiens.com/Common" name="detail" element="q172:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentRegistrationAuthoringDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipmentRegistrationAuthoringDataList" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentRegistrationAuthoringDataList_InputMessage_Headers">
+    <wsdl:part xmlns:q173="http://accipiens.com/Common" name="SessionToken" element="q173:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentRegistrationAuthoringDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipmentRegistrationAuthoringDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditOperationsBasicLists_GetEquipmentRegistrationAuthoringDataList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q174="http://accipiens.com/Common" name="detail" element="q174:AcpDetail" />
+  </wsdl:message>
+  <wsdl:portType name="CreditOperationsBasicLists">
+    <wsdl:operation name="GetDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetDataList" message="tns:CreditOperationsBasicLists_GetDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetDataListResponse" message="tns:CreditOperationsBasicLists_GetDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetForeignDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetForeignDataList" message="tns:CreditOperationsBasicLists_GetForeignDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetForeignDataListResponse" message="tns:CreditOperationsBasicLists_GetForeignDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetForeignDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMultiForeignDataListKeyCount">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetMultiForeignDataListKeyCount" message="tns:CreditOperationsBasicLists_GetMultiForeignDataListKeyCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetMultiForeignDataListKeyCountResponse" message="tns:CreditOperationsBasicLists_GetMultiForeignDataListKeyCount_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetMultiForeignDataListKeyCount_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperAutUserStateList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperAutUserStateList" message="tns:CreditOperationsBasicLists_GetCredOperAutUserStateList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperAutUserStateListResponse" message="tns:CreditOperationsBasicLists_GetCredOperAutUserStateList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetCredOperAutUserStateList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperAutUserStateDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperAutUserStateDataList" message="tns:CreditOperationsBasicLists_GetCredOperAutUserStateDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperAutUserStateDataListResponse" message="tns:CreditOperationsBasicLists_GetCredOperAutUserStateDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetCredOperAutUserStateDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypeData">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperTypeData" message="tns:CreditOperationsBasicLists_GetCredOperTypeData_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperTypeDataResponse" message="tns:CreditOperationsBasicLists_GetCredOperTypeData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetCredOperTypeData_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypeDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperTypeDataList" message="tns:CreditOperationsBasicLists_GetCredOperTypeDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperTypeDataListResponse" message="tns:CreditOperationsBasicLists_GetCredOperTypeDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetCredOperTypeDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypeDataListOnlyInterest">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperTypeDataListOnlyInterest" message="tns:CreditOperationsBasicLists_GetCredOperTypeDataListOnlyInterest_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperTypeDataListOnlyInterestResponse" message="tns:CreditOperationsBasicLists_GetCredOperTypeDataListOnlyInterest_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetCredOperTypeDataListOnlyInterest_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypeByNatureDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperTypeByNatureDataList" message="tns:CreditOperationsBasicLists_GetCredOperTypeByNatureDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperTypeByNatureDataListResponse" message="tns:CreditOperationsBasicLists_GetCredOperTypeByNatureDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetCredOperTypeByNatureDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypeByNaturesDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperTypeByNaturesDataList" message="tns:CreditOperationsBasicLists_GetCredOperTypeByNaturesDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperTypeByNaturesDataListResponse" message="tns:CreditOperationsBasicLists_GetCredOperTypeByNaturesDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetCredOperTypeByNaturesDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypeIdsDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperTypeIdsDataList" message="tns:CreditOperationsBasicLists_GetCredOperTypeIdsDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperTypeIdsDataListResponse" message="tns:CreditOperationsBasicLists_GetCredOperTypeIdsDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetCredOperTypeIdsDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypeIdsByStepDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperTypeIdsByStepDataList" message="tns:CreditOperationsBasicLists_GetCredOperTypeIdsByStepDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperTypeIdsByStepDataListResponse" message="tns:CreditOperationsBasicLists_GetCredOperTypeIdsByStepDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetCredOperTypeIdsByStepDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypeIdsByInternalStateDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperTypeIdsByInternalStateDataList" message="tns:CreditOperationsBasicLists_GetCredOperTypeIdsByInternalStateDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperTypeIdsByInternalStateDataListResponse" message="tns:CreditOperationsBasicLists_GetCredOperTypeIdsByInternalStateDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetCredOperTypeIdsByInternalStateDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCessionCredOperTypeByOriginAndSuperTypeDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCessionCredOperTypeByOriginAndSuperTypeDataList" message="tns:CreditOperationsBasicLists_GetCessionCredOperTypeByOriginAndSuperTypeDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCessionCredOperTypeByOriginAndSuperTypeDataListResponse" message="tns:CreditOperationsBasicLists_GetCessionCredOperTypeByOriginAndSuperTypeDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetCessionCredOperTypeByOriginAndSuperTypeDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypeIdsByStepBasicList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperTypeIdsByStepBasicList" message="tns:CreditOperationsBasicLists_GetCredOperTypeIdsByStepBasicList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperTypeIdsByStepBasicListResponse" message="tns:CreditOperationsBasicLists_GetCredOperTypeIdsByStepBasicList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetCredOperTypeIdsByStepBasicList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperRelationTypesWithSuperTypeReplacementBasicList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperRelationTypesWithSuperTypeReplacementBasicList" message="tns:CreditOperationsBasicLists_GetCredOperRelationTypesWithSuperTypeReplacementBasicList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperRelationTypesWithSuperTypeReplacementBasicListResponse" message="tns:CreditOperationsBasicLists_GetCredOperRelationTypesWithSuperTypeReplacementBasicList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetCredOperRelationTypesWithSuperTypeReplacementBasicList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypeByEntityDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperTypeByEntityDataList" message="tns:CreditOperationsBasicLists_GetCredOperTypeByEntityDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperTypeByEntityDataListResponse" message="tns:CreditOperationsBasicLists_GetCredOperTypeByEntityDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetCredOperTypeByEntityDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypeExpenseTypeDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperTypeExpenseTypeDataList" message="tns:CreditOperationsBasicLists_GetCredOperTypeExpenseTypeDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperTypeExpenseTypeDataListResponse" message="tns:CreditOperationsBasicLists_GetCredOperTypeExpenseTypeDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetCredOperTypeExpenseTypeDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExpenseTypeForSubCredOperType">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetExpenseTypeForSubCredOperType" message="tns:CreditOperationsBasicLists_GetExpenseTypeForSubCredOperType_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetExpenseTypeForSubCredOperTypeResponse" message="tns:CreditOperationsBasicLists_GetExpenseTypeForSubCredOperType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetExpenseTypeForSubCredOperType_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExpenseTypeForCredOperAndSubCredOperType">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetExpenseTypeForCredOperAndSubCredOperType" message="tns:CreditOperationsBasicLists_GetExpenseTypeForCredOperAndSubCredOperType_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetExpenseTypeForCredOperAndSubCredOperTypeResponse" message="tns:CreditOperationsBasicLists_GetExpenseTypeForCredOperAndSubCredOperType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetExpenseTypeForCredOperAndSubCredOperType_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLoanInterestExpenseTypeDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetLoanInterestExpenseTypeDataList" message="tns:CreditOperationsBasicLists_GetLoanInterestExpenseTypeDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetLoanInterestExpenseTypeDataListResponse" message="tns:CreditOperationsBasicLists_GetLoanInterestExpenseTypeDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetLoanInterestExpenseTypeDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductEquipmentTypeDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetProductEquipmentTypeDataList" message="tns:CreditOperationsBasicLists_GetProductEquipmentTypeDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetProductEquipmentTypeDataListResponse" message="tns:CreditOperationsBasicLists_GetProductEquipmentTypeDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetProductEquipmentTypeDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipmentBrandDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetEquipmentBrandDataList" message="tns:CreditOperationsBasicLists_GetEquipmentBrandDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetEquipmentBrandDataListResponse" message="tns:CreditOperationsBasicLists_GetEquipmentBrandDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetEquipmentBrandDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipmentModelDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetEquipmentModelDataList" message="tns:CreditOperationsBasicLists_GetEquipmentModelDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetEquipmentModelDataListResponse" message="tns:CreditOperationsBasicLists_GetEquipmentModelDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetEquipmentModelDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipmentVersionDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetEquipmentVersionDataList" message="tns:CreditOperationsBasicLists_GetEquipmentVersionDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetEquipmentVersionDataListResponse" message="tns:CreditOperationsBasicLists_GetEquipmentVersionDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetEquipmentVersionDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipmentCategoryDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetEquipmentCategoryDataList" message="tns:CreditOperationsBasicLists_GetEquipmentCategoryDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetEquipmentCategoryDataListResponse" message="tns:CreditOperationsBasicLists_GetEquipmentCategoryDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetEquipmentCategoryDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipmentTypeByCategoriesDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetEquipmentTypeByCategoriesDataList" message="tns:CreditOperationsBasicLists_GetEquipmentTypeByCategoriesDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetEquipmentTypeByCategoriesDataListResponse" message="tns:CreditOperationsBasicLists_GetEquipmentTypeByCategoriesDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetEquipmentTypeByCategoriesDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipmentCategoryByEquipmentTypeDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetEquipmentCategoryByEquipmentTypeDataList" message="tns:CreditOperationsBasicLists_GetEquipmentCategoryByEquipmentTypeDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetEquipmentCategoryByEquipmentTypeDataListResponse" message="tns:CreditOperationsBasicLists_GetEquipmentCategoryByEquipmentTypeDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetEquipmentCategoryByEquipmentTypeDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipmentRegistrationList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetEquipmentRegistrationList" message="tns:CreditOperationsBasicLists_GetEquipmentRegistrationList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetEquipmentRegistrationListResponse" message="tns:CreditOperationsBasicLists_GetEquipmentRegistrationList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetEquipmentRegistrationList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetTaxTypeDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetAssetTaxTypeDataList" message="tns:CreditOperationsBasicLists_GetAssetTaxTypeDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetAssetTaxTypeDataListResponse" message="tns:CreditOperationsBasicLists_GetAssetTaxTypeDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetAssetTaxTypeDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetTaxTypeByVendorOrSupplierInvoiceClassDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetAssetTaxTypeByVendorOrSupplierInvoiceClassDataList" message="tns:CreditOperationsBasicLists_GetAssetTaxTypeByVendorOrSupplierInvoiceClassDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetAssetTaxTypeByVendorOrSupplierInvoiceClassDataListResponse" message="tns:CreditOperationsBasicLists_GetAssetTaxTypeByVendorOrSupplierInvoiceClassDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetAssetTaxTypeByVendorOrSupplierInvoiceClassDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetTaxTypeWithValueByDateDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetAssetTaxTypeWithValueByDateDataList" message="tns:CreditOperationsBasicLists_GetAssetTaxTypeWithValueByDateDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetAssetTaxTypeWithValueByDateDataListResponse" message="tns:CreditOperationsBasicLists_GetAssetTaxTypeWithValueByDateDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetAssetTaxTypeWithValueByDateDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetTaxTypeDList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetAssetTaxTypeDList" message="tns:CreditOperationsBasicLists_GetAssetTaxTypeDList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetAssetTaxTypeDListResponse" message="tns:CreditOperationsBasicLists_GetAssetTaxTypeDList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetAssetTaxTypeDList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExpenseTypeForAssetTaxType">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetExpenseTypeForAssetTaxType" message="tns:CreditOperationsBasicLists_GetExpenseTypeForAssetTaxType_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetExpenseTypeForAssetTaxTypeResponse" message="tns:CreditOperationsBasicLists_GetExpenseTypeForAssetTaxType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetExpenseTypeForAssetTaxType_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperAssetStateToRescissionLitigation">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperAssetStateToRescissionLitigation" message="tns:CreditOperationsBasicLists_GetCredOperAssetStateToRescissionLitigation_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperAssetStateToRescissionLitigationResponse" message="tns:CreditOperationsBasicLists_GetCredOperAssetStateToRescissionLitigation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetCredOperAssetStateToRescissionLitigation_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperAssetStateToRescissionSale">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperAssetStateToRescissionSale" message="tns:CreditOperationsBasicLists_GetCredOperAssetStateToRescissionSale_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperAssetStateToRescissionSaleResponse" message="tns:CreditOperationsBasicLists_GetCredOperAssetStateToRescissionSale_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetCredOperAssetStateToRescissionSale_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperAssetStateToRescissionLost">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperAssetStateToRescissionLost" message="tns:CreditOperationsBasicLists_GetCredOperAssetStateToRescissionLost_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperAssetStateToRescissionLostResponse" message="tns:CreditOperationsBasicLists_GetCredOperAssetStateToRescissionLost_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetCredOperAssetStateToRescissionLost_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperAssetList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperAssetList" message="tns:CreditOperationsBasicLists_GetCredOperAssetList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperAssetListResponse" message="tns:CreditOperationsBasicLists_GetCredOperAssetList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetCredOperAssetList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperAssetListByCOAssetId">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperAssetListByCOAssetId" message="tns:CreditOperationsBasicLists_GetCredOperAssetListByCOAssetId_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperAssetListByCOAssetIdResponse" message="tns:CreditOperationsBasicLists_GetCredOperAssetListByCOAssetId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetCredOperAssetListByCOAssetId_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperAssetMeasureTypeRestrictionDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperAssetMeasureTypeRestrictionDataList" message="tns:CreditOperationsBasicLists_GetCredOperAssetMeasureTypeRestrictionDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperAssetMeasureTypeRestrictionDataListResponse" message="tns:CreditOperationsBasicLists_GetCredOperAssetMeasureTypeRestrictionDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetCredOperAssetMeasureTypeRestrictionDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetFinTypeDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetAssetFinTypeDataList" message="tns:CreditOperationsBasicLists_GetAssetFinTypeDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetAssetFinTypeDataListResponse" message="tns:CreditOperationsBasicLists_GetAssetFinTypeDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetAssetFinTypeDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetPaymentCalendarCurrenciesDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetAssetPaymentCalendarCurrenciesDataList" message="tns:CreditOperationsBasicLists_GetAssetPaymentCalendarCurrenciesDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetAssetPaymentCalendarCurrenciesDataListResponse" message="tns:CreditOperationsBasicLists_GetAssetPaymentCalendarCurrenciesDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetAssetPaymentCalendarCurrenciesDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBuildingMatrixFractionListByBuildingMatrix">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetBuildingMatrixFractionListByBuildingMatrix" message="tns:CreditOperationsBasicLists_GetBuildingMatrixFractionListByBuildingMatrix_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetBuildingMatrixFractionListByBuildingMatrixResponse" message="tns:CreditOperationsBasicLists_GetBuildingMatrixFractionListByBuildingMatrix_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetBuildingMatrixFractionListByBuildingMatrix_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBuildingInfoFractionList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetBuildingInfoFractionList" message="tns:CreditOperationsBasicLists_GetBuildingInfoFractionList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetBuildingInfoFractionListResponse" message="tns:CreditOperationsBasicLists_GetBuildingInfoFractionList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetBuildingInfoFractionList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBuildingInfoFractionWithPartialList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetBuildingInfoFractionWithPartialList" message="tns:CreditOperationsBasicLists_GetBuildingInfoFractionWithPartialList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetBuildingInfoFractionWithPartialListResponse" message="tns:CreditOperationsBasicLists_GetBuildingInfoFractionWithPartialList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetBuildingInfoFractionWithPartialList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBuildingInfoMatricesCodeAbbreviation">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetBuildingInfoMatricesCodeAbbreviation" message="tns:CreditOperationsBasicLists_GetBuildingInfoMatricesCodeAbbreviation_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetBuildingInfoMatricesCodeAbbreviationResponse" message="tns:CreditOperationsBasicLists_GetBuildingInfoMatricesCodeAbbreviation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetBuildingInfoMatricesCodeAbbreviation_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBuildingInfoMatricesList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetBuildingInfoMatricesList" message="tns:CreditOperationsBasicLists_GetBuildingInfoMatricesList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetBuildingInfoMatricesListResponse" message="tns:CreditOperationsBasicLists_GetBuildingInfoMatricesList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetBuildingInfoMatricesList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBuildingMatricesList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetBuildingMatricesList" message="tns:CreditOperationsBasicLists_GetBuildingMatricesList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetBuildingMatricesListResponse" message="tns:CreditOperationsBasicLists_GetBuildingMatricesList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetBuildingMatricesList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBuildingMatricesListByBuildingInfoFraction">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetBuildingMatricesListByBuildingInfoFraction" message="tns:CreditOperationsBasicLists_GetBuildingMatricesListByBuildingInfoFraction_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetBuildingMatricesListByBuildingInfoFractionResponse" message="tns:CreditOperationsBasicLists_GetBuildingMatricesListByBuildingInfoFraction_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetBuildingMatricesListByBuildingInfoFraction_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperGuarantCrossDefaultList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperGuarantCrossDefaultList" message="tns:CreditOperationsBasicLists_GetCredOperGuarantCrossDefaultList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperGuarantCrossDefaultListResponse" message="tns:CreditOperationsBasicLists_GetCredOperGuarantCrossDefaultList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetCredOperGuarantCrossDefaultList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDisposableAssetDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetDisposableAssetDataList" message="tns:CreditOperationsBasicLists_GetDisposableAssetDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetDisposableAssetDataListResponse" message="tns:CreditOperationsBasicLists_GetDisposableAssetDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetDisposableAssetDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAplBusinessIdsDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetAplBusinessIdsDataList" message="tns:CreditOperationsBasicLists_GetAplBusinessIdsDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetAplBusinessIdsDataListResponse" message="tns:CreditOperationsBasicLists_GetAplBusinessIdsDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetAplBusinessIdsDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAplBusinessIdsForInvoiceUniverseDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetAplBusinessIdsForInvoiceUniverseDataList" message="tns:CreditOperationsBasicLists_GetAplBusinessIdsForInvoiceUniverseDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetAplBusinessIdsForInvoiceUniverseDataListResponse" message="tns:CreditOperationsBasicLists_GetAplBusinessIdsForInvoiceUniverseDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetAplBusinessIdsForInvoiceUniverseDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSimulationTypeDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetSimulationTypeDataList" message="tns:CreditOperationsBasicLists_GetSimulationTypeDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetSimulationTypeDataListResponse" message="tns:CreditOperationsBasicLists_GetSimulationTypeDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetSimulationTypeDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImporterForCredOper">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetImporterForCredOper" message="tns:CreditOperationsBasicLists_GetImporterForCredOper_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetImporterForCredOperResponse" message="tns:CreditOperationsBasicLists_GetImporterForCredOper_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetImporterForCredOper_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntitysToSubCredOperActiveAtDate">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetEntitysToSubCredOperActiveAtDate" message="tns:CreditOperationsBasicLists_GetEntitysToSubCredOperActiveAtDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetEntitysToSubCredOperActiveAtDateResponse" message="tns:CreditOperationsBasicLists_GetEntitysToSubCredOperActiveAtDate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetEntitysToSubCredOperActiveAtDate_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubCredOperTypeByBusiness">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetSubCredOperTypeByBusiness" message="tns:CreditOperationsBasicLists_GetSubCredOperTypeByBusiness_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetSubCredOperTypeByBusinessResponse" message="tns:CreditOperationsBasicLists_GetSubCredOperTypeByBusiness_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetSubCredOperTypeByBusiness_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubCredOperInitialCodeDynamicList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetSubCredOperInitialCodeDynamicList" message="tns:CreditOperationsBasicLists_GetSubCredOperInitialCodeDynamicList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetSubCredOperInitialCodeDynamicListResponse" message="tns:CreditOperationsBasicLists_GetSubCredOperInitialCodeDynamicList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetSubCredOperInitialCodeDynamicList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveSubCredOperItemOrderByBeginDate">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetActiveSubCredOperItemOrderByBeginDate" message="tns:CreditOperationsBasicLists_GetActiveSubCredOperItemOrderByBeginDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetActiveSubCredOperItemOrderByBeginDateResponse" message="tns:CreditOperationsBasicLists_GetActiveSubCredOperItemOrderByBeginDate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetActiveSubCredOperItemOrderByBeginDate_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStockPaymentSubCredOperEndReasonsList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetStockPaymentSubCredOperEndReasonsList" message="tns:CreditOperationsBasicLists_GetStockPaymentSubCredOperEndReasonsList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetStockPaymentSubCredOperEndReasonsListResponse" message="tns:CreditOperationsBasicLists_GetStockPaymentSubCredOperEndReasonsList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetStockPaymentSubCredOperEndReasonsList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIntervIdsWithPaymentModeForCredOperBasicList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetIntervIdsWithPaymentModeForCredOperBasicList" message="tns:CreditOperationsBasicLists_GetIntervIdsWithPaymentModeForCredOperBasicList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetIntervIdsWithPaymentModeForCredOperBasicListResponse" message="tns:CreditOperationsBasicLists_GetIntervIdsWithPaymentModeForCredOperBasicList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetIntervIdsWithPaymentModeForCredOperBasicList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperIntervTypeBySuperTypeDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperIntervTypeBySuperTypeDataList" message="tns:CreditOperationsBasicLists_GetCredOperIntervTypeBySuperTypeDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperIntervTypeBySuperTypeDataListResponse" message="tns:CreditOperationsBasicLists_GetCredOperIntervTypeBySuperTypeDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetCredOperIntervTypeBySuperTypeDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCashFlowEntityList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCashFlowEntityList" message="tns:CreditOperationsBasicLists_GetCashFlowEntityList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCashFlowEntityListResponse" message="tns:CreditOperationsBasicLists_GetCashFlowEntityList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetCashFlowEntityList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperClaimEntityDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperClaimEntityDataList" message="tns:CreditOperationsBasicLists_GetCredOperClaimEntityDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperClaimEntityDataListResponse" message="tns:CreditOperationsBasicLists_GetCredOperClaimEntityDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetCredOperClaimEntityDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMarketCampaignDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetMarketCampaignDataList" message="tns:CreditOperationsBasicLists_GetMarketCampaignDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetMarketCampaignDataListResponse" message="tns:CreditOperationsBasicLists_GetMarketCampaignDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetMarketCampaignDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancialProductBasicList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetFinancialProductBasicList" message="tns:CreditOperationsBasicLists_GetFinancialProductBasicList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetFinancialProductBasicListResponse" message="tns:CreditOperationsBasicLists_GetFinancialProductBasicList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetFinancialProductBasicList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancialProductWithRestrictionsBasicList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetFinancialProductWithRestrictionsBasicList" message="tns:CreditOperationsBasicLists_GetFinancialProductWithRestrictionsBasicList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetFinancialProductWithRestrictionsBasicListResponse" message="tns:CreditOperationsBasicLists_GetFinancialProductWithRestrictionsBasicList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetFinancialProductWithRestrictionsBasicList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperChannelDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperChannelDataList" message="tns:CreditOperationsBasicLists_GetCredOperChannelDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperChannelDataListResponse" message="tns:CreditOperationsBasicLists_GetCredOperChannelDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetCredOperChannelDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinSymbolRelatedDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetFinSymbolRelatedDataList" message="tns:CreditOperationsBasicLists_GetFinSymbolRelatedDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetFinSymbolRelatedDataListResponse" message="tns:CreditOperationsBasicLists_GetFinSymbolRelatedDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetFinSymbolRelatedDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDefaultSymbolIdDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetDefaultSymbolIdDataList" message="tns:CreditOperationsBasicLists_GetDefaultSymbolIdDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetDefaultSymbolIdDataListResponse" message="tns:CreditOperationsBasicLists_GetDefaultSymbolIdDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetDefaultSymbolIdDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperClauseDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperClauseDataList" message="tns:CreditOperationsBasicLists_GetCredOperClauseDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCredOperClauseDataListResponse" message="tns:CreditOperationsBasicLists_GetCredOperClauseDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetCredOperClauseDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAlertGroupTypeBasicList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetAlertGroupTypeBasicList" message="tns:CreditOperationsBasicLists_GetAlertGroupTypeBasicList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetAlertGroupTypeBasicListResponse" message="tns:CreditOperationsBasicLists_GetAlertGroupTypeBasicList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetAlertGroupTypeBasicList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAlertTypeDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetAlertTypeDataList" message="tns:CreditOperationsBasicLists_GetAlertTypeDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetAlertTypeDataListResponse" message="tns:CreditOperationsBasicLists_GetAlertTypeDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetAlertTypeDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAlertOutputsDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetAlertOutputsDataList" message="tns:CreditOperationsBasicLists_GetAlertOutputsDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetAlertOutputsDataListResponse" message="tns:CreditOperationsBasicLists_GetAlertOutputsDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetAlertOutputsDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContractActiveAutUserStateDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetContractActiveAutUserStateDataList" message="tns:CreditOperationsBasicLists_GetContractActiveAutUserStateDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetContractActiveAutUserStateDataListResponse" message="tns:CreditOperationsBasicLists_GetContractActiveAutUserStateDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetContractActiveAutUserStateDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutUserStateByStepAndBusinessDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetAutUserStateByStepAndBusinessDataList" message="tns:CreditOperationsBasicLists_GetAutUserStateByStepAndBusinessDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetAutUserStateByStepAndBusinessDataListResponse" message="tns:CreditOperationsBasicLists_GetAutUserStateByStepAndBusinessDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetAutUserStateByStepAndBusinessDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetInternalOperationNone">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetAssetInternalOperationNone" message="tns:CreditOperationsBasicLists_GetAssetInternalOperationNone_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetAssetInternalOperationNoneResponse" message="tns:CreditOperationsBasicLists_GetAssetInternalOperationNone_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetAssetInternalOperationNone_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubCredOperItemWithEntityBasicList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetSubCredOperItemWithEntityBasicList" message="tns:CreditOperationsBasicLists_GetSubCredOperItemWithEntityBasicList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetSubCredOperItemWithEntityBasicListResponse" message="tns:CreditOperationsBasicLists_GetSubCredOperItemWithEntityBasicList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetSubCredOperItemWithEntityBasicList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCashFlowInfo">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCashFlowInfo" message="tns:CreditOperationsBasicLists_GetCashFlowInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetCashFlowInfoResponse" message="tns:CreditOperationsBasicLists_GetCashFlowInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetCashFlowInfo_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRateIdBasicList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetRateIdBasicList" message="tns:CreditOperationsBasicLists_GetRateIdBasicList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetRateIdBasicListResponse" message="tns:CreditOperationsBasicLists_GetRateIdBasicList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetRateIdBasicList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsuranceGrpPriceVersionBasicList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetInsuranceGrpPriceVersionBasicList" message="tns:CreditOperationsBasicLists_GetInsuranceGrpPriceVersionBasicList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetInsuranceGrpPriceVersionBasicListResponse" message="tns:CreditOperationsBasicLists_GetInsuranceGrpPriceVersionBasicList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetInsuranceGrpPriceVersionBasicList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsuranceRiskTypeAllowed">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetInsuranceRiskTypeAllowed" message="tns:CreditOperationsBasicLists_GetInsuranceRiskTypeAllowed_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetInsuranceRiskTypeAllowedResponse" message="tns:CreditOperationsBasicLists_GetInsuranceRiskTypeAllowed_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetInsuranceRiskTypeAllowed_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipmentUsageActionTypeByContextBasicList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetEquipmentUsageActionTypeByContextBasicList" message="tns:CreditOperationsBasicLists_GetEquipmentUsageActionTypeByContextBasicList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetEquipmentUsageActionTypeByContextBasicListResponse" message="tns:CreditOperationsBasicLists_GetEquipmentUsageActionTypeByContextBasicList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetEquipmentUsageActionTypeByContextBasicList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipmentUsageTypeByContextBasicList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetEquipmentUsageTypeByContextBasicList" message="tns:CreditOperationsBasicLists_GetEquipmentUsageTypeByContextBasicList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetEquipmentUsageTypeByContextBasicListResponse" message="tns:CreditOperationsBasicLists_GetEquipmentUsageTypeByContextBasicList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetEquipmentUsageTypeByContextBasicList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMLATemplateCredOperBasicList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetMLATemplateCredOperBasicList" message="tns:CreditOperationsBasicLists_GetMLATemplateCredOperBasicList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetMLATemplateCredOperBasicListResponse" message="tns:CreditOperationsBasicLists_GetMLATemplateCredOperBasicList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetMLATemplateCredOperBasicList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepreciationBindingModeDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetDepreciationBindingModeDataList" message="tns:CreditOperationsBasicLists_GetDepreciationBindingModeDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetDepreciationBindingModeDataListResponse" message="tns:CreditOperationsBasicLists_GetDepreciationBindingModeDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetDepreciationBindingModeDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipmentRegistrationAuthoringDataList">
+      <wsdl:input wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetEquipmentRegistrationAuthoringDataList" message="tns:CreditOperationsBasicLists_GetEquipmentRegistrationAuthoringDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/CreditOperationsBasicLists/GetEquipmentRegistrationAuthoringDataListResponse" message="tns:CreditOperationsBasicLists_GetEquipmentRegistrationAuthoringDataList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:CreditOperationsBasicLists_GetEquipmentRegistrationAuthoringDataList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

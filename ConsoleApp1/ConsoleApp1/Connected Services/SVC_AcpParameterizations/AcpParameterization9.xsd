@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://accipiens.com/ReceivablesPayables" elementFormDefault="qualified" targetNamespace="http://accipiens.com/ReceivablesPayables" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="DocumentTypesIndicator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Annul" />
+      <xs:enumeration value="Adjustment" />
+      <xs:enumeration value="Reverse" />
+      <xs:enumeration value="Return" />
+      <xs:enumeration value="Reopen" />
+      <xs:enumeration value="Regularization" />
+      <xs:enumeration value="TransfDebt" />
+      <xs:enumeration value="TransfResp" />
+      <xs:enumeration value="WriteOff" />
+      <xs:enumeration value="DelayInterest" />
+      <xs:enumeration value="Advance" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DocumentTypesIndicator" nillable="true" type="tns:DocumentTypesIndicator" />
+  <xs:simpleType name="DateDefinitionsCriteria">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CurrencyForexDate" />
+      <xs:enumeration value="CompanyForexDate" />
+      <xs:enumeration value="AllocationForexDate" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DateDefinitionsCriteria" nillable="true" type="tns:DateDefinitionsCriteria" />
+</xs:schema>

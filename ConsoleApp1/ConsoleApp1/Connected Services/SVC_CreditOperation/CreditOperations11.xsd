@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsInterfaces.Facade" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsInterfaces.Facade" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="CreditOperationsSvcAuthorizations">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ChangeCredOperGuarantState_Svc" />
+      <xs:enumeration value="CredOperGuarantIsActive_Svc" />
+      <xs:enumeration value="ChangeEquipmentState_Svc" />
+      <xs:enumeration value="ChangeBuildingState_Svc" />
+      <xs:enumeration value="ProposalToContract_Svc" />
+      <xs:enumeration value="IssueContractPhysicalDocument_Svc" />
+      <xs:enumeration value="CalculateExpenseValue_Svc" />
+      <xs:enumeration value="ActivateCredOperGuarant_Svc" />
+      <xs:enumeration value="TerminateCredOperGuarant_Svc" />
+      <xs:enumeration value="ChangeCredOperCommercialData_Svc" />
+      <xs:enumeration value="ExecuteCredOperGuarant_Svc" />
+      <xs:enumeration value="FinishEquipment_Svc" />
+      <xs:enumeration value="AssociateEquipment_Svc" />
+      <xs:enumeration value="FinishBuilding_Svc" />
+      <xs:enumeration value="AssociateBuilding_Svc" />
+      <xs:enumeration value="QuotationToProposal_Svc" />
+      <xs:enumeration value="UpdateFiscalCashFlow_Svc" />
+      <xs:enumeration value="UpdateAssetEval_Svc" />
+      <xs:enumeration value="ChangeMarketCampaignState_Svc" />
+      <xs:enumeration value="CalculateServiceCalendar_Svc" />
+      <xs:enumeration value="AssociateEquipmentToFinishCredOper_Svc" />
+      <xs:enumeration value="AssociateBuildingToFinishCredOper_Svc" />
+      <xs:enumeration value="UnSaleEquipment_Svc" />
+      <xs:enumeration value="ChangeCredOperIntervCommunicationMedia_Svc" />
+      <xs:enumeration value="MLAMasterProposalToMLAMasterContract_Svc" />
+      <xs:enumeration value="MLATemplateProposalToMLATemplateContract_Svc" />
+      <xs:enumeration value="MLATemplateContractToProposal_Svc" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CreditOperationsSvcAuthorizations" nillable="true" type="tns:CreditOperationsSvcAuthorizations" />
+</xs:schema>

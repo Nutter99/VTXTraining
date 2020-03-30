@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://accipiens.com/AcpDocuments" elementFormDefault="qualified" targetNamespace="http://accipiens.com/AcpDocuments" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/BusinessFramework.svc?xsd=xsd14" namespace="http://schemas.datacontract.org/2004/07/Olissipo.RptCommon" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/BusinessFramework.svc?xsd=xsd15" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:complexType name="ArrayOfIssueResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IssueResult" nillable="true" type="tns:IssueResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIssueResult" nillable="true" type="tns:ArrayOfIssueResult" />
+  <xs:complexType name="IssueResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BatchProcessId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ErrMsg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdCount" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IssuedFiles" nillable="true" type="tns:ArrayOfIssuedFileResult" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Olissipo.RptCommon" minOccurs="0" name="MainFileFormat" type="q1:OutputFormat" />
+      <xs:element minOccurs="0" name="OutputType" nillable="true" type="xs:int" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="PhysicalDocRequestIdList" nillable="true" type="q2:ArrayOfNullableOflong" />
+      <xs:element minOccurs="0" name="QueueId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="RequestCount" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalFilesCount" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IssueResult" nillable="true" type="tns:IssueResult" />
+  <xs:complexType name="ArrayOfIssuedFileResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IssuedFileResult" nillable="true" type="tns:IssuedFileResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIssuedFileResult" nillable="true" type="tns:ArrayOfIssuedFileResult" />
+  <xs:complexType name="IssuedFileResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ArchiveDocId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ArchiveEngine" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ArchiveFilename" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ArchiveTypeId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileContent" nillable="true" type="xs:base64Binary" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Olissipo.RptCommon" minOccurs="0" name="FileFormat" nillable="true" type="q3:OutputFormat" />
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileNameGen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutputFolder" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutputType" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PageCount" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PhysicalDocRequestId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="RptSvrQueueId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="RptSvrReqId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="SujectedFileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SujectedFolder" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IssuedFileResult" nillable="true" type="tns:IssuedFileResult" />
+</xs:schema>

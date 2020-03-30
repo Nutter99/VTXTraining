@@ -1,0 +1,1723 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://accipiens.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://accipiens.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://accipiens.com/Imports">
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?xsd=xsd0" namespace="http://accipiens.com" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?xsd=xsd3" namespace="http://accipiens.com/Common" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Olissipo.Simulations.DataStructures" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Olissipo.Utils" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?xsd=xsd5" namespace="http://accipiens.com/Simulations" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?xsd=xsd6" namespace="http://accipiens.com/Automatons" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?xsd=xsd7" namespace="http://accipiens.com/VirtualData" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?xsd=xsd8" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?xsd=xsd9" namespace="http://accipiens.com/BusinessFramework" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?xsd=xsd10" namespace="http://accipiens.com/Entities" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?xsd=xsd11" namespace="http://accipiens.com/AcpFramework" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/Olissipo.CommonGeneric.Framework.Validations" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/Olissipo.BusinessFramework.DataStructures" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="Simulations_ExposeSimulationsTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExposeSimulationsTypes" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ExposeSimulationsTypes_InputMessage_Headers">
+    <wsdl:part xmlns:q1="http://accipiens.com/Common" name="SessionToken" element="q1:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ExposeSimulationsTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExposeSimulationsTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ExposeSimulationsTypes_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q2="http://accipiens.com/Common" name="detail" element="q2:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertIntToEnumFinInitialEntryTypeKind_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertIntToEnumFinInitialEntryTypeKind" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertIntToEnumFinInitialEntryTypeKind_InputMessage_Headers">
+    <wsdl:part xmlns:q3="http://accipiens.com/Common" name="SessionToken" element="q3:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertIntToEnumFinInitialEntryTypeKind_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertIntToEnumFinInitialEntryTypeKindResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertIntToEnumFinInitialEntryTypeKind_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q4="http://accipiens.com/Common" name="detail" element="q4:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertToEnumFinInitialEntryTypeKind_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumFinInitialEntryTypeKind" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertToEnumFinInitialEntryTypeKind_InputMessage_Headers">
+    <wsdl:part xmlns:q5="http://accipiens.com/Common" name="SessionToken" element="q5:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertToEnumFinInitialEntryTypeKind_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumFinInitialEntryTypeKindResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertToEnumFinInitialEntryTypeKind_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q6="http://accipiens.com/Common" name="detail" element="q6:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinInitialEntryTypeKindEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinInitialEntryTypeKindEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinInitialEntryTypeKindEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q7="http://accipiens.com/Common" name="SessionToken" element="q7:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinInitialEntryTypeKindEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinInitialEntryTypeKindEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinInitialEntryTypeKindEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q8="http://accipiens.com/Common" name="detail" element="q8:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertIntToEnumUserInputField_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertIntToEnumUserInputField" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertIntToEnumUserInputField_InputMessage_Headers">
+    <wsdl:part xmlns:q9="http://accipiens.com/Common" name="SessionToken" element="q9:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertIntToEnumUserInputField_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertIntToEnumUserInputFieldResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertIntToEnumUserInputField_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q10="http://accipiens.com/Common" name="detail" element="q10:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertToEnumUserInputField_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumUserInputField" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertToEnumUserInputField_InputMessage_Headers">
+    <wsdl:part xmlns:q11="http://accipiens.com/Common" name="SessionToken" element="q11:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertToEnumUserInputField_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumUserInputFieldResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertToEnumUserInputField_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q12="http://accipiens.com/Common" name="detail" element="q12:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetUserInputFieldEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserInputFieldEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetUserInputFieldEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q13="http://accipiens.com/Common" name="SessionToken" element="q13:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetUserInputFieldEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserInputFieldEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetUserInputFieldEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q14="http://accipiens.com/Common" name="detail" element="q14:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertIntToEnumEventKind_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertIntToEnumEventKind" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertIntToEnumEventKind_InputMessage_Headers">
+    <wsdl:part xmlns:q15="http://accipiens.com/Common" name="SessionToken" element="q15:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertIntToEnumEventKind_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertIntToEnumEventKindResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertIntToEnumEventKind_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q16="http://accipiens.com/Common" name="detail" element="q16:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertToEnumEventKind_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumEventKind" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertToEnumEventKind_InputMessage_Headers">
+    <wsdl:part xmlns:q17="http://accipiens.com/Common" name="SessionToken" element="q17:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertToEnumEventKind_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumEventKindResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertToEnumEventKind_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q18="http://accipiens.com/Common" name="detail" element="q18:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetEventKindEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventKindEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetEventKindEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q19="http://accipiens.com/Common" name="SessionToken" element="q19:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetEventKindEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventKindEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetEventKindEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q20="http://accipiens.com/Common" name="detail" element="q20:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertToEnumFinSymbolProdInternalState_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumFinSymbolProdInternalState" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertToEnumFinSymbolProdInternalState_InputMessage_Headers">
+    <wsdl:part xmlns:q21="http://accipiens.com/Common" name="SessionToken" element="q21:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertToEnumFinSymbolProdInternalState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumFinSymbolProdInternalStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertToEnumFinSymbolProdInternalState_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q22="http://accipiens.com/Common" name="detail" element="q22:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolProdInternalStateEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinSymbolProdInternalStateEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolProdInternalStateEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q23="http://accipiens.com/Common" name="SessionToken" element="q23:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolProdInternalStateEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinSymbolProdInternalStateEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolProdInternalStateEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q24="http://accipiens.com/Common" name="detail" element="q24:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinMatrixInitialState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinMatrixInitialState" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinMatrixInitialState_InputMessage_Headers">
+    <wsdl:part xmlns:q25="http://accipiens.com/Common" name="SessionToken" element="q25:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinMatrixInitialState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinMatrixInitialStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinMatrixInitialState_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q26="http://accipiens.com/Common" name="detail" element="q26:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinMatrixTransitionList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinMatrixTransitionList" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinMatrixTransitionList_InputMessage_Headers">
+    <wsdl:part xmlns:q27="http://accipiens.com/Common" name="SessionToken" element="q27:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinMatrixTransitionList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinMatrixTransitionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinMatrixTransitionList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q28="http://accipiens.com/Common" name="detail" element="q28:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinMatrixAutomatonHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinMatrixAutomatonHistory" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinMatrixAutomatonHistory_InputMessage_Headers">
+    <wsdl:part xmlns:q29="http://accipiens.com/Common" name="SessionToken" element="q29:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinMatrixAutomatonHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinMatrixAutomatonHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinMatrixAutomatonHistory_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q30="http://accipiens.com/Common" name="detail" element="q30:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_DoFinMatrixTransition_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoFinMatrixTransition" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_DoFinMatrixTransition_InputMessage_Headers">
+    <wsdl:part xmlns:q31="http://accipiens.com/Common" name="SessionToken" element="q31:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_DoFinMatrixTransition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoFinMatrixTransitionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_DoFinMatrixTransition_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q32="http://accipiens.com/Common" name="detail" element="q32:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductInitialState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinancialProductInitialState" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductInitialState_InputMessage_Headers">
+    <wsdl:part xmlns:q33="http://accipiens.com/Common" name="SessionToken" element="q33:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductInitialState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinancialProductInitialStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductInitialState_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q34="http://accipiens.com/Common" name="detail" element="q34:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductTransitionList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinancialProductTransitionList" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductTransitionList_InputMessage_Headers">
+    <wsdl:part xmlns:q35="http://accipiens.com/Common" name="SessionToken" element="q35:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductTransitionList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinancialProductTransitionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductTransitionList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q36="http://accipiens.com/Common" name="detail" element="q36:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductAutomatonHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinancialProductAutomatonHistory" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductAutomatonHistory_InputMessage_Headers">
+    <wsdl:part xmlns:q37="http://accipiens.com/Common" name="SessionToken" element="q37:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductAutomatonHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinancialProductAutomatonHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductAutomatonHistory_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q38="http://accipiens.com/Common" name="detail" element="q38:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_DoFinancialProductTransition_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoFinancialProductTransition" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_DoFinancialProductTransition_InputMessage_Headers">
+    <wsdl:part xmlns:q39="http://accipiens.com/Common" name="SessionToken" element="q39:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_DoFinancialProductTransition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoFinancialProductTransitionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_DoFinancialProductTransition_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q40="http://accipiens.com/Common" name="detail" element="q40:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_FinancialProductIsInState_InputMessage">
+    <wsdl:part name="parameters" element="tns:FinancialProductIsInState" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_FinancialProductIsInState_InputMessage_Headers">
+    <wsdl:part xmlns:q41="http://accipiens.com/Common" name="SessionToken" element="q41:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_FinancialProductIsInState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FinancialProductIsInStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_FinancialProductIsInState_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q42="http://accipiens.com/Common" name="detail" element="q42:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolProdInitialState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinSymbolProdInitialState" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolProdInitialState_InputMessage_Headers">
+    <wsdl:part xmlns:q43="http://accipiens.com/Common" name="SessionToken" element="q43:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolProdInitialState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinSymbolProdInitialStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolProdInitialState_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q44="http://accipiens.com/Common" name="detail" element="q44:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolProdTransitionList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinSymbolProdTransitionList" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolProdTransitionList_InputMessage_Headers">
+    <wsdl:part xmlns:q45="http://accipiens.com/Common" name="SessionToken" element="q45:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolProdTransitionList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinSymbolProdTransitionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolProdTransitionList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q46="http://accipiens.com/Common" name="detail" element="q46:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolProdAutomatonHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinSymbolProdAutomatonHistory" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolProdAutomatonHistory_InputMessage_Headers">
+    <wsdl:part xmlns:q47="http://accipiens.com/Common" name="SessionToken" element="q47:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolProdAutomatonHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinSymbolProdAutomatonHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolProdAutomatonHistory_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q48="http://accipiens.com/Common" name="detail" element="q48:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_DoFinSymbolProdTransition_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoFinSymbolProdTransition" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_DoFinSymbolProdTransition_InputMessage_Headers">
+    <wsdl:part xmlns:q49="http://accipiens.com/Common" name="SessionToken" element="q49:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_DoFinSymbolProdTransition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoFinSymbolProdTransitionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_DoFinSymbolProdTransition_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q50="http://accipiens.com/Common" name="detail" element="q50:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_FinSymbolProdIsActive_InputMessage">
+    <wsdl:part name="parameters" element="tns:FinSymbolProdIsActive" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_FinSymbolProdIsActive_InputMessage_Headers">
+    <wsdl:part xmlns:q51="http://accipiens.com/Common" name="SessionToken" element="q51:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_FinSymbolProdIsActive_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FinSymbolProdIsActiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_FinSymbolProdIsActive_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q52="http://accipiens.com/Common" name="detail" element="q52:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_CalculateRentsCalendar_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateRentsCalendar" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_CalculateRentsCalendar_InputMessage_Headers">
+    <wsdl:part xmlns:q53="http://accipiens.com/Common" name="SessionToken" element="q53:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_CalculateRentsCalendar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateRentsCalendarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_CalculateRentsCalendar_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q54="http://accipiens.com/Common" name="detail" element="q54:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_QtdOfFlowsMissingToEnd_InputMessage">
+    <wsdl:part name="parameters" element="tns:QtdOfFlowsMissingToEnd" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_QtdOfFlowsMissingToEnd_InputMessage_Headers">
+    <wsdl:part xmlns:q55="http://accipiens.com/Common" name="SessionToken" element="q55:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_QtdOfFlowsMissingToEnd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QtdOfFlowsMissingToEndResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_QtdOfFlowsMissingToEnd_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q56="http://accipiens.com/Common" name="detail" element="q56:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetTransferDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransferDate" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetTransferDate_InputMessage_Headers">
+    <wsdl:part xmlns:q57="http://accipiens.com/Common" name="SessionToken" element="q57:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetTransferDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransferDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetTransferDate_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q58="http://accipiens.com/Common" name="detail" element="q58:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_CalculateDefaultRateValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateDefaultRateValue" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_CalculateDefaultRateValue_InputMessage_Headers">
+    <wsdl:part xmlns:q59="http://accipiens.com/Common" name="SessionToken" element="q59:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_CalculateDefaultRateValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateDefaultRateValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_CalculateDefaultRateValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q60="http://accipiens.com/Common" name="detail" element="q60:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetDefaultSpread_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDefaultSpread" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetDefaultSpread_InputMessage_Headers">
+    <wsdl:part xmlns:q61="http://accipiens.com/Common" name="SessionToken" element="q61:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetDefaultSpread_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDefaultSpreadResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetDefaultSpread_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q62="http://accipiens.com/Common" name="detail" element="q62:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductImporterByImporterAndFinancialProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinancialProductImporterByImporterAndFinancialProduct" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductImporterByImporterAndFinancialProduct_InputMessage_Headers">
+    <wsdl:part xmlns:q63="http://accipiens.com/Common" name="SessionToken" element="q63:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductImporterByImporterAndFinancialProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinancialProductImporterByImporterAndFinancialProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductImporterByImporterAndFinancialProduct_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q64="http://accipiens.com/Common" name="detail" element="q64:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetDefaultFinProductImporterByFinancialProductId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDefaultFinProductImporterByFinancialProductId" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetDefaultFinProductImporterByFinancialProductId_InputMessage_Headers">
+    <wsdl:part xmlns:q65="http://accipiens.com/Common" name="SessionToken" element="q65:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetDefaultFinProductImporterByFinancialProductId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDefaultFinProductImporterByFinancialProductIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetDefaultFinProductImporterByFinancialProductId_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q66="http://accipiens.com/Common" name="detail" element="q66:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetEnumOfFinSymbol_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEnumOfFinSymbol" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetEnumOfFinSymbol_InputMessage_Headers">
+    <wsdl:part xmlns:q67="http://accipiens.com/Common" name="SessionToken" element="q67:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetEnumOfFinSymbol_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEnumOfFinSymbolResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetEnumOfFinSymbol_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q68="http://accipiens.com/Common" name="detail" element="q68:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_OptimizeFinancialProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:OptimizeFinancialProducts" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_OptimizeFinancialProducts_InputMessage_Headers">
+    <wsdl:part xmlns:q69="http://accipiens.com/Common" name="SessionToken" element="q69:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_OptimizeFinancialProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OptimizeFinancialProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_OptimizeFinancialProducts_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q70="http://accipiens.com/Common" name="detail" element="q70:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_IsSymbolBranchEntity_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsSymbolBranchEntity" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_IsSymbolBranchEntity_InputMessage_Headers">
+    <wsdl:part xmlns:q71="http://accipiens.com/Common" name="SessionToken" element="q71:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_IsSymbolBranchEntity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsSymbolBranchEntityResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_IsSymbolBranchEntity_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q72="http://accipiens.com/Common" name="detail" element="q72:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ValidateFinancialProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateFinancialProduct" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ValidateFinancialProduct_InputMessage_Headers">
+    <wsdl:part xmlns:q73="http://accipiens.com/Common" name="SessionToken" element="q73:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ValidateFinancialProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateFinancialProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ValidateFinancialProduct_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q74="http://accipiens.com/Common" name="detail" element="q74:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_IsFinSymbolSpecialType_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsFinSymbolSpecialType" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_IsFinSymbolSpecialType_InputMessage_Headers">
+    <wsdl:part xmlns:q75="http://accipiens.com/Common" name="SessionToken" element="q75:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_IsFinSymbolSpecialType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsFinSymbolSpecialTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_IsFinSymbolSpecialType_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q76="http://accipiens.com/Common" name="detail" element="q76:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetProductSymbolsUserBehaviour_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductSymbolsUserBehaviour" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetProductSymbolsUserBehaviour_InputMessage_Headers">
+    <wsdl:part xmlns:q77="http://accipiens.com/Common" name="SessionToken" element="q77:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetProductSymbolsUserBehaviour_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductSymbolsUserBehaviourResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetProductSymbolsUserBehaviour_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q78="http://accipiens.com/Common" name="detail" element="q78:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetProductInputSymbolList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductInputSymbolList" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetProductInputSymbolList_InputMessage_Headers">
+    <wsdl:part xmlns:q79="http://accipiens.com/Common" name="SessionToken" element="q79:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetProductInputSymbolList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductInputSymbolListResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetProductInputSymbolList_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q80="http://accipiens.com/Common" name="detail" element="q80:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetProductSymbolValueConditionsLimits_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductSymbolValueConditionsLimits" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetProductSymbolValueConditionsLimits_InputMessage_Headers">
+    <wsdl:part xmlns:q81="http://accipiens.com/Common" name="SessionToken" element="q81:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetProductSymbolValueConditionsLimits_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductSymbolValueConditionsLimitsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetProductSymbolValueConditionsLimits_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q82="http://accipiens.com/Common" name="detail" element="q82:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetProductRestrictionLimits_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductRestrictionLimits" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetProductRestrictionLimits_InputMessage_Headers">
+    <wsdl:part xmlns:q83="http://accipiens.com/Common" name="SessionToken" element="q83:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetProductRestrictionLimits_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductRestrictionLimitsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetProductRestrictionLimits_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q84="http://accipiens.com/Common" name="detail" element="q84:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetProductSymbolsDependencies_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductSymbolsDependencies" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetProductSymbolsDependencies_InputMessage_Headers">
+    <wsdl:part xmlns:q85="http://accipiens.com/Common" name="SessionToken" element="q85:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetProductSymbolsDependencies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductSymbolsDependenciesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetProductSymbolsDependencies_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q86="http://accipiens.com/Common" name="detail" element="q86:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetNextExternalFinSymbolId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNextExternalFinSymbolId" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetNextExternalFinSymbolId_InputMessage_Headers">
+    <wsdl:part xmlns:q87="http://accipiens.com/Common" name="SessionToken" element="q87:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetNextExternalFinSymbolId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNextExternalFinSymbolIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetNextExternalFinSymbolId_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q88="http://accipiens.com/Common" name="detail" element="q88:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetInsuranceTypeDefault_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsuranceTypeDefault" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetInsuranceTypeDefault_InputMessage_Headers">
+    <wsdl:part xmlns:q89="http://accipiens.com/Common" name="SessionToken" element="q89:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetInsuranceTypeDefault_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsuranceTypeDefaultResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetInsuranceTypeDefault_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q90="http://accipiens.com/Common" name="detail" element="q90:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetInsuranceTypeDefaultOnCredOper_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsuranceTypeDefaultOnCredOper" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetInsuranceTypeDefaultOnCredOper_InputMessage_Headers">
+    <wsdl:part xmlns:q91="http://accipiens.com/Common" name="SessionToken" element="q91:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetInsuranceTypeDefaultOnCredOper_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsuranceTypeDefaultOnCredOperResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetInsuranceTypeDefaultOnCredOper_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q92="http://accipiens.com/Common" name="detail" element="q92:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_CalculateFinMatrixCells_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateFinMatrixCells" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_CalculateFinMatrixCells_InputMessage_Headers">
+    <wsdl:part xmlns:q93="http://accipiens.com/Common" name="SessionToken" element="q93:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_CalculateFinMatrixCells_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateFinMatrixCellsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_CalculateFinMatrixCells_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q94="http://accipiens.com/Common" name="detail" element="q94:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinMatrixCells_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinMatrixCells" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinMatrixCells_InputMessage_Headers">
+    <wsdl:part xmlns:q95="http://accipiens.com/Common" name="SessionToken" element="q95:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinMatrixCells_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinMatrixCellsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinMatrixCells_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q96="http://accipiens.com/Common" name="detail" element="q96:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetActiveFinMatrixByOwnerId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActiveFinMatrixByOwnerId" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetActiveFinMatrixByOwnerId_InputMessage_Headers">
+    <wsdl:part xmlns:q97="http://accipiens.com/Common" name="SessionToken" element="q97:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetActiveFinMatrixByOwnerId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActiveFinMatrixByOwnerIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetActiveFinMatrixByOwnerId_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q98="http://accipiens.com/Common" name="detail" element="q98:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_Ping_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ping" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_Ping_InputMessage_Headers">
+    <wsdl:part xmlns:q99="http://accipiens.com/Common" name="SessionToken" element="q99:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_Ping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PingResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_Ping_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q100="http://accipiens.com/Common" name="detail" element="q100:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertToEnumFinProductVersionCalcMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumFinProductVersionCalcMode" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertToEnumFinProductVersionCalcMode_InputMessage_Headers">
+    <wsdl:part xmlns:q101="http://accipiens.com/Common" name="SessionToken" element="q101:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertToEnumFinProductVersionCalcMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumFinProductVersionCalcModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertToEnumFinProductVersionCalcMode_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q102="http://accipiens.com/Common" name="detail" element="q102:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinProductVersionCalcModeEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinProductVersionCalcModeEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinProductVersionCalcModeEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q103="http://accipiens.com/Common" name="SessionToken" element="q103:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinProductVersionCalcModeEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinProductVersionCalcModeEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinProductVersionCalcModeEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q104="http://accipiens.com/Common" name="detail" element="q104:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertToEnumValueCalcState_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumValueCalcState" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertToEnumValueCalcState_InputMessage_Headers">
+    <wsdl:part xmlns:q105="http://accipiens.com/Common" name="SessionToken" element="q105:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertToEnumValueCalcState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumValueCalcStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertToEnumValueCalcState_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q106="http://accipiens.com/Common" name="detail" element="q106:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetValueCalcStateEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetValueCalcStateEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetValueCalcStateEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q107="http://accipiens.com/Common" name="SessionToken" element="q107:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetValueCalcStateEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetValueCalcStateEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetValueCalcStateEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q108="http://accipiens.com/Common" name="detail" element="q108:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertToEnumAddToMaxValueType_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumAddToMaxValueType" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertToEnumAddToMaxValueType_InputMessage_Headers">
+    <wsdl:part xmlns:q109="http://accipiens.com/Common" name="SessionToken" element="q109:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertToEnumAddToMaxValueType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumAddToMaxValueTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertToEnumAddToMaxValueType_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q110="http://accipiens.com/Common" name="detail" element="q110:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetAddToMaxValueTypeEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddToMaxValueTypeEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetAddToMaxValueTypeEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q111="http://accipiens.com/Common" name="SessionToken" element="q111:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetAddToMaxValueTypeEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddToMaxValueTypeEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetAddToMaxValueTypeEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q112="http://accipiens.com/Common" name="detail" element="q112:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertToEnumPaymentBehaviourKind_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumPaymentBehaviourKind" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertToEnumPaymentBehaviourKind_InputMessage_Headers">
+    <wsdl:part xmlns:q113="http://accipiens.com/Common" name="SessionToken" element="q113:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertToEnumPaymentBehaviourKind_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumPaymentBehaviourKindResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_ConvertToEnumPaymentBehaviourKind_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q114="http://accipiens.com/Common" name="detail" element="q114:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetPaymentBehaviourKindEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentBehaviourKindEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetPaymentBehaviourKindEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q115="http://accipiens.com/Common" name="SessionToken" element="q115:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetPaymentBehaviourKindEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentBehaviourKindEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetPaymentBehaviourKindEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q116="http://accipiens.com/Common" name="detail" element="q116:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetSimulationsClassContext_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSimulationsClassContext" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetSimulationsClassContext_InputMessage_Headers">
+    <wsdl:part xmlns:q117="http://accipiens.com/Common" name="SessionToken" element="q117:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetSimulationsClassContext_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSimulationsClassContextResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetSimulationsClassContext_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q118="http://accipiens.com/Common" name="detail" element="q118:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_SearchSimulations_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchSimulations" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_SearchSimulations_InputMessage_Headers">
+    <wsdl:part xmlns:q119="http://accipiens.com/Common" name="SessionToken" element="q119:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_SearchSimulations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchSimulationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_SearchSimulations_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q120="http://accipiens.com/Common" name="detail" element="q120:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetAcceleratorPeriodTypeByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAcceleratorPeriodTypeByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetAcceleratorPeriodTypeByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q121="http://accipiens.com/Common" name="SessionToken" element="q121:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetAcceleratorPeriodTypeByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAcceleratorPeriodTypeByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetAcceleratorPeriodTypeByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q122="http://accipiens.com/Common" name="detail" element="q122:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetAcceleratorTypeByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAcceleratorTypeByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetAcceleratorTypeByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q123="http://accipiens.com/Common" name="SessionToken" element="q123:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetAcceleratorTypeByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAcceleratorTypeByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetAcceleratorTypeByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q124="http://accipiens.com/Common" name="detail" element="q124:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinancialProductByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q125="http://accipiens.com/Common" name="SessionToken" element="q125:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinancialProductByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q126="http://accipiens.com/Common" name="detail" element="q126:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductCategoryByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinancialProductCategoryByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductCategoryByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q127="http://accipiens.com/Common" name="SessionToken" element="q127:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductCategoryByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinancialProductCategoryByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductCategoryByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q128="http://accipiens.com/Common" name="detail" element="q128:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductChannelByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinancialProductChannelByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductChannelByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q129="http://accipiens.com/Common" name="SessionToken" element="q129:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductChannelByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinancialProductChannelByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductChannelByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q130="http://accipiens.com/Common" name="detail" element="q130:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductCredOperTypeByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinancialProductCredOperTypeByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductCredOperTypeByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q131="http://accipiens.com/Common" name="SessionToken" element="q131:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductCredOperTypeByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinancialProductCredOperTypeByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductCredOperTypeByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q132="http://accipiens.com/Common" name="detail" element="q132:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductIdentifierByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinancialProductIdentifierByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductIdentifierByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q133="http://accipiens.com/Common" name="SessionToken" element="q133:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductIdentifierByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinancialProductIdentifierByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductIdentifierByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q134="http://accipiens.com/Common" name="detail" element="q134:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductImporterByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinancialProductImporterByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductImporterByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q135="http://accipiens.com/Common" name="SessionToken" element="q135:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductImporterByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinancialProductImporterByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductImporterByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q136="http://accipiens.com/Common" name="detail" element="q136:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductPurposeTypeByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinancialProductPurposeTypeByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductPurposeTypeByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q137="http://accipiens.com/Common" name="SessionToken" element="q137:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductPurposeTypeByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinancialProductPurposeTypeByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinancialProductPurposeTypeByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q138="http://accipiens.com/Common" name="detail" element="q138:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinBaseByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinBaseByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinBaseByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q139="http://accipiens.com/Common" name="SessionToken" element="q139:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinBaseByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinBaseByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinBaseByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q140="http://accipiens.com/Common" name="detail" element="q140:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinBaseSymbolByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinBaseSymbolByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinBaseSymbolByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q141="http://accipiens.com/Common" name="SessionToken" element="q141:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinBaseSymbolByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinBaseSymbolByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinBaseSymbolByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q142="http://accipiens.com/Common" name="detail" element="q142:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinConditionsByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinConditionsByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinConditionsByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q143="http://accipiens.com/Common" name="SessionToken" element="q143:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinConditionsByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinConditionsByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinConditionsByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q144="http://accipiens.com/Common" name="detail" element="q144:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinConditionsFlowsByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinConditionsFlowsByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinConditionsFlowsByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q145="http://accipiens.com/Common" name="SessionToken" element="q145:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinConditionsFlowsByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinConditionsFlowsByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinConditionsFlowsByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q146="http://accipiens.com/Common" name="detail" element="q146:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinConditionsLogByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinConditionsLogByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinConditionsLogByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q147="http://accipiens.com/Common" name="SessionToken" element="q147:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinConditionsLogByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinConditionsLogByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinConditionsLogByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q148="http://accipiens.com/Common" name="detail" element="q148:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinConditionsRateByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinConditionsRateByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinConditionsRateByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q149="http://accipiens.com/Common" name="SessionToken" element="q149:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinConditionsRateByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinConditionsRateByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinConditionsRateByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q150="http://accipiens.com/Common" name="detail" element="q150:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinInitialEntryTypeByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinInitialEntryTypeByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinInitialEntryTypeByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q151="http://accipiens.com/Common" name="SessionToken" element="q151:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinInitialEntryTypeByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinInitialEntryTypeByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinInitialEntryTypeByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q152="http://accipiens.com/Common" name="detail" element="q152:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinInitialExpenseByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinInitialExpenseByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinInitialExpenseByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q153="http://accipiens.com/Common" name="SessionToken" element="q153:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinInitialExpenseByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinInitialExpenseByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinInitialExpenseByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q154="http://accipiens.com/Common" name="detail" element="q154:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinMatrixByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinMatrixByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinMatrixByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q155="http://accipiens.com/Common" name="SessionToken" element="q155:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinMatrixByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinMatrixByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinMatrixByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q156="http://accipiens.com/Common" name="detail" element="q156:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinMatrixItemByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinMatrixItemByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinMatrixItemByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q157="http://accipiens.com/Common" name="SessionToken" element="q157:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinMatrixItemByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinMatrixItemByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinMatrixItemByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q158="http://accipiens.com/Common" name="detail" element="q158:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinMatrixItemGroupByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinMatrixItemGroupByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinMatrixItemGroupByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q159="http://accipiens.com/Common" name="SessionToken" element="q159:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinMatrixItemGroupByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinMatrixItemGroupByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinMatrixItemGroupByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q160="http://accipiens.com/Common" name="detail" element="q160:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinProdConditionsFlowByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinProdConditionsFlowByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinProdConditionsFlowByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q161="http://accipiens.com/Common" name="SessionToken" element="q161:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinProdConditionsFlowByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinProdConditionsFlowByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinProdConditionsFlowByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q162="http://accipiens.com/Common" name="detail" element="q162:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinProdIdentifierListByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinProdIdentifierListByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinProdIdentifierListByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q163="http://accipiens.com/Common" name="SessionToken" element="q163:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinProdIdentifierListByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinProdIdentifierListByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinProdIdentifierListByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q164="http://accipiens.com/Common" name="detail" element="q164:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinProdRestrictionByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinProdRestrictionByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinProdRestrictionByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q165="http://accipiens.com/Common" name="SessionToken" element="q165:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinProdRestrictionByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinProdRestrictionByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinProdRestrictionByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q166="http://accipiens.com/Common" name="detail" element="q166:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinProdRestrictionListByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinProdRestrictionListByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinProdRestrictionListByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q167="http://accipiens.com/Common" name="SessionToken" element="q167:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinProdRestrictionListByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinProdRestrictionListByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinProdRestrictionListByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q168="http://accipiens.com/Common" name="detail" element="q168:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinProdSymbolListByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinProdSymbolListByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinProdSymbolListByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q169="http://accipiens.com/Common" name="SessionToken" element="q169:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinProdSymbolListByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinProdSymbolListByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinProdSymbolListByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q170="http://accipiens.com/Common" name="detail" element="q170:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinSymbolByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q171="http://accipiens.com/Common" name="SessionToken" element="q171:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinSymbolByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q172="http://accipiens.com/Common" name="detail" element="q172:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolProdByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinSymbolProdByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolProdByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q173="http://accipiens.com/Common" name="SessionToken" element="q173:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolProdByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinSymbolProdByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolProdByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q174="http://accipiens.com/Common" name="detail" element="q174:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolProdConditionByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinSymbolProdConditionByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolProdConditionByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q175="http://accipiens.com/Common" name="SessionToken" element="q175:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolProdConditionByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinSymbolProdConditionByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolProdConditionByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q176="http://accipiens.com/Common" name="detail" element="q176:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolProdValueByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinSymbolProdValueByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolProdValueByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q177="http://accipiens.com/Common" name="SessionToken" element="q177:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolProdValueByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinSymbolProdValueByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolProdValueByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q178="http://accipiens.com/Common" name="detail" element="q178:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolProdValueConditionByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinSymbolProdValueConditionByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolProdValueConditionByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q179="http://accipiens.com/Common" name="SessionToken" element="q179:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolProdValueConditionByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinSymbolProdValueConditionByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolProdValueConditionByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q180="http://accipiens.com/Common" name="detail" element="q180:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolRestrictionByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinSymbolRestrictionByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolRestrictionByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q181="http://accipiens.com/Common" name="SessionToken" element="q181:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolRestrictionByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinSymbolRestrictionByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolRestrictionByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q182="http://accipiens.com/Common" name="detail" element="q182:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolValueByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinSymbolValueByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolValueByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q183="http://accipiens.com/Common" name="SessionToken" element="q183:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolValueByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinSymbolValueByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetFinSymbolValueByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q184="http://accipiens.com/Common" name="detail" element="q184:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetPaymentBehaviourTypeByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentBehaviourTypeByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetPaymentBehaviourTypeByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q185="http://accipiens.com/Common" name="SessionToken" element="q185:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetPaymentBehaviourTypeByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentBehaviourTypeByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetPaymentBehaviourTypeByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q186="http://accipiens.com/Common" name="detail" element="q186:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetQuotationIrregularityByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuotationIrregularityByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetQuotationIrregularityByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q187="http://accipiens.com/Common" name="SessionToken" element="q187:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetQuotationIrregularityByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuotationIrregularityByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetQuotationIrregularityByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q188="http://accipiens.com/Common" name="detail" element="q188:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetQuotationIrregularityTypeByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuotationIrregularityTypeByKeys" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetQuotationIrregularityTypeByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q189="http://accipiens.com/Common" name="SessionToken" element="q189:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetQuotationIrregularityTypeByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuotationIrregularityTypeByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetQuotationIrregularityTypeByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q190="http://accipiens.com/Common" name="detail" element="q190:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_SaveSimulations_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSimulations" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_SaveSimulations_InputMessage_Headers">
+    <wsdl:part xmlns:q191="http://accipiens.com/Common" name="SessionToken" element="q191:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_SaveSimulations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSimulationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_SaveSimulations_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q192="http://accipiens.com/Common" name="detail" element="q192:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_SaveSimulationsV2_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSimulationsV2" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_SaveSimulationsV2_InputMessage_Headers">
+    <wsdl:part xmlns:q193="http://accipiens.com/Common" name="SessionToken" element="q193:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_SaveSimulationsV2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSimulationsV2Response" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_SaveSimulationsV2_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q194="http://accipiens.com/Common" name="detail" element="q194:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetSimulationsClassTableId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSimulationsClassTableId" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetSimulationsClassTableId_InputMessage_Headers">
+    <wsdl:part xmlns:q195="http://accipiens.com/Common" name="SessionToken" element="q195:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetSimulationsClassTableId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSimulationsClassTableIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetSimulationsClassTableId_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q196="http://accipiens.com/Common" name="detail" element="q196:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetSimulationsTableId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSimulationsTableId" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetSimulationsTableId_InputMessage_Headers">
+    <wsdl:part xmlns:q197="http://accipiens.com/Common" name="SessionToken" element="q197:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetSimulationsTableId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSimulationsTableIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_GetSimulationsTableId_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q198="http://accipiens.com/Common" name="detail" element="q198:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_SearchSimulationsConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchSimulationsConfig" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_SearchSimulationsConfig_InputMessage_Headers">
+    <wsdl:part xmlns:q199="http://accipiens.com/Common" name="SessionToken" element="q199:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_SearchSimulationsConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchSimulationsConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="Simulations_SearchSimulationsConfig_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q200="http://accipiens.com/Common" name="detail" element="q200:AcpDetail" />
+  </wsdl:message>
+  <wsdl:portType name="Simulations">
+    <wsdl:operation name="ExposeSimulationsTypes">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/ExposeSimulationsTypes" message="tns:Simulations_ExposeSimulationsTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/ExposeSimulationsTypesResponse" message="tns:Simulations_ExposeSimulationsTypes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_ExposeSimulationsTypes_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertIntToEnumFinInitialEntryTypeKind">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/ConvertIntToEnumFinInitialEntryTypeKind" message="tns:Simulations_ConvertIntToEnumFinInitialEntryTypeKind_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/ConvertIntToEnumFinInitialEntryTypeKindResponse" message="tns:Simulations_ConvertIntToEnumFinInitialEntryTypeKind_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_ConvertIntToEnumFinInitialEntryTypeKind_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumFinInitialEntryTypeKind">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/ConvertToEnumFinInitialEntryTypeKind" message="tns:Simulations_ConvertToEnumFinInitialEntryTypeKind_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/ConvertToEnumFinInitialEntryTypeKindResponse" message="tns:Simulations_ConvertToEnumFinInitialEntryTypeKind_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_ConvertToEnumFinInitialEntryTypeKind_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinInitialEntryTypeKindEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinInitialEntryTypeKindEnumValue" message="tns:Simulations_GetFinInitialEntryTypeKindEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinInitialEntryTypeKindEnumValueResponse" message="tns:Simulations_GetFinInitialEntryTypeKindEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinInitialEntryTypeKindEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertIntToEnumUserInputField">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/ConvertIntToEnumUserInputField" message="tns:Simulations_ConvertIntToEnumUserInputField_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/ConvertIntToEnumUserInputFieldResponse" message="tns:Simulations_ConvertIntToEnumUserInputField_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_ConvertIntToEnumUserInputField_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumUserInputField">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/ConvertToEnumUserInputField" message="tns:Simulations_ConvertToEnumUserInputField_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/ConvertToEnumUserInputFieldResponse" message="tns:Simulations_ConvertToEnumUserInputField_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_ConvertToEnumUserInputField_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInputFieldEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetUserInputFieldEnumValue" message="tns:Simulations_GetUserInputFieldEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetUserInputFieldEnumValueResponse" message="tns:Simulations_GetUserInputFieldEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetUserInputFieldEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertIntToEnumEventKind">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/ConvertIntToEnumEventKind" message="tns:Simulations_ConvertIntToEnumEventKind_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/ConvertIntToEnumEventKindResponse" message="tns:Simulations_ConvertIntToEnumEventKind_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_ConvertIntToEnumEventKind_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumEventKind">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/ConvertToEnumEventKind" message="tns:Simulations_ConvertToEnumEventKind_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/ConvertToEnumEventKindResponse" message="tns:Simulations_ConvertToEnumEventKind_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_ConvertToEnumEventKind_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventKindEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetEventKindEnumValue" message="tns:Simulations_GetEventKindEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetEventKindEnumValueResponse" message="tns:Simulations_GetEventKindEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetEventKindEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumFinSymbolProdInternalState">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/ConvertToEnumFinSymbolProdInternalState" message="tns:Simulations_ConvertToEnumFinSymbolProdInternalState_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/ConvertToEnumFinSymbolProdInternalStateResponse" message="tns:Simulations_ConvertToEnumFinSymbolProdInternalState_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_ConvertToEnumFinSymbolProdInternalState_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinSymbolProdInternalStateEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinSymbolProdInternalStateEnumValue" message="tns:Simulations_GetFinSymbolProdInternalStateEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinSymbolProdInternalStateEnumValueResponse" message="tns:Simulations_GetFinSymbolProdInternalStateEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinSymbolProdInternalStateEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinMatrixInitialState">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinMatrixInitialState" message="tns:Simulations_GetFinMatrixInitialState_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinMatrixInitialStateResponse" message="tns:Simulations_GetFinMatrixInitialState_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinMatrixInitialState_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinMatrixTransitionList">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinMatrixTransitionList" message="tns:Simulations_GetFinMatrixTransitionList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinMatrixTransitionListResponse" message="tns:Simulations_GetFinMatrixTransitionList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinMatrixTransitionList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinMatrixAutomatonHistory">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinMatrixAutomatonHistory" message="tns:Simulations_GetFinMatrixAutomatonHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinMatrixAutomatonHistoryResponse" message="tns:Simulations_GetFinMatrixAutomatonHistory_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinMatrixAutomatonHistory_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoFinMatrixTransition">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/DoFinMatrixTransition" message="tns:Simulations_DoFinMatrixTransition_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/DoFinMatrixTransitionResponse" message="tns:Simulations_DoFinMatrixTransition_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_DoFinMatrixTransition_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancialProductInitialState">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinancialProductInitialState" message="tns:Simulations_GetFinancialProductInitialState_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinancialProductInitialStateResponse" message="tns:Simulations_GetFinancialProductInitialState_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinancialProductInitialState_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancialProductTransitionList">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinancialProductTransitionList" message="tns:Simulations_GetFinancialProductTransitionList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinancialProductTransitionListResponse" message="tns:Simulations_GetFinancialProductTransitionList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinancialProductTransitionList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancialProductAutomatonHistory">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinancialProductAutomatonHistory" message="tns:Simulations_GetFinancialProductAutomatonHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinancialProductAutomatonHistoryResponse" message="tns:Simulations_GetFinancialProductAutomatonHistory_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinancialProductAutomatonHistory_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoFinancialProductTransition">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/DoFinancialProductTransition" message="tns:Simulations_DoFinancialProductTransition_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/DoFinancialProductTransitionResponse" message="tns:Simulations_DoFinancialProductTransition_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_DoFinancialProductTransition_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancialProductIsInState">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/FinancialProductIsInState" message="tns:Simulations_FinancialProductIsInState_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/FinancialProductIsInStateResponse" message="tns:Simulations_FinancialProductIsInState_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_FinancialProductIsInState_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinSymbolProdInitialState">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinSymbolProdInitialState" message="tns:Simulations_GetFinSymbolProdInitialState_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinSymbolProdInitialStateResponse" message="tns:Simulations_GetFinSymbolProdInitialState_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinSymbolProdInitialState_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinSymbolProdTransitionList">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinSymbolProdTransitionList" message="tns:Simulations_GetFinSymbolProdTransitionList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinSymbolProdTransitionListResponse" message="tns:Simulations_GetFinSymbolProdTransitionList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinSymbolProdTransitionList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinSymbolProdAutomatonHistory">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinSymbolProdAutomatonHistory" message="tns:Simulations_GetFinSymbolProdAutomatonHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinSymbolProdAutomatonHistoryResponse" message="tns:Simulations_GetFinSymbolProdAutomatonHistory_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinSymbolProdAutomatonHistory_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoFinSymbolProdTransition">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/DoFinSymbolProdTransition" message="tns:Simulations_DoFinSymbolProdTransition_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/DoFinSymbolProdTransitionResponse" message="tns:Simulations_DoFinSymbolProdTransition_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_DoFinSymbolProdTransition_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FinSymbolProdIsActive">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/FinSymbolProdIsActive" message="tns:Simulations_FinSymbolProdIsActive_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/FinSymbolProdIsActiveResponse" message="tns:Simulations_FinSymbolProdIsActive_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_FinSymbolProdIsActive_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateRentsCalendar">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/CalculateRentsCalendar" message="tns:Simulations_CalculateRentsCalendar_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/CalculateRentsCalendarResponse" message="tns:Simulations_CalculateRentsCalendar_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_CalculateRentsCalendar_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QtdOfFlowsMissingToEnd">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/QtdOfFlowsMissingToEnd" message="tns:Simulations_QtdOfFlowsMissingToEnd_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/QtdOfFlowsMissingToEndResponse" message="tns:Simulations_QtdOfFlowsMissingToEnd_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_QtdOfFlowsMissingToEnd_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransferDate">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetTransferDate" message="tns:Simulations_GetTransferDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetTransferDateResponse" message="tns:Simulations_GetTransferDate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetTransferDate_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateDefaultRateValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/CalculateDefaultRateValue" message="tns:Simulations_CalculateDefaultRateValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/CalculateDefaultRateValueResponse" message="tns:Simulations_CalculateDefaultRateValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_CalculateDefaultRateValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDefaultSpread">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetDefaultSpread" message="tns:Simulations_GetDefaultSpread_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetDefaultSpreadResponse" message="tns:Simulations_GetDefaultSpread_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetDefaultSpread_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancialProductImporterByImporterAndFinancialProduct">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinancialProductImporterByImporterAndFinancialProduct" message="tns:Simulations_GetFinancialProductImporterByImporterAndFinancialProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinancialProductImporterByImporterAndFinancialProductResponse" message="tns:Simulations_GetFinancialProductImporterByImporterAndFinancialProduct_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinancialProductImporterByImporterAndFinancialProduct_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDefaultFinProductImporterByFinancialProductId">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetDefaultFinProductImporterByFinancialProductId" message="tns:Simulations_GetDefaultFinProductImporterByFinancialProductId_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetDefaultFinProductImporterByFinancialProductIdResponse" message="tns:Simulations_GetDefaultFinProductImporterByFinancialProductId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetDefaultFinProductImporterByFinancialProductId_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEnumOfFinSymbol">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetEnumOfFinSymbol" message="tns:Simulations_GetEnumOfFinSymbol_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetEnumOfFinSymbolResponse" message="tns:Simulations_GetEnumOfFinSymbol_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetEnumOfFinSymbol_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OptimizeFinancialProducts">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/OptimizeFinancialProducts" message="tns:Simulations_OptimizeFinancialProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/OptimizeFinancialProductsResponse" message="tns:Simulations_OptimizeFinancialProducts_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_OptimizeFinancialProducts_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsSymbolBranchEntity">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/IsSymbolBranchEntity" message="tns:Simulations_IsSymbolBranchEntity_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/IsSymbolBranchEntityResponse" message="tns:Simulations_IsSymbolBranchEntity_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_IsSymbolBranchEntity_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateFinancialProduct">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/ValidateFinancialProduct" message="tns:Simulations_ValidateFinancialProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/ValidateFinancialProductResponse" message="tns:Simulations_ValidateFinancialProduct_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_ValidateFinancialProduct_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsFinSymbolSpecialType">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/IsFinSymbolSpecialType" message="tns:Simulations_IsFinSymbolSpecialType_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/IsFinSymbolSpecialTypeResponse" message="tns:Simulations_IsFinSymbolSpecialType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_IsFinSymbolSpecialType_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductSymbolsUserBehaviour">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetProductSymbolsUserBehaviour" message="tns:Simulations_GetProductSymbolsUserBehaviour_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetProductSymbolsUserBehaviourResponse" message="tns:Simulations_GetProductSymbolsUserBehaviour_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetProductSymbolsUserBehaviour_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductInputSymbolList">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetProductInputSymbolList" message="tns:Simulations_GetProductInputSymbolList_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetProductInputSymbolListResponse" message="tns:Simulations_GetProductInputSymbolList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetProductInputSymbolList_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductSymbolValueConditionsLimits">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetProductSymbolValueConditionsLimits" message="tns:Simulations_GetProductSymbolValueConditionsLimits_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetProductSymbolValueConditionsLimitsResponse" message="tns:Simulations_GetProductSymbolValueConditionsLimits_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetProductSymbolValueConditionsLimits_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductRestrictionLimits">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetProductRestrictionLimits" message="tns:Simulations_GetProductRestrictionLimits_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetProductRestrictionLimitsResponse" message="tns:Simulations_GetProductRestrictionLimits_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetProductRestrictionLimits_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductSymbolsDependencies">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetProductSymbolsDependencies" message="tns:Simulations_GetProductSymbolsDependencies_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetProductSymbolsDependenciesResponse" message="tns:Simulations_GetProductSymbolsDependencies_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetProductSymbolsDependencies_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNextExternalFinSymbolId">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetNextExternalFinSymbolId" message="tns:Simulations_GetNextExternalFinSymbolId_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetNextExternalFinSymbolIdResponse" message="tns:Simulations_GetNextExternalFinSymbolId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetNextExternalFinSymbolId_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsuranceTypeDefault">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetInsuranceTypeDefault" message="tns:Simulations_GetInsuranceTypeDefault_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetInsuranceTypeDefaultResponse" message="tns:Simulations_GetInsuranceTypeDefault_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetInsuranceTypeDefault_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsuranceTypeDefaultOnCredOper">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetInsuranceTypeDefaultOnCredOper" message="tns:Simulations_GetInsuranceTypeDefaultOnCredOper_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetInsuranceTypeDefaultOnCredOperResponse" message="tns:Simulations_GetInsuranceTypeDefaultOnCredOper_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetInsuranceTypeDefaultOnCredOper_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateFinMatrixCells">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/CalculateFinMatrixCells" message="tns:Simulations_CalculateFinMatrixCells_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/CalculateFinMatrixCellsResponse" message="tns:Simulations_CalculateFinMatrixCells_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_CalculateFinMatrixCells_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinMatrixCells">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinMatrixCells" message="tns:Simulations_GetFinMatrixCells_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinMatrixCellsResponse" message="tns:Simulations_GetFinMatrixCells_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinMatrixCells_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveFinMatrixByOwnerId">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetActiveFinMatrixByOwnerId" message="tns:Simulations_GetActiveFinMatrixByOwnerId_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetActiveFinMatrixByOwnerIdResponse" message="tns:Simulations_GetActiveFinMatrixByOwnerId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetActiveFinMatrixByOwnerId_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/Ping" message="tns:Simulations_Ping_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/PingResponse" message="tns:Simulations_Ping_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_Ping_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumFinProductVersionCalcMode">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/ConvertToEnumFinProductVersionCalcMode" message="tns:Simulations_ConvertToEnumFinProductVersionCalcMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/ConvertToEnumFinProductVersionCalcModeResponse" message="tns:Simulations_ConvertToEnumFinProductVersionCalcMode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_ConvertToEnumFinProductVersionCalcMode_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinProductVersionCalcModeEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinProductVersionCalcModeEnumValue" message="tns:Simulations_GetFinProductVersionCalcModeEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinProductVersionCalcModeEnumValueResponse" message="tns:Simulations_GetFinProductVersionCalcModeEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinProductVersionCalcModeEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumValueCalcState">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/ConvertToEnumValueCalcState" message="tns:Simulations_ConvertToEnumValueCalcState_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/ConvertToEnumValueCalcStateResponse" message="tns:Simulations_ConvertToEnumValueCalcState_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_ConvertToEnumValueCalcState_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValueCalcStateEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetValueCalcStateEnumValue" message="tns:Simulations_GetValueCalcStateEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetValueCalcStateEnumValueResponse" message="tns:Simulations_GetValueCalcStateEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetValueCalcStateEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumAddToMaxValueType">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/ConvertToEnumAddToMaxValueType" message="tns:Simulations_ConvertToEnumAddToMaxValueType_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/ConvertToEnumAddToMaxValueTypeResponse" message="tns:Simulations_ConvertToEnumAddToMaxValueType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_ConvertToEnumAddToMaxValueType_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAddToMaxValueTypeEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetAddToMaxValueTypeEnumValue" message="tns:Simulations_GetAddToMaxValueTypeEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetAddToMaxValueTypeEnumValueResponse" message="tns:Simulations_GetAddToMaxValueTypeEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetAddToMaxValueTypeEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumPaymentBehaviourKind">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/ConvertToEnumPaymentBehaviourKind" message="tns:Simulations_ConvertToEnumPaymentBehaviourKind_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/ConvertToEnumPaymentBehaviourKindResponse" message="tns:Simulations_ConvertToEnumPaymentBehaviourKind_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_ConvertToEnumPaymentBehaviourKind_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentBehaviourKindEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetPaymentBehaviourKindEnumValue" message="tns:Simulations_GetPaymentBehaviourKindEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetPaymentBehaviourKindEnumValueResponse" message="tns:Simulations_GetPaymentBehaviourKindEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetPaymentBehaviourKindEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSimulationsClassContext">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetSimulationsClassContext" message="tns:Simulations_GetSimulationsClassContext_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetSimulationsClassContextResponse" message="tns:Simulations_GetSimulationsClassContext_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetSimulationsClassContext_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchSimulations">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/SearchSimulations" message="tns:Simulations_SearchSimulations_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/SearchSimulationsResponse" message="tns:Simulations_SearchSimulations_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_SearchSimulations_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAcceleratorPeriodTypeByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetAcceleratorPeriodTypeByKeys" message="tns:Simulations_GetAcceleratorPeriodTypeByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetAcceleratorPeriodTypeByKeysResponse" message="tns:Simulations_GetAcceleratorPeriodTypeByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetAcceleratorPeriodTypeByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAcceleratorTypeByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetAcceleratorTypeByKeys" message="tns:Simulations_GetAcceleratorTypeByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetAcceleratorTypeByKeysResponse" message="tns:Simulations_GetAcceleratorTypeByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetAcceleratorTypeByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancialProductByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinancialProductByKeys" message="tns:Simulations_GetFinancialProductByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinancialProductByKeysResponse" message="tns:Simulations_GetFinancialProductByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinancialProductByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancialProductCategoryByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinancialProductCategoryByKeys" message="tns:Simulations_GetFinancialProductCategoryByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinancialProductCategoryByKeysResponse" message="tns:Simulations_GetFinancialProductCategoryByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinancialProductCategoryByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancialProductChannelByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinancialProductChannelByKeys" message="tns:Simulations_GetFinancialProductChannelByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinancialProductChannelByKeysResponse" message="tns:Simulations_GetFinancialProductChannelByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinancialProductChannelByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancialProductCredOperTypeByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinancialProductCredOperTypeByKeys" message="tns:Simulations_GetFinancialProductCredOperTypeByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinancialProductCredOperTypeByKeysResponse" message="tns:Simulations_GetFinancialProductCredOperTypeByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinancialProductCredOperTypeByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancialProductIdentifierByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinancialProductIdentifierByKeys" message="tns:Simulations_GetFinancialProductIdentifierByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinancialProductIdentifierByKeysResponse" message="tns:Simulations_GetFinancialProductIdentifierByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinancialProductIdentifierByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancialProductImporterByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinancialProductImporterByKeys" message="tns:Simulations_GetFinancialProductImporterByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinancialProductImporterByKeysResponse" message="tns:Simulations_GetFinancialProductImporterByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinancialProductImporterByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancialProductPurposeTypeByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinancialProductPurposeTypeByKeys" message="tns:Simulations_GetFinancialProductPurposeTypeByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinancialProductPurposeTypeByKeysResponse" message="tns:Simulations_GetFinancialProductPurposeTypeByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinancialProductPurposeTypeByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinBaseByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinBaseByKeys" message="tns:Simulations_GetFinBaseByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinBaseByKeysResponse" message="tns:Simulations_GetFinBaseByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinBaseByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinBaseSymbolByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinBaseSymbolByKeys" message="tns:Simulations_GetFinBaseSymbolByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinBaseSymbolByKeysResponse" message="tns:Simulations_GetFinBaseSymbolByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinBaseSymbolByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinConditionsByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinConditionsByKeys" message="tns:Simulations_GetFinConditionsByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinConditionsByKeysResponse" message="tns:Simulations_GetFinConditionsByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinConditionsByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinConditionsFlowsByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinConditionsFlowsByKeys" message="tns:Simulations_GetFinConditionsFlowsByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinConditionsFlowsByKeysResponse" message="tns:Simulations_GetFinConditionsFlowsByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinConditionsFlowsByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinConditionsLogByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinConditionsLogByKeys" message="tns:Simulations_GetFinConditionsLogByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinConditionsLogByKeysResponse" message="tns:Simulations_GetFinConditionsLogByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinConditionsLogByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinConditionsRateByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinConditionsRateByKeys" message="tns:Simulations_GetFinConditionsRateByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinConditionsRateByKeysResponse" message="tns:Simulations_GetFinConditionsRateByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinConditionsRateByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinInitialEntryTypeByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinInitialEntryTypeByKeys" message="tns:Simulations_GetFinInitialEntryTypeByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinInitialEntryTypeByKeysResponse" message="tns:Simulations_GetFinInitialEntryTypeByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinInitialEntryTypeByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinInitialExpenseByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinInitialExpenseByKeys" message="tns:Simulations_GetFinInitialExpenseByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinInitialExpenseByKeysResponse" message="tns:Simulations_GetFinInitialExpenseByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinInitialExpenseByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinMatrixByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinMatrixByKeys" message="tns:Simulations_GetFinMatrixByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinMatrixByKeysResponse" message="tns:Simulations_GetFinMatrixByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinMatrixByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinMatrixItemByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinMatrixItemByKeys" message="tns:Simulations_GetFinMatrixItemByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinMatrixItemByKeysResponse" message="tns:Simulations_GetFinMatrixItemByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinMatrixItemByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinMatrixItemGroupByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinMatrixItemGroupByKeys" message="tns:Simulations_GetFinMatrixItemGroupByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinMatrixItemGroupByKeysResponse" message="tns:Simulations_GetFinMatrixItemGroupByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinMatrixItemGroupByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinProdConditionsFlowByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinProdConditionsFlowByKeys" message="tns:Simulations_GetFinProdConditionsFlowByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinProdConditionsFlowByKeysResponse" message="tns:Simulations_GetFinProdConditionsFlowByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinProdConditionsFlowByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinProdIdentifierListByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinProdIdentifierListByKeys" message="tns:Simulations_GetFinProdIdentifierListByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinProdIdentifierListByKeysResponse" message="tns:Simulations_GetFinProdIdentifierListByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinProdIdentifierListByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinProdRestrictionByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinProdRestrictionByKeys" message="tns:Simulations_GetFinProdRestrictionByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinProdRestrictionByKeysResponse" message="tns:Simulations_GetFinProdRestrictionByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinProdRestrictionByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinProdRestrictionListByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinProdRestrictionListByKeys" message="tns:Simulations_GetFinProdRestrictionListByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinProdRestrictionListByKeysResponse" message="tns:Simulations_GetFinProdRestrictionListByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinProdRestrictionListByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinProdSymbolListByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinProdSymbolListByKeys" message="tns:Simulations_GetFinProdSymbolListByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinProdSymbolListByKeysResponse" message="tns:Simulations_GetFinProdSymbolListByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinProdSymbolListByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinSymbolByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinSymbolByKeys" message="tns:Simulations_GetFinSymbolByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinSymbolByKeysResponse" message="tns:Simulations_GetFinSymbolByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinSymbolByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinSymbolProdByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinSymbolProdByKeys" message="tns:Simulations_GetFinSymbolProdByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinSymbolProdByKeysResponse" message="tns:Simulations_GetFinSymbolProdByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinSymbolProdByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinSymbolProdConditionByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinSymbolProdConditionByKeys" message="tns:Simulations_GetFinSymbolProdConditionByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinSymbolProdConditionByKeysResponse" message="tns:Simulations_GetFinSymbolProdConditionByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinSymbolProdConditionByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinSymbolProdValueByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinSymbolProdValueByKeys" message="tns:Simulations_GetFinSymbolProdValueByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinSymbolProdValueByKeysResponse" message="tns:Simulations_GetFinSymbolProdValueByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinSymbolProdValueByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinSymbolProdValueConditionByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinSymbolProdValueConditionByKeys" message="tns:Simulations_GetFinSymbolProdValueConditionByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinSymbolProdValueConditionByKeysResponse" message="tns:Simulations_GetFinSymbolProdValueConditionByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinSymbolProdValueConditionByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinSymbolRestrictionByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinSymbolRestrictionByKeys" message="tns:Simulations_GetFinSymbolRestrictionByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinSymbolRestrictionByKeysResponse" message="tns:Simulations_GetFinSymbolRestrictionByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinSymbolRestrictionByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinSymbolValueByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetFinSymbolValueByKeys" message="tns:Simulations_GetFinSymbolValueByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetFinSymbolValueByKeysResponse" message="tns:Simulations_GetFinSymbolValueByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetFinSymbolValueByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentBehaviourTypeByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetPaymentBehaviourTypeByKeys" message="tns:Simulations_GetPaymentBehaviourTypeByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetPaymentBehaviourTypeByKeysResponse" message="tns:Simulations_GetPaymentBehaviourTypeByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetPaymentBehaviourTypeByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuotationIrregularityByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetQuotationIrregularityByKeys" message="tns:Simulations_GetQuotationIrregularityByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetQuotationIrregularityByKeysResponse" message="tns:Simulations_GetQuotationIrregularityByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetQuotationIrregularityByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuotationIrregularityTypeByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetQuotationIrregularityTypeByKeys" message="tns:Simulations_GetQuotationIrregularityTypeByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetQuotationIrregularityTypeByKeysResponse" message="tns:Simulations_GetQuotationIrregularityTypeByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetQuotationIrregularityTypeByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSimulations">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/SaveSimulations" message="tns:Simulations_SaveSimulations_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/SaveSimulationsResponse" message="tns:Simulations_SaveSimulations_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_SaveSimulations_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSimulationsV2">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/SaveSimulationsV2" message="tns:Simulations_SaveSimulationsV2_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/SaveSimulationsV2Response" message="tns:Simulations_SaveSimulationsV2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_SaveSimulationsV2_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSimulationsClassTableId">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetSimulationsClassTableId" message="tns:Simulations_GetSimulationsClassTableId_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetSimulationsClassTableIdResponse" message="tns:Simulations_GetSimulationsClassTableId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetSimulationsClassTableId_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSimulationsTableId">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/GetSimulationsTableId" message="tns:Simulations_GetSimulationsTableId_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/GetSimulationsTableIdResponse" message="tns:Simulations_GetSimulationsTableId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_GetSimulationsTableId_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchSimulationsConfig">
+      <wsdl:input wsaw:Action="http://accipiens.com/Simulations/SearchSimulationsConfig" message="tns:Simulations_SearchSimulationsConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Simulations/SearchSimulationsConfigResponse" message="tns:Simulations_SearchSimulationsConfig_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Simulations_SearchSimulationsConfig_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

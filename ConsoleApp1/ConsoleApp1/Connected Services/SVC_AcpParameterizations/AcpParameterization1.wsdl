@@ -1,0 +1,1403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://accipiens.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://accipiens.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://accipiens.com/Imports">
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd0" namespace="http://accipiens.com" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd3" namespace="http://accipiens.com/Common" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Olissipo.OperationsManagementInterfaces.DataStructures" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Olissipo.Utils" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperations.DataStructures" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Olissipo.CreditAnalysis.DataStructures" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Olissipo.CommonGeneric.Framework.Security" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Olissipo.AcpFramework.DataStructures" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd9" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd10" namespace="http://accipiens.com/Entities" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd11" namespace="http://accipiens.com/BusinessFramework" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd12" namespace="http://accipiens.com/CreditOperations" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd13" namespace="http://accipiens.com/ReceivablesPayables" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd14" namespace="http://schemas.datacontract.org/2004/07/Olissipo.BusinessFramework.DataStructures" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd15" namespace="http://accipiens.com/AcpParameterization" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd16" namespace="http://accipiens.com/VirtualData" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="AcpParameterization_GetOperationsManagementIndicatorContextEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperationsManagementIndicatorContextEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetOperationsManagementIndicatorContextEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q1="http://accipiens.com/Common" name="SessionToken" element="q1:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetOperationsManagementIndicatorContextEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperationsManagementIndicatorContextEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetOperationsManagementIndicatorContextEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q2="http://accipiens.com/Common" name="detail" element="q2:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_ConvertToEnumOperationsManagementIndicatorContext_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumOperationsManagementIndicatorContext" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_ConvertToEnumOperationsManagementIndicatorContext_InputMessage_Headers">
+    <wsdl:part xmlns:q3="http://accipiens.com/Common" name="SessionToken" element="q3:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_ConvertToEnumOperationsManagementIndicatorContext_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumOperationsManagementIndicatorContextResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_ConvertToEnumOperationsManagementIndicatorContext_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q4="http://accipiens.com/Common" name="detail" element="q4:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetGlobalOperationsManagementIndicatorEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGlobalOperationsManagementIndicatorEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetGlobalOperationsManagementIndicatorEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q5="http://accipiens.com/Common" name="SessionToken" element="q5:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetGlobalOperationsManagementIndicatorEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGlobalOperationsManagementIndicatorEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetGlobalOperationsManagementIndicatorEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q6="http://accipiens.com/Common" name="detail" element="q6:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_ConvertToEnumGlobalOperationsManagementIndicator_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumGlobalOperationsManagementIndicator" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_ConvertToEnumGlobalOperationsManagementIndicator_InputMessage_Headers">
+    <wsdl:part xmlns:q7="http://accipiens.com/Common" name="SessionToken" element="q7:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_ConvertToEnumGlobalOperationsManagementIndicator_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumGlobalOperationsManagementIndicatorResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_ConvertToEnumGlobalOperationsManagementIndicator_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q8="http://accipiens.com/Common" name="detail" element="q8:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCreditOperationsIndicatorContextEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditOperationsIndicatorContextEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCreditOperationsIndicatorContextEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q9="http://accipiens.com/Common" name="SessionToken" element="q9:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCreditOperationsIndicatorContextEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditOperationsIndicatorContextEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCreditOperationsIndicatorContextEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q10="http://accipiens.com/Common" name="detail" element="q10:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_ConvertToEnumCreditOperationsIndicatorContext_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumCreditOperationsIndicatorContext" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_ConvertToEnumCreditOperationsIndicatorContext_InputMessage_Headers">
+    <wsdl:part xmlns:q11="http://accipiens.com/Common" name="SessionToken" element="q11:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_ConvertToEnumCreditOperationsIndicatorContext_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumCreditOperationsIndicatorContextResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_ConvertToEnumCreditOperationsIndicatorContext_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q12="http://accipiens.com/Common" name="detail" element="q12:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetGlobalCreditOperationsIndicatorEnumValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGlobalCreditOperationsIndicatorEnumValue" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetGlobalCreditOperationsIndicatorEnumValue_InputMessage_Headers">
+    <wsdl:part xmlns:q13="http://accipiens.com/Common" name="SessionToken" element="q13:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetGlobalCreditOperationsIndicatorEnumValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGlobalCreditOperationsIndicatorEnumValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetGlobalCreditOperationsIndicatorEnumValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q14="http://accipiens.com/Common" name="detail" element="q14:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_ConvertToEnumGlobalCreditOperationsIndicator_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumGlobalCreditOperationsIndicator" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_ConvertToEnumGlobalCreditOperationsIndicator_InputMessage_Headers">
+    <wsdl:part xmlns:q15="http://accipiens.com/Common" name="SessionToken" element="q15:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_ConvertToEnumGlobalCreditOperationsIndicator_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToEnumGlobalCreditOperationsIndicatorResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_ConvertToEnumGlobalCreditOperationsIndicator_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q16="http://accipiens.com/Common" name="detail" element="q16:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_ExposeCredAnalysisIndicatorEnums_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExposeCredAnalysisIndicatorEnums" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_ExposeCredAnalysisIndicatorEnums_InputMessage_Headers">
+    <wsdl:part xmlns:q17="http://accipiens.com/Common" name="SessionToken" element="q17:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_ExposeCredAnalysisIndicatorEnums_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExposeCredAnalysisIndicatorEnumsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_ExposeCredAnalysisIndicatorEnums_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q18="http://accipiens.com/Common" name="detail" element="q18:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_UseMultiCurrencyMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:UseMultiCurrencyMode" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_UseMultiCurrencyMode_InputMessage_Headers">
+    <wsdl:part xmlns:q19="http://accipiens.com/Common" name="SessionToken" element="q19:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_UseMultiCurrencyMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UseMultiCurrencyModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_UseMultiCurrencyMode_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q20="http://accipiens.com/Common" name="detail" element="q20:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_ForexRateDecimalPrecision_InputMessage">
+    <wsdl:part name="parameters" element="tns:ForexRateDecimalPrecision" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_ForexRateDecimalPrecision_InputMessage_Headers">
+    <wsdl:part xmlns:q21="http://accipiens.com/Common" name="SessionToken" element="q21:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_ForexRateDecimalPrecision_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ForexRateDecimalPrecisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_ForexRateDecimalPrecision_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q22="http://accipiens.com/Common" name="detail" element="q22:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetInstallationName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInstallationName" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetInstallationName_InputMessage_Headers">
+    <wsdl:part xmlns:q23="http://accipiens.com/Common" name="SessionToken" element="q23:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetInstallationName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInstallationNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetInstallationName_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q24="http://accipiens.com/Common" name="detail" element="q24:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetInstallationType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInstallationType" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetInstallationType_InputMessage_Headers">
+    <wsdl:part xmlns:q25="http://accipiens.com/Common" name="SessionToken" element="q25:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetInstallationType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInstallationTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetInstallationType_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q26="http://accipiens.com/Common" name="detail" element="q26:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetRunMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRunMode" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetRunMode_InputMessage_Headers">
+    <wsdl:part xmlns:q27="http://accipiens.com/Common" name="SessionToken" element="q27:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetRunMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRunModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetRunMode_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q28="http://accipiens.com/Common" name="detail" element="q28:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetFileSecurityConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileSecurityConfig" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetFileSecurityConfig_InputMessage_Headers">
+    <wsdl:part xmlns:q29="http://accipiens.com/Common" name="SessionToken" element="q29:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetFileSecurityConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileSecurityConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetFileSecurityConfig_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q30="http://accipiens.com/Common" name="detail" element="q30:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_IssueDocsWarnIssueCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:IssueDocsWarnIssueCount" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_IssueDocsWarnIssueCount_InputMessage_Headers">
+    <wsdl:part xmlns:q31="http://accipiens.com/Common" name="SessionToken" element="q31:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_IssueDocsWarnIssueCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IssueDocsWarnIssueCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_IssueDocsWarnIssueCount_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q32="http://accipiens.com/Common" name="detail" element="q32:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetThumbnailsInArchive_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetThumbnailsInArchive" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetThumbnailsInArchive_InputMessage_Headers">
+    <wsdl:part xmlns:q33="http://accipiens.com/Common" name="SessionToken" element="q33:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetThumbnailsInArchive_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetThumbnailsInArchiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetThumbnailsInArchive_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q34="http://accipiens.com/Common" name="detail" element="q34:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetArchiveUseRecycleBin_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetArchiveUseRecycleBin" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetArchiveUseRecycleBin_InputMessage_Headers">
+    <wsdl:part xmlns:q35="http://accipiens.com/Common" name="SessionToken" element="q35:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetArchiveUseRecycleBin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetArchiveUseRecycleBinResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetArchiveUseRecycleBin_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q36="http://accipiens.com/Common" name="detail" element="q36:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetEntityTypeCid_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityTypeCid" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetEntityTypeCid_InputMessage_Headers">
+    <wsdl:part xmlns:q37="http://accipiens.com/Common" name="SessionToken" element="q37:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetEntityTypeCid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityTypeCidResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetEntityTypeCid_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q38="http://accipiens.com/Common" name="detail" element="q38:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetEntityRoleTypeCid_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityRoleTypeCid" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetEntityRoleTypeCid_InputMessage_Headers">
+    <wsdl:part xmlns:q39="http://accipiens.com/Common" name="SessionToken" element="q39:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetEntityRoleTypeCid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityRoleTypeCidResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetEntityRoleTypeCid_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q40="http://accipiens.com/Common" name="detail" element="q40:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetDocumentTypeCid_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentTypeCid" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetDocumentTypeCid_InputMessage_Headers">
+    <wsdl:part xmlns:q41="http://accipiens.com/Common" name="SessionToken" element="q41:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetDocumentTypeCid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentTypeCidResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetDocumentTypeCid_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q42="http://accipiens.com/Common" name="detail" element="q42:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetPhoneTypeCid_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhoneTypeCid" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetPhoneTypeCid_InputMessage_Headers">
+    <wsdl:part xmlns:q43="http://accipiens.com/Common" name="SessionToken" element="q43:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetPhoneTypeCid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhoneTypeCidResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetPhoneTypeCid_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q44="http://accipiens.com/Common" name="detail" element="q44:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetPhoneTypeCidOptional_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhoneTypeCidOptional" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetPhoneTypeCidOptional_InputMessage_Headers">
+    <wsdl:part xmlns:q45="http://accipiens.com/Common" name="SessionToken" element="q45:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetPhoneTypeCidOptional_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhoneTypeCidOptionalResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetPhoneTypeCidOptional_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q46="http://accipiens.com/Common" name="detail" element="q46:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetStructNodeTypeIds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStructNodeTypeIds" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetStructNodeTypeIds_InputMessage_Headers">
+    <wsdl:part xmlns:q47="http://accipiens.com/Common" name="SessionToken" element="q47:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetStructNodeTypeIds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStructNodeTypeIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetStructNodeTypeIds_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q48="http://accipiens.com/Common" name="detail" element="q48:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetStructNodeContextCid_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStructNodeContextCid" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetStructNodeContextCid_InputMessage_Headers">
+    <wsdl:part xmlns:q49="http://accipiens.com/Common" name="SessionToken" element="q49:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetStructNodeContextCid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStructNodeContextCidResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetStructNodeContextCid_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q50="http://accipiens.com/Common" name="detail" element="q50:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetBankAccountTypeCid_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBankAccountTypeCid" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetBankAccountTypeCid_InputMessage_Headers">
+    <wsdl:part xmlns:q51="http://accipiens.com/Common" name="SessionToken" element="q51:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetBankAccountTypeCid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBankAccountTypeCidResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetBankAccountTypeCid_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q52="http://accipiens.com/Common" name="detail" element="q52:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetEntityRelationTypeCid_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityRelationTypeCid" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetEntityRelationTypeCid_InputMessage_Headers">
+    <wsdl:part xmlns:q53="http://accipiens.com/Common" name="SessionToken" element="q53:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetEntityRelationTypeCid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityRelationTypeCidResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetEntityRelationTypeCid_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q54="http://accipiens.com/Common" name="detail" element="q54:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetAddressTypeCid_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddressTypeCid" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetAddressTypeCid_InputMessage_Headers">
+    <wsdl:part xmlns:q55="http://accipiens.com/Common" name="SessionToken" element="q55:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetAddressTypeCid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddressTypeCidResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetAddressTypeCid_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q56="http://accipiens.com/Common" name="detail" element="q56:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetJuridicalTypeCid_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJuridicalTypeCid" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetJuridicalTypeCid_InputMessage_Headers">
+    <wsdl:part xmlns:q57="http://accipiens.com/Common" name="SessionToken" element="q57:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetJuridicalTypeCid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJuridicalTypeCidResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetJuridicalTypeCid_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q58="http://accipiens.com/Common" name="detail" element="q58:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCustomerTypeCid_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerTypeCid" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCustomerTypeCid_InputMessage_Headers">
+    <wsdl:part xmlns:q59="http://accipiens.com/Common" name="SessionToken" element="q59:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCustomerTypeCid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerTypeCidResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCustomerTypeCid_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q60="http://accipiens.com/Common" name="detail" element="q60:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCreditOperationsFinRateDefinitionId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditOperationsFinRateDefinitionId" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCreditOperationsFinRateDefinitionId_InputMessage_Headers">
+    <wsdl:part xmlns:q61="http://accipiens.com/Common" name="SessionToken" element="q61:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCreditOperationsFinRateDefinitionId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditOperationsFinRateDefinitionIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCreditOperationsFinRateDefinitionId_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q62="http://accipiens.com/Common" name="detail" element="q62:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCreditOperationsIntervenientsTypeCid_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditOperationsIntervenientsTypeCid" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCreditOperationsIntervenientsTypeCid_InputMessage_Headers">
+    <wsdl:part xmlns:q63="http://accipiens.com/Common" name="SessionToken" element="q63:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCreditOperationsIntervenientsTypeCid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditOperationsIntervenientsTypeCidResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCreditOperationsIntervenientsTypeCid_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q64="http://accipiens.com/Common" name="detail" element="q64:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCreditOperationsOptionalIntervenientsTypeCid_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditOperationsOptionalIntervenientsTypeCid" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCreditOperationsOptionalIntervenientsTypeCid_InputMessage_Headers">
+    <wsdl:part xmlns:q65="http://accipiens.com/Common" name="SessionToken" element="q65:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCreditOperationsOptionalIntervenientsTypeCid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditOperationsOptionalIntervenientsTypeCidResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCreditOperationsOptionalIntervenientsTypeCid_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q66="http://accipiens.com/Common" name="detail" element="q66:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCreditOperationsTablesDefaults_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditOperationsTablesDefaults" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCreditOperationsTablesDefaults_InputMessage_Headers">
+    <wsdl:part xmlns:q67="http://accipiens.com/Common" name="SessionToken" element="q67:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCreditOperationsTablesDefaults_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditOperationsTablesDefaultsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCreditOperationsTablesDefaults_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q68="http://accipiens.com/Common" name="detail" element="q68:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_AllowsRegistrationsDataChanges_InputMessage">
+    <wsdl:part name="parameters" element="tns:AllowsRegistrationsDataChanges" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_AllowsRegistrationsDataChanges_InputMessage_Headers">
+    <wsdl:part xmlns:q69="http://accipiens.com/Common" name="SessionToken" element="q69:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_AllowsRegistrationsDataChanges_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AllowsRegistrationsDataChangesResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_AllowsRegistrationsDataChanges_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q70="http://accipiens.com/Common" name="detail" element="q70:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCredOperReadonlyStates_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperReadonlyStates" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCredOperReadonlyStates_InputMessage_Headers">
+    <wsdl:part xmlns:q71="http://accipiens.com/Common" name="SessionToken" element="q71:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCredOperReadonlyStates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredOperReadonlyStatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCredOperReadonlyStates_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q72="http://accipiens.com/Common" name="detail" element="q72:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetFinancialProductParameters_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinancialProductParameters" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetFinancialProductParameters_InputMessage_Headers">
+    <wsdl:part xmlns:q73="http://accipiens.com/Common" name="SessionToken" element="q73:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetFinancialProductParameters_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinancialProductParametersResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetFinancialProductParameters_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q74="http://accipiens.com/Common" name="detail" element="q74:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetPhysicalDocumentId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhysicalDocumentId" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetPhysicalDocumentId_InputMessage_Headers">
+    <wsdl:part xmlns:q75="http://accipiens.com/Common" name="SessionToken" element="q75:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetPhysicalDocumentId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhysicalDocumentIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetPhysicalDocumentId_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q76="http://accipiens.com/Common" name="detail" element="q76:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetDocumentMaxTerm_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentMaxTerm" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetDocumentMaxTerm_InputMessage_Headers">
+    <wsdl:part xmlns:q77="http://accipiens.com/Common" name="SessionToken" element="q77:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetDocumentMaxTerm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentMaxTermResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetDocumentMaxTerm_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q78="http://accipiens.com/Common" name="detail" element="q78:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetFctDueAdvanceInhibitionDeltaDays_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFctDueAdvanceInhibitionDeltaDays" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetFctDueAdvanceInhibitionDeltaDays_InputMessage_Headers">
+    <wsdl:part xmlns:q79="http://accipiens.com/Common" name="SessionToken" element="q79:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetFctDueAdvanceInhibitionDeltaDays_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFctDueAdvanceInhibitionDeltaDaysResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetFctDueAdvanceInhibitionDeltaDays_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q80="http://accipiens.com/Common" name="detail" element="q80:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetGuarantorPlafondConsumptionPercentage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGuarantorPlafondConsumptionPercentage" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetGuarantorPlafondConsumptionPercentage_InputMessage_Headers">
+    <wsdl:part xmlns:q81="http://accipiens.com/Common" name="SessionToken" element="q81:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetGuarantorPlafondConsumptionPercentage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGuarantorPlafondConsumptionPercentageResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetGuarantorPlafondConsumptionPercentage_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q82="http://accipiens.com/Common" name="detail" element="q82:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetFirstEquipmentRegistrationTypeId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFirstEquipmentRegistrationTypeId" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetFirstEquipmentRegistrationTypeId_InputMessage_Headers">
+    <wsdl:part xmlns:q83="http://accipiens.com/Common" name="SessionToken" element="q83:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetFirstEquipmentRegistrationTypeId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFirstEquipmentRegistrationTypeIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetFirstEquipmentRegistrationTypeId_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q84="http://accipiens.com/Common" name="detail" element="q84:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetNewEquipmentRegistrationTypeId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewEquipmentRegistrationTypeId" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetNewEquipmentRegistrationTypeId_InputMessage_Headers">
+    <wsdl:part xmlns:q85="http://accipiens.com/Common" name="SessionToken" element="q85:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetNewEquipmentRegistrationTypeId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewEquipmentRegistrationTypeIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetNewEquipmentRegistrationTypeId_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q86="http://accipiens.com/Common" name="detail" element="q86:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetEquipmentBrandsToValidateLicencePlate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipmentBrandsToValidateLicencePlate" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetEquipmentBrandsToValidateLicencePlate_InputMessage_Headers">
+    <wsdl:part xmlns:q87="http://accipiens.com/Common" name="SessionToken" element="q87:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetEquipmentBrandsToValidateLicencePlate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipmentBrandsToValidateLicencePlateResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetEquipmentBrandsToValidateLicencePlate_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q88="http://accipiens.com/Common" name="detail" element="q88:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetDefaultsTables_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDefaultsTables" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetDefaultsTables_InputMessage_Headers">
+    <wsdl:part xmlns:q89="http://accipiens.com/Common" name="SessionToken" element="q89:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetDefaultsTables_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDefaultsTablesResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetDefaultsTables_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q90="http://accipiens.com/Common" name="detail" element="q90:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCompanyForexRateParam_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyForexRateParam" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCompanyForexRateParam_InputMessage_Headers">
+    <wsdl:part xmlns:q91="http://accipiens.com/Common" name="SessionToken" element="q91:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCompanyForexRateParam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyForexRateParamResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCompanyForexRateParam_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q92="http://accipiens.com/Common" name="detail" element="q92:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetChargeNowEqualToInvoiced_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChargeNowEqualToInvoiced" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetChargeNowEqualToInvoiced_InputMessage_Headers">
+    <wsdl:part xmlns:q93="http://accipiens.com/Common" name="SessionToken" element="q93:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetChargeNowEqualToInvoiced_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChargeNowEqualToInvoicedResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetChargeNowEqualToInvoiced_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q94="http://accipiens.com/Common" name="detail" element="q94:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCompanyRPDocumentTypeId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyRPDocumentTypeId" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCompanyRPDocumentTypeId_InputMessage_Headers">
+    <wsdl:part xmlns:q95="http://accipiens.com/Common" name="SessionToken" element="q95:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCompanyRPDocumentTypeId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyRPDocumentTypeIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCompanyRPDocumentTypeId_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q96="http://accipiens.com/Common" name="detail" element="q96:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCompanyRPFctJustifyPayDocumentTypeId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyRPFctJustifyPayDocumentTypeId" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCompanyRPFctJustifyPayDocumentTypeId_InputMessage_Headers">
+    <wsdl:part xmlns:q97="http://accipiens.com/Common" name="SessionToken" element="q97:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCompanyRPFctJustifyPayDocumentTypeId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyRPFctJustifyPayDocumentTypeIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCompanyRPFctJustifyPayDocumentTypeId_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q98="http://accipiens.com/Common" name="detail" element="q98:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetDateDefinition_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDateDefinition" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetDateDefinition_InputMessage_Headers">
+    <wsdl:part xmlns:q99="http://accipiens.com/Common" name="SessionToken" element="q99:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetDateDefinition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDateDefinitionResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetDateDefinition_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q100="http://accipiens.com/Common" name="detail" element="q100:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCreditCardsDefaultTerm_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditCardsDefaultTerm" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCreditCardsDefaultTerm_InputMessage_Headers">
+    <wsdl:part xmlns:q101="http://accipiens.com/Common" name="SessionToken" element="q101:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCreditCardsDefaultTerm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditCardsDefaultTermResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCreditCardsDefaultTerm_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q102="http://accipiens.com/Common" name="detail" element="q102:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCheckAccountingDateEditabilityOnInvoice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCheckAccountingDateEditabilityOnInvoice" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCheckAccountingDateEditabilityOnInvoice_InputMessage_Headers">
+    <wsdl:part xmlns:q103="http://accipiens.com/Common" name="SessionToken" element="q103:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCheckAccountingDateEditabilityOnInvoice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCheckAccountingDateEditabilityOnInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCheckAccountingDateEditabilityOnInvoice_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q104="http://accipiens.com/Common" name="detail" element="q104:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_PermissionsHasTasksForOpers_InputMessage">
+    <wsdl:part name="parameters" element="tns:PermissionsHasTasksForOpers" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_PermissionsHasTasksForOpers_InputMessage_Headers">
+    <wsdl:part xmlns:q105="http://accipiens.com/Common" name="SessionToken" element="q105:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_PermissionsHasTasksForOpers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PermissionsHasTasksForOpersResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_PermissionsHasTasksForOpers_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q106="http://accipiens.com/Common" name="detail" element="q106:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_PermissionsHasTasksForGroups_InputMessage">
+    <wsdl:part name="parameters" element="tns:PermissionsHasTasksForGroups" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_PermissionsHasTasksForGroups_InputMessage_Headers">
+    <wsdl:part xmlns:q107="http://accipiens.com/Common" name="SessionToken" element="q107:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_PermissionsHasTasksForGroups_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PermissionsHasTasksForGroupsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_PermissionsHasTasksForGroups_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q108="http://accipiens.com/Common" name="detail" element="q108:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_PermissionsHasTasksForSubjects_InputMessage">
+    <wsdl:part name="parameters" element="tns:PermissionsHasTasksForSubjects" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_PermissionsHasTasksForSubjects_InputMessage_Headers">
+    <wsdl:part xmlns:q109="http://accipiens.com/Common" name="SessionToken" element="q109:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_PermissionsHasTasksForSubjects_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PermissionsHasTasksForSubjectsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_PermissionsHasTasksForSubjects_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q110="http://accipiens.com/Common" name="detail" element="q110:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetFinancialFlowTypeId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinancialFlowTypeId" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetFinancialFlowTypeId_InputMessage_Headers">
+    <wsdl:part xmlns:q111="http://accipiens.com/Common" name="SessionToken" element="q111:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetFinancialFlowTypeId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinancialFlowTypeIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetFinancialFlowTypeId_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q112="http://accipiens.com/Common" name="detail" element="q112:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_AllowEntityPlafondAvailableInfoByCredOper_InputMessage">
+    <wsdl:part name="parameters" element="tns:AllowEntityPlafondAvailableInfoByCredOper" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_AllowEntityPlafondAvailableInfoByCredOper_InputMessage_Headers">
+    <wsdl:part xmlns:q113="http://accipiens.com/Common" name="SessionToken" element="q113:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_AllowEntityPlafondAvailableInfoByCredOper_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AllowEntityPlafondAvailableInfoByCredOperResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_AllowEntityPlafondAvailableInfoByCredOper_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q114="http://accipiens.com/Common" name="detail" element="q114:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetUserFavoriteGroups_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserFavoriteGroups" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetUserFavoriteGroups_InputMessage_Headers">
+    <wsdl:part xmlns:q115="http://accipiens.com/Common" name="SessionToken" element="q115:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetUserFavoriteGroups_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserFavoriteGroupsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetUserFavoriteGroups_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q116="http://accipiens.com/Common" name="detail" element="q116:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetFavoriteGroupItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFavoriteGroupItems" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetFavoriteGroupItems_InputMessage_Headers">
+    <wsdl:part xmlns:q117="http://accipiens.com/Common" name="SessionToken" element="q117:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetFavoriteGroupItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFavoriteGroupItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetFavoriteGroupItems_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q118="http://accipiens.com/Common" name="detail" element="q118:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetIndicatorAttributes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIndicatorAttributes" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetIndicatorAttributes_InputMessage_Headers">
+    <wsdl:part xmlns:q119="http://accipiens.com/Common" name="SessionToken" element="q119:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetIndicatorAttributes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIndicatorAttributesResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetIndicatorAttributes_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q120="http://accipiens.com/Common" name="detail" element="q120:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetIndicatorStringValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIndicatorStringValue" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetIndicatorStringValue_InputMessage_Headers">
+    <wsdl:part xmlns:q121="http://accipiens.com/Common" name="SessionToken" element="q121:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetIndicatorStringValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIndicatorStringValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetIndicatorStringValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q122="http://accipiens.com/Common" name="detail" element="q122:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_CorrectIndicatorsDecodedValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:CorrectIndicatorsDecodedValue" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_CorrectIndicatorsDecodedValue_InputMessage_Headers">
+    <wsdl:part xmlns:q123="http://accipiens.com/Common" name="SessionToken" element="q123:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_CorrectIndicatorsDecodedValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CorrectIndicatorsDecodedValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_CorrectIndicatorsDecodedValue_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q124="http://accipiens.com/Common" name="detail" element="q124:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_Ping_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ping" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_Ping_InputMessage_Headers">
+    <wsdl:part xmlns:q125="http://accipiens.com/Common" name="SessionToken" element="q125:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_Ping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PingResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_Ping_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q126="http://accipiens.com/Common" name="detail" element="q126:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetAcpParameterizationClassContext_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAcpParameterizationClassContext" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetAcpParameterizationClassContext_InputMessage_Headers">
+    <wsdl:part xmlns:q127="http://accipiens.com/Common" name="SessionToken" element="q127:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetAcpParameterizationClassContext_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAcpParameterizationClassContextResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetAcpParameterizationClassContext_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q128="http://accipiens.com/Common" name="detail" element="q128:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_SearchAcpParameterization_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchAcpParameterization" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_SearchAcpParameterization_InputMessage_Headers">
+    <wsdl:part xmlns:q129="http://accipiens.com/Common" name="SessionToken" element="q129:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_SearchAcpParameterization_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchAcpParameterizationResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_SearchAcpParameterization_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q130="http://accipiens.com/Common" name="detail" element="q130:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCompanyParamByKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyParamByKey" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCompanyParamByKey_InputMessage_Headers">
+    <wsdl:part xmlns:q131="http://accipiens.com/Common" name="SessionToken" element="q131:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCompanyParamByKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyParamByKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCompanyParamByKey_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q132="http://accipiens.com/Common" name="detail" element="q132:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetAplUserCommonFavoriteByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAplUserCommonFavoriteByKeys" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetAplUserCommonFavoriteByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q133="http://accipiens.com/Common" name="SessionToken" element="q133:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetAplUserCommonFavoriteByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAplUserCommonFavoriteByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetAplUserCommonFavoriteByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q134="http://accipiens.com/Common" name="detail" element="q134:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCompanyParamByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyParamByKeys" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCompanyParamByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q135="http://accipiens.com/Common" name="SessionToken" element="q135:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCompanyParamByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyParamByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCompanyParamByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q136="http://accipiens.com/Common" name="detail" element="q136:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCompanySectionByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanySectionByKeys" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCompanySectionByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q137="http://accipiens.com/Common" name="SessionToken" element="q137:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCompanySectionByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanySectionByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetCompanySectionByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q138="http://accipiens.com/Common" name="detail" element="q138:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetFavoriteGroupByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFavoriteGroupByKeys" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetFavoriteGroupByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q139="http://accipiens.com/Common" name="SessionToken" element="q139:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetFavoriteGroupByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFavoriteGroupByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetFavoriteGroupByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q140="http://accipiens.com/Common" name="detail" element="q140:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetFavoriteItemByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFavoriteItemByKeys" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetFavoriteItemByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q141="http://accipiens.com/Common" name="SessionToken" element="q141:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetFavoriteItemByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFavoriteItemByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetFavoriteItemByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q142="http://accipiens.com/Common" name="detail" element="q142:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetGlobalParamByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGlobalParamByKeys" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetGlobalParamByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q143="http://accipiens.com/Common" name="SessionToken" element="q143:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetGlobalParamByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGlobalParamByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetGlobalParamByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q144="http://accipiens.com/Common" name="detail" element="q144:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetIndicatorByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIndicatorByKeys" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetIndicatorByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q145="http://accipiens.com/Common" name="SessionToken" element="q145:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetIndicatorByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIndicatorByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetIndicatorByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q146="http://accipiens.com/Common" name="detail" element="q146:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetIndicatorContextByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIndicatorContextByKeys" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetIndicatorContextByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q147="http://accipiens.com/Common" name="SessionToken" element="q147:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetIndicatorContextByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIndicatorContextByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetIndicatorContextByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q148="http://accipiens.com/Common" name="detail" element="q148:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetParamSchemaByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetParamSchemaByKeys" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetParamSchemaByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q149="http://accipiens.com/Common" name="SessionToken" element="q149:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetParamSchemaByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetParamSchemaByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetParamSchemaByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q150="http://accipiens.com/Common" name="detail" element="q150:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetScreenCustomizationByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetScreenCustomizationByKeys" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetScreenCustomizationByKeys_InputMessage_Headers">
+    <wsdl:part xmlns:q151="http://accipiens.com/Common" name="SessionToken" element="q151:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetScreenCustomizationByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetScreenCustomizationByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetScreenCustomizationByKeys_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q152="http://accipiens.com/Common" name="detail" element="q152:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_SaveAcpParameterization_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAcpParameterization" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_SaveAcpParameterization_InputMessage_Headers">
+    <wsdl:part xmlns:q153="http://accipiens.com/Common" name="SessionToken" element="q153:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_SaveAcpParameterization_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAcpParameterizationResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_SaveAcpParameterization_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q154="http://accipiens.com/Common" name="detail" element="q154:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_SaveAcpParameterizationV2_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAcpParameterizationV2" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_SaveAcpParameterizationV2_InputMessage_Headers">
+    <wsdl:part xmlns:q155="http://accipiens.com/Common" name="SessionToken" element="q155:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_SaveAcpParameterizationV2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAcpParameterizationV2Response" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_SaveAcpParameterizationV2_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q156="http://accipiens.com/Common" name="detail" element="q156:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetAcpParameterizationClassTableId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAcpParameterizationClassTableId" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetAcpParameterizationClassTableId_InputMessage_Headers">
+    <wsdl:part xmlns:q157="http://accipiens.com/Common" name="SessionToken" element="q157:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetAcpParameterizationClassTableId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAcpParameterizationClassTableIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetAcpParameterizationClassTableId_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q158="http://accipiens.com/Common" name="detail" element="q158:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetAcpParameterizationTableId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAcpParameterizationTableId" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetAcpParameterizationTableId_InputMessage_Headers">
+    <wsdl:part xmlns:q159="http://accipiens.com/Common" name="SessionToken" element="q159:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetAcpParameterizationTableId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAcpParameterizationTableIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_GetAcpParameterizationTableId_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q160="http://accipiens.com/Common" name="detail" element="q160:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_SearchAcpParameterizationConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchAcpParameterizationConfig" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_SearchAcpParameterizationConfig_InputMessage_Headers">
+    <wsdl:part xmlns:q161="http://accipiens.com/Common" name="SessionToken" element="q161:SessionToken" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_SearchAcpParameterizationConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchAcpParameterizationConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcpParameterization_SearchAcpParameterizationConfig_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q162="http://accipiens.com/Common" name="detail" element="q162:AcpDetail" />
+  </wsdl:message>
+  <wsdl:portType name="AcpParameterization">
+    <wsdl:operation name="GetOperationsManagementIndicatorContextEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetOperationsManagementIndicatorContextEnumValue" message="tns:AcpParameterization_GetOperationsManagementIndicatorContextEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetOperationsManagementIndicatorContextEnumValueResponse" message="tns:AcpParameterization_GetOperationsManagementIndicatorContextEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetOperationsManagementIndicatorContextEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumOperationsManagementIndicatorContext">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/ConvertToEnumOperationsManagementIndicatorContext" message="tns:AcpParameterization_ConvertToEnumOperationsManagementIndicatorContext_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/ConvertToEnumOperationsManagementIndicatorContextResponse" message="tns:AcpParameterization_ConvertToEnumOperationsManagementIndicatorContext_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_ConvertToEnumOperationsManagementIndicatorContext_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGlobalOperationsManagementIndicatorEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetGlobalOperationsManagementIndicatorEnumValue" message="tns:AcpParameterization_GetGlobalOperationsManagementIndicatorEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetGlobalOperationsManagementIndicatorEnumValueResponse" message="tns:AcpParameterization_GetGlobalOperationsManagementIndicatorEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetGlobalOperationsManagementIndicatorEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumGlobalOperationsManagementIndicator">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/ConvertToEnumGlobalOperationsManagementIndicator" message="tns:AcpParameterization_ConvertToEnumGlobalOperationsManagementIndicator_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/ConvertToEnumGlobalOperationsManagementIndicatorResponse" message="tns:AcpParameterization_ConvertToEnumGlobalOperationsManagementIndicator_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_ConvertToEnumGlobalOperationsManagementIndicator_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditOperationsIndicatorContextEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetCreditOperationsIndicatorContextEnumValue" message="tns:AcpParameterization_GetCreditOperationsIndicatorContextEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetCreditOperationsIndicatorContextEnumValueResponse" message="tns:AcpParameterization_GetCreditOperationsIndicatorContextEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetCreditOperationsIndicatorContextEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumCreditOperationsIndicatorContext">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/ConvertToEnumCreditOperationsIndicatorContext" message="tns:AcpParameterization_ConvertToEnumCreditOperationsIndicatorContext_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/ConvertToEnumCreditOperationsIndicatorContextResponse" message="tns:AcpParameterization_ConvertToEnumCreditOperationsIndicatorContext_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_ConvertToEnumCreditOperationsIndicatorContext_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGlobalCreditOperationsIndicatorEnumValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetGlobalCreditOperationsIndicatorEnumValue" message="tns:AcpParameterization_GetGlobalCreditOperationsIndicatorEnumValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetGlobalCreditOperationsIndicatorEnumValueResponse" message="tns:AcpParameterization_GetGlobalCreditOperationsIndicatorEnumValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetGlobalCreditOperationsIndicatorEnumValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumGlobalCreditOperationsIndicator">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/ConvertToEnumGlobalCreditOperationsIndicator" message="tns:AcpParameterization_ConvertToEnumGlobalCreditOperationsIndicator_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/ConvertToEnumGlobalCreditOperationsIndicatorResponse" message="tns:AcpParameterization_ConvertToEnumGlobalCreditOperationsIndicator_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_ConvertToEnumGlobalCreditOperationsIndicator_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExposeCredAnalysisIndicatorEnums">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/ExposeCredAnalysisIndicatorEnums" message="tns:AcpParameterization_ExposeCredAnalysisIndicatorEnums_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/ExposeCredAnalysisIndicatorEnumsResponse" message="tns:AcpParameterization_ExposeCredAnalysisIndicatorEnums_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_ExposeCredAnalysisIndicatorEnums_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UseMultiCurrencyMode">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/UseMultiCurrencyMode" message="tns:AcpParameterization_UseMultiCurrencyMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/UseMultiCurrencyModeResponse" message="tns:AcpParameterization_UseMultiCurrencyMode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_UseMultiCurrencyMode_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ForexRateDecimalPrecision">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/ForexRateDecimalPrecision" message="tns:AcpParameterization_ForexRateDecimalPrecision_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/ForexRateDecimalPrecisionResponse" message="tns:AcpParameterization_ForexRateDecimalPrecision_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_ForexRateDecimalPrecision_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInstallationName">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetInstallationName" message="tns:AcpParameterization_GetInstallationName_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetInstallationNameResponse" message="tns:AcpParameterization_GetInstallationName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetInstallationName_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInstallationType">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetInstallationType" message="tns:AcpParameterization_GetInstallationType_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetInstallationTypeResponse" message="tns:AcpParameterization_GetInstallationType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetInstallationType_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRunMode">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetRunMode" message="tns:AcpParameterization_GetRunMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetRunModeResponse" message="tns:AcpParameterization_GetRunMode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetRunMode_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFileSecurityConfig">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetFileSecurityConfig" message="tns:AcpParameterization_GetFileSecurityConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetFileSecurityConfigResponse" message="tns:AcpParameterization_GetFileSecurityConfig_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetFileSecurityConfig_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IssueDocsWarnIssueCount">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/IssueDocsWarnIssueCount" message="tns:AcpParameterization_IssueDocsWarnIssueCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/IssueDocsWarnIssueCountResponse" message="tns:AcpParameterization_IssueDocsWarnIssueCount_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_IssueDocsWarnIssueCount_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetThumbnailsInArchive">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetThumbnailsInArchive" message="tns:AcpParameterization_GetThumbnailsInArchive_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetThumbnailsInArchiveResponse" message="tns:AcpParameterization_GetThumbnailsInArchive_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetThumbnailsInArchive_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetArchiveUseRecycleBin">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetArchiveUseRecycleBin" message="tns:AcpParameterization_GetArchiveUseRecycleBin_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetArchiveUseRecycleBinResponse" message="tns:AcpParameterization_GetArchiveUseRecycleBin_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetArchiveUseRecycleBin_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityTypeCid">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetEntityTypeCid" message="tns:AcpParameterization_GetEntityTypeCid_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetEntityTypeCidResponse" message="tns:AcpParameterization_GetEntityTypeCid_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetEntityTypeCid_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityRoleTypeCid">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetEntityRoleTypeCid" message="tns:AcpParameterization_GetEntityRoleTypeCid_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetEntityRoleTypeCidResponse" message="tns:AcpParameterization_GetEntityRoleTypeCid_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetEntityRoleTypeCid_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentTypeCid">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetDocumentTypeCid" message="tns:AcpParameterization_GetDocumentTypeCid_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetDocumentTypeCidResponse" message="tns:AcpParameterization_GetDocumentTypeCid_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetDocumentTypeCid_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhoneTypeCid">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetPhoneTypeCid" message="tns:AcpParameterization_GetPhoneTypeCid_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetPhoneTypeCidResponse" message="tns:AcpParameterization_GetPhoneTypeCid_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetPhoneTypeCid_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhoneTypeCidOptional">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetPhoneTypeCidOptional" message="tns:AcpParameterization_GetPhoneTypeCidOptional_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetPhoneTypeCidOptionalResponse" message="tns:AcpParameterization_GetPhoneTypeCidOptional_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetPhoneTypeCidOptional_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStructNodeTypeIds">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetStructNodeTypeIds" message="tns:AcpParameterization_GetStructNodeTypeIds_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetStructNodeTypeIdsResponse" message="tns:AcpParameterization_GetStructNodeTypeIds_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetStructNodeTypeIds_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStructNodeContextCid">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetStructNodeContextCid" message="tns:AcpParameterization_GetStructNodeContextCid_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetStructNodeContextCidResponse" message="tns:AcpParameterization_GetStructNodeContextCid_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetStructNodeContextCid_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBankAccountTypeCid">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetBankAccountTypeCid" message="tns:AcpParameterization_GetBankAccountTypeCid_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetBankAccountTypeCidResponse" message="tns:AcpParameterization_GetBankAccountTypeCid_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetBankAccountTypeCid_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityRelationTypeCid">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetEntityRelationTypeCid" message="tns:AcpParameterization_GetEntityRelationTypeCid_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetEntityRelationTypeCidResponse" message="tns:AcpParameterization_GetEntityRelationTypeCid_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetEntityRelationTypeCid_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAddressTypeCid">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetAddressTypeCid" message="tns:AcpParameterization_GetAddressTypeCid_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetAddressTypeCidResponse" message="tns:AcpParameterization_GetAddressTypeCid_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetAddressTypeCid_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJuridicalTypeCid">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetJuridicalTypeCid" message="tns:AcpParameterization_GetJuridicalTypeCid_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetJuridicalTypeCidResponse" message="tns:AcpParameterization_GetJuridicalTypeCid_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetJuridicalTypeCid_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerTypeCid">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetCustomerTypeCid" message="tns:AcpParameterization_GetCustomerTypeCid_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetCustomerTypeCidResponse" message="tns:AcpParameterization_GetCustomerTypeCid_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetCustomerTypeCid_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditOperationsFinRateDefinitionId">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetCreditOperationsFinRateDefinitionId" message="tns:AcpParameterization_GetCreditOperationsFinRateDefinitionId_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetCreditOperationsFinRateDefinitionIdResponse" message="tns:AcpParameterization_GetCreditOperationsFinRateDefinitionId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetCreditOperationsFinRateDefinitionId_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditOperationsIntervenientsTypeCid">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetCreditOperationsIntervenientsTypeCid" message="tns:AcpParameterization_GetCreditOperationsIntervenientsTypeCid_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetCreditOperationsIntervenientsTypeCidResponse" message="tns:AcpParameterization_GetCreditOperationsIntervenientsTypeCid_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetCreditOperationsIntervenientsTypeCid_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditOperationsOptionalIntervenientsTypeCid">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetCreditOperationsOptionalIntervenientsTypeCid" message="tns:AcpParameterization_GetCreditOperationsOptionalIntervenientsTypeCid_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetCreditOperationsOptionalIntervenientsTypeCidResponse" message="tns:AcpParameterization_GetCreditOperationsOptionalIntervenientsTypeCid_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetCreditOperationsOptionalIntervenientsTypeCid_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditOperationsTablesDefaults">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetCreditOperationsTablesDefaults" message="tns:AcpParameterization_GetCreditOperationsTablesDefaults_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetCreditOperationsTablesDefaultsResponse" message="tns:AcpParameterization_GetCreditOperationsTablesDefaults_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetCreditOperationsTablesDefaults_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AllowsRegistrationsDataChanges">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/AllowsRegistrationsDataChanges" message="tns:AcpParameterization_AllowsRegistrationsDataChanges_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/AllowsRegistrationsDataChangesResponse" message="tns:AcpParameterization_AllowsRegistrationsDataChanges_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_AllowsRegistrationsDataChanges_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperReadonlyStates">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetCredOperReadonlyStates" message="tns:AcpParameterization_GetCredOperReadonlyStates_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetCredOperReadonlyStatesResponse" message="tns:AcpParameterization_GetCredOperReadonlyStates_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetCredOperReadonlyStates_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancialProductParameters">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetFinancialProductParameters" message="tns:AcpParameterization_GetFinancialProductParameters_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetFinancialProductParametersResponse" message="tns:AcpParameterization_GetFinancialProductParameters_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetFinancialProductParameters_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhysicalDocumentId">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetPhysicalDocumentId" message="tns:AcpParameterization_GetPhysicalDocumentId_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetPhysicalDocumentIdResponse" message="tns:AcpParameterization_GetPhysicalDocumentId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetPhysicalDocumentId_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentMaxTerm">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetDocumentMaxTerm" message="tns:AcpParameterization_GetDocumentMaxTerm_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetDocumentMaxTermResponse" message="tns:AcpParameterization_GetDocumentMaxTerm_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetDocumentMaxTerm_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFctDueAdvanceInhibitionDeltaDays">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetFctDueAdvanceInhibitionDeltaDays" message="tns:AcpParameterization_GetFctDueAdvanceInhibitionDeltaDays_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetFctDueAdvanceInhibitionDeltaDaysResponse" message="tns:AcpParameterization_GetFctDueAdvanceInhibitionDeltaDays_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetFctDueAdvanceInhibitionDeltaDays_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGuarantorPlafondConsumptionPercentage">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetGuarantorPlafondConsumptionPercentage" message="tns:AcpParameterization_GetGuarantorPlafondConsumptionPercentage_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetGuarantorPlafondConsumptionPercentageResponse" message="tns:AcpParameterization_GetGuarantorPlafondConsumptionPercentage_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetGuarantorPlafondConsumptionPercentage_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFirstEquipmentRegistrationTypeId">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetFirstEquipmentRegistrationTypeId" message="tns:AcpParameterization_GetFirstEquipmentRegistrationTypeId_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetFirstEquipmentRegistrationTypeIdResponse" message="tns:AcpParameterization_GetFirstEquipmentRegistrationTypeId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetFirstEquipmentRegistrationTypeId_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewEquipmentRegistrationTypeId">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetNewEquipmentRegistrationTypeId" message="tns:AcpParameterization_GetNewEquipmentRegistrationTypeId_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetNewEquipmentRegistrationTypeIdResponse" message="tns:AcpParameterization_GetNewEquipmentRegistrationTypeId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetNewEquipmentRegistrationTypeId_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipmentBrandsToValidateLicencePlate">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetEquipmentBrandsToValidateLicencePlate" message="tns:AcpParameterization_GetEquipmentBrandsToValidateLicencePlate_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetEquipmentBrandsToValidateLicencePlateResponse" message="tns:AcpParameterization_GetEquipmentBrandsToValidateLicencePlate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetEquipmentBrandsToValidateLicencePlate_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDefaultsTables">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetDefaultsTables" message="tns:AcpParameterization_GetDefaultsTables_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetDefaultsTablesResponse" message="tns:AcpParameterization_GetDefaultsTables_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetDefaultsTables_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyForexRateParam">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetCompanyForexRateParam" message="tns:AcpParameterization_GetCompanyForexRateParam_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetCompanyForexRateParamResponse" message="tns:AcpParameterization_GetCompanyForexRateParam_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetCompanyForexRateParam_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChargeNowEqualToInvoiced">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetChargeNowEqualToInvoiced" message="tns:AcpParameterization_GetChargeNowEqualToInvoiced_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetChargeNowEqualToInvoicedResponse" message="tns:AcpParameterization_GetChargeNowEqualToInvoiced_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetChargeNowEqualToInvoiced_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyRPDocumentTypeId">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetCompanyRPDocumentTypeId" message="tns:AcpParameterization_GetCompanyRPDocumentTypeId_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetCompanyRPDocumentTypeIdResponse" message="tns:AcpParameterization_GetCompanyRPDocumentTypeId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetCompanyRPDocumentTypeId_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyRPFctJustifyPayDocumentTypeId">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetCompanyRPFctJustifyPayDocumentTypeId" message="tns:AcpParameterization_GetCompanyRPFctJustifyPayDocumentTypeId_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetCompanyRPFctJustifyPayDocumentTypeIdResponse" message="tns:AcpParameterization_GetCompanyRPFctJustifyPayDocumentTypeId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetCompanyRPFctJustifyPayDocumentTypeId_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDateDefinition">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetDateDefinition" message="tns:AcpParameterization_GetDateDefinition_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetDateDefinitionResponse" message="tns:AcpParameterization_GetDateDefinition_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetDateDefinition_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardsDefaultTerm">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetCreditCardsDefaultTerm" message="tns:AcpParameterization_GetCreditCardsDefaultTerm_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetCreditCardsDefaultTermResponse" message="tns:AcpParameterization_GetCreditCardsDefaultTerm_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetCreditCardsDefaultTerm_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCheckAccountingDateEditabilityOnInvoice">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetCheckAccountingDateEditabilityOnInvoice" message="tns:AcpParameterization_GetCheckAccountingDateEditabilityOnInvoice_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetCheckAccountingDateEditabilityOnInvoiceResponse" message="tns:AcpParameterization_GetCheckAccountingDateEditabilityOnInvoice_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetCheckAccountingDateEditabilityOnInvoice_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PermissionsHasTasksForOpers">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/PermissionsHasTasksForOpers" message="tns:AcpParameterization_PermissionsHasTasksForOpers_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/PermissionsHasTasksForOpersResponse" message="tns:AcpParameterization_PermissionsHasTasksForOpers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_PermissionsHasTasksForOpers_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PermissionsHasTasksForGroups">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/PermissionsHasTasksForGroups" message="tns:AcpParameterization_PermissionsHasTasksForGroups_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/PermissionsHasTasksForGroupsResponse" message="tns:AcpParameterization_PermissionsHasTasksForGroups_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_PermissionsHasTasksForGroups_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PermissionsHasTasksForSubjects">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/PermissionsHasTasksForSubjects" message="tns:AcpParameterization_PermissionsHasTasksForSubjects_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/PermissionsHasTasksForSubjectsResponse" message="tns:AcpParameterization_PermissionsHasTasksForSubjects_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_PermissionsHasTasksForSubjects_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancialFlowTypeId">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetFinancialFlowTypeId" message="tns:AcpParameterization_GetFinancialFlowTypeId_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetFinancialFlowTypeIdResponse" message="tns:AcpParameterization_GetFinancialFlowTypeId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetFinancialFlowTypeId_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AllowEntityPlafondAvailableInfoByCredOper">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/AllowEntityPlafondAvailableInfoByCredOper" message="tns:AcpParameterization_AllowEntityPlafondAvailableInfoByCredOper_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/AllowEntityPlafondAvailableInfoByCredOperResponse" message="tns:AcpParameterization_AllowEntityPlafondAvailableInfoByCredOper_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_AllowEntityPlafondAvailableInfoByCredOper_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserFavoriteGroups">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetUserFavoriteGroups" message="tns:AcpParameterization_GetUserFavoriteGroups_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetUserFavoriteGroupsResponse" message="tns:AcpParameterization_GetUserFavoriteGroups_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetUserFavoriteGroups_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFavoriteGroupItems">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetFavoriteGroupItems" message="tns:AcpParameterization_GetFavoriteGroupItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetFavoriteGroupItemsResponse" message="tns:AcpParameterization_GetFavoriteGroupItems_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetFavoriteGroupItems_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIndicatorAttributes">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetIndicatorAttributes" message="tns:AcpParameterization_GetIndicatorAttributes_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetIndicatorAttributesResponse" message="tns:AcpParameterization_GetIndicatorAttributes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetIndicatorAttributes_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIndicatorStringValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetIndicatorStringValue" message="tns:AcpParameterization_GetIndicatorStringValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetIndicatorStringValueResponse" message="tns:AcpParameterization_GetIndicatorStringValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetIndicatorStringValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CorrectIndicatorsDecodedValue">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/CorrectIndicatorsDecodedValue" message="tns:AcpParameterization_CorrectIndicatorsDecodedValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/CorrectIndicatorsDecodedValueResponse" message="tns:AcpParameterization_CorrectIndicatorsDecodedValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_CorrectIndicatorsDecodedValue_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/Ping" message="tns:AcpParameterization_Ping_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/PingResponse" message="tns:AcpParameterization_Ping_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_Ping_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAcpParameterizationClassContext">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetAcpParameterizationClassContext" message="tns:AcpParameterization_GetAcpParameterizationClassContext_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetAcpParameterizationClassContextResponse" message="tns:AcpParameterization_GetAcpParameterizationClassContext_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetAcpParameterizationClassContext_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchAcpParameterization">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/SearchAcpParameterization" message="tns:AcpParameterization_SearchAcpParameterization_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/SearchAcpParameterizationResponse" message="tns:AcpParameterization_SearchAcpParameterization_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_SearchAcpParameterization_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyParamByKey">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetCompanyParamByKey" message="tns:AcpParameterization_GetCompanyParamByKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetCompanyParamByKeyResponse" message="tns:AcpParameterization_GetCompanyParamByKey_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetCompanyParamByKey_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAplUserCommonFavoriteByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetAplUserCommonFavoriteByKeys" message="tns:AcpParameterization_GetAplUserCommonFavoriteByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetAplUserCommonFavoriteByKeysResponse" message="tns:AcpParameterization_GetAplUserCommonFavoriteByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetAplUserCommonFavoriteByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyParamByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetCompanyParamByKeys" message="tns:AcpParameterization_GetCompanyParamByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetCompanyParamByKeysResponse" message="tns:AcpParameterization_GetCompanyParamByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetCompanyParamByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanySectionByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetCompanySectionByKeys" message="tns:AcpParameterization_GetCompanySectionByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetCompanySectionByKeysResponse" message="tns:AcpParameterization_GetCompanySectionByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetCompanySectionByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFavoriteGroupByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetFavoriteGroupByKeys" message="tns:AcpParameterization_GetFavoriteGroupByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetFavoriteGroupByKeysResponse" message="tns:AcpParameterization_GetFavoriteGroupByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetFavoriteGroupByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFavoriteItemByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetFavoriteItemByKeys" message="tns:AcpParameterization_GetFavoriteItemByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetFavoriteItemByKeysResponse" message="tns:AcpParameterization_GetFavoriteItemByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetFavoriteItemByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGlobalParamByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetGlobalParamByKeys" message="tns:AcpParameterization_GetGlobalParamByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetGlobalParamByKeysResponse" message="tns:AcpParameterization_GetGlobalParamByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetGlobalParamByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIndicatorByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetIndicatorByKeys" message="tns:AcpParameterization_GetIndicatorByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetIndicatorByKeysResponse" message="tns:AcpParameterization_GetIndicatorByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetIndicatorByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIndicatorContextByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetIndicatorContextByKeys" message="tns:AcpParameterization_GetIndicatorContextByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetIndicatorContextByKeysResponse" message="tns:AcpParameterization_GetIndicatorContextByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetIndicatorContextByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetParamSchemaByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetParamSchemaByKeys" message="tns:AcpParameterization_GetParamSchemaByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetParamSchemaByKeysResponse" message="tns:AcpParameterization_GetParamSchemaByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetParamSchemaByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetScreenCustomizationByKeys">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetScreenCustomizationByKeys" message="tns:AcpParameterization_GetScreenCustomizationByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetScreenCustomizationByKeysResponse" message="tns:AcpParameterization_GetScreenCustomizationByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetScreenCustomizationByKeys_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAcpParameterization">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/SaveAcpParameterization" message="tns:AcpParameterization_SaveAcpParameterization_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/SaveAcpParameterizationResponse" message="tns:AcpParameterization_SaveAcpParameterization_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_SaveAcpParameterization_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAcpParameterizationV2">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/SaveAcpParameterizationV2" message="tns:AcpParameterization_SaveAcpParameterizationV2_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/SaveAcpParameterizationV2Response" message="tns:AcpParameterization_SaveAcpParameterizationV2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_SaveAcpParameterizationV2_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAcpParameterizationClassTableId">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetAcpParameterizationClassTableId" message="tns:AcpParameterization_GetAcpParameterizationClassTableId_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetAcpParameterizationClassTableIdResponse" message="tns:AcpParameterization_GetAcpParameterizationClassTableId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetAcpParameterizationClassTableId_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAcpParameterizationTableId">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/GetAcpParameterizationTableId" message="tns:AcpParameterization_GetAcpParameterizationTableId_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/GetAcpParameterizationTableIdResponse" message="tns:AcpParameterization_GetAcpParameterizationTableId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_GetAcpParameterizationTableId_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchAcpParameterizationConfig">
+      <wsdl:input wsaw:Action="http://accipiens.com/AcpParameterization/SearchAcpParameterizationConfig" message="tns:AcpParameterization_SearchAcpParameterizationConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/AcpParameterization/SearchAcpParameterizationConfigResponse" message="tns:AcpParameterization_SearchAcpParameterizationConfig_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:AcpParameterization_SearchAcpParameterizationConfig_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

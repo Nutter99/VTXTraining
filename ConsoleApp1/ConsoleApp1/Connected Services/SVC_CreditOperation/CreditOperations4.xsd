@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Olissipo.AcpDocuments.AuxiliaryClasses" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Olissipo.AcpDocuments.AuxiliaryClasses" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="IssueFileNameFinalKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Suffix" />
+      <xs:enumeration value="Base_RenameOld" />
+      <xs:enumeration value="Base_Smash" />
+      <xs:enumeration value="Base_AddSuffix" />
+      <xs:enumeration value="Base_Error" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="IssueFileNameFinalKind" nillable="true" type="tns:IssueFileNameFinalKind" />
+</xs:schema>

@@ -1,0 +1,1160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://accipiens.com" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CreditOperationsBasicLists" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="CustomBinding_CreditOperationsBasicLists_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <http:NtlmAuthentication xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://accipiens.com" location="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="CustomBinding_CreditOperationsBasicLists" type="i0:CreditOperationsBasicLists">
+    <wsp:PolicyReference URI="#CustomBinding_CreditOperationsBasicLists_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetForeignDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetForeignDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetForeignDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMultiForeignDataListKeyCount">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetMultiForeignDataListKeyCount" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetMultiForeignDataListKeyCount_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperAutUserStateList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetCredOperAutUserStateList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetCredOperAutUserStateList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperAutUserStateDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetCredOperAutUserStateDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetCredOperAutUserStateDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypeData">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetCredOperTypeData" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetCredOperTypeData_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypeDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetCredOperTypeDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetCredOperTypeDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypeDataListOnlyInterest">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetCredOperTypeDataListOnlyInterest" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetCredOperTypeDataListOnlyInterest_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypeByNatureDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetCredOperTypeByNatureDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetCredOperTypeByNatureDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypeByNaturesDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetCredOperTypeByNaturesDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetCredOperTypeByNaturesDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypeIdsDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetCredOperTypeIdsDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetCredOperTypeIdsDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypeIdsByStepDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetCredOperTypeIdsByStepDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetCredOperTypeIdsByStepDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypeIdsByInternalStateDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetCredOperTypeIdsByInternalStateDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetCredOperTypeIdsByInternalStateDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCessionCredOperTypeByOriginAndSuperTypeDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetCessionCredOperTypeByOriginAndSuperTypeDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetCessionCredOperTypeByOriginAndSuperTypeDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypeIdsByStepBasicList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetCredOperTypeIdsByStepBasicList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetCredOperTypeIdsByStepBasicList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperRelationTypesWithSuperTypeReplacementBasicList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetCredOperRelationTypesWithSuperTypeReplacementBasicList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetCredOperRelationTypesWithSuperTypeReplacementBasicList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypeByEntityDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetCredOperTypeByEntityDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetCredOperTypeByEntityDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperTypeExpenseTypeDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetCredOperTypeExpenseTypeDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetCredOperTypeExpenseTypeDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpenseTypeForSubCredOperType">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetExpenseTypeForSubCredOperType" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetExpenseTypeForSubCredOperType_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpenseTypeForCredOperAndSubCredOperType">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetExpenseTypeForCredOperAndSubCredOperType" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetExpenseTypeForCredOperAndSubCredOperType_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetLoanInterestExpenseTypeDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetLoanInterestExpenseTypeDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetLoanInterestExpenseTypeDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductEquipmentTypeDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetProductEquipmentTypeDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetProductEquipmentTypeDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipmentBrandDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetEquipmentBrandDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetEquipmentBrandDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipmentModelDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetEquipmentModelDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetEquipmentModelDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipmentVersionDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetEquipmentVersionDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetEquipmentVersionDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipmentCategoryDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetEquipmentCategoryDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetEquipmentCategoryDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipmentTypeByCategoriesDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetEquipmentTypeByCategoriesDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetEquipmentTypeByCategoriesDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipmentCategoryByEquipmentTypeDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetEquipmentCategoryByEquipmentTypeDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetEquipmentCategoryByEquipmentTypeDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipmentRegistrationList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetEquipmentRegistrationList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetEquipmentRegistrationList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetTaxTypeDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetAssetTaxTypeDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetAssetTaxTypeDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetTaxTypeByVendorOrSupplierInvoiceClassDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetAssetTaxTypeByVendorOrSupplierInvoiceClassDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetAssetTaxTypeByVendorOrSupplierInvoiceClassDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetTaxTypeWithValueByDateDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetAssetTaxTypeWithValueByDateDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetAssetTaxTypeWithValueByDateDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetTaxTypeDList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetAssetTaxTypeDList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetAssetTaxTypeDList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpenseTypeForAssetTaxType">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetExpenseTypeForAssetTaxType" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetExpenseTypeForAssetTaxType_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperAssetStateToRescissionLitigation">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetCredOperAssetStateToRescissionLitigation" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetCredOperAssetStateToRescissionLitigation_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperAssetStateToRescissionSale">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetCredOperAssetStateToRescissionSale" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetCredOperAssetStateToRescissionSale_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperAssetStateToRescissionLost">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetCredOperAssetStateToRescissionLost" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetCredOperAssetStateToRescissionLost_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperAssetList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetCredOperAssetList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetCredOperAssetList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperAssetListByCOAssetId">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetCredOperAssetListByCOAssetId" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetCredOperAssetListByCOAssetId_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperAssetMeasureTypeRestrictionDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetCredOperAssetMeasureTypeRestrictionDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetCredOperAssetMeasureTypeRestrictionDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetFinTypeDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetAssetFinTypeDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetAssetFinTypeDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetPaymentCalendarCurrenciesDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetAssetPaymentCalendarCurrenciesDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetAssetPaymentCalendarCurrenciesDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetBuildingMatrixFractionListByBuildingMatrix">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetBuildingMatrixFractionListByBuildingMatrix" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetBuildingMatrixFractionListByBuildingMatrix_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetBuildingInfoFractionList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetBuildingInfoFractionList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetBuildingInfoFractionList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetBuildingInfoFractionWithPartialList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetBuildingInfoFractionWithPartialList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetBuildingInfoFractionWithPartialList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetBuildingInfoMatricesCodeAbbreviation">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetBuildingInfoMatricesCodeAbbreviation" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetBuildingInfoMatricesCodeAbbreviation_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetBuildingInfoMatricesList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetBuildingInfoMatricesList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetBuildingInfoMatricesList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetBuildingMatricesList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetBuildingMatricesList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetBuildingMatricesList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetBuildingMatricesListByBuildingInfoFraction">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetBuildingMatricesListByBuildingInfoFraction" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetBuildingMatricesListByBuildingInfoFraction_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperGuarantCrossDefaultList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetCredOperGuarantCrossDefaultList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetCredOperGuarantCrossDefaultList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDisposableAssetDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetDisposableAssetDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetDisposableAssetDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAplBusinessIdsDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetAplBusinessIdsDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetAplBusinessIdsDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAplBusinessIdsForInvoiceUniverseDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetAplBusinessIdsForInvoiceUniverseDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetAplBusinessIdsForInvoiceUniverseDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSimulationTypeDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetSimulationTypeDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetSimulationTypeDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetImporterForCredOper">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetImporterForCredOper" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetImporterForCredOper_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntitysToSubCredOperActiveAtDate">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetEntitysToSubCredOperActiveAtDate" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetEntitysToSubCredOperActiveAtDate_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubCredOperTypeByBusiness">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetSubCredOperTypeByBusiness" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetSubCredOperTypeByBusiness_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubCredOperInitialCodeDynamicList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetSubCredOperInitialCodeDynamicList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetSubCredOperInitialCodeDynamicList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveSubCredOperItemOrderByBeginDate">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetActiveSubCredOperItemOrderByBeginDate" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetActiveSubCredOperItemOrderByBeginDate_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockPaymentSubCredOperEndReasonsList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetStockPaymentSubCredOperEndReasonsList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetStockPaymentSubCredOperEndReasonsList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetIntervIdsWithPaymentModeForCredOperBasicList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetIntervIdsWithPaymentModeForCredOperBasicList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetIntervIdsWithPaymentModeForCredOperBasicList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperIntervTypeBySuperTypeDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetCredOperIntervTypeBySuperTypeDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetCredOperIntervTypeBySuperTypeDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCashFlowEntityList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetCashFlowEntityList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetCashFlowEntityList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperClaimEntityDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetCredOperClaimEntityDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetCredOperClaimEntityDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMarketCampaignDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetMarketCampaignDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetMarketCampaignDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancialProductBasicList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetFinancialProductBasicList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetFinancialProductBasicList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancialProductWithRestrictionsBasicList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetFinancialProductWithRestrictionsBasicList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetFinancialProductWithRestrictionsBasicList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperChannelDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetCredOperChannelDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetCredOperChannelDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinSymbolRelatedDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetFinSymbolRelatedDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetFinSymbolRelatedDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDefaultSymbolIdDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetDefaultSymbolIdDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetDefaultSymbolIdDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCredOperClauseDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetCredOperClauseDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetCredOperClauseDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlertGroupTypeBasicList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetAlertGroupTypeBasicList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetAlertGroupTypeBasicList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlertTypeDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetAlertTypeDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetAlertTypeDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlertOutputsDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetAlertOutputsDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetAlertOutputsDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetContractActiveAutUserStateDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetContractActiveAutUserStateDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetContractActiveAutUserStateDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutUserStateByStepAndBusinessDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetAutUserStateByStepAndBusinessDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetAutUserStateByStepAndBusinessDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetInternalOperationNone">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetAssetInternalOperationNone" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetAssetInternalOperationNone_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubCredOperItemWithEntityBasicList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetSubCredOperItemWithEntityBasicList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetSubCredOperItemWithEntityBasicList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCashFlowInfo">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetCashFlowInfo" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetCashFlowInfo_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRateIdBasicList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetRateIdBasicList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetRateIdBasicList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsuranceGrpPriceVersionBasicList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetInsuranceGrpPriceVersionBasicList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetInsuranceGrpPriceVersionBasicList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsuranceRiskTypeAllowed">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetInsuranceRiskTypeAllowed" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetInsuranceRiskTypeAllowed_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipmentUsageActionTypeByContextBasicList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetEquipmentUsageActionTypeByContextBasicList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetEquipmentUsageActionTypeByContextBasicList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipmentUsageTypeByContextBasicList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetEquipmentUsageTypeByContextBasicList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetEquipmentUsageTypeByContextBasicList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMLATemplateCredOperBasicList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetMLATemplateCredOperBasicList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetMLATemplateCredOperBasicList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepreciationBindingModeDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetDepreciationBindingModeDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetDepreciationBindingModeDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipmentRegistrationAuthoringDataList">
+      <soap12:operation soapAction="http://accipiens.com/CreditOperationsBasicLists/GetEquipmentRegistrationAuthoringDataList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:CreditOperationsBasicLists_GetEquipmentRegistrationAuthoringDataList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CreditOperationsBasicLists">
+    <wsdl:port name="CustomBinding_CreditOperationsBasicLists" binding="tns:CustomBinding_CreditOperationsBasicLists">
+      <soap12:address location="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>eb@vantyx.lan</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

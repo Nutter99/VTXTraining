@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://accipiens.com/AcpParameterization" elementFormDefault="qualified" targetNamespace="http://accipiens.com/AcpParameterization" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd3" namespace="http://accipiens.com/Common" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/AcpParameterization.svc?xsd=xsd16" namespace="http://accipiens.com/VirtualData" />
+  <xs:complexType name="ArrayOfFavoriteGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FavoriteGroup" nillable="true" type="tns:FavoriteGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFavoriteGroup" nillable="true" type="tns:ArrayOfFavoriteGroup" />
+  <xs:complexType name="FavoriteGroup">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://accipiens.com/Common" base="q1:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AplUserId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="CommonUsers" nillable="true" type="tns:ArrayOfAplUserCommonFavorite" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Favorites" nillable="true" type="tns:ArrayOfFavoriteItem" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:FavoriteGroupKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:FavoriteGroupDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:FavoriteGroupField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfFavoriteGroupField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FavoriteGroup" nillable="true" type="tns:FavoriteGroup" />
+  <xs:complexType name="ArrayOfAplUserCommonFavorite">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplUserCommonFavorite" nillable="true" type="tns:AplUserCommonFavorite" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplUserCommonFavorite" nillable="true" type="tns:ArrayOfAplUserCommonFavorite" />
+  <xs:complexType name="AplUserCommonFavorite">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://accipiens.com/Common" base="q2:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplUserId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="FavoriteGroupId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AplUserCommonFavoriteKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AplUserCommonFavoriteDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AplUserCommonFavoriteField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAplUserCommonFavoriteField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplUserCommonFavorite" nillable="true" type="tns:AplUserCommonFavorite" />
+  <xs:complexType name="AplUserCommonFavoriteKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://accipiens.com/Common" base="q3:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplUserCommonFavoriteKey" nillable="true" type="tns:AplUserCommonFavoriteKey" />
+  <xs:simpleType name="AplUserCommonFavoriteDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplUserCommonFavoriteDetail" nillable="true" type="tns:AplUserCommonFavoriteDetail" />
+  <xs:simpleType name="AplUserCommonFavoriteField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AplUserId" />
+      <xs:enumeration value="FavoriteGroupId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplUserCommonFavoriteField" nillable="true" type="tns:AplUserCommonFavoriteField" />
+  <xs:complexType name="ArrayOfAplUserCommonFavoriteField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplUserCommonFavoriteField" type="tns:AplUserCommonFavoriteField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplUserCommonFavoriteField" nillable="true" type="tns:ArrayOfAplUserCommonFavoriteField" />
+  <xs:complexType name="ArrayOfFavoriteItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FavoriteItem" nillable="true" type="tns:FavoriteItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFavoriteItem" nillable="true" type="tns:ArrayOfFavoriteItem" />
+  <xs:complexType name="FavoriteItem">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://accipiens.com/Common" base="q4:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FavoriteGroupId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="FavoriteItemId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ItemOrder" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ItemTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Items" nillable="true" type="tns:ArrayOfFavoriteItem" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:FavoriteItemKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:FavoriteItemDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:FavoriteItemField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfFavoriteItemField" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FavoriteItem" nillable="true" type="tns:FavoriteItem" />
+  <xs:complexType name="FavoriteItemKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://accipiens.com/Common" base="q5:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FavoriteItemKey" nillable="true" type="tns:FavoriteItemKey" />
+  <xs:simpleType name="FavoriteItemDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Item" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FavoriteItemDetail" nillable="true" type="tns:FavoriteItemDetail" />
+  <xs:simpleType name="FavoriteItemField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="FavoriteGroupId" />
+      <xs:enumeration value="ItemOrder" />
+      <xs:enumeration value="Name" />
+      <xs:enumeration value="ItemTypeId" />
+      <xs:enumeration value="FavoriteItemId" />
+      <xs:enumeration value="Url" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FavoriteItemField" nillable="true" type="tns:FavoriteItemField" />
+  <xs:complexType name="ArrayOfFavoriteItemField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FavoriteItemField" type="tns:FavoriteItemField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFavoriteItemField" nillable="true" type="tns:ArrayOfFavoriteItemField" />
+  <xs:complexType name="FavoriteGroupKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://accipiens.com/Common" base="q6:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FavoriteGroupKey" nillable="true" type="tns:FavoriteGroupKey" />
+  <xs:simpleType name="FavoriteGroupDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Favorite" />
+      <xs:enumeration value="CommonUser" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FavoriteGroupDetail" nillable="true" type="tns:FavoriteGroupDetail" />
+  <xs:simpleType name="FavoriteGroupField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="Abrev" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="AplUserId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FavoriteGroupField" nillable="true" type="tns:FavoriteGroupField" />
+  <xs:complexType name="ArrayOfFavoriteGroupField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FavoriteGroupField" type="tns:FavoriteGroupField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFavoriteGroupField" nillable="true" type="tns:ArrayOfFavoriteGroupField" />
+  <xs:complexType name="IndicatorInfoAttribute">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AllowMultipleValues" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ByAplCompany" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CriteriaDataListId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CriteriaEnumName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CriteriaTableName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EnumName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q7="http://accipiens.com/Common" minOccurs="0" name="IndicatorBaseType" type="q7:BaseType" />
+      <xs:element minOccurs="0" name="IndicatorValueDataListId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsMandatory" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TableName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IndicatorInfoAttribute" nillable="true" type="tns:IndicatorInfoAttribute" />
+  <xs:simpleType name="AcpParameterizationSearchClass">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CompanyParam">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="FavoriteGroup">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="FavoriteItem">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GlobalParam">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Indicator">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="IndicatorContext">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ScreenCustomization">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AcpParameterizationSearchClass" nillable="true" type="tns:AcpParameterizationSearchClass" />
+  <xs:complexType name="ScreenCustomizationKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://accipiens.com/Common" base="q8:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ScreenCustomizationKey" nillable="true" type="tns:ScreenCustomizationKey" />
+  <xs:complexType name="CompanyParamKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://accipiens.com/Common" base="q9:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplCompanyId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CompanySectionId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CompanyParamKey" nillable="true" type="tns:CompanyParamKey" />
+  <xs:complexType name="CompanySectionKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://accipiens.com/Common" base="q10:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CompanySectionKey" nillable="true" type="tns:CompanySectionKey" />
+  <xs:complexType name="GlobalParamKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://accipiens.com/Common" base="q11:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GlobalParamKey" nillable="true" type="tns:GlobalParamKey" />
+  <xs:complexType name="IndicatorKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://accipiens.com/Common" base="q12:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplCompanyId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AplPackageId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Criteria" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="IndicatorContext" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InternalCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IndicatorKey" nillable="true" type="tns:IndicatorKey" />
+  <xs:complexType name="IndicatorContextKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://accipiens.com/Common" base="q13:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IndicatorContextKey" nillable="true" type="tns:IndicatorContextKey" />
+  <xs:complexType name="ParamSchemaKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://accipiens.com/Common" base="q14:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ParamSchemaKey" nillable="true" type="tns:ParamSchemaKey" />
+  <xs:complexType name="CompanyParam">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://accipiens.com/Common" base="q15:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplCompanyId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CompanySectionId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:CompanyParamKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:CompanyParamDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:CompanyParamField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfCompanyParamField" />
+          <xs:element minOccurs="0" name="ParamVersion" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Parameterization" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Section" nillable="true" type="tns:CompanySection" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CompanyParam" nillable="true" type="tns:CompanyParam" />
+  <xs:simpleType name="CompanyParamDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Section" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CompanyParamDetail" nillable="true" type="tns:CompanyParamDetail" />
+  <xs:simpleType name="CompanyParamField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AplCompanyId" />
+      <xs:enumeration value="CompanySectionId" />
+      <xs:enumeration value="Parameterization" />
+      <xs:enumeration value="ParamVersion" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CompanyParamField" nillable="true" type="tns:CompanyParamField" />
+  <xs:complexType name="ArrayOfCompanyParamField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CompanyParamField" type="tns:CompanyParamField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCompanyParamField" nillable="true" type="tns:ArrayOfCompanyParamField" />
+  <xs:complexType name="CompanySection">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://accipiens.com/Common" base="q16:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:CompanySectionKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:CompanySectionDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:CompanySectionField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfCompanySectionField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CompanySection" nillable="true" type="tns:CompanySection" />
+  <xs:simpleType name="CompanySectionDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CompanySectionDetail" nillable="true" type="tns:CompanySectionDetail" />
+  <xs:simpleType name="CompanySectionField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CompanySectionField" nillable="true" type="tns:CompanySectionField" />
+  <xs:complexType name="ArrayOfCompanySectionField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CompanySectionField" type="tns:CompanySectionField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCompanySectionField" nillable="true" type="tns:ArrayOfCompanySectionField" />
+  <xs:complexType name="ArrayOfCompanyParam">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CompanyParam" nillable="true" type="tns:CompanyParam" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCompanyParam" nillable="true" type="tns:ArrayOfCompanyParam" />
+  <xs:complexType name="ArrayOfCompanySection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CompanySection" nillable="true" type="tns:CompanySection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCompanySection" nillable="true" type="tns:ArrayOfCompanySection" />
+  <xs:complexType name="ArrayOfGlobalParam">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GlobalParam" nillable="true" type="tns:GlobalParam" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGlobalParam" nillable="true" type="tns:ArrayOfGlobalParam" />
+  <xs:complexType name="GlobalParam">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://accipiens.com/Common" base="q17:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:GlobalParamKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:GlobalParamDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:GlobalParamField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfGlobalParamField" />
+          <xs:element minOccurs="0" name="ParamVersion" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Parameterization" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GlobalParam" nillable="true" type="tns:GlobalParam" />
+  <xs:simpleType name="GlobalParamDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="GlobalParamDetail" nillable="true" type="tns:GlobalParamDetail" />
+  <xs:simpleType name="GlobalParamField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="Parameterization" />
+      <xs:enumeration value="ParamVersion" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="GlobalParamField" nillable="true" type="tns:GlobalParamField" />
+  <xs:complexType name="ArrayOfGlobalParamField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GlobalParamField" type="tns:GlobalParamField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGlobalParamField" nillable="true" type="tns:ArrayOfGlobalParamField" />
+  <xs:complexType name="ArrayOfIndicator">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Indicator" nillable="true" type="tns:Indicator" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIndicator" nillable="true" type="tns:ArrayOfIndicator" />
+  <xs:complexType name="Indicator">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://accipiens.com/Common" base="q18:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AllowMultipleValues" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AplCompanyId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AplPackageId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BaseTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Criteria" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CriteriaDecodedValue" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CriteriaEnumName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CriteriaTableName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DecodedValue" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EnumName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FetchLevel" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="IndicatorContext" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IndicatorValue" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InternalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InvalidDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IsExternalIndicator" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:IndicatorKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:IndicatorDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:IndicatorField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfIndicatorField" />
+          <xs:element xmlns:q19="http://accipiens.com/VirtualData" minOccurs="0" name="Package" nillable="true" type="q19:AplPackage" />
+          <xs:element minOccurs="0" name="TableName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Indicator" nillable="true" type="tns:Indicator" />
+  <xs:simpleType name="IndicatorDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Package" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="IndicatorDetail" nillable="true" type="tns:IndicatorDetail" />
+  <xs:simpleType name="IndicatorField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AplCompanyId" />
+      <xs:enumeration value="AplPackageId" />
+      <xs:enumeration value="IndicatorContext" />
+      <xs:enumeration value="InternalCode" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="Criteria" />
+      <xs:enumeration value="BaseTypeId" />
+      <xs:enumeration value="IndicatorValue" />
+      <xs:enumeration value="AllowMultipleValues" />
+      <xs:enumeration value="TableName" />
+      <xs:enumeration value="EnumName" />
+      <xs:enumeration value="DecodedValue" />
+      <xs:enumeration value="CriteriaTableName" />
+      <xs:enumeration value="CriteriaEnumName" />
+      <xs:enumeration value="CriteriaDecodedValue" />
+      <xs:enumeration value="FetchLevel" />
+      <xs:enumeration value="InvalidDate" />
+      <xs:enumeration value="IsExternalIndicator" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="IndicatorField" nillable="true" type="tns:IndicatorField" />
+  <xs:complexType name="ArrayOfIndicatorField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IndicatorField" type="tns:IndicatorField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIndicatorField" nillable="true" type="tns:ArrayOfIndicatorField" />
+  <xs:complexType name="ArrayOfIndicatorContext">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IndicatorContext" nillable="true" type="tns:IndicatorContext" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIndicatorContext" nillable="true" type="tns:ArrayOfIndicatorContext" />
+  <xs:complexType name="IndicatorContext">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q20="http://accipiens.com/Common" base="q20:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:IndicatorContextKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:IndicatorContextDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:IndicatorContextField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfIndicatorContextField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IndicatorContext" nillable="true" type="tns:IndicatorContext" />
+  <xs:simpleType name="IndicatorContextDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="IndicatorContextDetail" nillable="true" type="tns:IndicatorContextDetail" />
+  <xs:simpleType name="IndicatorContextField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="Abrev" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="IndicatorContextField" nillable="true" type="tns:IndicatorContextField" />
+  <xs:complexType name="ArrayOfIndicatorContextField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IndicatorContextField" type="tns:IndicatorContextField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIndicatorContextField" nillable="true" type="tns:ArrayOfIndicatorContextField" />
+  <xs:complexType name="ArrayOfParamSchema">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ParamSchema" nillable="true" type="tns:ParamSchema" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfParamSchema" nillable="true" type="tns:ArrayOfParamSchema" />
+  <xs:complexType name="ParamSchema">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q21="http://accipiens.com/Common" base="q21:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:ParamSchemaKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:ParamSchemaDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:ParamSchemaField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfParamSchemaField" />
+          <xs:element minOccurs="0" name="SchemaName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ParamSchema" nillable="true" type="tns:ParamSchema" />
+  <xs:simpleType name="ParamSchemaDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ParamSchemaDetail" nillable="true" type="tns:ParamSchemaDetail" />
+  <xs:simpleType name="ParamSchemaField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="SchemaName" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ParamSchemaField" nillable="true" type="tns:ParamSchemaField" />
+  <xs:complexType name="ArrayOfParamSchemaField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ParamSchemaField" type="tns:ParamSchemaField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfParamSchemaField" nillable="true" type="tns:ArrayOfParamSchemaField" />
+  <xs:complexType name="ArrayOfScreenCustomization">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ScreenCustomization" nillable="true" type="tns:ScreenCustomization" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfScreenCustomization" nillable="true" type="tns:ArrayOfScreenCustomization" />
+  <xs:complexType name="ScreenCustomization">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q22="http://accipiens.com/Common" base="q22:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CustomizationText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:ScreenCustomizationKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:ScreenCustomizationDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:ScreenCustomizationField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfScreenCustomizationField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ScreenCustomization" nillable="true" type="tns:ScreenCustomization" />
+  <xs:simpleType name="ScreenCustomizationDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ScreenCustomizationDetail" nillable="true" type="tns:ScreenCustomizationDetail" />
+  <xs:simpleType name="ScreenCustomizationField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="CustomizationText" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ScreenCustomizationField" nillable="true" type="tns:ScreenCustomizationField" />
+  <xs:complexType name="ArrayOfScreenCustomizationField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ScreenCustomizationField" type="tns:ScreenCustomizationField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfScreenCustomizationField" nillable="true" type="tns:ArrayOfScreenCustomizationField" />
+  <xs:simpleType name="AcpParameterizationSaveClass">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="FavoriteGroup">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Indicator">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="IndicatorContext">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ScreenCustomization">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AcpParameterizationSaveClass" nillable="true" type="tns:AcpParameterizationSaveClass" />
+  <xs:simpleType name="AcpParameterizationClass">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AplUserCommonFavorite" />
+      <xs:enumeration value="CompanyParam" />
+      <xs:enumeration value="CompanySection" />
+      <xs:enumeration value="FavoriteGroup" />
+      <xs:enumeration value="FavoriteItem" />
+      <xs:enumeration value="GlobalParam" />
+      <xs:enumeration value="Indicator" />
+      <xs:enumeration value="IndicatorContext" />
+      <xs:enumeration value="ParamSchema" />
+      <xs:enumeration value="ScreenCustomization" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AcpParameterizationClass" nillable="true" type="tns:AcpParameterizationClass" />
+</xs:schema>

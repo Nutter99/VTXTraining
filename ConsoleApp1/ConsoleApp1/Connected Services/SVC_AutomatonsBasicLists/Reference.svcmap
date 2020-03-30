@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b2cc71d9-7d39-49e8-b050-4b3bff82620d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://accipiens.vtxrm.pt/AccipienswebservicesTraining/FrameworkWebServices/BasicLists/AutomatonsBasicLists.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AutomatonsBasicLists.xsd" MetadataType="Schema" ID="8e73139b-58fd-4f71-acc0-520cbe9bdef9" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/BasicLists/AutomatonsBasicLists.svc?xsd=xsd1" />
+    <MetadataFile FileName="AutomatonsBasicLists1.xsd" MetadataType="Schema" ID="9944949c-bd3a-464b-a300-75bf9ed9f3a6" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/BasicLists/AutomatonsBasicLists.svc?xsd=xsd6" />
+    <MetadataFile FileName="AutomatonsBasicLists.wsdl" MetadataType="Wsdl" ID="6eb02c4c-bce4-4a64-8a02-5e271ba429bd" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/BasicLists/AutomatonsBasicLists.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="AutomatonsBasicLists2.xsd" MetadataType="Schema" ID="1eb1fa14-b254-403d-969d-9d46200823ce" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/BasicLists/AutomatonsBasicLists.svc?xsd=xsd4" />
+    <MetadataFile FileName="AutomatonsBasicLists3.xsd" MetadataType="Schema" ID="808e896d-5c8e-4bc0-b905-ced0f14908ec" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/BasicLists/AutomatonsBasicLists.svc?xsd=xsd2" />
+    <MetadataFile FileName="AutomatonsBasicLists4.xsd" MetadataType="Schema" ID="bde948e7-1836-4fa2-8261-521cce53378b" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/BasicLists/AutomatonsBasicLists.svc?xsd=xsd5" />
+    <MetadataFile FileName="AutomatonsBasicLists5.xsd" MetadataType="Schema" ID="0bb1a5f8-0025-4892-9af7-61930e41c176" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/BasicLists/AutomatonsBasicLists.svc?xsd=xsd0" />
+    <MetadataFile FileName="AutomatonsBasicLists1.wsdl" MetadataType="Wsdl" ID="72d70222-327c-4e19-9496-9a462577afb6" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/AccipienswebservicesTraining/FrameworkWebServices/BasicLists/AutomatonsBasicLists.svc?wsdl" />
+    <MetadataFile FileName="AutomatonsBasicLists6.xsd" MetadataType="Schema" ID="35b59966-6dec-483a-a01c-0559bcaf26f3" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/BasicLists/AutomatonsBasicLists.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

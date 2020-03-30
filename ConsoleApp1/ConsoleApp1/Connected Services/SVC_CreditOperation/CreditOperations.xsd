@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Olissipo.EqpPricingInterfaces.DataStructures" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Olissipo.EqpPricingInterfaces.DataStructures" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/CreditOperations.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Olissipo.Utils" />
+  <xs:complexType name="EqpPricingParam">
+    <xs:sequence>
+      <xs:element name="Age" nillable="true" type="xs:int" />
+      <xs:element name="AnnualUsage" nillable="true" type="xs:decimal" />
+      <xs:element name="AssetPurposeId" nillable="true" type="xs:int" />
+      <xs:element name="BaseNetAmount" nillable="true" type="xs:decimal" />
+      <xs:element name="Brand" nillable="true" type="xs:string" />
+      <xs:element name="CalculationDate" nillable="true" type="xs:dateTime" />
+      <xs:element name="ClientTaxRegimeId" nillable="true" type="xs:int" />
+      <xs:element name="CurrencyId" nillable="true" type="xs:string" />
+      <xs:element name="CurrentUsage" nillable="true" type="xs:decimal" />
+      <xs:element name="EquipmentCategory" nillable="true" type="xs:int" />
+      <xs:element name="EquipmentNetAmount" nillable="true" type="xs:decimal" />
+      <xs:element name="EquipmentPurchaseAmount" nillable="true" type="xs:decimal" />
+      <xs:element name="EquipmentState" nillable="true" type="xs:int" />
+      <xs:element name="EquipmentType" nillable="true" type="xs:int" />
+      <xs:element name="FinalAge" nillable="true" type="xs:int" />
+      <xs:element name="FinalUsage" nillable="true" type="xs:decimal" />
+      <xs:element name="FinancialProductId" nillable="true" type="xs:int" />
+      <xs:element name="FirstRegistrationDate" nillable="true" type="xs:dateTime" />
+      <xs:element name="FuelType" nillable="true" type="xs:int" />
+      <xs:element name="HorsePower" nillable="true" type="xs:int" />
+      <xs:element name="ImporterStructNodeId" nillable="true" type="xs:long" />
+      <xs:element name="InitialEntryPercentage" nillable="true" type="xs:decimal" />
+      <xs:element name="IsRelocation" nillable="true" type="xs:boolean" />
+      <xs:element name="LicensePlate" nillable="true" type="xs:string" />
+      <xs:element name="Model" nillable="true" type="xs:string" />
+      <xs:element name="ModelCode" nillable="true" type="xs:string" />
+      <xs:element name="Month" nillable="true" type="xs:int" />
+      <xs:element name="NumOfDoors" nillable="true" type="xs:int" />
+      <xs:element name="OperationBeginDate" nillable="true" type="xs:dateTime" />
+      <xs:element name="OperationChannelId" nillable="true" type="xs:int" />
+      <xs:element name="OperationType" nillable="true" type="xs:long" />
+      <xs:element name="OptionsContext" nillable="true" type="tns:EqpPricingOptionContext" />
+      <xs:element name="OtherSerialNumber" nillable="true" type="xs:string" />
+      <xs:element name="PreModelCode" nillable="true" type="xs:string" />
+      <xs:element name="PreModelCodeInputModeId" nillable="true" type="xs:int" />
+      <xs:element name="PurposeTypeId" nillable="true" type="xs:int" />
+      <xs:element name="RVCalcInfo" nillable="true" type="tns:EqpPricingRVCalcInfo" />
+      <xs:element name="RelocatedEquipmentId" nillable="true" type="xs:long" />
+      <xs:element name="RemarketingCosts" nillable="true" type="xs:decimal" />
+      <xs:element name="ResidualValue" nillable="true" type="xs:decimal" />
+      <xs:element name="ResidualValuePerc" nillable="true" type="xs:decimal" />
+      <xs:element name="SelectedOptions" nillable="true" type="tns:ArrayOfEqpOptionPricingInfo" />
+      <xs:element name="SerialNumber" nillable="true" type="xs:string" />
+      <xs:element name="SourceApplicationId" nillable="true" type="xs:int" />
+      <xs:element name="SupplierDiscountPercentage" nillable="true" type="xs:decimal" />
+      <xs:element name="SupplierEntityId" nillable="true" type="xs:long" />
+      <xs:element name="TableCode" nillable="true" type="xs:string" />
+      <xs:element name="TaxTypeId" nillable="true" type="xs:int" />
+      <xs:element name="Term" nillable="true" type="xs:int" />
+      <xs:element name="TotalAccessoriesAmount" nillable="true" type="xs:decimal" />
+      <xs:element name="TotalOptionsAmount" nillable="true" type="xs:decimal" />
+      <xs:element name="TotalOptionsBaseMarketValue" nillable="true" type="xs:decimal" />
+      <xs:element name="TotalOptionsBaseNetAmount" nillable="true" type="xs:decimal" />
+      <xs:element name="Traction" nillable="true" type="xs:string" />
+      <xs:element name="Usage" nillable="true" type="xs:decimal" />
+      <xs:element name="UserInputField" nillable="true" type="tns:EqpPricingInputField" />
+      <xs:element name="ValueDate" nillable="true" type="xs:dateTime" />
+      <xs:element name="VendorProtocolId" nillable="true" type="xs:int" />
+      <xs:element name="Version" nillable="true" type="xs:string" />
+      <xs:element name="Year" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EqpPricingParam" nillable="true" type="tns:EqpPricingParam" />
+  <xs:simpleType name="EqpPricingOptionContext">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Option" />
+      <xs:enumeration value="Accessory" />
+      <xs:enumeration value="OtherCosts" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EqpPricingOptionContext" nillable="true" type="tns:EqpPricingOptionContext" />
+  <xs:complexType name="EqpPricingRVCalcInfo">
+    <xs:sequence>
+      <xs:element name="_x003C_AccountDate_x003E_k__BackingField" type="xs:dateTime" />
+      <xs:element name="_x003C_CalcSource_x003E_k__BackingField" nillable="true" type="tns:EqpPricingRVCalcSource" />
+      <xs:element name="_x003C_CredOperAssetId_x003E_k__BackingField" nillable="true" type="xs:long" />
+      <xs:element name="_x003C_EquipmentId_x003E_k__BackingField" nillable="true" type="xs:long" />
+      <xs:element name="_x003C_IsRVUserDefined_x003E_k__BackingField" nillable="true" type="xs:boolean" />
+      <xs:element name="_x003C_NewAssetUsage_x003E_k__BackingField" nillable="true" type="xs:decimal" />
+      <xs:element name="_x003C_NewTerm_x003E_k__BackingField" nillable="true" type="xs:int" />
+      <xs:element name="_x003C_OldAssetUsage_x003E_k__BackingField" nillable="true" type="xs:decimal" />
+      <xs:element name="_x003C_OldTerm_x003E_k__BackingField" nillable="true" type="xs:int" />
+      <xs:element name="_x003C_ValueDate_x003E_k__BackingField" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EqpPricingRVCalcInfo" nillable="true" type="tns:EqpPricingRVCalcInfo" />
+  <xs:simpleType name="EqpPricingRVCalcSource">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CredOper" />
+      <xs:enumeration value="FinChange" />
+      <xs:enumeration value="Rescission" />
+      <xs:enumeration value="DepreciationChange" />
+      <xs:enumeration value="DepreciationStageChange" />
+      <xs:enumeration value="AssetDevolution" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EqpPricingRVCalcSource" nillable="true" type="tns:EqpPricingRVCalcSource" />
+  <xs:complexType name="ArrayOfEqpOptionPricingInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EqpOptionPricingInfo" nillable="true" type="tns:EqpOptionPricingInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEqpOptionPricingInfo" nillable="true" type="tns:ArrayOfEqpOptionPricingInfo" />
+  <xs:complexType name="EqpOptionPricingInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BasePrice" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MarketValue" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Month" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="NetAmount" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PurchaseAmount" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TaxAmount" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TaxTypeId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Year" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EqpOptionPricingInfo" nillable="true" type="tns:EqpOptionPricingInfo" />
+  <xs:simpleType name="EqpPricingInputField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ResidualValuePerc" />
+      <xs:enumeration value="ResidualValue" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EqpPricingInputField" nillable="true" type="tns:EqpPricingInputField" />
+  <xs:complexType name="ArrayOfEqpFinancialInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EqpFinancialInfo" nillable="true" type="tns:EqpFinancialInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEqpFinancialInfo" nillable="true" type="tns:ArrayOfEqpFinancialInfo" />
+  <xs:complexType name="EqpFinancialInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AnnualUsage" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AplBusinessPurposeTypeId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CalcVehicleTaxAmount" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CredOperClassificationId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FinancialProductId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="NewVehicleTaxAmount" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ResidualValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ResidualValueBaseValue" type="xs:decimal" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Olissipo.Utils" minOccurs="0" name="ResidualValueCalcStateId" nillable="true" type="q1:ValueCalcState" />
+      <xs:element minOccurs="0" name="ResidualValuePerc" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TaxRegimeId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Term" type="xs:int" />
+      <xs:element minOccurs="0" name="Usage" type="xs:decimal" />
+      <xs:element minOccurs="0" name="VendorProtocolId" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EqpFinancialInfo" nillable="true" type="tns:EqpFinancialInfo" />
+  <xs:complexType name="EqpPricingInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BaseFinancialInfo" nillable="true" type="tns:EqpFinancialInfo" />
+      <xs:element minOccurs="0" name="BasePrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BodyCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Brand" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CO2Emission" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CabinSize" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Colour" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Consumption" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmissionStandardId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="EngineSize" type="xs:decimal" />
+      <xs:element minOccurs="0" name="EquipmentCategoryId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="EquipmentSegment" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="EquipmentStateId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="EquipmentTypeId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FaceliftGeneration" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FiscalCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FrontTyreType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FuelType" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Gearbox" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="HasTPMS" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HighwayFuelConsumption" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="HomologationClass" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="HorsePower" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="InteriorColour" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Manufacturer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MarketNetValueIfNew" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MarketValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MarketValueIfNew" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MaxPower" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaximumWeight" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MeasureInfo" nillable="true" type="tns:ArrayOfEqpMeasureInfo" />
+      <xs:element minOccurs="0" name="Model" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModelCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModelLine" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModelMonth" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ModelYear" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="NumOfAxels" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="NumOfAxelsDriven" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="NumOfDoors" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="NumOfSeats" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="OptionInfo" nillable="true" type="tns:ArrayOfEqpOptionPricingInfo" />
+      <xs:element minOccurs="0" name="OptionsAmount" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OriginalEquipmentId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="OtherSerialNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PreModelCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PurchaseAmount" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RearTyreType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RevisionsRange" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RimDimensions" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SaleAmount" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SerialNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupplierDiscountPercentage" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SupplierEntityId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="TableCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TableData" nillable="true" type="tns:ArrayOfEqpTableDataInfo" />
+      <xs:element minOccurs="0" name="TaxTypeId" type="xs:int" />
+      <xs:element minOccurs="0" name="TopSpeed" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TrimLine" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UrbanFuelConsumption" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="VehicleTaxAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Version" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Weight" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Year" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EqpPricingInfo" nillable="true" type="tns:EqpPricingInfo" />
+  <xs:complexType name="ArrayOfEqpMeasureInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EqpMeasureInfo" nillable="true" type="tns:EqpMeasureInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEqpMeasureInfo" nillable="true" type="tns:ArrayOfEqpMeasureInfo" />
+  <xs:complexType name="EqpMeasureInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Measure" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MeasureTypeId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EqpMeasureInfo" nillable="true" type="tns:EqpMeasureInfo" />
+  <xs:complexType name="ArrayOfEqpTableDataInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EqpTableDataInfo" nillable="true" type="tns:EqpTableDataInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEqpTableDataInfo" nillable="true" type="tns:ArrayOfEqpTableDataInfo" />
+  <xs:complexType name="EqpTableDataInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DataValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TableMetaDataId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EqpTableDataInfo" nillable="true" type="tns:EqpTableDataInfo" />
+  <xs:complexType name="EqpRegistrationParam">
+    <xs:sequence>
+      <xs:element name="AplicationId" nillable="true" type="xs:int" />
+      <xs:element name="Brand" nillable="true" type="xs:string" />
+      <xs:element name="EquipmentStateId" nillable="true" type="xs:int" />
+      <xs:element name="EquipmentTypeId" nillable="true" type="xs:int" />
+      <xs:element name="LicencePlate" nillable="true" type="xs:string" />
+      <xs:element name="Model" nillable="true" type="xs:string" />
+      <xs:element name="PurposeTypeId" nillable="true" type="xs:int" />
+      <xs:element name="SerialNumber" nillable="true" type="xs:string" />
+      <xs:element name="Version" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EqpRegistrationParam" nillable="true" type="tns:EqpRegistrationParam" />
+  <xs:complexType name="EqpRegistrationInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LicencePlate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LicencePlateDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RegistrationInfoFound" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SerialNumber" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EqpRegistrationInfo" nillable="true" type="tns:EqpRegistrationInfo" />
+  <xs:complexType name="EqpTyreParam">
+    <xs:sequence>
+      <xs:element name="EquipmentTypeId" nillable="true" type="xs:int" />
+      <xs:element name="GetRearTyre" type="xs:boolean" />
+      <xs:element name="TableCode" nillable="true" type="xs:string" />
+      <xs:element name="TyreBrand" nillable="true" type="xs:string" />
+      <xs:element name="TyreId" nillable="true" type="xs:long" />
+      <xs:element name="TyreSetIndex" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EqpTyreParam" nillable="true" type="tns:EqpTyreParam" />
+  <xs:complexType name="EqpTyreInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FrontNetUnitAmount" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FrontTyreBrand" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FrontTyreId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="FrontTyreType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RearNetUnitAmount" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RearTyreBrand" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RearTyreId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="RearTyreType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TyreSetIndex" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EqpTyreInfo" nillable="true" type="tns:EqpTyreInfo" />
+  <xs:complexType name="EqpVehicleTaxAmountParam">
+    <xs:sequence>
+      <xs:element name="AccessoriesAmount" nillable="true" type="xs:decimal" />
+      <xs:element name="BaseNetAmount" nillable="true" type="xs:decimal" />
+      <xs:element name="BasePurchaseAmount" nillable="true" type="xs:decimal" />
+      <xs:element name="Brand" nillable="true" type="xs:string" />
+      <xs:element name="CurrentVehicleTaxAmount" nillable="true" type="xs:decimal" />
+      <xs:element name="EquipmentState" nillable="true" type="xs:int" />
+      <xs:element name="EquipmentType" nillable="true" type="xs:int" />
+      <xs:element name="Model" nillable="true" type="xs:string" />
+      <xs:element name="ModelCode" nillable="true" type="xs:string" />
+      <xs:element name="OptionsAmount" nillable="true" type="xs:decimal" />
+      <xs:element name="SupplierDiscountAmount" nillable="true" type="xs:decimal" />
+      <xs:element name="SupplierDiscountPercentage" nillable="true" type="xs:decimal" />
+      <xs:element name="TableCode" nillable="true" type="xs:string" />
+      <xs:element name="Version" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EqpVehicleTaxAmountParam" nillable="true" type="tns:EqpVehicleTaxAmountParam" />
+  <xs:complexType name="EqpExternalPricingParam">
+    <xs:sequence>
+      <xs:element name="EquipmentCategoryId" nillable="true" type="xs:int" />
+      <xs:element name="EquipmentExternalInputFieldId" type="tns:EqpExternalInputField" />
+      <xs:element name="EquipmentStateId" nillable="true" type="xs:int" />
+      <xs:element name="EquipmentTypeId" nillable="true" type="xs:int" />
+      <xs:element name="FinancialProductId" nillable="true" type="xs:int" />
+      <xs:element name="LicensePlate" nillable="true" type="xs:string" />
+      <xs:element name="Month" nillable="true" type="xs:int" />
+      <xs:element name="OperationPurposeTypeId" nillable="true" type="xs:int" />
+      <xs:element name="OperationTypeId" nillable="true" type="xs:long" />
+      <xs:element name="OtherSerialNumber" nillable="true" type="xs:string" />
+      <xs:element name="SerialNumber" nillable="true" type="xs:string" />
+      <xs:element name="SupplierEntityId" nillable="true" type="xs:long" />
+      <xs:element name="TransactionId" nillable="true" type="xs:string" />
+      <xs:element name="Year" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EqpExternalPricingParam" nillable="true" type="tns:EqpExternalPricingParam" />
+  <xs:simpleType name="EqpExternalInputField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PreModelCode" />
+      <xs:enumeration value="SerialNumber" />
+      <xs:enumeration value="CarConfiguratorId" />
+      <xs:enumeration value="LicensePlate" />
+      <xs:enumeration value="AppLicensePlate" />
+      <xs:enumeration value="AppSerialNumber" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EqpExternalInputField" nillable="true" type="tns:EqpExternalInputField" />
+</xs:schema>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Olissipo.Automatons.DataStructures" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Olissipo.Automatons.DataStructures" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="AutPostTransitionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="If" />
+      <xs:enumeration value="Else" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AutPostTransitionType" nillable="true" type="tns:AutPostTransitionType" />
+  <xs:simpleType name="ReasonValidationType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="ReasonOrComment" />
+      <xs:enumeration value="BothReasonAndComment" />
+      <xs:enumeration value="OnlyReason" />
+      <xs:enumeration value="OnlyComment" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ReasonValidationType" nillable="true" type="tns:ReasonValidationType" />
+  <xs:simpleType name="AutomatonOperationsInternalCode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ExecuteAutTransition" />
+      <xs:enumeration value="ExecuteEvent" />
+      <xs:enumeration value="ExecuteEventWithDecoderInfo" />
+      <xs:enumeration value="IssueDocument" />
+      <xs:enumeration value="ValidateCondition" />
+      <xs:enumeration value="DoNothing" />
+      <xs:enumeration value="ReverseTransition" />
+      <xs:enumeration value="SendMail" />
+      <xs:enumeration value="EventMngtCreate" />
+      <xs:enumeration value="EventMngtValidateArchived" />
+      <xs:enumeration value="RecordFieldStateChange" />
+      <xs:enumeration value="CreateFolderStructNode" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AutomatonOperationsInternalCode" nillable="true" type="tns:AutomatonOperationsInternalCode" />
+</xs:schema>

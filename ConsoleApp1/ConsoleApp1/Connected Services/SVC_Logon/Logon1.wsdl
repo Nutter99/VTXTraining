@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://accipiens.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://accipiens.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://accipiens.com/Imports">
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/SecurityWebServices/Logon.svc?xsd=xsd0" namespace="http://accipiens.com" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/SecurityWebServices/Logon.svc?xsd=xsd2" namespace="http://accipiens.com/Common" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/SecurityWebServices/Logon.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/SecurityWebServices/Logon.svc?xsd=xsd3" namespace="http://accipiens.com/VirtualData" />
+      <xsd:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/SecurityWebServices/Logon.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="Logon_PingServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:PingServer" />
+  </wsdl:message>
+  <wsdl:message name="Logon_PingServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PingServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logon_PingServer_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q1="http://accipiens.com/Common" name="detail" element="q1:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Logon_Ping_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ping" />
+  </wsdl:message>
+  <wsdl:message name="Logon_Ping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PingResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logon_Ping_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q2="http://accipiens.com/Common" name="detail" element="q2:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Logon_GetAboutInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAboutInfo" />
+  </wsdl:message>
+  <wsdl:message name="Logon_GetAboutInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAboutInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logon_GetAboutInfo_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q3="http://accipiens.com/Common" name="detail" element="q3:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Logon_GetAccipiensAboutInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccipiensAboutInfo" />
+  </wsdl:message>
+  <wsdl:message name="Logon_GetAccipiensAboutInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccipiensAboutInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logon_GetAccipiensAboutInfo_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q4="http://accipiens.com/Common" name="detail" element="q4:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Logon_GetFrameworkFullAboutInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFrameworkFullAboutInfo" />
+  </wsdl:message>
+  <wsdl:message name="Logon_GetFrameworkFullAboutInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFrameworkFullAboutInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logon_GetFrameworkFullAboutInfo_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q5="http://accipiens.com/Common" name="detail" element="q5:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Logon_GetSystemDatabaseInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSystemDatabaseInfo" />
+  </wsdl:message>
+  <wsdl:message name="Logon_GetSystemDatabaseInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSystemDatabaseInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logon_GetSystemDatabaseInfo_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q6="http://accipiens.com/Common" name="detail" element="q6:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Logon_CheckCpuCountLicense_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckCpuCountLicense" />
+  </wsdl:message>
+  <wsdl:message name="Logon_CheckCpuCountLicense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckCpuCountLicenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logon_CheckCpuCountLicense_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q7="http://accipiens.com/Common" name="detail" element="q7:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Logon_GetUserCacheKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserCacheKey" />
+  </wsdl:message>
+  <wsdl:message name="Logon_GetUserCacheKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserCacheKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logon_GetUserCacheKey_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q8="http://accipiens.com/Common" name="detail" element="q8:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Logon_GetAplConstraintCacheKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAplConstraintCacheKey" />
+  </wsdl:message>
+  <wsdl:message name="Logon_GetAplConstraintCacheKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAplConstraintCacheKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logon_GetAplConstraintCacheKey_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q9="http://accipiens.com/Common" name="detail" element="q9:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Logon_GetCacheSyncCfgInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCacheSyncCfgInfo" />
+  </wsdl:message>
+  <wsdl:message name="Logon_GetCacheSyncCfgInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCacheSyncCfgInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logon_GetCacheSyncCfgInfo_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q10="http://accipiens.com/Common" name="detail" element="q10:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Logon_SignalCacheSync_InputMessage">
+    <wsdl:part name="parameters" element="tns:SignalCacheSync" />
+  </wsdl:message>
+  <wsdl:message name="Logon_SignalCacheSync_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SignalCacheSyncResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logon_SignalCacheSync_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q11="http://accipiens.com/Common" name="detail" element="q11:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Logon_GetCacheSyncSince_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCacheSyncSince" />
+  </wsdl:message>
+  <wsdl:message name="Logon_GetCacheSyncSince_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCacheSyncSinceResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logon_GetCacheSyncSince_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q12="http://accipiens.com/Common" name="detail" element="q12:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Logon_LoginWindowsUserAndGetToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginWindowsUserAndGetToken" />
+  </wsdl:message>
+  <wsdl:message name="Logon_LoginWindowsUserAndGetToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginWindowsUserAndGetTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logon_LoginWindowsUserAndGetToken_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q13="http://accipiens.com/Common" name="detail" element="q13:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Logon_LoginWindowsUserAndGetToken2_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginWindowsUserAndGetToken2" />
+  </wsdl:message>
+  <wsdl:message name="Logon_LoginWindowsUserAndGetToken2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginWindowsUserAndGetToken2Response" />
+  </wsdl:message>
+  <wsdl:message name="Logon_LoginWindowsUserAndGetToken2_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q14="http://accipiens.com/Common" name="detail" element="q14:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Logon_LoginCustomUserAndGetToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginCustomUserAndGetToken" />
+  </wsdl:message>
+  <wsdl:message name="Logon_LoginCustomUserAndGetToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginCustomUserAndGetTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logon_LoginCustomUserAndGetToken_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q15="http://accipiens.com/Common" name="detail" element="q15:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Logon_LoginCustomUserAndGetToken2_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginCustomUserAndGetToken2" />
+  </wsdl:message>
+  <wsdl:message name="Logon_LoginCustomUserAndGetToken2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginCustomUserAndGetToken2Response" />
+  </wsdl:message>
+  <wsdl:message name="Logon_LoginCustomUserAndGetToken2_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q16="http://accipiens.com/Common" name="detail" element="q16:AcpDetail" />
+  </wsdl:message>
+  <wsdl:message name="Logon_RecoverPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecoverPassword" />
+  </wsdl:message>
+  <wsdl:message name="Logon_RecoverPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecoverPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logon_RecoverPassword_AcpDetail_FaultMessage">
+    <wsdl:part xmlns:q17="http://accipiens.com/Common" name="detail" element="q17:AcpDetail" />
+  </wsdl:message>
+  <wsdl:portType name="Logon">
+    <wsdl:operation name="PingServer">
+      <wsdl:input wsaw:Action="http://accipiens.com/Logon/PingServer" message="tns:Logon_PingServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Logon/PingServerResponse" message="tns:Logon_PingServer_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Logon_PingServer_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <wsdl:input wsaw:Action="http://accipiens.com/Logon/Ping" message="tns:Logon_Ping_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Logon/PingResponse" message="tns:Logon_Ping_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Logon_Ping_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAboutInfo">
+      <wsdl:input wsaw:Action="http://accipiens.com/Logon/GetAboutInfo" message="tns:Logon_GetAboutInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Logon/GetAboutInfoResponse" message="tns:Logon_GetAboutInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Logon_GetAboutInfo_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccipiensAboutInfo">
+      <wsdl:input wsaw:Action="http://accipiens.com/Logon/GetAccipiensAboutInfo" message="tns:Logon_GetAccipiensAboutInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Logon/GetAccipiensAboutInfoResponse" message="tns:Logon_GetAccipiensAboutInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Logon_GetAccipiensAboutInfo_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFrameworkFullAboutInfo">
+      <wsdl:input wsaw:Action="http://accipiens.com/Logon/GetFrameworkFullAboutInfo" message="tns:Logon_GetFrameworkFullAboutInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Logon/GetFrameworkFullAboutInfoResponse" message="tns:Logon_GetFrameworkFullAboutInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Logon_GetFrameworkFullAboutInfo_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemDatabaseInfo">
+      <wsdl:input wsaw:Action="http://accipiens.com/Logon/GetSystemDatabaseInfo" message="tns:Logon_GetSystemDatabaseInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Logon/GetSystemDatabaseInfoResponse" message="tns:Logon_GetSystemDatabaseInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Logon_GetSystemDatabaseInfo_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckCpuCountLicense">
+      <wsdl:input wsaw:Action="http://accipiens.com/Logon/CheckCpuCountLicense" message="tns:Logon_CheckCpuCountLicense_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Logon/CheckCpuCountLicenseResponse" message="tns:Logon_CheckCpuCountLicense_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Logon_CheckCpuCountLicense_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserCacheKey">
+      <wsdl:input wsaw:Action="http://accipiens.com/Logon/GetUserCacheKey" message="tns:Logon_GetUserCacheKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Logon/GetUserCacheKeyResponse" message="tns:Logon_GetUserCacheKey_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Logon_GetUserCacheKey_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAplConstraintCacheKey">
+      <wsdl:input wsaw:Action="http://accipiens.com/Logon/GetAplConstraintCacheKey" message="tns:Logon_GetAplConstraintCacheKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Logon/GetAplConstraintCacheKeyResponse" message="tns:Logon_GetAplConstraintCacheKey_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Logon_GetAplConstraintCacheKey_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCacheSyncCfgInfo">
+      <wsdl:input wsaw:Action="http://accipiens.com/Logon/GetCacheSyncCfgInfo" message="tns:Logon_GetCacheSyncCfgInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Logon/GetCacheSyncCfgInfoResponse" message="tns:Logon_GetCacheSyncCfgInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Logon_GetCacheSyncCfgInfo_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SignalCacheSync">
+      <wsdl:input wsaw:Action="http://accipiens.com/Logon/SignalCacheSync" message="tns:Logon_SignalCacheSync_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Logon/SignalCacheSyncResponse" message="tns:Logon_SignalCacheSync_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Logon_SignalCacheSync_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCacheSyncSince">
+      <wsdl:input wsaw:Action="http://accipiens.com/Logon/GetCacheSyncSince" message="tns:Logon_GetCacheSyncSince_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Logon/GetCacheSyncSinceResponse" message="tns:Logon_GetCacheSyncSince_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Logon_GetCacheSyncSince_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginWindowsUserAndGetToken">
+      <wsdl:input wsaw:Action="http://accipiens.com/Logon/LoginWindowsUserAndGetToken" message="tns:Logon_LoginWindowsUserAndGetToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Logon/LoginWindowsUserAndGetTokenResponse" message="tns:Logon_LoginWindowsUserAndGetToken_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Logon_LoginWindowsUserAndGetToken_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginWindowsUserAndGetToken2">
+      <wsdl:input wsaw:Action="http://accipiens.com/Logon/LoginWindowsUserAndGetToken2" message="tns:Logon_LoginWindowsUserAndGetToken2_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Logon/LoginWindowsUserAndGetToken2Response" message="tns:Logon_LoginWindowsUserAndGetToken2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Logon_LoginWindowsUserAndGetToken2_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginCustomUserAndGetToken">
+      <wsdl:input wsaw:Action="http://accipiens.com/Logon/LoginCustomUserAndGetToken" message="tns:Logon_LoginCustomUserAndGetToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Logon/LoginCustomUserAndGetTokenResponse" message="tns:Logon_LoginCustomUserAndGetToken_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Logon_LoginCustomUserAndGetToken_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginCustomUserAndGetToken2">
+      <wsdl:input wsaw:Action="http://accipiens.com/Logon/LoginCustomUserAndGetToken2" message="tns:Logon_LoginCustomUserAndGetToken2_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Logon/LoginCustomUserAndGetToken2Response" message="tns:Logon_LoginCustomUserAndGetToken2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Logon_LoginCustomUserAndGetToken2_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecoverPassword">
+      <wsdl:input wsaw:Action="http://accipiens.com/Logon/RecoverPassword" message="tns:Logon_RecoverPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://accipiens.com/Logon/RecoverPasswordResponse" message="tns:Logon_RecoverPassword_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://accipiens.com/AcpDetailError" name="AcpDetail" message="tns:Logon_RecoverPassword_AcpDetail_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

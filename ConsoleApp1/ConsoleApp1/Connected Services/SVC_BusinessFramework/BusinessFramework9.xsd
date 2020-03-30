@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsConfig.DataStructures" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="TransferDueMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="TransferResp" />
+      <xs:enumeration value="AnnulDue" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TransferDueMode" nillable="true" type="tns:TransferDueMode" />
+  <xs:simpleType name="GracePeriod">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DoesntHave" />
+      <xs:enumeration value="SignatureMonth" />
+      <xs:enumeration value="IfSignatureAndActivationInSameMonth" />
+      <xs:enumeration value="IfFirstPaymentAndActivationInSameMonth" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="GracePeriod" nillable="true" type="tns:GracePeriod" />
+</xs:schema>

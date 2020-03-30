@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://accipiens.com" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Automatons" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="CustomBinding_Automatons_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <http:NtlmAuthentication xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://accipiens.com" location="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/Automatons.svc?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="CustomBinding_Automatons" type="i0:Automatons">
+    <wsp:PolicyReference URI="#CustomBinding_Automatons_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UpdatePermissions">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/UpdatePermissions" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_UpdatePermissions_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAutomatonAplTask">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/CreateAutomatonAplTask" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_CreateAutomatonAplTask_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAutTransitionAplTask">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/CreateAutTransitionAplTask" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_CreateAutTransitionAplTask_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAutUserStateAplTask">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/CreateAutUserStateAplTask" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_CreateAutUserStateAplTask_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAutomatonAplTaskAndPermissions">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/DeleteAutomatonAplTaskAndPermissions" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_DeleteAutomatonAplTaskAndPermissions_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAutTransitionAplTaskAndPermissions">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/DeleteAutTransitionAplTaskAndPermissions" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_DeleteAutTransitionAplTaskAndPermissions_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAutUserStateAplTaskAndPermissions">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/DeleteAutUserStateAplTaskAndPermissions" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_DeleteAutUserStateAplTaskAndPermissions_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ExportAutomatonsPermissions">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/ExportAutomatonsPermissions" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_ExportAutomatonsPermissions_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ExportAutContextsPermissions">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/ExportAutContextsPermissions" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_ExportAutContextsPermissions_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ImportAutomatonsPermissions">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/ImportAutomatonsPermissions" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_ImportAutomatonsPermissions_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutContextId">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/GetAutContextId" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_GetAutContextId_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="HasAutTransitionActionInternalCode">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/HasAutTransitionActionInternalCode" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_HasAutTransitionActionInternalCode_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutomatonTransitionsGroupedByState">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/GetAutomatonTransitionsGroupedByState" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_GetAutomatonTransitionsGroupedByState_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutUserStatesGroupedByState">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/GetAutUserStatesGroupedByState" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_GetAutUserStatesGroupedByState_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutUserStateList">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/GetAutUserStateList" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_GetAutUserStateList_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastLogReasons">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/GetLastLogReasons" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_GetLastLogReasons_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/Ping" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_Ping_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumAutPostTransitionType">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/ConvertToEnumAutPostTransitionType" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_ConvertToEnumAutPostTransitionType_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutPostTransitionTypeEnumValue">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/GetAutPostTransitionTypeEnumValue" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_GetAutPostTransitionTypeEnumValue_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumReasonValidationType">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/ConvertToEnumReasonValidationType" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_ConvertToEnumReasonValidationType_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetReasonValidationTypeEnumValue">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/GetReasonValidationTypeEnumValue" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_GetReasonValidationTypeEnumValue_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToEnumAutomatonOperationsInternalCode">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/ConvertToEnumAutomatonOperationsInternalCode" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_ConvertToEnumAutomatonOperationsInternalCode_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutomatonOperationsInternalCodeEnumValue">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/GetAutomatonOperationsInternalCodeEnumValue" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_GetAutomatonOperationsInternalCodeEnumValue_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutomatonsClassContext">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/GetAutomatonsClassContext" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_GetAutomatonsClassContext_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SearchAutomatons">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/SearchAutomatons" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_SearchAutomatons_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutomatonReasonStateByKey">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/GetAutomatonReasonStateByKey" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_GetAutomatonReasonStateByKey_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutLogByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/GetAutLogByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_GetAutLogByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutLogReasonByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/GetAutLogReasonByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_GetAutLogReasonByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutomatonByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/GetAutomatonByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_GetAutomatonByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutomatonReasonByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/GetAutomatonReasonByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_GetAutomatonReasonByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutomatonReasonStateByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/GetAutomatonReasonStateByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_GetAutomatonReasonStateByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutPostTransitionByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/GetAutPostTransitionByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_GetAutPostTransitionByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutStateByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/GetAutStateByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_GetAutStateByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutTransitionByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/GetAutTransitionByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_GetAutTransitionByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutActionByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/GetAutActionByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_GetAutActionByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutConditionByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/GetAutConditionByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_GetAutConditionByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutContextByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/GetAutContextByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_GetAutContextByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutInternalStateByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/GetAutInternalStateByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_GetAutInternalStateByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutOperationByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/GetAutOperationByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_GetAutOperationByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutOperationActionByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/GetAutOperationActionByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_GetAutOperationActionByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutReasonByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/GetAutReasonByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_GetAutReasonByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutUserStateByKeys">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/GetAutUserStateByKeys" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_GetAutUserStateByKeys_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAutomatons">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/SaveAutomatons" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_SaveAutomatons_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAutomatonsV2">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/SaveAutomatonsV2" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_SaveAutomatonsV2_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutomatonsClassTableId">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/GetAutomatonsClassTableId" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_GetAutomatonsClassTableId_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutomatonsTableId">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/GetAutomatonsTableId" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_GetAutomatonsTableId_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SearchAutomatonsConfig">
+      <soap12:operation soapAction="http://accipiens.com/Automatons/SearchAutomatonsConfig" style="document" />
+      <wsdl:input>
+        <soap12:header message="i0:Automatons_SearchAutomatonsConfig_InputMessage_Headers" part="SessionToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AcpDetail">
+        <soap12:fault use="literal" name="AcpDetail" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Automatons">
+    <wsdl:port name="CustomBinding_Automatons" binding="tns:CustomBinding_Automatons">
+      <soap12:address location="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/Automatons.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/Automatons.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>eb@vantyx.lan</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

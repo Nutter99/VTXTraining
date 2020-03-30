@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperations.DataStructures" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperations.DataStructures" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="CreditOperationsIndicatorContext">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Global" />
+      <xs:enumeration value="AssetDepreciation" />
+      <xs:enumeration value="AssetPaymentCalendarCapital" />
+      <xs:enumeration value="BuildingBaseCalcTypes" />
+      <xs:enumeration value="CashFlow" />
+      <xs:enumeration value="ChangePaymentMode" />
+      <xs:enumeration value="CredOperDefaultTables" />
+      <xs:enumeration value="CredOperReadOnlyStates" />
+      <xs:enumeration value="CommercialStructNodes" />
+      <xs:enumeration value="EquipmentRegistrations" />
+      <xs:enumeration value="Indexing" />
+      <xs:enumeration value="IntervTypes" />
+      <xs:enumeration value="IntervDetailsConfig" />
+      <xs:enumeration value="FinancialProduct" />
+      <xs:enumeration value="PeriodificationAccounting" />
+      <xs:enumeration value="VATExpenseType" />
+      <xs:enumeration value="IntraDayCredit" />
+      <xs:enumeration value="Buildings" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CreditOperationsIndicatorContext" nillable="true" type="tns:CreditOperationsIndicatorContext" />
+  <xs:simpleType name="GlobalCreditOperationsIndicator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CommissionDistributionStructNode" />
+      <xs:enumeration value="CredOperRecoveryNumerationId" />
+      <xs:enumeration value="CalculateMticStmtId" />
+      <xs:enumeration value="LogContractRiskByDate" />
+      <xs:enumeration value="CalcServicesAndInsurancesOnSave" />
+      <xs:enumeration value="DocumentMaxTerm" />
+      <xs:enumeration value="UseInitialDateDayInsteadOfDayRentToCalcFinalDate" />
+      <xs:enumeration value="HasReservationAndUsageManagement" />
+      <xs:enumeration value="PoolCarValidAutUserStates" />
+      <xs:enumeration value="PoolCarDefaultAutUserState" />
+      <xs:enumeration value="ProRataCalcMode" />
+      <xs:enumeration value="CalculateDevolutionDateByDeliverDate" />
+      <xs:enumeration value="PoolCarDefaultCredOperType" />
+      <xs:enumeration value="OwnAssetsDefaultOperType" />
+      <xs:enumeration value="KeepUserRentalAmountWithTax" />
+      <xs:enumeration value="FinCommissionTypesToDelete" />
+      <xs:enumeration value="FinSubventionTypesToDelete" />
+      <xs:enumeration value="EquipmentBrandsToValidateLicencePlate" />
+      <xs:enumeration value="MultiCredOperCreationNumberOfWorkers" />
+      <xs:enumeration value="CalcNewRentingValueWithOperationValueDate" />
+      <xs:enumeration value="ChangeOperationAccountingDateToToday" />
+      <xs:enumeration value="PenalizationCredOperType" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="GlobalCreditOperationsIndicator" nillable="true" type="tns:GlobalCreditOperationsIndicator" />
+  <xs:simpleType name="CredOperReadOnlyStateIndicator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="IsOn" />
+      <xs:enumeration value="QuotationStates" />
+      <xs:enumeration value="ProposalStates" />
+      <xs:enumeration value="ContractStates" />
+      <xs:enumeration value="CessionStates" />
+      <xs:enumeration value="LoanStates" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperReadOnlyStateIndicator" nillable="true" type="tns:CredOperReadOnlyStateIndicator" />
+  <xs:simpleType name="CashFlowIndicator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CompanyCashFlow" />
+      <xs:enumeration value="ConsortiumCashFlow" />
+      <xs:enumeration value="CustomerCashFlow" />
+      <xs:enumeration value="IASCashFlow" />
+      <xs:enumeration value="ShowCustomerFlowsUntil" />
+      <xs:enumeration value="ShowAssetFieldsOnCashflow" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CashFlowIndicator" nillable="true" type="tns:CashFlowIndicator" />
+</xs:schema>

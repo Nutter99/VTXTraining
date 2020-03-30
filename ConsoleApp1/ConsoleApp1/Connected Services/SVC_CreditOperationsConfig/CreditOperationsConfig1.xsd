@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://accipiens.com/AcpFramework" elementFormDefault="qualified" targetNamespace="http://accipiens.com/AcpFramework" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Services/CreditOperationsConfig.svc?xsd=xsd3" namespace="http://accipiens.com/Common" />
+  <xs:complexType name="ExpenseTypeByTable">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://accipiens.com/Common" base="q1:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplTableId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ExpenseTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="IsBinding" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsDefault" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsInvoicedOnAutAction" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsToFinance" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:ExpenseTypeByTableKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:ExpenseTypeByTableDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:ExpenseTypeByTableField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfExpenseTypeByTableField" />
+          <xs:element minOccurs="0" name="RelatedId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExpenseTypeByTable" nillable="true" type="tns:ExpenseTypeByTable" />
+  <xs:complexType name="ExpenseTypeByTableKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://accipiens.com/Common" base="q2:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplTableId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ExpenseTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="RelatedId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExpenseTypeByTableKey" nillable="true" type="tns:ExpenseTypeByTableKey" />
+  <xs:simpleType name="ExpenseTypeByTableDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExpenseTypeByTableDetail" nillable="true" type="tns:ExpenseTypeByTableDetail" />
+  <xs:simpleType name="ExpenseTypeByTableField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AplTableId" />
+      <xs:enumeration value="RelatedId" />
+      <xs:enumeration value="ExpenseTypeId" />
+      <xs:enumeration value="IsDefault" />
+      <xs:enumeration value="IsBinding" />
+      <xs:enumeration value="IsInvoicedOnAutAction" />
+      <xs:enumeration value="IsToFinance" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExpenseTypeByTableField" nillable="true" type="tns:ExpenseTypeByTableField" />
+  <xs:complexType name="ArrayOfExpenseTypeByTableField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExpenseTypeByTableField" type="tns:ExpenseTypeByTableField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExpenseTypeByTableField" nillable="true" type="tns:ArrayOfExpenseTypeByTableField" />
+  <xs:complexType name="OperType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://accipiens.com/Common" base="q3:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AccountSuffix" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AplBusinessId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AplBusinessLineId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AplCompanyId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DelayInterestRateId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FetchLevel" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="InvalidDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:OperTypeKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:OperTypeDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:OperTypeField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfOperTypeField" />
+          <xs:element minOccurs="0" name="NumerationId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperType" nillable="true" type="tns:OperType" />
+  <xs:complexType name="OperTypeKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://accipiens.com/Common" base="q4:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AplBusinessId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AplCompanyId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperTypeKey" nillable="true" type="tns:OperTypeKey" />
+  <xs:simpleType name="OperTypeDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="OperTypeDetail" nillable="true" type="tns:OperTypeDetail" />
+  <xs:simpleType name="OperTypeField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="Abrev" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="AplCompanyId" />
+      <xs:enumeration value="AplBusinessId" />
+      <xs:enumeration value="FetchLevel" />
+      <xs:enumeration value="InvalidDate" />
+      <xs:enumeration value="NumerationId" />
+      <xs:enumeration value="DelayInterestRateId" />
+      <xs:enumeration value="AccountSuffix" />
+      <xs:enumeration value="AplBusinessLineId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="OperTypeField" nillable="true" type="tns:OperTypeField" />
+  <xs:complexType name="ArrayOfOperTypeField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OperTypeField" type="tns:OperTypeField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOperTypeField" nillable="true" type="tns:ArrayOfOperTypeField" />
+</xs:schema>

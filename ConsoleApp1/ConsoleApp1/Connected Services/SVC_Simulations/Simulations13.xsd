@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://accipiens.com/BusinessFramework" elementFormDefault="qualified" targetNamespace="http://accipiens.com/BusinessFramework" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?xsd=xsd3" namespace="http://accipiens.com/Common" />
+  <xs:complexType name="ArrayOfFinValueDependency">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinValueDependency" nillable="true" type="tns:FinValueDependency" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinValueDependency" nillable="true" type="tns:ArrayOfFinValueDependency" />
+  <xs:complexType name="FinValueDependency">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://accipiens.com/Common" base="q1:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplTableId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AssetUsage" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="FinancialProductId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="InitialEntryPercentage" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:FinValueDependencyKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:FinValueDependencyDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:FinValueDependencyField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfFinValueDependencyField" />
+          <xs:element minOccurs="0" name="RelatedId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Term" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TylaCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinValueDependency" nillable="true" type="tns:FinValueDependency" />
+  <xs:complexType name="FinValueDependencyKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://accipiens.com/Common" base="q2:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplTableId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="RelatedId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinValueDependencyKey" nillable="true" type="tns:FinValueDependencyKey" />
+  <xs:simpleType name="FinValueDependencyDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinValueDependencyDetail" nillable="true" type="tns:FinValueDependencyDetail" />
+  <xs:simpleType name="FinValueDependencyField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AplTableId" />
+      <xs:enumeration value="RelatedId" />
+      <xs:enumeration value="Term" />
+      <xs:enumeration value="AssetUsage" />
+      <xs:enumeration value="FinancialProductId" />
+      <xs:enumeration value="InitialEntryPercentage" />
+      <xs:enumeration value="TylaCode" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinValueDependencyField" nillable="true" type="tns:FinValueDependencyField" />
+  <xs:complexType name="ArrayOfFinValueDependencyField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinValueDependencyField" type="tns:FinValueDependencyField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinValueDependencyField" nillable="true" type="tns:ArrayOfFinValueDependencyField" />
+  <xs:complexType name="FinDateCalcInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Day" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FinDateCalcInfo" nillable="true" type="tns:FinDateCalcInfo" />
+</xs:schema>

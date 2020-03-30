@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3ddddd93-e2b1-4c03-b34a-48535bfd18a1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://accipiens.vtxrm.pt/AccipienswebservicesTraining/OperationsWebServices/Services/CreditOperationsConfig.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CreditOperationsConfig.xsd" MetadataType="Schema" ID="86e4ddb4-a22d-4d39-8a26-49c08d6be3ad" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Services/CreditOperationsConfig.svc?xsd=xsd3" />
+    <MetadataFile FileName="CreditOperationsConfig1.xsd" MetadataType="Schema" ID="ae94a86e-3b5a-4787-877e-52b2b0ca7599" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Services/CreditOperationsConfig.svc?xsd=xsd8" />
+    <MetadataFile FileName="CreditOperationsConfig.wsdl" MetadataType="Wsdl" ID="8e4744f9-83e1-43fa-884f-a67b54257efb" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Services/CreditOperationsConfig.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="CreditOperationsConfig2.xsd" MetadataType="Schema" ID="e05e3cda-ec70-46d4-bc34-aeeb77aec336" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Services/CreditOperationsConfig.svc?xsd=xsd1" />
+    <MetadataFile FileName="CreditOperationsConfig1.wsdl" MetadataType="Wsdl" ID="b586422a-e83e-413b-9d1f-229696b2de3f" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/AccipienswebservicesTraining/OperationsWebServices/Services/CreditOperationsConfig.svc?wsdl" />
+    <MetadataFile FileName="CreditOperationsConfig3.xsd" MetadataType="Schema" ID="6cf6a078-3e46-491c-ac66-04ea13e287fd" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Services/CreditOperationsConfig.svc?xsd=xsd0" />
+    <MetadataFile FileName="CreditOperationsConfig4.xsd" MetadataType="Schema" ID="786d0daf-4547-45b0-ae6a-a9f049185242" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Services/CreditOperationsConfig.svc?xsd=xsd2" />
+    <MetadataFile FileName="CreditOperationsConfig5.xsd" MetadataType="Schema" ID="5637f22b-990a-4018-b499-2e6dab4bf72d" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Services/CreditOperationsConfig.svc?xsd=xsd5" />
+    <MetadataFile FileName="CreditOperationsConfig6.xsd" MetadataType="Schema" ID="f054b0bd-6ea2-4f7f-89ac-d41d5ec0d285" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Services/CreditOperationsConfig.svc?xsd=xsd4" />
+    <MetadataFile FileName="CreditOperationsConfig7.xsd" MetadataType="Schema" ID="cc97fd7a-b640-42a5-834f-6b2026b6fd94" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Services/CreditOperationsConfig.svc?xsd=xsd7" />
+    <MetadataFile FileName="CreditOperationsConfig8.xsd" MetadataType="Schema" ID="6b08187b-d722-4056-a959-8695532cdbfc" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Services/CreditOperationsConfig.svc?xsd=xsd6" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

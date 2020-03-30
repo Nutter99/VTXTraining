@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://accipiens.com/Common" elementFormDefault="qualified" targetNamespace="http://accipiens.com/Common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/SecurityWebServices/Logon.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/SecurityWebServices/Logon.svc?xsd=xsd3" namespace="http://accipiens.com/VirtualData" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/SecurityWebServices/Logon.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="AcpDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorList" nillable="true" type="tns:ArrayOfBusinessError" />
+      <xs:element minOccurs="0" name="Kind" type="tns:ExceptionKind" />
+      <xs:element minOccurs="0" name="Machine" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MessageAll" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MessageAllWithTech" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OperationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServerFolder" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServerVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServiceName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ToStringDetails" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcpDetail" nillable="true" type="tns:AcpDetail" />
+  <xs:complexType name="ArrayOfBusinessError">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BusinessError" nillable="true" type="tns:BusinessError" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBusinessError" nillable="true" type="tns:ArrayOfBusinessError" />
+  <xs:complexType name="BusinessError">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Context" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExtraInfo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Field" type="xs:int" />
+      <xs:element minOccurs="0" name="FieldName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HideResultCode" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecordIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="RelatedAplTableId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="RelatedId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="RelatedUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Result" type="tns:ValidationResultCode" />
+      <xs:element minOccurs="0" name="RscCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RscEnumTypeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TechMsg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Translated" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusinessError" nillable="true" type="tns:BusinessError" />
+  <xs:simpleType name="ValidationResultCode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Warning" />
+      <xs:enumeration value="Error" />
+      <xs:enumeration value="Info" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ValidationResultCode" nillable="true" type="tns:ValidationResultCode" />
+  <xs:simpleType name="ExceptionKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Business" />
+      <xs:enumeration value="Technical" />
+      <xs:enumeration value="System" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExceptionKind" nillable="true" type="tns:ExceptionKind" />
+  <xs:complexType name="AboutVersion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Machine" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Version" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AboutVersion" nillable="true" type="tns:AboutVersion" />
+  <xs:complexType name="SystemDatabaseInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DatabaseDateMaxValue" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DatabaseDateMinValue" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SystemDatabaseInfo" nillable="true" type="tns:SystemDatabaseInfo" />
+  <xs:complexType name="LoginExtraInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CallerApplicationDir" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CallerApplicationId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CallerHostName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CallerVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GetFailedLoginCount" type="xs:boolean" />
+      <xs:element minOccurs="0" name="GetFailedLoginInfo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NewUserCulture" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NewUserPwd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NewUserUICulture" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SessionCulture" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SessionUICulture" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserHostAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserMachine" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserSid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LoginExtraInfo" nillable="true" type="tns:LoginExtraInfo" />
+  <xs:complexType name="CacheSyncCfgInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CurrentSyncId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsLogActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PoolingSecs" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CacheSyncCfgInfo" nillable="true" type="tns:CacheSyncCfgInfo" />
+  <xs:simpleType name="CacheKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ConfigBE" />
+      <xs:enumeration value="PermissionsBE" />
+      <xs:enumeration value="DocumentsBE" />
+      <xs:enumeration value="AplConstraintsBE" />
+      <xs:enumeration value="ResourcesBE" />
+      <xs:enumeration value="ConfigFE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PermissionsFE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DocumentsFE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">12</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Menus">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">13</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="FavoriteMenus">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">14</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AplConstraintsFE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">15</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ResourcesFE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">16</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CacheKind" nillable="true" type="tns:CacheKind" />
+  <xs:simpleType name="CacheSuperType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CacheBackEnd" />
+      <xs:enumeration value="CacheFrontEnd" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CacheSuperType" nillable="true" type="tns:CacheSuperType" />
+  <xs:complexType name="ArrayOfCacheKind">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CacheKind" type="tns:CacheKind" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCacheKind" nillable="true" type="tns:ArrayOfCacheKind" />
+  <xs:complexType name="BusinessEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContainerId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContainerIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="FieldStates" nillable="true" type="tns:ArrayOfRecordFieldState" />
+      <xs:element xmlns:q1="http://accipiens.com/VirtualData" minOccurs="0" name="ModifiedValues" nillable="true" type="q1:ArrayOfAplTableAuditValue" />
+      <xs:element minOccurs="0" name="Permissions" nillable="true" type="tns:PermissionInfo" />
+      <xs:element minOccurs="0" name="Status" type="tns:InstanceStatus" />
+      <xs:element xmlns:q2="http://accipiens.com/VirtualData" minOccurs="0" name="TableData" nillable="true" type="q2:ArrayOfAplTableData" />
+      <xs:element minOccurs="0" name="Warnings" nillable="true" type="tns:ArrayOfValidationResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusinessEntity" nillable="true" type="tns:BusinessEntity" />
+  <xs:complexType name="ArrayOfRecordFieldState">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RecordFieldState" nillable="true" type="tns:RecordFieldState" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRecordFieldState" nillable="true" type="tns:ArrayOfRecordFieldState" />
+  <xs:complexType name="RecordFieldState">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AplApplicationId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="AplScreenId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="AplTableId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="FieldId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="IsObligatory" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsReadOnly" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RecordId" nillable="true" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RecordFieldState" nillable="true" type="tns:RecordFieldState" />
+  <xs:complexType name="BusinessEntityKey">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="BusinessEntityKey" nillable="true" type="tns:BusinessEntityKey" />
+  <xs:complexType name="PermissionInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Permissions" type="tns:PermissionFlags" />
+      <xs:element minOccurs="0" name="Reason" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Reasons" nillable="true" type="q3:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PermissionInfo" nillable="true" type="tns:PermissionInfo" />
+  <xs:simpleType name="PermissionFlags">
+    <xs:list>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="None">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="CanRead">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="CanCreate">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="CanModify">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="CanDelete">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="CanExecute">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">16</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="CanModifyTableData">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">32</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:list>
+  </xs:simpleType>
+  <xs:element name="PermissionFlags" nillable="true" type="tns:PermissionFlags" />
+  <xs:simpleType name="InstanceStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unchanged">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Insert">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Delete">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Update">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="InstanceStatus" nillable="true" type="tns:InstanceStatus" />
+  <xs:complexType name="ArrayOfValidationResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ValidationResult" nillable="true" type="tns:ValidationResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfValidationResult" nillable="true" type="tns:ArrayOfValidationResult" />
+  <xs:complexType name="ValidationResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BusinessError">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Index" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ValidationResult" nillable="true" type="tns:ValidationResult" />
+  <xs:complexType name="LoginInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CallerHostAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FailedLoginCount" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FailedLoginMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FailedLoginReason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FailedLoginReasonAsEnum" nillable="true" type="tns:FailedLoginReasonKind" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="IsBlocked" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MaxLoginTryCount" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MustChangePwd" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PwdExpireDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PwdExpireDays" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PwdExpireDaysConfig" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SessionToken" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StubsCacheDisabled" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UserAbrev" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserCulture" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserFullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserLogin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserSid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserUICulture" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WarnDaysBeforePwdExpireConfig" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LoginInfo" nillable="true" type="tns:LoginInfo" />
+  <xs:simpleType name="FailedLoginReasonKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Other" />
+      <xs:enumeration value="BadLogin" />
+      <xs:enumeration value="BadPassword" />
+      <xs:enumeration value="BadPasswordNtriesLeft" />
+      <xs:enumeration value="BadPasswordBlocked" />
+      <xs:enumeration value="NoPermissionToLoginCustomUsers" />
+      <xs:enumeration value="NoPermissionToUseApplication" />
+      <xs:enumeration value="UserPasswordExpiredAt" />
+      <xs:enumeration value="UserLoginNotAllowedForApplication" />
+      <xs:enumeration value="UserLoginNotAllowedForUnknownApplication" />
+      <xs:enumeration value="UserIsBlocked" />
+      <xs:enumeration value="CannotChangePwd" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FailedLoginReasonKind" nillable="true" type="tns:FailedLoginReasonKind" />
+  <xs:complexType name="RecoverPwdResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FailedLoginCount" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FailedRecoverPwdMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FailedRecoverPwdReason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FailedRecoverPwdReasonAsEnum" nillable="true" type="tns:FailedRecoverPwdReasonKind" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="IsBlocked" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MaxLoginTryCount" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MustChangePwd" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PwdExpireDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PwdExpireDays" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PwdExpireDaysConfig" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SessionToken" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserCulture" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserFullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserSid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserUICulture" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WarnDaysBeforePwdExpireConfig" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RecoverPwdResult" nillable="true" type="tns:RecoverPwdResult" />
+  <xs:simpleType name="FailedRecoverPwdReasonKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Other" />
+      <xs:enumeration value="NoPermissionToLoginCustomUsers" />
+      <xs:enumeration value="CannotChangePasswordForUserType" />
+      <xs:enumeration value="UserAsNoMailAddress" />
+      <xs:enumeration value="CannotGeneratePwd" />
+      <xs:enumeration value="UserIsBlocked" />
+      <xs:enumeration value="CannotRecoverPasswordBadUserOrMail" />
+      <xs:enumeration value="ErrorSendingMailWithSubject" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FailedRecoverPwdReasonKind" nillable="true" type="tns:FailedRecoverPwdReasonKind" />
+</xs:schema>

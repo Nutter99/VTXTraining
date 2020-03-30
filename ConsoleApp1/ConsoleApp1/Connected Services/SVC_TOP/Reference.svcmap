@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="86fa0440-27bb-4e65-8add-6392786bbeba" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Top.xsd" MetadataType="Schema" ID="ef5a5c3f-d45a-4d34-b8d7-e7316b6cfe55" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd12" />
+    <MetadataFile FileName="Top1.xsd" MetadataType="Schema" ID="f31133fd-e8f9-4d67-882f-8a4d522ec85b" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd7" />
+    <MetadataFile FileName="Top2.xsd" MetadataType="Schema" ID="395af6c8-60f1-4c46-bcff-93957aa6dd5a" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd3" />
+    <MetadataFile FileName="Top3.xsd" MetadataType="Schema" ID="be9ed29d-e093-4d43-b324-360da829d2a8" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd14" />
+    <MetadataFile FileName="Top4.xsd" MetadataType="Schema" ID="9006c847-db36-4fcf-a49b-3a270f775dc2" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd11" />
+    <MetadataFile FileName="Top5.xsd" MetadataType="Schema" ID="79c2d976-ec01-4dc3-ad5e-134c772e037a" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd4" />
+    <MetadataFile FileName="Top6.xsd" MetadataType="Schema" ID="30900ee9-863b-4ba0-9589-cd945e45a738" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd0" />
+    <MetadataFile FileName="Top7.xsd" MetadataType="Schema" ID="24a5283c-25ef-4a2f-b52b-caf85a4cb018" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd8" />
+    <MetadataFile FileName="Top8.xsd" MetadataType="Schema" ID="8e353be0-fb1a-40b0-abec-a3da65c7e0e5" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd10" />
+    <MetadataFile FileName="Top.wsdl" MetadataType="Wsdl" ID="9c0f05bd-a3bb-4d34-a581-b4f6c6c97235" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?wsdl" />
+    <MetadataFile FileName="Top9.xsd" MetadataType="Schema" ID="f9556b19-10e9-40ce-beba-70450b12a35a" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd5" />
+    <MetadataFile FileName="Top10.xsd" MetadataType="Schema" ID="386eaeb5-02b5-46cc-9489-07c05cc070ad" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd1" />
+    <MetadataFile FileName="Top11.xsd" MetadataType="Schema" ID="1c0750d2-1c51-4ec2-bcb0-adb88d800c2c" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd9" />
+    <MetadataFile FileName="Top1.wsdl" MetadataType="Wsdl" ID="01c2dba8-1b19-4a70-905c-984f2bd96897" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="Top12.xsd" MetadataType="Schema" ID="9abb0ff4-0c60-4735-a405-7128a51aa381" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd6" />
+    <MetadataFile FileName="Top13.xsd" MetadataType="Schema" ID="f7826d67-6763-47a7-a7f1-8d80ea77f048" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd2" />
+    <MetadataFile FileName="Top14.xsd" MetadataType="Schema" ID="f40d8e29-2948-4e5f-8348-a91d4c499bb8" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd13" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

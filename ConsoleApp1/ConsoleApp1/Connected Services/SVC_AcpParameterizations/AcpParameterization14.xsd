@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://accipiens.com/BusinessFramework" elementFormDefault="qualified" targetNamespace="http://accipiens.com/BusinessFramework" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="FinRatesDefinitionsIndicator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ImplicitRate" />
+      <xs:enumeration value="IRR" />
+      <xs:enumeration value="ERR" />
+      <xs:enumeration value="IAS" />
+      <xs:enumeration value="EAR" />
+      <xs:enumeration value="GIRR" />
+      <xs:enumeration value="GlobalMargin" />
+      <xs:enumeration value="PCR" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinRatesDefinitionsIndicator" nillable="true" type="tns:FinRatesDefinitionsIndicator" />
+</xs:schema>

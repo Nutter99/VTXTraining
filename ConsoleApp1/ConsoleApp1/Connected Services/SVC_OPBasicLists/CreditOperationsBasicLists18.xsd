@@ -1,0 +1,1523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://accipiens.com/AcpDocuments" elementFormDefault="qualified" targetNamespace="http://accipiens.com/AcpDocuments" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd14" namespace="http://accipiens.com/Entities" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd3" namespace="http://accipiens.com/Common" />
+  <xs:complexType name="ArrayOfEventManagement">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EventManagement" nillable="true" type="tns:EventManagement" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEventManagement" nillable="true" type="tns:ArrayOfEventManagement" />
+  <xs:complexType name="EventManagement">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://accipiens.com/Common" base="q1:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddressId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AplBusinessId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AplTableId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AplUserId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AutUserStateId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ConformedAplUserId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ConformedMoment" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DepartmentStructNodeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocManageTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DocManagementId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="DocManager" nillable="true" type="tns:DocManagement" />
+          <xs:element minOccurs="0" name="Document" nillable="true" type="tns:PhysicalDoc" />
+          <xs:element minOccurs="0" name="DueDate" nillable="true" type="xs:dateTime" />
+          <xs:element xmlns:q2="http://accipiens.com/Entities" minOccurs="0" name="Entity" nillable="true" type="q2:Entity" />
+          <xs:element minOccurs="0" name="EntityId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="EventActionTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="EventDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EventMoment" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EventTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ExpenseTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ExternalReference" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HasOcurred" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="IsConformed" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsDocAssociated" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsObligatory" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:EventManagementKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:EventManagementDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:EventManagementField" />
+          <xs:element minOccurs="0" name="LocalStructNodeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="LotDocument" nillable="true" type="tns:DocLotDocument" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfEventManagementField" />
+          <xs:element minOccurs="0" name="OccurredMoment" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OccurrenceTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="OperNumber" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="OperType" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PersonStructNodeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PhysicalDocExpenseReasonId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PhysicalDocId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ReferenceCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReferenceDescr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RelatedId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ShowToUser" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="StateDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ValidityDate" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EventManagement" nillable="true" type="tns:EventManagement" />
+  <xs:complexType name="DocManagement">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://accipiens.com/Common" base="q3:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplTableId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AutUserStateId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="DocManageTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Documents" nillable="true" type="tns:ArrayOfEventManagement" />
+          <xs:element minOccurs="0" name="Events" nillable="true" type="tns:ArrayOfEventManagement" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:DocManagementKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:DocManagementDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:DocManagementField" />
+          <xs:element minOccurs="0" name="LotDocuments" nillable="true" type="tns:ArrayOfDocLotDocument" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfDocManagementField" />
+          <xs:element minOccurs="0" name="Occurrences" nillable="true" type="tns:ArrayOfEventManagement" />
+          <xs:element minOccurs="0" name="ParentAplTableId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ParentRelatedId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="RelatedId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="StateDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Type" nillable="true" type="tns:DocManageType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DocManagement" nillable="true" type="tns:DocManagement" />
+  <xs:complexType name="DocManagementKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://accipiens.com/Common" base="q4:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplTableId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="DocManageTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ParentAplTableId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ParentRelatedId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="RelatedId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DocManagementKey" nillable="true" type="tns:DocManagementKey" />
+  <xs:simpleType name="DocManagementDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Document" />
+      <xs:enumeration value="Occurrence" />
+      <xs:enumeration value="Type" />
+      <xs:enumeration value="Event" />
+      <xs:enumeration value="LotDocument" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DocManagementDetail" nillable="true" type="tns:DocManagementDetail" />
+  <xs:simpleType name="DocManagementField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="DocManageTypeId" />
+      <xs:enumeration value="AutUserStateId" />
+      <xs:enumeration value="StateDate" />
+      <xs:enumeration value="RelatedId" />
+      <xs:enumeration value="AplTableId" />
+      <xs:enumeration value="ParentRelatedId" />
+      <xs:enumeration value="ParentAplTableId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DocManagementField" nillable="true" type="tns:DocManagementField" />
+  <xs:complexType name="ArrayOfDocLotDocument">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocLotDocument" nillable="true" type="tns:DocLotDocument" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocLotDocument" nillable="true" type="tns:ArrayOfDocLotDocument" />
+  <xs:complexType name="DocLotDocument">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://accipiens.com/Common" base="q5:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DocLotId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="DocManagementId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="EventManagement" nillable="true" type="tns:EventManagement" />
+          <xs:element minOccurs="0" name="EventManagementId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:DocLotDocumentKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:DocLotDocumentDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:DocLotDocumentField" />
+          <xs:element minOccurs="0" name="Lot" nillable="true" type="tns:DocLot" />
+          <xs:element minOccurs="0" name="LotState" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LotStateDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfDocLotDocumentField" />
+          <xs:element minOccurs="0" name="Observations" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DocLotDocument" nillable="true" type="tns:DocLotDocument" />
+  <xs:complexType name="DocLotDocumentKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://accipiens.com/Common" base="q6:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DocLotDocumentKey" nillable="true" type="tns:DocLotDocumentKey" />
+  <xs:simpleType name="DocLotDocumentDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Lot" />
+      <xs:enumeration value="EventManagement" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DocLotDocumentDetail" nillable="true" type="tns:DocLotDocumentDetail" />
+  <xs:simpleType name="DocLotDocumentField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="DocLotId" />
+      <xs:enumeration value="EventManagementId" />
+      <xs:enumeration value="LotState" />
+      <xs:enumeration value="LotStateDate" />
+      <xs:enumeration value="Observations" />
+      <xs:enumeration value="DocManagementId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DocLotDocumentField" nillable="true" type="tns:DocLotDocumentField" />
+  <xs:complexType name="DocLot">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://accipiens.com/Common" base="q7:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplCompanyId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AutUserStateId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="DocLotTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Documents" nillable="true" type="tns:ArrayOfDocLotDocument" />
+          <xs:element minOccurs="0" name="Entities" nillable="true" type="tns:ArrayOfDocLotEntity" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:DocLotKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:DocLotDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:DocLotField" />
+          <xs:element minOccurs="0" name="LotNumber" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfDocLotField" />
+          <xs:element minOccurs="0" name="NumOfDocuments" type="xs:int" />
+          <xs:element minOccurs="0" name="NumOfOperations" type="xs:int" />
+          <xs:element minOccurs="0" name="NumberIssued" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="StateDate" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DocLot" nillable="true" type="tns:DocLot" />
+  <xs:complexType name="ArrayOfDocLotEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocLotEntity" nillable="true" type="tns:DocLotEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocLotEntity" nillable="true" type="tns:ArrayOfDocLotEntity" />
+  <xs:complexType name="DocLotEntity">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://accipiens.com/Common" base="q8:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DocLotId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="EntityId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="EntityRoleTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:DocLotEntityKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:DocLotEntityDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:DocLotEntityField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfDocLotEntityField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DocLotEntity" nillable="true" type="tns:DocLotEntity" />
+  <xs:complexType name="DocLotEntityKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://accipiens.com/Common" base="q9:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DocLotEntityKey" nillable="true" type="tns:DocLotEntityKey" />
+  <xs:simpleType name="DocLotEntityDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DocLotEntityDetail" nillable="true" type="tns:DocLotEntityDetail" />
+  <xs:simpleType name="DocLotEntityField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="EntityRoleTypeId" />
+      <xs:enumeration value="EntityId" />
+      <xs:enumeration value="DocLotId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DocLotEntityField" nillable="true" type="tns:DocLotEntityField" />
+  <xs:complexType name="ArrayOfDocLotEntityField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocLotEntityField" type="tns:DocLotEntityField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocLotEntityField" nillable="true" type="tns:ArrayOfDocLotEntityField" />
+  <xs:complexType name="DocLotKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://accipiens.com/Common" base="q10:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DocLotKey" nillable="true" type="tns:DocLotKey" />
+  <xs:simpleType name="DocLotDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Entity" />
+      <xs:enumeration value="Document" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DocLotDetail" nillable="true" type="tns:DocLotDetail" />
+  <xs:simpleType name="DocLotField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AplCompanyId" />
+      <xs:enumeration value="DocLotTypeId" />
+      <xs:enumeration value="AutUserStateId" />
+      <xs:enumeration value="StateDate" />
+      <xs:enumeration value="LotNumber" />
+      <xs:enumeration value="NumberIssued" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DocLotField" nillable="true" type="tns:DocLotField" />
+  <xs:complexType name="ArrayOfDocLotField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocLotField" type="tns:DocLotField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocLotField" nillable="true" type="tns:ArrayOfDocLotField" />
+  <xs:complexType name="ArrayOfDocLotDocumentField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocLotDocumentField" type="tns:DocLotDocumentField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocLotDocumentField" nillable="true" type="tns:ArrayOfDocLotDocumentField" />
+  <xs:complexType name="ArrayOfDocManagementField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocManagementField" type="tns:DocManagementField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocManagementField" nillable="true" type="tns:ArrayOfDocManagementField" />
+  <xs:complexType name="DocManageType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://accipiens.com/Common" base="q11:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AplTableId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AutUserStateId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AutomatonId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Businesses" nillable="true" type="tns:ArrayOfDocManageTypeBusiness" />
+          <xs:element minOccurs="0" name="Documents" nillable="true" type="tns:ArrayOfDocManagementTypeDoc" />
+          <xs:element minOccurs="0" name="EventTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:DocManageTypeKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:DocManageTypeDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:DocManageTypeField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfDocManageTypeField" />
+          <xs:element minOccurs="0" name="Occurrences" nillable="true" type="tns:ArrayOfDocManageTypeOccurrence" />
+          <xs:element minOccurs="0" name="ParentAplTableId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DocManageType" nillable="true" type="tns:DocManageType" />
+  <xs:complexType name="ArrayOfDocManageTypeBusiness">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocManageTypeBusiness" nillable="true" type="tns:DocManageTypeBusiness" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocManageTypeBusiness" nillable="true" type="tns:ArrayOfDocManageTypeBusiness" />
+  <xs:complexType name="DocManageTypeBusiness">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://accipiens.com/Common" base="q12:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplBusinessId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DocManageTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:DocManageTypeBusinessKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:DocManageTypeBusinessDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:DocManageTypeBusinessField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfDocManageTypeBusinessField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DocManageTypeBusiness" nillable="true" type="tns:DocManageTypeBusiness" />
+  <xs:complexType name="DocManageTypeBusinessKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://accipiens.com/Common" base="q13:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplBusinessId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DocManageTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DocManageTypeBusinessKey" nillable="true" type="tns:DocManageTypeBusinessKey" />
+  <xs:simpleType name="DocManageTypeBusinessDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DocManageTypeBusinessDetail" nillable="true" type="tns:DocManageTypeBusinessDetail" />
+  <xs:simpleType name="DocManageTypeBusinessField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="DocManageTypeId" />
+      <xs:enumeration value="AplBusinessId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DocManageTypeBusinessField" nillable="true" type="tns:DocManageTypeBusinessField" />
+  <xs:complexType name="ArrayOfDocManageTypeBusinessField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocManageTypeBusinessField" type="tns:DocManageTypeBusinessField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocManageTypeBusinessField" nillable="true" type="tns:ArrayOfDocManageTypeBusinessField" />
+  <xs:complexType name="ArrayOfDocManagementTypeDoc">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocManagementTypeDoc" nillable="true" type="tns:DocManagementTypeDoc" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocManagementTypeDoc" nillable="true" type="tns:ArrayOfDocManagementTypeDoc" />
+  <xs:complexType name="DocManagementTypeDoc">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://accipiens.com/Common" base="q14:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DocManageTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="EventActionTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="EventDocContextId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IsDefault" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsObligatory" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:DocManagementTypeDocKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:DocManagementTypeDocDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:DocManagementTypeDocField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfDocManagementTypeDocField" />
+          <xs:element minOccurs="0" name="PhysicalDocId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DocManagementTypeDoc" nillable="true" type="tns:DocManagementTypeDoc" />
+  <xs:complexType name="DocManagementTypeDocKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://accipiens.com/Common" base="q15:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DocManageTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PhysicalDocId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DocManagementTypeDocKey" nillable="true" type="tns:DocManagementTypeDocKey" />
+  <xs:simpleType name="DocManagementTypeDocDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DocManagementTypeDocDetail" nillable="true" type="tns:DocManagementTypeDocDetail" />
+  <xs:simpleType name="DocManagementTypeDocField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DocManageTypeId" />
+      <xs:enumeration value="PhysicalDocId" />
+      <xs:enumeration value="IsDefault" />
+      <xs:enumeration value="EventActionTypeId" />
+      <xs:enumeration value="EventDocContextId" />
+      <xs:enumeration value="IsObligatory" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DocManagementTypeDocField" nillable="true" type="tns:DocManagementTypeDocField" />
+  <xs:complexType name="ArrayOfDocManagementTypeDocField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocManagementTypeDocField" type="tns:DocManagementTypeDocField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocManagementTypeDocField" nillable="true" type="tns:ArrayOfDocManagementTypeDocField" />
+  <xs:complexType name="DocManageTypeKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://accipiens.com/Common" base="q16:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DocManageTypeKey" nillable="true" type="tns:DocManageTypeKey" />
+  <xs:simpleType name="DocManageTypeDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Document" />
+      <xs:enumeration value="Occurrence" />
+      <xs:enumeration value="Business" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DocManageTypeDetail" nillable="true" type="tns:DocManageTypeDetail" />
+  <xs:simpleType name="DocManageTypeField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="Abrev" />
+      <xs:enumeration value="AutomatonId" />
+      <xs:enumeration value="EventTypeId" />
+      <xs:enumeration value="AutUserStateId" />
+      <xs:enumeration value="AplTableId" />
+      <xs:enumeration value="ParentAplTableId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DocManageTypeField" nillable="true" type="tns:DocManageTypeField" />
+  <xs:complexType name="ArrayOfDocManageTypeField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocManageTypeField" type="tns:DocManageTypeField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocManageTypeField" nillable="true" type="tns:ArrayOfDocManageTypeField" />
+  <xs:complexType name="ArrayOfDocManageTypeOccurrence">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocManageTypeOccurrence" nillable="true" type="tns:DocManageTypeOccurrence" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocManageTypeOccurrence" nillable="true" type="tns:ArrayOfDocManageTypeOccurrence" />
+  <xs:complexType name="DocManageTypeOccurrence">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://accipiens.com/Common" base="q17:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DocManageTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:DocManageTypeOccurrenceKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:DocManageTypeOccurrenceDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:DocManageTypeOccurrenceField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfDocManageTypeOccurrenceField" />
+          <xs:element minOccurs="0" name="OccurrenceTypeId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DocManageTypeOccurrence" nillable="true" type="tns:DocManageTypeOccurrence" />
+  <xs:complexType name="DocManageTypeOccurrenceKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://accipiens.com/Common" base="q18:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DocManageTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="OccurrenceTypeId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DocManageTypeOccurrenceKey" nillable="true" type="tns:DocManageTypeOccurrenceKey" />
+  <xs:simpleType name="DocManageTypeOccurrenceDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DocManageTypeOccurrenceDetail" nillable="true" type="tns:DocManageTypeOccurrenceDetail" />
+  <xs:simpleType name="DocManageTypeOccurrenceField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OccurrenceTypeId" />
+      <xs:enumeration value="DocManageTypeId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DocManageTypeOccurrenceField" nillable="true" type="tns:DocManageTypeOccurrenceField" />
+  <xs:complexType name="ArrayOfDocManageTypeOccurrenceField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocManageTypeOccurrenceField" type="tns:DocManageTypeOccurrenceField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocManageTypeOccurrenceField" nillable="true" type="tns:ArrayOfDocManageTypeOccurrenceField" />
+  <xs:complexType name="PhysicalDoc">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://accipiens.com/Common" base="q19:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AggregateDocs" nillable="true" type="tns:ArrayOfPhysicalDocAggregate" />
+          <xs:element minOccurs="0" name="AplReferenceTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AplTableId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AplTaskId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Applications" nillable="true" type="tns:ArrayOfPhysicalDocApplication" />
+          <xs:element minOccurs="0" name="ArchiveKeyTypes" nillable="true" type="tns:ArrayOfPhysicalDocArchiveKeyType" />
+          <xs:element minOccurs="0" name="ArchiveOnlyOnce" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AutomatonId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="BlockSize" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Businesses" nillable="true" type="tns:ArrayOfPhysicalDocBusiness" />
+          <xs:element minOccurs="0" name="DefaultEntityId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocAlerts" nillable="true" type="tns:ArrayOfPhysicalDocAlert" />
+          <xs:element minOccurs="0" name="EntityAplStatementId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ExpenseReasons" nillable="true" type="tns:ArrayOfPhysicalDocPDExpenseReason" />
+          <xs:element minOccurs="0" name="ExpenseTypes" nillable="true" type="tns:ArrayOfPhysicalDocExpenseType" />
+          <xs:element minOccurs="0" name="FetchLevel" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FolderStructNodeTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Formats" nillable="true" type="tns:ArrayOfPhysicalDocPDFormat" />
+          <xs:element minOccurs="0" name="HasAuditing" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="InternalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InvalidDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IsDocManagementRelated" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsExpenseMandatory" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsHidden" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsToArchive" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsToCertifyPDF" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsVisibleInAuditing" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IssueAplStatementId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="IssueOnlyFromArchive" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IssueUseArchiveKindId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:PhysicalDocKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:PhysicalDocDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:PhysicalDocField" />
+          <xs:element minOccurs="0" name="MailAplStatementId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="MasterAggregates" nillable="true" type="tns:ArrayOfPhysicalDocAggregate" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfPhysicalDocField" />
+          <xs:element minOccurs="0" name="NumOfCopiesDefault" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="OnlySingleIssue" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OutputDataAplStatementId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="OutputDataDefault" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OutputPhysicalDocFormatId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="OutputTypes" nillable="true" type="tns:ArrayOfPhysicalDocPDOutputType" />
+          <xs:element minOccurs="0" name="Outputs" nillable="true" type="tns:ArrayOfPhysicalDocOutput" />
+          <xs:element minOccurs="0" name="PhysicalDocContextId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PhysicalDocGroupId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PhysicalDocOutputTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PhysicalDocTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="RelatedPhysicalDocId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ReportPhysicalLocation" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReportServerTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ReportServerTypeInfo" nillable="true" type="tns:ReportServerType" />
+          <xs:element minOccurs="0" name="RowVersion" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="Tags" nillable="true" type="tns:ArrayOfPhysicalDocTag" />
+          <xs:element minOccurs="0" name="TemplatePhysicalLocation" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ThumbnailPage" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TimeOut" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TraceableStructNodeTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ValidateAplStatementId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="WorkItemTypes" nillable="true" type="tns:ArrayOfPhysicalDocWorkItemType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PhysicalDoc" nillable="true" type="tns:PhysicalDoc" />
+  <xs:complexType name="ArrayOfPhysicalDocAggregate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalDocAggregate" nillable="true" type="tns:PhysicalDocAggregate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalDocAggregate" nillable="true" type="tns:ArrayOfPhysicalDocAggregate" />
+  <xs:complexType name="PhysicalDocAggregate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q20="http://accipiens.com/Common" base="q20:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AggregateOrder" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DetailPhysicalDocId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="HasAuditing" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:PhysicalDocAggregateKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:PhysicalDocAggregateDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:PhysicalDocAggregateField" />
+          <xs:element minOccurs="0" name="MainPhysicalDocId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfPhysicalDocAggregateField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PhysicalDocAggregate" nillable="true" type="tns:PhysicalDocAggregate" />
+  <xs:complexType name="PhysicalDocAggregateKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q21="http://accipiens.com/Common" base="q21:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PhysicalDocAggregateKey" nillable="true" type="tns:PhysicalDocAggregateKey" />
+  <xs:simpleType name="PhysicalDocAggregateDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PhysicalDocAggregateDetail" nillable="true" type="tns:PhysicalDocAggregateDetail" />
+  <xs:simpleType name="PhysicalDocAggregateField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AggregateOrder" />
+      <xs:enumeration value="MainPhysicalDocId" />
+      <xs:enumeration value="DetailPhysicalDocId" />
+      <xs:enumeration value="HasAuditing" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PhysicalDocAggregateField" nillable="true" type="tns:PhysicalDocAggregateField" />
+  <xs:complexType name="ArrayOfPhysicalDocAggregateField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalDocAggregateField" type="tns:PhysicalDocAggregateField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalDocAggregateField" nillable="true" type="tns:ArrayOfPhysicalDocAggregateField" />
+  <xs:complexType name="ArrayOfPhysicalDocApplication">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalDocApplication" nillable="true" type="tns:PhysicalDocApplication" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalDocApplication" nillable="true" type="tns:ArrayOfPhysicalDocApplication" />
+  <xs:complexType name="PhysicalDocApplication">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q22="http://accipiens.com/Common" base="q22:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplApplicationId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:PhysicalDocApplicationKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:PhysicalDocApplicationDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:PhysicalDocApplicationField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfPhysicalDocApplicationField" />
+          <xs:element minOccurs="0" name="PhysicalDocId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PhysicalDocApplication" nillable="true" type="tns:PhysicalDocApplication" />
+  <xs:complexType name="PhysicalDocApplicationKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q23="http://accipiens.com/Common" base="q23:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PhysicalDocApplicationKey" nillable="true" type="tns:PhysicalDocApplicationKey" />
+  <xs:simpleType name="PhysicalDocApplicationDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PhysicalDocApplicationDetail" nillable="true" type="tns:PhysicalDocApplicationDetail" />
+  <xs:simpleType name="PhysicalDocApplicationField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="PhysicalDocId" />
+      <xs:enumeration value="AplApplicationId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PhysicalDocApplicationField" nillable="true" type="tns:PhysicalDocApplicationField" />
+  <xs:complexType name="ArrayOfPhysicalDocApplicationField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalDocApplicationField" type="tns:PhysicalDocApplicationField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalDocApplicationField" nillable="true" type="tns:ArrayOfPhysicalDocApplicationField" />
+  <xs:complexType name="ArrayOfPhysicalDocArchiveKeyType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalDocArchiveKeyType" nillable="true" type="tns:PhysicalDocArchiveKeyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalDocArchiveKeyType" nillable="true" type="tns:ArrayOfPhysicalDocArchiveKeyType" />
+  <xs:complexType name="PhysicalDocArchiveKeyType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q24="http://accipiens.com/Common" base="q24:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ArchiveKeyTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="IsMain" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsObligatory" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:PhysicalDocArchiveKeyTypeKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:PhysicalDocArchiveKeyTypeDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:PhysicalDocArchiveKeyTypeField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfPhysicalDocArchiveKeyTypeField" />
+          <xs:element minOccurs="0" name="OrderNumber" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PhysicalDocId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PhysicalDocArchiveKeyType" nillable="true" type="tns:PhysicalDocArchiveKeyType" />
+  <xs:complexType name="PhysicalDocArchiveKeyTypeKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q25="http://accipiens.com/Common" base="q25:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PhysicalDocArchiveKeyTypeKey" nillable="true" type="tns:PhysicalDocArchiveKeyTypeKey" />
+  <xs:simpleType name="PhysicalDocArchiveKeyTypeDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PhysicalDocArchiveKeyTypeDetail" nillable="true" type="tns:PhysicalDocArchiveKeyTypeDetail" />
+  <xs:simpleType name="PhysicalDocArchiveKeyTypeField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="PhysicalDocId" />
+      <xs:enumeration value="ArchiveKeyTypeId" />
+      <xs:enumeration value="IsMain" />
+      <xs:enumeration value="OrderNumber" />
+      <xs:enumeration value="IsObligatory" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PhysicalDocArchiveKeyTypeField" nillable="true" type="tns:PhysicalDocArchiveKeyTypeField" />
+  <xs:complexType name="ArrayOfPhysicalDocArchiveKeyTypeField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalDocArchiveKeyTypeField" type="tns:PhysicalDocArchiveKeyTypeField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalDocArchiveKeyTypeField" nillable="true" type="tns:ArrayOfPhysicalDocArchiveKeyTypeField" />
+  <xs:complexType name="ArrayOfPhysicalDocBusiness">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalDocBusiness" nillable="true" type="tns:PhysicalDocBusiness" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalDocBusiness" nillable="true" type="tns:ArrayOfPhysicalDocBusiness" />
+  <xs:complexType name="PhysicalDocBusiness">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q26="http://accipiens.com/Common" base="q26:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplBusinessId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:PhysicalDocBusinessKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:PhysicalDocBusinessDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:PhysicalDocBusinessField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfPhysicalDocBusinessField" />
+          <xs:element minOccurs="0" name="OperTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PhysicalDoc" nillable="true" type="tns:PhysicalDoc" />
+          <xs:element minOccurs="0" name="PhysicalDocId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PhysicalDocBusiness" nillable="true" type="tns:PhysicalDocBusiness" />
+  <xs:complexType name="PhysicalDocBusinessKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q27="http://accipiens.com/Common" base="q27:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplBusinessId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="OperTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PhysicalDocId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PhysicalDocBusinessKey" nillable="true" type="tns:PhysicalDocBusinessKey" />
+  <xs:simpleType name="PhysicalDocBusinessDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PhysicalDoc" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PhysicalDocBusinessDetail" nillable="true" type="tns:PhysicalDocBusinessDetail" />
+  <xs:simpleType name="PhysicalDocBusinessField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="PhysicalDocId" />
+      <xs:enumeration value="AplBusinessId" />
+      <xs:enumeration value="OperTypeId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PhysicalDocBusinessField" nillable="true" type="tns:PhysicalDocBusinessField" />
+  <xs:complexType name="ArrayOfPhysicalDocBusinessField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalDocBusinessField" type="tns:PhysicalDocBusinessField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalDocBusinessField" nillable="true" type="tns:ArrayOfPhysicalDocBusinessField" />
+  <xs:complexType name="ArrayOfPhysicalDocAlert">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalDocAlert" nillable="true" type="tns:PhysicalDocAlert" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalDocAlert" nillable="true" type="tns:ArrayOfPhysicalDocAlert" />
+  <xs:complexType name="PhysicalDocAlert">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q28="http://accipiens.com/Common" base="q28:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AutUserStateId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:PhysicalDocAlertKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:PhysicalDocAlertDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:PhysicalDocAlertField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfPhysicalDocAlertField" />
+          <xs:element minOccurs="0" name="NumOfDelayDays" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PhysicalDocId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PhysicalDocAlert" nillable="true" type="tns:PhysicalDocAlert" />
+  <xs:complexType name="PhysicalDocAlertKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q29="http://accipiens.com/Common" base="q29:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AutUserStateId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PhysicalDocId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PhysicalDocAlertKey" nillable="true" type="tns:PhysicalDocAlertKey" />
+  <xs:simpleType name="PhysicalDocAlertDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PhysicalDocAlertDetail" nillable="true" type="tns:PhysicalDocAlertDetail" />
+  <xs:simpleType name="PhysicalDocAlertField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PhysicalDocId" />
+      <xs:enumeration value="AutUserStateId" />
+      <xs:enumeration value="NumOfDelayDays" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PhysicalDocAlertField" nillable="true" type="tns:PhysicalDocAlertField" />
+  <xs:complexType name="ArrayOfPhysicalDocAlertField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalDocAlertField" type="tns:PhysicalDocAlertField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalDocAlertField" nillable="true" type="tns:ArrayOfPhysicalDocAlertField" />
+  <xs:complexType name="ArrayOfPhysicalDocPDExpenseReason">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalDocPDExpenseReason" nillable="true" type="tns:PhysicalDocPDExpenseReason" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalDocPDExpenseReason" nillable="true" type="tns:ArrayOfPhysicalDocPDExpenseReason" />
+  <xs:complexType name="PhysicalDocPDExpenseReason">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q30="http://accipiens.com/Common" base="q30:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:PhysicalDocPDExpenseReasonKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:PhysicalDocPDExpenseReasonDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:PhysicalDocPDExpenseReasonField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfPhysicalDocPDExpenseReasonField" />
+          <xs:element minOccurs="0" name="PhysicalDocExpenseReasonId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PhysicalDocId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PhysicalDocPDExpenseReason" nillable="true" type="tns:PhysicalDocPDExpenseReason" />
+  <xs:complexType name="PhysicalDocPDExpenseReasonKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q31="http://accipiens.com/Common" base="q31:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PhysicalDocExpenseReasonId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PhysicalDocId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PhysicalDocPDExpenseReasonKey" nillable="true" type="tns:PhysicalDocPDExpenseReasonKey" />
+  <xs:simpleType name="PhysicalDocPDExpenseReasonDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PhysicalDocPDExpenseReasonDetail" nillable="true" type="tns:PhysicalDocPDExpenseReasonDetail" />
+  <xs:simpleType name="PhysicalDocPDExpenseReasonField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="PhysicalDocId" />
+      <xs:enumeration value="PhysicalDocExpenseReasonId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PhysicalDocPDExpenseReasonField" nillable="true" type="tns:PhysicalDocPDExpenseReasonField" />
+  <xs:complexType name="ArrayOfPhysicalDocPDExpenseReasonField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalDocPDExpenseReasonField" type="tns:PhysicalDocPDExpenseReasonField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalDocPDExpenseReasonField" nillable="true" type="tns:ArrayOfPhysicalDocPDExpenseReasonField" />
+  <xs:complexType name="ArrayOfPhysicalDocExpenseType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalDocExpenseType" nillable="true" type="tns:PhysicalDocExpenseType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalDocExpenseType" nillable="true" type="tns:ArrayOfPhysicalDocExpenseType" />
+  <xs:complexType name="PhysicalDocExpenseType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q32="http://accipiens.com/Common" base="q32:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ExpenseTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:PhysicalDocExpenseTypeKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:PhysicalDocExpenseTypeDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:PhysicalDocExpenseTypeField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfPhysicalDocExpenseTypeField" />
+          <xs:element minOccurs="0" name="PhysicalDocId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PhysicalDocExpenseType" nillable="true" type="tns:PhysicalDocExpenseType" />
+  <xs:complexType name="PhysicalDocExpenseTypeKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q33="http://accipiens.com/Common" base="q33:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PhysicalDocExpenseTypeKey" nillable="true" type="tns:PhysicalDocExpenseTypeKey" />
+  <xs:simpleType name="PhysicalDocExpenseTypeDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PhysicalDocExpenseTypeDetail" nillable="true" type="tns:PhysicalDocExpenseTypeDetail" />
+  <xs:simpleType name="PhysicalDocExpenseTypeField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="PhysicalDocId" />
+      <xs:enumeration value="ExpenseTypeId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PhysicalDocExpenseTypeField" nillable="true" type="tns:PhysicalDocExpenseTypeField" />
+  <xs:complexType name="ArrayOfPhysicalDocExpenseTypeField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalDocExpenseTypeField" type="tns:PhysicalDocExpenseTypeField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalDocExpenseTypeField" nillable="true" type="tns:ArrayOfPhysicalDocExpenseTypeField" />
+  <xs:complexType name="ArrayOfPhysicalDocPDFormat">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalDocPDFormat" nillable="true" type="tns:PhysicalDocPDFormat" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalDocPDFormat" nillable="true" type="tns:ArrayOfPhysicalDocPDFormat" />
+  <xs:complexType name="PhysicalDocPDFormat">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q34="http://accipiens.com/Common" base="q34:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:PhysicalDocPDFormatKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:PhysicalDocPDFormatDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:PhysicalDocPDFormatField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfPhysicalDocPDFormatField" />
+          <xs:element minOccurs="0" name="PhysicalDocFormatId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PhysicalDocId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PhysicalDocPDFormat" nillable="true" type="tns:PhysicalDocPDFormat" />
+  <xs:complexType name="PhysicalDocPDFormatKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q35="http://accipiens.com/Common" base="q35:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PhysicalDocPDFormatKey" nillable="true" type="tns:PhysicalDocPDFormatKey" />
+  <xs:simpleType name="PhysicalDocPDFormatDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PhysicalDocPDFormatDetail" nillable="true" type="tns:PhysicalDocPDFormatDetail" />
+  <xs:simpleType name="PhysicalDocPDFormatField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="PhysicalDocId" />
+      <xs:enumeration value="PhysicalDocFormatId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PhysicalDocPDFormatField" nillable="true" type="tns:PhysicalDocPDFormatField" />
+  <xs:complexType name="ArrayOfPhysicalDocPDFormatField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalDocPDFormatField" type="tns:PhysicalDocPDFormatField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalDocPDFormatField" nillable="true" type="tns:ArrayOfPhysicalDocPDFormatField" />
+  <xs:complexType name="PhysicalDocKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q36="http://accipiens.com/Common" base="q36:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AplTableId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PhysicalDocKey" nillable="true" type="tns:PhysicalDocKey" />
+  <xs:simpleType name="PhysicalDocDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ReportServerTypeInfo" />
+      <xs:enumeration value="MasterAggregate" />
+      <xs:enumeration value="AggregateDoc" />
+      <xs:enumeration value="Tag" />
+      <xs:enumeration value="DocAlert" />
+      <xs:enumeration value="Output" />
+      <xs:enumeration value="Business" />
+      <xs:enumeration value="OutputType" />
+      <xs:enumeration value="ExpenseReason" />
+      <xs:enumeration value="ExpenseType" />
+      <xs:enumeration value="Format" />
+      <xs:enumeration value="Application" />
+      <xs:enumeration value="ArchiveKeyType" />
+      <xs:enumeration value="WorkItemType" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PhysicalDocDetail" nillable="true" type="tns:PhysicalDocDetail" />
+  <xs:simpleType name="PhysicalDocField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="PhysicalDocTypeId" />
+      <xs:enumeration value="Abrev" />
+      <xs:enumeration value="PhysicalDocContextId" />
+      <xs:enumeration value="ReportServerTypeId" />
+      <xs:enumeration value="HasAuditing" />
+      <xs:enumeration value="IsVisibleInAuditing" />
+      <xs:enumeration value="ReportPhysicalLocation" />
+      <xs:enumeration value="PhysicalDocOutputTypeId" />
+      <xs:enumeration value="OutputPhysicalDocFormatId" />
+      <xs:enumeration value="OutputDataDefault" />
+      <xs:enumeration value="NumOfCopiesDefault" />
+      <xs:enumeration value="PhysicalDocGroupId" />
+      <xs:enumeration value="DefaultEntityId" />
+      <xs:enumeration value="EntityAplStatementId" />
+      <xs:enumeration value="IsDocManagementRelated" />
+      <xs:enumeration value="AplTableId" />
+      <xs:enumeration value="TemplatePhysicalLocation" />
+      <xs:enumeration value="BlockSize" />
+      <xs:enumeration value="IsToArchive" />
+      <xs:enumeration value="InvalidDate" />
+      <xs:enumeration value="FetchLevel" />
+      <xs:enumeration value="TimeOut" />
+      <xs:enumeration value="ValidateAplStatementId" />
+      <xs:enumeration value="AutomatonId" />
+      <xs:enumeration value="AplReferenceTypeId" />
+      <xs:enumeration value="MailAplStatementId" />
+      <xs:enumeration value="OutputDataAplStatementId" />
+      <xs:enumeration value="IssueAplStatementId" />
+      <xs:enumeration value="IsExpenseMandatory" />
+      <xs:enumeration value="IsToCertifyPDF" />
+      <xs:enumeration value="AplTaskId" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="IsHidden" />
+      <xs:enumeration value="RowVersion" />
+      <xs:enumeration value="ArchiveOnlyOnce" />
+      <xs:enumeration value="OnlySingleIssue" />
+      <xs:enumeration value="ThumbnailPage" />
+      <xs:enumeration value="FolderStructNodeTypeId" />
+      <xs:enumeration value="TraceableStructNodeTypeId" />
+      <xs:enumeration value="InternalCode" />
+      <xs:enumeration value="RelatedPhysicalDocId" />
+      <xs:enumeration value="IssueOnlyFromArchive" />
+      <xs:enumeration value="IssueUseArchiveKindId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PhysicalDocField" nillable="true" type="tns:PhysicalDocField" />
+  <xs:complexType name="ArrayOfPhysicalDocField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalDocField" type="tns:PhysicalDocField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalDocField" nillable="true" type="tns:ArrayOfPhysicalDocField" />
+  <xs:complexType name="ArrayOfPhysicalDocPDOutputType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalDocPDOutputType" nillable="true" type="tns:PhysicalDocPDOutputType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalDocPDOutputType" nillable="true" type="tns:ArrayOfPhysicalDocPDOutputType" />
+  <xs:complexType name="PhysicalDocPDOutputType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q37="http://accipiens.com/Common" base="q37:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:PhysicalDocPDOutputTypeKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:PhysicalDocPDOutputTypeDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:PhysicalDocPDOutputTypeField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfPhysicalDocPDOutputTypeField" />
+          <xs:element minOccurs="0" name="OutputDataDefault" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PhysicalDocId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PhysicalDocOutputTypeId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PhysicalDocPDOutputType" nillable="true" type="tns:PhysicalDocPDOutputType" />
+  <xs:complexType name="PhysicalDocPDOutputTypeKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q38="http://accipiens.com/Common" base="q38:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PhysicalDocId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PhysicalDocOutputTypeId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PhysicalDocPDOutputTypeKey" nillable="true" type="tns:PhysicalDocPDOutputTypeKey" />
+  <xs:simpleType name="PhysicalDocPDOutputTypeDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PhysicalDocPDOutputTypeDetail" nillable="true" type="tns:PhysicalDocPDOutputTypeDetail" />
+  <xs:simpleType name="PhysicalDocPDOutputTypeField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="PhysicalDocId" />
+      <xs:enumeration value="PhysicalDocOutputTypeId" />
+      <xs:enumeration value="OutputDataDefault" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PhysicalDocPDOutputTypeField" nillable="true" type="tns:PhysicalDocPDOutputTypeField" />
+  <xs:complexType name="ArrayOfPhysicalDocPDOutputTypeField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalDocPDOutputTypeField" type="tns:PhysicalDocPDOutputTypeField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalDocPDOutputTypeField" nillable="true" type="tns:ArrayOfPhysicalDocPDOutputTypeField" />
+  <xs:complexType name="ArrayOfPhysicalDocOutput">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalDocOutput" nillable="true" type="tns:PhysicalDocOutput" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalDocOutput" nillable="true" type="tns:ArrayOfPhysicalDocOutput" />
+  <xs:complexType name="PhysicalDocOutput">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q39="http://accipiens.com/Common" base="q39:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:PhysicalDocOutputKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:PhysicalDocOutputDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:PhysicalDocOutputField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfPhysicalDocOutputField" />
+          <xs:element minOccurs="0" name="OutputDataDefault" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PhysicalDocId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PhysicalDocOutputTypeId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PhysicalDocOutput" nillable="true" type="tns:PhysicalDocOutput" />
+  <xs:complexType name="PhysicalDocOutputKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q40="http://accipiens.com/Common" base="q40:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PhysicalDocId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PhysicalDocOutputTypeId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PhysicalDocOutputKey" nillable="true" type="tns:PhysicalDocOutputKey" />
+  <xs:simpleType name="PhysicalDocOutputDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PhysicalDocOutputDetail" nillable="true" type="tns:PhysicalDocOutputDetail" />
+  <xs:simpleType name="PhysicalDocOutputField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="PhysicalDocId" />
+      <xs:enumeration value="PhysicalDocOutputTypeId" />
+      <xs:enumeration value="OutputDataDefault" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PhysicalDocOutputField" nillable="true" type="tns:PhysicalDocOutputField" />
+  <xs:complexType name="ArrayOfPhysicalDocOutputField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalDocOutputField" type="tns:PhysicalDocOutputField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalDocOutputField" nillable="true" type="tns:ArrayOfPhysicalDocOutputField" />
+  <xs:complexType name="ReportServerType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q41="http://accipiens.com/Common" base="q41:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ApplicationId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FaxServerFormatString" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:ReportServerTypeKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:ReportServerTypeDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:ReportServerTypeField" />
+          <xs:element minOccurs="0" name="MailMessageListing" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MailMessageReport" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MailSubjectListing" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MailSubjectReport" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfReportServerTypeField" />
+          <xs:element minOccurs="0" name="PDFCertificateContact" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PDFCertificateLocation" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PDFCertificatePassword" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PDFCertificatePath" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PDFCertificateReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PhysicalDocDefaultTime" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ReportServerType" nillable="true" type="tns:ReportServerType" />
+  <xs:complexType name="ReportServerTypeKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q42="http://accipiens.com/Common" base="q42:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ReportServerTypeKey" nillable="true" type="tns:ReportServerTypeKey" />
+  <xs:simpleType name="ReportServerTypeDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ReportServerTypeDetail" nillable="true" type="tns:ReportServerTypeDetail" />
+  <xs:simpleType name="ReportServerTypeField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="Abrev" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="MailSubjectReport" />
+      <xs:enumeration value="MailSubjectListing" />
+      <xs:enumeration value="MailMessageReport" />
+      <xs:enumeration value="MailMessageListing" />
+      <xs:enumeration value="FaxServerFormatString" />
+      <xs:enumeration value="ApplicationId" />
+      <xs:enumeration value="PhysicalDocDefaultTime" />
+      <xs:enumeration value="PDFCertificatePath" />
+      <xs:enumeration value="PDFCertificatePassword" />
+      <xs:enumeration value="PDFCertificateReason" />
+      <xs:enumeration value="PDFCertificateLocation" />
+      <xs:enumeration value="PDFCertificateContact" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ReportServerTypeField" nillable="true" type="tns:ReportServerTypeField" />
+  <xs:complexType name="ArrayOfReportServerTypeField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReportServerTypeField" type="tns:ReportServerTypeField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReportServerTypeField" nillable="true" type="tns:ArrayOfReportServerTypeField" />
+  <xs:complexType name="ArrayOfPhysicalDocTag">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalDocTag" nillable="true" type="tns:PhysicalDocTag" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalDocTag" nillable="true" type="tns:ArrayOfPhysicalDocTag" />
+  <xs:complexType name="PhysicalDocTag">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q43="http://accipiens.com/Common" base="q43:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:PhysicalDocTagKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:PhysicalDocTagDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:PhysicalDocTagField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfPhysicalDocTagField" />
+          <xs:element minOccurs="0" name="PhysicalDocId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="TagLabel" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TagType" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TagValue" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PhysicalDocTag" nillable="true" type="tns:PhysicalDocTag" />
+  <xs:complexType name="PhysicalDocTagKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q44="http://accipiens.com/Common" base="q44:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PhysicalDocTagKey" nillable="true" type="tns:PhysicalDocTagKey" />
+  <xs:simpleType name="PhysicalDocTagDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PhysicalDocTagDetail" nillable="true" type="tns:PhysicalDocTagDetail" />
+  <xs:simpleType name="PhysicalDocTagField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="PhysicalDocId" />
+      <xs:enumeration value="TagName" />
+      <xs:enumeration value="TagLabel" />
+      <xs:enumeration value="TagType" />
+      <xs:enumeration value="TagValue" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PhysicalDocTagField" nillable="true" type="tns:PhysicalDocTagField" />
+  <xs:complexType name="ArrayOfPhysicalDocTagField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalDocTagField" type="tns:PhysicalDocTagField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalDocTagField" nillable="true" type="tns:ArrayOfPhysicalDocTagField" />
+  <xs:complexType name="ArrayOfPhysicalDocWorkItemType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalDocWorkItemType" nillable="true" type="tns:PhysicalDocWorkItemType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalDocWorkItemType" nillable="true" type="tns:ArrayOfPhysicalDocWorkItemType" />
+  <xs:complexType name="PhysicalDocWorkItemType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q45="http://accipiens.com/Common" base="q45:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplUserId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AplWorkItemTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="IsDefault" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:PhysicalDocWorkItemTypeKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:PhysicalDocWorkItemTypeDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:PhysicalDocWorkItemTypeField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfPhysicalDocWorkItemTypeField" />
+          <xs:element minOccurs="0" name="PhysicalDocId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="WorkItemArchiveContextId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PhysicalDocWorkItemType" nillable="true" type="tns:PhysicalDocWorkItemType" />
+  <xs:complexType name="PhysicalDocWorkItemTypeKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q46="http://accipiens.com/Common" base="q46:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PhysicalDocWorkItemTypeKey" nillable="true" type="tns:PhysicalDocWorkItemTypeKey" />
+  <xs:simpleType name="PhysicalDocWorkItemTypeDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PhysicalDocWorkItemTypeDetail" nillable="true" type="tns:PhysicalDocWorkItemTypeDetail" />
+  <xs:simpleType name="PhysicalDocWorkItemTypeField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="PhysicalDocId" />
+      <xs:enumeration value="AplWorkItemTypeId" />
+      <xs:enumeration value="AplUserId" />
+      <xs:enumeration value="IsDefault" />
+      <xs:enumeration value="WorkItemArchiveContextId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PhysicalDocWorkItemTypeField" nillable="true" type="tns:PhysicalDocWorkItemTypeField" />
+  <xs:complexType name="ArrayOfPhysicalDocWorkItemTypeField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalDocWorkItemTypeField" type="tns:PhysicalDocWorkItemTypeField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalDocWorkItemTypeField" nillable="true" type="tns:ArrayOfPhysicalDocWorkItemTypeField" />
+  <xs:complexType name="EventManagementKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q47="http://accipiens.com/Common" base="q47:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EventManagementKey" nillable="true" type="tns:EventManagementKey" />
+  <xs:simpleType name="EventManagementDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DocManager" />
+      <xs:enumeration value="Document" />
+      <xs:enumeration value="Entity" />
+      <xs:enumeration value="LotDocument" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EventManagementDetail" nillable="true" type="tns:EventManagementDetail" />
+  <xs:simpleType name="EventManagementField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="EventTypeId" />
+      <xs:enumeration value="EventActionTypeId" />
+      <xs:enumeration value="PhysicalDocId" />
+      <xs:enumeration value="DueDate" />
+      <xs:enumeration value="HasOcurred" />
+      <xs:enumeration value="EventDate" />
+      <xs:enumeration value="ValidityDate" />
+      <xs:enumeration value="RelatedId" />
+      <xs:enumeration value="EntityId" />
+      <xs:enumeration value="AddressId" />
+      <xs:enumeration value="EventMoment" />
+      <xs:enumeration value="AplUserId" />
+      <xs:enumeration value="DocManagementId" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="ExternalReference" />
+      <xs:enumeration value="ShowToUser" />
+      <xs:enumeration value="AplTableId" />
+      <xs:enumeration value="OccurrenceTypeId" />
+      <xs:enumeration value="AutUserStateId" />
+      <xs:enumeration value="StateDate" />
+      <xs:enumeration value="IsConformed" />
+      <xs:enumeration value="IsObligatory" />
+      <xs:enumeration value="ReferenceCode" />
+      <xs:enumeration value="ReferenceDescr" />
+      <xs:enumeration value="OperType" />
+      <xs:enumeration value="OperNumber" />
+      <xs:enumeration value="LocalStructNodeId" />
+      <xs:enumeration value="PersonStructNodeId" />
+      <xs:enumeration value="AplBusinessId" />
+      <xs:enumeration value="DocManageTypeId" />
+      <xs:enumeration value="PhysicalDocExpenseReasonId" />
+      <xs:enumeration value="ExpenseTypeId" />
+      <xs:enumeration value="OccurredMoment" />
+      <xs:enumeration value="ConformedMoment" />
+      <xs:enumeration value="ConformedAplUserId" />
+      <xs:enumeration value="DepartmentStructNodeId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EventManagementField" nillable="true" type="tns:EventManagementField" />
+  <xs:complexType name="ArrayOfEventManagementField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EventManagementField" type="tns:EventManagementField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEventManagementField" nillable="true" type="tns:ArrayOfEventManagementField" />
+</xs:schema>

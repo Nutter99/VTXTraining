@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsInterfaces.Facade" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperationsInterfaces.Facade" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:simpleType name="CreditOperationsDataListId">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="EquipmentType" />
+      <xs:enumeration value="VenderProtocol" />
+      <xs:enumeration value="CredOperChannel" />
+      <xs:enumeration value="ContractRisk" />
+      <xs:enumeration value="FuelType" />
+      <xs:enumeration value="CredOperIntervSuperType" />
+      <xs:enumeration value="CreditOperationStep" />
+      <xs:enumeration value="AssetState" />
+      <xs:enumeration value="AssetType" />
+      <xs:enumeration value="CreditOperationGuarantType" />
+      <xs:enumeration value="GuarantInternalState" />
+      <xs:enumeration value="AssetFinType" />
+      <xs:enumeration value="DeedType" />
+      <xs:enumeration value="BuildingType" />
+      <xs:enumeration value="AssetEvalType" />
+      <xs:enumeration value="BuildingInfoType" />
+      <xs:enumeration value="BuildingMatrixType" />
+      <xs:enumeration value="BuildingBaseCalcType" />
+      <xs:enumeration value="BuildingRegistrationType" />
+      <xs:enumeration value="SecuritizationType" />
+      <xs:enumeration value="ConsortiumType" />
+      <xs:enumeration value="ConsortiumTypeKind" />
+      <xs:enumeration value="DeedStateType" />
+      <xs:enumeration value="CredOperRelationType" />
+      <xs:enumeration value="AssetDepreciation" />
+      <xs:enumeration value="CredOperRelationSuperType" />
+      <xs:enumeration value="EquipmentCategory" />
+      <xs:enumeration value="CreditTaxMode" />
+      <xs:enumeration value="ConditionsMode" />
+      <xs:enumeration value="EquipmentState" />
+      <xs:enumeration value="SuperSubCredOperType" />
+      <xs:enumeration value="CredOperGuarantRegType" />
+      <xs:enumeration value="MarketCampaign" />
+      <xs:enumeration value="AbsBehaviourModeKind" />
+      <xs:enumeration value="DiscountingTypeModeKind" />
+      <xs:enumeration value="DisposableAssetOperationTypeKind" />
+      <xs:enumeration value="BillExchangeDelayInterestKind" />
+      <xs:enumeration value="RetakeAssetEvalType" />
+      <xs:enumeration value="RecoveryPhase" />
+      <xs:enumeration value="CollectorDistributionType" />
+      <xs:enumeration value="CredRevolvingNatureKind" />
+      <xs:enumeration value="VehicleFineType" />
+      <xs:enumeration value="DeferredPaymentMode" />
+      <xs:enumeration value="InhibitionType" />
+      <xs:enumeration value="DiscountingType" />
+      <xs:enumeration value="ClaimAutomaton" />
+      <xs:enumeration value="ClaimTypeNumeration" />
+      <xs:enumeration value="ClaimType" />
+      <xs:enumeration value="ClaimIntervType" />
+      <xs:enumeration value="ClaimMediaType" />
+      <xs:enumeration value="FinInitialEntryBaseType" />
+      <xs:enumeration value="FactoringNature" />
+      <xs:enumeration value="MarketCampaignSuperTypeKind" />
+      <xs:enumeration value="Clause" />
+      <xs:enumeration value="SuspensionType" />
+      <xs:enumeration value="AssetUsageReadingType" />
+      <xs:enumeration value="MeasureUnit" />
+      <xs:enumeration value="MeasureType" />
+      <xs:enumeration value="MeasureTypeBaseType" />
+      <xs:enumeration value="BuildingOwnershipType" />
+      <xs:enumeration value="DepreciationTypeKind" />
+      <xs:enumeration value="DepreciationFlowTypeKind" />
+      <xs:enumeration value="DepreciationMethodKind" />
+      <xs:enumeration value="DepreciationInternalOperation" />
+      <xs:enumeration value="AssetDepreciationModifierType" />
+      <xs:enumeration value="MinResidualValueMode" />
+      <xs:enumeration value="MinTermMode" />
+      <xs:enumeration value="CautionBaseType" />
+      <xs:enumeration value="LicenseType" />
+      <xs:enumeration value="ExemptVATMode" />
+      <xs:enumeration value="MarketCampaignType" />
+      <xs:enumeration value="EmissionStandard" />
+      <xs:enumeration value="AssetTaxTypeDateCalc" />
+      <xs:enumeration value="AssetTaxTypeCalcMode" />
+      <xs:enumeration value="BranchSourceMode" />
+      <xs:enumeration value="PersonSourceMode" />
+      <xs:enumeration value="InhibitionReasonType" />
+      <xs:enumeration value="PartitionMode" />
+      <xs:enumeration value="BuildingState" />
+      <xs:enumeration value="CredOperGuarantTypeKind" />
+      <xs:enumeration value="EquipmentPricingSource" />
+      <xs:enumeration value="AbsSource" />
+      <xs:enumeration value="StockRPReference" />
+      <xs:enumeration value="DeltaCapitalCalcDate" />
+      <xs:enumeration value="InterventionOrigin" />
+      <xs:enumeration value="RegistrationType" />
+      <xs:enumeration value="DepreciationStartEventKind" />
+      <xs:enumeration value="AlertOwnerKind" />
+      <xs:enumeration value="AlertTargetKind" />
+      <xs:enumeration value="AlertActionKind" />
+      <xs:enumeration value="SchedulerFrequencyKind" />
+      <xs:enumeration value="AlertSchCondType" />
+      <xs:enumeration value="AssetTaxPaymentType" />
+      <xs:enumeration value="AlertGroupType" />
+      <xs:enumeration value="BuildingRegistrationTypeKind" />
+      <xs:enumeration value="CredOperIntervAutomaton" />
+      <xs:enumeration value="AssetTaxPayEntityMode" />
+      <xs:enumeration value="TerminationDateKind" />
+      <xs:enumeration value="PaymentItem" />
+      <xs:enumeration value="DepreciationGroupedFlowType" />
+      <xs:enumeration value="EqpOptionChangeType" />
+      <xs:enumeration value="CashFlowType" />
+      <xs:enumeration value="ChangeInstalmentMode" />
+      <xs:enumeration value="DepreciationSuperBindingMode" />
+      <xs:enumeration value="CapitalNotSoldMode" />
+      <xs:enumeration value="CredOperIsucModeBatchState" />
+      <xs:enumeration value="EquipmentCategoryType" />
+      <xs:enumeration value="BaseDownPaymentMode" />
+      <xs:enumeration value="CredOperRelationNettingAccount" />
+      <xs:enumeration value="AmountLimitKind" />
+      <xs:enumeration value="AmountMovmentKind" />
+      <xs:enumeration value="DownPaymentType" />
+      <xs:enumeration value="CreditOperationEntityGuarantType" />
+      <xs:enumeration value="SubCredOperEndReasonSuperType" />
+      <xs:enumeration value="SubCredOperEndReason" />
+      <xs:enumeration value="OptionInvoiceState" />
+      <xs:enumeration value="OptionContext" />
+      <xs:enumeration value="SubCredOperOptionContext" />
+      <xs:enumeration value="CreditOperationAllGuarantType" />
+      <xs:enumeration value="AssetSituationType" />
+      <xs:enumeration value="BuildingInscriptionState" />
+      <xs:enumeration value="BuildingExemptionReason" />
+      <xs:enumeration value="ClauseContextKind" />
+      <xs:enumeration value="BuildingProjectStep" />
+      <xs:enumeration value="FusionMode" />
+      <xs:enumeration value="ConsortiumClientType" />
+      <xs:enumeration value="ConsortiumAutomaton" />
+      <xs:enumeration value="CredOperClause" />
+      <xs:enumeration value="BuildingTaxCriteria" />
+      <xs:enumeration value="IntraDayStatusKind" />
+      <xs:enumeration value="EligibilityStatusKind" />
+      <xs:enumeration value="ConsortiumChangeType" />
+      <xs:enumeration value="AssetEvalMethod" />
+      <xs:enumeration value="AssetPurpose" />
+      <xs:enumeration value="EquipmentStateKind" />
+      <xs:enumeration value="UsageDeviationCalcMode" />
+      <xs:enumeration value="CredOperAssetDevolutionType" />
+      <xs:enumeration value="EquipmentDocType" />
+      <xs:enumeration value="OriginContextKind" />
+      <xs:enumeration value="OperationExpenseOriginKind" />
+      <xs:enumeration value="EntityAuthorizationType" />
+      <xs:enumeration value="CredOperIntervType" />
+      <xs:enumeration value="UsageMarginCalcMode" />
+      <xs:enumeration value="PurchaseOption" />
+      <xs:enumeration value="LicencePlateType" />
+      <xs:enumeration value="EquipmentUsageActionType" />
+      <xs:enumeration value="EquipmentPoolType" />
+      <xs:enumeration value="EquipmentUsageType" />
+      <xs:enumeration value="EquipmentLocationType" />
+      <xs:enumeration value="EquipmentUsageTypeForReservation" />
+      <xs:enumeration value="DueDateCalcMode" />
+      <xs:enumeration value="StatementIssueModeType" />
+      <xs:enumeration value="EquipmentOptionsAccessory" />
+      <xs:enumeration value="EquipmentUsageKind" />
+      <xs:enumeration value="EquipmentUsageActionKind" />
+      <xs:enumeration value="PoolCarAutUserState" />
+      <xs:enumeration value="FixedAssetSituation" />
+      <xs:enumeration value="DepreciationBindingMode" />
+      <xs:enumeration value="DepreciationAplFlowClass" />
+      <xs:enumeration value="EquipmentUsageState" />
+      <xs:enumeration value="AssetDepreciationGroup" />
+      <xs:enumeration value="RegistrationAuthoring" />
+      <xs:enumeration value="TimeBeforeBuyCalcMode" />
+      <xs:enumeration value="TransmissionType" />
+      <xs:enumeration value="EquipmentKeyCalMode" />
+      <xs:enumeration value="CollectionStrategyType" />
+      <xs:enumeration value="AssetEvalCalcMode" />
+      <xs:enumeration value="FixedAssetFlowMode" />
+      <xs:enumeration value="CollStrategyActionType" />
+      <xs:enumeration value="DepreciateOptionsMode" />
+      <xs:enumeration value="AssetDepreciationPurpose" />
+      <xs:enumeration value="EquipmentOperator" />
+      <xs:enumeration value="EquipmentOptionType" />
+      <xs:enumeration value="PaintType" />
+      <xs:enumeration value="ClaimSuperType" />
+      <xs:enumeration value="ClaimInput" />
+      <xs:enumeration value="ClaimOutput" />
+      <xs:enumeration value="MandatoryMediaKind" />
+      <xs:enumeration value="ClaimRiskType" />
+      <xs:enumeration value="EquipmentTaxSubClass" />
+      <xs:enumeration value="ClaimInOut" />
+      <xs:enumeration value="PurchaseOptionKind" />
+      <xs:enumeration value="EquipmentSegment" />
+      <xs:enumeration value="HomologationClass" />
+      <xs:enumeration value="EquipmentPreModelCodeInputMode" />
+      <xs:enumeration value="EquipmentRegistrationType" />
+      <xs:enumeration value="EquipmentOwner" />
+      <xs:enumeration value="DepreciationCreationEvent" />
+      <xs:enumeration value="DepreciationStartDateMode" />
+      <xs:enumeration value="ResidualValueInputMode" />
+      <xs:enumeration value="InvoiceIssueSendingKind" />
+      <xs:enumeration value="EquipmentNonEditableFields" />
+      <xs:enumeration value="DepreciationEventDatesMode" />
+      <xs:enumeration value="ChargeRefundUsageCalcMode" />
+      <xs:enumeration value="AssetEvalAmountInputMode" />
+      <xs:enumeration value="CredOperGuarantClass" />
+      <xs:enumeration value="DepreciationCurrencyCreationMode" />
+      <xs:enumeration value="DamageThresholdMode" />
+      <xs:enumeration value="CollectionSubjectType" />
+      <xs:enumeration value="CollectionResultType" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CreditOperationsDataListId" nillable="true" type="tns:CreditOperationsDataListId" />
+  <xs:simpleType name="CreditOperationsForeignDataListId">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AplBusiness">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EquipmentCategory">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="IntervenientType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CashFlowType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BuildingTaxType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SubCredOperType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ProductGuarantType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ProductEquipmentType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VehicleFineTypeReclaimant">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AssetTypeGroup">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CredOperAplBusinessByPurposeType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CredOperChannelByBusiness">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">12</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CredOperNature">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">13</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MeasureTypeByEquipmentType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">14</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AssetFinTypeByAssetType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">15</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CashFlowInterestByHasOnlyInterest">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">16</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CredOperChannelByAplUser">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">17</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AccountingModeByAssetFinType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">18</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CredOperGuarantType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">19</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AssetTaxPayEntityModeByAssetType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">20</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CurrencyByInterv">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">21</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AssetTaxTypePaymentType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">22</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AssetPaymentCalendarFinCFEvent">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">23</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EquipmentOption">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">24</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="InitialCalendarCalcMode">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">25</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AplBusinessPurposeTypeByImporter">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">26</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CredOperClassificationByEntitySuperType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">27</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PlafondUsageContextByAssetType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">28</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ClauseByContext">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">29</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CredOperBuildingInfo">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">30</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AssetTaxTypeByAplCompany">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">31</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AssetOriginByContextKind">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">32</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CredFinalityByAplCompany">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">33</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DepreciationBindingModeByAssetSituation">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">34</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MLAAplCompaniesByCredOperId">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">35</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EquipmentDocVehicleType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">36</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EquipmentDocCategoryType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">37</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SubCredOperEndReasonBySuperType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">38</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AssetPurpose">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">39</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ClaimTypeByClaimSuperType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">40</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ClaimIntervTypeByUsedForAnswer">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">41</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EquipmentInsurancesForRefund">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">42</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PurchaseOptionsByFinancialProduct">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">43</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SimulationCashFlowsWithAdditionalSpread">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">44</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DepreciationBindingModeStageByDepreciationBindingMode">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">45</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DepreciationEventDatesModeByDepreciationStartEvent">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">46</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="FixedAssetFlowModeByAplFlowClass">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">47</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CollectionResultTypeByAutUserStateId">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">48</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CreditOperationsForeignDataListId" nillable="true" type="tns:CreditOperationsForeignDataListId" />
+  <xs:simpleType name="CreditOperationsMultiForeignDataListId">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CredOperType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EquipmentModel">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CreditOperationsMultiForeignDataListId" nillable="true" type="tns:CreditOperationsMultiForeignDataListId" />
+</xs:schema>

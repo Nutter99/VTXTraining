@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperations.DataStructures" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Olissipo.CreditOperations.DataStructures" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:simpleType name="ContractInternalState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Initial">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Active">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="FinancialChange">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">12</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ResidualValue">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">13</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EarlyTermination">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">14</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Litigation">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">15</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Cancel">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">16</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Lost">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">17</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="WriteOff">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">18</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Signed">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">19</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Revoked">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">20</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ScoringEvaluated">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">21</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ContractInternalState" nillable="true" type="tns:ContractInternalState" />
+  <xs:simpleType name="AssetInternalOperation">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Lease" />
+      <xs:enumeration value="NotLease" />
+      <xs:enumeration value="Release" />
+      <xs:enumeration value="Sale" />
+      <xs:enumeration value="Recover" />
+      <xs:enumeration value="NotRecover" />
+      <xs:enumeration value="Cancel" />
+      <xs:enumeration value="Finish" />
+      <xs:enumeration value="Lost" />
+      <xs:enumeration value="CreateVehiclesProcesses" />
+      <xs:enumeration value="RecFriendly" />
+      <xs:enumeration value="Decommission" />
+      <xs:enumeration value="Deliver" />
+      <xs:enumeration value="EquipmentRegistration" />
+      <xs:enumeration value="EquipmentUnregistration" />
+      <xs:enumeration value="EquipmentLicencePlateChange" />
+      <xs:enumeration value="EquipmentReimbursement" />
+      <xs:enumeration value="Sign" />
+      <xs:enumeration value="Change" />
+      <xs:enumeration value="RecalculateCalendar" />
+      <xs:enumeration value="Revoke" />
+      <xs:enumeration value="WriteOff" />
+      <xs:enumeration value="CreateDisposableAsset" />
+      <xs:enumeration value="CreateUsage" />
+      <xs:enumeration value="ServiceLease" />
+      <xs:enumeration value="ServiceNotLease" />
+      <xs:enumeration value="EquipmentNotAvailable" />
+      <xs:enumeration value="Undeliver" />
+      <xs:enumeration value="CreateAssetRetake" />
+      <xs:enumeration value="TerminateAssetRetake" />
+      <xs:enumeration value="Immobilize" />
+      <xs:enumeration value="CreateInsuranceRefund" />
+      <xs:enumeration value="CreateEquipmentInsurance" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AssetInternalOperation" nillable="true" type="tns:AssetInternalOperation" />
+</xs:schema>

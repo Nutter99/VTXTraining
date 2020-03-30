@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://accipiens.com/AcpFramework" elementFormDefault="qualified" targetNamespace="http://accipiens.com/AcpFramework" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/BusinessFramework.svc?xsd=xsd2" namespace="http://accipiens.com/Common" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/BusinessFramework.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="PaymentDataInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Account" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AgencyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AplBankAccountId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="BankName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Bban" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataFormat" nillable="true" type="tns:BankAccountDataFormat" />
+      <xs:element minOccurs="0" name="Iban" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsRecurring" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Reference" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Reference2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Reference3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Swift" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PaymentDataInfo" nillable="true" type="tns:PaymentDataInfo" />
+  <xs:simpleType name="BankAccountDataFormat">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Bban" />
+      <xs:enumeration value="Iban" />
+      <xs:enumeration value="SwiftIban" />
+      <xs:enumeration value="SwiftBankNameAccount" />
+      <xs:enumeration value="BbanReference" />
+      <xs:enumeration value="Reference" />
+      <xs:enumeration value="SwiftIbanReferenceIsRecurring" />
+      <xs:enumeration value="SwiftBankNameAccountAgencyName" />
+      <xs:enumeration value="AccountReferenceRef2Ref3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="BankAccountDataFormat" nillable="true" type="tns:BankAccountDataFormat" />
+  <xs:complexType name="ArrayOfWorkPeriodOwnerItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WorkPeriodOwnerItem" nillable="true" type="tns:WorkPeriodOwnerItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWorkPeriodOwnerItem" nillable="true" type="tns:ArrayOfWorkPeriodOwnerItem" />
+  <xs:complexType name="WorkPeriodOwnerItem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WorkPeriodTypeItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WorkPeriodOwnerItem" nillable="true" type="tns:WorkPeriodOwnerItem" />
+  <xs:complexType name="WorkPeriodTypeItem">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://accipiens.com/Common" base="q1:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BeginHour" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="BeginMinute" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EndHour" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="EndMinute" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:WorkPeriodTypeItemKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:WorkPeriodTypeItemDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:WorkPeriodTypeItemField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfWorkPeriodTypeItemField" />
+          <xs:element minOccurs="0" name="OnFriday" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OnHoliday" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OnMonday" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OnSaturday" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OnSunday" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OnThursday" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OnTuesday" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OnWednesday" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OwnerId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="WorkPeriodTypeId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WorkPeriodTypeItem" nillable="true" type="tns:WorkPeriodTypeItem" />
+  <xs:complexType name="WorkPeriodTypeItemKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://accipiens.com/Common" base="q2:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WorkPeriodTypeItemKey" nillable="true" type="tns:WorkPeriodTypeItemKey" />
+  <xs:simpleType name="WorkPeriodTypeItemDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WorkPeriodTypeItemDetail" nillable="true" type="tns:WorkPeriodTypeItemDetail" />
+  <xs:simpleType name="WorkPeriodTypeItemField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="WorkPeriodTypeId" />
+      <xs:enumeration value="OnMonday" />
+      <xs:enumeration value="OnTuesday" />
+      <xs:enumeration value="OnWednesday" />
+      <xs:enumeration value="OnThursday" />
+      <xs:enumeration value="OnFriday" />
+      <xs:enumeration value="OnSaturday" />
+      <xs:enumeration value="OnSunday" />
+      <xs:enumeration value="OnHoliday" />
+      <xs:enumeration value="BeginHour" />
+      <xs:enumeration value="BeginMinute" />
+      <xs:enumeration value="EndHour" />
+      <xs:enumeration value="EndMinute" />
+      <xs:enumeration value="OwnerId" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WorkPeriodTypeItemField" nillable="true" type="tns:WorkPeriodTypeItemField" />
+  <xs:complexType name="ArrayOfWorkPeriodTypeItemField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WorkPeriodTypeItemField" type="tns:WorkPeriodTypeItemField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWorkPeriodTypeItemField" nillable="true" type="tns:ArrayOfWorkPeriodTypeItemField" />
+  <xs:complexType name="Address">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://accipiens.com/Common" base="q3:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddressTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Apartment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Building" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Council" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CouncilCode" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CountryId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="District" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DistrictCode" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FetchLevel" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="HouseNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="InvalidDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AddressKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AddressDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AddressField" />
+          <xs:element minOccurs="0" name="Locality" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAddressField" />
+          <xs:element minOccurs="0" name="OccupiedPoint" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Place" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Region" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Street" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StreetNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StreetTypeId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Address" nillable="true" type="tns:Address" />
+  <xs:complexType name="AddressKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://accipiens.com/Common" base="q4:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddressKey" nillable="true" type="tns:AddressKey" />
+  <xs:simpleType name="AddressDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AddressDetail" nillable="true" type="tns:AddressDetail" />
+  <xs:simpleType name="AddressField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="CountryId" />
+      <xs:enumeration value="Street" />
+      <xs:enumeration value="PostalCode" />
+      <xs:enumeration value="Locality" />
+      <xs:enumeration value="AddressTypeId" />
+      <xs:enumeration value="StreetTypeId" />
+      <xs:enumeration value="StreetNumber" />
+      <xs:enumeration value="HouseNumber" />
+      <xs:enumeration value="InvalidDate" />
+      <xs:enumeration value="Place" />
+      <xs:enumeration value="FetchLevel" />
+      <xs:enumeration value="District" />
+      <xs:enumeration value="Region" />
+      <xs:enumeration value="OccupiedPoint" />
+      <xs:enumeration value="DistrictCode" />
+      <xs:enumeration value="Building" />
+      <xs:enumeration value="Apartment" />
+      <xs:enumeration value="Council" />
+      <xs:enumeration value="CouncilCode" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AddressField" nillable="true" type="tns:AddressField" />
+  <xs:complexType name="ArrayOfAddressField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AddressField" type="tns:AddressField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAddressField" nillable="true" type="tns:ArrayOfAddressField" />
+  <xs:complexType name="ExpenseType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://accipiens.com/Common" base="q5:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AccountingModes" nillable="true" type="tns:ArrayOfExpenseTypeAccounting" />
+          <xs:element minOccurs="0" name="AnnulAplStatementId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AplCompanyId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Businesses" nillable="true" type="tns:ArrayOfExpenseTypeBusiness" />
+          <xs:element minOccurs="0" name="CalcAplStatementId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="CanChangeAccMode" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CurrencyId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EntityToInvoiceId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="EventId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ExpenseAccountingModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ExpenseAmounts" nillable="true" type="tns:ArrayOfExpenseTypeAmount" />
+          <xs:element minOccurs="0" name="ExpenseBaseId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ExpenseCalcModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ExpenseCalcMomentId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ExpenseSuperTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ExpenseTaxTypeModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ExpenseValue" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ExpenseVisibleFieldsId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FetchLevel" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FlowTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="HasPeriodification" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HasSingleInvoice" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="InvalidDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="InvoiceCurrencyId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsAmountReadOnly" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsDebit" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsTaxExpense" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsToInvoiceFrameContractForManualAssign" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:ExpenseTypeKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:ExpenseTypeDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:ExpenseTypeField" />
+          <xs:element minOccurs="0" name="MaxExpensePercentage" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="MinExpensePercentage" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfExpenseTypeField" />
+          <xs:element minOccurs="0" name="ScopeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TaxClassifierId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TaxNatureId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TaxRegimeSourceId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExpenseType" nillable="true" type="tns:ExpenseType" />
+  <xs:complexType name="ArrayOfExpenseTypeAccounting">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExpenseTypeAccounting" nillable="true" type="tns:ExpenseTypeAccounting" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExpenseTypeAccounting" nillable="true" type="tns:ArrayOfExpenseTypeAccounting" />
+  <xs:complexType name="ExpenseTypeAccounting">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://accipiens.com/Common" base="q6:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ExpenseAccountingModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ExpenseTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="FlowTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:ExpenseTypeAccountingKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:ExpenseTypeAccountingDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:ExpenseTypeAccountingField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfExpenseTypeAccountingField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExpenseTypeAccounting" nillable="true" type="tns:ExpenseTypeAccounting" />
+  <xs:complexType name="ExpenseTypeAccountingKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://accipiens.com/Common" base="q7:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ExpenseAccountingModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ExpenseTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExpenseTypeAccountingKey" nillable="true" type="tns:ExpenseTypeAccountingKey" />
+  <xs:simpleType name="ExpenseTypeAccountingDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExpenseTypeAccountingDetail" nillable="true" type="tns:ExpenseTypeAccountingDetail" />
+  <xs:simpleType name="ExpenseTypeAccountingField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="ExpenseTypeId" />
+      <xs:enumeration value="ExpenseAccountingModeId" />
+      <xs:enumeration value="FlowTypeId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExpenseTypeAccountingField" nillable="true" type="tns:ExpenseTypeAccountingField" />
+  <xs:complexType name="ArrayOfExpenseTypeAccountingField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExpenseTypeAccountingField" type="tns:ExpenseTypeAccountingField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExpenseTypeAccountingField" nillable="true" type="tns:ArrayOfExpenseTypeAccountingField" />
+  <xs:complexType name="ArrayOfExpenseTypeBusiness">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExpenseTypeBusiness" nillable="true" type="tns:ExpenseTypeBusiness" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExpenseTypeBusiness" nillable="true" type="tns:ArrayOfExpenseTypeBusiness" />
+  <xs:complexType name="ExpenseTypeBusiness">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://accipiens.com/Common" base="q8:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplBusinessId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ExpenseTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:ExpenseTypeBusinessKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:ExpenseTypeBusinessDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:ExpenseTypeBusinessField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfExpenseTypeBusinessField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExpenseTypeBusiness" nillable="true" type="tns:ExpenseTypeBusiness" />
+  <xs:complexType name="ExpenseTypeBusinessKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://accipiens.com/Common" base="q9:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplBusinessId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ExpenseTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExpenseTypeBusinessKey" nillable="true" type="tns:ExpenseTypeBusinessKey" />
+  <xs:simpleType name="ExpenseTypeBusinessDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExpenseTypeBusinessDetail" nillable="true" type="tns:ExpenseTypeBusinessDetail" />
+  <xs:simpleType name="ExpenseTypeBusinessField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="ExpenseTypeId" />
+      <xs:enumeration value="AplBusinessId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExpenseTypeBusinessField" nillable="true" type="tns:ExpenseTypeBusinessField" />
+  <xs:complexType name="ArrayOfExpenseTypeBusinessField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExpenseTypeBusinessField" type="tns:ExpenseTypeBusinessField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExpenseTypeBusinessField" nillable="true" type="tns:ArrayOfExpenseTypeBusinessField" />
+  <xs:complexType name="ArrayOfExpenseTypeAmount">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExpenseTypeAmount" nillable="true" type="tns:ExpenseTypeAmount" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExpenseTypeAmount" nillable="true" type="tns:ArrayOfExpenseTypeAmount" />
+  <xs:complexType name="ExpenseTypeAmount">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://accipiens.com/Common" base="q10:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplBusinessId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CurrencyId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExpenseTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ExpenseValue" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:ExpenseTypeAmountKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:ExpenseTypeAmountDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:ExpenseTypeAmountField" />
+          <xs:element minOccurs="0" name="MaxExpenseAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="MaxExpensePercentage" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="MinBaseAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="MinExpenseAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="MinExpenseAmountToInvoice" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="MinExpensePercentage" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfExpenseTypeAmountField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExpenseTypeAmount" nillable="true" type="tns:ExpenseTypeAmount" />
+  <xs:complexType name="ExpenseTypeAmountKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://accipiens.com/Common" base="q11:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplBusinessId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CurrencyId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExpenseTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExpenseTypeAmountKey" nillable="true" type="tns:ExpenseTypeAmountKey" />
+  <xs:simpleType name="ExpenseTypeAmountDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExpenseTypeAmountDetail" nillable="true" type="tns:ExpenseTypeAmountDetail" />
+  <xs:simpleType name="ExpenseTypeAmountField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="ExpenseTypeId" />
+      <xs:enumeration value="CurrencyId" />
+      <xs:enumeration value="AplBusinessId" />
+      <xs:enumeration value="ExpenseValue" />
+      <xs:enumeration value="MinExpensePercentage" />
+      <xs:enumeration value="MaxExpensePercentage" />
+      <xs:enumeration value="MinExpenseAmount" />
+      <xs:enumeration value="MaxExpenseAmount" />
+      <xs:enumeration value="MinBaseAmount" />
+      <xs:enumeration value="MinExpenseAmountToInvoice" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExpenseTypeAmountField" nillable="true" type="tns:ExpenseTypeAmountField" />
+  <xs:complexType name="ArrayOfExpenseTypeAmountField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExpenseTypeAmountField" type="tns:ExpenseTypeAmountField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExpenseTypeAmountField" nillable="true" type="tns:ArrayOfExpenseTypeAmountField" />
+  <xs:complexType name="ExpenseTypeKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://accipiens.com/Common" base="q12:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AplCompanyId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExpenseTypeKey" nillable="true" type="tns:ExpenseTypeKey" />
+  <xs:simpleType name="ExpenseTypeDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AccountingMode" />
+      <xs:enumeration value="Business" />
+      <xs:enumeration value="ExpenseAmount" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExpenseTypeDetail" nillable="true" type="tns:ExpenseTypeDetail" />
+  <xs:simpleType name="ExpenseTypeField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="Abrev" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="ExpenseCalcModeId" />
+      <xs:enumeration value="CalcAplStatementId" />
+      <xs:enumeration value="ExpenseValue" />
+      <xs:enumeration value="FlowTypeId" />
+      <xs:enumeration value="EventId" />
+      <xs:enumeration value="IsTaxExpense" />
+      <xs:enumeration value="AplCompanyId" />
+      <xs:enumeration value="TaxNatureId" />
+      <xs:enumeration value="TaxClassifierId" />
+      <xs:enumeration value="TaxRegimeSourceId" />
+      <xs:enumeration value="HasPeriodification" />
+      <xs:enumeration value="ExpenseAccountingModeId" />
+      <xs:enumeration value="CanChangeAccMode" />
+      <xs:enumeration value="AnnulAplStatementId" />
+      <xs:enumeration value="CurrencyId" />
+      <xs:enumeration value="ExpenseSuperTypeId" />
+      <xs:enumeration value="IsDebit" />
+      <xs:enumeration value="ScopeId" />
+      <xs:enumeration value="FetchLevel" />
+      <xs:enumeration value="InvalidDate" />
+      <xs:enumeration value="ExpenseCalcMomentId" />
+      <xs:enumeration value="EntityToInvoiceId" />
+      <xs:enumeration value="ExpenseBaseId" />
+      <xs:enumeration value="MinExpensePercentage" />
+      <xs:enumeration value="MaxExpensePercentage" />
+      <xs:enumeration value="InvoiceCurrencyId" />
+      <xs:enumeration value="HasSingleInvoice" />
+      <xs:enumeration value="ExpenseVisibleFieldsId" />
+      <xs:enumeration value="IsAmountReadOnly" />
+      <xs:enumeration value="ExpenseTaxTypeModeId" />
+      <xs:enumeration value="IsToInvoiceFrameContractForManualAssign" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExpenseTypeField" nillable="true" type="tns:ExpenseTypeField" />
+  <xs:complexType name="ArrayOfExpenseTypeField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExpenseTypeField" type="tns:ExpenseTypeField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExpenseTypeField" nillable="true" type="tns:ArrayOfExpenseTypeField" />
+  <xs:simpleType name="ExpenseSuperType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Business">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ReceivablesPayables">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BankManagement">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Litigations">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AssetRetakes">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Factoring">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Condominium">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VehicleFine">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExpenseSuperType" nillable="true" type="tns:ExpenseSuperType" />
+</xs:schema>

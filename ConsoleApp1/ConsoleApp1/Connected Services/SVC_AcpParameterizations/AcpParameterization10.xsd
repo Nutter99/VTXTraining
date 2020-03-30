@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Olissipo.BusinessFramework.DataStructures" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Olissipo.BusinessFramework.DataStructures" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="FinancialFlowsTypesIndicator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Rents" />
+      <xs:enumeration value="ResidualValue" />
+      <xs:enumeration value="FinancialChange" />
+      <xs:enumeration value="Rescission" />
+      <xs:enumeration value="CapitalIncrease" />
+      <xs:enumeration value="CapitalDecrease" />
+      <xs:enumeration value="CapitalIncreasePreCto" />
+      <xs:enumeration value="CapitalDecreasePreCto" />
+      <xs:enumeration value="CautionReception" />
+      <xs:enumeration value="CautionDevolution" />
+      <xs:enumeration value="Consortium" />
+      <xs:enumeration value="Restructure" />
+      <xs:enumeration value="InitialEntry" />
+      <xs:enumeration value="AssetPayment" />
+      <xs:enumeration value="Lbt_LoanInterest" />
+      <xs:enumeration value="Lbt_Increase" />
+      <xs:enumeration value="Lbt_Decrease" />
+      <xs:enumeration value="CapitalizeInterest" />
+      <xs:enumeration value="NonDeductibleDepreciation" />
+      <xs:enumeration value="FinancialValue" />
+      <xs:enumeration value="RegularizationAssetPayment" />
+      <xs:enumeration value="Activation" />
+      <xs:enumeration value="ActivationAssetPayment" />
+      <xs:enumeration value="AfterActivationAssetPayment" />
+      <xs:enumeration value="Revocation" />
+      <xs:enumeration value="VATRecoverOtherCapital" />
+      <xs:enumeration value="DelayedAssetDevolution" />
+      <xs:enumeration value="FundingCost" />
+      <xs:enumeration value="VATRegularization" />
+      <xs:enumeration value="InitialEntrySubvention" />
+      <xs:enumeration value="BalloonRent" />
+      <xs:enumeration value="RentFirstFlow" />
+      <xs:enumeration value="ServiceFirstFlow" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinancialFlowsTypesIndicator" nillable="true" type="tns:FinancialFlowsTypesIndicator" />
+</xs:schema>

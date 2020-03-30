@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://accipiens.com" elementFormDefault="qualified" targetNamespace="http://accipiens.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd4" namespace="http://accipiens.com/Top" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Olissipo.Top.DataStructures" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd2" namespace="http://accipiens.com/Common" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd8" namespace="http://accipiens.com/Automatons" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd12" namespace="http://accipiens.com/AcpFramework" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd14" namespace="http://accipiens.com/Entities" />
+  <xs:element name="Ping">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="text" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PingResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumAnonyObjectKind">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="anonyObjectKind" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumAnonyObjectKindResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://accipiens.com/Top" minOccurs="0" name="ConvertToEnumAnonyObjectKindResult" type="q1:AnonyObjectKind" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonyObjectKindEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://accipiens.com/Top" minOccurs="0" name="anonyObjectKind" type="q2:AnonyObjectKind" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonyObjectKindEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAnonyObjectKindEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumAnonyTypeKind">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="anonyTypeKind" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumAnonyTypeKindResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://accipiens.com/Top" minOccurs="0" name="ConvertToEnumAnonyTypeKindResult" type="q3:AnonyTypeKind" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonyTypeKindEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://accipiens.com/Top" minOccurs="0" name="anonyTypeKind" type="q4:AnonyTypeKind" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonyTypeKindEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAnonyTypeKindEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumAnonyActionKind">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="anonyActionKind" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumAnonyActionKindResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://accipiens.com/Top" minOccurs="0" name="ConvertToEnumAnonyActionKindResult" type="q5:AnonyActionKind" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonyActionKindEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://accipiens.com/Top" minOccurs="0" name="anonyActionKind" type="q6:AnonyActionKind" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonyActionKindEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAnonyActionKindEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumAnonyUniverseConditionKind">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="anonyUniverseConditionKind" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumAnonyUniverseConditionKindResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://accipiens.com/Top" minOccurs="0" name="ConvertToEnumAnonyUniverseConditionKindResult" type="q7:AnonyUniverseConditionKind" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonyUniverseConditionKindEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://accipiens.com/Top" minOccurs="0" name="anonyUniverseConditionKind" type="q8:AnonyUniverseConditionKind" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonyUniverseConditionKindEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAnonyUniverseConditionKindEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumAccountSituationRequestServiceType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountSituationRequestServiceType" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertToEnumAccountSituationRequestServiceTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Olissipo.Top.DataStructures" minOccurs="0" name="ConvertToEnumAccountSituationRequestServiceTypeResult" type="q9:AccountSituationRequestServiceType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountSituationRequestServiceTypeEnumValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Olissipo.Top.DataStructures" minOccurs="0" name="accountSituationRequestServiceType" type="q10:AccountSituationRequestServiceType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountSituationRequestServiceTypeEnumValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAccountSituationRequestServiceTypeEnumValueResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTopClassContext">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://accipiens.com/Top" minOccurs="0" name="searchClass" type="q11:TopSearchClass" />
+        <xs:element minOccurs="0" name="parentFullContext" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="detail" type="xs:int" />
+        <xs:element minOccurs="0" name="isFull" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTopClassContextResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTopClassContextResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchTop">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://accipiens.com/Top" minOccurs="0" name="searchClass" type="q12:TopSearchClass" />
+        <xs:element xmlns:q13="http://accipiens.com/Common" minOccurs="0" name="criteria" nillable="true" type="q13:SearchCriteria" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchTopResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://accipiens.com/Common" minOccurs="0" name="SearchTopResult" nillable="true" type="q14:SearchResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonymizedByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q15:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q16="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q16:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonymizedByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://accipiens.com/Top" minOccurs="0" name="GetAnonymizedByKeysResult" nillable="true" type="q17:ArrayOfAnonymized" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonymizedElementByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q18:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q19="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q19:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonymizedElementByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://accipiens.com/Top" minOccurs="0" name="GetAnonymizedElementByKeysResult" nillable="true" type="q20:ArrayOfAnonymizedElement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonymizedRecordByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q21:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q22="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q22:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonymizedRecordByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://accipiens.com/Top" minOccurs="0" name="GetAnonymizedRecordByKeysResult" nillable="true" type="q23:ArrayOfAnonymizedRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonymizedReplaceEntityByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q24:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q25="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q25:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonymizedReplaceEntityByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://accipiens.com/Top" minOccurs="0" name="GetAnonymizedReplaceEntityByKeysResult" nillable="true" type="q26:ArrayOfAnonymizedReplaceEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonymizedZoneByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q27:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q28="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q28:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonymizedZoneByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://accipiens.com/Top" minOccurs="0" name="GetAnonymizedZoneByKeysResult" nillable="true" type="q29:ArrayOfAnonymizedZone" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonymizeHeaderByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q30:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q31="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q31:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonymizeHeaderByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://accipiens.com/Top" minOccurs="0" name="GetAnonymizeHeaderByKeysResult" nillable="true" type="q32:ArrayOfAnonymizeHeader" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonyTypeByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q33:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q34="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q34:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonyTypeByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://accipiens.com/Top" minOccurs="0" name="GetAnonyTypeByKeysResult" nillable="true" type="q35:ArrayOfAnonyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonyTypeCredOperIntervTypeByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q36:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q37="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q37:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonyTypeCredOperIntervTypeByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://accipiens.com/Top" minOccurs="0" name="GetAnonyTypeCredOperIntervTypeByKeysResult" nillable="true" type="q38:ArrayOfAnonyTypeCredOperIntervType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonyTypePhysicalDocByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q39:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q40="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q40:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonyTypePhysicalDocByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://accipiens.com/Top" minOccurs="0" name="GetAnonyTypePhysicalDocByKeysResult" nillable="true" type="q41:ArrayOfAnonyTypePhysicalDoc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonyTypeReplaceEntityByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q42:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q43="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q43:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonyTypeReplaceEntityByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://accipiens.com/Top" minOccurs="0" name="GetAnonyTypeReplaceEntityByKeysResult" nillable="true" type="q44:ArrayOfAnonyTypeReplaceEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonyTypeZoneByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q45:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q46="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q46:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonyTypeZoneByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://accipiens.com/Top" minOccurs="0" name="GetAnonyTypeZoneByKeysResult" nillable="true" type="q47:ArrayOfAnonyTypeZone" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonyUniverseTypeByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q48:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q49="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q49:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonyUniverseTypeByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://accipiens.com/Top" minOccurs="0" name="GetAnonyUniverseTypeByKeysResult" nillable="true" type="q50:ArrayOfAnonyUniverseType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonyUniverseTypeConditionByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q51:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q52="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q52:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonyUniverseTypeConditionByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://accipiens.com/Top" minOccurs="0" name="GetAnonyUniverseTypeConditionByKeysResult" nillable="true" type="q53:ArrayOfAnonyUniverseTypeCondition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployingEntityValidityByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q54:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q55="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q55:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployingEntityValidityByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://accipiens.com/Top" minOccurs="0" name="GetEmployingEntityValidityByKeysResult" nillable="true" type="q56:ArrayOfEmployingEntityValidity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpenAccountSituationRequestByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q57:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q58="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q58:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpenAccountSituationRequestByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://accipiens.com/Top" minOccurs="0" name="GetOpenAccountSituationRequestByKeysResult" nillable="true" type="q59:ArrayOfOpenAccountSituationRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpenAccountSituationResponseByKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://accipiens.com/Common" minOccurs="0" name="keys" nillable="true" type="q60:ArrayOfBusinessEntityKey" />
+        <xs:element minOccurs="0" name="detailsOnly" type="xs:boolean" />
+        <xs:element xmlns:q61="http://accipiens.com/Common" minOccurs="0" name="businessDetailsInfo" nillable="true" type="q61:ArrayOfBusinessDetailFetchInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpenAccountSituationResponseByKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://accipiens.com/Top" minOccurs="0" name="GetOpenAccountSituationResponseByKeysResult" nillable="true" type="q62:ArrayOfOpenAccountSituationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveTop">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://accipiens.com/Top" minOccurs="0" name="saveClass" type="q63:TopSaveClass" />
+        <xs:element xmlns:q64="http://accipiens.com/Common" minOccurs="0" name="businessSlim" nillable="true" type="q64:BusinessEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveTopResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://accipiens.com/Common" minOccurs="0" name="SaveTopResult" nillable="true" type="q65:SaveResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveTopV2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://accipiens.com/Top" minOccurs="0" name="saveClass" type="q66:TopSaveClass" />
+        <xs:element xmlns:q67="http://accipiens.com/Common" minOccurs="0" name="businessSlim" nillable="true" type="q67:BusinessEntity" />
+        <xs:element xmlns:q68="http://accipiens.com/Common" minOccurs="0" name="saveParams" nillable="true" type="q68:SaveParams" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveTopV2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://accipiens.com/Common" minOccurs="0" name="SaveTopV2Result" nillable="true" type="q69:SaveResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTopClassTableId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://accipiens.com/Top" minOccurs="0" name="rootClass" type="q70:TopClass" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTopClassTableIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTopClassTableIdResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTopTableId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fullContext" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTopTableIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTopTableIdResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchTopConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://accipiens.com/Top" minOccurs="0" name="searchClass" type="q71:TopSearchClass" />
+        <xs:element xmlns:q72="http://accipiens.com/Common" minOccurs="0" name="criteria" nillable="true" type="q72:SearchCriteria" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchTopConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://accipiens.com/Common" minOccurs="0" name="SearchTopConfigResult" nillable="true" type="q73:ArrayOfBusinessEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExposeTopTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://accipiens.com/Top" minOccurs="0" name="topAutContext" type="q74:TopAutContext" />
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/Olissipo.Top.DataStructures" minOccurs="0" name="anonymizedInternalOperation" type="q75:AnonymizedInternalOperation" />
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/Olissipo.Top.DataStructures" minOccurs="0" name="anonymizeHeaderInternalOperation" type="q76:AnonymizeHeaderInternalOperation" />
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/Olissipo.Top.DataStructures" minOccurs="0" name="anonymizedRecordInternalOperation" type="q77:AnonymizedRecordInternalOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExposeTopTypesResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonymizedTransitionList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="anonymizedId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonymizedTransitionListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://accipiens.com/Automatons" minOccurs="0" name="GetAnonymizedTransitionListResult" nillable="true" type="q78:ArrayOfAutTransition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoAnonymizedTransition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="transitionId" type="xs:long" />
+        <xs:element minOccurs="0" name="anonymizedId" type="xs:long" />
+        <xs:element xmlns:q79="http://accipiens.com/Automatons" minOccurs="0" name="transParam" nillable="true" type="q79:TransitionParam" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoAnonymizedTransitionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://accipiens.com/Automatons" minOccurs="0" name="DoAnonymizedTransitionResult" nillable="true" type="q80:TransitionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonymizedInitialState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="anonyTypeId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonymizedInitialStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://accipiens.com/Automatons" minOccurs="0" name="GetAnonymizedInitialStateResult" nillable="true" type="q81:AutUserState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonymizedInternalState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="autUserStateId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonymizedInternalStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/Olissipo.Top.DataStructures" minOccurs="0" name="GetAnonymizedInternalStateResult" type="q82:AnonymizedInternalState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonymizeHeaderTransitionList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="anonymizeheaderId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonymizeHeaderTransitionListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q83="http://accipiens.com/Automatons" minOccurs="0" name="GetAnonymizeHeaderTransitionListResult" nillable="true" type="q83:ArrayOfAutTransition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoAnonymizeHeaderTransition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="anonymizeHeaderId" type="xs:long" />
+        <xs:element minOccurs="0" name="transitionId" type="xs:long" />
+        <xs:element xmlns:q84="http://accipiens.com/Automatons" minOccurs="0" name="transParam" nillable="true" type="q84:TransitionParam" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoAnonymizeHeaderTransitionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="http://accipiens.com/Automatons" minOccurs="0" name="DoAnonymizeHeaderTransitionResult" nillable="true" type="q85:TransitionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonymizeHeaderInternalState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="autUserStateId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonymizeHeaderInternalStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/Olissipo.Top.DataStructures" minOccurs="0" name="GetAnonymizeHeaderInternalStateResult" type="q86:AnonymizeHeaderInternalState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonymizedRecordTransitionList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="anonymizedRecordId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonymizedRecordTransitionListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q87="http://accipiens.com/Automatons" minOccurs="0" name="GetAnonymizedRecordTransitionListResult" nillable="true" type="q87:ArrayOfAutTransition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoAnonymizedRecordTransition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="transitionId" type="xs:long" />
+        <xs:element minOccurs="0" name="anonymizedRecordId" type="xs:long" />
+        <xs:element xmlns:q88="http://accipiens.com/Automatons" minOccurs="0" name="transParam" nillable="true" type="q88:TransitionParam" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoAnonymizedRecordTransitionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q89="http://accipiens.com/Automatons" minOccurs="0" name="DoAnonymizedRecordTransitionResult" nillable="true" type="q89:TransitionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonymizedRecordInitialState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="anonyTypeId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonymizedRecordInitialStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q90="http://accipiens.com/Automatons" minOccurs="0" name="GetAnonymizedRecordInitialStateResult" nillable="true" type="q90:AutUserState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonymizedRecordInternalState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="autUserStateId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonymizedRecordInternalStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/Olissipo.Top.DataStructures" minOccurs="0" name="GetAnonymizedRecordInternalStateResult" type="q91:AnonymizedRecordInternalState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveNewAnonymizeHeader">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q92="http://accipiens.com/Top" minOccurs="0" name="anonyHeader" nillable="true" type="q92:AnonymizeHeader" />
+        <xs:element minOccurs="0" name="isAutomatic" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveNewAnonymizeHeaderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q93="http://accipiens.com/Common" minOccurs="0" name="SaveNewAnonymizeHeaderResult" nillable="true" type="q93:SaveResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonymizeHeaderTotals">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="headerId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnonymizeHeaderTotalsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://accipiens.com/Top" minOccurs="0" name="GetAnonymizeHeaderTotalsResult" nillable="true" type="q94:AnonyHeaderTotals" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AnonymizedCheckValidations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="anonymizedId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AnonymizedCheckValidationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q95="http://accipiens.com/Common" minOccurs="0" name="AnonymizedCheckValidationsResult" nillable="true" type="q95:ArrayOfValidationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRPDocumentBaseAmounts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="rpDocumentId" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="rpDocItemGroupId" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRPDocumentBaseAmountsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q96="http://accipiens.com/Top" minOccurs="0" name="GetRPDocumentBaseAmountsResult" nillable="true" type="q96:FinMovementDocument" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAplWorkItemWithCustomBySearch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q97="http://accipiens.com/Common" minOccurs="0" name="constraints" nillable="true" type="q97:ArrayOfBusinessConstraint" />
+        <xs:element xmlns:q98="http://accipiens.com/Common" minOccurs="0" name="orders" nillable="true" type="q98:ArrayOfBusinessOrderInfo" />
+        <xs:element xmlns:q99="http://accipiens.com/AcpFramework" minOccurs="0" name="searchParam" nillable="true" type="q99:SearchAplWorkItemParams" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAplWorkItemWithCustomBySearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q100="http://accipiens.com/AcpFramework" minOccurs="0" name="GetAplWorkItemWithCustomBySearchResult" nillable="true" type="q100:ArrayOfAplWorkItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExecuteAplCompanyReplicator">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q101="http://accipiens.com/Entities" minOccurs="0" name="aplCompanyReplicatorSlim" nillable="true" type="q101:AplCompanyReplicator" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExecuteAplCompanyReplicatorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ExecuteAplCompanyReplicatorResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestOpenAccountSituation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q102="http://accipiens.com/Top" minOccurs="0" name="openAccountSituation" nillable="true" type="q102:OpenAccountSituationRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestOpenAccountSituationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q103="http://accipiens.com/Common" minOccurs="0" name="RequestOpenAccountSituationResult" nillable="true" type="q103:SaveResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

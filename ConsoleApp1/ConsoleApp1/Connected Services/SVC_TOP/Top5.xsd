@@ -1,0 +1,1258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://accipiens.com/Top" elementFormDefault="qualified" targetNamespace="http://accipiens.com/Top" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd2" namespace="http://accipiens.com/Common" />
+  <xs:simpleType name="AnonyObjectKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Entity" />
+      <xs:enumeration value="CredOper" />
+      <xs:enumeration value="RPDocument" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AnonyObjectKind" nillable="true" type="tns:AnonyObjectKind" />
+  <xs:simpleType name="AnonyTypeKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Batch" />
+      <xs:enumeration value="Entity" />
+      <xs:enumeration value="Both" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AnonyTypeKind" nillable="true" type="tns:AnonyTypeKind" />
+  <xs:simpleType name="AnonyActionKind">
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:element name="AnonyActionKind" nillable="true" type="tns:AnonyActionKind" />
+  <xs:simpleType name="AnonyUniverseConditionKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AntiguityOperation" />
+      <xs:enumeration value="AntiguityRpOperation" />
+      <xs:enumeration value="AntiguityInStagingBox" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AnonyUniverseConditionKind" nillable="true" type="tns:AnonyUniverseConditionKind" />
+  <xs:simpleType name="TopSearchClass">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Anonymized" />
+      <xs:enumeration value="AnonymizedElement" />
+      <xs:enumeration value="AnonymizedRecord" />
+      <xs:enumeration value="AnonymizeHeader">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AnonyType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AnonyUniverseType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="OpenAccountSituationRequest">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">14</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="OpenAccountSituationResponse">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">15</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TopSearchClass" nillable="true" type="tns:TopSearchClass" />
+  <xs:complexType name="OpenAccountSituationResponseKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://accipiens.com/Common" base="q1:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OpenAccountSituationResponseKey" nillable="true" type="tns:OpenAccountSituationResponseKey" />
+  <xs:complexType name="AnonymizedReplaceEntityKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://accipiens.com/Common" base="q2:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AnonymizedId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="EntityId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AnonymizedReplaceEntityKey" nillable="true" type="tns:AnonymizedReplaceEntityKey" />
+  <xs:complexType name="AnonymizedRecordKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://accipiens.com/Common" base="q3:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AnonymizedRecordKey" nillable="true" type="tns:AnonymizedRecordKey" />
+  <xs:complexType name="AnonyTypeReplaceEntityKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://accipiens.com/Common" base="q4:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AnonyTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="EntityId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AnonyTypeReplaceEntityKey" nillable="true" type="tns:AnonyTypeReplaceEntityKey" />
+  <xs:complexType name="AnonyTypeZoneKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://accipiens.com/Common" base="q5:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AnonyObjectId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AnonyTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AnonyZoneId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CredOperStep" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AnonyTypeZoneKey" nillable="true" type="tns:AnonyTypeZoneKey" />
+  <xs:complexType name="AnonyUniverseTypeKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://accipiens.com/Common" base="q6:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AnonyUniverseTypeKey" nillable="true" type="tns:AnonyUniverseTypeKey" />
+  <xs:complexType name="AnonyUniverseTypeConditionKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://accipiens.com/Common" base="q7:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AnonyUniverseTypeConditionKey" nillable="true" type="tns:AnonyUniverseTypeConditionKey" />
+  <xs:complexType name="EmployingEntityValidityKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://accipiens.com/Common" base="q8:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EmployingEntityValidityKey" nillable="true" type="tns:EmployingEntityValidityKey" />
+  <xs:complexType name="OpenAccountSituationRequestKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://accipiens.com/Common" base="q9:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OpenAccountSituationRequestKey" nillable="true" type="tns:OpenAccountSituationRequestKey" />
+  <xs:complexType name="AnonyTypePhysicalDocKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://accipiens.com/Common" base="q10:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AnonyTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PhysicalDocId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AnonyTypePhysicalDocKey" nillable="true" type="tns:AnonyTypePhysicalDocKey" />
+  <xs:complexType name="AnonymizedZoneKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://accipiens.com/Common" base="q11:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AnonyObjectId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AnonyZoneId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AnonymizedId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="CredOperStep" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AnonymizedZoneKey" nillable="true" type="tns:AnonymizedZoneKey" />
+  <xs:complexType name="AnonymizeHeaderKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://accipiens.com/Common" base="q12:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AnonymizeHeaderKey" nillable="true" type="tns:AnonymizeHeaderKey" />
+  <xs:complexType name="AnonyTypeKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://accipiens.com/Common" base="q13:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AnonyTypeKey" nillable="true" type="tns:AnonyTypeKey" />
+  <xs:complexType name="AnonyTypeCredOperIntervTypeKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://accipiens.com/Common" base="q14:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AnonyTypeCredOperIntervTypeKey" nillable="true" type="tns:AnonyTypeCredOperIntervTypeKey" />
+  <xs:complexType name="AnonymizedKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://accipiens.com/Common" base="q15:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AnonymizedKey" nillable="true" type="tns:AnonymizedKey" />
+  <xs:complexType name="AnonymizedElementKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://accipiens.com/Common" base="q16:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AnonymizedRecordId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AplTableId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="RelatedId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AnonymizedElementKey" nillable="true" type="tns:AnonymizedElementKey" />
+  <xs:complexType name="ArrayOfAnonymized">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Anonymized" nillable="true" type="tns:Anonymized" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAnonymized" nillable="true" type="tns:ArrayOfAnonymized" />
+  <xs:complexType name="Anonymized">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://accipiens.com/Common" base="q17:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AnonyRecords" nillable="true" type="tns:ArrayOfAnonymizedRecord" />
+          <xs:element minOccurs="0" name="AnonyTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AnonyZones" nillable="true" type="tns:ArrayOfAnonymizedZone" />
+          <xs:element minOccurs="0" name="AnonymizeHeaderId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AnonymizedMoment" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AutUserStateId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="EntityId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ErrCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ErrMsg" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Header" nillable="true" type="tns:AnonymizeHeader" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AnonymizedKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AnonymizedDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AnonymizedField" />
+          <xs:element minOccurs="0" name="LoadMoment" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAnonymizedField" />
+          <xs:element minOccurs="0" name="Number" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="NumberIssued" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Reason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReplaceEntities" nillable="true" type="tns:ArrayOfAnonymizedReplaceEntity" />
+          <xs:element minOccurs="0" name="RowVersion" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="RunOrder" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="StateDate" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Anonymized" nillable="true" type="tns:Anonymized" />
+  <xs:complexType name="ArrayOfAnonymizedRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AnonymizedRecord" nillable="true" type="tns:AnonymizedRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAnonymizedRecord" nillable="true" type="tns:ArrayOfAnonymizedRecord" />
+  <xs:complexType name="AnonymizedRecord">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://accipiens.com/Common" base="q18:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AnonyParent" nillable="true" type="tns:Anonymized" />
+          <xs:element minOccurs="0" name="AnonymizedId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AntiguityDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AntiguityDays" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AplTableId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AssAplTableId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AssRelatedId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AutUserStateId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="CompareDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CompareGlobalDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CredOperIntervId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="CredOperIntervTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="CredOperStep" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Disidentified" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Done" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="IsManual" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AnonymizedRecordKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AnonymizedRecordDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AnonymizedRecordField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAnonymizedRecordField" />
+          <xs:element minOccurs="0" name="Quantity" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="RelatedId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="RunOrder" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="StateDate" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AnonymizedRecord" nillable="true" type="tns:AnonymizedRecord" />
+  <xs:simpleType name="AnonymizedRecordDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AnonyParent" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AnonymizedRecordDetail" nillable="true" type="tns:AnonymizedRecordDetail" />
+  <xs:simpleType name="AnonymizedRecordField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AnonymizedId" />
+      <xs:enumeration value="AplTableId" />
+      <xs:enumeration value="RelatedId" />
+      <xs:enumeration value="Quantity" />
+      <xs:enumeration value="CredOperIntervId" />
+      <xs:enumeration value="CredOperIntervTypeId" />
+      <xs:enumeration value="AntiguityDays" />
+      <xs:enumeration value="Done" />
+      <xs:enumeration value="CredOperStep" />
+      <xs:enumeration value="CompareDate" />
+      <xs:enumeration value="CompareGlobalDate" />
+      <xs:enumeration value="AntiguityDate" />
+      <xs:enumeration value="IsManual" />
+      <xs:enumeration value="AutUserStateId" />
+      <xs:enumeration value="StateDate" />
+      <xs:enumeration value="RunOrder" />
+      <xs:enumeration value="AssAplTableId" />
+      <xs:enumeration value="AssRelatedId" />
+      <xs:enumeration value="Disidentified" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AnonymizedRecordField" nillable="true" type="tns:AnonymizedRecordField" />
+  <xs:complexType name="ArrayOfAnonymizedRecordField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AnonymizedRecordField" type="tns:AnonymizedRecordField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAnonymizedRecordField" nillable="true" type="tns:ArrayOfAnonymizedRecordField" />
+  <xs:complexType name="ArrayOfAnonymizedZone">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AnonymizedZone" nillable="true" type="tns:AnonymizedZone" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAnonymizedZone" nillable="true" type="tns:ArrayOfAnonymizedZone" />
+  <xs:complexType name="AnonymizedZone">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://accipiens.com/Common" base="q19:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AnonyObjectId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AnonyZoneId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AnonymizedId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="CredOperStep" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AnonymizedZoneKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AnonymizedZoneDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AnonymizedZoneField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAnonymizedZoneField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AnonymizedZone" nillable="true" type="tns:AnonymizedZone" />
+  <xs:simpleType name="AnonymizedZoneDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AnonymizedZoneDetail" nillable="true" type="tns:AnonymizedZoneDetail" />
+  <xs:simpleType name="AnonymizedZoneField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AnonymizedId" />
+      <xs:enumeration value="AnonyObjectId" />
+      <xs:enumeration value="AnonyZoneId" />
+      <xs:enumeration value="CredOperStep" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AnonymizedZoneField" nillable="true" type="tns:AnonymizedZoneField" />
+  <xs:complexType name="ArrayOfAnonymizedZoneField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AnonymizedZoneField" type="tns:AnonymizedZoneField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAnonymizedZoneField" nillable="true" type="tns:ArrayOfAnonymizedZoneField" />
+  <xs:complexType name="AnonymizeHeader">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q20="http://accipiens.com/Common" base="q20:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AnonyUniverseTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AutUserStateId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AnonymizeHeaderKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AnonymizeHeaderDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AnonymizeHeaderField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAnonymizeHeaderField" />
+          <xs:element minOccurs="0" name="Number" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="NumberIssued" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RefDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="StateDate" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AnonymizeHeader" nillable="true" type="tns:AnonymizeHeader" />
+  <xs:simpleType name="AnonymizeHeaderDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AnonymizeHeaderDetail" nillable="true" type="tns:AnonymizeHeaderDetail" />
+  <xs:simpleType name="AnonymizeHeaderField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AnonyUniverseTypeId" />
+      <xs:enumeration value="StateDate" />
+      <xs:enumeration value="AutUserStateId" />
+      <xs:enumeration value="NumberIssued" />
+      <xs:enumeration value="Number" />
+      <xs:enumeration value="RefDate" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AnonymizeHeaderField" nillable="true" type="tns:AnonymizeHeaderField" />
+  <xs:complexType name="ArrayOfAnonymizeHeaderField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AnonymizeHeaderField" type="tns:AnonymizeHeaderField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAnonymizeHeaderField" nillable="true" type="tns:ArrayOfAnonymizeHeaderField" />
+  <xs:simpleType name="AnonymizedDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Header" />
+      <xs:enumeration value="AnonyRecord" />
+      <xs:enumeration value="AnonyZone" />
+      <xs:enumeration value="ReplaceEntity" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AnonymizedDetail" nillable="true" type="tns:AnonymizedDetail" />
+  <xs:simpleType name="AnonymizedField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="EntityId" />
+      <xs:enumeration value="AnonyTypeId" />
+      <xs:enumeration value="StateDate" />
+      <xs:enumeration value="AutUserStateId" />
+      <xs:enumeration value="RowVersion" />
+      <xs:enumeration value="AnonymizeHeaderId" />
+      <xs:enumeration value="AnonymizedMoment" />
+      <xs:enumeration value="Reason" />
+      <xs:enumeration value="ErrMsg" />
+      <xs:enumeration value="ErrCode" />
+      <xs:enumeration value="LoadMoment" />
+      <xs:enumeration value="NumberIssued" />
+      <xs:enumeration value="Number" />
+      <xs:enumeration value="RunOrder" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AnonymizedField" nillable="true" type="tns:AnonymizedField" />
+  <xs:complexType name="ArrayOfAnonymizedField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AnonymizedField" type="tns:AnonymizedField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAnonymizedField" nillable="true" type="tns:ArrayOfAnonymizedField" />
+  <xs:complexType name="ArrayOfAnonymizedReplaceEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AnonymizedReplaceEntity" nillable="true" type="tns:AnonymizedReplaceEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAnonymizedReplaceEntity" nillable="true" type="tns:ArrayOfAnonymizedReplaceEntity" />
+  <xs:complexType name="AnonymizedReplaceEntity">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q21="http://accipiens.com/Common" base="q21:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AnonymizedId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="EntityId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AnonymizedReplaceEntityKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AnonymizedReplaceEntityDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AnonymizedReplaceEntityField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAnonymizedReplaceEntityField" />
+          <xs:element minOccurs="0" name="ReplaceOrder" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AnonymizedReplaceEntity" nillable="true" type="tns:AnonymizedReplaceEntity" />
+  <xs:simpleType name="AnonymizedReplaceEntityDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AnonymizedReplaceEntityDetail" nillable="true" type="tns:AnonymizedReplaceEntityDetail" />
+  <xs:simpleType name="AnonymizedReplaceEntityField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AnonymizedId" />
+      <xs:enumeration value="EntityId" />
+      <xs:enumeration value="ReplaceOrder" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AnonymizedReplaceEntityField" nillable="true" type="tns:AnonymizedReplaceEntityField" />
+  <xs:complexType name="ArrayOfAnonymizedReplaceEntityField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AnonymizedReplaceEntityField" type="tns:AnonymizedReplaceEntityField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAnonymizedReplaceEntityField" nillable="true" type="tns:ArrayOfAnonymizedReplaceEntityField" />
+  <xs:complexType name="ArrayOfAnonymizedElement">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AnonymizedElement" nillable="true" type="tns:AnonymizedElement" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAnonymizedElement" nillable="true" type="tns:ArrayOfAnonymizedElement" />
+  <xs:complexType name="AnonymizedElement">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q22="http://accipiens.com/Common" base="q22:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AnonyMoment" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AnonymizedRecordId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AplTableId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AnonymizedElementKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AnonymizedElementDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AnonymizedElementField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAnonymizedElementField" />
+          <xs:element minOccurs="0" name="RelatedId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AnonymizedElement" nillable="true" type="tns:AnonymizedElement" />
+  <xs:simpleType name="AnonymizedElementDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AnonymizedElementDetail" nillable="true" type="tns:AnonymizedElementDetail" />
+  <xs:simpleType name="AnonymizedElementField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AnonymizedRecordId" />
+      <xs:enumeration value="RelatedId" />
+      <xs:enumeration value="AplTableId" />
+      <xs:enumeration value="AnonyMoment" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AnonymizedElementField" nillable="true" type="tns:AnonymizedElementField" />
+  <xs:complexType name="ArrayOfAnonymizedElementField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AnonymizedElementField" type="tns:AnonymizedElementField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAnonymizedElementField" nillable="true" type="tns:ArrayOfAnonymizedElementField" />
+  <xs:complexType name="ArrayOfAnonymizeHeader">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AnonymizeHeader" nillable="true" type="tns:AnonymizeHeader" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAnonymizeHeader" nillable="true" type="tns:ArrayOfAnonymizeHeader" />
+  <xs:complexType name="ArrayOfAnonyType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AnonyType" nillable="true" type="tns:AnonyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAnonyType" nillable="true" type="tns:ArrayOfAnonyType" />
+  <xs:complexType name="AnonyType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q23="http://accipiens.com/Common" base="q23:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AnonyActionId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AnonyCredOperIntervTypes" nillable="true" type="tns:ArrayOfAnonyTypeCredOperIntervType" />
+          <xs:element minOccurs="0" name="AnonyPhysicalDocs" nillable="true" type="tns:ArrayOfAnonyTypePhysicalDoc" />
+          <xs:element minOccurs="0" name="AnonyTypeApplyToId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AnonyZones" nillable="true" type="tns:ArrayOfAnonyTypeZone" />
+          <xs:element minOccurs="0" name="AutomatonId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FetchLevel" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="InvalidDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AnonyTypeKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AnonyTypeDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AnonyTypeField" />
+          <xs:element minOccurs="0" name="LoadAplStatementId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="LoadFromStagingBox" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAnonyTypeField" />
+          <xs:element minOccurs="0" name="NumerationId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ProcessAplStatementId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ProcessCustomAplStatementId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="RecordAutomatonId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ReplaceEntities" nillable="true" type="tns:ArrayOfAnonyTypeReplaceEntity" />
+          <xs:element minOccurs="0" name="ReplaceEntityId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ReplaceOperTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="StagingBoxDayRuleId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="StagingBoxDayRuleValue" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValidateAplStatementId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ValidationTypeId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AnonyType" nillable="true" type="tns:AnonyType" />
+  <xs:complexType name="ArrayOfAnonyTypeCredOperIntervType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AnonyTypeCredOperIntervType" nillable="true" type="tns:AnonyTypeCredOperIntervType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAnonyTypeCredOperIntervType" nillable="true" type="tns:ArrayOfAnonyTypeCredOperIntervType" />
+  <xs:complexType name="AnonyTypeCredOperIntervType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q24="http://accipiens.com/Common" base="q24:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AnonyTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AntiguityDayRuleId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AntiguityParam1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CredOperIntervTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AnonyTypeCredOperIntervTypeKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AnonyTypeCredOperIntervTypeDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AnonyTypeCredOperIntervTypeField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAnonyTypeCredOperIntervTypeField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AnonyTypeCredOperIntervType" nillable="true" type="tns:AnonyTypeCredOperIntervType" />
+  <xs:simpleType name="AnonyTypeCredOperIntervTypeDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AnonyTypeCredOperIntervTypeDetail" nillable="true" type="tns:AnonyTypeCredOperIntervTypeDetail" />
+  <xs:simpleType name="AnonyTypeCredOperIntervTypeField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AnonyTypeId" />
+      <xs:enumeration value="CredOperIntervTypeId" />
+      <xs:enumeration value="AntiguityDayRuleId" />
+      <xs:enumeration value="AntiguityParam1" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AnonyTypeCredOperIntervTypeField" nillable="true" type="tns:AnonyTypeCredOperIntervTypeField" />
+  <xs:complexType name="ArrayOfAnonyTypeCredOperIntervTypeField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AnonyTypeCredOperIntervTypeField" type="tns:AnonyTypeCredOperIntervTypeField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAnonyTypeCredOperIntervTypeField" nillable="true" type="tns:ArrayOfAnonyTypeCredOperIntervTypeField" />
+  <xs:complexType name="ArrayOfAnonyTypePhysicalDoc">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AnonyTypePhysicalDoc" nillable="true" type="tns:AnonyTypePhysicalDoc" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAnonyTypePhysicalDoc" nillable="true" type="tns:ArrayOfAnonyTypePhysicalDoc" />
+  <xs:complexType name="AnonyTypePhysicalDoc">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q25="http://accipiens.com/Common" base="q25:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AnonyTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AnonyTypePhysicalDocKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AnonyTypePhysicalDocDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AnonyTypePhysicalDocField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAnonyTypePhysicalDocField" />
+          <xs:element minOccurs="0" name="PhysicalDocId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AnonyTypePhysicalDoc" nillable="true" type="tns:AnonyTypePhysicalDoc" />
+  <xs:simpleType name="AnonyTypePhysicalDocDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AnonyTypePhysicalDocDetail" nillable="true" type="tns:AnonyTypePhysicalDocDetail" />
+  <xs:simpleType name="AnonyTypePhysicalDocField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AnonyTypeId" />
+      <xs:enumeration value="PhysicalDocId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AnonyTypePhysicalDocField" nillable="true" type="tns:AnonyTypePhysicalDocField" />
+  <xs:complexType name="ArrayOfAnonyTypePhysicalDocField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AnonyTypePhysicalDocField" type="tns:AnonyTypePhysicalDocField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAnonyTypePhysicalDocField" nillable="true" type="tns:ArrayOfAnonyTypePhysicalDocField" />
+  <xs:complexType name="ArrayOfAnonyTypeZone">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AnonyTypeZone" nillable="true" type="tns:AnonyTypeZone" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAnonyTypeZone" nillable="true" type="tns:ArrayOfAnonyTypeZone" />
+  <xs:complexType name="AnonyTypeZone">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q26="http://accipiens.com/Common" base="q26:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AnonyObjectId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AnonyTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AnonyZoneId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CredOperStep" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AnonyTypeZoneKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AnonyTypeZoneDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AnonyTypeZoneField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAnonyTypeZoneField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AnonyTypeZone" nillable="true" type="tns:AnonyTypeZone" />
+  <xs:simpleType name="AnonyTypeZoneDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AnonyTypeZoneDetail" nillable="true" type="tns:AnonyTypeZoneDetail" />
+  <xs:simpleType name="AnonyTypeZoneField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AnonyTypeId" />
+      <xs:enumeration value="AnonyObjectId" />
+      <xs:enumeration value="AnonyZoneId" />
+      <xs:enumeration value="CredOperStep" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AnonyTypeZoneField" nillable="true" type="tns:AnonyTypeZoneField" />
+  <xs:complexType name="ArrayOfAnonyTypeZoneField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AnonyTypeZoneField" type="tns:AnonyTypeZoneField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAnonyTypeZoneField" nillable="true" type="tns:ArrayOfAnonyTypeZoneField" />
+  <xs:simpleType name="AnonyTypeDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AnonyZone" />
+      <xs:enumeration value="AnonyPhysicalDoc" />
+      <xs:enumeration value="AnonyCredOperIntervType" />
+      <xs:enumeration value="ReplaceEntity" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AnonyTypeDetail" nillable="true" type="tns:AnonyTypeDetail" />
+  <xs:simpleType name="AnonyTypeField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="Abrev" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="FetchLevel" />
+      <xs:enumeration value="InvalidDate" />
+      <xs:enumeration value="AutomatonId" />
+      <xs:enumeration value="AnonyTypeApplyToId" />
+      <xs:enumeration value="ValidationTypeId" />
+      <xs:enumeration value="NumerationId" />
+      <xs:enumeration value="RecordAutomatonId" />
+      <xs:enumeration value="LoadAplStatementId" />
+      <xs:enumeration value="ProcessAplStatementId" />
+      <xs:enumeration value="ReplaceEntityId" />
+      <xs:enumeration value="ValidateAplStatementId" />
+      <xs:enumeration value="ReplaceOperTypeId" />
+      <xs:enumeration value="ProcessCustomAplStatementId" />
+      <xs:enumeration value="AnonyActionId" />
+      <xs:enumeration value="LoadFromStagingBox" />
+      <xs:enumeration value="StagingBoxDayRuleId" />
+      <xs:enumeration value="StagingBoxDayRuleValue" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AnonyTypeField" nillable="true" type="tns:AnonyTypeField" />
+  <xs:complexType name="ArrayOfAnonyTypeField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AnonyTypeField" type="tns:AnonyTypeField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAnonyTypeField" nillable="true" type="tns:ArrayOfAnonyTypeField" />
+  <xs:complexType name="ArrayOfAnonyTypeReplaceEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AnonyTypeReplaceEntity" nillable="true" type="tns:AnonyTypeReplaceEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAnonyTypeReplaceEntity" nillable="true" type="tns:ArrayOfAnonyTypeReplaceEntity" />
+  <xs:complexType name="AnonyTypeReplaceEntity">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q27="http://accipiens.com/Common" base="q27:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AnonyTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="EntityId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AnonyTypeReplaceEntityKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AnonyTypeReplaceEntityDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AnonyTypeReplaceEntityField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAnonyTypeReplaceEntityField" />
+          <xs:element minOccurs="0" name="ReplaceOrder" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AnonyTypeReplaceEntity" nillable="true" type="tns:AnonyTypeReplaceEntity" />
+  <xs:simpleType name="AnonyTypeReplaceEntityDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AnonyTypeReplaceEntityDetail" nillable="true" type="tns:AnonyTypeReplaceEntityDetail" />
+  <xs:simpleType name="AnonyTypeReplaceEntityField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AnonyTypeId" />
+      <xs:enumeration value="EntityId" />
+      <xs:enumeration value="ReplaceOrder" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AnonyTypeReplaceEntityField" nillable="true" type="tns:AnonyTypeReplaceEntityField" />
+  <xs:complexType name="ArrayOfAnonyTypeReplaceEntityField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AnonyTypeReplaceEntityField" type="tns:AnonyTypeReplaceEntityField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAnonyTypeReplaceEntityField" nillable="true" type="tns:ArrayOfAnonyTypeReplaceEntityField" />
+  <xs:complexType name="ArrayOfAnonyUniverseType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AnonyUniverseType" nillable="true" type="tns:AnonyUniverseType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAnonyUniverseType" nillable="true" type="tns:ArrayOfAnonyUniverseType" />
+  <xs:complexType name="AnonyUniverseType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q28="http://accipiens.com/Common" base="q28:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AllowAutoRun" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AnonyConditions" nillable="true" type="tns:ArrayOfAnonyUniverseTypeCondition" />
+          <xs:element minOccurs="0" name="AnonyTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AutomatonId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EntityTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FetchLevel" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="GetEntitiesAplStatementId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="InvalidDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AnonyUniverseTypeKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AnonyUniverseTypeDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AnonyUniverseTypeField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAnonyUniverseTypeField" />
+          <xs:element minOccurs="0" name="NumerationId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ValidateAplStatementId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AnonyUniverseType" nillable="true" type="tns:AnonyUniverseType" />
+  <xs:complexType name="ArrayOfAnonyUniverseTypeCondition">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AnonyUniverseTypeCondition" nillable="true" type="tns:AnonyUniverseTypeCondition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAnonyUniverseTypeCondition" nillable="true" type="tns:ArrayOfAnonyUniverseTypeCondition" />
+  <xs:complexType name="AnonyUniverseTypeCondition">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q29="http://accipiens.com/Common" base="q29:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AnonyUniverseConditionId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AnonyUniverseTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CredOperStep" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DurationDayRuleId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DurationParam1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AnonyUniverseTypeConditionKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AnonyUniverseTypeConditionDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AnonyUniverseTypeConditionField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAnonyUniverseTypeConditionField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AnonyUniverseTypeCondition" nillable="true" type="tns:AnonyUniverseTypeCondition" />
+  <xs:simpleType name="AnonyUniverseTypeConditionDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AnonyUniverseTypeConditionDetail" nillable="true" type="tns:AnonyUniverseTypeConditionDetail" />
+  <xs:simpleType name="AnonyUniverseTypeConditionField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AnonyUniverseTypeId" />
+      <xs:enumeration value="AnonyUniverseConditionId" />
+      <xs:enumeration value="DurationDayRuleId" />
+      <xs:enumeration value="CredOperStep" />
+      <xs:enumeration value="DurationParam1" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AnonyUniverseTypeConditionField" nillable="true" type="tns:AnonyUniverseTypeConditionField" />
+  <xs:complexType name="ArrayOfAnonyUniverseTypeConditionField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AnonyUniverseTypeConditionField" type="tns:AnonyUniverseTypeConditionField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAnonyUniverseTypeConditionField" nillable="true" type="tns:ArrayOfAnonyUniverseTypeConditionField" />
+  <xs:simpleType name="AnonyUniverseTypeDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AnonyCondition" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AnonyUniverseTypeDetail" nillable="true" type="tns:AnonyUniverseTypeDetail" />
+  <xs:simpleType name="AnonyUniverseTypeField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="Abrev" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="FetchLevel" />
+      <xs:enumeration value="InvalidDate" />
+      <xs:enumeration value="AnonyTypeId" />
+      <xs:enumeration value="EntityTypeId" />
+      <xs:enumeration value="GetEntitiesAplStatementId" />
+      <xs:enumeration value="ValidateAplStatementId" />
+      <xs:enumeration value="AllowAutoRun" />
+      <xs:enumeration value="NumerationId" />
+      <xs:enumeration value="AutomatonId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AnonyUniverseTypeField" nillable="true" type="tns:AnonyUniverseTypeField" />
+  <xs:complexType name="ArrayOfAnonyUniverseTypeField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AnonyUniverseTypeField" type="tns:AnonyUniverseTypeField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAnonyUniverseTypeField" nillable="true" type="tns:ArrayOfAnonyUniverseTypeField" />
+  <xs:complexType name="ArrayOfEmployingEntityValidity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EmployingEntityValidity" nillable="true" type="tns:EmployingEntityValidity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmployingEntityValidity" nillable="true" type="tns:ArrayOfEmployingEntityValidity" />
+  <xs:complexType name="EmployingEntityValidity">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q30="http://accipiens.com/Common" base="q30:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FirmName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:EmployingEntityValidityKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:EmployingEntityValidityDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:EmployingEntityValidityField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfEmployingEntityValidityField" />
+          <xs:element minOccurs="0" name="NIPC" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="NISSPC" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="NISSPS" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="OpenAccountSituationResponseId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Validity" nillable="true" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EmployingEntityValidity" nillable="true" type="tns:EmployingEntityValidity" />
+  <xs:simpleType name="EmployingEntityValidityDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EmployingEntityValidityDetail" nillable="true" type="tns:EmployingEntityValidityDetail" />
+  <xs:simpleType name="EmployingEntityValidityField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="OpenAccountSituationResponseId" />
+      <xs:enumeration value="Validity" />
+      <xs:enumeration value="NISSPC" />
+      <xs:enumeration value="NISSPS" />
+      <xs:enumeration value="NIPC" />
+      <xs:enumeration value="FirmName" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EmployingEntityValidityField" nillable="true" type="tns:EmployingEntityValidityField" />
+  <xs:complexType name="ArrayOfEmployingEntityValidityField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EmployingEntityValidityField" type="tns:EmployingEntityValidityField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmployingEntityValidityField" nillable="true" type="tns:ArrayOfEmployingEntityValidityField" />
+  <xs:complexType name="ArrayOfOpenAccountSituationRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OpenAccountSituationRequest" nillable="true" type="tns:OpenAccountSituationRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOpenAccountSituationRequest" nillable="true" type="tns:ArrayOfOpenAccountSituationRequest" />
+  <xs:complexType name="OpenAccountSituationRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q31="http://accipiens.com/Common" base="q31:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplErrorId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="CGASubscriberNumber" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ConsentDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Employee" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EmployeeCGAEntityId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EntityId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="FiscalNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:OpenAccountSituationRequestKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:OpenAccountSituationRequestDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:OpenAccountSituationRequestField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfOpenAccountSituationRequestField" />
+          <xs:element minOccurs="0" name="NissEE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OpenAccountSituationResponse" nillable="true" type="tns:OpenAccountSituationResponse" />
+          <xs:element minOccurs="0" name="OpenAccountSituationResponseId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="RequestDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SendDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SocialSecurityNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ToServiceId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="VerificationDate" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OpenAccountSituationRequest" nillable="true" type="tns:OpenAccountSituationRequest" />
+  <xs:simpleType name="OpenAccountSituationRequestDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OpenAccountSituationResponse" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="OpenAccountSituationRequestDetail" nillable="true" type="tns:OpenAccountSituationRequestDetail" />
+  <xs:simpleType name="OpenAccountSituationRequestField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="EntityId" />
+      <xs:enumeration value="ToServiceId" />
+      <xs:enumeration value="Employee" />
+      <xs:enumeration value="EmployeeCGAEntityId" />
+      <xs:enumeration value="RequestDate" />
+      <xs:enumeration value="ConsentDate" />
+      <xs:enumeration value="VerificationDate" />
+      <xs:enumeration value="CGASubscriberNumber" />
+      <xs:enumeration value="NissEE" />
+      <xs:enumeration value="OpenAccountSituationResponseId" />
+      <xs:enumeration value="AplErrorId" />
+      <xs:enumeration value="SendDate" />
+      <xs:enumeration value="SocialSecurityNumber" />
+      <xs:enumeration value="FiscalNumber" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="OpenAccountSituationRequestField" nillable="true" type="tns:OpenAccountSituationRequestField" />
+  <xs:complexType name="ArrayOfOpenAccountSituationRequestField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OpenAccountSituationRequestField" type="tns:OpenAccountSituationRequestField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOpenAccountSituationRequestField" nillable="true" type="tns:ArrayOfOpenAccountSituationRequestField" />
+  <xs:complexType name="OpenAccountSituationResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q32="http://accipiens.com/Common" base="q32:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CGABirthDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CGADeceaseDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CGAEmployingEntityList" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CGAFuncionalSituationCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CGAMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CGAName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CGAResultCode" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CGASubscriberNumber" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:OpenAccountSituationResponseKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:OpenAccountSituationResponseDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:OpenAccountSituationResponseField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfOpenAccountSituationResponseField" />
+          <xs:element minOccurs="0" name="ResponseReceiveDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SSProfessionalStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SSResponseDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SSResultCode" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="SS_EmployingEntityValidities" nillable="true" type="tns:ArrayOfEmployingEntityValidity" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OpenAccountSituationResponse" nillable="true" type="tns:OpenAccountSituationResponse" />
+  <xs:simpleType name="OpenAccountSituationResponseDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SS_EmployingEntityValidity" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="OpenAccountSituationResponseDetail" nillable="true" type="tns:OpenAccountSituationResponseDetail" />
+  <xs:simpleType name="OpenAccountSituationResponseField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="ResponseReceiveDate" />
+      <xs:enumeration value="SSResponseDate" />
+      <xs:enumeration value="SSResultCode" />
+      <xs:enumeration value="SSProfessionalStatus" />
+      <xs:enumeration value="CGAFuncionalSituationCode" />
+      <xs:enumeration value="CGASubscriberNumber" />
+      <xs:enumeration value="CGAName" />
+      <xs:enumeration value="CGABirthDate" />
+      <xs:enumeration value="CGADeceaseDate" />
+      <xs:enumeration value="CGAEmployingEntityList" />
+      <xs:enumeration value="CGAResultCode" />
+      <xs:enumeration value="CGAMessage" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="OpenAccountSituationResponseField" nillable="true" type="tns:OpenAccountSituationResponseField" />
+  <xs:complexType name="ArrayOfOpenAccountSituationResponseField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OpenAccountSituationResponseField" type="tns:OpenAccountSituationResponseField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOpenAccountSituationResponseField" nillable="true" type="tns:ArrayOfOpenAccountSituationResponseField" />
+  <xs:complexType name="ArrayOfOpenAccountSituationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OpenAccountSituationResponse" nillable="true" type="tns:OpenAccountSituationResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOpenAccountSituationResponse" nillable="true" type="tns:ArrayOfOpenAccountSituationResponse" />
+  <xs:simpleType name="TopSaveClass">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Anonymized" />
+      <xs:enumeration value="AnonymizedElement" />
+      <xs:enumeration value="AnonymizedRecord" />
+      <xs:enumeration value="AnonymizeHeader">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AnonyType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AnonyUniverseType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="OpenAccountSituationRequest">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">14</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="OpenAccountSituationResponse">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">15</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TopSaveClass" nillable="true" type="tns:TopSaveClass" />
+  <xs:simpleType name="TopClass">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Anonymized" />
+      <xs:enumeration value="AnonymizedElement" />
+      <xs:enumeration value="AnonymizedRecord" />
+      <xs:enumeration value="AnonymizedReplaceEntity" />
+      <xs:enumeration value="AnonymizedZone" />
+      <xs:enumeration value="AnonymizeHeader" />
+      <xs:enumeration value="AnonyType" />
+      <xs:enumeration value="AnonyTypeCredOperIntervType" />
+      <xs:enumeration value="AnonyTypePhysicalDoc" />
+      <xs:enumeration value="AnonyTypeReplaceEntity" />
+      <xs:enumeration value="AnonyTypeZone" />
+      <xs:enumeration value="AnonyUniverseType" />
+      <xs:enumeration value="AnonyUniverseTypeCondition" />
+      <xs:enumeration value="EmployingEntityValidity" />
+      <xs:enumeration value="OpenAccountSituationRequest" />
+      <xs:enumeration value="OpenAccountSituationResponse" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TopClass" nillable="true" type="tns:TopClass" />
+  <xs:simpleType name="TopAutContext">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AnonyHeader" />
+      <xs:enumeration value="Anonymized" />
+      <xs:enumeration value="AnonymizedRecord" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TopAutContext" nillable="true" type="tns:TopAutContext" />
+  <xs:complexType name="AnonyHeaderTotals">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TotalCanceled" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalInProgress" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalInitial" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalItems" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalLoadedRecord" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalLoadedRecordError" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalProcessed" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalProcessedError" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AnonyHeaderTotals" nillable="true" type="tns:AnonyHeaderTotals" />
+  <xs:complexType name="FinMovementDocument">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BaseAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TaxAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TaxTypeId" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FinMovementDocument" nillable="true" type="tns:FinMovementDocument" />
+</xs:schema>

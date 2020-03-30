@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://accipiens.com/AcpFramework" elementFormDefault="qualified" targetNamespace="http://accipiens.com/AcpFramework" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/Entities.svc?xsd=xsd2" namespace="http://accipiens.com/Common" />
+  <xs:complexType name="AplBusiness">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://accipiens.com/Common" base="q1:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BusinessFlowTaxes" nillable="true" type="tns:ArrayOfAplBusinessFlowTaxes" />
+          <xs:element minOccurs="0" name="BusinessLine" nillable="true" type="tns:ArrayOfAplBusinessLine" />
+          <xs:element minOccurs="0" name="BusinessPurposes" nillable="true" type="tns:ArrayOfAplBusinessPurpose" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AplBusinessKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AplBusinessDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AplBusinessField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAplBusinessField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplBusiness" nillable="true" type="tns:AplBusiness" />
+  <xs:complexType name="ArrayOfAplBusinessFlowTaxes">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplBusinessFlowTaxes" nillable="true" type="tns:AplBusinessFlowTaxes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplBusinessFlowTaxes" nillable="true" type="tns:ArrayOfAplBusinessFlowTaxes" />
+  <xs:complexType name="AplBusinessFlowTaxes">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://accipiens.com/Common" base="q2:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplBusinessId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AplBusinessLineId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AplFlowClassId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AplFlowSubClassId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Capital" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Costs" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DefaultTaxTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Gains" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Interest" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AplBusinessFlowTaxesKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AplBusinessFlowTaxesDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AplBusinessFlowTaxesField" />
+          <xs:element minOccurs="0" name="Losses" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAplBusinessFlowTaxesField" />
+          <xs:element minOccurs="0" name="Revenue" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="TaxClassifierId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TaxNatureId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TaxRegimeSourceId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TaxRuleId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TaxTypeId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplBusinessFlowTaxes" nillable="true" type="tns:AplBusinessFlowTaxes" />
+  <xs:complexType name="AplBusinessFlowTaxesKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://accipiens.com/Common" base="q3:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplBusinessId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AplBusinessLineId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AplFlowClassId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AplFlowSubClassId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplBusinessFlowTaxesKey" nillable="true" type="tns:AplBusinessFlowTaxesKey" />
+  <xs:simpleType name="AplBusinessFlowTaxesDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplBusinessFlowTaxesDetail" nillable="true" type="tns:AplBusinessFlowTaxesDetail" />
+  <xs:simpleType name="AplBusinessFlowTaxesField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AplBusinessId" />
+      <xs:enumeration value="AplFlowClassId" />
+      <xs:enumeration value="TaxNatureId" />
+      <xs:enumeration value="TaxClassifierId" />
+      <xs:enumeration value="Capital" />
+      <xs:enumeration value="Interest" />
+      <xs:enumeration value="Gains" />
+      <xs:enumeration value="Losses" />
+      <xs:enumeration value="Costs" />
+      <xs:enumeration value="Revenue" />
+      <xs:enumeration value="AplBusinessLineId" />
+      <xs:enumeration value="TaxTypeId" />
+      <xs:enumeration value="AplFlowSubClassId" />
+      <xs:enumeration value="TaxRuleId" />
+      <xs:enumeration value="DefaultTaxTypeId" />
+      <xs:enumeration value="TaxRegimeSourceId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplBusinessFlowTaxesField" nillable="true" type="tns:AplBusinessFlowTaxesField" />
+  <xs:complexType name="ArrayOfAplBusinessFlowTaxesField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplBusinessFlowTaxesField" type="tns:AplBusinessFlowTaxesField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplBusinessFlowTaxesField" nillable="true" type="tns:ArrayOfAplBusinessFlowTaxesField" />
+  <xs:complexType name="ArrayOfAplBusinessLine">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplBusinessLine" nillable="true" type="tns:AplBusinessLine" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplBusinessLine" nillable="true" type="tns:ArrayOfAplBusinessLine" />
+  <xs:complexType name="AplBusinessLine">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://accipiens.com/Common" base="q4:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AmountHasTaxes" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AplBusinessId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="BusinessFlowTaxes" nillable="true" type="tns:ArrayOfAplBusinessFlowTaxes" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FetchLevel" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="InvalidDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AplBusinessLineKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AplBusinessLineDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AplBusinessLineField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAplBusinessLineField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplBusinessLine" nillable="true" type="tns:AplBusinessLine" />
+  <xs:complexType name="AplBusinessLineKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://accipiens.com/Common" base="q5:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AplBusinessId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplBusinessLineKey" nillable="true" type="tns:AplBusinessLineKey" />
+  <xs:simpleType name="AplBusinessLineDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BusinessFlowTaxes" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplBusinessLineDetail" nillable="true" type="tns:AplBusinessLineDetail" />
+  <xs:simpleType name="AplBusinessLineField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AplBusinessId" />
+      <xs:enumeration value="Abrev" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="FetchLevel" />
+      <xs:enumeration value="InvalidDate" />
+      <xs:enumeration value="AmountHasTaxes" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplBusinessLineField" nillable="true" type="tns:AplBusinessLineField" />
+  <xs:complexType name="ArrayOfAplBusinessLineField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplBusinessLineField" type="tns:AplBusinessLineField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplBusinessLineField" nillable="true" type="tns:ArrayOfAplBusinessLineField" />
+  <xs:complexType name="ArrayOfAplBusinessPurpose">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplBusinessPurpose" nillable="true" type="tns:AplBusinessPurpose" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplBusinessPurpose" nillable="true" type="tns:ArrayOfAplBusinessPurpose" />
+  <xs:complexType name="AplBusinessPurpose">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://accipiens.com/Common" base="q6:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplBusinessId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AplBusinessPurposeTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AplBusinessPurposeKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AplBusinessPurposeDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AplBusinessPurposeField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAplBusinessPurposeField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplBusinessPurpose" nillable="true" type="tns:AplBusinessPurpose" />
+  <xs:complexType name="AplBusinessPurposeKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://accipiens.com/Common" base="q7:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplBusinessId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AplBusinessPurposeTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplBusinessPurposeKey" nillable="true" type="tns:AplBusinessPurposeKey" />
+  <xs:simpleType name="AplBusinessPurposeDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplBusinessPurposeDetail" nillable="true" type="tns:AplBusinessPurposeDetail" />
+  <xs:simpleType name="AplBusinessPurposeField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AplBusinessId" />
+      <xs:enumeration value="AplBusinessPurposeTypeId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplBusinessPurposeField" nillable="true" type="tns:AplBusinessPurposeField" />
+  <xs:complexType name="ArrayOfAplBusinessPurposeField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplBusinessPurposeField" type="tns:AplBusinessPurposeField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplBusinessPurposeField" nillable="true" type="tns:ArrayOfAplBusinessPurposeField" />
+  <xs:complexType name="AplBusinessKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://accipiens.com/Common" base="q8:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplBusinessKey" nillable="true" type="tns:AplBusinessKey" />
+  <xs:simpleType name="AplBusinessDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BusinessFlowTaxes" />
+      <xs:enumeration value="BusinessPurpose" />
+      <xs:enumeration value="BusinessLines" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplBusinessDetail" nillable="true" type="tns:AplBusinessDetail" />
+  <xs:simpleType name="AplBusinessField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="Abrev" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplBusinessField" nillable="true" type="tns:AplBusinessField" />
+  <xs:complexType name="ArrayOfAplBusinessField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplBusinessField" type="tns:AplBusinessField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplBusinessField" nillable="true" type="tns:ArrayOfAplBusinessField" />
+  <xs:complexType name="PaymentDataInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Account" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AgencyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AplBankAccountId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="BankName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Bban" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataFormat" nillable="true" type="tns:BankAccountDataFormat" />
+      <xs:element minOccurs="0" name="Iban" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsRecurring" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Reference" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Reference2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Reference3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Swift" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PaymentDataInfo" nillable="true" type="tns:PaymentDataInfo" />
+  <xs:simpleType name="BankAccountDataFormat">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Bban" />
+      <xs:enumeration value="Iban" />
+      <xs:enumeration value="SwiftIban" />
+      <xs:enumeration value="SwiftBankNameAccount" />
+      <xs:enumeration value="BbanReference" />
+      <xs:enumeration value="Reference" />
+      <xs:enumeration value="SwiftIbanReferenceIsRecurring" />
+      <xs:enumeration value="SwiftBankNameAccountAgencyName" />
+      <xs:enumeration value="AccountReferenceRef2Ref3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="BankAccountDataFormat" nillable="true" type="tns:BankAccountDataFormat" />
+  <xs:complexType name="ArrayOfWorkPeriodOwnerItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WorkPeriodOwnerItem" nillable="true" type="tns:WorkPeriodOwnerItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWorkPeriodOwnerItem" nillable="true" type="tns:ArrayOfWorkPeriodOwnerItem" />
+  <xs:complexType name="WorkPeriodOwnerItem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WorkPeriodTypeItem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WorkPeriodOwnerItem" nillable="true" type="tns:WorkPeriodOwnerItem" />
+  <xs:complexType name="WorkPeriodTypeItem">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://accipiens.com/Common" base="q9:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BeginHour" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="BeginMinute" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EndHour" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="EndMinute" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:WorkPeriodTypeItemKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:WorkPeriodTypeItemDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:WorkPeriodTypeItemField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfWorkPeriodTypeItemField" />
+          <xs:element minOccurs="0" name="OnFriday" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OnHoliday" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OnMonday" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OnSaturday" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OnSunday" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OnThursday" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OnTuesday" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OnWednesday" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OwnerId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="WorkPeriodTypeId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WorkPeriodTypeItem" nillable="true" type="tns:WorkPeriodTypeItem" />
+  <xs:complexType name="WorkPeriodTypeItemKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://accipiens.com/Common" base="q10:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WorkPeriodTypeItemKey" nillable="true" type="tns:WorkPeriodTypeItemKey" />
+  <xs:simpleType name="WorkPeriodTypeItemDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WorkPeriodTypeItemDetail" nillable="true" type="tns:WorkPeriodTypeItemDetail" />
+  <xs:simpleType name="WorkPeriodTypeItemField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="WorkPeriodTypeId" />
+      <xs:enumeration value="OnMonday" />
+      <xs:enumeration value="OnTuesday" />
+      <xs:enumeration value="OnWednesday" />
+      <xs:enumeration value="OnThursday" />
+      <xs:enumeration value="OnFriday" />
+      <xs:enumeration value="OnSaturday" />
+      <xs:enumeration value="OnSunday" />
+      <xs:enumeration value="OnHoliday" />
+      <xs:enumeration value="BeginHour" />
+      <xs:enumeration value="BeginMinute" />
+      <xs:enumeration value="EndHour" />
+      <xs:enumeration value="EndMinute" />
+      <xs:enumeration value="OwnerId" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WorkPeriodTypeItemField" nillable="true" type="tns:WorkPeriodTypeItemField" />
+  <xs:complexType name="ArrayOfWorkPeriodTypeItemField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WorkPeriodTypeItemField" type="tns:WorkPeriodTypeItemField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWorkPeriodTypeItemField" nillable="true" type="tns:ArrayOfWorkPeriodTypeItemField" />
+  <xs:complexType name="Address">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://accipiens.com/Common" base="q11:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddressTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Apartment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Building" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Council" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CouncilCode" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CountryId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="District" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DistrictCode" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FetchLevel" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="HouseNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="InvalidDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AddressKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AddressDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AddressField" />
+          <xs:element minOccurs="0" name="Locality" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAddressField" />
+          <xs:element minOccurs="0" name="OccupiedPoint" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Place" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Region" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Street" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StreetNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StreetTypeId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Address" nillable="true" type="tns:Address" />
+  <xs:complexType name="AddressKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://accipiens.com/Common" base="q12:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddressKey" nillable="true" type="tns:AddressKey" />
+  <xs:simpleType name="AddressDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AddressDetail" nillable="true" type="tns:AddressDetail" />
+  <xs:simpleType name="AddressField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="CountryId" />
+      <xs:enumeration value="Street" />
+      <xs:enumeration value="PostalCode" />
+      <xs:enumeration value="Locality" />
+      <xs:enumeration value="AddressTypeId" />
+      <xs:enumeration value="StreetTypeId" />
+      <xs:enumeration value="StreetNumber" />
+      <xs:enumeration value="HouseNumber" />
+      <xs:enumeration value="InvalidDate" />
+      <xs:enumeration value="Place" />
+      <xs:enumeration value="FetchLevel" />
+      <xs:enumeration value="District" />
+      <xs:enumeration value="Region" />
+      <xs:enumeration value="OccupiedPoint" />
+      <xs:enumeration value="DistrictCode" />
+      <xs:enumeration value="Building" />
+      <xs:enumeration value="Apartment" />
+      <xs:enumeration value="Council" />
+      <xs:enumeration value="CouncilCode" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AddressField" nillable="true" type="tns:AddressField" />
+  <xs:complexType name="ArrayOfAddressField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AddressField" type="tns:AddressField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAddressField" nillable="true" type="tns:ArrayOfAddressField" />
+  <xs:complexType name="AplFormResp">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://accipiens.com/Common" base="q13:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplFormId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AplUserId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="CreationMoment" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EndMoment" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Form" nillable="true" type="tns:AplForm" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AplFormRespKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AplFormRespDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AplFormRespField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAplFormRespField" />
+          <xs:element minOccurs="0" name="Observations" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OwnerId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ResponseQuestions" nillable="true" type="tns:ArrayOfAplFormResponseQuestion" />
+          <xs:element minOccurs="0" name="StartMoment" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplFormResp" nillable="true" type="tns:AplFormResp" />
+  <xs:complexType name="AplForm">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://accipiens.com/Common" base="q14:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplFormKind" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CreationMoment" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EndMoment" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FetchLevel" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FormQuestions" nillable="true" type="tns:ArrayOfAplFormQuestion" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="InvalidDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AplFormKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AplFormDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AplFormField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAplFormField" />
+          <xs:element minOccurs="0" name="StartMoment" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SubTitle" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Version" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplForm" nillable="true" type="tns:AplForm" />
+  <xs:complexType name="ArrayOfAplFormQuestion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplFormQuestion" nillable="true" type="tns:AplFormQuestion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplFormQuestion" nillable="true" type="tns:ArrayOfAplFormQuestion" />
+  <xs:complexType name="AplFormQuestion">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://accipiens.com/Common" base="q15:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplFormId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AplQuestionId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="DefaultAplFormAnswerTypeValueId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="IsHeaderQuestion" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsRequired" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AplFormQuestionKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AplFormQuestionDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AplFormQuestionField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAplFormQuestionField" />
+          <xs:element minOccurs="0" name="Question" nillable="true" type="tns:AplQuestion" />
+          <xs:element minOccurs="0" name="QuestionOrder" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplFormQuestion" nillable="true" type="tns:AplFormQuestion" />
+  <xs:complexType name="AplFormQuestionKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://accipiens.com/Common" base="q16:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplFormId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AplQuestionId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplFormQuestionKey" nillable="true" type="tns:AplFormQuestionKey" />
+  <xs:simpleType name="AplFormQuestionDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Question" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplFormQuestionDetail" nillable="true" type="tns:AplFormQuestionDetail" />
+  <xs:simpleType name="AplFormQuestionField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AplFormId" />
+      <xs:enumeration value="AplQuestionId" />
+      <xs:enumeration value="IsRequired" />
+      <xs:enumeration value="IsHeaderQuestion" />
+      <xs:enumeration value="QuestionOrder" />
+      <xs:enumeration value="DefaultAplFormAnswerTypeValueId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplFormQuestionField" nillable="true" type="tns:AplFormQuestionField" />
+  <xs:complexType name="ArrayOfAplFormQuestionField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplFormQuestionField" type="tns:AplFormQuestionField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplFormQuestionField" nillable="true" type="tns:ArrayOfAplFormQuestionField" />
+  <xs:complexType name="AplQuestion">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://accipiens.com/Common" base="q17:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AnswerType" nillable="true" type="tns:AplFormAnswerType" />
+          <xs:element minOccurs="0" name="AplFormAnswerTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FormQuestions" nillable="true" type="tns:ArrayOfAplFormQuestion" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="InternalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AplQuestionKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AplQuestionDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AplQuestionField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAplQuestionField" />
+          <xs:element minOccurs="0" name="Observations" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Question" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplQuestion" nillable="true" type="tns:AplQuestion" />
+  <xs:complexType name="AplFormAnswerType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://accipiens.com/Common" base="q18:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AnswerTypeValues" nillable="true" type="tns:ArrayOfAplFormAnswerTypeValue" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IsFreeText" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AplFormAnswerTypeKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AplFormAnswerTypeDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AplFormAnswerTypeField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAplFormAnswerTypeField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplFormAnswerType" nillable="true" type="tns:AplFormAnswerType" />
+  <xs:complexType name="ArrayOfAplFormAnswerTypeValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplFormAnswerTypeValue" nillable="true" type="tns:AplFormAnswerTypeValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplFormAnswerTypeValue" nillable="true" type="tns:ArrayOfAplFormAnswerTypeValue" />
+  <xs:complexType name="AplFormAnswerTypeValue">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://accipiens.com/Common" base="q19:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AnswerTypeValueOrder" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AplFormAnswerTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AplFormAnswerTypeValueKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AplFormAnswerTypeValueDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AplFormAnswerTypeValueField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAplFormAnswerTypeValueField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplFormAnswerTypeValue" nillable="true" type="tns:AplFormAnswerTypeValue" />
+  <xs:complexType name="AplFormAnswerTypeValueKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q20="http://accipiens.com/Common" base="q20:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplFormAnswerTypeValueKey" nillable="true" type="tns:AplFormAnswerTypeValueKey" />
+  <xs:simpleType name="AplFormAnswerTypeValueDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplFormAnswerTypeValueDetail" nillable="true" type="tns:AplFormAnswerTypeValueDetail" />
+  <xs:simpleType name="AplFormAnswerTypeValueField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AplFormAnswerTypeId" />
+      <xs:enumeration value="Abrev" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="AnswerTypeValueOrder" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplFormAnswerTypeValueField" nillable="true" type="tns:AplFormAnswerTypeValueField" />
+  <xs:complexType name="ArrayOfAplFormAnswerTypeValueField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplFormAnswerTypeValueField" type="tns:AplFormAnswerTypeValueField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplFormAnswerTypeValueField" nillable="true" type="tns:ArrayOfAplFormAnswerTypeValueField" />
+  <xs:complexType name="AplFormAnswerTypeKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q21="http://accipiens.com/Common" base="q21:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplFormAnswerTypeKey" nillable="true" type="tns:AplFormAnswerTypeKey" />
+  <xs:simpleType name="AplFormAnswerTypeDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AnswerTypeValue" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplFormAnswerTypeDetail" nillable="true" type="tns:AplFormAnswerTypeDetail" />
+  <xs:simpleType name="AplFormAnswerTypeField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="Abrev" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="IsFreeText" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplFormAnswerTypeField" nillable="true" type="tns:AplFormAnswerTypeField" />
+  <xs:complexType name="ArrayOfAplFormAnswerTypeField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplFormAnswerTypeField" type="tns:AplFormAnswerTypeField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplFormAnswerTypeField" nillable="true" type="tns:ArrayOfAplFormAnswerTypeField" />
+  <xs:complexType name="AplQuestionKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q22="http://accipiens.com/Common" base="q22:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="InternalCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplQuestionKey" nillable="true" type="tns:AplQuestionKey" />
+  <xs:simpleType name="AplQuestionDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AnswerType" />
+      <xs:enumeration value="FormQuestion" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplQuestionDetail" nillable="true" type="tns:AplQuestionDetail" />
+  <xs:simpleType name="AplQuestionField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="Abrev" />
+      <xs:enumeration value="Question" />
+      <xs:enumeration value="Observations" />
+      <xs:enumeration value="InternalCode" />
+      <xs:enumeration value="AplFormAnswerTypeId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplQuestionField" nillable="true" type="tns:AplQuestionField" />
+  <xs:complexType name="ArrayOfAplQuestionField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplQuestionField" type="tns:AplQuestionField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplQuestionField" nillable="true" type="tns:ArrayOfAplQuestionField" />
+  <xs:complexType name="AplFormKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q23="http://accipiens.com/Common" base="q23:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplFormKey" nillable="true" type="tns:AplFormKey" />
+  <xs:simpleType name="AplFormDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="FormQuestion" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplFormDetail" nillable="true" type="tns:AplFormDetail" />
+  <xs:simpleType name="AplFormField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="Title" />
+      <xs:enumeration value="SubTitle" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="CreationMoment" />
+      <xs:enumeration value="StartMoment" />
+      <xs:enumeration value="EndMoment" />
+      <xs:enumeration value="Version" />
+      <xs:enumeration value="FetchLevel" />
+      <xs:enumeration value="InvalidDate" />
+      <xs:enumeration value="AplFormKind" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplFormField" nillable="true" type="tns:AplFormField" />
+  <xs:complexType name="ArrayOfAplFormField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplFormField" type="tns:AplFormField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplFormField" nillable="true" type="tns:ArrayOfAplFormField" />
+  <xs:complexType name="AplFormRespKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q24="http://accipiens.com/Common" base="q24:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplFormRespKey" nillable="true" type="tns:AplFormRespKey" />
+  <xs:simpleType name="AplFormRespDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Form" />
+      <xs:enumeration value="ResponseQuestion" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplFormRespDetail" nillable="true" type="tns:AplFormRespDetail" />
+  <xs:simpleType name="AplFormRespField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AplFormId" />
+      <xs:enumeration value="AplUserId" />
+      <xs:enumeration value="OwnerId" />
+      <xs:enumeration value="CreationMoment" />
+      <xs:enumeration value="StartMoment" />
+      <xs:enumeration value="EndMoment" />
+      <xs:enumeration value="Observations" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplFormRespField" nillable="true" type="tns:AplFormRespField" />
+  <xs:complexType name="ArrayOfAplFormRespField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplFormRespField" type="tns:AplFormRespField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplFormRespField" nillable="true" type="tns:ArrayOfAplFormRespField" />
+  <xs:complexType name="ArrayOfAplFormResponseQuestion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplFormResponseQuestion" nillable="true" type="tns:AplFormResponseQuestion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplFormResponseQuestion" nillable="true" type="tns:ArrayOfAplFormResponseQuestion" />
+  <xs:complexType name="AplFormResponseQuestion">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q25="http://accipiens.com/Common" base="q25:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplFormAnswerTypeValueId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AplFormRespId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AplQuestionId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AplFormResponseQuestionKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AplFormResponseQuestionDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AplFormResponseQuestionField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAplFormResponseQuestionField" />
+          <xs:element minOccurs="0" name="Question" nillable="true" type="tns:AplQuestion" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplFormResponseQuestion" nillable="true" type="tns:AplFormResponseQuestion" />
+  <xs:complexType name="AplFormResponseQuestionKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q26="http://accipiens.com/Common" base="q26:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplFormResponseQuestionKey" nillable="true" type="tns:AplFormResponseQuestionKey" />
+  <xs:simpleType name="AplFormResponseQuestionDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Question" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplFormResponseQuestionDetail" nillable="true" type="tns:AplFormResponseQuestionDetail" />
+  <xs:simpleType name="AplFormResponseQuestionField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AplFormRespId" />
+      <xs:enumeration value="AplQuestionId" />
+      <xs:enumeration value="AplFormAnswerTypeValueId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplFormResponseQuestionField" nillable="true" type="tns:AplFormResponseQuestionField" />
+  <xs:complexType name="ArrayOfAplFormResponseQuestionField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplFormResponseQuestionField" type="tns:AplFormResponseQuestionField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplFormResponseQuestionField" nillable="true" type="tns:ArrayOfAplFormResponseQuestionField" />
+  <xs:complexType name="EntityFromExternalDataInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApplicationId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="EntityDataInfoInputContext" type="tns:EntityFromExternalDataInfoInputContextKind" />
+      <xs:element minOccurs="0" name="ExternalEntityContext" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InputField" nillable="true" type="tns:EntityFromExternalDataInputField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EntityFromExternalDataInfo" nillable="true" type="tns:EntityFromExternalDataInfo" />
+  <xs:simpleType name="EntityFromExternalDataInfoInputContextKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Proposal" />
+      <xs:enumeration value="Entity" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EntityFromExternalDataInfoInputContextKind" nillable="true" type="tns:EntityFromExternalDataInfoInputContextKind" />
+  <xs:simpleType name="EntityFromExternalDataInputField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="EntityLegalDocNumber" />
+      <xs:enumeration value="ZipCode" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EntityFromExternalDataInputField" nillable="true" type="tns:EntityFromExternalDataInputField" />
+</xs:schema>

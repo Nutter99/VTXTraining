@@ -1,0 +1,1413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://accipiens.com/CreditOperationsConfig" elementFormDefault="qualified" targetNamespace="http://accipiens.com/CreditOperationsConfig" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/CreditOperations.svc?xsd=xsd8" namespace="http://accipiens.com/AcpFramework" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/CreditOperations.svc?xsd=xsd2" namespace="http://accipiens.com/Common" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/CreditOperations.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="CredOperType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://accipiens.com/Common" base="q1:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AcquisitionPlafondTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AllowInvoiceRule" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AllowMultipleCustomers" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AllowRentingReformulationFinChange" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AssetAmountInputModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AssetBaseAmountCalcModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AssetRetakeBaseAmountModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AssetTaxTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AssetTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AssetUsageIntervalId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AutomatonId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="BankGuarantee" nillable="true" type="tns:ArrayOfCredOperTypeBankGuarantee" />
+          <xs:element minOccurs="0" name="CalcTotalFinancedAmount" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CalcValidationAplStatementId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="CalculateTaxByComponent" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CapitalNegativeModeId" nillable="true" type="xs:short" />
+          <xs:element minOccurs="0" name="CapitalSourceModeFinChangeTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="CapitalSourceModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CashFlowInterestId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CautionBaseTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CautionInputModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CautionMaxPercentage" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CautionServiceTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Cession" nillable="true" type="tns:CredOperCessionType" />
+          <xs:element minOccurs="0" name="ConditionsMode" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CredOperNature" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CredOperNumberSufixDigits" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CredOperStep" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CredOperTaxAggregationModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CredOperTypeAplStatementId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="CreditRevolving" nillable="true" type="tns:ArrayOfCredOperTypeCreditRevolving" />
+          <xs:element minOccurs="0" name="DayRuleId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DayRuleSourceDateId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DelayInterest" nillable="true" type="tns:CredOperTypeDelayInterest" />
+          <xs:element minOccurs="0" name="DoNumberRentsBeforeActivation" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DocManageTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DontChangeStateOnInvoiceVR" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DownPaymentValidationId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DueDateCalcModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DueDateDay" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DueDateDeltaMonths" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DueDateNumOfDays" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DurationInputModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="EntityPlafondUseId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="EquipmentDiscountModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Event" nillable="true" type="tns:ArrayOfCredOperTypeEventType" />
+          <xs:element minOccurs="0" name="ExecPendingStocksAutomaticProcess" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ExpenseTypes" nillable="true" type="tns:ArrayOfCredOperExpenseType" />
+          <xs:element minOccurs="0" name="Factoring" nillable="true" type="tns:CredOperTypeFactoring" />
+          <xs:element minOccurs="0" name="FinChangeCapitalNegativeModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FinConditionFlowsBaseTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FinInitialEntryBaseTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FinInterestControlTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FinMatrixTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FinMatrixTypeSelectionModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FinRateDefinitionId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="FinancialProductId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FrameContractMargin" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="GenerateMatrixOnCalc" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="GracePeriodId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="HasCaution" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HasFinConditions" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HasFinMovements" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HasInstallmentAtTheEnd" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HasOnlyInterest" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HasOtherCapital" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HasPendingStocksManagement" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HasResidualValue" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HasVATChargedPurchaserAtSale" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="InitialEntryPeriodificationModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="InstallmentRevenueModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Insurances" nillable="true" type="tns:ArrayOfCredOperTypeInsurance" />
+          <xs:element minOccurs="0" name="InterestDayId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="InterestDivisionModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="InvoiceDateModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IsAutoCredit" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsFinMovAdvanceWithTax" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsFrameContract" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsPreContract" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsTermSameAsFinancialPlan" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsToBuyAsset" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsToInvoiceAllVAT" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:CredOperTypeKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:CredOperTypeDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:CredOperTypeField" />
+          <xs:element minOccurs="0" name="Loan" nillable="true" type="tns:CredOperTypeLoan" />
+          <xs:element minOccurs="0" name="MeasureTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="MinResidualValueData" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="MinResidualValueModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="MinTermData" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="MinTermModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfCredOperTypeField" />
+          <xs:element minOccurs="0" name="MovUnCheckPlafond" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="NegativeRentsModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="NextAvailableTypes" nillable="true" type="tns:ArrayOfCredOperTypeNextAvailableType" />
+          <xs:element minOccurs="0" name="NextStepCredOperTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="NumOfRates" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="NumberOfRents" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="NumerationId" nillable="true" type="xs:long" />
+          <xs:element xmlns:q2="http://accipiens.com/AcpFramework" minOccurs="0" name="OperType" nillable="true" type="q2:OperType" />
+          <xs:element minOccurs="0" name="OperTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="OtherCapitalModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="OtherRates" nillable="true" type="tns:ArrayOfCredOperTypeOtherRate" />
+          <xs:element minOccurs="0" name="PERSICreditCategoryTypeAplStatementId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PaymentLevelId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PendingTerminationAutUserStateId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PlafondTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PlafondTypes" nillable="true" type="tns:ArrayOfCredOperTypePlafondType" />
+          <xs:element minOccurs="0" name="ProcessPrefixAplStatementId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PurposeTypes" nillable="true" type="tns:ArrayOfCredOperTypePurposeType" />
+          <xs:element minOccurs="0" name="RateContextRollingId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="RecalculateERRateOnFinChange" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RelocationAssetBaseAmountCalcModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="RentCalcModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="RentTaxTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ResidualValueBaseTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ResidualValueCautionRelationId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ResidualValueCautionUnsatRelationId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ResidualValueDayRuleId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="SequenceRateContextId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Services" nillable="true" type="tns:ArrayOfCredOperTypeService" />
+          <xs:element minOccurs="0" name="SubCredOperTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="TaxCapitalTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="TaxCapitalTypes" nillable="true" type="tns:TaxCapitalType" />
+          <xs:element minOccurs="0" name="TotalInstallmentCalcTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="UsageReservationManagementId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="UsePlafondId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="UseSourceNumber" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="VATServiceTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="VatExemptionReasonAplStatementId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ZeroRentsModeId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperType" nillable="true" type="tns:CredOperType" />
+  <xs:complexType name="ArrayOfCredOperTypeBankGuarantee">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CredOperTypeBankGuarantee" nillable="true" type="tns:CredOperTypeBankGuarantee" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCredOperTypeBankGuarantee" nillable="true" type="tns:ArrayOfCredOperTypeBankGuarantee" />
+  <xs:complexType name="CredOperTypeBankGuarantee">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://accipiens.com/Common" base="q3:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BeneficiaryRPScopeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:CredOperTypeBankGuaranteeKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:CredOperTypeBankGuaranteeDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:CredOperTypeBankGuaranteeField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfCredOperTypeBankGuaranteeField" />
+          <xs:element minOccurs="0" name="OperTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PayerRPScopeId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperTypeBankGuarantee" nillable="true" type="tns:CredOperTypeBankGuarantee" />
+  <xs:complexType name="CredOperTypeBankGuaranteeKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://accipiens.com/Common" base="q4:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="OperTypeId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperTypeBankGuaranteeKey" nillable="true" type="tns:CredOperTypeBankGuaranteeKey" />
+  <xs:simpleType name="CredOperTypeBankGuaranteeDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperTypeBankGuaranteeDetail" nillable="true" type="tns:CredOperTypeBankGuaranteeDetail" />
+  <xs:simpleType name="CredOperTypeBankGuaranteeField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OperTypeId" />
+      <xs:enumeration value="PayerRPScopeId" />
+      <xs:enumeration value="BeneficiaryRPScopeId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperTypeBankGuaranteeField" nillable="true" type="tns:CredOperTypeBankGuaranteeField" />
+  <xs:complexType name="ArrayOfCredOperTypeBankGuaranteeField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CredOperTypeBankGuaranteeField" type="tns:CredOperTypeBankGuaranteeField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCredOperTypeBankGuaranteeField" nillable="true" type="tns:ArrayOfCredOperTypeBankGuaranteeField" />
+  <xs:complexType name="CredOperCessionType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://accipiens.com/Common" base="q5:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CessionFinChangeModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CessionSuperTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FinChangeTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="InvoiceExpenseOnSimulation" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="InvoiceExpensesToNewCustomer" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsFirstOrderFlow" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:CredOperCessionTypeKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:CredOperCessionTypeDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:CredOperCessionTypeField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfCredOperCessionTypeField" />
+          <xs:element minOccurs="0" name="OperTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="TerminateCredOperGuarantModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TransferDueModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TransferDueToNewClient" nillable="true" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperCessionType" nillable="true" type="tns:CredOperCessionType" />
+  <xs:complexType name="CredOperCessionTypeKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://accipiens.com/Common" base="q6:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="OperTypeId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperCessionTypeKey" nillable="true" type="tns:CredOperCessionTypeKey" />
+  <xs:simpleType name="CredOperCessionTypeDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperCessionTypeDetail" nillable="true" type="tns:CredOperCessionTypeDetail" />
+  <xs:simpleType name="CredOperCessionTypeField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OperTypeId" />
+      <xs:enumeration value="CessionSuperTypeId" />
+      <xs:enumeration value="FinChangeTypeId" />
+      <xs:enumeration value="InvoiceExpenseOnSimulation" />
+      <xs:enumeration value="TransferDueToNewClient" />
+      <xs:enumeration value="InvoiceExpensesToNewCustomer" />
+      <xs:enumeration value="TransferDueModeId" />
+      <xs:enumeration value="TerminateCredOperGuarantModeId" />
+      <xs:enumeration value="IsFirstOrderFlow" />
+      <xs:enumeration value="CessionFinChangeModeId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperCessionTypeField" nillable="true" type="tns:CredOperCessionTypeField" />
+  <xs:complexType name="ArrayOfCredOperCessionTypeField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CredOperCessionTypeField" type="tns:CredOperCessionTypeField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCredOperCessionTypeField" nillable="true" type="tns:ArrayOfCredOperCessionTypeField" />
+  <xs:complexType name="ArrayOfCredOperTypeCreditRevolving">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CredOperTypeCreditRevolving" nillable="true" type="tns:CredOperTypeCreditRevolving" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCredOperTypeCreditRevolving" nillable="true" type="tns:ArrayOfCredOperTypeCreditRevolving" />
+  <xs:complexType name="CredOperTypeCreditRevolving">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://accipiens.com/Common" base="q7:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="InterestCapFinMovementTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="InterestCapitalizationModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:CredOperTypeCreditRevolvingKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:CredOperTypeCreditRevolvingDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:CredOperTypeCreditRevolvingField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfCredOperTypeCreditRevolvingField" />
+          <xs:element minOccurs="0" name="OperTypeId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperTypeCreditRevolving" nillable="true" type="tns:CredOperTypeCreditRevolving" />
+  <xs:complexType name="CredOperTypeCreditRevolvingKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://accipiens.com/Common" base="q8:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="OperTypeId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperTypeCreditRevolvingKey" nillable="true" type="tns:CredOperTypeCreditRevolvingKey" />
+  <xs:simpleType name="CredOperTypeCreditRevolvingDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperTypeCreditRevolvingDetail" nillable="true" type="tns:CredOperTypeCreditRevolvingDetail" />
+  <xs:simpleType name="CredOperTypeCreditRevolvingField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OperTypeId" />
+      <xs:enumeration value="InterestCapitalizationModeId" />
+      <xs:enumeration value="InterestCapFinMovementTypeId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperTypeCreditRevolvingField" nillable="true" type="tns:CredOperTypeCreditRevolvingField" />
+  <xs:complexType name="ArrayOfCredOperTypeCreditRevolvingField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CredOperTypeCreditRevolvingField" type="tns:CredOperTypeCreditRevolvingField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCredOperTypeCreditRevolvingField" nillable="true" type="tns:ArrayOfCredOperTypeCreditRevolvingField" />
+  <xs:complexType name="CredOperTypeDelayInterest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://accipiens.com/Common" base="q9:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CredOperTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="InvoiceOnContractClosed" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:CredOperTypeDelayInterestKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:CredOperTypeDelayInterestDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:CredOperTypeDelayInterestField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfCredOperTypeDelayInterestField" />
+          <xs:element minOccurs="0" name="UpdateOnAutUserStateChanged" nillable="true" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperTypeDelayInterest" nillable="true" type="tns:CredOperTypeDelayInterest" />
+  <xs:complexType name="CredOperTypeDelayInterestKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://accipiens.com/Common" base="q10:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperTypeDelayInterestKey" nillable="true" type="tns:CredOperTypeDelayInterestKey" />
+  <xs:simpleType name="CredOperTypeDelayInterestDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperTypeDelayInterestDetail" nillable="true" type="tns:CredOperTypeDelayInterestDetail" />
+  <xs:simpleType name="CredOperTypeDelayInterestField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="CredOperTypeId" />
+      <xs:enumeration value="UpdateOnAutUserStateChanged" />
+      <xs:enumeration value="InvoiceOnContractClosed" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperTypeDelayInterestField" nillable="true" type="tns:CredOperTypeDelayInterestField" />
+  <xs:complexType name="ArrayOfCredOperTypeDelayInterestField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CredOperTypeDelayInterestField" type="tns:CredOperTypeDelayInterestField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCredOperTypeDelayInterestField" nillable="true" type="tns:ArrayOfCredOperTypeDelayInterestField" />
+  <xs:complexType name="ArrayOfCredOperTypeEventType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CredOperTypeEventType" nillable="true" type="tns:CredOperTypeEventType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCredOperTypeEventType" nillable="true" type="tns:ArrayOfCredOperTypeEventType" />
+  <xs:complexType name="CredOperTypeEventType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://accipiens.com/Common" base="q11:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CredOperEventTypeKindId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DeltaDays" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExpenseTypes" nillable="true" type="tns:ArrayOfAssetOperationExpenseType" />
+          <xs:element minOccurs="0" name="FinMovementTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:CredOperTypeEventTypeKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:CredOperTypeEventTypeDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:CredOperTypeEventTypeField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfCredOperTypeEventTypeField" />
+          <xs:element minOccurs="0" name="OperTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="RateContextId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperTypeEventType" nillable="true" type="tns:CredOperTypeEventType" />
+  <xs:complexType name="ArrayOfAssetOperationExpenseType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AssetOperationExpenseType" nillable="true" type="tns:AssetOperationExpenseType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAssetOperationExpenseType" nillable="true" type="tns:ArrayOfAssetOperationExpenseType" />
+  <xs:complexType name="AssetOperationExpenseType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://accipiens.com/AcpFramework" base="q12:ExpenseTypeByTable">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AssetOperationExpenseType" nillable="true" type="tns:AssetOperationExpenseType" />
+  <xs:complexType name="CredOperTypeEventTypeKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://accipiens.com/Common" base="q13:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperTypeEventTypeKey" nillable="true" type="tns:CredOperTypeEventTypeKey" />
+  <xs:simpleType name="CredOperTypeEventTypeDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ExpenseType" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperTypeEventTypeDetail" nillable="true" type="tns:CredOperTypeEventTypeDetail" />
+  <xs:simpleType name="CredOperTypeEventTypeField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="Abrev" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="OperTypeId" />
+      <xs:enumeration value="CredOperEventTypeKindId" />
+      <xs:enumeration value="RateContextId" />
+      <xs:enumeration value="DeltaDays" />
+      <xs:enumeration value="FinMovementTypeId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperTypeEventTypeField" nillable="true" type="tns:CredOperTypeEventTypeField" />
+  <xs:complexType name="ArrayOfCredOperTypeEventTypeField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CredOperTypeEventTypeField" type="tns:CredOperTypeEventTypeField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCredOperTypeEventTypeField" nillable="true" type="tns:ArrayOfCredOperTypeEventTypeField" />
+  <xs:complexType name="ArrayOfCredOperExpenseType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CredOperExpenseType" nillable="true" type="tns:CredOperExpenseType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCredOperExpenseType" nillable="true" type="tns:ArrayOfCredOperExpenseType" />
+  <xs:complexType name="CredOperExpenseType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://accipiens.com/AcpFramework" base="q14:ExpenseTypeByTable">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperExpenseType" nillable="true" type="tns:CredOperExpenseType" />
+  <xs:complexType name="CredOperTypeFactoring">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://accipiens.com/Common" base="q15:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AdvanceAplStatementId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AdvanceSubtractCreditNotes" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CustomerRPScopeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DebtorCommunicationModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FactoringAdvanceRuleId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FactoringCategoryId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FactoringInterestSettingId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FactoringRateKindId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="HasCaseContinued" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HasConfidential" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HasParticipateAgreement" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="InterestMovementsDateValidationModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="InterestMovementsUniverseId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="InterestRatesDateDeltaDays" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="InterestRatesReferenceDateId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IntervActivationUniverseId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IntervRPScopeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IsWithoutRecourse" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:CredOperTypeFactoringKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:CredOperTypeFactoringDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:CredOperTypeFactoringField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfCredOperTypeFactoringField" />
+          <xs:element minOccurs="0" name="OperTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="RecalcNotAdvancedAmount" nillable="true" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperTypeFactoring" nillable="true" type="tns:CredOperTypeFactoring" />
+  <xs:complexType name="CredOperTypeFactoringKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://accipiens.com/Common" base="q16:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="OperTypeId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperTypeFactoringKey" nillable="true" type="tns:CredOperTypeFactoringKey" />
+  <xs:simpleType name="CredOperTypeFactoringDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperTypeFactoringDetail" nillable="true" type="tns:CredOperTypeFactoringDetail" />
+  <xs:simpleType name="CredOperTypeFactoringField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OperTypeId" />
+      <xs:enumeration value="HasConfidential" />
+      <xs:enumeration value="HasCaseContinued" />
+      <xs:enumeration value="FactoringCategoryId" />
+      <xs:enumeration value="DebtorCommunicationModeId" />
+      <xs:enumeration value="FactoringRateKindId" />
+      <xs:enumeration value="HasParticipateAgreement" />
+      <xs:enumeration value="FactoringAdvanceRuleId" />
+      <xs:enumeration value="AdvanceAplStatementId" />
+      <xs:enumeration value="RecalcNotAdvancedAmount" />
+      <xs:enumeration value="CustomerRPScopeId" />
+      <xs:enumeration value="IntervRPScopeId" />
+      <xs:enumeration value="AdvanceSubtractCreditNotes" />
+      <xs:enumeration value="FactoringInterestSettingId" />
+      <xs:enumeration value="IntervActivationUniverseId" />
+      <xs:enumeration value="InterestRatesReferenceDateId" />
+      <xs:enumeration value="InterestRatesDateDeltaDays" />
+      <xs:enumeration value="IsWithoutRecourse" />
+      <xs:enumeration value="InterestMovementsUniverseId" />
+      <xs:enumeration value="InterestMovementsDateValidationModeId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperTypeFactoringField" nillable="true" type="tns:CredOperTypeFactoringField" />
+  <xs:complexType name="ArrayOfCredOperTypeFactoringField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CredOperTypeFactoringField" type="tns:CredOperTypeFactoringField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCredOperTypeFactoringField" nillable="true" type="tns:ArrayOfCredOperTypeFactoringField" />
+  <xs:complexType name="ArrayOfCredOperTypeInsurance">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CredOperTypeInsurance" nillable="true" type="tns:CredOperTypeInsurance" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCredOperTypeInsurance" nillable="true" type="tns:ArrayOfCredOperTypeInsurance" />
+  <xs:complexType name="CredOperTypeInsurance">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://accipiens.com/Common" base="q17:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplApplicationId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CredOperTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="InsuranceTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:CredOperTypeInsuranceKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:CredOperTypeInsuranceDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:CredOperTypeInsuranceField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfCredOperTypeInsuranceField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperTypeInsurance" nillable="true" type="tns:CredOperTypeInsurance" />
+  <xs:complexType name="CredOperTypeInsuranceKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://accipiens.com/Common" base="q18:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplApplicationId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CredOperTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="InsuranceTypeId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperTypeInsuranceKey" nillable="true" type="tns:CredOperTypeInsuranceKey" />
+  <xs:simpleType name="CredOperTypeInsuranceDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperTypeInsuranceDetail" nillable="true" type="tns:CredOperTypeInsuranceDetail" />
+  <xs:simpleType name="CredOperTypeInsuranceField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="CredOperTypeId" />
+      <xs:enumeration value="InsuranceTypeId" />
+      <xs:enumeration value="AplApplicationId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperTypeInsuranceField" nillable="true" type="tns:CredOperTypeInsuranceField" />
+  <xs:complexType name="ArrayOfCredOperTypeInsuranceField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CredOperTypeInsuranceField" type="tns:CredOperTypeInsuranceField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCredOperTypeInsuranceField" nillable="true" type="tns:ArrayOfCredOperTypeInsuranceField" />
+  <xs:complexType name="CredOperTypeKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://accipiens.com/Common" base="q19:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="OperTypeId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperTypeKey" nillable="true" type="tns:CredOperTypeKey" />
+  <xs:simpleType name="CredOperTypeDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ExpenseType" />
+      <xs:enumeration value="TaxCapitalType" />
+      <xs:enumeration value="OperType" />
+      <xs:enumeration value="Services" />
+      <xs:enumeration value="Cession" />
+      <xs:enumeration value="Factoring" />
+      <xs:enumeration value="Loan" />
+      <xs:enumeration value="Insurances" />
+      <xs:enumeration value="PurposeType" />
+      <xs:enumeration value="CreditRevolving" />
+      <xs:enumeration value="BankGuarantee" />
+      <xs:enumeration value="OtherRate" />
+      <xs:enumeration value="DelayInterest" />
+      <xs:enumeration value="Events" />
+      <xs:enumeration value="NextAvailableType" />
+      <xs:enumeration value="PlafondType" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperTypeDetail" nillable="true" type="tns:CredOperTypeDetail" />
+  <xs:simpleType name="CredOperTypeField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OperTypeId" />
+      <xs:enumeration value="NumerationId" />
+      <xs:enumeration value="CredOperStep" />
+      <xs:enumeration value="AutomatonId" />
+      <xs:enumeration value="NextStepCredOperTypeId" />
+      <xs:enumeration value="PlafondTypeId" />
+      <xs:enumeration value="IsPreContract" />
+      <xs:enumeration value="TaxCapitalTypeId" />
+      <xs:enumeration value="UsePlafondId" />
+      <xs:enumeration value="HasOnlyInterest" />
+      <xs:enumeration value="DocManageTypeId" />
+      <xs:enumeration value="RentTaxTypeId" />
+      <xs:enumeration value="AssetTypeId" />
+      <xs:enumeration value="UseSourceNumber" />
+      <xs:enumeration value="DayRuleId" />
+      <xs:enumeration value="AssetTaxTypeId" />
+      <xs:enumeration value="CredOperTypeAplStatementId" />
+      <xs:enumeration value="ConditionsMode" />
+      <xs:enumeration value="CapitalNegativeModeId" />
+      <xs:enumeration value="HasCaution" />
+      <xs:enumeration value="HasOtherCapital" />
+      <xs:enumeration value="ResidualValueCautionRelationId" />
+      <xs:enumeration value="OtherCapitalModeId" />
+      <xs:enumeration value="ResidualValueCautionUnsatRelationId" />
+      <xs:enumeration value="CredOperNature" />
+      <xs:enumeration value="FinancialProductId" />
+      <xs:enumeration value="CautionMaxPercentage" />
+      <xs:enumeration value="FinInitialEntryBaseTypeId" />
+      <xs:enumeration value="CautionServiceTypeId" />
+      <xs:enumeration value="CautionBaseTypeId" />
+      <xs:enumeration value="HasFinMovements" />
+      <xs:enumeration value="VATServiceTypeId" />
+      <xs:enumeration value="MinResidualValueModeId" />
+      <xs:enumeration value="MinResidualValueData" />
+      <xs:enumeration value="MinTermModeId" />
+      <xs:enumeration value="MinTermData" />
+      <xs:enumeration value="RentCalcModeId" />
+      <xs:enumeration value="PaymentLevelId" />
+      <xs:enumeration value="InvoiceDateModeId" />
+      <xs:enumeration value="IsToInvoiceAllVAT" />
+      <xs:enumeration value="CashFlowInterestId" />
+      <xs:enumeration value="DoNumberRentsBeforeActivation" />
+      <xs:enumeration value="IsTermSameAsFinancialPlan" />
+      <xs:enumeration value="EntityPlafondUseId" />
+      <xs:enumeration value="MeasureTypeId" />
+      <xs:enumeration value="FinRateDefinitionId" />
+      <xs:enumeration value="HasFinConditions" />
+      <xs:enumeration value="AcquisitionPlafondTypeId" />
+      <xs:enumeration value="InstallmentRevenueModeId" />
+      <xs:enumeration value="InitialEntryPeriodificationModeId" />
+      <xs:enumeration value="GracePeriodId" />
+      <xs:enumeration value="ResidualValueDayRuleId" />
+      <xs:enumeration value="AllowMultipleCustomers" />
+      <xs:enumeration value="ZeroRentsModeId" />
+      <xs:enumeration value="FinInterestControlTypeId" />
+      <xs:enumeration value="HasInstallmentAtTheEnd" />
+      <xs:enumeration value="FinConditionFlowsBaseTypeId" />
+      <xs:enumeration value="CalcValidationAplStatementId" />
+      <xs:enumeration value="SubCredOperTypeId" />
+      <xs:enumeration value="PendingTerminationAutUserStateId" />
+      <xs:enumeration value="DontChangeStateOnInvoiceVR" />
+      <xs:enumeration value="PERSICreditCategoryTypeAplStatementId" />
+      <xs:enumeration value="NumOfRates" />
+      <xs:enumeration value="SequenceRateContextId" />
+      <xs:enumeration value="InterestDivisionModeId" />
+      <xs:enumeration value="IsFinMovAdvanceWithTax" />
+      <xs:enumeration value="VatExemptionReasonAplStatementId" />
+      <xs:enumeration value="HasVATChargedPurchaserAtSale" />
+      <xs:enumeration value="EquipmentDiscountModeId" />
+      <xs:enumeration value="AssetAmountInputModeId" />
+      <xs:enumeration value="DownPaymentValidationId" />
+      <xs:enumeration value="MovUnCheckPlafond" />
+      <xs:enumeration value="InterestDayId" />
+      <xs:enumeration value="HasPendingStocksManagement" />
+      <xs:enumeration value="ExecPendingStocksAutomaticProcess" />
+      <xs:enumeration value="NegativeRentsModeId" />
+      <xs:enumeration value="FinMatrixTypeId" />
+      <xs:enumeration value="CautionInputModeId" />
+      <xs:enumeration value="NumberOfRents" />
+      <xs:enumeration value="TotalInstallmentCalcTypeId" />
+      <xs:enumeration value="GenerateMatrixOnCalc" />
+      <xs:enumeration value="UsageReservationManagementId" />
+      <xs:enumeration value="IsAutoCredit" />
+      <xs:enumeration value="AssetUsageIntervalId" />
+      <xs:enumeration value="IsFrameContract" />
+      <xs:enumeration value="FrameContractMargin" />
+      <xs:enumeration value="IsToBuyAsset" />
+      <xs:enumeration value="ResidualValueBaseTypeId" />
+      <xs:enumeration value="RateContextRollingId" />
+      <xs:enumeration value="FinMatrixTypeSelectionModeId" />
+      <xs:enumeration value="DueDateCalcModeId" />
+      <xs:enumeration value="DueDateDay" />
+      <xs:enumeration value="DueDateNumOfDays" />
+      <xs:enumeration value="AllowInvoiceRule" />
+      <xs:enumeration value="AllowRentingReformulationFinChange" />
+      <xs:enumeration value="DurationInputModeId" />
+      <xs:enumeration value="FinChangeCapitalNegativeModeId" />
+      <xs:enumeration value="ProcessPrefixAplStatementId" />
+      <xs:enumeration value="CredOperNumberSufixDigits" />
+      <xs:enumeration value="CalcTotalFinancedAmount" />
+      <xs:enumeration value="CalculateTaxByComponent" />
+      <xs:enumeration value="AssetBaseAmountCalcModeId" />
+      <xs:enumeration value="AssetRetakeBaseAmountModeId" />
+      <xs:enumeration value="CredOperTaxAggregationModeId" />
+      <xs:enumeration value="HasResidualValue" />
+      <xs:enumeration value="DueDateDeltaMonths" />
+      <xs:enumeration value="DayRuleSourceDateId" />
+      <xs:enumeration value="RelocationAssetBaseAmountCalcModeId" />
+      <xs:enumeration value="CapitalSourceModeId" />
+      <xs:enumeration value="CapitalSourceModeFinChangeTypeId" />
+      <xs:enumeration value="RecalculateERRateOnFinChange" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperTypeField" nillable="true" type="tns:CredOperTypeField" />
+  <xs:complexType name="CredOperTypeLoan">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q20="http://accipiens.com/Common" base="q20:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActivateExternalMovements" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AplBankAccountTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ConsiderDayChanges" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DemandDepositBankEntityId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ExpenseTypes" nillable="true" type="tns:ArrayOfCredOperLoanExpenseType" />
+          <xs:element minOccurs="0" name="FinMovementTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="HasAplBankAccount" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="InterestAutomatonId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="InterestDayRuleId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:CredOperTypeLoanKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:CredOperTypeLoanDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:CredOperTypeLoanField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfCredOperTypeLoanField" />
+          <xs:element minOccurs="0" name="NumerationAplStatementId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="OperTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PaymentDayRuleId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PaymentFinMovementTypeId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperTypeLoan" nillable="true" type="tns:CredOperTypeLoan" />
+  <xs:complexType name="ArrayOfCredOperLoanExpenseType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CredOperLoanExpenseType" nillable="true" type="tns:CredOperLoanExpenseType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCredOperLoanExpenseType" nillable="true" type="tns:ArrayOfCredOperLoanExpenseType" />
+  <xs:complexType name="CredOperLoanExpenseType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q21="http://accipiens.com/AcpFramework" base="q21:ExpenseTypeByTable">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperLoanExpenseType" nillable="true" type="tns:CredOperLoanExpenseType" />
+  <xs:complexType name="CredOperTypeLoanKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q22="http://accipiens.com/Common" base="q22:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="OperTypeId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperTypeLoanKey" nillable="true" type="tns:CredOperTypeLoanKey" />
+  <xs:simpleType name="CredOperTypeLoanDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ExpenseType" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperTypeLoanDetail" nillable="true" type="tns:CredOperTypeLoanDetail" />
+  <xs:simpleType name="CredOperTypeLoanField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OperTypeId" />
+      <xs:enumeration value="InterestAutomatonId" />
+      <xs:enumeration value="PaymentDayRuleId" />
+      <xs:enumeration value="HasAplBankAccount" />
+      <xs:enumeration value="NumerationAplStatementId" />
+      <xs:enumeration value="AplBankAccountTypeId" />
+      <xs:enumeration value="DemandDepositBankEntityId" />
+      <xs:enumeration value="FinMovementTypeId" />
+      <xs:enumeration value="PaymentFinMovementTypeId" />
+      <xs:enumeration value="ConsiderDayChanges" />
+      <xs:enumeration value="InterestDayRuleId" />
+      <xs:enumeration value="ActivateExternalMovements" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperTypeLoanField" nillable="true" type="tns:CredOperTypeLoanField" />
+  <xs:complexType name="ArrayOfCredOperTypeLoanField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CredOperTypeLoanField" type="tns:CredOperTypeLoanField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCredOperTypeLoanField" nillable="true" type="tns:ArrayOfCredOperTypeLoanField" />
+  <xs:complexType name="ArrayOfCredOperTypeField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CredOperTypeField" type="tns:CredOperTypeField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCredOperTypeField" nillable="true" type="tns:ArrayOfCredOperTypeField" />
+  <xs:complexType name="ArrayOfCredOperTypeNextAvailableType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CredOperTypeNextAvailableType" nillable="true" type="tns:CredOperTypeNextAvailableType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCredOperTypeNextAvailableType" nillable="true" type="tns:ArrayOfCredOperTypeNextAvailableType" />
+  <xs:complexType name="CredOperTypeNextAvailableType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q23="http://accipiens.com/Common" base="q23:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AvailableCredOperTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="CredOperTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:CredOperTypeNextAvailableTypeKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:CredOperTypeNextAvailableTypeDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:CredOperTypeNextAvailableTypeField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfCredOperTypeNextAvailableTypeField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperTypeNextAvailableType" nillable="true" type="tns:CredOperTypeNextAvailableType" />
+  <xs:complexType name="CredOperTypeNextAvailableTypeKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q24="http://accipiens.com/Common" base="q24:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperTypeNextAvailableTypeKey" nillable="true" type="tns:CredOperTypeNextAvailableTypeKey" />
+  <xs:simpleType name="CredOperTypeNextAvailableTypeDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperTypeNextAvailableTypeDetail" nillable="true" type="tns:CredOperTypeNextAvailableTypeDetail" />
+  <xs:simpleType name="CredOperTypeNextAvailableTypeField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="CredOperTypeId" />
+      <xs:enumeration value="AvailableCredOperTypeId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperTypeNextAvailableTypeField" nillable="true" type="tns:CredOperTypeNextAvailableTypeField" />
+  <xs:complexType name="ArrayOfCredOperTypeNextAvailableTypeField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CredOperTypeNextAvailableTypeField" type="tns:CredOperTypeNextAvailableTypeField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCredOperTypeNextAvailableTypeField" nillable="true" type="tns:ArrayOfCredOperTypeNextAvailableTypeField" />
+  <xs:complexType name="ArrayOfCredOperTypeOtherRate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CredOperTypeOtherRate" nillable="true" type="tns:CredOperTypeOtherRate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCredOperTypeOtherRate" nillable="true" type="tns:ArrayOfCredOperTypeOtherRate" />
+  <xs:complexType name="CredOperTypeOtherRate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q25="http://accipiens.com/Common" base="q25:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CredOperTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="FinRateDefinitionId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:CredOperTypeOtherRateKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:CredOperTypeOtherRateDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:CredOperTypeOtherRateField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfCredOperTypeOtherRateField" />
+          <xs:element minOccurs="0" name="RateId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperTypeOtherRate" nillable="true" type="tns:CredOperTypeOtherRate" />
+  <xs:complexType name="CredOperTypeOtherRateKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q26="http://accipiens.com/Common" base="q26:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CredOperTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="FinRateDefinitionId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="RateId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperTypeOtherRateKey" nillable="true" type="tns:CredOperTypeOtherRateKey" />
+  <xs:simpleType name="CredOperTypeOtherRateDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperTypeOtherRateDetail" nillable="true" type="tns:CredOperTypeOtherRateDetail" />
+  <xs:simpleType name="CredOperTypeOtherRateField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="CredOperTypeId" />
+      <xs:enumeration value="FinRateDefinitionId" />
+      <xs:enumeration value="RateId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperTypeOtherRateField" nillable="true" type="tns:CredOperTypeOtherRateField" />
+  <xs:complexType name="ArrayOfCredOperTypeOtherRateField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CredOperTypeOtherRateField" type="tns:CredOperTypeOtherRateField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCredOperTypeOtherRateField" nillable="true" type="tns:ArrayOfCredOperTypeOtherRateField" />
+  <xs:complexType name="ArrayOfCredOperTypePlafondType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CredOperTypePlafondType" nillable="true" type="tns:CredOperTypePlafondType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCredOperTypePlafondType" nillable="true" type="tns:ArrayOfCredOperTypePlafondType" />
+  <xs:complexType name="CredOperTypePlafondType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q27="http://accipiens.com/Common" base="q27:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AggregatorPlafondTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AvailableNextPhaseValidationId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CaptiveNextPhaseValidationId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CredOperTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="IsAutomatic" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsInPreFinancing" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsToFinance" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:CredOperTypePlafondTypeKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:CredOperTypePlafondTypeDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:CredOperTypePlafondTypeField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfCredOperTypePlafondTypeField" />
+          <xs:element minOccurs="0" name="PlafondTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PlafondUsageContextId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperTypePlafondType" nillable="true" type="tns:CredOperTypePlafondType" />
+  <xs:complexType name="CredOperTypePlafondTypeKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q28="http://accipiens.com/Common" base="q28:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperTypePlafondTypeKey" nillable="true" type="tns:CredOperTypePlafondTypeKey" />
+  <xs:simpleType name="CredOperTypePlafondTypeDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperTypePlafondTypeDetail" nillable="true" type="tns:CredOperTypePlafondTypeDetail" />
+  <xs:simpleType name="CredOperTypePlafondTypeField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="CredOperTypeId" />
+      <xs:enumeration value="PlafondUsageContextId" />
+      <xs:enumeration value="IsInPreFinancing" />
+      <xs:enumeration value="PlafondTypeId" />
+      <xs:enumeration value="AggregatorPlafondTypeId" />
+      <xs:enumeration value="IsAutomatic" />
+      <xs:enumeration value="IsToFinance" />
+      <xs:enumeration value="AvailableNextPhaseValidationId" />
+      <xs:enumeration value="CaptiveNextPhaseValidationId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperTypePlafondTypeField" nillable="true" type="tns:CredOperTypePlafondTypeField" />
+  <xs:complexType name="ArrayOfCredOperTypePlafondTypeField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CredOperTypePlafondTypeField" type="tns:CredOperTypePlafondTypeField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCredOperTypePlafondTypeField" nillable="true" type="tns:ArrayOfCredOperTypePlafondTypeField" />
+  <xs:complexType name="ArrayOfCredOperTypePurposeType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CredOperTypePurposeType" nillable="true" type="tns:CredOperTypePurposeType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCredOperTypePurposeType" nillable="true" type="tns:ArrayOfCredOperTypePurposeType" />
+  <xs:complexType name="CredOperTypePurposeType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q29="http://accipiens.com/Common" base="q29:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplBusinessPurposeTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CredOperTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="IsDefault" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:CredOperTypePurposeTypeKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:CredOperTypePurposeTypeDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:CredOperTypePurposeTypeField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfCredOperTypePurposeTypeField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperTypePurposeType" nillable="true" type="tns:CredOperTypePurposeType" />
+  <xs:complexType name="CredOperTypePurposeTypeKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q30="http://accipiens.com/Common" base="q30:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplBusinessPurposeTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CredOperTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperTypePurposeTypeKey" nillable="true" type="tns:CredOperTypePurposeTypeKey" />
+  <xs:simpleType name="CredOperTypePurposeTypeDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperTypePurposeTypeDetail" nillable="true" type="tns:CredOperTypePurposeTypeDetail" />
+  <xs:simpleType name="CredOperTypePurposeTypeField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="CredOperTypeId" />
+      <xs:enumeration value="AplBusinessPurposeTypeId" />
+      <xs:enumeration value="IsDefault" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperTypePurposeTypeField" nillable="true" type="tns:CredOperTypePurposeTypeField" />
+  <xs:complexType name="ArrayOfCredOperTypePurposeTypeField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CredOperTypePurposeTypeField" type="tns:CredOperTypePurposeTypeField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCredOperTypePurposeTypeField" nillable="true" type="tns:ArrayOfCredOperTypePurposeTypeField" />
+  <xs:complexType name="ArrayOfCredOperTypeService">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CredOperTypeService" nillable="true" type="tns:CredOperTypeService" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCredOperTypeService" nillable="true" type="tns:ArrayOfCredOperTypeService" />
+  <xs:complexType name="CredOperTypeService">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q31="http://accipiens.com/Common" base="q31:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CredOperTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="IsDefault" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:CredOperTypeServiceKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:CredOperTypeServiceDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:CredOperTypeServiceField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfCredOperTypeServiceField" />
+          <xs:element minOccurs="0" name="ServiceTypeId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperTypeService" nillable="true" type="tns:CredOperTypeService" />
+  <xs:complexType name="CredOperTypeServiceKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q32="http://accipiens.com/Common" base="q32:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CredOperTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ServiceTypeId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperTypeServiceKey" nillable="true" type="tns:CredOperTypeServiceKey" />
+  <xs:simpleType name="CredOperTypeServiceDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperTypeServiceDetail" nillable="true" type="tns:CredOperTypeServiceDetail" />
+  <xs:simpleType name="CredOperTypeServiceField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="CredOperTypeId" />
+      <xs:enumeration value="ServiceTypeId" />
+      <xs:enumeration value="IsDefault" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperTypeServiceField" nillable="true" type="tns:CredOperTypeServiceField" />
+  <xs:complexType name="ArrayOfCredOperTypeServiceField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CredOperTypeServiceField" type="tns:CredOperTypeServiceField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCredOperTypeServiceField" nillable="true" type="tns:ArrayOfCredOperTypeServiceField" />
+  <xs:complexType name="TaxCapitalType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q33="http://accipiens.com/Common" base="q33:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AplCompanyId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ConsidersLastDay" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CreditTaxModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExpenseTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ExtraExpenseTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="FinMovementTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:TaxCapitalTypeKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:TaxCapitalTypeDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:TaxCapitalTypeField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfTaxCapitalTypeField" />
+          <xs:element minOccurs="0" name="OnlyClientPeriod" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="TaxTypeId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TaxCapitalType" nillable="true" type="tns:TaxCapitalType" />
+  <xs:complexType name="TaxCapitalTypeKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q34="http://accipiens.com/Common" base="q34:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TaxCapitalTypeKey" nillable="true" type="tns:TaxCapitalTypeKey" />
+  <xs:simpleType name="TaxCapitalTypeDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TaxCapitalTypeDetail" nillable="true" type="tns:TaxCapitalTypeDetail" />
+  <xs:simpleType name="TaxCapitalTypeField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="Abrev" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="CreditTaxModeId" />
+      <xs:enumeration value="TaxTypeId" />
+      <xs:enumeration value="FinMovementTypeId" />
+      <xs:enumeration value="ExpenseTypeId" />
+      <xs:enumeration value="ExtraExpenseTypeId" />
+      <xs:enumeration value="ConsidersLastDay" />
+      <xs:enumeration value="AplCompanyId" />
+      <xs:enumeration value="OnlyClientPeriod" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TaxCapitalTypeField" nillable="true" type="tns:TaxCapitalTypeField" />
+  <xs:complexType name="ArrayOfTaxCapitalTypeField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TaxCapitalTypeField" type="tns:TaxCapitalTypeField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTaxCapitalTypeField" nillable="true" type="tns:ArrayOfTaxCapitalTypeField" />
+  <xs:complexType name="CredOperIntervType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q35="http://accipiens.com/Common" base="q35:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AllowAutomaticDateUpdate" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AutomatonId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="BeneficialOwnerEntityRelationTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="BoardOfDirectorsMemberEntityRelationTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CreateEntityRelationTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EntityPlafondUseId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="EntityRoleTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="EquityCapitalHolderEntityRelationTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ExpenseTypes" nillable="true" type="tns:ArrayOfCredOperIntervExpenseType" />
+          <xs:element minOccurs="0" name="FrameContractIsToInvoice" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HasNotification" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HasPaymentMode" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:CredOperIntervTypeKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:CredOperIntervTypeDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:CredOperIntervTypeField" />
+          <xs:element minOccurs="0" name="LegalRepresentativeEntityRelationTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfCredOperIntervTypeField" />
+          <xs:element minOccurs="0" name="PaymentModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PercentageContexts" nillable="true" type="tns:ArrayOfCredOperIntervTypeEntityPercentageContext" />
+          <xs:element minOccurs="0" name="SuperIntervType" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ValidationAplStatementId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperIntervType" nillable="true" type="tns:CredOperIntervType" />
+  <xs:complexType name="ArrayOfCredOperIntervExpenseType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CredOperIntervExpenseType" nillable="true" type="tns:CredOperIntervExpenseType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCredOperIntervExpenseType" nillable="true" type="tns:ArrayOfCredOperIntervExpenseType" />
+  <xs:complexType name="CredOperIntervExpenseType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q36="http://accipiens.com/AcpFramework" base="q36:ExpenseTypeByTable">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperIntervExpenseType" nillable="true" type="tns:CredOperIntervExpenseType" />
+  <xs:complexType name="CredOperIntervTypeKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q37="http://accipiens.com/Common" base="q37:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperIntervTypeKey" nillable="true" type="tns:CredOperIntervTypeKey" />
+  <xs:simpleType name="CredOperIntervTypeDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ExpenseType" />
+      <xs:enumeration value="PercentageContext" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperIntervTypeDetail" nillable="true" type="tns:CredOperIntervTypeDetail" />
+  <xs:simpleType name="CredOperIntervTypeField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="SuperIntervType" />
+      <xs:enumeration value="Abrev" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="ValidationAplStatementId" />
+      <xs:enumeration value="PaymentModeId" />
+      <xs:enumeration value="EntityRoleTypeId" />
+      <xs:enumeration value="HasPaymentMode" />
+      <xs:enumeration value="AutomatonId" />
+      <xs:enumeration value="AllowAutomaticDateUpdate" />
+      <xs:enumeration value="HasNotification" />
+      <xs:enumeration value="BeneficialOwnerEntityRelationTypeId" />
+      <xs:enumeration value="LegalRepresentativeEntityRelationTypeId" />
+      <xs:enumeration value="BoardOfDirectorsMemberEntityRelationTypeId" />
+      <xs:enumeration value="EquityCapitalHolderEntityRelationTypeId" />
+      <xs:enumeration value="EntityPlafondUseId" />
+      <xs:enumeration value="CreateEntityRelationTypeId" />
+      <xs:enumeration value="FrameContractIsToInvoice" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperIntervTypeField" nillable="true" type="tns:CredOperIntervTypeField" />
+  <xs:complexType name="ArrayOfCredOperIntervTypeField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CredOperIntervTypeField" type="tns:CredOperIntervTypeField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCredOperIntervTypeField" nillable="true" type="tns:ArrayOfCredOperIntervTypeField" />
+  <xs:complexType name="ArrayOfCredOperIntervTypeEntityPercentageContext">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CredOperIntervTypeEntityPercentageContext" nillable="true" type="tns:CredOperIntervTypeEntityPercentageContext" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCredOperIntervTypeEntityPercentageContext" nillable="true" type="tns:ArrayOfCredOperIntervTypeEntityPercentageContext" />
+  <xs:complexType name="CredOperIntervTypeEntityPercentageContext">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q38="http://accipiens.com/Common" base="q38:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CredOperIntervTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="EntityPercentageContextId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:CredOperIntervTypeEntityPercentageContextKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:CredOperIntervTypeEntityPercentageContextDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:CredOperIntervTypeEntityPercentageContextField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfCredOperIntervTypeEntityPercentageContextField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperIntervTypeEntityPercentageContext" nillable="true" type="tns:CredOperIntervTypeEntityPercentageContext" />
+  <xs:complexType name="CredOperIntervTypeEntityPercentageContextKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q39="http://accipiens.com/Common" base="q39:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperIntervTypeEntityPercentageContextKey" nillable="true" type="tns:CredOperIntervTypeEntityPercentageContextKey" />
+  <xs:simpleType name="CredOperIntervTypeEntityPercentageContextDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperIntervTypeEntityPercentageContextDetail" nillable="true" type="tns:CredOperIntervTypeEntityPercentageContextDetail" />
+  <xs:simpleType name="CredOperIntervTypeEntityPercentageContextField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="CredOperIntervTypeId" />
+      <xs:enumeration value="EntityPercentageContextId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperIntervTypeEntityPercentageContextField" nillable="true" type="tns:CredOperIntervTypeEntityPercentageContextField" />
+  <xs:complexType name="ArrayOfCredOperIntervTypeEntityPercentageContextField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CredOperIntervTypeEntityPercentageContextField" type="tns:CredOperIntervTypeEntityPercentageContextField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCredOperIntervTypeEntityPercentageContextField" nillable="true" type="tns:ArrayOfCredOperIntervTypeEntityPercentageContextField" />
+  <xs:simpleType name="AssetTypeKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Equipment">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Building">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AssetTypeKind" nillable="true" type="tns:AssetTypeKind" />
+  <xs:complexType name="CredOperIntervTypePayMode">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q40="http://accipiens.com/Common" base="q40:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplBusinessId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CanChangeIsDebit" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CreateByDefault" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CredOperIntervTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="EntityId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="IsDebit" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsDefault" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:CredOperIntervTypePayModeKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:CredOperIntervTypePayModeDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:CredOperIntervTypePayModeField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfCredOperIntervTypePayModeField" />
+          <xs:element minOccurs="0" name="PaymentModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="SuperIntervType" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperIntervTypePayMode" nillable="true" type="tns:CredOperIntervTypePayMode" />
+  <xs:complexType name="CredOperIntervTypePayModeKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q41="http://accipiens.com/Common" base="q41:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CredOperIntervTypePayModeKey" nillable="true" type="tns:CredOperIntervTypePayModeKey" />
+  <xs:simpleType name="CredOperIntervTypePayModeDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperIntervTypePayModeDetail" nillable="true" type="tns:CredOperIntervTypePayModeDetail" />
+  <xs:simpleType name="CredOperIntervTypePayModeField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AplBusinessId" />
+      <xs:enumeration value="SuperIntervType" />
+      <xs:enumeration value="CredOperIntervTypeId" />
+      <xs:enumeration value="PaymentModeId" />
+      <xs:enumeration value="IsDefault" />
+      <xs:enumeration value="CreateByDefault" />
+      <xs:enumeration value="IsDebit" />
+      <xs:enumeration value="EntityId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CredOperIntervTypePayModeField" nillable="true" type="tns:CredOperIntervTypePayModeField" />
+  <xs:complexType name="ArrayOfCredOperIntervTypePayModeField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CredOperIntervTypePayModeField" type="tns:CredOperIntervTypePayModeField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCredOperIntervTypePayModeField" nillable="true" type="tns:ArrayOfCredOperIntervTypePayModeField" />
+</xs:schema>

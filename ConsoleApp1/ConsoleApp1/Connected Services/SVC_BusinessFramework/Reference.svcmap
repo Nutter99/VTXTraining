@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fa61b15a-1c6f-4355-a07a-db9bca471a6e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://accipiens.vtxrm.pt/AccipienswebservicesTraining/OperationsWebServices/Operations/BusinessFramework.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BusinessFramework.wsdl" MetadataType="Wsdl" ID="877aecab-ed97-4770-829c-7e68bb50bd9e" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/BusinessFramework.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="BusinessFramework.xsd" MetadataType="Schema" ID="14e958bf-8eaf-4cc1-9c16-f5ca36fbbdec" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/BusinessFramework.svc?xsd=xsd14" />
+    <MetadataFile FileName="BusinessFramework1.xsd" MetadataType="Schema" ID="b913b3e9-481e-4188-895f-a68b93a62009" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/BusinessFramework.svc?xsd=xsd0" />
+    <MetadataFile FileName="BusinessFramework2.xsd" MetadataType="Schema" ID="9c038f46-74c2-45e9-b411-3e30495e5ab5" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/BusinessFramework.svc?xsd=xsd4" />
+    <MetadataFile FileName="BusinessFramework3.xsd" MetadataType="Schema" ID="d8292aa8-472c-4d2b-8ac6-e17f41b56ade" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/BusinessFramework.svc?xsd=xsd8" />
+    <MetadataFile FileName="BusinessFramework4.xsd" MetadataType="Schema" ID="25a5c678-007f-4697-9981-1b501c87b7a8" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/BusinessFramework.svc?xsd=xsd13" />
+    <MetadataFile FileName="BusinessFramework5.xsd" MetadataType="Schema" ID="811c8e7f-7abc-40ce-9d6a-fe8423e2b70f" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/BusinessFramework.svc?xsd=xsd18" />
+    <MetadataFile FileName="BusinessFramework6.xsd" MetadataType="Schema" ID="4e9aa329-0219-4810-b1b8-026860a3baa6" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/BusinessFramework.svc?xsd=xsd3" />
+    <MetadataFile FileName="BusinessFramework7.xsd" MetadataType="Schema" ID="e88088e5-027d-4e3d-914c-d8cd21426679" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/BusinessFramework.svc?xsd=xsd7" />
+    <MetadataFile FileName="BusinessFramework8.xsd" MetadataType="Schema" ID="f3ea1d4d-2824-42d9-abb9-c9187cc018fd" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/BusinessFramework.svc?xsd=xsd11" />
+    <MetadataFile FileName="BusinessFramework9.xsd" MetadataType="Schema" ID="c0e8cff0-214a-4729-b8c7-c2ac6144e2f2" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/BusinessFramework.svc?xsd=xsd17" />
+    <MetadataFile FileName="BusinessFramework10.xsd" MetadataType="Schema" ID="1073f1e4-a9eb-4643-81d9-ef1649532f17" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/BusinessFramework.svc?xsd=xsd12" />
+    <MetadataFile FileName="BusinessFramework11.xsd" MetadataType="Schema" ID="5aa9e30d-7982-4809-9e58-4a13d89c44c0" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/BusinessFramework.svc?xsd=xsd2" />
+    <MetadataFile FileName="BusinessFramework12.xsd" MetadataType="Schema" ID="c91a3a97-f99a-44dd-a564-7a6e6ee0f72d" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/BusinessFramework.svc?xsd=xsd6" />
+    <MetadataFile FileName="BusinessFramework1.wsdl" MetadataType="Wsdl" ID="a7d18823-0213-42dc-9144-208d0b473392" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/AccipienswebservicesTraining/OperationsWebServices/Operations/BusinessFramework.svc?wsdl" />
+    <MetadataFile FileName="BusinessFramework13.xsd" MetadataType="Schema" ID="bc8b93a6-add6-4682-9b44-c0c8d173a987" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/BusinessFramework.svc?xsd=xsd15" />
+    <MetadataFile FileName="BusinessFramework14.xsd" MetadataType="Schema" ID="024c171e-5e40-42a1-9979-2b0724f8d3f7" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/BusinessFramework.svc?xsd=xsd10" />
+    <MetadataFile FileName="BusinessFramework15.xsd" MetadataType="Schema" ID="fbe8ef1c-c46b-4823-8c59-4f8d73a5b68d" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/BusinessFramework.svc?xsd=xsd16" />
+    <MetadataFile FileName="BusinessFramework16.xsd" MetadataType="Schema" ID="be88ea0c-3dbd-45cc-b664-e20a33c14fdc" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/BusinessFramework.svc?xsd=xsd1" />
+    <MetadataFile FileName="BusinessFramework17.xsd" MetadataType="Schema" ID="06e2c439-b806-4eef-9a53-8b74c53e6470" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/BusinessFramework.svc?xsd=xsd5" />
+    <MetadataFile FileName="BusinessFramework18.xsd" MetadataType="Schema" ID="b2b436b9-e354-44ac-b11f-b550a9d06997" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/BusinessFramework.svc?xsd=xsd9" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

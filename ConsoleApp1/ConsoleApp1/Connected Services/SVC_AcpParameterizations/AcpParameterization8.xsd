@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://accipiens.com/Entities" elementFormDefault="qualified" targetNamespace="http://accipiens.com/Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="EntityTypeIndicator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Banks" />
+      <xs:enumeration value="Agencies" />
+      <xs:enumeration value="EconomicGroups" />
+      <xs:enumeration value="FinancesServices" />
+      <xs:enumeration value="CityHalls" />
+      <xs:enumeration value="AplCompanies" />
+      <xs:enumeration value="RegistrationServices" />
+      <xs:enumeration value="NotaryServices" />
+      <xs:enumeration value="PrivateEntity" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EntityTypeIndicator" nillable="true" type="tns:EntityTypeIndicator" />
+  <xs:simpleType name="EntityRoleTypeIndicator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OurCompanyRole" />
+      <xs:enumeration value="BrokerRole" />
+      <xs:enumeration value="SupplierRole" />
+      <xs:enumeration value="ClientRole" />
+      <xs:enumeration value="InsuranceCompanyRole" />
+      <xs:enumeration value="GuarantorRole" />
+      <xs:enumeration value="ServiceProviderRole" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EntityRoleTypeIndicator" nillable="true" type="tns:EntityRoleTypeIndicator" />
+  <xs:simpleType name="LegalDocumentTypeIndicator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BI" />
+      <xs:enumeration value="NIF" />
+      <xs:enumeration value="BeneficiaryCode" />
+      <xs:enumeration value="Passport" />
+      <xs:enumeration value="ResidencePermission" />
+      <xs:enumeration value="DrivingLicence" />
+      <xs:enumeration value="LEI" />
+      <xs:enumeration value="CreditIntermediaryBound" />
+      <xs:enumeration value="CreditIntermediaryNotBound" />
+      <xs:enumeration value="CreditIntermediaryAccessory" />
+      <xs:enumeration value="NISS" />
+      <xs:enumeration value="CGA" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="LegalDocumentTypeIndicator" nillable="true" type="tns:LegalDocumentTypeIndicator" />
+  <xs:simpleType name="PhoneTypeIndicator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Fixed" />
+      <xs:enumeration value="Mobile" />
+      <xs:enumeration value="Fax" />
+      <xs:enumeration value="Employment" />
+      <xs:enumeration value="AlternatePhone" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PhoneTypeIndicator" nillable="true" type="tns:PhoneTypeIndicator" />
+  <xs:simpleType name="StructNodeTypeIndicator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Local" />
+      <xs:enumeration value="Person" />
+      <xs:enumeration value="Importer" />
+      <xs:enumeration value="Branch" />
+      <xs:enumeration value="Commercial" />
+      <xs:enumeration value="Staff" />
+      <xs:enumeration value="Collector" />
+      <xs:enumeration value="Supervisor" />
+      <xs:enumeration value="Operator" />
+      <xs:enumeration value="Broker" />
+      <xs:enumeration value="InternalCollector" />
+      <xs:enumeration value="Group" />
+      <xs:enumeration value="Department" />
+      <xs:enumeration value="CollectorResponsible" />
+      <xs:enumeration value="Manager" />
+      <xs:enumeration value="LawOffice" />
+      <xs:enumeration value="Lawyer" />
+      <xs:enumeration value="CollectionAgency" />
+      <xs:enumeration value="Region" />
+      <xs:enumeration value="Workshop" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="StructNodeTypeIndicator" nillable="true" type="tns:StructNodeTypeIndicator" />
+  <xs:simpleType name="StructNodeContextIndicator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Internal" />
+      <xs:enumeration value="External" />
+      <xs:enumeration value="Commercial" />
+      <xs:enumeration value="Staff" />
+      <xs:enumeration value="Workshop" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="StructNodeContextIndicator" nillable="true" type="tns:StructNodeContextIndicator" />
+  <xs:simpleType name="BankAccountTypeIndicator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Default" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="BankAccountTypeIndicator" nillable="true" type="tns:BankAccountTypeIndicator" />
+  <xs:simpleType name="EntityRelationTypeIndicator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Spouse" />
+      <xs:enumeration value="PlafondGroup" />
+      <xs:enumeration value="ShareHolder" />
+      <xs:enumeration value="Supplier" />
+      <xs:enumeration value="BranchSubsidiary" />
+      <xs:enumeration value="Inheritor" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EntityRelationTypeIndicator" nillable="true" type="tns:EntityRelationTypeIndicator" />
+  <xs:simpleType name="AddressTypeIndicator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CompanyHQ" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AddressTypeIndicator" nillable="true" type="tns:AddressTypeIndicator" />
+  <xs:simpleType name="JuridicalTypeIndicator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ENI" />
+      <xs:enumeration value="InvestmentFund" />
+      <xs:enumeration value="PublicCompany" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="JuridicalTypeIndicator" nillable="true" type="tns:JuridicalTypeIndicator" />
+  <xs:simpleType name="CustomerTypeIndicator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Default" />
+      <xs:enumeration value="Regular" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CustomerTypeIndicator" nillable="true" type="tns:CustomerTypeIndicator" />
+</xs:schema>

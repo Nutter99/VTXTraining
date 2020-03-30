@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2d4f860a-ed29-475d-808f-53bbb9a25066" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Simulations.xsd" MetadataType="Schema" ID="2084fdc1-6e78-49cb-8e0a-d11fda546c9f" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?xsd=xsd4" />
+    <MetadataFile FileName="Simulations.wsdl" MetadataType="Wsdl" ID="f89ecf29-d95c-47a1-bbfe-55e03b74392e" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?wsdl" />
+    <MetadataFile FileName="Simulations1.xsd" MetadataType="Schema" ID="e85fed1d-3598-4fbb-b44e-727732ae5815" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?xsd=xsd2" />
+    <MetadataFile FileName="Simulations2.xsd" MetadataType="Schema" ID="426ea5f4-e220-4c88-ac37-c9a76cc54b5c" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?xsd=xsd13" />
+    <MetadataFile FileName="Simulations3.xsd" MetadataType="Schema" ID="5e89c6cd-a60c-4b7d-96b2-b1496ea9dd5c" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?xsd=xsd12" />
+    <MetadataFile FileName="Simulations4.xsd" MetadataType="Schema" ID="e1f81f1e-a1ec-48b8-a504-8f77fbb30444" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?xsd=xsd0" />
+    <MetadataFile FileName="Simulations5.xsd" MetadataType="Schema" ID="8d5b7aef-5266-427b-a3db-85c75121d19a" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?xsd=xsd10" />
+    <MetadataFile FileName="Simulations6.xsd" MetadataType="Schema" ID="907e4b92-fadf-42e0-b1e0-1a84b849419a" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?xsd=xsd8" />
+    <MetadataFile FileName="Simulations7.xsd" MetadataType="Schema" ID="319bdf07-06e2-43e2-b0ab-e3136d3b0883" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?xsd=xsd7" />
+    <MetadataFile FileName="Simulations1.wsdl" MetadataType="Wsdl" ID="e82d2fc8-f914-4302-a13d-2dc63eecd547" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="Simulations8.xsd" MetadataType="Schema" ID="ba693e00-9b0e-422e-bf10-63931556a8de" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?xsd=xsd6" />
+    <MetadataFile FileName="Simulations9.xsd" MetadataType="Schema" ID="5b80eb43-dd9d-4ef3-844d-5b3193ec8fa9" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?xsd=xsd5" />
+    <MetadataFile FileName="Simulations10.xsd" MetadataType="Schema" ID="0fe1501b-3cc2-41f9-8ab3-0888a67e3b91" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?xsd=xsd3" />
+    <MetadataFile FileName="Simulations11.xsd" MetadataType="Schema" ID="48f51401-e65a-4c59-8962-12c69e8917b7" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?xsd=xsd1" />
+    <MetadataFile FileName="Simulations12.xsd" MetadataType="Schema" ID="e70c0f88-ce07-42e7-8b93-e1470d896ab1" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?xsd=xsd11" />
+    <MetadataFile FileName="Simulations13.xsd" MetadataType="Schema" ID="2ed1f6ab-e89d-4d3c-887b-722a212b2e85" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Operations/Simulations.svc?xsd=xsd9" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

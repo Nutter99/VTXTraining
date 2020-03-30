@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Olissipo.AcpFramework.DataStructures" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Olissipo.AcpFramework.DataStructures" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="InstallationRunMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NormalMode" />
+      <xs:enumeration value="DevMode" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="InstallationRunMode" nillable="true" type="tns:InstallationRunMode" />
+  <xs:simpleType name="DefaultsTableIndicator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Currency" />
+      <xs:enumeration value="Country" />
+      <xs:enumeration value="PaymentMode" />
+      <xs:enumeration value="AssetCurrency" />
+      <xs:enumeration value="InvoiceCurrency" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DefaultsTableIndicator" nillable="true" type="tns:DefaultsTableIndicator" />
+  <xs:simpleType name="CompanyForexRateIndicator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CompanyForexRate" />
+      <xs:enumeration value="NationalForexRate" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CompanyForexRateIndicator" nillable="true" type="tns:CompanyForexRateIndicator" />
+</xs:schema>

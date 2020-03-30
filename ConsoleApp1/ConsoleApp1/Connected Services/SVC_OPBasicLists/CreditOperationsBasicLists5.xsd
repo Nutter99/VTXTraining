@@ -1,0 +1,1731 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://accipiens.com/Simulations" elementFormDefault="qualified" targetNamespace="http://accipiens.com/Simulations" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd16" namespace="http://accipiens.com/BusinessFramework" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd3" namespace="http://accipiens.com/Common" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/BasicLists/CreditOperationsBasicLists.svc?xsd=xsd14" namespace="http://accipiens.com/Entities" />
+  <xs:complexType name="FinProductBasicListParam">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddProductsWithoutChannel" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AddProductsWithoutImporters" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AplBusinessId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="AplBusinessPurposeTypeId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="AplCompanyId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CredOperChannelId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CurrencyId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerTypeId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ImporterStructNodeId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="MarketCampaignId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="OperTypeId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ProductPurposeId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SymbolValues" nillable="true" type="tns:ArrayOfSymbolValueList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FinProductBasicListParam" nillable="true" type="tns:FinProductBasicListParam" />
+  <xs:complexType name="ArrayOfSymbolValueList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SymbolValueList" nillable="true" type="tns:SymbolValueList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSymbolValueList" nillable="true" type="tns:ArrayOfSymbolValueList" />
+  <xs:complexType name="SymbolValueList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FinSymbolId" type="xs:int" />
+      <xs:element minOccurs="0" name="RelatedTypeId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="SymbolDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SymbolId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="SymbolString" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SymbolValue" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SymbolValueList" nillable="true" type="tns:SymbolValueList" />
+  <xs:complexType name="ArrayOfFinConditions">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinConditions" nillable="true" type="tns:FinConditions" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinConditions" nillable="true" type="tns:ArrayOfFinConditions" />
+  <xs:complexType name="FinConditions">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://accipiens.com/Common" base="q1:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ANI" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="AcceleratorPeriodTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AcceleratorTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AmountHasTaxes" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ArrearsRate" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="AssetUsage" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CalculateSpread" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CapitalizeStampTax" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Caution" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CautionFactor" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CautionInputModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CautionPercentage" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CurrencyId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DayRent" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DaysWithoutInterest" nillable="true" type="xs:int" />
+          <xs:element xmlns:q2="http://accipiens.com/BusinessFramework" minOccurs="0" name="Dependencies" nillable="true" type="q2:ArrayOfFinValueDependency" />
+          <xs:element minOccurs="0" name="DifferPeriods" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="EARRate" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ERRate" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="EquipmentAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="FactoringInvoiceMode" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FactoringInvoiceMomentId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FinDueRegimeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FinInitialEntryTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FinInterestControlTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FinMatrixTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FinRateDefinitionId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="FinalDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FinalExpenseTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="FinancialValue" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Flows" nillable="true" type="tns:ArrayOfFinConditionsFlows" />
+          <xs:element minOccurs="0" name="GlobalFundingRate" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="GlobalIRRate" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="GlobalMargin" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="GracePeriods" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="HasRenew" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IRRate" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ImplicitRate" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="IndexingRuleId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="InitialDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="InitialEntryCaution" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="InitialEntryCautionPercentage" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="InitialEntryFactor" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="InitialEntryPartialValue" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="InitialEntryPaymentBehaviourTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="InitialEntryPercentage" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="InitialEntryValue" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="InitialEntryValueWithoutProRata" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="InitialExpenseTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="InitialRentValue" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="InstallmentsPercentage" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="InterestValue" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="InvoiceDateModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="InvoiceEntityId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="InvoiceNumberRents" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="InvoiceRetentionPerc" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="InvoiceRuleId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IsMultiImplicitRate" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsToIndex" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:FinConditionsKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:FinConditionsDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:FinConditionsField" />
+          <xs:element minOccurs="0" name="MarginRate" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="MinDocumentAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfFinConditionsField" />
+          <xs:element minOccurs="0" name="NumOfFlows" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="NumOfSupplierDays" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="OwnerId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PaymentLevelId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PaymentPercentage" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PenaltyRate" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PeriodId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PreFinancingTerm" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ProfitContribution" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ProfitContributionRate" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ROEBasePercentage" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ROEPartPercentage" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ROEPercentage" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rates" nillable="true" type="tns:ArrayOfFinConditionsRate" />
+          <xs:element minOccurs="0" name="ReferenceRate" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RenewDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="RenewTerm" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="RentCalcModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="RentTaxTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ResidualValue" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ResidualValuePercentage" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SaleTaxTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="SequenceNumber" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="SimulationType" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Spread" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SpreadDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SupplierImplicitRate" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Term" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TermDays" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TransferDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ValueDate" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinConditions" nillable="true" type="tns:FinConditions" />
+  <xs:complexType name="ArrayOfFinConditionsFlows">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinConditionsFlows" nillable="true" type="tns:FinConditionsFlows" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinConditionsFlows" nillable="true" type="tns:ArrayOfFinConditionsFlows" />
+  <xs:complexType name="FinConditionsFlows">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://accipiens.com/Common" base="q3:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Amount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="BalloonRentIncludeNormalRent" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CustomerRentalAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CustomerRentalAmountWithTax" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Factor" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="FieldCalcStateId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FinConditionsId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="FinFlowControlTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ImplicitRate" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="InvoiceEntityId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="InvoiceRuleId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IsToIndex" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsVariableFlow" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:FinConditionsFlowsKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:FinConditionsFlowsDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:FinConditionsFlowsField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfFinConditionsFlowsField" />
+          <xs:element minOccurs="0" name="NumOfRepetitions" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PercentageAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PeriodId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Quantity" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="SequenceNr" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Spread" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="UserInputFieldId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinConditionsFlows" nillable="true" type="tns:FinConditionsFlows" />
+  <xs:complexType name="FinConditionsFlowsKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://accipiens.com/Common" base="q4:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FinConditionsId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="SequenceNr" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinConditionsFlowsKey" nillable="true" type="tns:FinConditionsFlowsKey" />
+  <xs:simpleType name="FinConditionsFlowsDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinConditionsFlowsDetail" nillable="true" type="tns:FinConditionsFlowsDetail" />
+  <xs:simpleType name="FinConditionsFlowsField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="FinConditionsId" />
+      <xs:enumeration value="SequenceNr" />
+      <xs:enumeration value="PeriodId" />
+      <xs:enumeration value="Quantity" />
+      <xs:enumeration value="Amount" />
+      <xs:enumeration value="FinFlowControlTypeId" />
+      <xs:enumeration value="PercentageAmount" />
+      <xs:enumeration value="NumOfRepetitions" />
+      <xs:enumeration value="Factor" />
+      <xs:enumeration value="UserInputFieldId" />
+      <xs:enumeration value="IsVariableFlow" />
+      <xs:enumeration value="IsToIndex" />
+      <xs:enumeration value="Spread" />
+      <xs:enumeration value="ImplicitRate" />
+      <xs:enumeration value="CustomerRentalAmount" />
+      <xs:enumeration value="CustomerRentalAmountWithTax" />
+      <xs:enumeration value="InvoiceRuleId" />
+      <xs:enumeration value="InvoiceEntityId" />
+      <xs:enumeration value="FieldCalcStateId" />
+      <xs:enumeration value="BalloonRentIncludeNormalRent" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinConditionsFlowsField" nillable="true" type="tns:FinConditionsFlowsField" />
+  <xs:complexType name="ArrayOfFinConditionsFlowsField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinConditionsFlowsField" type="tns:FinConditionsFlowsField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinConditionsFlowsField" nillable="true" type="tns:ArrayOfFinConditionsFlowsField" />
+  <xs:complexType name="FinConditionsKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://accipiens.com/Common" base="q5:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinConditionsKey" nillable="true" type="tns:FinConditionsKey" />
+  <xs:simpleType name="FinConditionsDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Dependency" />
+      <xs:enumeration value="Flow" />
+      <xs:enumeration value="Rate" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinConditionsDetail" nillable="true" type="tns:FinConditionsDetail" />
+  <xs:simpleType name="FinConditionsField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="CurrencyId" />
+      <xs:enumeration value="FinalExpenseTypeId" />
+      <xs:enumeration value="FinDueRegimeId" />
+      <xs:enumeration value="InitialExpenseTypeId" />
+      <xs:enumeration value="PeriodId" />
+      <xs:enumeration value="FinInitialEntryTypeId" />
+      <xs:enumeration value="FinancialValue" />
+      <xs:enumeration value="InitialDate" />
+      <xs:enumeration value="ValueDate" />
+      <xs:enumeration value="ResidualValue" />
+      <xs:enumeration value="DifferPeriods" />
+      <xs:enumeration value="InitialEntryValue" />
+      <xs:enumeration value="Term" />
+      <xs:enumeration value="TransferDate" />
+      <xs:enumeration value="FinInterestControlTypeId" />
+      <xs:enumeration value="InterestValue" />
+      <xs:enumeration value="FinalDate" />
+      <xs:enumeration value="ImplicitRate" />
+      <xs:enumeration value="IRRate" />
+      <xs:enumeration value="ERRate" />
+      <xs:enumeration value="RentTaxTypeId" />
+      <xs:enumeration value="SaleTaxTypeId" />
+      <xs:enumeration value="CapitalizeStampTax" />
+      <xs:enumeration value="Spread" />
+      <xs:enumeration value="OwnerId" />
+      <xs:enumeration value="SupplierImplicitRate" />
+      <xs:enumeration value="PenaltyRate" />
+      <xs:enumeration value="IndexingRuleId" />
+      <xs:enumeration value="SpreadDate" />
+      <xs:enumeration value="NumOfSupplierDays" />
+      <xs:enumeration value="SimulationType" />
+      <xs:enumeration value="DayRent" />
+      <xs:enumeration value="ArrearsRate" />
+      <xs:enumeration value="Caution" />
+      <xs:enumeration value="EquipmentAmount" />
+      <xs:enumeration value="AmountHasTaxes" />
+      <xs:enumeration value="TermDays" />
+      <xs:enumeration value="DaysWithoutInterest" />
+      <xs:enumeration value="HasRenew" />
+      <xs:enumeration value="RenewDate" />
+      <xs:enumeration value="RenewTerm" />
+      <xs:enumeration value="MinDocumentAmount" />
+      <xs:enumeration value="InvoiceRetentionPerc" />
+      <xs:enumeration value="FinRateDefinitionId" />
+      <xs:enumeration value="InitialRentValue" />
+      <xs:enumeration value="CautionPercentage" />
+      <xs:enumeration value="InitialEntryPercentage" />
+      <xs:enumeration value="ResidualValuePercentage" />
+      <xs:enumeration value="AcceleratorTypeId" />
+      <xs:enumeration value="AcceleratorPeriodTypeId" />
+      <xs:enumeration value="ReferenceRate" />
+      <xs:enumeration value="CalculateSpread" />
+      <xs:enumeration value="MarginRate" />
+      <xs:enumeration value="InitialEntryCautionPercentage" />
+      <xs:enumeration value="InitialEntryCaution" />
+      <xs:enumeration value="PaymentLevelId" />
+      <xs:enumeration value="SequenceNumber" />
+      <xs:enumeration value="IsToIndex" />
+      <xs:enumeration value="InvoiceDateModeId" />
+      <xs:enumeration value="FactoringInvoiceMomentId" />
+      <xs:enumeration value="RentCalcModeId" />
+      <xs:enumeration value="AssetUsage" />
+      <xs:enumeration value="InstallmentsPercentage" />
+      <xs:enumeration value="EARRate" />
+      <xs:enumeration value="GracePeriods" />
+      <xs:enumeration value="IsMultiImplicitRate" />
+      <xs:enumeration value="PaymentPercentage" />
+      <xs:enumeration value="ANI" />
+      <xs:enumeration value="GlobalIRRate" />
+      <xs:enumeration value="PreFinancingTerm" />
+      <xs:enumeration value="InitialEntryValueWithoutProRata" />
+      <xs:enumeration value="InitialEntryFactor" />
+      <xs:enumeration value="GlobalFundingRate" />
+      <xs:enumeration value="GlobalMargin" />
+      <xs:enumeration value="ProfitContribution" />
+      <xs:enumeration value="CautionFactor" />
+      <xs:enumeration value="CautionInputModeId" />
+      <xs:enumeration value="FinMatrixTypeId" />
+      <xs:enumeration value="ProfitContributionRate" />
+      <xs:enumeration value="InvoiceRuleId" />
+      <xs:enumeration value="InvoiceEntityId" />
+      <xs:enumeration value="InvoiceNumberRents" />
+      <xs:enumeration value="InitialEntryPaymentBehaviourTypeId" />
+      <xs:enumeration value="NumOfFlows" />
+      <xs:enumeration value="ROEPercentage" />
+      <xs:enumeration value="ROEBasePercentage" />
+      <xs:enumeration value="ROEPartPercentage" />
+      <xs:enumeration value="InitialEntryPartialValue" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinConditionsField" nillable="true" type="tns:FinConditionsField" />
+  <xs:complexType name="ArrayOfFinConditionsField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinConditionsField" type="tns:FinConditionsField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinConditionsField" nillable="true" type="tns:ArrayOfFinConditionsField" />
+  <xs:complexType name="ArrayOfFinConditionsRate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinConditionsRate" nillable="true" type="tns:FinConditionsRate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinConditionsRate" nillable="true" type="tns:ArrayOfFinConditionsRate" />
+  <xs:complexType name="FinConditionsRate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://accipiens.com/Common" base="q6:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BaseNumOfDays" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="EventId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FinConditionsId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="FinRateDefinitionId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ImplicitRate" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="IndexingRuleId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="IsToIndex" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:FinConditionsRateKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:FinConditionsRateDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:FinConditionsRateField" />
+          <xs:element minOccurs="0" name="MaxCapital" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfFinConditionsRateField" />
+          <xs:element minOccurs="0" name="NumOfDays" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="RateContextId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="RateDivisionModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="RateId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="RateItem" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="RatePercentage" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RateSourceModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Spread" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SpreadDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ValueDate" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinConditionsRate" nillable="true" type="tns:FinConditionsRate" />
+  <xs:complexType name="FinConditionsRateKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://accipiens.com/Common" base="q7:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FinConditionsId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="RateContextId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="RateId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ValueDate" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinConditionsRateKey" nillable="true" type="tns:FinConditionsRateKey" />
+  <xs:simpleType name="FinConditionsRateDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinConditionsRateDetail" nillable="true" type="tns:FinConditionsRateDetail" />
+  <xs:simpleType name="FinConditionsRateField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="FinConditionsId" />
+      <xs:enumeration value="RateId" />
+      <xs:enumeration value="IndexingRuleId" />
+      <xs:enumeration value="IsToIndex" />
+      <xs:enumeration value="Spread" />
+      <xs:enumeration value="SpreadDate" />
+      <xs:enumeration value="ImplicitRate" />
+      <xs:enumeration value="ValueDate" />
+      <xs:enumeration value="EventId" />
+      <xs:enumeration value="RateSourceModeId" />
+      <xs:enumeration value="RateContextId" />
+      <xs:enumeration value="NumOfDays" />
+      <xs:enumeration value="MaxCapital" />
+      <xs:enumeration value="RateItem" />
+      <xs:enumeration value="RateDivisionModeId" />
+      <xs:enumeration value="RatePercentage" />
+      <xs:enumeration value="FinRateDefinitionId" />
+      <xs:enumeration value="BaseNumOfDays" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinConditionsRateField" nillable="true" type="tns:FinConditionsRateField" />
+  <xs:complexType name="ArrayOfFinConditionsRateField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinConditionsRateField" type="tns:FinConditionsRateField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinConditionsRateField" nillable="true" type="tns:ArrayOfFinConditionsRateField" />
+  <xs:complexType name="ArrayOfFinConditionsLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinConditionsLog" nillable="true" type="tns:FinConditionsLog" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinConditionsLog" nillable="true" type="tns:ArrayOfFinConditionsLog" />
+  <xs:complexType name="FinConditionsLog">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:FinConditions">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinConditionsLog" nillable="true" type="tns:FinConditionsLog" />
+  <xs:complexType name="FinancialProduct">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://accipiens.com/Common" base="q8:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AplBusinessId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AplCompanyId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AutUserStateId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AuthorizationLevel" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Channels" nillable="true" type="tns:ArrayOfFinancialProductChannel" />
+          <xs:element minOccurs="0" name="CurrencyId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FetchLevel" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FinProductMinVersion" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FinProductVersion" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FinProductVersionCalcModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Flows" nillable="true" type="tns:ArrayOfFinProdConditionsFlow" />
+          <xs:element minOccurs="0" name="HasAssetDependencies" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Importers" nillable="true" type="tns:ArrayOfFinancialProductImporter" />
+          <xs:element minOccurs="0" name="InvalidDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:FinancialProductKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:FinancialProductDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:FinancialProductField" />
+          <xs:element minOccurs="0" name="MainFinancialProductIdentifierId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfFinancialProductField" />
+          <xs:element minOccurs="0" name="OutputSymbols" nillable="true" type="tns:ArrayOfFinProdSymbolList" />
+          <xs:element minOccurs="0" name="ProductIdentifiers" nillable="true" type="tns:ArrayOfFinProdIdentifierList" />
+          <xs:element minOccurs="0" name="ProductOperTypes" nillable="true" type="tns:ArrayOfFinancialProductCredOperType" />
+          <xs:element minOccurs="0" name="ProductPurposeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PurposeTypes" nillable="true" type="tns:ArrayOfFinancialProductPurposeType" />
+          <xs:element minOccurs="0" name="Restrictions" nillable="true" type="tns:ArrayOfFinProdRestriction" />
+          <xs:element minOccurs="0" name="ScheduleAplStatementId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ScoringProviderId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ScoringRuleId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="StateDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UserCanModifyFlows" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ValidityBeginDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ValidityEndDate" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinancialProduct" nillable="true" type="tns:FinancialProduct" />
+  <xs:complexType name="ArrayOfFinancialProductChannel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinancialProductChannel" nillable="true" type="tns:FinancialProductChannel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinancialProductChannel" nillable="true" type="tns:ArrayOfFinancialProductChannel" />
+  <xs:complexType name="FinancialProductChannel">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://accipiens.com/Common" base="q9:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CredOperChannelId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FinancialProductId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:FinancialProductChannelKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:FinancialProductChannelDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:FinancialProductChannelField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfFinancialProductChannelField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinancialProductChannel" nillable="true" type="tns:FinancialProductChannel" />
+  <xs:complexType name="FinancialProductChannelKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://accipiens.com/Common" base="q10:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CredOperChannelId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FinancialProductId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinancialProductChannelKey" nillable="true" type="tns:FinancialProductChannelKey" />
+  <xs:simpleType name="FinancialProductChannelDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinancialProductChannelDetail" nillable="true" type="tns:FinancialProductChannelDetail" />
+  <xs:simpleType name="FinancialProductChannelField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="FinancialProductId" />
+      <xs:enumeration value="CredOperChannelId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinancialProductChannelField" nillable="true" type="tns:FinancialProductChannelField" />
+  <xs:complexType name="ArrayOfFinancialProductChannelField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinancialProductChannelField" type="tns:FinancialProductChannelField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinancialProductChannelField" nillable="true" type="tns:ArrayOfFinancialProductChannelField" />
+  <xs:complexType name="ArrayOfFinProdConditionsFlow">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinProdConditionsFlow" nillable="true" type="tns:FinProdConditionsFlow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinProdConditionsFlow" nillable="true" type="tns:ArrayOfFinProdConditionsFlow" />
+  <xs:complexType name="FinProdConditionsFlow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://accipiens.com/Common" base="q11:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Amount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Factor" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="FinFlowControlTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FinancialProductId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ImplicitRate" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="IsToIndex" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsVariableFlow" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:FinProdConditionsFlowKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:FinProdConditionsFlowDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:FinProdConditionsFlowField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfFinProdConditionsFlowField" />
+          <xs:element minOccurs="0" name="NumOfRepetitions" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PercentageAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PeriodId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Quantity" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="SequenceNr" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Spread" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinProdConditionsFlow" nillable="true" type="tns:FinProdConditionsFlow" />
+  <xs:complexType name="FinProdConditionsFlowKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://accipiens.com/Common" base="q12:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FinancialProductId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="SequenceNr" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinProdConditionsFlowKey" nillable="true" type="tns:FinProdConditionsFlowKey" />
+  <xs:simpleType name="FinProdConditionsFlowDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinProdConditionsFlowDetail" nillable="true" type="tns:FinProdConditionsFlowDetail" />
+  <xs:simpleType name="FinProdConditionsFlowField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="FinancialProductId" />
+      <xs:enumeration value="SequenceNr" />
+      <xs:enumeration value="NumOfRepetitions" />
+      <xs:enumeration value="Quantity" />
+      <xs:enumeration value="PeriodId" />
+      <xs:enumeration value="Factor" />
+      <xs:enumeration value="FinFlowControlTypeId" />
+      <xs:enumeration value="PercentageAmount" />
+      <xs:enumeration value="Amount" />
+      <xs:enumeration value="IsVariableFlow" />
+      <xs:enumeration value="IsToIndex" />
+      <xs:enumeration value="Spread" />
+      <xs:enumeration value="ImplicitRate" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinProdConditionsFlowField" nillable="true" type="tns:FinProdConditionsFlowField" />
+  <xs:complexType name="ArrayOfFinProdConditionsFlowField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinProdConditionsFlowField" type="tns:FinProdConditionsFlowField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinProdConditionsFlowField" nillable="true" type="tns:ArrayOfFinProdConditionsFlowField" />
+  <xs:complexType name="ArrayOfFinancialProductImporter">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinancialProductImporter" nillable="true" type="tns:FinancialProductImporter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinancialProductImporter" nillable="true" type="tns:ArrayOfFinancialProductImporter" />
+  <xs:complexType name="FinancialProductImporter">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://accipiens.com/Common" base="q13:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AuthorizationLevel" nillable="true" type="xs:int" />
+          <xs:element xmlns:q14="http://accipiens.com/Entities" minOccurs="0" name="Broker" nillable="true" type="q14:StructNode" />
+          <xs:element minOccurs="0" name="BrokerAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="BrokerPercentage" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="BrokerStructNodeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="FinancialProductId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element xmlns:q15="http://accipiens.com/Entities" minOccurs="0" name="Importer" nillable="true" type="q15:StructNode" />
+          <xs:element minOccurs="0" name="ImporterPercentage" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ImporterStructNodeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:FinancialProductImporterKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:FinancialProductImporterDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:FinancialProductImporterField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfFinancialProductImporterField" />
+          <xs:element minOccurs="0" name="Product" nillable="true" type="tns:FinancialProduct" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinancialProductImporter" nillable="true" type="tns:FinancialProductImporter" />
+  <xs:complexType name="FinancialProductImporterKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://accipiens.com/Common" base="q16:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FinancialProductId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ImporterStructNodeId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinancialProductImporterKey" nillable="true" type="tns:FinancialProductImporterKey" />
+  <xs:simpleType name="FinancialProductImporterDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Product" />
+      <xs:enumeration value="Broker" />
+      <xs:enumeration value="Importer" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinancialProductImporterDetail" nillable="true" type="tns:FinancialProductImporterDetail" />
+  <xs:simpleType name="FinancialProductImporterField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="FinancialProductId" />
+      <xs:enumeration value="ImporterStructNodeId" />
+      <xs:enumeration value="AuthorizationLevel" />
+      <xs:enumeration value="BrokerStructNodeId" />
+      <xs:enumeration value="BrokerPercentage" />
+      <xs:enumeration value="BrokerAmount" />
+      <xs:enumeration value="ImporterPercentage" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinancialProductImporterField" nillable="true" type="tns:FinancialProductImporterField" />
+  <xs:complexType name="ArrayOfFinancialProductImporterField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinancialProductImporterField" type="tns:FinancialProductImporterField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinancialProductImporterField" nillable="true" type="tns:ArrayOfFinancialProductImporterField" />
+  <xs:complexType name="FinancialProductKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://accipiens.com/Common" base="q17:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinancialProductKey" nillable="true" type="tns:FinancialProductKey" />
+  <xs:simpleType name="FinancialProductDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OutputSymbol" />
+      <xs:enumeration value="Restriction" />
+      <xs:enumeration value="Importer" />
+      <xs:enumeration value="PurposeType" />
+      <xs:enumeration value="Channel" />
+      <xs:enumeration value="ProductOperType" />
+      <xs:enumeration value="Flow" />
+      <xs:enumeration value="ProductIdentifier" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinancialProductDetail" nillable="true" type="tns:FinancialProductDetail" />
+  <xs:simpleType name="FinancialProductField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="Abrev" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="AplCompanyId" />
+      <xs:enumeration value="AplBusinessId" />
+      <xs:enumeration value="CurrencyId" />
+      <xs:enumeration value="ScoringProviderId" />
+      <xs:enumeration value="ScoringRuleId" />
+      <xs:enumeration value="FetchLevel" />
+      <xs:enumeration value="InvalidDate" />
+      <xs:enumeration value="ProductPurposeId" />
+      <xs:enumeration value="ScheduleAplStatementId" />
+      <xs:enumeration value="AuthorizationLevel" />
+      <xs:enumeration value="UserCanModifyFlows" />
+      <xs:enumeration value="AutUserStateId" />
+      <xs:enumeration value="StateDate" />
+      <xs:enumeration value="FinProductVersion" />
+      <xs:enumeration value="FinProductMinVersion" />
+      <xs:enumeration value="ValidityBeginDate" />
+      <xs:enumeration value="ValidityEndDate" />
+      <xs:enumeration value="FinProductVersionCalcModeId" />
+      <xs:enumeration value="MainFinancialProductIdentifierId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinancialProductField" nillable="true" type="tns:FinancialProductField" />
+  <xs:complexType name="ArrayOfFinancialProductField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinancialProductField" type="tns:FinancialProductField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinancialProductField" nillable="true" type="tns:ArrayOfFinancialProductField" />
+  <xs:complexType name="ArrayOfFinProdSymbolList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinProdSymbolList" nillable="true" type="tns:FinProdSymbolList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinProdSymbolList" nillable="true" type="tns:ArrayOfFinProdSymbolList" />
+  <xs:complexType name="FinProdSymbolList">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://accipiens.com/Common" base="q18:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FinProductVersion" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FinSymbolProdId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="FinancialProductId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="InvalidFinProductVersion" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IsInvalid" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:FinProdSymbolListKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:FinProdSymbolListDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:FinProdSymbolListField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfFinProdSymbolListField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinProdSymbolList" nillable="true" type="tns:FinProdSymbolList" />
+  <xs:complexType name="FinProdSymbolListKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://accipiens.com/Common" base="q19:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FinSymbolProdId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="FinancialProductId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinProdSymbolListKey" nillable="true" type="tns:FinProdSymbolListKey" />
+  <xs:simpleType name="FinProdSymbolListDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinProdSymbolListDetail" nillable="true" type="tns:FinProdSymbolListDetail" />
+  <xs:simpleType name="FinProdSymbolListField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="FinancialProductId" />
+      <xs:enumeration value="FinSymbolProdId" />
+      <xs:enumeration value="FinProductVersion" />
+      <xs:enumeration value="IsInvalid" />
+      <xs:enumeration value="InvalidFinProductVersion" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinProdSymbolListField" nillable="true" type="tns:FinProdSymbolListField" />
+  <xs:complexType name="ArrayOfFinProdSymbolListField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinProdSymbolListField" type="tns:FinProdSymbolListField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinProdSymbolListField" nillable="true" type="tns:ArrayOfFinProdSymbolListField" />
+  <xs:complexType name="ArrayOfFinProdIdentifierList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinProdIdentifierList" nillable="true" type="tns:FinProdIdentifierList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinProdIdentifierList" nillable="true" type="tns:ArrayOfFinProdIdentifierList" />
+  <xs:complexType name="FinProdIdentifierList">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q20="http://accipiens.com/Common" base="q20:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FinancialProductId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FinancialProductIdentifierId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:FinProdIdentifierListKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:FinProdIdentifierListDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:FinProdIdentifierListField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfFinProdIdentifierListField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinProdIdentifierList" nillable="true" type="tns:FinProdIdentifierList" />
+  <xs:complexType name="FinProdIdentifierListKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q21="http://accipiens.com/Common" base="q21:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FinancialProductId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FinancialProductIdentifierId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinProdIdentifierListKey" nillable="true" type="tns:FinProdIdentifierListKey" />
+  <xs:simpleType name="FinProdIdentifierListDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinProdIdentifierListDetail" nillable="true" type="tns:FinProdIdentifierListDetail" />
+  <xs:simpleType name="FinProdIdentifierListField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="FinancialProductId" />
+      <xs:enumeration value="FinancialProductIdentifierId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinProdIdentifierListField" nillable="true" type="tns:FinProdIdentifierListField" />
+  <xs:complexType name="ArrayOfFinProdIdentifierListField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinProdIdentifierListField" type="tns:FinProdIdentifierListField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinProdIdentifierListField" nillable="true" type="tns:ArrayOfFinProdIdentifierListField" />
+  <xs:complexType name="ArrayOfFinancialProductCredOperType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinancialProductCredOperType" nillable="true" type="tns:FinancialProductCredOperType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinancialProductCredOperType" nillable="true" type="tns:ArrayOfFinancialProductCredOperType" />
+  <xs:complexType name="FinancialProductCredOperType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q22="http://accipiens.com/Common" base="q22:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FinancialProductId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="IsDefault" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:FinancialProductCredOperTypeKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:FinancialProductCredOperTypeDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:FinancialProductCredOperTypeField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfFinancialProductCredOperTypeField" />
+          <xs:element minOccurs="0" name="OperTypeId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinancialProductCredOperType" nillable="true" type="tns:FinancialProductCredOperType" />
+  <xs:complexType name="FinancialProductCredOperTypeKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q23="http://accipiens.com/Common" base="q23:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FinancialProductId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="OperTypeId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinancialProductCredOperTypeKey" nillable="true" type="tns:FinancialProductCredOperTypeKey" />
+  <xs:simpleType name="FinancialProductCredOperTypeDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinancialProductCredOperTypeDetail" nillable="true" type="tns:FinancialProductCredOperTypeDetail" />
+  <xs:simpleType name="FinancialProductCredOperTypeField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="FinancialProductId" />
+      <xs:enumeration value="OperTypeId" />
+      <xs:enumeration value="IsDefault" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinancialProductCredOperTypeField" nillable="true" type="tns:FinancialProductCredOperTypeField" />
+  <xs:complexType name="ArrayOfFinancialProductCredOperTypeField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinancialProductCredOperTypeField" type="tns:FinancialProductCredOperTypeField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinancialProductCredOperTypeField" nillable="true" type="tns:ArrayOfFinancialProductCredOperTypeField" />
+  <xs:complexType name="ArrayOfFinancialProductPurposeType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinancialProductPurposeType" nillable="true" type="tns:FinancialProductPurposeType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinancialProductPurposeType" nillable="true" type="tns:ArrayOfFinancialProductPurposeType" />
+  <xs:complexType name="FinancialProductPurposeType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q24="http://accipiens.com/Common" base="q24:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplBusinessPurposeTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FinancialProductId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:FinancialProductPurposeTypeKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:FinancialProductPurposeTypeDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:FinancialProductPurposeTypeField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfFinancialProductPurposeTypeField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinancialProductPurposeType" nillable="true" type="tns:FinancialProductPurposeType" />
+  <xs:complexType name="FinancialProductPurposeTypeKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q25="http://accipiens.com/Common" base="q25:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplBusinessPurposeTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FinancialProductId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinancialProductPurposeTypeKey" nillable="true" type="tns:FinancialProductPurposeTypeKey" />
+  <xs:simpleType name="FinancialProductPurposeTypeDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinancialProductPurposeTypeDetail" nillable="true" type="tns:FinancialProductPurposeTypeDetail" />
+  <xs:simpleType name="FinancialProductPurposeTypeField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="FinancialProductId" />
+      <xs:enumeration value="AplBusinessPurposeTypeId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinancialProductPurposeTypeField" nillable="true" type="tns:FinancialProductPurposeTypeField" />
+  <xs:complexType name="ArrayOfFinancialProductPurposeTypeField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinancialProductPurposeTypeField" type="tns:FinancialProductPurposeTypeField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinancialProductPurposeTypeField" nillable="true" type="tns:ArrayOfFinancialProductPurposeTypeField" />
+  <xs:complexType name="ArrayOfFinProdRestriction">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinProdRestriction" nillable="true" type="tns:FinProdRestriction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinProdRestriction" nillable="true" type="tns:ArrayOfFinProdRestriction" />
+  <xs:complexType name="FinProdRestriction">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q26="http://accipiens.com/Common" base="q26:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DefaultSymbolDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DefaultSymbolId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="DefaultSymbolString" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DefaultValue" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FinSymbolId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FinancialProductId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="HasList" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:FinProdRestrictionKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:FinProdRestrictionDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:FinProdRestrictionField" />
+          <xs:element minOccurs="0" name="MaxDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="MaxValue" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="MinDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="MinValue" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfFinProdRestrictionField" />
+          <xs:element minOccurs="0" name="NoValuesAllowed" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Restrictions" nillable="true" type="tns:ArrayOfFinProdRestrictionList" />
+          <xs:element minOccurs="0" name="StepValue" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="UseHasRestriction" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="UserCanChange" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="UserCanChgAuthorizationLevel" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="UserCanSee" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="UserCanSeeAuthorizationLevel" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinProdRestriction" nillable="true" type="tns:FinProdRestriction" />
+  <xs:complexType name="FinProdRestrictionKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q27="http://accipiens.com/Common" base="q27:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FinSymbolId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FinancialProductId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinProdRestrictionKey" nillable="true" type="tns:FinProdRestrictionKey" />
+  <xs:simpleType name="FinProdRestrictionDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Restriction" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinProdRestrictionDetail" nillable="true" type="tns:FinProdRestrictionDetail" />
+  <xs:simpleType name="FinProdRestrictionField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="FinancialProductId" />
+      <xs:enumeration value="FinSymbolId" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="UserCanChange" />
+      <xs:enumeration value="MinValue" />
+      <xs:enumeration value="MaxValue" />
+      <xs:enumeration value="DefaultValue" />
+      <xs:enumeration value="DefaultSymbolId" />
+      <xs:enumeration value="HasList" />
+      <xs:enumeration value="UseHasRestriction" />
+      <xs:enumeration value="DefaultSymbolString" />
+      <xs:enumeration value="DefaultSymbolDate" />
+      <xs:enumeration value="MinDate" />
+      <xs:enumeration value="MaxDate" />
+      <xs:enumeration value="StepValue" />
+      <xs:enumeration value="UserCanChgAuthorizationLevel" />
+      <xs:enumeration value="UserCanSee" />
+      <xs:enumeration value="UserCanSeeAuthorizationLevel" />
+      <xs:enumeration value="NoValuesAllowed" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinProdRestrictionField" nillable="true" type="tns:FinProdRestrictionField" />
+  <xs:complexType name="ArrayOfFinProdRestrictionField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinProdRestrictionField" type="tns:FinProdRestrictionField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinProdRestrictionField" nillable="true" type="tns:ArrayOfFinProdRestrictionField" />
+  <xs:complexType name="ArrayOfFinProdRestrictionList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinProdRestrictionList" nillable="true" type="tns:FinProdRestrictionList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinProdRestrictionList" nillable="true" type="tns:ArrayOfFinProdRestrictionList" />
+  <xs:complexType name="FinProdRestrictionList">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q28="http://accipiens.com/Common" base="q28:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FinProdRestrictionId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="IsDefault" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:FinProdRestrictionListKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:FinProdRestrictionListDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:FinProdRestrictionListField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfFinProdRestrictionListField" />
+          <xs:element minOccurs="0" name="SymbolDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SymbolId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="SymbolString" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SymbolValue" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinProdRestrictionList" nillable="true" type="tns:FinProdRestrictionList" />
+  <xs:complexType name="FinProdRestrictionListKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q29="http://accipiens.com/Common" base="q29:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinProdRestrictionListKey" nillable="true" type="tns:FinProdRestrictionListKey" />
+  <xs:simpleType name="FinProdRestrictionListDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinProdRestrictionListDetail" nillable="true" type="tns:FinProdRestrictionListDetail" />
+  <xs:simpleType name="FinProdRestrictionListField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="FinProdRestrictionId" />
+      <xs:enumeration value="SymbolId" />
+      <xs:enumeration value="SymbolValue" />
+      <xs:enumeration value="IsDefault" />
+      <xs:enumeration value="SymbolString" />
+      <xs:enumeration value="SymbolDate" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinProdRestrictionListField" nillable="true" type="tns:FinProdRestrictionListField" />
+  <xs:complexType name="ArrayOfFinProdRestrictionListField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinProdRestrictionListField" type="tns:FinProdRestrictionListField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinProdRestrictionListField" nillable="true" type="tns:ArrayOfFinProdRestrictionListField" />
+  <xs:complexType name="ArrayOfArrayOfFinSymbolProdValueCondition">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ArrayOfFinSymbolProdValueCondition" nillable="true" type="tns:ArrayOfFinSymbolProdValueCondition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfArrayOfFinSymbolProdValueCondition" nillable="true" type="tns:ArrayOfArrayOfFinSymbolProdValueCondition" />
+  <xs:complexType name="ArrayOfFinSymbolProdValueCondition">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinSymbolProdValueCondition" nillable="true" type="tns:FinSymbolProdValueCondition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinSymbolProdValueCondition" nillable="true" type="tns:ArrayOfFinSymbolProdValueCondition" />
+  <xs:complexType name="FinSymbolProdValueCondition">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q30="http://accipiens.com/Common" base="q30:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FinSymbolId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FinSymbolProdValueId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:FinSymbolProdValueConditionKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:FinSymbolProdValueConditionDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:FinSymbolProdValueConditionField" />
+          <xs:element minOccurs="0" name="MaxDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="MaxValue" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="MinDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="MinValue" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfFinSymbolProdValueConditionField" />
+          <xs:element minOccurs="0" name="SymbolId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="SymbolString" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinSymbolProdValueCondition" nillable="true" type="tns:FinSymbolProdValueCondition" />
+  <xs:complexType name="FinSymbolProdValueConditionKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q31="http://accipiens.com/Common" base="q31:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FinSymbolId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FinSymbolProdValueId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="MaxDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="MaxValue" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="MinDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="MinValue" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SymbolId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="SymbolString" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinSymbolProdValueConditionKey" nillable="true" type="tns:FinSymbolProdValueConditionKey" />
+  <xs:simpleType name="FinSymbolProdValueConditionDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinSymbolProdValueConditionDetail" nillable="true" type="tns:FinSymbolProdValueConditionDetail" />
+  <xs:simpleType name="FinSymbolProdValueConditionField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="FinSymbolProdValueId" />
+      <xs:enumeration value="FinSymbolId" />
+      <xs:enumeration value="SymbolId" />
+      <xs:enumeration value="MinValue" />
+      <xs:enumeration value="MaxValue" />
+      <xs:enumeration value="SymbolString" />
+      <xs:enumeration value="MinDate" />
+      <xs:enumeration value="MaxDate" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinSymbolProdValueConditionField" nillable="true" type="tns:FinSymbolProdValueConditionField" />
+  <xs:complexType name="ArrayOfFinSymbolProdValueConditionField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinSymbolProdValueConditionField" type="tns:FinSymbolProdValueConditionField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinSymbolProdValueConditionField" nillable="true" type="tns:ArrayOfFinSymbolProdValueConditionField" />
+  <xs:complexType name="ArrayOfFinSymbolProdValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinSymbolProdValue" nillable="true" type="tns:FinSymbolProdValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinSymbolProdValue" nillable="true" type="tns:ArrayOfFinSymbolProdValue" />
+  <xs:complexType name="FinSymbolProdValue">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q32="http://accipiens.com/Common" base="q32:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddToMaxValueId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="BaseLimitFinSymbolId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="BaseLimitMaxValue" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="BaseLimitMinValue" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Conditions" nillable="true" type="tns:ArrayOfFinSymbolProdValueCondition" />
+          <xs:element minOccurs="0" name="DefaultSymbolValueNotFound" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FinSymbolId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FinSymbolProdId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:FinSymbolProdValueKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:FinSymbolProdValueDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:FinSymbolProdValueField" />
+          <xs:element minOccurs="0" name="MaxDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="MaxValue" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="MinDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="MinValue" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfFinSymbolProdValueField" />
+          <xs:element minOccurs="0" name="OrderItem" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="StepValue" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SymbolDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SymbolId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="SymbolProd" nillable="true" type="tns:FinSymbolProd" />
+          <xs:element minOccurs="0" name="SymbolString" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SymbolValue" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinSymbolProdValue" nillable="true" type="tns:FinSymbolProdValue" />
+  <xs:complexType name="FinSymbolProdValueKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q33="http://accipiens.com/Common" base="q33:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinSymbolProdValueKey" nillable="true" type="tns:FinSymbolProdValueKey" />
+  <xs:simpleType name="FinSymbolProdValueDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SymbolProd" />
+      <xs:enumeration value="Condition" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinSymbolProdValueDetail" nillable="true" type="tns:FinSymbolProdValueDetail" />
+  <xs:simpleType name="FinSymbolProdValueField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="OrderItem" />
+      <xs:enumeration value="FinSymbolProdId" />
+      <xs:enumeration value="SymbolId" />
+      <xs:enumeration value="SymbolValue" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="SymbolString" />
+      <xs:enumeration value="MinValue" />
+      <xs:enumeration value="MaxValue" />
+      <xs:enumeration value="SymbolDate" />
+      <xs:enumeration value="MinDate" />
+      <xs:enumeration value="MaxDate" />
+      <xs:enumeration value="StepValue" />
+      <xs:enumeration value="AddToMaxValueId" />
+      <xs:enumeration value="BaseLimitFinSymbolId" />
+      <xs:enumeration value="BaseLimitMinValue" />
+      <xs:enumeration value="BaseLimitMaxValue" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinSymbolProdValueField" nillable="true" type="tns:FinSymbolProdValueField" />
+  <xs:complexType name="ArrayOfFinSymbolProdValueField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinSymbolProdValueField" type="tns:FinSymbolProdValueField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinSymbolProdValueField" nillable="true" type="tns:ArrayOfFinSymbolProdValueField" />
+  <xs:complexType name="FinSymbolProd">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q34="http://accipiens.com/Common" base="q34:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AplBusinessId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AplCompanyId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AutUserStateId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="CalcAplStatementId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Conditions" nillable="true" type="tns:ArrayOfFinSymbolProdCondition" />
+          <xs:element minOccurs="0" name="DefaultSymbolValueNotFound" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DontAllowSpecialPermission" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="FinSymbolCalcModeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FinSymbolId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="HasPermission" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="IsObligatory" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:FinSymbolProdKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:FinSymbolProdDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:FinSymbolProdField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfFinSymbolProdField" />
+          <xs:element minOccurs="0" name="OrderItem" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ProdSymbol" nillable="true" type="tns:FinProdSymbolList" />
+          <xs:element minOccurs="0" name="ProductPurposeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Products" nillable="true" type="tns:ArrayOfFinProdSymbolList" />
+          <xs:element minOccurs="0" name="RelatedFinSymbolProdId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="StateDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UseHasRestriction" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="UserCanChange" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Values" nillable="true" type="tns:ArrayOfFinSymbolProdValue" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinSymbolProd" nillable="true" type="tns:FinSymbolProd" />
+  <xs:complexType name="ArrayOfFinSymbolProdCondition">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinSymbolProdCondition" nillable="true" type="tns:FinSymbolProdCondition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinSymbolProdCondition" nillable="true" type="tns:ArrayOfFinSymbolProdCondition" />
+  <xs:complexType name="FinSymbolProdCondition">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q35="http://accipiens.com/Common" base="q35:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FinBaseId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="FinSymbolId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FinSymbolProdId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:FinSymbolProdConditionKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:FinSymbolProdConditionDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:FinSymbolProdConditionField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfFinSymbolProdConditionField" />
+          <xs:element minOccurs="0" name="OrderItem" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinSymbolProdCondition" nillable="true" type="tns:FinSymbolProdCondition" />
+  <xs:complexType name="FinSymbolProdConditionKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q36="http://accipiens.com/Common" base="q36:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinSymbolProdConditionKey" nillable="true" type="tns:FinSymbolProdConditionKey" />
+  <xs:simpleType name="FinSymbolProdConditionDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinSymbolProdConditionDetail" nillable="true" type="tns:FinSymbolProdConditionDetail" />
+  <xs:simpleType name="FinSymbolProdConditionField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="FinSymbolProdId" />
+      <xs:enumeration value="FinSymbolId" />
+      <xs:enumeration value="OrderItem" />
+      <xs:enumeration value="FinBaseId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinSymbolProdConditionField" nillable="true" type="tns:FinSymbolProdConditionField" />
+  <xs:complexType name="ArrayOfFinSymbolProdConditionField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinSymbolProdConditionField" type="tns:FinSymbolProdConditionField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinSymbolProdConditionField" nillable="true" type="tns:ArrayOfFinSymbolProdConditionField" />
+  <xs:complexType name="FinSymbolProdKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q37="http://accipiens.com/Common" base="q37:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinSymbolProdKey" nillable="true" type="tns:FinSymbolProdKey" />
+  <xs:simpleType name="FinSymbolProdDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Value" />
+      <xs:enumeration value="ProdSymbol" />
+      <xs:enumeration value="Condition" />
+      <xs:enumeration value="Product" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinSymbolProdDetail" nillable="true" type="tns:FinSymbolProdDetail" />
+  <xs:simpleType name="FinSymbolProdField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="Abrev" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="FinSymbolId" />
+      <xs:enumeration value="OrderItem" />
+      <xs:enumeration value="UseHasRestriction" />
+      <xs:enumeration value="IsObligatory" />
+      <xs:enumeration value="UserCanChange" />
+      <xs:enumeration value="HasPermission" />
+      <xs:enumeration value="AplCompanyId" />
+      <xs:enumeration value="AplBusinessId" />
+      <xs:enumeration value="CalcAplStatementId" />
+      <xs:enumeration value="FinSymbolCalcModeId" />
+      <xs:enumeration value="DontAllowSpecialPermission" />
+      <xs:enumeration value="AutUserStateId" />
+      <xs:enumeration value="StateDate" />
+      <xs:enumeration value="RelatedFinSymbolProdId" />
+      <xs:enumeration value="DefaultSymbolValueNotFound" />
+      <xs:enumeration value="ProductPurposeId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinSymbolProdField" nillable="true" type="tns:FinSymbolProdField" />
+  <xs:complexType name="ArrayOfFinSymbolProdField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinSymbolProdField" type="tns:FinSymbolProdField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinSymbolProdField" nillable="true" type="tns:ArrayOfFinSymbolProdField" />
+  <xs:complexType name="ArrayOfQuotationIrregularity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QuotationIrregularity" nillable="true" type="tns:QuotationIrregularity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQuotationIrregularity" nillable="true" type="tns:ArrayOfQuotationIrregularity" />
+  <xs:complexType name="QuotationIrregularity">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q38="http://accipiens.com/Common" base="q38:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="IsSolved" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:QuotationIrregularityKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:QuotationIrregularityDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:QuotationIrregularityField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfQuotationIrregularityField" />
+          <xs:element minOccurs="0" name="OwnerId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="QuotationIrregularityTypeId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="QuotationIrregularity" nillable="true" type="tns:QuotationIrregularity" />
+  <xs:complexType name="QuotationIrregularityKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q39="http://accipiens.com/Common" base="q39:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="QuotationIrregularityKey" nillable="true" type="tns:QuotationIrregularityKey" />
+  <xs:simpleType name="QuotationIrregularityDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="QuotationIrregularityDetail" nillable="true" type="tns:QuotationIrregularityDetail" />
+  <xs:simpleType name="QuotationIrregularityField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="QuotationIrregularityTypeId" />
+      <xs:enumeration value="OwnerId" />
+      <xs:enumeration value="IsSolved" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="QuotationIrregularityField" nillable="true" type="tns:QuotationIrregularityField" />
+  <xs:complexType name="ArrayOfQuotationIrregularityField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QuotationIrregularityField" type="tns:QuotationIrregularityField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQuotationIrregularityField" nillable="true" type="tns:ArrayOfQuotationIrregularityField" />
+  <xs:complexType name="ArrayOfFinMatrix">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinMatrix" nillable="true" type="tns:FinMatrix" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinMatrix" nillable="true" type="tns:ArrayOfFinMatrix" />
+  <xs:complexType name="FinMatrix">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q40="http://accipiens.com/Common" base="q40:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AutUserStateId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="CreationMoment" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FinMatrixChangeTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FinMatrixTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="IsGenerated" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ItemGroups" nillable="true" type="tns:ArrayOfFinMatrixItemGroup" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:FinMatrixKey" />
+          <xs:element minOccurs="0" name="LastChangeDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:FinMatrixDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:FinMatrixField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfFinMatrixField" />
+          <xs:element minOccurs="0" name="OwnerId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="StateDate" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinMatrix" nillable="true" type="tns:FinMatrix" />
+  <xs:complexType name="ArrayOfFinMatrixItemGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinMatrixItemGroup" nillable="true" type="tns:FinMatrixItemGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinMatrixItemGroup" nillable="true" type="tns:ArrayOfFinMatrixItemGroup" />
+  <xs:complexType name="FinMatrixItemGroup">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q41="http://accipiens.com/Common" base="q41:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Amount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="AssetUsage" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CalcAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CalcTaxAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FinMatrixId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="IRRRate" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ImplicitRate" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="IsCurrentSelection" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsManualChange" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Items" nillable="true" type="tns:ArrayOfFinMatrixItem" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:FinMatrixItemGroupKey" />
+          <xs:element minOccurs="0" name="LastChangeDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:FinMatrixItemGroupDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:FinMatrixItemGroupField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfFinMatrixItemGroupField" />
+          <xs:element minOccurs="0" name="ProfitContribution" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ProfitContributionRate" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TaxAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Term" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinMatrixItemGroup" nillable="true" type="tns:FinMatrixItemGroup" />
+  <xs:complexType name="ArrayOfFinMatrixItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinMatrixItem" nillable="true" type="tns:FinMatrixItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinMatrixItem" nillable="true" type="tns:ArrayOfFinMatrixItem" />
+  <xs:complexType name="FinMatrixItem">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q42="http://accipiens.com/Common" base="q42:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Amount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CalcAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CalcTaxAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="FinMatrixItemGroupId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:FinMatrixItemKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:FinMatrixItemDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:FinMatrixItemField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfFinMatrixItemField" />
+          <xs:element minOccurs="0" name="RelatedTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="TaxAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TaxTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TotalInstallmentItemTypeId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinMatrixItem" nillable="true" type="tns:FinMatrixItem" />
+  <xs:complexType name="FinMatrixItemKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q43="http://accipiens.com/Common" base="q43:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinMatrixItemKey" nillable="true" type="tns:FinMatrixItemKey" />
+  <xs:simpleType name="FinMatrixItemDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinMatrixItemDetail" nillable="true" type="tns:FinMatrixItemDetail" />
+  <xs:simpleType name="FinMatrixItemField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="FinMatrixItemGroupId" />
+      <xs:enumeration value="TotalInstallmentItemTypeId" />
+      <xs:enumeration value="RelatedTypeId" />
+      <xs:enumeration value="CalcAmount" />
+      <xs:enumeration value="Amount" />
+      <xs:enumeration value="CalcTaxAmount" />
+      <xs:enumeration value="TaxAmount" />
+      <xs:enumeration value="TaxTypeId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinMatrixItemField" nillable="true" type="tns:FinMatrixItemField" />
+  <xs:complexType name="ArrayOfFinMatrixItemField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinMatrixItemField" type="tns:FinMatrixItemField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinMatrixItemField" nillable="true" type="tns:ArrayOfFinMatrixItemField" />
+  <xs:complexType name="FinMatrixItemGroupKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q44="http://accipiens.com/Common" base="q44:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinMatrixItemGroupKey" nillable="true" type="tns:FinMatrixItemGroupKey" />
+  <xs:simpleType name="FinMatrixItemGroupDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Item" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinMatrixItemGroupDetail" nillable="true" type="tns:FinMatrixItemGroupDetail" />
+  <xs:simpleType name="FinMatrixItemGroupField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="FinMatrixId" />
+      <xs:enumeration value="IsManualChange" />
+      <xs:enumeration value="LastChangeDate" />
+      <xs:enumeration value="Term" />
+      <xs:enumeration value="AssetUsage" />
+      <xs:enumeration value="CalcAmount" />
+      <xs:enumeration value="Amount" />
+      <xs:enumeration value="IsCurrentSelection" />
+      <xs:enumeration value="CalcTaxAmount" />
+      <xs:enumeration value="TaxAmount" />
+      <xs:enumeration value="ProfitContributionRate" />
+      <xs:enumeration value="ProfitContribution" />
+      <xs:enumeration value="ImplicitRate" />
+      <xs:enumeration value="IRRRate" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinMatrixItemGroupField" nillable="true" type="tns:FinMatrixItemGroupField" />
+  <xs:complexType name="ArrayOfFinMatrixItemGroupField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinMatrixItemGroupField" type="tns:FinMatrixItemGroupField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinMatrixItemGroupField" nillable="true" type="tns:ArrayOfFinMatrixItemGroupField" />
+  <xs:complexType name="FinMatrixKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q45="http://accipiens.com/Common" base="q45:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinMatrixKey" nillable="true" type="tns:FinMatrixKey" />
+  <xs:simpleType name="FinMatrixDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ItemGroup" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinMatrixDetail" nillable="true" type="tns:FinMatrixDetail" />
+  <xs:simpleType name="FinMatrixField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="OwnerId" />
+      <xs:enumeration value="FinMatrixTypeId" />
+      <xs:enumeration value="CreationMoment" />
+      <xs:enumeration value="LastChangeDate" />
+      <xs:enumeration value="FinMatrixChangeTypeId" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="AutUserStateId" />
+      <xs:enumeration value="StateDate" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinMatrixField" nillable="true" type="tns:FinMatrixField" />
+  <xs:complexType name="ArrayOfFinMatrixField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinMatrixField" type="tns:FinMatrixField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinMatrixField" nillable="true" type="tns:ArrayOfFinMatrixField" />
+</xs:schema>

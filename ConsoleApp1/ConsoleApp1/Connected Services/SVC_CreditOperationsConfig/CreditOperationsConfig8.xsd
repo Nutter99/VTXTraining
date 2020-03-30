@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://accipiens.com/VirtualData" elementFormDefault="qualified" targetNamespace="http://accipiens.com/VirtualData" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/OperationsWebServices/Services/CreditOperationsConfig.svc?xsd=xsd3" namespace="http://accipiens.com/Common" />
+  <xs:complexType name="ArrayOfAplTableAuditValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplTableAuditValue" nillable="true" type="tns:AplTableAuditValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplTableAuditValue" nillable="true" type="tns:ArrayOfAplTableAuditValue" />
+  <xs:complexType name="AplTableAuditValue">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://accipiens.com/Common" base="q1:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplTableAuditId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="BaseTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AplTableAuditValueKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AplTableAuditValueDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AplTableAuditValueField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAplTableAuditValueField" />
+          <xs:element minOccurs="0" name="NewValue" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OldValue" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValueName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplTableAuditValue" nillable="true" type="tns:AplTableAuditValue" />
+  <xs:complexType name="AplTableAuditValueKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://accipiens.com/Common" base="q2:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplTableAuditValueKey" nillable="true" type="tns:AplTableAuditValueKey" />
+  <xs:simpleType name="AplTableAuditValueDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplTableAuditValueDetail" nillable="true" type="tns:AplTableAuditValueDetail" />
+  <xs:simpleType name="AplTableAuditValueField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AplTableAuditId" />
+      <xs:enumeration value="ValueName" />
+      <xs:enumeration value="OldValue" />
+      <xs:enumeration value="NewValue" />
+      <xs:enumeration value="BaseTypeId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplTableAuditValueField" nillable="true" type="tns:AplTableAuditValueField" />
+  <xs:complexType name="ArrayOfAplTableAuditValueField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplTableAuditValueField" type="tns:AplTableAuditValueField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplTableAuditValueField" nillable="true" type="tns:ArrayOfAplTableAuditValueField" />
+  <xs:complexType name="ArrayOfAplTableData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplTableData" nillable="true" type="tns:AplTableData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplTableData" nillable="true" type="tns:ArrayOfAplTableData" />
+  <xs:complexType name="AplTableData">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://accipiens.com/Common" base="q3:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplTableMetaDataId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="DataValue" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AplTableDataKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AplTableDataDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AplTableDataField" />
+          <xs:element minOccurs="0" name="MetaDataDefinition" nillable="true" type="tns:AplTableMetaData" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAplTableDataField" />
+          <xs:element minOccurs="0" name="OwnerId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplTableData" nillable="true" type="tns:AplTableData" />
+  <xs:complexType name="AplTableDataKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://accipiens.com/Common" base="q4:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplTableMetaDataId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="OwnerId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplTableDataKey" nillable="true" type="tns:AplTableDataKey" />
+  <xs:simpleType name="AplTableDataDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MetaDataDefinition" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplTableDataDetail" nillable="true" type="tns:AplTableDataDetail" />
+  <xs:simpleType name="AplTableDataField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AplTableMetaDataId" />
+      <xs:enumeration value="OwnerId" />
+      <xs:enumeration value="DataValue" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplTableDataField" nillable="true" type="tns:AplTableDataField" />
+  <xs:complexType name="AplTableMetaData">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://accipiens.com/Common" base="q5:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AplTableMetaDataGroupId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="BaseTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ChoiceAplStatementId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ChoiceValues" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DataFormat" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DecimalDigits" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DefaultValue" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Domain" nillable="true" type="tns:AplTableMetaData" />
+          <xs:element minOccurs="0" name="DomainAplTableMetaDataId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Group" nillable="true" type="tns:AplTableMetaDataGroup" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="InternalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsDomain" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsObligatory" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsReadOnly" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AplTableMetaDataKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AplTableMetaDataDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AplTableMetaDataField" />
+          <xs:element minOccurs="0" name="LineNumber" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="MaxChars" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="MaxValue" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="MinValue" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAplTableMetaDataField" />
+          <xs:element minOccurs="0" name="NumCols" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplTableMetaData" nillable="true" type="tns:AplTableMetaData" />
+  <xs:complexType name="AplTableMetaDataGroup">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://accipiens.com/Common" base="q6:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AplTableId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Definitions" nillable="true" type="tns:ArrayOfAplTableMetaDataDefinition" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AplTableMetaDataGroupKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AplTableMetaDataGroupDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AplTableMetaDataGroupField" />
+          <xs:element minOccurs="0" name="Mappings" nillable="true" type="tns:ArrayOfAplTableMetaDataGroupMap" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAplTableMetaDataGroupField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplTableMetaDataGroup" nillable="true" type="tns:AplTableMetaDataGroup" />
+  <xs:complexType name="ArrayOfAplTableMetaDataDefinition">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplTableMetaDataDefinition" nillable="true" type="tns:AplTableMetaDataDefinition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplTableMetaDataDefinition" nillable="true" type="tns:ArrayOfAplTableMetaDataDefinition" />
+  <xs:complexType name="AplTableMetaDataDefinition">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AplTableMetaData">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplTableMetaDataDefinition" nillable="true" type="tns:AplTableMetaDataDefinition" />
+  <xs:complexType name="AplTableMetaDataGroupKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://accipiens.com/Common" base="q7:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AplTableId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplTableMetaDataGroupKey" nillable="true" type="tns:AplTableMetaDataGroupKey" />
+  <xs:simpleType name="AplTableMetaDataGroupDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Definition" />
+      <xs:enumeration value="Mapping" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplTableMetaDataGroupDetail" nillable="true" type="tns:AplTableMetaDataGroupDetail" />
+  <xs:simpleType name="AplTableMetaDataGroupField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="Abrev" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="AplTableId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplTableMetaDataGroupField" nillable="true" type="tns:AplTableMetaDataGroupField" />
+  <xs:complexType name="ArrayOfAplTableMetaDataGroupMap">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplTableMetaDataGroupMap" nillable="true" type="tns:AplTableMetaDataGroupMap" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplTableMetaDataGroupMap" nillable="true" type="tns:ArrayOfAplTableMetaDataGroupMap" />
+  <xs:complexType name="AplTableMetaDataGroupMap">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://accipiens.com/Common" base="q8:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplTableMetaDataGroupId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AplTableMetaDataGroupMapKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AplTableMetaDataGroupMapDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AplTableMetaDataGroupMapField" />
+          <xs:element minOccurs="0" name="Mapping" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAplTableMetaDataGroupMapField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplTableMetaDataGroupMap" nillable="true" type="tns:AplTableMetaDataGroupMap" />
+  <xs:complexType name="AplTableMetaDataGroupMapKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://accipiens.com/Common" base="q9:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplTableMetaDataGroupMapKey" nillable="true" type="tns:AplTableMetaDataGroupMapKey" />
+  <xs:simpleType name="AplTableMetaDataGroupMapDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplTableMetaDataGroupMapDetail" nillable="true" type="tns:AplTableMetaDataGroupMapDetail" />
+  <xs:simpleType name="AplTableMetaDataGroupMapField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AplTableMetaDataGroupId" />
+      <xs:enumeration value="Mapping" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplTableMetaDataGroupMapField" nillable="true" type="tns:AplTableMetaDataGroupMapField" />
+  <xs:complexType name="ArrayOfAplTableMetaDataGroupMapField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplTableMetaDataGroupMapField" type="tns:AplTableMetaDataGroupMapField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplTableMetaDataGroupMapField" nillable="true" type="tns:ArrayOfAplTableMetaDataGroupMapField" />
+  <xs:complexType name="ArrayOfAplTableMetaDataGroupField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplTableMetaDataGroupField" type="tns:AplTableMetaDataGroupField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplTableMetaDataGroupField" nillable="true" type="tns:ArrayOfAplTableMetaDataGroupField" />
+  <xs:complexType name="AplTableMetaDataKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://accipiens.com/Common" base="q10:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AplTableMetaDataGroupId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplTableMetaDataKey" nillable="true" type="tns:AplTableMetaDataKey" />
+  <xs:simpleType name="AplTableMetaDataDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Group" />
+      <xs:enumeration value="Domain" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplTableMetaDataDetail" nillable="true" type="tns:AplTableMetaDataDetail" />
+  <xs:simpleType name="AplTableMetaDataField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="Abrev" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="IsDomain" />
+      <xs:enumeration value="AplTableMetaDataGroupId" />
+      <xs:enumeration value="LineNumber" />
+      <xs:enumeration value="DomainAplTableMetaDataId" />
+      <xs:enumeration value="BaseTypeId" />
+      <xs:enumeration value="DataFormat" />
+      <xs:enumeration value="DecimalDigits" />
+      <xs:enumeration value="MaxChars" />
+      <xs:enumeration value="IsObligatory" />
+      <xs:enumeration value="MinValue" />
+      <xs:enumeration value="MaxValue" />
+      <xs:enumeration value="DefaultValue" />
+      <xs:enumeration value="ChoiceAplStatementId" />
+      <xs:enumeration value="ChoiceValues" />
+      <xs:enumeration value="InternalCode" />
+      <xs:enumeration value="IsReadOnly" />
+      <xs:enumeration value="NumCols" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplTableMetaDataField" nillable="true" type="tns:AplTableMetaDataField" />
+  <xs:complexType name="ArrayOfAplTableMetaDataField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplTableMetaDataField" type="tns:AplTableMetaDataField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplTableMetaDataField" nillable="true" type="tns:ArrayOfAplTableMetaDataField" />
+  <xs:complexType name="ArrayOfAplTableDataField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplTableDataField" type="tns:AplTableDataField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplTableDataField" nillable="true" type="tns:ArrayOfAplTableDataField" />
+</xs:schema>

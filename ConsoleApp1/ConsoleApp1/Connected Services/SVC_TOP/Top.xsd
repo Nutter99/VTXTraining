@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://accipiens.com/AcpFramework" elementFormDefault="qualified" targetNamespace="http://accipiens.com/AcpFramework" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/Olissipo.AcpFramework.DataStructures" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://accipiens.vtxrm.pt/accipienswebservicestraining/TopWebServices/Top.svc?xsd=xsd2" namespace="http://accipiens.com/Common" />
+  <xs:complexType name="SearchAplWorkItemParams">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AplUserAllGroups" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AplUserAllMembers" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CreationAplUserAllGroups" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CreationAplUserAllMembers" type="xs:boolean" />
+      <xs:element minOccurs="0" name="InternalStateList" nillable="true" type="tns:ArrayOfAplWorkItemInternalState" />
+      <xs:element minOccurs="0" name="ResolvedAplUserAllGroups" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ResolvedAplUserAllMembers" type="xs:boolean" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Olissipo.AcpFramework.DataStructures" minOccurs="0" name="SortType" nillable="true" type="q1:AplWorkItemSortingType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchAplWorkItemParams" nillable="true" type="tns:SearchAplWorkItemParams" />
+  <xs:complexType name="ArrayOfAplWorkItemInternalState">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplWorkItemInternalState" type="tns:AplWorkItemInternalState" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplWorkItemInternalState" nillable="true" type="tns:ArrayOfAplWorkItemInternalState" />
+  <xs:simpleType name="AplWorkItemInternalState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Initial">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Active">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Resolved">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">12</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Closed">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">13</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Canceled">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">14</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplWorkItemInternalState" nillable="true" type="tns:AplWorkItemInternalState" />
+  <xs:complexType name="ArrayOfAplWorkItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplWorkItem" nillable="true" type="tns:AplWorkItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplWorkItem" nillable="true" type="tns:ArrayOfAplWorkItem" />
+  <xs:complexType name="AplWorkItem">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://accipiens.com/Common" base="q2:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplCompanyAbrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AplCompanyId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AplScreenId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AplTableId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AplUserAbrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AplUserId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AplWIClassificationTypeAbrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AplWIClassificationTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AplWorkItemNumber" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AplWorkItemTypeAbrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AplWorkItemTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ArchiveDocs" nillable="true" type="tns:ArrayOfAplWorkItemArchiveDoc" />
+          <xs:element minOccurs="0" name="AutUserStateAbrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AutUserStateId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="BeginDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreationAplUserId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="CreationMoment" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CredOperAbrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CredOperId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="DueMoment" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EntityAbrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EntityId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AplWorkItemKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AplWorkItemDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AplWorkItemField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAplWorkItemField" />
+          <xs:element minOccurs="0" name="NumberIssued" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Observations" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PriorityId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PriorityLevel" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RelatedDescr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RelatedId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ResolvedAplUserId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ResolvedMoment" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="RowVersion" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="StateDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TerminationMoment" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkItemType" nillable="true" type="tns:AplWorkItemType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplWorkItem" nillable="true" type="tns:AplWorkItem" />
+  <xs:complexType name="ArrayOfAplWorkItemArchiveDoc">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplWorkItemArchiveDoc" nillable="true" type="tns:AplWorkItemArchiveDoc" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplWorkItemArchiveDoc" nillable="true" type="tns:ArrayOfAplWorkItemArchiveDoc" />
+  <xs:complexType name="AplWorkItemArchiveDoc">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://accipiens.com/Common" base="q3:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplWorkItemId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ArchiveId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ArchiveTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AplWorkItemArchiveDocKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AplWorkItemArchiveDocDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AplWorkItemArchiveDocField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAplWorkItemArchiveDocField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplWorkItemArchiveDoc" nillable="true" type="tns:AplWorkItemArchiveDoc" />
+  <xs:complexType name="AplWorkItemArchiveDocKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://accipiens.com/Common" base="q4:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplWorkItemArchiveDocKey" nillable="true" type="tns:AplWorkItemArchiveDocKey" />
+  <xs:simpleType name="AplWorkItemArchiveDocDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplWorkItemArchiveDocDetail" nillable="true" type="tns:AplWorkItemArchiveDocDetail" />
+  <xs:simpleType name="AplWorkItemArchiveDocField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AplWorkItemId" />
+      <xs:enumeration value="ArchiveId" />
+      <xs:enumeration value="ArchiveTypeId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplWorkItemArchiveDocField" nillable="true" type="tns:AplWorkItemArchiveDocField" />
+  <xs:complexType name="ArrayOfAplWorkItemArchiveDocField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplWorkItemArchiveDocField" type="tns:AplWorkItemArchiveDocField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplWorkItemArchiveDocField" nillable="true" type="tns:ArrayOfAplWorkItemArchiveDocField" />
+  <xs:complexType name="AplWorkItemKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://accipiens.com/Common" base="q5:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplWorkItemNumber" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AplWorkItemTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplWorkItemKey" nillable="true" type="tns:AplWorkItemKey" />
+  <xs:simpleType name="AplWorkItemDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="WorkItemType" />
+      <xs:enumeration value="ArchiveDoc" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplWorkItemDetail" nillable="true" type="tns:AplWorkItemDetail" />
+  <xs:simpleType name="AplWorkItemField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AplWorkItemTypeId" />
+      <xs:enumeration value="AplWorkItemNumber" />
+      <xs:enumeration value="Title" />
+      <xs:enumeration value="AplWIClassificationTypeId" />
+      <xs:enumeration value="AplCompanyId" />
+      <xs:enumeration value="EntityId" />
+      <xs:enumeration value="CredOperId" />
+      <xs:enumeration value="RelatedId" />
+      <xs:enumeration value="AplTableId" />
+      <xs:enumeration value="AplUserId" />
+      <xs:enumeration value="PriorityId" />
+      <xs:enumeration value="CreationMoment" />
+      <xs:enumeration value="TerminationMoment" />
+      <xs:enumeration value="BeginDate" />
+      <xs:enumeration value="DueMoment" />
+      <xs:enumeration value="AutUserStateId" />
+      <xs:enumeration value="StateDate" />
+      <xs:enumeration value="Observations" />
+      <xs:enumeration value="CreationAplUserId" />
+      <xs:enumeration value="RowVersion" />
+      <xs:enumeration value="ResolvedAplUserId" />
+      <xs:enumeration value="ResolvedMoment" />
+      <xs:enumeration value="NumberIssued" />
+      <xs:enumeration value="AplScreenId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplWorkItemField" nillable="true" type="tns:AplWorkItemField" />
+  <xs:complexType name="ArrayOfAplWorkItemField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplWorkItemField" type="tns:AplWorkItemField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplWorkItemField" nillable="true" type="tns:ArrayOfAplWorkItemField" />
+  <xs:complexType name="AplWorkItemType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://accipiens.com/Common" base="q6:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abrev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AplCompanyId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AplScreenId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AplUserId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AutomatonId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Classifications" nillable="true" type="tns:ArrayOfAplWITypeClassificationType" />
+          <xs:element minOccurs="0" name="DefaultAplWIClassificationTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DefaultNumDays" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DefaultNumHours" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DefaultNumMinutes" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DefaultPriorityId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DefaultTitle" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DefaultWorkPeriodTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocManageTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FetchLevel" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="InvalidDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IsAllDocuments" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsDocumentSpecific" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AplWorkItemTypeKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AplWorkItemTypeDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AplWorkItemTypeField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAplWorkItemTypeField" />
+          <xs:element minOccurs="0" name="NumerationId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="RelatedAplTableId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Screens" nillable="true" type="tns:ArrayOfAplWorkItemTypeScreen" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplWorkItemType" nillable="true" type="tns:AplWorkItemType" />
+  <xs:complexType name="ArrayOfAplWITypeClassificationType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplWITypeClassificationType" nillable="true" type="tns:AplWITypeClassificationType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplWITypeClassificationType" nillable="true" type="tns:ArrayOfAplWITypeClassificationType" />
+  <xs:complexType name="AplWITypeClassificationType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://accipiens.com/Common" base="q7:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplWIClassificationTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AplWorkItemTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AplWITypeClassificationTypeKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AplWITypeClassificationTypeDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AplWITypeClassificationTypeField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAplWITypeClassificationTypeField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplWITypeClassificationType" nillable="true" type="tns:AplWITypeClassificationType" />
+  <xs:complexType name="AplWITypeClassificationTypeKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://accipiens.com/Common" base="q8:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplWITypeClassificationTypeKey" nillable="true" type="tns:AplWITypeClassificationTypeKey" />
+  <xs:simpleType name="AplWITypeClassificationTypeDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplWITypeClassificationTypeDetail" nillable="true" type="tns:AplWITypeClassificationTypeDetail" />
+  <xs:simpleType name="AplWITypeClassificationTypeField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AplWorkItemTypeId" />
+      <xs:enumeration value="AplWIClassificationTypeId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplWITypeClassificationTypeField" nillable="true" type="tns:AplWITypeClassificationTypeField" />
+  <xs:complexType name="ArrayOfAplWITypeClassificationTypeField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplWITypeClassificationTypeField" type="tns:AplWITypeClassificationTypeField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplWITypeClassificationTypeField" nillable="true" type="tns:ArrayOfAplWITypeClassificationTypeField" />
+  <xs:complexType name="AplWorkItemTypeKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://accipiens.com/Common" base="q9:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplWorkItemTypeKey" nillable="true" type="tns:AplWorkItemTypeKey" />
+  <xs:simpleType name="AplWorkItemTypeDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Classification" />
+      <xs:enumeration value="Screen" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplWorkItemTypeDetail" nillable="true" type="tns:AplWorkItemTypeDetail" />
+  <xs:simpleType name="AplWorkItemTypeField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AplCompanyId" />
+      <xs:enumeration value="Abrev" />
+      <xs:enumeration value="Descr" />
+      <xs:enumeration value="FetchLevel" />
+      <xs:enumeration value="InvalidDate" />
+      <xs:enumeration value="DefaultPriorityId" />
+      <xs:enumeration value="AutomatonId" />
+      <xs:enumeration value="NumerationId" />
+      <xs:enumeration value="DefaultNumDays" />
+      <xs:enumeration value="DefaultNumHours" />
+      <xs:enumeration value="IsDocumentSpecific" />
+      <xs:enumeration value="IsAllDocuments" />
+      <xs:enumeration value="AplUserId" />
+      <xs:enumeration value="DefaultTitle" />
+      <xs:enumeration value="DefaultAplWIClassificationTypeId" />
+      <xs:enumeration value="DefaultWorkPeriodTypeId" />
+      <xs:enumeration value="DefaultNumMinutes" />
+      <xs:enumeration value="DocManageTypeId" />
+      <xs:enumeration value="AplScreenId" />
+      <xs:enumeration value="RelatedAplTableId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplWorkItemTypeField" nillable="true" type="tns:AplWorkItemTypeField" />
+  <xs:complexType name="ArrayOfAplWorkItemTypeField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplWorkItemTypeField" type="tns:AplWorkItemTypeField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplWorkItemTypeField" nillable="true" type="tns:ArrayOfAplWorkItemTypeField" />
+  <xs:complexType name="ArrayOfAplWorkItemTypeScreen">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplWorkItemTypeScreen" nillable="true" type="tns:AplWorkItemTypeScreen" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplWorkItemTypeScreen" nillable="true" type="tns:ArrayOfAplWorkItemTypeScreen" />
+  <xs:complexType name="AplWorkItemTypeScreen">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://accipiens.com/Common" base="q10:BusinessEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplScreenId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AplWorkItemTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Key" nillable="true" type="tns:AplWorkItemTypeScreenKey" />
+          <xs:element minOccurs="0" name="LastDetail" type="tns:AplWorkItemTypeScreenDetail" />
+          <xs:element minOccurs="0" name="LastField" type="tns:AplWorkItemTypeScreenField" />
+          <xs:element minOccurs="0" name="ModifiedFields" nillable="true" type="tns:ArrayOfAplWorkItemTypeScreenField" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplWorkItemTypeScreen" nillable="true" type="tns:AplWorkItemTypeScreen" />
+  <xs:complexType name="AplWorkItemTypeScreenKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://accipiens.com/Common" base="q11:BusinessEntityKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplScreenId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AplWorkItemTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AplWorkItemTypeScreenKey" nillable="true" type="tns:AplWorkItemTypeScreenKey" />
+  <xs:simpleType name="AplWorkItemTypeScreenDetail">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplWorkItemTypeScreenDetail" nillable="true" type="tns:AplWorkItemTypeScreenDetail" />
+  <xs:simpleType name="AplWorkItemTypeScreenField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="AplWorkItemTypeId" />
+      <xs:enumeration value="AplScreenId" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AplWorkItemTypeScreenField" nillable="true" type="tns:AplWorkItemTypeScreenField" />
+  <xs:complexType name="ArrayOfAplWorkItemTypeScreenField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AplWorkItemTypeScreenField" type="tns:AplWorkItemTypeScreenField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAplWorkItemTypeScreenField" nillable="true" type="tns:ArrayOfAplWorkItemTypeScreenField" />
+</xs:schema>

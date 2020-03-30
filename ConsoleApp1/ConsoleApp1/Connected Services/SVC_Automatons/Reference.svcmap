@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="29de065f-f826-42c5-9796-c207ee2e8361" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://accipiens.vtxrm.pt/AccipienswebservicesTraining/FrameworkWebServices/Framework/Automatons.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Automatons.wsdl" MetadataType="Wsdl" ID="7500e25d-39dd-4c31-b8d8-b6812c72f172" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/AccipienswebservicesTraining/FrameworkWebServices/Framework/Automatons.svc?wsdl" />
+    <MetadataFile FileName="Automatons.xsd" MetadataType="Schema" ID="7e2b031a-c801-47e1-9034-af242f703aca" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/Automatons.svc?xsd=xsd5" />
+    <MetadataFile FileName="Automatons1.xsd" MetadataType="Schema" ID="9d93f7cf-4d05-48d4-ae98-c5669bc54523" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/Automatons.svc?xsd=xsd4" />
+    <MetadataFile FileName="Automatons2.xsd" MetadataType="Schema" ID="131a30be-ba28-48ff-92ce-a9decd8796b1" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/Automatons.svc?xsd=xsd7" />
+    <MetadataFile FileName="Automatons1.wsdl" MetadataType="Wsdl" ID="c652c4c4-3237-42b7-a150-dbafaa8a9add" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/Automatons.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="Automatons3.xsd" MetadataType="Schema" ID="15db18b3-0cc7-4648-b2de-a8e45876923c" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/Automatons.svc?xsd=xsd1" />
+    <MetadataFile FileName="Automatons4.xsd" MetadataType="Schema" ID="13d9ae26-e311-4e1e-9c7d-d8ad90f241e6" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/Automatons.svc?xsd=xsd0" />
+    <MetadataFile FileName="Automatons5.xsd" MetadataType="Schema" ID="a2e93527-b001-43c5-a64d-68ab2112371e" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/Automatons.svc?xsd=xsd3" />
+    <MetadataFile FileName="Automatons6.xsd" MetadataType="Schema" ID="bdf36025-96d3-444e-a1ee-23a227d63341" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/Automatons.svc?xsd=xsd2" />
+    <MetadataFile FileName="Automatons7.xsd" MetadataType="Schema" ID="f757b3ca-211c-44e7-b122-508c98e934a5" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/Automatons.svc?xsd=xsd9" />
+    <MetadataFile FileName="Automatons8.xsd" MetadataType="Schema" ID="f3317d9c-d3cf-4097-a2da-96b30c7040b7" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/Automatons.svc?xsd=xsd8" />
+    <MetadataFile FileName="Automatons9.xsd" MetadataType="Schema" ID="dcf4cf44-59bb-43d9-be3b-dd5229dd5c7d" SourceId="1" SourceUrl="http://accipiens.vtxrm.pt/accipienswebservicestraining/FrameworkWebServices/Framework/Automatons.svc?xsd=xsd6" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
